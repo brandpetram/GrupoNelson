@@ -82,9 +82,9 @@ export function HeroVideoCover({
     }
   }, [])
 
-  const topOpacity = Math.round(overlayOpacity * 0.75 * 100)
-  const midOpacity = Math.round(overlayOpacity * 0.5 * 100)
-  const bottomOpacity = Math.round(overlayOpacity * 0.25 * 100)
+  // Opacidades para el vignette (arriba y abajo oscuros, centro más claro)
+  const edgeOpacity = Math.round(overlayOpacity * 100)
+  const centerOpacity = Math.round(overlayOpacity * 0.3 * 100)
 
   return (
     <section className={`relative w-full h-screen overflow-hidden ${className}`} aria-label="Hero section">
@@ -123,11 +123,18 @@ export function HeroVideoCover({
           {"Tu navegador no soporta el elemento video."}
         </video>
 
-        {/* Overlay con gradiente para control de contraste */}
+        {/* Vignette: gradientes en top y bottom para contraste del nav y contenido */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            background: `linear-gradient(to bottom, rgba(0,0,0,${topOpacity / 100}), rgba(0,0,0,${midOpacity / 100}), rgba(0,0,0,${bottomOpacity / 100}))`,
+            background: `
+              linear-gradient(to bottom,
+                rgba(0,0,0,0.8) 0%,
+                rgba(0,0,0,0) 30%,
+                rgba(0,0,0,0) 70%,
+                rgba(0,0,0,0.8) 100%
+              )
+            `,
           }}
           aria-hidden="true"
         />

@@ -26,11 +26,24 @@
   - [x] Sin scroll: logo blanco, menú blanco (para fondos oscuros)
   - [x] Con scroll: logo negro, menú oscuro (para fondo claro del header)
   - [x] Transiciones suaves de 300ms
+- [x] Mejoras al menú de navegación
+  - [x] Letras uppercase, font-semibold, tracking-wide
+  - [x] Hover states correctos según estado de scroll
+  - [x] Sin scroll: hover con bg-white/10
+  - [x] Con scroll: hover con bg-foreground/5
+- [x] Vignette en HeroVideoCover
+  - [x] Gradiente oscuro en top y bottom (80% → 0%)
+  - [x] Centro transparente para destacar contenido
+  - [x] Mejora contraste del nav y contenido inferior
+- [x] Footer del sitio
+  - [x] Componente Footer1 copiado de proyecto sdi
+  - [x] Logo de Grupo Nelson integrado (variante white)
+  - [x] Fondo negro con enlaces organizados por secciones
+  - [x] Redes sociales, dirección, links legales
 
 ### Pendiente
 - [ ] Conectar links de navegación con páginas reales
 - [ ] Crear páginas internas (About, Parks, Solutions, etc.)
-- [ ] Footer del sitio
 - [ ] Formulario de contacto
 - [ ] SEO y metadata
 
@@ -41,6 +54,8 @@ src/components/
 ├── Header.tsx           # Header principal (personalizado)
 ├── logo-nelson.tsx      # Logo SVG con variantes de color
 ├── hero-video-cover.tsx # Hero con video de fondo
+├── brandpetram/
+│   └── footer-1/        # Footer con logo y enlaces
 └── ui/
     ├── button.tsx
     ├── navigation-menu.tsx

@@ -476,7 +476,23 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 // === Desktop Navigation Menu ===
 const NavMenu = () => {
   return (
-    <NavigationMenu className="**:data-[slot=navigation-menu-viewport]:left-8 **:data-[slot=navigation-menu-viewport]:top-3 max-lg:hidden **:data-[slot=navigation-menu-trigger]:text-white **:data-[slot=navigation-menu-trigger]:in-data-scrolled:text-muted-foreground **:data-[slot=navigation-menu-trigger]:transition-colors **:data-[slot=navigation-menu-trigger]:duration-300">
+    <NavigationMenu
+        className={cn(
+          '**:data-[slot=navigation-menu-viewport]:left-8 **:data-[slot=navigation-menu-viewport]:top-3 max-lg:hidden',
+          // Estilos base del trigger
+          '**:data-[slot=navigation-menu-trigger]:text-sm **:data-[slot=navigation-menu-trigger]:uppercase **:data-[slot=navigation-menu-trigger]:tracking-wide **:data-[slot=navigation-menu-trigger]:font-semibold',
+          // Colores sin scroll (fondo oscuro)
+          '**:data-[slot=navigation-menu-trigger]:text-white/90',
+          '**:data-[slot=navigation-menu-trigger]:hover:text-white **:data-[slot=navigation-menu-trigger]:hover:bg-white/10',
+          '**:data-[slot=navigation-menu-trigger]:data-[state=open]:text-white **:data-[slot=navigation-menu-trigger]:data-[state=open]:bg-white/10',
+          // Colores con scroll (fondo claro)
+          '**:data-[slot=navigation-menu-trigger]:in-data-scrolled:text-muted-foreground',
+          '**:data-[slot=navigation-menu-trigger]:in-data-scrolled:hover:text-foreground **:data-[slot=navigation-menu-trigger]:in-data-scrolled:hover:bg-foreground/5',
+          '**:data-[slot=navigation-menu-trigger]:in-data-scrolled:data-[state=open]:text-foreground **:data-[slot=navigation-menu-trigger]:in-data-scrolled:data-[state=open]:bg-foreground/5',
+          // Transición
+          '**:data-[slot=navigation-menu-trigger]:transition-colors **:data-[slot=navigation-menu-trigger]:duration-300'
+        )}
+      >
       <NavigationMenuList className="gap-1">
         {/* WHY NELSON - Columna única */}
         <NavigationMenuItem>
