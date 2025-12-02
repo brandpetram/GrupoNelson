@@ -1,6 +1,6 @@
 # Progress - Grupo Nelson
 
-Última actualización: 2024-12-02
+Última actualización: 2025-12-02
 
 ## Estado Actual
 
@@ -14,14 +14,20 @@
   - [x] Menú móvil con drill-down navigation
   - [x] Efecto básico de scroll (blur + borde)
   - [x] Datos de navegación externalizados
-
-### En Progreso
-- [ ] Mejorar efecto de scroll del header (estilo Tailark header-five)
-  - [ ] Agregar efecto de "encogimiento" al hacer scroll
-  - [ ] Mejorar la transición visual
+- [x] Efecto de scroll del header (estilo Tailark header-five)
+  - [x] Efecto de "encogimiento" al hacer scroll (max-w-5xl)
+  - [x] Transición suave (500ms)
+  - [x] Rounded corners + shadow + ring
+- [x] Logo de Grupo Nelson
+  - [x] Componente LogoNelson con variantes (default, white, monochrome, auto)
+  - [x] Variante "auto" para colores dinámicos según scroll
+  - [x] Emblema en blue-600, texto adaptable
+- [x] Colores dinámicos del header según scroll
+  - [x] Sin scroll: logo blanco, menú blanco (para fondos oscuros)
+  - [x] Con scroll: logo negro, menú oscuro (para fondo claro del header)
+  - [x] Transiciones suaves de 300ms
 
 ### Pendiente
-- [ ] Agregar logo de Grupo Nelson al header
 - [ ] Conectar links de navegación con páginas reales
 - [ ] Crear páginas internas (About, Parks, Solutions, etc.)
 - [ ] Footer del sitio
@@ -33,6 +39,7 @@
 ```
 src/components/
 ├── Header.tsx           # Header principal (personalizado)
+├── logo-nelson.tsx      # Logo SVG con variantes de color
 ├── hero-video-cover.tsx # Hero con video de fondo
 └── ui/
     ├── button.tsx
@@ -49,14 +56,17 @@ src/hooks/
 
 ## Notas Técnicas
 
-### Header actual
-El Header.tsx ya tiene implementado:
+### LogoNelson
+El componente `logo-nelson.tsx` tiene 4 variantes:
+- `default`: emblema azul, texto negro (fondos claros)
+- `white`: emblema azul, texto blanco (fondos oscuros)
+- `monochrome`: hereda color del parent (fill-current)
+- `auto`: texto cambia automáticamente según `data-scrolled` (para navbars)
+
+### Header
+El Header.tsx implementa:
 - `isScrolled` state con useEffect para detectar scroll > 50px
 - Clases `in-data-scrolled:` para estilos condicionales
+- Efecto de encogimiento (max-w-5xl al scroll)
+- Colores dinámicos en logo, menú y botón hamburguesa
 - Menú móvil con navegación drill-down y animaciones
-
-Lo que falta para igualar header-five de Tailark:
-- Efecto de encogimiento (max-width más pequeño al scroll)
-- Contenedor rounded con padding interno
-- Sombra y ring más pronunciados
-- Transición más larga (500ms)

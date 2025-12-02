@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { LogoNelson } from '@/components/logo-nelson';
 import React from 'react';
 import {
   NavigationMenu,
@@ -289,26 +289,51 @@ export default function Header() {
         {...(isScrolled && { 'data-scrolled': true })}
         className="[--color-popover:color-mix(in_oklch,var(--color-muted)_25%,var(--color-background))]"
       >
+        {/* Contenedor externo fijo */}
         <div
           className={cn(
-            'in-data-scrolled:border-b in-data-scrolled:bg-background/50 in-data-scrolled:backdrop-blur fixed inset-x-0 top-0 z-50',
-            !isLarge && 'h-14 overflow-hidden border-b',
-            isMobileMenuOpen && 'bg-background h-screen'
+            'fixed inset-x-0 top-0 z-50 pt-2 lg:pt-3',
+            !isLarge && 'max-lg:h-18 max-lg:overflow-hidden max-lg:px-2',
+            isMobileMenuOpen && 'max-lg:bg-background/75 max-lg:h-screen max-lg:backdrop-blur'
           )}
         >
-          <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
-            <div className="relative flex flex-wrap items-center justify-between lg:py-5">
-              <div className="flex justify-between gap-8 max-lg:h-14 max-lg:w-full max-lg:border-b">
+          {/* Contenedor interno que se encoge con efecto */}
+          <div
+            className={cn(
+              // Estado inicial
+              'mx-auto w-full max-w-[1280px] rounded-2xl border border-transparent px-4 lg:px-6',
+              'ring-1 ring-transparent shadow-md shadow-transparent',
+              'transition-all duration-500 ease-in-out',
+              // Estado scroll - SE ENCOGE y aparece fondo
+              'in-data-scrolled:max-w-5xl',
+              'in-data-scrolled:bg-background/80',
+              'in-data-scrolled:backdrop-blur-md',
+              'in-data-scrolled:ring-foreground/5',
+              'in-data-scrolled:shadow-black/10',
+              // Mobile menu activo
+              'max-lg:in-data-[state=active]:backdrop-blur',
+              'max-lg:in-data-[state=active]:ring-foreground/5',
+              'max-lg:in-data-[state=active]:bg-background/80',
+              'max-lg:in-data-[state=active]:px-5',
+              'max-lg:in-data-[state=active]:shadow-black/10'
+            )}
+          >
+            <div className="relative flex flex-wrap items-center justify-between lg:py-4">
+              <div
+                className={cn(
+                  'flex justify-between gap-8 max-lg:h-14 max-lg:w-full',
+                  isMobileMenuOpen && 'max-lg:border-b'
+                )}
+              >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                  {/* TODO: Reemplazar con logo de Grupo Nelson */}
-                  <span className="text-xl font-bold">Grupo Nelson</span>
+                  <LogoNelson variant="auto" width={140} />
                 </Link>
 
                 {isLarge && <NavMenu />}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   aria-label={isMobileMenuOpen ? 'Cerrar Menú' : 'Abrir Menú'}
-                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden"
+                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden text-white transition-colors duration-300 in-data-scrolled:text-foreground in-data-[state=active]:text-foreground"
                 >
                   <Menu
                     className={cn(
@@ -451,7 +476,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 // === Desktop Navigation Menu ===
 const NavMenu = () => {
   return (
-    <NavigationMenu className="**:data-[slot=navigation-menu-viewport]:left-8 **:data-[slot=navigation-menu-viewport]:top-3 max-lg:hidden">
+    <NavigationMenu className="**:data-[slot=navigation-menu-viewport]:left-8 **:data-[slot=navigation-menu-viewport]:top-3 max-lg:hidden **:data-[slot=navigation-menu-trigger]:text-white **:data-[slot=navigation-menu-trigger]:in-data-scrolled:text-muted-foreground **:data-[slot=navigation-menu-trigger]:transition-colors **:data-[slot=navigation-menu-trigger]:duration-300">
       <NavigationMenuList className="gap-1">
         {/* WHY NELSON - Columna única */}
         <NavigationMenuItem>
