@@ -1,0 +1,62 @@
+# Progress - Grupo Nelson
+
+Última actualización: 2024-12-02
+
+## Estado Actual
+
+### Completado
+- [x] Setup inicial Next.js 16 + Tailwind v4
+- [x] Integración con librería @brandpetram/componentes-2026
+- [x] HeroVideoCover con video del parque industrial
+- [x] Deploy configurado en Vercel
+- [x] Header local con navegación completa
+  - [x] Menú desktop con megamenús (5 secciones)
+  - [x] Menú móvil con drill-down navigation
+  - [x] Efecto básico de scroll (blur + borde)
+  - [x] Datos de navegación externalizados
+
+### En Progreso
+- [ ] Mejorar efecto de scroll del header (estilo Tailark header-five)
+  - [ ] Agregar efecto de "encogimiento" al hacer scroll
+  - [ ] Mejorar la transición visual
+
+### Pendiente
+- [ ] Agregar logo de Grupo Nelson al header
+- [ ] Conectar links de navegación con páginas reales
+- [ ] Crear páginas internas (About, Parks, Solutions, etc.)
+- [ ] Footer del sitio
+- [ ] Formulario de contacto
+- [ ] SEO y metadata
+
+## Estructura de Componentes Locales
+
+```
+src/components/
+├── Header.tsx           # Header principal (personalizado)
+├── hero-video-cover.tsx # Hero con video de fondo
+└── ui/
+    ├── button.tsx
+    ├── navigation-menu.tsx
+    └── accordion.tsx
+
+src/data/
+└── nav/
+    └── navigation.ts    # Datos de menú de navegación
+
+src/hooks/
+└── use-media.ts         # Hook para media queries
+```
+
+## Notas Técnicas
+
+### Header actual
+El Header.tsx ya tiene implementado:
+- `isScrolled` state con useEffect para detectar scroll > 50px
+- Clases `in-data-scrolled:` para estilos condicionales
+- Menú móvil con navegación drill-down y animaciones
+
+Lo que falta para igualar header-five de Tailark:
+- Efecto de encogimiento (max-width más pequeño al scroll)
+- Contenedor rounded con padding interno
+- Sombra y ring más pronunciados
+- Transición más larga (500ms)

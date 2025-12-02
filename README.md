@@ -26,22 +26,31 @@ El sitio estara disponible en http://localhost:3000
 ```
 grupo-nelson/
 ├── public/
-│   ├── hero-poster-*.jpg       # Posters generados del video
+│   ├── hero-poster-*.jpg           # Posters generados del video
 │   ├── parques-industriales-*.mp4  # Video hero
 │   └── from-tailwind-templates/    # Assets de componentes
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx            # Pagina principal
-│   │   ├── layout.tsx          # Layout root
-│   │   └── globals.css         # Estilos globales
+│   │   ├── page.tsx                # Pagina principal
+│   │   ├── layout.tsx              # Layout root
+│   │   └── globals.css             # Estilos globales
 │   ├── components/
+│   │   ├── Header.tsx              # Header con navegacion completa
 │   │   ├── hero-video-cover.tsx    # Hero con video de fondo
-│   │   └── tarjeta-hero-original.tsx # Tarjeta hero (comparacion)
+│   │   └── ui/                     # Componentes UI locales
+│   │       ├── button.tsx
+│   │       ├── navigation-menu.tsx
+│   │       └── accordion.tsx
+│   ├── data/
+│   │   └── nav/
+│   │       └── navigation.ts       # Datos de navegacion
+│   ├── hooks/
+│   │   └── use-media.ts            # Hook para media queries
 │   └── lib/
-│       └── utils.ts            # Utilidades
+│       └── utils.ts                # Utilidades
 ├── scripts/
-│   └── preparar-vercel.js      # Script de preparacion para Vercel
-└── vercel.json                 # Configuracion de Vercel
+│   └── preparar-vercel.js          # Script de preparacion para Vercel
+└── vercel.json                     # Configuracion de Vercel
 ```
 
 ## Dependencia Principal
@@ -59,7 +68,10 @@ import { Button } from '@brandpetram/componentes-2026/ui'
 import { Features11 } from '@brandpetram/componentes-2026/tailark'
 
 // Componentes de templates
-import { NavBar, PrimerHero } from '@brandpetram/componentes-2026/templates'
+import { PrimerHero } from '@brandpetram/componentes-2026/templates'
+
+// Componentes locales (personalizados para Grupo Nelson)
+import Header from '@/components/Header'
 ```
 
 ## Deploy en Vercel

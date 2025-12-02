@@ -52,3 +52,5 @@ Thumbs.db
 # NPM config with tokens
 .npmrc
 .env*.local
+.idea/
+.idea/
