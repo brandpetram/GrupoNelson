@@ -23,7 +23,7 @@ const path = require('path')
 const PACKAGE_JSON_PATH = path.join(__dirname, '..', 'package.json')
 const NPMRC_PATH = path.join(__dirname, '..', '.npmrc')
 const LOCAL_DEP_PATTERN = 'file:../componentes-brandpetram'
-const REGISTRY_VERSION = process.env.BRANDPETRAM_VERSION || '^0.0.7'
+const REGISTRY_VERSION = process.env.BRANDPETRAM_VERSION || '^0.0.8'
 
 function main() {
   // Solo ejecutar en Vercel
