@@ -40,6 +40,10 @@
   - [x] Logo de Grupo Nelson integrado (variante white)
   - [x] Fondo negro con enlaces organizados por secciones
   - [x] Redes sociales, dirección, links legales
+- [x] Limpieza de page.tsx
+  - [x] Eliminados imports no utilizados
+  - [x] Removidas secciones placeholder innecesarias
+  - [x] Estructura simplificada (Hero + Screencasts + Stats)
 
 ### Pendiente
 - [ ] Conectar links de navegación con páginas reales

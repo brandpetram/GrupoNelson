@@ -1,8 +1,5 @@
-import { PrimerHero, KeynoteHero, RadiantHeader } from '@brandpetram/componentes-2026/templates'
-import { GridBackground, GradientBlob } from '@brandpetram/componentes-2026/ui'
-import { WithImageTiles } from '@brandpetram/componentes-2026/tailwind'
-import { Features11 } from '@brandpetram/componentes-2026/tailark'
-import { PricingSection1, StatsSection1 } from '@brandpetram/componentes-2026/pro-blocks'
+import { KeynoteHero, RadiantHeader } from '@brandpetram/componentes-2026/templates'
+import { StatsSection1 } from '@brandpetram/componentes-2026/pro-blocks'
 import { TarjetaHero1 } from '@brandpetram/componentes-2026/marketing'
 import { HeroVideoCover } from '@/components/hero-video-cover'
 import Header from '@/components/Header'
@@ -34,33 +31,14 @@ export default function Home() {
         />
       </HeroVideoCover>
 
-      <WithImageTiles />
-
-      {/* Sección 1: Table of Contents */}
-      <section id="table-of-contents" className="min-h-screen py-20">
-        <PrimerHero />
-      </section>
-
-      {/* Sección 2: Screencasts */}
+      {/* Sección: Screencasts */}
       <section id="screencasts" className="min-h-screen py-20">
         <RadiantHeader />
         <KeynoteHero />
       </section>
 
-      {/* Sección 3: Resources */}
-      <section id="resources" className="relative min-h-screen py-20">
-        <div className="relative z-10">
-          <Features11 />
-        </div>
-      </section>
-
-      {/* Sección 4: Pricing */}
-      <section id="pricing" className="min-h-screen py-20">
-        <PricingSection1 />
-      </section>
-
-      {/* Sección 5: Author */}
-      <section id="author" className="min-h-screen py-20">
+      {/* Sección: Stats */}
+      <section id="stats" className="min-h-screen py-20">
         <StatsSection1 />
       </section>
     </div>
