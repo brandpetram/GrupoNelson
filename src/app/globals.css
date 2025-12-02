@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import "@brandpetram/componentes-2026/estilos";
+
+/* Escanear los componentes del paquete para generar las clases Tailwind */
+@source "../../node_modules/@brandpetram/componentes-2026/src/components/**/*.tsx";
