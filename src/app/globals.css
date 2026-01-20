@@ -1,5 +1,458 @@
-@import "tailwindcss";
-@import "@brandpetram/componentes-2026/estilos";
+/*
+  Template Base Sitios Nuevos - globals.css
 
-/* Escanear los componentes del paquete para generar las clases Tailwind */
-@source "../../node_modules/@brandpetram/componentes-2026/src/components/**/*.tsx";
+  Este archivo contiene TODOS los estilos necesarios para que los componentes
+  copy-paste de @brandpetram/ui funcionen correctamente.
+
+  Incluye:
+  - Sistema de colores semánticos (Tailwind v4)
+  - Breakpoints adicionales (3xl, 4xl)
+  - Temas: light, dark, data-theme="dark", data-theme="quartz"
+  - Animaciones y keyframes
+  - Utilidades de headings y containers
+*/
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+    --breakpoint-360: 22.5rem;      /* 360px / 16 */
+    --breakpoint-393: 24.5625rem;   /* 393px / 16 */
+    --breakpoint-430: 26.875rem;    /* 430px / 16 */
+    --breakpoint-768: 48rem;        /* 768px / 16 */
+    --breakpoint-834: 52.125rem;    /* 834px / 16 */
+    --breakpoint-1024: 64rem;       /* 1024px / 16 */
+    --breakpoint-1200: 75rem;       /* 1200px / 16 */
+    --breakpoint-1280: 80rem;       /* 1280px / 16 */
+    --breakpoint-1366: 85.375rem;   /* 1366px / 16 */
+    --breakpoint-1440: 90rem;    /* 1340px / 16 */
+    --breakpoint-1536: 96rem;       /* 1536px / 16 */
+    --breakpoint-1728: 108rem;      /* 1728px / 16 */
+    --breakpoint-1920: 120rem;      /* 1920px / 16 */
+    --breakpoint-2240: 140rem;      /* 2240px / 16 */
+    --breakpoint-2560: 160rem;      /* 2560px / 16 */
+    --breakpoint-3200: 200rem;      /* 3200px / 16 */
+    --breakpoint-3840: 240rem;      /* 3840px / 16 */
+}
+
+
+
+
+/* Custom variant para dark mode */
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================
+   THEME CONFIGURATION
+   ============================================ */
+
+@theme {
+  /* Breakpoints adicionales (requeridos por componentes) */
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+
+  /* Max-width screen adicionales */
+  --width-screen-3xl: 1920px;
+  --width-screen-4xl: 2560px;
+
+  /* Font mono */
+  --font-mono: "Geist Mono", "Fira Code", monospace;
+
+  /* Mapeo de variables Tailwind a semánticas */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-illustration: var(--illustration);
+  --color-border-illustration: var(--border-illustration);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animaciones */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-hue-rotate: hue-rotate 4s infinite;
+  --animate-scan: scan 3s infinite;
+  --animate-capture: capture 0.1s infinite;
+  --animate-reveal: reveal 0.8s ease-in;
+  --animate-logo-reveal: logo-reveal 0.5s ease-in-out;
+  --animate-enter-from-right: enter-from-right 0.3s ease-out;
+  --animate-enter-from-left: enter-from-left 0.3s ease-out;
+  --animate-exit-to-right: exit-to-right 0.3s ease-in;
+  --animate-exit-to-left: exit-to-left 0.3s ease-in;
+  --animate-scale-in: scale-in 0.2s ease-out;
+  --animate-scale-out: scale-out 0.2s ease-in;
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-fade-out: fade-out 0.2s ease-in;
+
+  /* Keyframes */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+
+  @keyframes hue-rotate {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+  }
+
+  @keyframes scan {
+    from { transform: translateY(0); }
+    50% { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes capture {
+    from { opacity: 0; }
+    50% { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes reveal {
+    from { clip-path: circle(0% at 50% 50%); }
+    to { clip-path: circle(100% at 50% 50%); }
+  }
+
+  @keyframes logo-reveal {
+    from {
+      transform: scale(0);
+      opacity: 0;
+      filter: blur(12px);
+    }
+    75% {
+      opacity: 1;
+      transform: scale(1.1);
+      filter: blur(0px);
+    }
+    to { transform: scale(1); }
+  }
+
+  @keyframes enter-from-right {
+    from { opacity: 0; transform: translateX(200px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes enter-from-left {
+    from { opacity: 0; transform: translateX(-200px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes exit-to-right {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(200px); }
+  }
+
+  @keyframes exit-to-left {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(-200px); }
+  }
+
+  @keyframes scale-in {
+    from { opacity: 0; transform: rotateX(-10deg) scale(0.9); }
+    to { opacity: 1; transform: rotateX(0deg) scale(1); }
+  }
+
+  @keyframes scale-out {
+    from { opacity: 1; transform: rotateX(0deg) scale(1); }
+    to { opacity: 0; transform: rotateX(-10deg) scale(0.95); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+}
+
+/* ============================================
+   BASE LAYER
+   ============================================ */
+
+@layer base {
+  /* Compatibilidad border-color con Tailwind v4 */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+
+  /* Tema CLARO por defecto */
+  :root {
+    --radius: 0.625rem;
+    --background: var(--color-white);
+    --foreground: var(--color-zinc-950);
+    --card: var(--color-white);
+    --card-foreground: var(--color-zinc-950);
+    --illustration: var(--color-white);
+    --border-illustration: color-mix(in oklab, var(--color-zinc-950) 7.5%, transparent);
+    --popover: var(--color-white);
+    --popover-foreground: var(--color-zinc-950);
+    --primary: #F15C00;
+    --primary-foreground: var(--color-white);
+    --secondary: var(--color-zinc-100);
+    --secondary-foreground: var(--color-zinc-950);
+    --muted: var(--color-zinc-50);
+    --muted-foreground: var(--color-zinc-500);
+    --accent: var(--color-zinc-100);
+    --accent-foreground: var(--color-zinc-950);
+    --destructive: var(--color-red-600);
+    --destructive-foreground: var(--color-white);
+    --border: var(--color-zinc-200);
+    --input: var(--color-zinc-200);
+    --ring: var(--color-zinc-950);
+    --chart-1: var(--color-blue-500);
+    --chart-2: var(--color-indigo-500);
+    --chart-3: var(--color-purple-500);
+    --chart-4: var(--color-indigo-400);
+    --chart-5: var(--color-red-500);
+  }
+
+  /* Tema OSCURO con clase .dark */
+  .dark {
+    --background: #00030c;
+    --foreground: var(--color-white);
+    --card: #00030c;
+    --card-foreground: var(--color-white);
+    --illustration: var(--color-zinc-900);
+    --border-illustration: color-mix(in oklab, var(--color-white) 7.5%, transparent);
+    --popover: #00030c;
+    --popover-foreground: var(--color-white);
+    --primary: #F15C00;
+    --primary-foreground: var(--color-white);
+    --secondary: var(--color-zinc-800);
+    --secondary-foreground: var(--color-white);
+    --muted: var(--color-zinc-950);
+    --muted-foreground: var(--color-zinc-100);
+    --accent: var(--color-zinc-800);
+    --accent-foreground: var(--color-white);
+    --destructive: var(--color-red-600);
+    --destructive-foreground: var(--color-white);
+    --border: var(--color-zinc-800);
+    --input: var(--color-zinc-800);
+    --ring: var(--color-white);
+  }
+
+  * {
+    @apply outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    scrollbar-gutter: stable;
+  }
+}
+
+/* ============================================
+   TAILARK THEMES (data-theme attribute)
+   ============================================ */
+
+/* Tema oscuro Tailark */
+[data-theme="dark"] {
+  --color-background: var(--color-zinc-950);
+  --color-foreground: var(--color-white);
+  --color-card: color-mix(in oklab, var(--color-zinc-800) 15%, var(--color-zinc-950));
+  --color-illustration: var(--color-zinc-900);
+  --color-card-foreground: var(--color-white);
+  --color-popover: var(--color-zinc-900);
+  --color-popover-foreground: var(--color-white);
+  --color-primary: #F15C00;
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-zinc-800);
+  --color-secondary-foreground: var(--color-white);
+  --color-muted: var(--color-zinc-800);
+  --color-muted-foreground: var(--color-zinc-300);
+  --color-accent: var(--color-zinc-800);
+  --color-accent-foreground: var(--color-white);
+  --color-destructive: var(--color-red-700);
+  --color-destructive-foreground: var(--color-white);
+  --color-border: color-mix(in oklab, var(--color-white) 10%, transparent);
+  --color-border-illustration: color-mix(in oklab, var(--color-white) 7.5%, transparent);
+  --color-input: var(--color-zinc-800);
+  --color-ring: var(--color-zinc-600);
+  color-scheme: dark;
+}
+
+/* Tema Quartz Tailark */
+[data-theme="quartz"] {
+  --radius: 0.625rem;
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-zinc-950);
+  --color-card: var(--color-white);
+  --color-illustration: var(--color-white);
+  --color-card-foreground: var(--color-zinc-950);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-zinc-950);
+  --color-primary: var(--color-indigo-500);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-sky-100);
+  --color-secondary-foreground: var(--color-sky-600);
+  --color-muted: var(--color-zinc-100);
+  --color-muted-foreground: var(--color-zinc-600);
+  --color-accent: var(--color-zinc-100);
+  --color-accent-foreground: var(--color-zinc-800);
+  --color-destructive: var(--color-red-600);
+  --color-border: var(--color-zinc-200);
+  --color-border-illustration: color-mix(in oklab, var(--color-zinc-950) 7.5%, transparent);
+  --color-input: var(--color-zinc-200);
+  --color-ring: var(--color-indigo-500);
+}
+
+/* Tema Svelte Tailark */
+[data-theme="svelte"] {
+  --radius: 0.5rem;
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-zinc-950);
+  --color-card: var(--color-zinc-50);
+  --color-card-foreground: var(--color-zinc-950);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-zinc-950);
+  --color-primary: var(--color-orange-600);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-sky-100);
+  --color-secondary-foreground: var(--color-sky-600);
+  --color-muted: var(--color-zinc-100);
+  --color-muted-foreground: var(--color-zinc-600);
+  --color-accent: var(--color-zinc-700);
+  --color-accent-foreground: var(--color-white);
+  --color-destructive: var(--color-red-600);
+  --color-border: var(--color-zinc-200);
+  --color-input: var(--color-zinc-200);
+  --color-ring: var(--color-orange-600);
+}
+
+/* ============================================
+   UTILITY CLASSES (shadcn/design)
+   ============================================ */
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+
+  .heading-xl {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .heading-lg {
+    font-family: var(--font-sans);
+    font-size: 2.25rem;
+    line-height: 1.111;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .heading-md {
+    font-family: var(--font-sans);
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .heading-sm {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    line-height: 1.333;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .container-padding-x {
+    padding-inline: 1.5rem;
+  }
+
+  .section-padding-y {
+    padding-block: 6rem;
+  }
+
+  .section-title-gap-xl {
+    gap: 1.5rem;
+  }
+
+  .section-title-gap-lg {
+    gap: 1.25rem;
+  }
+
+  .section-title-gap-md {
+    gap: 1.25rem;
+  }
+
+  .section-title-gap-sm {
+    gap: 1rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 64rem) {
+  .heading-xl {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  .heading-lg {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  .heading-md {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .heading-sm {
+    font-size: 1.5rem;
+    line-height: 1.333;
+  }
+
+  .container-padding-x {
+    padding-inline: 1.5rem;
+  }
+
+  .section-padding-y {
+    padding-block: 4rem;
+  }
+
+  .section-title-gap-xl,
+  .section-title-gap-lg,
+  .section-title-gap-md,
+  .section-title-gap-sm {
+    gap: 1rem;
+  }
+}

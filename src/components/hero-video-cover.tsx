@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { ArrowRight } from "lucide-react"
-import { Button } from "@brandpetram/componentes-2026/ui"
+import { Button } from "@/components/ui/button"
 
 interface HeroVideoCoverProps {
   videoSrc: string
