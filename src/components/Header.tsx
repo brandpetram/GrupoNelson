@@ -477,8 +477,9 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 const NavMenu = () => {
   return (
     <NavigationMenu
+        viewport={false}
         className={cn(
-          '**:data-[slot=navigation-menu-viewport]:left-8 **:data-[slot=navigation-menu-viewport]:top-3 max-lg:hidden',
+          '**:data-[slot=navigation-menu-content]:top-full **:data-[slot=navigation-menu-content]:mt-2 max-lg:hidden',
           // Estilos base del trigger
           '**:data-[slot=navigation-menu-trigger]:text-sm **:data-[slot=navigation-menu-trigger]:uppercase **:data-[slot=navigation-menu-trigger]:tracking-wide **:data-[slot=navigation-menu-trigger]:font-semibold',
           // Colores sin scroll (fondo oscuro)

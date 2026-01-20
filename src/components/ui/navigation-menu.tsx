@@ -106,7 +106,7 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        'px-(--viewport-outer-px) fixed inset-x-0 top-20 isolate z-50 mx-auto flex max-w-6xl',
+        'px-(--viewport-outer-px) fixed inset-x-0 top-20 isolate z-50 mx-auto flex max-w-[1280px]',
       )}
     >
       <NavigationMenuPrimitive.Viewport
