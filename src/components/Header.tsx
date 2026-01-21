@@ -290,9 +290,9 @@ export default function Header() {
         {/* Contenedor externo fijo */}
         <div
           className={cn(
-            'fixed inset-x-0 top-0 z-50 pt-2 lg:pt-3',
-            !isLarge && 'max-lg:h-18 max-lg:overflow-hidden max-lg:px-2',
-            isMobileMenuOpen && 'max-lg:bg-background/75 max-lg:h-screen max-lg:backdrop-blur'
+            'fixed inset-x-0 top-0 z-50 pt-4 md:pt-6 lg:pt-3',
+            !isLarge && !isMobileMenuOpen && 'h-18 md:h-28 max-lg:overflow-hidden max-lg:px-2',
+            isMobileMenuOpen && 'max-lg:bg-background/75 max-lg:h-screen max-lg:backdrop-blur max-lg:px-2'
           )}
         >
           {/* Contenedor interno que se encoge con efecto */}
@@ -321,12 +321,12 @@ export default function Header() {
               {/* Mobile layout */}
               <div
                 className={cn(
-                  'flex justify-between gap-8 h-14 w-full lg:hidden',
+                  'flex justify-between gap-8 h-14 md:h-20 w-full lg:hidden',
                   isMobileMenuOpen && 'border-b'
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                  <LogoNelson variant="auto" width={140} />
+                  <LogoNelson variant="auto" width={140} className="scale-100 md:scale-125" />
                 </Link>
 
                 <button
@@ -338,7 +338,7 @@ export default function Header() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100"
                     className={cn(
-                      'm-auto size-6 duration-200 fill-current',
+                      'm-auto size-6 md:size-8 duration-200 fill-current',
                       isMobileMenuOpen && 'rotate-180 scale-0 opacity-0'
                     )}
                   >
@@ -348,7 +348,7 @@ export default function Header() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 99.082 100"
                     className={cn(
-                      'absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 fill-current',
+                      'absolute inset-0 m-auto size-6 md:size-8 -rotate-180 scale-0 opacity-0 duration-200 fill-current',
                       isMobileMenuOpen && 'rotate-0 scale-100 opacity-100'
                     )}
                   >
@@ -359,11 +359,11 @@ export default function Header() {
               </div>
 
               {/* Desktop layout - 3 columns */}
-              <div className="hidden lg:grid lg:grid-cols-3 lg:items-center">
+              <div className="hidden lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-x-8 1024:gap-x-16">
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                    <LogoNelson variant="auto" width={140} />
+                    <LogoNelson variant="auto" width={140} className="scale-100 md:scale-125" />
                   </Link>
                 </div>
 
@@ -402,7 +402,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
     : null;
 
   return (
-    <nav role="navigation" className="fixed inset-x-0 top-14 bottom-0 z-40 flex bg-background">
+    <nav role="navigation" className="fixed inset-x-0 top-[4.5rem] md:top-[7rem] lg:top-14 bottom-0 z-40 flex bg-background">
       {/* Main Menu */}
       <div
         className={cn(

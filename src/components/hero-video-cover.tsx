@@ -359,7 +359,7 @@ export function HeroVideoCover({
       </div>
 
       <div className="relative z-10 flex h-full items-center">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="container mx-auto px-6 md:px-8 1280:px-16 1366:px-24 1728:px-32">
           {enableAnimations ? (
             <motion.div
               initial="hidden"
