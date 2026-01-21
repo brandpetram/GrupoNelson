@@ -3,28 +3,28 @@
 import { Carrusel1 } from '@/componentes/brandpetram/carrusel-1'
 import { Titulo } from '@/components/ui/brandpetram/titulo'
 
-// Items del carrusel basados en el menú de Conveyors
+// Items del carrusel de Grupo Nelson
 const conveyorsCarruselItems = [
-  // Servicios
-  { id: 's1', title: 'Mantenimiento a<br>Conveyors', subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna', href: '/conveyors-industriales/mantenimiento' },
-  { id: 's2', title: 'Refacciones<br>y kits', subtitle: 'Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis', href: '/conveyors-industriales/refacciones' },
-  { id: 's3', title: 'Sistemas de conveyors<br>built to suit', subtitle: 'Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat', href: '/conveyors-industriales/built-to-suit' },
-  { id: 's4', title: 'Integración de<br>nuevas líneas', subtitle: 'Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae', href: '/conveyors-industriales/integracion' },
-  // Marcas
-  { id: 'm1', title: 'Dorner<br>Conveyors', subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod tempor incididunt labore dolore magna aliqua ut enim', href: '/conveyors-industriales/dorner' },
-  { id: 'm2', title: 'FlexLink<br>Conveyors', subtitle: 'Quis nostrud exercitation ullamco laboris nisi aliquip commodo consequat duis aute irure dolor reprehenderit voluptate velit esse cillum', href: '/conveyors-industriales/flexlink' },
-  { id: 'm3', title: 'Rapid<br>Industries', subtitle: 'Excepteur sint occaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum sed ut', href: '/conveyors-industriales/rapid-industries' },
-  { id: 'm4', title: 'Pacline<br>Conveyors', subtitle: 'Perspiciatis unde omnis natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore', href: '/conveyors-industriales/pacline' },
-  { id: 'm5', title: 'TCI<br>Conveyors', subtitle: 'Lorem ipsum dolor consectetur adipiscing elit sed eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim', href: '/conveyors-industriales/tci' },
-  { id: 'm6', title: 'Ambaflex<br>Conveyors', subtitle: 'Veniam quis nostrud exercitation ullamco laboris nisi aliquip commodo consequat aute irure dolor reprehenderit voluptate velit esse cillum dolore', href: '/conveyors-industriales/ambaflex' },
-  { id: 'm7', title: 'Hytrol<br>Conveyors', subtitle: 'Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa officia deserunt mollit anim laborum sed perspiciatis', href: '/conveyors-industriales/hytrol' },
-  { id: 'm8', title: 'Intralox<br>Conveyors', subtitle: 'Unde omnis natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae illo inventore veritatis quasi', href: '/conveyors-industriales/intralox' },
-  { id: 'm9', title: 'Omni Metal<br>Craft', subtitle: 'Architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas aspernatur aut odit fugit sed quia', href: '/conveyors-industriales/omni-metal-craft' },
-  { id: 'm10', title: 'Octava<br>Soluciones', subtitle: 'Consequuntur magni dolores eos ratione voluptatem sequi nesciunt neque porro quisquam dolorem ipsum quia dolor sit amet consectetur adipiscing', href: '/conveyors-industriales/octava-soluciones' },
+  // Parques Industriales
+  { id: 's1', title: 'Parque<br>Nelson II', subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna', href: '/parques-industriales-mexicali/nelson-ii' },
+  { id: 's2', title: 'Parque<br>Nelson I', subtitle: 'Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis', href: '/parques-industriales-mexicali/nelson-i' },
+  { id: 's3', title: 'Parque<br>El Vigía I', subtitle: 'Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat', href: '/parques-industriales-mexicali/el-vigia-i' },
+  { id: 's4', title: 'Parque<br>El Vigía II', subtitle: 'Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae', href: '/parques-industriales-mexicali/el-vigia-ii' },
+  // Inventario y Servicios
+  { id: 'm1', title: 'Naves<br>Disponibles', subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod tempor incididunt labore dolore magna aliqua ut enim', href: '/inventario/naves-disponibles' },
+  { id: 'm2', title: 'Terrenos<br>en Venta', subtitle: 'Quis nostrud exercitation ullamco laboris nisi aliquip commodo consequat duis aute irure dolor reprehenderit voluptate velit esse cillum', href: '/inventario/terrenos' },
+  { id: 'm3', title: 'Built<br>to Suit', subtitle: 'Excepteur sint occaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum sed ut', href: '/servicios/built-to-suit' },
+  { id: 'm4', title: 'Llave<br>en Mano', subtitle: 'Perspiciatis unde omnis natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore', href: '/servicios/llave-en-mano' },
+  { id: 'm5', title: 'Arrendamiento<br>Industrial', subtitle: 'Lorem ipsum dolor consectetur adipiscing elit sed eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim', href: '/servicios/arrendamiento' },
+  { id: 'm6', title: 'Desarrollo de<br>Terrenos', subtitle: 'Veniam quis nostrud exercitation ullamco laboris nisi aliquip commodo consequat aute irure dolor reprehenderit voluptate velit esse cillum dolore', href: '/servicios/desarrollo-terrenos' },
+  { id: 'm7', title: 'Construcción<br>Propia', subtitle: 'Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa officia deserunt mollit anim laborum sed perspiciatis', href: '/servicios/construccion-propia' },
   // Industrias
-  { id: 'i1', title: 'Para la Industria<br>Alimenticia', subtitle: 'Elit sed eiusmod tempor incididunt labore dolore magna aliqua enim minim veniam quis nostrud exercitation ullamco laboris nisi', href: '/conveyors-industriales/industria-alimenticia' },
-  { id: 'i2', title: 'Para Industria<br>Manufacturera', subtitle: 'Aliquip commodo consequat duis aute irure dolor reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat', href: '/conveyors-industriales/industria-manufactura' },
-  { id: 'i3', title: 'Para la Industria<br>Automotriz', subtitle: 'Cupidatat non proident sunt culpa officia deserunt mollit anim laborum sed perspiciatis unde omnis natus error voluptatem accusantium doloremque', href: '/conveyors-industriales/industria-automotriz' },
+  { id: 'm8', title: 'Industria<br>Manufacturera', subtitle: 'Unde omnis natus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae illo inventore veritatis quasi', href: '/industrias/manufactura' },
+  { id: 'm9', title: 'Logística y<br>Distribución', subtitle: 'Architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas aspernatur aut odit fugit sed quia', href: '/industrias/logistica' },
+  { id: 'm10', title: 'Tecnología y<br>Electrónica', subtitle: 'Consequuntur magni dolores eos ratione voluptatem sequi nesciunt neque porro quisquam dolorem ipsum quia dolor sit amet consectetur adipiscing', href: '/industrias/tecnologia' },
+  { id: 'i1', title: 'Industria<br>Automotriz', subtitle: 'Elit sed eiusmod tempor incididunt labore dolore magna aliqua enim minim veniam quis nostrud exercitation ullamco laboris nisi', href: '/industrias/automotriz' },
+  { id: 'i2', title: 'Industria<br>Médica', subtitle: 'Aliquip commodo consequat duis aute irure dolor reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat', href: '/industrias/medica' },
+  { id: 'i3', title: 'Alimentos y<br>Bebidas', subtitle: 'Cupidatat non proident sunt culpa officia deserunt mollit anim laborum sed perspiciatis unde omnis natus error voluptatem accusantium doloremque', href: '/industrias/alimentos-bebidas' },
 ]
 
 export function CarruselConveyors() {
@@ -36,7 +36,7 @@ export function CarruselConveyors() {
         fontWeight="font-bold"
         className="mb-8 tracking-tighter leading-none w-10/12 1536:w-7/12"
       >
-        Soluciones en Conveyors Industriales en todo México
+        Naves Industriales y Parques en Mexicali
       </Titulo>
       <Carrusel1
         items={conveyorsCarruselItems.map((item, index) => {
