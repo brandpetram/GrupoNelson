@@ -255,10 +255,16 @@ function ListItem({ title, description, children, href }: ListItemProps) {
 }
 
 // === Main Header Component ===
-export default function Header() {
+interface HeaderProps {
+  variant?: 'dark' | 'light';
+}
+
+export default function Header({ variant = 'light' }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const isLarge = useMedia('(min-width: 64rem)');
+
+  const isDarkVariant = variant === 'dark';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -335,8 +341,11 @@ export default function Header() {
 
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  aria-label={isMobileMenuOpen ? 'Cerrar Menú' : 'Abrir Menú'}
-                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 text-white transition-colors duration-300 in-data-scrolled:text-foreground in-data-[state=active]:text-foreground"
+                  aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+                  className={cn(
+                    "relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 transition-colors duration-300 in-data-scrolled:text-foreground in-data-[state=active]:text-foreground",
+                    isDarkVariant ? "text-white" : "text-foreground"
+                  )}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -373,7 +382,7 @@ export default function Header() {
 
                 {/* Menu - centro */}
                 <div className="flex justify-center">
-                  <NavMenu />
+                  <NavMenu variant={variant} />
                 </div>
 
                 {/* Banderas - antes del botón (ocultas en 1024) */}
@@ -511,18 +520,28 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 };
 
 // === Desktop Navigation Menu ===
-const NavMenu = () => {
+const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
+  const isDarkVariant = variant === 'dark';
+
   return (
     <NavigationMenu
         className={cn(
           'max-lg:hidden',
           // Estilos base del trigger
           '**:data-[slot=navigation-menu-trigger]:text-sm **:data-[slot=navigation-menu-trigger]:uppercase **:data-[slot=navigation-menu-trigger]:tracking-wide **:data-[slot=navigation-menu-trigger]:font-semibold',
-          // Colores sin scroll (fondo oscuro)
-          '**:data-[slot=navigation-menu-trigger]:text-white/90',
-          '**:data-[slot=navigation-menu-trigger]:hover:text-white **:data-[slot=navigation-menu-trigger]:hover:bg-white/10',
-          '**:data-[slot=navigation-menu-trigger]:data-[state=open]:text-white **:data-[slot=navigation-menu-trigger]:data-[state=open]:bg-white/10',
-          // Colores con scroll (fondo claro)
+          // Colores iniciales según variant
+          isDarkVariant
+            ? '**:data-[slot=navigation-menu-trigger]:text-white/90'
+            : '**:data-[slot=navigation-menu-trigger]:text-muted-foreground',
+          // Hover según variant
+          isDarkVariant
+            ? '**:data-[slot=navigation-menu-trigger]:hover:text-white **:data-[slot=navigation-menu-trigger]:hover:bg-white/10'
+            : '**:data-[slot=navigation-menu-trigger]:hover:text-foreground **:data-[slot=navigation-menu-trigger]:hover:bg-foreground/5',
+          // State open según variant
+          isDarkVariant
+            ? '**:data-[slot=navigation-menu-trigger]:data-[state=open]:text-white **:data-[slot=navigation-menu-trigger]:data-[state=open]:bg-white/10'
+            : '**:data-[slot=navigation-menu-trigger]:data-[state=open]:text-foreground **:data-[slot=navigation-menu-trigger]:data-[state=open]:bg-foreground/5',
+          // Colores con scroll (siempre fondo claro)
           '**:data-[slot=navigation-menu-trigger]:in-data-scrolled:text-muted-foreground',
           '**:data-[slot=navigation-menu-trigger]:in-data-scrolled:hover:text-foreground **:data-[slot=navigation-menu-trigger]:in-data-scrolled:hover:bg-foreground/5',
           '**:data-[slot=navigation-menu-trigger]:in-data-scrolled:data-[state=open]:text-foreground **:data-[slot=navigation-menu-trigger]:in-data-scrolled:data-[state=open]:bg-foreground/5',

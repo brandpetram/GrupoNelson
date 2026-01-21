@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       {/* Header con navegación principal */}
-      <Header />
+      <Header variant="dark" />
 
       {/* Contenedor para hero + diagonal */}
       <div className="relative">
@@ -57,7 +57,7 @@ export default function Home() {
         {/* Badge de aniversario - Posicionado en el hero */}
         <motion.div
           className="absolute top-32 right-8 1024:top-100 1536:top-150 -rotate-10 md:right-16 lg:right-24"
-          style={{ zIndex: 50 }}
+          style={{ zIndex: 10 }}
           initial={{ opacity: 0, scale: 0, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: -10 }}
           transition={{

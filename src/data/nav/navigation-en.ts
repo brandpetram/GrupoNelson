@@ -34,25 +34,25 @@ export const whyNelsonLinks = [
 // Column 1: Mexicali
 export const parksMexicaliLinks = [
   {
-    href: '/en/parks/nelson-ii',
+    href: '/en/parques-industriales-mexicali/nelson-ii',
     name: 'Nelson II Park',
     description: 'Premier industrial park',
     iconKey: 'building',
   },
   {
-    href: '/en/parks/nelson-i',
+    href: '/en/parques-industriales-mexicali/nelson-i',
     name: 'Nelson I Park',
     description: 'Established industrial hub',
     iconKey: 'building',
   },
   {
-    href: '/en/parks/vigia-i',
+    href: '/en/parques-industriales-mexicali/vigia-i',
     name: 'El Vigía I Park',
     description: 'Strategic location',
     iconKey: 'building',
   },
   {
-    href: '/en/parks/vigia-ii',
+    href: '/en/parques-industriales-mexicali/vigia-ii',
     name: 'El Vigía II Park',
     description: 'Modern facilities',
     iconKey: 'building',
@@ -74,7 +74,7 @@ export const parksInventoryLinks = [
     iconKey: 'map',
   },
   {
-    href: '/en/parks',
+    href: '/en/parques-industriales-mexicali',
     name: 'All Parks Overview',
     description: 'Complete portfolio',
     iconKey: 'grid',
