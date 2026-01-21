@@ -40,15 +40,15 @@ export default function ConveyorsIndustrialesPage() {
               textoPoligono="Parques Industriales en Mexicali Baja"
               imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg"
               imagenDerechaAlt="Lorem ipsum"
-              parrafo1="Más de 18 años de experiencia en suministro diseño e instalación de Sistema Conveyors para empresas de manufactura que necesitan automatizar flujo de materiales, empaques, componentes o productos."
-              parrafo2="Nuestros sistemas de conveyors industriales mueven cientos de millones de productos cada año en todo México."
+              parrafo1="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris."
+              parrafo2="Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
               linkContacto="/contacto"
               palabrasLista={[
-                  'De Banda',
-                  'De Rodillos',
-                  'De Cadena',
-                  'Espirales',
-                  'Aéreos'
+                  'Tipo A',
+                  'Tipo B',
+                  'Tipo C',
+                  'Tipo D',
+                  'Tipo E'
               ]}
           />
 
@@ -63,7 +63,7 @@ export default function ConveyorsIndustrialesPage() {
                       fontSize="text-base text-3xl 768:text-3xl md:text-4xl 1024:text-5xl 1200:text-4xl 1536:text-5xl "
                       textColor="text-muted-foreground"
                   >
-                      Soluciones, ingenieria y suministro especializado en sistemas de conveyors industriales en todo México. Ofrecemos soluciones ergonómicas para el manejo de materiales, respaldados por miles de clientes satisfechos y marcas de clase mundial.
+                      Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.
                   </Parrafo>
               </div>
               {/* Logos de Marcas - probar las 3 variantes */}
@@ -85,7 +85,7 @@ export default function ConveyorsIndustrialesPage() {
                               lineHeight={'leading-normal'}
                               className="text-balance text-white dark:text-gray-50 px-10 pb-10"  // Blanco con opacidad en light, gris en dark
                           >
-                             Nuestros sistemas de conveyors personalizados optimizan el flujo de materiales en múltiples sectores. Ofrecemos soluciones especializadas para la industria alimenticia, manufacturera y automotriz, diseñadas para mejorar eficiencia operativa y adaptarse a las necesidades específicas de cada proceso.
+                             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit voluptate velit.
                           </Parrafo>
                       </div>
                   </div>
@@ -141,7 +141,7 @@ export default function ConveyorsIndustrialesPage() {
                       {/* Texto debajo del div naranja */}
                       <div className="w-9/12 1200:w-7/12 px-5 flex flex-col gap-4">
                           <p className="text-foreground tracking-wide leading-loose md:text-2xl text-balance 1200:text-base ">
-                              Optimiza el final de tu línea de producción con conveyors confiables. Desde empaque hasta paletizado, reducimos tiempos y aumentamos productividad. Tecnología adaptable que mantiene tu operación en movimiento.
+                              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt. Ut labore et dolore magna aliqua enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
                           </p>
                           <Link
                               href="/contacto"

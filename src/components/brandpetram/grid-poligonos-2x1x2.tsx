@@ -52,7 +52,7 @@ export function GridPoligonos2x1x2() {
           <div className="relative col-span-2 aspect-[2/1]">
             <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900 rounded-none">
               <p className="p-6 w-8/12 1728:w-9/12 text-white font-bold tracking-tighter leading-none text-center break-words transition-transform duration-300 group-hover:scale-110 text-2xl 393:text-3xl 430:text-3xl 768:text-4xl 834:text-4xl 1024:text-5xl 1200:text-4xl 1280:text-4xl 1366:text-4xl 1440:text-5xl 1536:text-5xl 1728:text-5xl 1920:text-5xl">
-                Soluciones Industriales de Conveyor
+                Desarrollo de Parques Industriales
               </p>
             </div>
           </div>
