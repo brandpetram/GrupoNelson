@@ -57,3 +57,9 @@ Thumbs.db
 
 # Screenshots temporales (no agregar al git)
 public/screenshots-temp/
+
+# Assets originales (demasiado pesados, ya están copiados a public/docs)
+Assets Originales/
+
+# PDFs de reuniones internas
+docs/meetings-donde-hablamos-sobre-grupo-nelson/
