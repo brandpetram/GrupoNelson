@@ -20,13 +20,26 @@ export default function Home() {
         overlayOpacity={0.30}
         videoBrightness={0.8}
         videoContrast={1.3}
+        videoFilterDesktop="brightness(1.10) saturate(1.15) contrast(1.05)"
+        videoFilterMobile="brightness(1.05) saturate(1.10) contrast(1.02)"
+        videoOverlayDesktop="rgba(100, 150, 250, 0.15)"
+        videoOverlayMobile="rgba(30, 80, 255, 0.90)"
+        videoOverlayBlendMode="multiply"
         darkOverlay={0.2}
+        darkOverlayMobile={0.3}
         enableAnimations={true}
         gridConfig={{
           strokeColor: 'stroke-white/30',
           gridSize: 100,
           showHighlights: true,
-          highlightColor: 'fill-blue-500/40',
+          highlightColor: 'fill-blue-500/50',
+        }}
+        gridConfigMobile={{
+          strokeColor: 'stroke-white/20',
+          gridSize: 80,
+          showHighlights: true,
+          highlightColor: 'fill-blue-500/30',
+          fadeRadius: '20rem',
         }}
       >
         <TarjetaHeroOriginal />

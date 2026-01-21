@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 
 export function TarjetaHeroOriginal() {
   return (
-    <div className="max-w-md bg-blue-600/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg">
+    <div className="max-w-md mt-32 md:mt-0 md:bg-blue-600/60 md:backdrop-blur-sm rounded-2xl p-0 md:p-8 md:border border-white/20 shadow-lg">
       {/* Sección de badges */}
-      <div className="flex items-center gap-3 mb-8">
+      <div className="hidden 360:flex items-center gap-3 mb-3">
         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
           <span className="text-sm font-medium text-white">{"Built to Suit"}</span>
         </div>
@@ -18,7 +18,7 @@ export function TarjetaHeroOriginal() {
       </div>
 
       {/* Título principal */}
-      <h1 className="text-5xl font-bold tracking-tight text-white text-balance md:text-4xl lg:text-5xl xl:text-5xl mb-6">
+      <h1 className="text-3xl 360:text-4xl 393:text-5xl leading-none font-bold tracking-tight text-white text-balance md:text-4xl lg:text-5xl xl:text-5xl mb-6">
         {"Los Expertos en Parques Industriales en Mexicali"}
       </h1>
 

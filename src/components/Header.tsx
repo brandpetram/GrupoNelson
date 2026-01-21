@@ -13,8 +13,6 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import {
-  Menu,
-  X,
   ChevronRight,
   ArrowLeft,
   // WHY NELSON icons
@@ -335,18 +333,27 @@ export default function Header() {
                   aria-label={isMobileMenuOpen ? 'Cerrar Menú' : 'Abrir Menú'}
                   className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 text-white transition-colors duration-300 in-data-scrolled:text-foreground in-data-[state=active]:text-foreground"
                 >
-                  <Menu
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
                     className={cn(
-                      'm-auto size-5 duration-200',
+                      'm-auto size-6 duration-200 fill-current',
                       isMobileMenuOpen && 'rotate-180 scale-0 opacity-0'
                     )}
-                  />
-                  <X
+                  >
+                    <path d="M94.5 10.9v15h-89v-15h89zm-89 46.6h89v-15h-89v15zm0 31.6h89v-15h-89v15z"/>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 99.082 100"
                     className={cn(
-                      'absolute inset-0 m-auto size-5 -rotate-180 scale-0 opacity-0 duration-200',
+                      'absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 fill-current',
                       isMobileMenuOpen && 'rotate-0 scale-100 opacity-100'
                     )}
-                  />
+                  >
+                    <path d="M49.54 0C22.198-.019.027 22.375 0 49.973.027 77.618 22.198 100.01 49.54 100c27.352.01 49.521-22.382 49.542-50.027C99.062 22.375 76.892-.019 49.54 0zm0 88.477c-21.037 0-38.095-17.225-38.077-38.504-.021-21.232 17.04-38.463 38.077-38.452 21.047-.01 38.107 17.221 38.131 38.452-.024 21.279-17.084 38.504-38.131 38.504z"/>
+                    <path d="m71.57 37.466-9.497-9.496L49.54 40.504 37.006 27.97l-9.497 9.496 12.538 12.541-12.538 12.527 9.497 9.496L49.54 59.496 62.073 72.03l9.497-9.496-12.534-12.527z"/>
+                  </svg>
                 </button>
               </div>
 

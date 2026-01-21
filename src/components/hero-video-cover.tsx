@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { GridOverlay } from "@/components/ui/grid"
 import { motion, type TargetAndTransition, type Transition } from "motion/react"
+import { cn } from "@/lib/utils"
 
 interface GridConfig {
   strokeColor?: string
@@ -13,11 +14,6 @@ interface GridConfig {
   highlightColor?: string
   fadePosition?: 'center' | 'top' | 'bottom' | 'left' | 'right' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
   fadeRadius?: string
-  animate?: {
-    initial?: TargetAndTransition
-    animate?: TargetAndTransition
-    transition?: Transition
-  }
 }
 
 interface HeroVideoCoverProps {
@@ -31,10 +27,24 @@ interface HeroVideoCoverProps {
   videoBrightness?: number
   /** Contraste del video (0.0 - 2.0, default: 1.0) */
   videoContrast?: number
+  /** Filtros CSS del video en desktop - ej: 'brightness(1.10) saturate(1.15) contrast(1.05)' */
+  videoFilterDesktop?: string
+  /** Filtros CSS del video en móvil - ej: 'brightness(1.10) saturate(1.15) contrast(1.05)' */
+  videoFilterMobile?: string
+  /** Overlay de color sobre el video en desktop - ej: 'rgba(100, 150, 250, 0.5)' */
+  videoOverlayDesktop?: string
+  /** Overlay de color sobre el video en móvil - ej: 'rgba(100, 150, 250, 0.5)' */
+  videoOverlayMobile?: string
+  /** Modo de mezcla del overlay - ej: 'multiply', 'screen', 'overlay', 'normal' */
+  videoOverlayBlendMode?: 'normal' | 'multiply' | 'screen' | 'overlay' | 'darken' | 'lighten'
   /** Oscurecimiento adicional sobre el video (0.0 - 1.0) */
   darkOverlay?: number
-  /** Configuración del grid overlay */
+  /** Oscurecimiento adicional solo en móvil (0.0 - 1.0) */
+  darkOverlayMobile?: number
+  /** Configuración del grid overlay para desktop */
   gridConfig?: GridConfig
+  /** Configuración del grid overlay para móvil */
+  gridConfigMobile?: GridConfig
   /** Habilitar animaciones de entrada (default: false) */
   enableAnimations?: boolean
 }
@@ -48,8 +58,15 @@ export function HeroVideoCover({
   children,
   videoBrightness = 1.0,
   videoContrast = 1.0,
+  videoFilterDesktop,
+  videoFilterMobile,
+  videoOverlayDesktop,
+  videoOverlayMobile,
+  videoOverlayBlendMode = 'normal',
   darkOverlay,
+  darkOverlayMobile,
   gridConfig,
+  gridConfigMobile,
   enableAnimations = false,
 }: HeroVideoCoverProps) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
@@ -161,14 +178,52 @@ export function HeroVideoCover({
           aria-label={alt}
         />
 
-        {/* Video - transición suave */}
+        {/* Video para móvil (con filtros mobile) */}
+        {videoFilterMobile && (
+          <>
+            <video
+              ref={videoRef}
+              className={cn(
+                "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out lg:hidden",
+                isVideoLoaded ? "opacity-100" : "opacity-0"
+              )}
+              style={{
+                filter: videoFilterMobile || `brightness(${videoBrightness}) contrast(${videoContrast})`,
+              }}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster={posterSrc}
+              aria-label={alt}
+            >
+              <source src={videoSrc} type="video/mp4" />
+              {"Tu navegador no soporta el elemento video."}
+            </video>
+            {videoOverlayMobile && (
+              <div
+                className="absolute inset-0 lg:hidden"
+                style={{
+                  backgroundColor: videoOverlayMobile,
+                  mixBlendMode: videoOverlayBlendMode,
+                }}
+                aria-hidden="true"
+              />
+            )}
+          </>
+        )}
+
+        {/* Video para desktop (con filtros desktop o fallback) */}
         <video
-          ref={videoRef}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+          ref={!videoFilterMobile ? videoRef : undefined}
+          className={cn(
+            "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out",
+            videoFilterMobile && "max-lg:hidden",
             isVideoLoaded ? "opacity-100" : "opacity-0"
-          }`}
+          )}
           style={{
-            filter: `brightness(${videoBrightness}) contrast(${videoContrast})`,
+            filter: videoFilterDesktop || `brightness(${videoBrightness}) contrast(${videoContrast})`,
           }}
           autoPlay
           loop
@@ -182,6 +237,18 @@ export function HeroVideoCover({
           {"Tu navegador no soporta el elemento video."}
         </video>
 
+        {/* Overlay de color para desktop */}
+        {videoOverlayDesktop && (
+          <div
+            className={cn("absolute inset-0", videoOverlayMobile && "max-lg:hidden")}
+            style={{
+              backgroundColor: videoOverlayDesktop,
+              mixBlendMode: videoOverlayBlendMode,
+            }}
+            aria-hidden="true"
+          />
+        )}
+
         {/* Capa de oscurecimiento adicional (opcional) */}
         {darkOverlay !== undefined && darkOverlay > 0 && (
           <div
@@ -191,35 +258,87 @@ export function HeroVideoCover({
           />
         )}
 
+        {/* Capa de oscurecimiento adicional solo en móvil */}
+        {darkOverlayMobile !== undefined && darkOverlayMobile > 0 && (
+          <div
+            className="absolute inset-0 lg:hidden"
+            style={{ backgroundColor: `rgba(0, 0, 0, ${darkOverlayMobile})` }}
+            aria-hidden="true"
+          />
+        )}
+
         {/* Grid Overlay - entra desde la derecha si enableAnimations */}
-        {gridConfig && enableAnimations && (
-          <motion.div
-            className="absolute inset-0"
-            initial="hidden"
-            animate="visible"
-            variants={rightVariants}
-          >
-            <GridOverlay
-              strokeColor={gridConfig.strokeColor || 'stroke-white/30'}
-              gridSize={gridConfig.gridSize || 100}
-              showHighlights={gridConfig.showHighlights ?? true}
-              highlightColor={gridConfig.highlightColor}
-              fadePosition={gridConfig.fadePosition}
-              fadeRadius={gridConfig.fadeRadius}
-            />
-          </motion.div>
+        {enableAnimations && (
+          <>
+            {/* Grid para móvil */}
+            {gridConfigMobile && (
+              <motion.div
+                className="absolute inset-0 lg:hidden"
+                initial="hidden"
+                animate="visible"
+                variants={rightVariants}
+              >
+                <GridOverlay
+                  strokeColor={gridConfigMobile.strokeColor || 'stroke-white/30'}
+                  gridSize={gridConfigMobile.gridSize || 100}
+                  showHighlights={gridConfigMobile.showHighlights ?? true}
+                  highlightColor={gridConfigMobile.highlightColor}
+                  fadePosition={gridConfigMobile.fadePosition}
+                  fadeRadius={gridConfigMobile.fadeRadius}
+                />
+              </motion.div>
+            )}
+            {/* Grid para desktop */}
+            {gridConfig && (
+              <motion.div
+                className={cn("absolute inset-0", gridConfigMobile && "max-lg:hidden")}
+                initial="hidden"
+                animate="visible"
+                variants={rightVariants}
+              >
+                <GridOverlay
+                  strokeColor={gridConfig.strokeColor || 'stroke-white/30'}
+                  gridSize={gridConfig.gridSize || 100}
+                  showHighlights={gridConfig.showHighlights ?? true}
+                  highlightColor={gridConfig.highlightColor}
+                  fadePosition={gridConfig.fadePosition}
+                  fadeRadius={gridConfig.fadeRadius}
+                />
+              </motion.div>
+            )}
+          </>
         )}
 
         {/* Grid Overlay sin animación */}
-        {gridConfig && !enableAnimations && (
-          <GridOverlay
-            strokeColor={gridConfig.strokeColor || 'stroke-white/30'}
-            gridSize={gridConfig.gridSize || 100}
-            showHighlights={gridConfig.showHighlights ?? true}
-            highlightColor={gridConfig.highlightColor}
-            fadePosition={gridConfig.fadePosition}
-            fadeRadius={gridConfig.fadeRadius}
-          />
+        {!enableAnimations && (
+          <>
+            {/* Grid para móvil */}
+            {gridConfigMobile && (
+              <div className="absolute inset-0 lg:hidden">
+                <GridOverlay
+                  strokeColor={gridConfigMobile.strokeColor || 'stroke-white/30'}
+                  gridSize={gridConfigMobile.gridSize || 100}
+                  showHighlights={gridConfigMobile.showHighlights ?? true}
+                  highlightColor={gridConfigMobile.highlightColor}
+                  fadePosition={gridConfigMobile.fadePosition}
+                  fadeRadius={gridConfigMobile.fadeRadius}
+                />
+              </div>
+            )}
+            {/* Grid para desktop */}
+            {gridConfig && (
+              <div className={cn("absolute inset-0", gridConfigMobile && "max-lg:hidden")}>
+                <GridOverlay
+                  strokeColor={gridConfig.strokeColor || 'stroke-white/30'}
+                  gridSize={gridConfig.gridSize || 100}
+                  showHighlights={gridConfig.showHighlights ?? true}
+                  highlightColor={gridConfig.highlightColor}
+                  fadePosition={gridConfig.fadePosition}
+                  fadeRadius={gridConfig.fadeRadius}
+                />
+              </div>
+            )}
+          </>
         )}
 
         {/* Vignette: gradientes en top y bottom para contraste del nav y contenido */}
