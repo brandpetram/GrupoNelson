@@ -8,23 +8,21 @@ interface SDIWord {
 }
 
 const sdiWords: SDIWord[] = [
-  { text: 'Simplificación' },
-  { text: 'Soluciones' },
-  { text: 'Ingeniería' },
-  { text: 'Suministro' },
-  { text: 'Servicio' },
-  { text: 'Mantenimiento' },
-  { text: 'Automatización' },
-  { text: 'Integración' },
-  { text: 'Conectividad' },
-  { text: 'Monitoreo' },
-  { text: 'Movimiento' },
-  { text: 'Ergonomía' },
-  { text: 'Naves Industriales' },
-  { text: 'Industrial Store' },
-  { text: 'Mesas de Elevación' },
-  { text: 'Manejo de Materiales' },
-  { text: 'Computo Industrial' },
+  { text: 'Desarrollo' },
+  { text: 'Construcción' },
+  { text: 'Infraestructura' },
+  { text: 'Ubicación Estratégica' },
+  { text: 'Innovación' },
+  { text: 'Experiencia' },
+  { text: 'Sostenibilidad' },
+  { text: 'Calidad' },
+  { text: 'Confiabilidad' },
+  { text: 'Excelencia' },
+  { text: 'Built to Suit' },
+  { text: 'Llave en Mano' },
+  { text: 'Arrendamiento' },
+  { text: 'Terrenos' },
+  { text: 'Parques Industriales' },
 ]
 
 function ScrollHighlightItem({
@@ -73,7 +71,7 @@ export function ScrollHighlightSDI() {
 
   return (
     <div className="sdi-scroll-container">
-      <h1 className="sdi-scroll-title">SDI</h1>
+      <h1 className="sdi-scroll-title">GRUPO NELSON</h1>
       <ul className="sdi-scroll-list">
         {sdiWords.map((word, index) => (
           <ScrollHighlightItem
@@ -106,7 +104,7 @@ function Stylesheet() {
         }
 
         .sdi-scroll-title {
-          font-size: 192px;
+          font-size: 96px;
           line-height: 1;
           font-weight: 900;
           margin: 0;
@@ -118,7 +116,7 @@ function Stylesheet() {
           flex: 0 0 200px;
           transform: rotate(-90deg);
           height: fit-content;
-          background: linear-gradient(to bottom, rgb(249, 115, 22), rgb(220, 38, 38));
+          background: linear-gradient(to bottom, rgb(37, 99, 235), rgb(14, 165, 233));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -171,7 +169,7 @@ function Stylesheet() {
           }
 
           .sdi-scroll-title {
-            font-size: 48px;
+            font-size: 28px;
             flex: 0 0 60px;
             top: 80px;
           }

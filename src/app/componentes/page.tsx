@@ -17,7 +17,7 @@ import { Masonry1 } from "@/components/brandpetram/masonry-1"
 import { StickyRevealContent, StickyRevealCover } from "@/components/ui/sticky-reveal"
 import { HalfCircle } from "@/components/brandpetram/half-circle"
 import { HalfCircleMobile } from "@/components/brandpetram/half-circle-mobile"
-import { LogoWhite } from "@/components/logo-white"
+import { LogoNelson } from "@/components/logo-nelson"
 import { HexagonFeatures } from "@/components/brandpetram/hexagon-features"
 import { ConveyorsGridSection } from "@/components/brandpetram/conveyors-grid-section"
 import FAQs from "@/components/tailarkpro/faqs-four"
@@ -199,7 +199,7 @@ export default function ConveyorsIndustrialesPage() {
                               transition={{ duration: 0.6, delay: 0.8, ease: "easeInOut" }}
                               viewport={{ once: true, margin: "0px" }}
                             >
-                              <span className="text-white font-black text-4xl md:text-8xl">B</span>
+                              <span className="text-white font-black text-4xl md:text-8xl">Z</span>
                             </motion.div>
                           </motion.div>
                       </div>
@@ -270,7 +270,7 @@ export default function ConveyorsIndustrialesPage() {
                 </motion.div>
                 {/* Logo flotante en esquina inferior derecha */}
                 <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8">
-                  <LogoWhite width={200} height={125} />
+                  <LogoNelson variant="white" width={200} />
                 </div>
               </div>
             </StickyRevealCover>

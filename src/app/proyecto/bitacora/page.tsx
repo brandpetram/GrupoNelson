@@ -2,7 +2,7 @@
 
 import Header from '@/components/Header'
 import Link from 'next/link'
-import { ArrowLeft, Camera, FileImage, Globe, Menu, Badge } from 'lucide-react'
+import { ArrowLeft, Camera, FileImage, Globe, Menu, Badge, Component } from 'lucide-react'
 
 export default function BitacoraPage() {
   const entries = [
@@ -82,7 +82,8 @@ export default function BitacoraPage() {
       details: [
         'Header con navegación completa de 5 secciones principales',
         'Menú dropdown con sub-navegación',
-        'Versión móvil con drill-down navigation',
+        'Menú móvil desarrollado con drill-down navigation completo',
+        'Animaciones y transiciones fluidas en móvil',
         'Solución de problemas de interactividad',
         'Integración de banderas de idiomas',
         'Variantes de header para fondos claros y oscuros',
@@ -114,6 +115,46 @@ export default function BitacoraPage() {
         'Rotación y animaciones sutiles',
         'Integración con diseño general del sitio',
       ],
+    },
+    {
+      title: 'Catálogo de Componentes UI',
+      icon: Component,
+      date: 'Desarrollo',
+      description: 'Sistema de componentes reutilizables construidos desde cero',
+      details: [
+        'Desarrollamos 15+ componentes ready-to-use completamente funcionales',
+        'Optimizados para TODAS las viewports: 393px, 430px, 768px, 834px, 1024px, 1200px, 1280px, 1366px, 1440px, 1536px, 1728px, 1920px, 2240px, 2560px',
+        'Sistema de diseño consistente con paleta de colores azules de Grupo Nelson',
+        'Componentes incluidos:',
+        '  • HeroAnimado - Hero section con animaciones secuenciales',
+        '  • GridPoligonos2x1x2 - Grid complejo de 5 columnas con polígonos',
+        '  • SidebarSticky1 - Sidebar que permanece fijo en scroll',
+        '  • BigNumber - Estadísticas con números grandes animados',
+        '  • ConveyorsGridSection - Grid interactivo de 10 items',
+        '  • Drawer - Panel lateral compartido para detalles',
+        '  • CarruselConveyors - Carrusel de imágenes',
+        '  • Masonry1 - Grid tipo masonry responsive',
+        '  • HexagonFeatures - Features en diseño hexagonal',
+        '  • HalfCircle (desktop) - Semicírculo con 7 secciones graduadas',
+        '  • HalfCircleMobile (mobile) - Versión móvil del semicírculo',
+        '  • TickerMarketing2 - Ticker animado infinito',
+        '  • FAQs - Sección de preguntas frecuentes',
+        '  • ScrollHighlightSDI - Componente de scroll con highlight',
+        '  • LogosMarcas - Grid de parques y servicios',
+        'Subcomponentes y utilidades:',
+        '  • PoligonoImagen1 - Polígono con imagen y overlay',
+        '  • PoligonoIcono1 - Polígono con ícono',
+        '  • GridPoligonos2x1 - Grid de 3 columnas para drawer',
+        '  • ItemConveyor - Item individual del grid',
+        '  • StickyRevealContent - Sistema de reveal con scroll',
+        'Sistema completamente responsive con tipografía adaptativa',
+        'Animaciones con motion/react (Framer Motion)',
+        'Se estiman ~20 componentes adicionales en desarrollo',
+      ],
+      link: {
+        text: 'Ver catálogo de componentes en acción',
+        href: '/componentes',
+      },
     },
   ]
 
