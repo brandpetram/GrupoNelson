@@ -10,7 +10,7 @@ import { HexagonFeatures } from '@/components/hexagon-features'
 import { Header as RadiantHeader } from '@/components/from-tailwind-templates/radiant-ts-header/header'
 import { DiagonalDivider } from '@/components/diagonal-divider'
 import { BadgeAniversario } from '@/components/badge-aniversario'
-import Header from '@/components/Header'
+import Header from '@/components/Header-en'
 import { motion } from 'motion/react'
 
 export default function Home() {
