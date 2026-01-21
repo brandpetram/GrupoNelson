@@ -23,7 +23,7 @@ export default function Home() {
       <div className="relative">
         {/* Hero con video de parque industrial */}
         <HeroVideoCover
-          videoSrc="/parques-industriales-mexicali-nelson-2.mp4"
+          videoSrc="/parques-industriales-mexicali-nelson-3-optimizado.mp4"
           posterSrc="/hero-poster-0.jpg"
           alt="Parque Industrial Gulfstream - Vista aérea de instalaciones modernas"
           overlayOpacity={0.30}
