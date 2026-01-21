@@ -1,7 +1,6 @@
 'use client'
 
 import Header from '@/components/Header'
-import Footer1 from '@/components/brandpetram/footer-1'
 import { CarruselConveyors } from '@/components/brandpetram/carrusel'
 import { HeroMarketing1Video } from '@/components/brandpetram/hero-marketing-1-video'
 import { GridPoligonos2 } from '@/components/brandpetram/grid-poligonos-2'
@@ -419,7 +418,6 @@ export default function ConveyorsIndustrialesPage() {
           {/* Scroll Highlight SDI */}
           <ScrollHighlightSDI />
 
-        <Footer1 />
       </main>
     </div>
   )
