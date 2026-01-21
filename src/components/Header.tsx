@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { LogoNelson } from '@/components/logo-nelson';
+import { LanguageFlags } from '@/components/language-flags';
 import React from 'react';
 import {
   NavigationMenu,
@@ -192,35 +193,35 @@ interface MobileMenuSection {
 
 const mobileMenuData: MobileMenuSection[] = [
   {
-    name: 'Why Nelson',
-    categories: [{ title: 'The Company', links: whyNelsonLinks }],
+    name: 'Nosotros',
+    categories: [{ title: 'La Empresa', links: whyNelsonLinks }],
   },
   {
-    name: 'Parks',
+    name: 'Parques',
     categories: [
       { title: 'Mexicali', links: parksMexicaliLinks },
-      { title: 'Inventory', links: parksInventoryLinks },
+      { title: 'Inventario', links: parksInventoryLinks },
     ],
   },
   {
-    name: 'Solutions',
+    name: 'Soluciones',
     categories: [
-      { title: 'Services', links: solutionsServicesLinks },
-      { title: 'By Industry', links: solutionsIndustryLinks },
+      { title: 'Servicios', links: solutionsServicesLinks },
+      { title: 'Por Industria', links: solutionsIndustryLinks },
     ],
   },
   {
-    name: 'Expertise',
+    name: 'Experiencia',
     categories: [
-      { title: 'Capabilities', links: expertiseCapabilitiesLinks },
-      { title: 'Standards', links: expertiseStandardsLinks },
+      { title: 'Capacidades', links: expertiseCapabilitiesLinks },
+      { title: 'Estándares', links: expertiseStandardsLinks },
     ],
   },
   {
-    name: 'Insights',
+    name: 'Recursos',
     categories: [
-      { title: 'Learn', links: insightsLearnLinks },
-      { title: 'Connect', links: insightsConnectLinks },
+      { title: 'Aprender', links: insightsLearnLinks },
+      { title: 'Conectar', links: insightsConnectLinks },
     ],
   },
 ];
@@ -321,13 +322,16 @@ export default function Header() {
               {/* Mobile layout */}
               <div
                 className={cn(
-                  'flex justify-between gap-8 h-14 md:h-20 w-full lg:hidden',
+                  'flex justify-between items-center gap-4 h-14 md:h-20 w-full lg:hidden',
                   isMobileMenuOpen && 'border-b'
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
                   <LogoNelson variant="auto" width={140} className="scale-100 md:scale-125" />
                 </Link>
+
+                {/* Banderas en móvil/tablet */}
+                <LanguageFlags size="sm" className="flex-shrink-0" />
 
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -358,8 +362,8 @@ export default function Header() {
                 </button>
               </div>
 
-              {/* Desktop layout - 3 columns */}
-              <div className="hidden lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-x-8 1024:gap-x-16">
+              {/* Desktop layout - 3 cols en 1024, 4 cols en 1280+ */}
+              <div className="hidden lg:grid lg:grid-cols-[auto_1fr_auto] 1280:grid-cols-[auto_1fr_auto_auto] lg:items-center lg:gap-x-6 1024:gap-x-8">
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
@@ -372,11 +376,16 @@ export default function Header() {
                   <NavMenu />
                 </div>
 
+                {/* Banderas - antes del botón (ocultas en 1024) */}
+                <div className="hidden 1280:flex justify-end">
+                  <LanguageFlags size="md" />
+                </div>
+
                 {/* Button - derecha */}
                 <div className="flex justify-end">
                   <Button asChild size="sm">
                     <Link href="/contact">
-                      <span>Contact</span>
+                      <span>Contacto</span>
                     </Link>
                   </Button>
                 </div>
@@ -424,13 +433,18 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           ))}
         </ul>
 
-        {/* CTA Button at bottom */}
+        {/* CTA Button and Language Flags at bottom */}
         <div className="border-t px-4 py-4 space-y-3">
           <Button asChild size="lg" className="w-full">
             <Link href="/contact" onClick={closeMenu}>
-              <span>Contact</span>
+              <span>Contacto</span>
             </Link>
           </Button>
+
+          {/* Banderas en menú móvil */}
+          <div className="flex justify-center pt-2">
+            <LanguageFlags size="md" />
+          </div>
         </div>
       </div>
 
@@ -517,17 +531,17 @@ const NavMenu = () => {
         )}
       >
       <NavigationMenuList className="gap-1">
-        {/* WHY NELSON - 2 columnas */}
+        {/* NOSOTROS - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Why Nelson</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-[45%_55%] gap-4 pr-4">
-                  {/* The Company links */}
+                  {/* La Empresa links */}
                   <div>
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      The Company
+                      La Empresa
                     </span>
                     <ul className="mt-3 space-y-1">
                       {whyNelsonLinks.map((item, index) => (
@@ -554,9 +568,9 @@ const NavMenu = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* PARKS - 2 columnas */}
+        {/* PARQUES - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Parks</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Parques</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -579,10 +593,10 @@ const NavMenu = () => {
                       ))}
                     </ul>
                   </div>
-                  {/* Inventory */}
+                  {/* Inventario */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Inventory
+                      Inventario
                     </span>
                     <ul className="mt-3 space-y-1">
                       {parksInventoryLinks.map((item, index) => (
@@ -603,17 +617,17 @@ const NavMenu = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* SOLUTIONS - 2 columnas */}
+        {/* SOLUCIONES - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Soluciones</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
-                  {/* Services */}
+                  {/* Servicios */}
                   <div className="pr-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Services
+                      Servicios
                     </span>
                     <ul className="mt-3 space-y-1">
                       {solutionsServicesLinks.map((item, index) => (
@@ -628,10 +642,10 @@ const NavMenu = () => {
                       ))}
                     </ul>
                   </div>
-                  {/* By Industry */}
+                  {/* Por Industria */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      By Industry
+                      Por Industria
                     </span>
                     <ul className="mt-3 space-y-1">
                       {solutionsIndustryLinks.map((item, index) => (
@@ -652,17 +666,17 @@ const NavMenu = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* EXPERTISE - 2 columnas */}
+        {/* EXPERIENCIA - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Expertise</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Experiencia</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
-                  {/* Capabilities */}
+                  {/* Capacidades */}
                   <div className="pr-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Capabilities
+                      Capacidades
                     </span>
                     <ul className="mt-3 space-y-1">
                       {expertiseCapabilitiesLinks.map((item, index) => (
@@ -677,10 +691,10 @@ const NavMenu = () => {
                       ))}
                     </ul>
                   </div>
-                  {/* Standards */}
+                  {/* Estándares */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Standards
+                      Estándares
                     </span>
                     <ul className="mt-3 space-y-1">
                       {expertiseStandardsLinks.map((item, index) => (
@@ -701,17 +715,17 @@ const NavMenu = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* INSIGHTS - 2 columnas */}
+        {/* RECURSOS - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Insights</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Recursos</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
-                  {/* Learn */}
+                  {/* Aprender */}
                   <div className="pr-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Learn
+                      Aprender
                     </span>
                     <ul className="mt-3 space-y-1">
                       {insightsLearnLinks.map((item, index) => (
@@ -726,10 +740,10 @@ const NavMenu = () => {
                       ))}
                     </ul>
                   </div>
-                  {/* Connect */}
+                  {/* Conectar */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Connect
+                      Conectar
                     </span>
                     <ul className="mt-3 space-y-1">
                       {insightsConnectLinks.map((item, index) => (

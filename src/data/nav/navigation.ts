@@ -1,223 +1,223 @@
 // Datos de navegación para Grupo Nelson
 // Un desarrollador industrial con 58 años de historia en Mexicali
 
-// === WHY NELSON ===
-// Columna única: The Company
+// === NOSOTROS ===
+// Columna única: La Empresa
 export const whyNelsonLinks = [
   {
     href: '/about/our-story',
-    name: 'Our Story',
-    description: '58 years pioneering industrial development',
+    name: 'Nuestra Historia',
+    description: '60 años de experiencia en desarrollo industrial',
     iconKey: 'history',
   },
   {
     href: '/about/difference',
-    name: 'The Nelson Difference',
-    description: 'What sets us apart',
+    name: 'La Diferencia Nelson',
+    description: 'Lo que nos distingue',
     iconKey: 'star',
   },
   {
     href: '/about/leadership',
-    name: 'Leadership',
-    description: 'Three generations of expertise',
+    name: 'Liderazgo',
+    description: 'Tres generaciones de experiencia',
     iconKey: 'users',
   },
   {
     href: '/about/track-record',
-    name: 'Proven Track Record',
-    description: 'Fortune 500 clients trust us',
+    name: 'Trayectoria Comprobada',
+    description: 'Empresas Fortune 500 confían en nosotros',
     iconKey: 'trophy',
   },
 ];
 
-// === PARKS ===
+// === PARQUES ===
 // Columna 1: Mexicali
 export const parksMexicaliLinks = [
   {
     href: '/parks/nelson-ii',
     name: 'Parque Nelson II',
-    description: 'Premier industrial park',
+    description: 'Parque industrial de primer nivel',
     iconKey: 'building',
   },
   {
     href: '/parks/nelson-i',
     name: 'Parque Nelson I',
-    description: 'Established industrial hub',
+    description: 'Centro industrial establecido',
     iconKey: 'building',
   },
   {
     href: '/parks/vigia-i',
     name: 'Parque El Vigía I',
-    description: 'Strategic location',
+    description: 'Ubicación estratégica',
     iconKey: 'building',
   },
   {
     href: '/parks/vigia-ii',
     name: 'Parque El Vigía II',
-    description: 'Modern facilities',
+    description: 'Instalaciones modernas',
     iconKey: 'building',
   },
 ];
 
-// Columna 2: Inventory
+// Columna 2: Inventario
 export const parksInventoryLinks = [
   {
     href: '/inventory/available-buildings',
-    name: 'Available Buildings',
-    description: 'Move-in ready spaces',
+    name: 'Naves Disponibles',
+    description: 'Espacios listos para ocupar',
     iconKey: 'warehouse',
   },
   {
     href: '/inventory/land',
-    name: 'Land for Development',
-    description: 'Prime industrial land',
+    name: 'Terrenos en Venta',
+    description: 'Terreno industrial de primera',
     iconKey: 'map',
   },
   {
     href: '/parks',
-    name: 'All Parks Overview',
-    description: 'Complete portfolio',
+    name: 'Todos los Parques',
+    description: 'Portafolio completo',
     iconKey: 'grid',
   },
 ];
 
-// === SOLUTIONS ===
-// Columna 1: Services
+// === SOLUCIONES ===
+// Columna 1: Servicios
 export const solutionsServicesLinks = [
   {
     href: '/solutions/build-to-suit',
-    name: 'Build-to-Suit',
-    description: 'Custom facilities from the ground up',
+    name: 'Built to Suit',
+    description: 'Instalaciones personalizadas desde cero',
     iconKey: 'hammer',
   },
   {
     href: '/solutions/turnkey',
-    name: 'Turnkey Solutions',
-    description: 'Move-in ready operations',
+    name: 'Llave en Mano',
+    description: 'Operaciones listas para usar',
     iconKey: 'key',
   },
   {
     href: '/solutions/leasing',
-    name: 'Industrial Leasing',
-    description: 'Flexible space options',
+    name: 'Arrendamiento Industrial',
+    description: 'Opciones flexibles de espacio',
     iconKey: 'fileContract',
   },
   {
     href: '/solutions/land-development',
-    name: 'Land Development',
-    description: 'Prime industrial land',
+    name: 'Desarrollo de Terrenos',
+    description: 'Terreno industrial de primera',
     iconKey: 'layers',
   },
 ];
 
-// Columna 2: By Industry
+// Columna 2: Por Industria
 export const solutionsIndustryLinks = [
   {
     href: '/industries/aerospace',
-    name: 'Aerospace & Defense',
-    description: 'High-precision manufacturing',
+    name: 'Aeroespacial y Defensa',
+    description: 'Manufactura de alta precisión',
     iconKey: 'plane',
   },
   {
     href: '/industries/logistics',
-    name: 'Logistics & Distribution',
-    description: 'Strategic warehousing',
+    name: 'Logística y Distribución',
+    description: 'Almacenamiento estratégico',
     iconKey: 'truck',
   },
   {
     href: '/industries/manufacturing',
-    name: 'Advanced Manufacturing',
-    description: 'Production excellence',
+    name: 'Manufactura Avanzada',
+    description: 'Excelencia en producción',
     iconKey: 'factory',
   },
   {
     href: '/industries/technology',
-    name: 'Technology & Electronics',
-    description: 'Innovation-ready facilities',
+    name: 'Tecnología y Electrónica',
+    description: 'Instalaciones para innovación',
     iconKey: 'cpu',
   },
 ];
 
-// === EXPERTISE ===
-// Columna 1: Capabilities
+// === EXPERIENCIA ===
+// Columna 1: Capacidades
 export const expertiseCapabilitiesLinks = [
   {
     href: '/expertise/construction',
-    name: 'In-House Construction',
-    description: 'Vertical integration advantage',
+    name: 'Construcción Propia',
+    description: 'Ventaja de integración vertical',
     iconKey: 'hardHat',
   },
   {
     href: '/expertise/engineering',
-    name: 'Engineering Innovation',
-    description: 'Future-ready facilities',
+    name: 'Ingeniería Innovadora',
+    description: 'Instalaciones del futuro',
     iconKey: 'compass',
   },
   {
     href: '/expertise/operations',
-    name: 'Operational Excellence',
-    description: 'Reliability you can count on',
+    name: 'Excelencia Operativa',
+    description: 'Confiabilidad garantizada',
     iconKey: 'settings',
   },
 ];
 
-// Columna 2: Standards
+// Columna 2: Estándares
 export const expertiseStandardsLinks = [
   {
     href: '/expertise/sustainability',
-    name: 'LEED & Sustainability',
-    description: 'Green building commitment',
+    name: 'LEED y Sustentabilidad',
+    description: 'Compromiso con construcción verde',
     iconKey: 'leaf',
   },
   {
     href: '/expertise/compliance',
-    name: 'Global Compliance',
-    description: 'International standards',
+    name: 'Cumplimiento Global',
+    description: 'Estándares internacionales',
     iconKey: 'globe',
   },
   {
     href: '/expertise/certifications',
-    name: 'Quality Certifications',
-    description: 'Proven excellence',
+    name: 'Certificaciones de Calidad',
+    description: 'Excelencia comprobada',
     iconKey: 'award',
   },
 ];
 
-// === INSIGHTS ===
-// Columna 1: Learn
+// === RECURSOS ===
+// Columna 1: Aprender
 export const insightsLearnLinks = [
   {
     href: '/blog',
     name: 'Blog',
-    description: 'Industry insights & trends',
+    description: 'Tendencias de la industria',
     iconKey: 'newspaper',
   },
   {
     href: '/case-studies',
-    name: 'Success Stories',
-    description: 'Client case studies',
+    name: 'Casos de Éxito',
+    description: 'Historias de clientes',
     iconKey: 'bookOpen',
   },
   {
     href: '/resources',
-    name: 'Resources',
-    description: 'Guides & downloads',
+    name: 'Recursos',
+    description: 'Guías y descargas',
     iconKey: 'download',
   },
 ];
 
-// Columna 2: Connect
+// Columna 2: Conectar
 export const insightsConnectLinks = [
   {
     href: '/news',
-    name: 'News & Updates',
-    description: 'Latest announcements',
+    name: 'Noticias',
+    description: 'Últimos anuncios',
     iconKey: 'megaphone',
   },
   {
     href: '/events',
-    name: 'Events',
-    description: 'Industry gatherings',
+    name: 'Eventos',
+    description: 'Reuniones de la industria',
     iconKey: 'calendar',
   },
 ];
