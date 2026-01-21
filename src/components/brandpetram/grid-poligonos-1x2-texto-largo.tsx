@@ -21,9 +21,9 @@ export function GridPoligonos1x2TextoLargo() {
         <div className="relative">
           <PoligonoImagen1
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
-            alt="Conveyor vertical helicoidal"
+            alt="Lorem ipsum"
             overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-            text="Conveyors Aéreos"
+            text="Parque Nelson II"
             textColor="text-white"
             className="rounded-none"
           />
@@ -48,9 +48,9 @@ export function GridPoligonos1x2TextoLargo() {
           <div className="relative aspect-square">
             <PoligonoImagen1
                 src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
-                alt="Conveyor aéreo industrial"
+                alt="Lorem ipsum"
                 overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-                text="Conveyors Aéreos"
+                text="Parque Nelson II"
                 textColor="text-white"
                 className="rounded-none"
             />

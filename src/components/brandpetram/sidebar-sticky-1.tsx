@@ -127,7 +127,7 @@ export function SidebarSticky1() {
           <article className="space-y-7">
             <section className="bg-muted/30 rounded-lg space-y-7 text-xl leading-relaxed">
               <h2 className=" text-2xl font-bold text-foreground">
-                Mantenimiento a Conveyors
+                Desarrollo de Parques Industriales
               </h2>
               <p className="text-muted-foreground">
                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -141,7 +141,7 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
             </section>
             <section className="bg-muted/30 rounded-lg space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-             Integración de Nuevas Líneas de Conveyors
+             Construcción de Naves Industriales
               </h2>
               <p className="mb-4 text-muted-foreground">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
@@ -162,7 +162,7 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
             </section>
             <section className="bg-muted/30 rounded-lg space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-                Refacciones y Kits para Converyors
+                Arrendamiento de Naves Industriales
               </h2>
               <p className="mb-4 text-muted-foreground">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
