@@ -102,51 +102,15 @@ function NavigationMenuViewport({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
-  const [translateX, setTranslateX] = React.useState<number>(0);
-  const wrapperRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    const updatePosition = () => {
-      const triggers = document.querySelectorAll('[data-slot="navigation-menu-trigger"]');
-      const viewport = document.querySelector('[data-slot="navigation-menu-viewport"]');
-
-      if (!viewport || !wrapperRef.current) return;
-
-      triggers.forEach((trigger, index) => {
-        if (trigger.getAttribute('data-state') === 'open') {
-          // Para el último trigger (Insights, índice 4), ajustar posición
-          if (index === 4) {
-            const viewportWidth = (viewport as HTMLElement).offsetWidth;
-            const wrapperWidth = wrapperRef.current!.offsetWidth;
-            const offset = wrapperWidth - viewportWidth;
-            setTranslateX(offset);
-          } else {
-            setTranslateX(0);
-          }
-        }
-      });
-    };
-
-    const interval = setInterval(updatePosition, 50);
-    updatePosition();
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div
-      ref={wrapperRef}
-      className="absolute left-0 top-full flex w-full justify-start perspective-[2000px]"
-      style={{
-        transform: `translateX(${translateX}px)`,
-        transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
-      }}
-    >
+    <div className="absolute left-0 top-full flex w-full justify-center perspective-[2000px]">
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          'bg-popover text-popover-foreground h-(--radix-navigation-menu-viewport-height) ring-foreground/10 rounded-(--radius) md:w-(--radix-navigation-menu-viewport-width) relative mt-1.5 origin-top overflow-hidden border border-transparent p-0.5 shadow-xl shadow-black/10 ring-1 transition-[width,height,transform] duration-200',
+          'bg-popover text-popover-foreground h-(--radix-navigation-menu-viewport-height) ring-foreground/10 rounded-(--radius) relative mt-1.5 origin-top overflow-hidden border border-transparent p-0.5 shadow-xl shadow-black/10 ring-1 transition-[height,transform] duration-200',
           'data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in',
+          // Ancho fijo - el menú nunca cambia de tamaño
+          'w-[620px]',
           className,
         )}
         {...props}

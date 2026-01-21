@@ -246,7 +246,7 @@ function ListItem({ title, description, children, href }: ListItemProps) {
           <div className="space-y-0.5">
             <div className="text-foreground text-sm font-medium">{title}</div>
             {description && (
-              <p className="text-muted-foreground line-clamp-2 text-xs">{description}</p>
+              <p className="text-muted-foreground line-clamp-2 text-xs leading-none">{description}</p>
             )}
           </div>
         </Link>
@@ -494,27 +494,38 @@ const NavMenu = () => {
         )}
       >
       <NavigationMenuList className="gap-1">
-        {/* WHY NELSON - Columna única */}
+        {/* WHY NELSON - 2 columnas */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>Why Nelson</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
-            <div className="w-[320px] pr-[1.5px]">
+            <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
-                <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                  The Company
-                </span>
-                <ul className="mt-3 space-y-1">
-                  {whyNelsonLinks.map((item, index) => (
-                    <ListItem
-                      key={index}
-                      href={item.href}
-                      title={item.name}
-                      description={item.description}
-                    >
-                      {item.icon}
-                    </ListItem>
-                  ))}
-                </ul>
+                <div className="grid grid-cols-[45%_55%] gap-4 pr-4">
+                  {/* The Company links */}
+                  <div>
+                    <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
+                      The Company
+                    </span>
+                    <ul className="mt-3 space-y-1">
+                      {whyNelsonLinks.map((item, index) => (
+                        <ListItem
+                          key={index}
+                          href={item.href}
+                          title={item.name}
+                          description={item.description}
+                        >
+                          {item.icon}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Visual content placeholder */}
+                  <div className="flex items-center justify-center rounded-lg bg-blue-600 p-4">
+                    <div className="text-center">
+                      <p className="text-white text-sm font-medium">Visual content</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </NavigationMenuContent>
@@ -524,7 +535,7 @@ const NavMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Parks</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
-            <div className="w-[580px] pr-[1.5px]">
+            <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
                   {/* Mexicali */}
@@ -622,7 +633,7 @@ const NavMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Expertise</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
-            <div className="w-[580px] pr-[1.5px]">
+            <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
                   {/* Capabilities */}
@@ -671,7 +682,7 @@ const NavMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Insights</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
-            <div className="w-[520px] pr-[1.5px]">
+            <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
                   {/* Learn */}
