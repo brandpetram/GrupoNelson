@@ -36,10 +36,10 @@ export default function ConveyorsIndustrialesPage() {
           {/* Hero Animado con animaciones secuenciales */}
           <HeroAnimado
               imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
-              imagenIzquierdaAlt="Conveyors de banda"
+              imagenIzquierdaAlt="Lorem ipsum"
               textoPoligono="Conveyors Industriales en todo México"
               imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg"
-              imagenDerechaAlt="Conveyors verticales"
+              imagenDerechaAlt="Lorem ipsum"
               parrafo1="Más de 18 años de experiencia en suministro diseño e instalación de Sistema Conveyors para empresas de manufactura que necesitan automatizar flujo de materiales, empaques, componentes o productos."
               parrafo2="Nuestros sistemas de conveyors industriales mueven cientos de millones de productos cada año en todo México."
               linkContacto="/contacto"
@@ -102,7 +102,7 @@ export default function ConveyorsIndustrialesPage() {
 
                 {
                   src: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg',
-                  alt: 'Conveyors verticales',
+                  alt: 'Lorem ipsum',
                   overlayColor: 'rgba(249, 115, 22, 0.4)',
                   text: 'Sistemas Verticales'
                 }
@@ -160,7 +160,7 @@ export default function ConveyorsIndustrialesPage() {
 
                                   {
                                       src: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
-                                      alt: 'Conveyors verticales',
+                                      alt: 'Lorem ipsum',
                                       overlayColor: 'rgba(249, 115, 22, 0.4)',
                                       text: 'Sistemas Verticales'
                                   },
@@ -215,7 +215,7 @@ export default function ConveyorsIndustrialesPage() {
 
           <BigNumber
             imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
-            imageAlt="Conveyors de banda industrial"
+            imageAlt="Lorem ipsum"
             number="+200"
             title={<>Millones de <br /> productos al Año</>}
             subtitle={<>Se mueven por sistemas <br /> de conveyors implementados por SDI industrial</>}
@@ -248,7 +248,7 @@ export default function ConveyorsIndustrialesPage() {
               <div className="relative w-full h-full">
                 <img
                   src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
-                  alt="Omni Metal Craft"
+                  alt="Lorem ipsum"
                   className="w-full h-full object-cover"
                   style={{ filter: 'contrast(1.3) brightness(0.8)' }}
                 />

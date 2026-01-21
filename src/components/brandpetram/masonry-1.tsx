@@ -29,7 +29,7 @@ export function Masonry1() {
           <div className="relative aspect-[1.5/2] rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-281.jpg"
-              alt="Conveyor dorner"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -38,7 +38,7 @@ export function Masonry1() {
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg"
-              alt="Conveyor rapid industries"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -47,7 +47,7 @@ export function Masonry1() {
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg"
-              alt="Conveyor dorner"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -80,7 +80,7 @@ export function Masonry1() {
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
-              alt="Conveyor TCI"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -89,7 +89,7 @@ export function Masonry1() {
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-277.jpg"
-              alt="Conveyor flexlink"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -122,7 +122,7 @@ export function Masonry1() {
           <div className="relative aspect-[1.5/2] rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
-              alt="Conveyor flexlink"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
               style={{ objectPosition: '80% 100%' }}
             />
@@ -132,7 +132,7 @@ export function Masonry1() {
           <div className="relative aspect-video rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
-              alt="Conveyor pacline"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -141,7 +141,7 @@ export function Masonry1() {
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-280.jpg"
-              alt="Conveyor hytrol"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
@@ -169,7 +169,7 @@ export function Masonry1() {
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-281.jpg"
-              alt="Refacciones"
+              alt="Lorem ipsum"
               className="w-full h-full object-cover"
             />
           </div>
