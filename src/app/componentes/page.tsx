@@ -151,7 +151,7 @@ export default function ConveyorsIndustrialesPage() {
 
 
 
-      <main className="bg-background text-foreground">
+      <main className="bg-background text-foreground mt-32">
 
           {/* Hero Animado con animaciones secuenciales */}
           <HeroAnimado
