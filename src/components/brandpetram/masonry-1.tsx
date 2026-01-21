@@ -62,7 +62,7 @@ export function Masonry1() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
         >
           {/* Item 2 - Texto Tipo 1 (Industrial style) - cuadrado */}
-          <div className="bg-gradient-to-bl from-blue-600 to-sky-500 aspect-square grid place-items-center rounded-none">
+          <div className="bg-gradient-to-bl from-blue-600 to-blue-700 aspect-square grid place-items-center rounded-none">
             <div className="flex flex-col mx-auto gap-3 md:gap-7 lg:gap-3 xl:gap-5 2xl:gap-10 w-9/12 md:w-7/12 lg:w-8/12 xl:w-7/12 text-xs 430:text-md md:text-2xl 1024:text-3xl 1200:text-lg 1536:text-xl 1920:text-2xl">
               <p className="text-white font-bold tracking-wider uppercase">
                 Naves Industriales
@@ -95,7 +95,7 @@ export function Masonry1() {
           </div>
 
           {/* Item 11 - Texto Tipo 2 (nueva) */}
-          <div className="bg-gradient-to-bl from-blue-600 to-sky-500 aspect-square grid place-items-center rounded-none">
+          <div className="bg-gradient-to-bl from-blue-600 to-blue-700 aspect-square grid place-items-center rounded-none">
             <div className="flex flex-col mx-auto gap-3 md:gap-7 lg:gap-3 xl:gap-5 2xl:gap-10 w-9/12 md:w-7/12 lg:w-8/12 xl:w-7/12 text-xs 430:text-md md:text-2xl 1024:text-3xl 1200:text-lg 1536:text-xl 1920:text-2xl">
               <p className="text-white font-bold tracking-wider uppercase">
                 Soluciones

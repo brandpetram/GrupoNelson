@@ -32,7 +32,7 @@ export function ItemConveyor({ image, textTop, textBottom, alt, isSelected }: It
         <p className="text-sm font-light text-foreground tracking-tighter">
           {textTop}
         </p>
-        <p className="text-base font-extrabold text-foreground leading-tight tracking-tighter whitespace-pre-line transition-all duration-200 group-hover/item:bg-gradient-to-r group-hover/item:from-blue-600 group-hover/item:to-sky-500 group-hover/item:bg-clip-text group-hover/item:text-transparent">
+        <p className="text-base font-extrabold text-foreground leading-tight tracking-tighter whitespace-pre-line transition-all duration-200 group-hover/item:bg-gradient-to-r group-hover/item:from-blue-600 group-hover/item:to-blue-700 group-hover/item:bg-clip-text group-hover/item:text-transparent">
           {textBottom}
         </p>
       </div>

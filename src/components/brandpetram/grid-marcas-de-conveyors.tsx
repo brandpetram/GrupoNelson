@@ -74,7 +74,7 @@ export function LogosMarcas() {
           <li key={index} className="bg-background">
             <Link
               href={marca.href}
-              className="group flex items-start gap-3 p-4 hover:bg-gradient-to-br hover:from-blue-600 hover:to-sky-500 transition-all"
+              className="group flex items-start gap-3 p-4 hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 transition-all"
             >
               {/* Logo */}
               <div className="bg-background ring-foreground/10 flex size-12 shrink-0 items-center justify-center rounded-md shadow-sm ring-1 group-hover:bg-white group-hover:ring-white">

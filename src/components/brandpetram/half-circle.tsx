@@ -43,7 +43,7 @@ export function HalfCircle() {
       <div className="relative z-10 flex items-end justify-center w-full h-full">
         {/* Big gradient circle - only this should be transparent */}
         <div
-          className="bg-gradient-to-br from-blue-600 to-sky-500"
+          className="bg-gradient-to-br from-blue-600 to-blue-700"
           style={{
             width: circleWidth,
             aspectRatio: "2 / 1",

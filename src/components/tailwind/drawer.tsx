@@ -180,7 +180,7 @@ export default function Drawer({ open, onClose, service }: DrawerProps) {
         >
           {/* Cover band + image + title area */}
           <div className="pb-6">
-            <div className="h-24 bg-gradient-to-bl from-blue-600 to-sky-500 sm:h-20 lg:h-28" />
+            <div className="h-24 bg-gradient-to-bl from-blue-600 to-blue-700 sm:h-20 lg:h-28" />
             <div className="-mt-12 flow-root px-4 sm:-mt-8 sm:flex sm:items-end sm:px-6 lg:-mt-16">
               <div>
                 <div className="-m-1 flex">

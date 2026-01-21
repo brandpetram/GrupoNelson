@@ -73,7 +73,7 @@ export function CarruselConveyors() {
                 </div>
                 <div className="space-y-2">
                   <h3
-                    className="font-extrabold text-card-foreground text-3xl leading-none tracking-tighter transition-all duration-200 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-sky-500 group-hover:bg-clip-text group-hover:text-transparent"
+                    className="font-extrabold text-card-foreground text-3xl leading-none tracking-tighter transition-all duration-200 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-blue-700 group-hover:bg-clip-text group-hover:text-transparent"
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
                   <p className="text-sm text-muted-foreground leading-snug line-clamp-3">{item.subtitle}</p>

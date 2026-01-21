@@ -113,7 +113,7 @@ export function HalfCircleMobile() {
 
       {/* CAPA 1: Semicírculo gradiente base */}
       <div
-        className="bg-gradient-to-br from-blue-600 to-sky-500 absolute left-0"
+        className="bg-gradient-to-br from-blue-600 to-blue-700 absolute left-0"
         style={{
           width: circleWidth,
           aspectRatio: "1 / 2",
