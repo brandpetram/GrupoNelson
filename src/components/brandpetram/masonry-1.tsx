@@ -28,7 +28,7 @@ export function Masonry1() {
           {/* Item 1 - Imagen (más alto que ancho) */}
           <div className="relative aspect-[1.5/2] rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-265.jpg"
               alt="Conveyor dorner"
               className="w-full h-full object-cover"
             />
@@ -37,7 +37,7 @@ export function Masonry1() {
           {/* Item 5 - Imagen cuadrada */}
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-266.jpg"
               alt="Conveyor rapid industries"
               className="w-full h-full object-cover"
             />
@@ -46,7 +46,7 @@ export function Masonry1() {
           {/* Item 9 - Imagen cuadrada (nueva) */}
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-267.jpg"
               alt="Conveyor dorner"
               className="w-full h-full object-cover"
             />
@@ -79,7 +79,7 @@ export function Masonry1() {
           {/* Item 6 - Imagen cuadrada */}
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
               alt="Conveyor TCI"
               className="w-full h-full object-cover"
             />
@@ -88,7 +88,7 @@ export function Masonry1() {
           {/* Item 10 - Imagen cuadrada (nueva) */}
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
               alt="Conveyor flexlink"
               className="w-full h-full object-cover"
             />
@@ -121,7 +121,7 @@ export function Masonry1() {
           {/* Item 3 - Imagen (más alto que ancho) */}
           <div className="relative aspect-[1.5/2] rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg"
               alt="Conveyor flexlink"
               className="w-full h-full object-cover"
               style={{ objectPosition: '80% 100%' }}
@@ -131,7 +131,7 @@ export function Masonry1() {
           {/* Item 7 - Imagen rectangular (más ancho que alto) */}
           <div className="relative aspect-video rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
               alt="Conveyor pacline"
               className="w-full h-full object-cover"
             />
@@ -140,7 +140,7 @@ export function Masonry1() {
           {/* Item 12 - Imagen cuadrada (nueva) */}
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
               alt="Conveyor hytrol"
               className="w-full h-full object-cover"
             />
@@ -168,7 +168,7 @@ export function Masonry1() {
           {/* Item 8 - Imagen cuadrada */}
           <div className="relative aspect-square rounded-none overflow-hidden">
             <img
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-273.jpg"
               alt="Refacciones"
               className="w-full h-full object-cover"
             />

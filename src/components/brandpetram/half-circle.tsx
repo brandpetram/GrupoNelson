@@ -32,7 +32,7 @@ export function HalfCircle() {
       className="flex items-end justify-center relative"
       style={{
         height: "100vh",
-        backgroundImage: "url('/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg",
+        backgroundImage: "url('/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
