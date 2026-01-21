@@ -91,7 +91,6 @@ function NavigationMenuContent({
       className={cn(
         'left-0 top-0 w-full p-2 pr-2.5 md:absolute md:w-auto',
         'data-[motion=from-end]:animate-enter-from-right data-[motion=from-start]:animate-enter-from-left data-[motion=to-end]:animate-exit-to-right data-[motion=to-start]:animate-exit-to-left',
-        'group-data-[viewport=false]/navigation-menu:text-popover-foreground group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-in group-data-[viewport=false]/navigation-menu:data-[state=closed]:animate-out group-data-[viewport=false]/navigation-menu:data-[state=closed]:zoom-out-95 group-data-[viewport=false]/navigation-menu:data-[state=open]:zoom-in-95 group-data-[viewport=false]/navigation-menu:data-[state=open]:fade-in-0 group-data-[viewport=false]/navigation-menu:data-[state=closed]:fade-out-0 **:data-[slot=navigation-menu-link]:focus:ring-0 **:data-[slot=navigation-menu-link]:focus:outline-none group-data-[viewport=false]/navigation-menu:ring-foreground/10 group-data-[viewport=false]/navigation-menu:bg-popover group-data-[viewport=false]/navigation-menu:rounded-(--radius) group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:-translate-x-1/3 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:border group-data-[viewport=false]/navigation-menu:border-transparent group-data-[viewport=false]/navigation-menu:shadow-lg group-data-[viewport=false]/navigation-menu:ring-1 group-data-[viewport=false]/navigation-menu:duration-200',
         className,
       )}
       {...(forwardedProps as React.ComponentProps<typeof NavigationMenuPrimitive.Content>)}
@@ -103,16 +102,50 @@ function NavigationMenuViewport({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+  const [translateX, setTranslateX] = React.useState<number>(0);
+  const wrapperRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const updatePosition = () => {
+      const triggers = document.querySelectorAll('[data-slot="navigation-menu-trigger"]');
+      const viewport = document.querySelector('[data-slot="navigation-menu-viewport"]');
+
+      if (!viewport || !wrapperRef.current) return;
+
+      triggers.forEach((trigger, index) => {
+        if (trigger.getAttribute('data-state') === 'open') {
+          // Para el último trigger (Insights, índice 4), ajustar posición
+          if (index === 4) {
+            const viewportWidth = (viewport as HTMLElement).offsetWidth;
+            const wrapperWidth = wrapperRef.current!.offsetWidth;
+            const offset = wrapperWidth - viewportWidth;
+            setTranslateX(offset);
+          } else {
+            setTranslateX(0);
+          }
+        }
+      });
+    };
+
+    const interval = setInterval(updatePosition, 50);
+    updatePosition();
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
-      className={cn(
-        'px-(--viewport-outer-px) fixed inset-x-0 top-20 isolate z-50 mx-auto flex max-w-[1280px]',
-      )}
+      ref={wrapperRef}
+      className="absolute left-0 top-full flex w-full justify-start perspective-[2000px]"
+      style={{
+        transform: `translateX(${translateX}px)`,
+        transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+      }}
     >
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          'bg-popover text-popover-foreground h-(--radix-navigation-menu-viewport-height) ring-foreground/10 rounded-(--radius) md:w-(--radix-navigation-menu-viewport-width) relative mt-1.5 w-full origin-top overflow-hidden border border-transparent p-0.5 shadow-xl shadow-black/10 ring-1 transition-[width,height] duration-200',
+          'bg-popover text-popover-foreground h-(--radix-navigation-menu-viewport-height) ring-foreground/10 rounded-(--radius) md:w-(--radix-navigation-menu-viewport-width) relative mt-1.5 origin-top overflow-hidden border border-transparent p-0.5 shadow-xl shadow-black/10 ring-1 transition-[width,height,transform] duration-200',
           'data-[state=closed]:animate-scale-out data-[state=open]:animate-scale-in',
           className,
         )}
@@ -130,7 +163,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "data-[active=true]:focus:bg-muted data-[active=true]:hover:bg-muted data-[active=true]:bg-muted/50 data-[active=true]:text-foreground hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-md p-2 text-sm outline-none transition-all focus-visible:outline-1 focus-visible:ring-[3px] [&_svg:not([class*='size-'])]:size-4",
+        "data-[active=true]:focus:bg-muted data-[active=true]:hover:bg-muted data-[active=true]:bg-muted/50 data-[active=true]:text-foreground hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-md p-2 text-sm outline-none focus-visible:outline-1 focus-visible:ring-[3px] [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}

@@ -3,6 +3,7 @@
 // import { StatsSection1 } from '@brandpetram/componentes-2026/pro-blocks'
 // import { TarjetaHero1 } from '@brandpetram/componentes-2026/marketing'
 import { HeroVideoCover } from '@/components/hero-video-cover'
+import { TarjetaHeroOriginal } from '@/components/tarjeta-hero-original'
 import Header from '@/components/Header'
 
 export default function Home() {
@@ -18,14 +19,7 @@ export default function Home() {
         alt="Parque Industrial Gulfstream - Vista aérea de instalaciones modernas"
         overlayOpacity={0.30}
       >
-        <div className="max-w-md bg-blue-600/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg">
-          <h1 className="text-4xl font-bold text-white mb-4">
-            Los Expertos en Parques Industriales en Mexicali
-          </h1>
-          <p className="text-white/90 text-lg">
-            60 años creando soluciones llave en mano para empresas globales en parques y espacios industriales en Mexicali
-          </p>
-        </div>
+        <TarjetaHeroOriginal />
       </HeroVideoCover>
 
       {/* TODO: Migrar RadiantHeader y KeynoteHero */}
