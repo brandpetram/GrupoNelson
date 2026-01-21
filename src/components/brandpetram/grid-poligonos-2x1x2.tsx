@@ -40,7 +40,7 @@ export function GridPoligonos2x1x2() {
           <div className="relative aspect-square">
             <PoligonoIcono1
               icon={<SdiEmblema />}
-              backgroundColor="bg-gradient-to-br from-orange-500 to-red-600"
+              backgroundColor="bg-gradient-to-br from-blue-600 to-sky-500"
               iconColor="text-white"
               iconSize="w-32 h-32"
               hoverEffect="rotate"
@@ -86,7 +86,7 @@ export function GridPoligonos2x1x2() {
 
           {/* Texto abajo izquierda - cuadrado */}
           <div className="relative aspect-square">
-            <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-tr from-orange-500 to-red-600 rounded-none">
+            <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-tr from-blue-600 to-sky-500 rounded-none">
                 <p className="p-6 w-full 1728:w-full text-white font-bold tracking-tighter leading-none text-center break-words transition-transform duration-300 group-hover:scale-110 text-md 393:text-md 430:text-xl 768:text-xl 834:text-3xl 1024:text-3xl 1200:text-3xl 1280:text-2xl 1366:text-2xl 1440:text-3xl 1536:text-3xl 1728:text-3xl 1920:text-3xl">
                 Built to Suit
               </p>

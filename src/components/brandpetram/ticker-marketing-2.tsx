@@ -59,7 +59,7 @@ export function TickerMarketing2() {
             <p className="text-white/70 text-lg mb-8 max-w-sm">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
           </p>
-            <button className="bg-orange-500  text-white px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors w-fit">
+            <button className="bg-blue-600  text-white px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors w-fit">
               Cotiza Ahora
             </button>
           </div>

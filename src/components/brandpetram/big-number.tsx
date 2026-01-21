@@ -62,7 +62,7 @@ export function BigNumber({
           >
             {/* +200 */}
             <motion.h2
-              className="text-right text-7xl md:text-[6rem] 1200:text-[10rem] 1366:text-[12rem] font-black leading-none tracking-tighter bg-linear-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+              className="text-right text-7xl md:text-[6rem] 1200:text-[10rem] 1366:text-[12rem] font-black leading-none tracking-tighter bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent"
               variants={itemVariants}
             >
               {number}
@@ -141,7 +141,7 @@ export function BigNumberLeft({
           >
             {/* +200 */}
             <motion.h2
-              className="text-left text-7xl md:text-[10rem] 1200:text-[15rem] 1366:text-[17rem] font-black leading-none tracking-tighter bg-linear-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+              className="text-left text-7xl md:text-[10rem] 1200:text-[15rem] 1366:text-[17rem] font-black leading-none tracking-tighter bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent"
               variants={itemVariants}
             >
               {number}

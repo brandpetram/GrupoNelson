@@ -25,9 +25,9 @@ export function GridPoligonos2x1() {
           <div className="relative aspect-square">
             <PoligonoImagen1
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-296.jpg"
-              alt="Conveyor aéreo industrial"
+              alt="Lorem ipsum"
               overlayColor="oklch(21.6% 0.006 56.043 / 0.8)"
-              text="Conveyors Aéreos"
+              text="Parque Nelson I"
               textColor="text-white"
               className="rounded-none"
             />
@@ -37,7 +37,7 @@ export function GridPoligonos2x1() {
           <div className="relative aspect-square">
             <PoligonoIcono1
               icon={<SdiEmblema />}
-              backgroundColor="bg-gradient-to-br from-orange-500 to-red-600"
+              backgroundColor="bg-gradient-to-br from-blue-600 to-sky-500"
               iconColor="text-white"
               iconSize="w-32 h-32"
               hoverEffect="rotate"
@@ -49,7 +49,7 @@ export function GridPoligonos2x1() {
           <div className="relative col-span-2 aspect-[2/1]">
             <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900 rounded-none">
               <p className="p-6 md:w-8/12 1728:w-9/12 text-white font-bold tracking-tighter leading-none text-center break-words transition-transform duration-300 group-hover:scale-110 text-xl 393:text-xl 430:text-3xl 768:text-2xl 834:text-2xl 1024:text-3xl 1200:text-4xl 1280:text-3xl 1366:text-3xl 1440:text-4xl 1536:text:4xl 1728:text-5xl 1920:text-5xl">
-                Soluciones Industriales de Conveyor
+                Naves Industriales en Mexicali
               </p>
             </div>
           </div>
@@ -59,9 +59,9 @@ export function GridPoligonos2x1() {
         <div className="relative">
           <PoligonoImagen1
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-297.jpg"
-            alt="Conveyor vertical helicoidal"
+            alt="Lorem ipsum"
             overlayColor="oklch(64.6% 0.222 41.116 / 0.8)"
-            text="Sistemas Verticales"
+            text="Terrenos en Venta"
             textColor="text-white"
             className="rounded-none"
           />

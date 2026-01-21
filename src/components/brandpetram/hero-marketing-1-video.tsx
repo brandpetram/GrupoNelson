@@ -147,7 +147,7 @@ export function HeroMarketing1Video() {
             </h2>
 
             <div className="flex justify-center mt-6 md:mt-8">
-              <div className="h-1 w-full bg-orange-600" />
+              <div className="h-1 w-full bg-blue-600" />
             </div>
 
               <div className="space-y-6 text-muted-foreground leading-snug text-lg mt-8 393:text-xl 430:text-2xl 768:text-2xl 834:text-2xl 1024:text-2xl 1200:text-2xl 1280:text-2xl 1366:text-2xl 1440:text-2xl 1536:text-3xl 1728:text-3xl 1920:text-3xl">

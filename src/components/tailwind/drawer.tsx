@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 import { GridPoligonos2x1 } from '@/components/brandpetram/grid-poligonos-2x1'
 import { Phone } from 'lucide-react'
 
-export type ConveyorDrawerData = {
+export type ServiceDrawerData = {
   id: string
   name: string
   shortDescription: string
@@ -19,20 +19,14 @@ export type ConveyorDrawerData = {
 export type DrawerProps = {
   open: boolean
   onClose: () => void
-  conveyor: ConveyorDrawerData | null
+  service: ServiceDrawerData | null
 }
 
 function getDisplayName(name: string): string {
-  if (name.startsWith('Transportadores')) {
-    return name.replace('Transportadores', 'Conveyors')
-  }
-  if (name.startsWith('Conveyors')) {
-    return name
-  }
-  return `Conveyors de ${name}`
+  return name
 }
 
-export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
+export default function Drawer({ open, onClose, service }: DrawerProps) {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
@@ -133,7 +127,7 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
         <div className="px-4 py-6 sm:px-6 border-b">
           <div className="flex items-start justify-between">
             <h2 className="text-base font-semibold text-gray-900 truncate">
-              Soporte Dinámico Industrial
+              Grupo Nelson
             </h2>
             <div className="ml-3 flex h-7 items-center">
               <button type="button" onClick={onClose} className="relative rounded-xs p-1.5 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-600">
@@ -151,7 +145,7 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
           <div
             role="dialog"
             aria-modal="true"
-            aria-label={`Visor de imagen: ${conveyor?.name ? getDisplayName(conveyor.name) : 'Conveyor'}`}
+            aria-label={`Visor de imagen: ${service?.name ? getDisplayName(service.name) : 'Servicio'}`}
             className="absolute inset-0 z-20 bg-black/90 flex items-center justify-center"
             style={{ touchAction: 'none' }}
             onClick={(e) => { e.stopPropagation(); closeViewer(); }}
@@ -163,15 +157,15 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
                 e.stopPropagation();
                 closeViewer();
               }}
-              className="absolute top-3 left-3 z-30 inline-flex items-center rounded-xs bg-orange-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              className="absolute top-3 left-3 z-30 inline-flex items-center rounded-xs bg-blue-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Cerrar
             </button>
-            {conveyor?.image ? (
+            {service?.image ? (
               <div className="relative z-10 w-full h-full pointer-events-none">
                 <img
-                  src={conveyor.image}
-                  alt={conveyor.alt}
+                  src={service.image}
+                  alt={service.alt}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -186,7 +180,7 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
         >
           {/* Cover band + image + title area */}
           <div className="pb-6">
-            <div className="h-24 bg-gradient-to-bl from-orange-500 to-red-600 sm:h-20 lg:h-28" />
+            <div className="h-24 bg-gradient-to-bl from-blue-600 to-sky-500 sm:h-20 lg:h-28" />
             <div className="-mt-12 flow-root px-4 sm:-mt-8 sm:flex sm:items-end sm:px-6 lg:-mt-16">
               <div>
                 <div className="-m-1 flex">
@@ -199,10 +193,10 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
                     onClick={() => setViewerOpen(true)}
                     className="inline-flex overflow-hidden rounded-xs border-4 border-white focus:outline-none focus:ring-2 focus:ring-orange-600"
                   >
-                    {conveyor?.image ? (
+                    {service?.image ? (
                       <img
-                        alt={conveyor.alt}
-                        src={conveyor.image}
+                        alt={service.alt}
+                        src={service.image}
                         className="size-24 shrink-0 bg-gray-100 outline outline-1 -outline-offset-1 outline-black/5 sm:size-40 lg:size-48 object-cover"
                       />
                     ) : (
@@ -214,12 +208,12 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
               <div className="mt-6 sm:ml-6 sm:flex-1">
                 <div>
                   <div className="flex items-center">
-                    <h3 className="text-xl font-bold text-gray-900 sm:text-2xl truncate">{conveyor?.name ? getDisplayName(conveyor.name) : 'Conveyor'}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 sm:text-2xl truncate">{service?.name ? getDisplayName(service.name) : 'Servicio'}</h3>
                     <span className="ml-2.5 inline-block size-2 shrink-0 rounded-full bg-green-400">
                       <span className="sr-only">Disponible</span>
                     </span>
                   </div>
-                  <p className="text-sm text-gray-500 text-balance">{conveyor?.shortDescription}</p>
+                  <p className="text-sm text-gray-500 text-balance">{service?.shortDescription}</p>
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <a
@@ -238,7 +232,7 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
                   </a>
                   <a
                     href="tel:+528181009100"
-                    className="inline-flex items-center justify-center gap-2 rounded-xs bg-orange-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                    className="inline-flex items-center justify-center gap-2 rounded-xs bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
                     <Phone className="w-4 h-4" />
                     Llamar
@@ -255,12 +249,12 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
               {/* Left: Lists */}
               <div className="space-y-4">
                 {/* Características */}
-                {conveyor?.features?.length ? (
+                {service?.features?.length ? (
                   <div>
                     <dt className="text-sm font-medium text-gray-500 mb-2">Características</dt>
                     <dd className="text-sm text-gray-900">
                       <ul className="list-disc pl-5 space-y-1">
-                        {conveyor.features.map((f) => (
+                        {service.features.map((f) => (
                           <li key={f} className="capitalize">{f}</li>
                         ))}
                       </ul>
@@ -269,12 +263,12 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
                 ) : null}
 
                 {/* Aplicaciones */}
-                {conveyor?.applications?.length ? (
+                {service?.applications?.length ? (
                   <div>
                     <dt className="text-sm font-medium text-gray-500 mb-2">Aplicaciones</dt>
                     <dd className="text-sm text-gray-900">
                       <ul className="list-disc pl-5 space-y-1">
-                        {conveyor.applications.map((a) => (
+                        {service.applications.map((a) => (
                           <li key={a} className="capitalize">{a}</li>
                         ))}
                       </ul>
@@ -284,11 +278,11 @@ export default function Drawer({ open, onClose, conveyor }: DrawerProps) {
               </div>
 
               {/* Right: Image */}
-              {conveyor?.image ? (
+              {service?.image ? (
                 <div className="relative aspect-[3/2] w-full md:self-start">
                   <img
-                    src={conveyor.image}
-                    alt={conveyor.alt}
+                    src={service.image}
+                    alt={service.alt}
                     className="w-full h-full object-cover rounded-xs"
                   />
                 </div>

@@ -17,13 +17,13 @@ const rayLength = 20; // Longitud de los rayos - extienden hacia afuera
 
 // Posiciones de los 7 textos en el semicircle - ajusta x y y según necesites
 const labels = [
-  { x: 8.5, y: 35, text: ["Reparación", "Mantenimiento"] },
-  { x: 11.9, y:20, text: ["Refacciones", "y Kits"] },
+  { x: 8.5, y: 35, text: ["Parques de", "Clase Mundial"] },
+  { x: 11.9, y:20, text: ["Innovación", "Técnica"] },
   { x: 28.8, y: 7, text: ["Built", "to Suit"] },
-  { x: 50, y: 3, text: ["Integración de", "Nuevas Líneas"] },
-  { x: 71.2, y: 7, text: ["Industria", "Alimenticia"] },
-  { x: 85.1, y: 19, text: ["Industria", "Manufactura"] },
-  { x: 93.5, y: 34, text: ["Industria", "Automotriz"] },
+  { x: 50, y: 3, text: ["Desarrollo de", "Parques Clase"] },
+  { x: 71.2, y: 7, text: ["Parques", "Sustentables"] },
+  { x: 85.1, y: 19, text: ["Excelencia", "Industrial"] },
+  { x: 93.5, y: 34, text: ["Confianza", "por Décadas"] },
 ];
 
 export function HalfCircle() {
@@ -43,7 +43,7 @@ export function HalfCircle() {
       <div className="relative z-10 flex items-end justify-center w-full h-full">
         {/* Big gradient circle - only this should be transparent */}
         <div
-          className="bg-gradient-to-br from-orange-500 to-red-600"
+          className="bg-gradient-to-br from-blue-600 to-sky-500"
           style={{
             width: circleWidth,
             aspectRatio: "2 / 1",
@@ -65,13 +65,13 @@ export function HalfCircle() {
           viewBox="0 0 100 50"
           preserveAspectRatio="none"
         >
-          <path d="M 50 50 L 0 50 A 50 50 0 0 1 4.945 28.306 Z" fill="#571f0c" />
-          <path d="M 50 50 L 4.945 28.306 A 50 50 0 0 1 18.820 10.909 Z" fill="#811313" />
-          <path d="M 50 50 L 18.820 10.909 A 50 50 0 0 1 38.876 1.251 Z" fill="#9a1a1a" />
-          <path d="M 50 50 L 38.876 1.251 A 50 50 0 0 1 61.124 1.251 Z" fill="#a72f2f" />
-          <path d="M 50 50 L 61.124 1.251 A 50 50 0 0 1 81.180 10.909 Z" fill="#a33d08" />
-          <path d="M 50 50 L 81.180 10.909 A 50 50 0 0 1 95.055 28.306 Z" fill="#ae500f" />
-          <path d="M 50 50 L 95.055 28.306 A 50 50 0 0 1 100 50 Z" fill="#b18251" />
+          <path d="M 50 50 L 0 50 A 50 50 0 0 1 4.945 28.306 Z" fill="#1e3a8a" />
+          <path d="M 50 50 L 4.945 28.306 A 50 50 0 0 1 18.820 10.909 Z" fill="#1e40af" />
+          <path d="M 50 50 L 18.820 10.909 A 50 50 0 0 1 38.876 1.251 Z" fill="#2563eb" />
+          <path d="M 50 50 L 38.876 1.251 A 50 50 0 0 1 61.124 1.251 Z" fill="#3b82f6" />
+          <path d="M 50 50 L 61.124 1.251 A 50 50 0 0 1 81.180 10.909 Z" fill="#60a5fa" />
+          <path d="M 50 50 L 81.180 10.909 A 50 50 0 0 1 95.055 28.306 Z" fill="#93c5fd" />
+          <path d="M 50 50 L 95.055 28.306 A 50 50 0 0 1 100 50 Z" fill="#bfdbfe" />
         </svg>
 
 {/* 7-division semicircle overlay - bright version, 10% smaller */}
@@ -87,13 +87,13 @@ export function HalfCircle() {
           viewBox="0 0 100 50"
           preserveAspectRatio="none"
         >
-          <path d="M 50 50 L 0 50 A 50 50 0 0 1 4.945 28.306 Z" fill="#7c2d12" />
-          <path d="M 50 50 L 4.945 28.306 A 50 50 0 0 1 18.820 10.909 Z" fill="#b91c1c" />
-          <path d="M 50 50 L 18.820 10.909 A 50 50 0 0 1 38.876 1.251 Z" fill="#dc2626" />
-          <path d="M 50 50 L 38.876 1.251 A 50 50 0 0 1 61.124 1.251 Z" fill="#ef4444" />
-          <path d="M 50 50 L 61.124 1.251 A 50 50 0 0 1 81.180 10.909 Z" fill="#ea580c" />
-          <path d="M 50 50 L 81.180 10.909 A 50 50 0 0 1 95.055 28.306 Z" fill="#f97316" />
-          <path d="M 50 50 L 95.055 28.306 A 50 50 0 0 1 100 50 Z" fill="#fdba74" />
+          <path d="M 50 50 L 0 50 A 50 50 0 0 1 4.945 28.306 Z" fill="#1e40af" />
+          <path d="M 50 50 L 4.945 28.306 A 50 50 0 0 1 18.820 10.909 Z" fill="#2563eb" />
+          <path d="M 50 50 L 18.820 10.909 A 50 50 0 0 1 38.876 1.251 Z" fill="#3b82f6" />
+          <path d="M 50 50 L 38.876 1.251 A 50 50 0 0 1 61.124 1.251 Z" fill="#60a5fa" />
+          <path d="M 50 50 L 61.124 1.251 A 50 50 0 0 1 81.180 10.909 Z" fill="#93c5fd" />
+          <path d="M 50 50 L 81.180 10.909 A 50 50 0 0 1 95.055 28.306 Z" fill="#bfdbfe" />
+          <path d="M 50 50 L 95.055 28.306 A 50 50 0 0 1 100 50 Z" fill="#dbeafe" />
         </svg>
 
         {/* Semicircle on top - smaller to reveal 7-layered beneath - sensible a light/dark mode */}
@@ -129,13 +129,13 @@ export function HalfCircle() {
           viewBox="0 0 100 50"
           preserveAspectRatio="none"
         >
-          <path d="M 50 50 L 0 50 A 50 50 0 0 1 4.945 28.306 Z" fill="#7c2d12" opacity="0" />
-          <path d="M 50 50 L 4.945 28.306 A 50 50 0 0 1 18.820 10.909 Z" fill="#b91c1c" opacity="0" />
-          <path d="M 50 50 L 18.820 10.909 A 50 50 0 0 1 38.876 1.251 Z" fill="#dc2626" opacity="0" />
-          <path d="M 50 50 L 38.876 1.251 A 50 50 0 0 1 61.124 1.251 Z" fill="#ef4444" opacity="0" />
-          <path d="M 50 50 L 61.124 1.251 A 50 50 0 0 1 81.180 10.909 Z" fill="#ea580c" opacity="0" />
-          <path d="M 50 50 L 81.180 10.909 A 50 50 0 0 1 95.055 28.306 Z" fill="#f97316" opacity="0" />
-          <path d="M 50 50 L 95.055 28.306 A 50 50 0 0 1 100 50 Z" fill="#fdba74" opacity="0" />
+          <path d="M 50 50 L 0 50 A 50 50 0 0 1 4.945 28.306 Z" fill="#1e40af" opacity="0" />
+          <path d="M 50 50 L 4.945 28.306 A 50 50 0 0 1 18.820 10.909 Z" fill="#2563eb" opacity="0" />
+          <path d="M 50 50 L 18.820 10.909 A 50 50 0 0 1 38.876 1.251 Z" fill="#3b82f6" opacity="0" />
+          <path d="M 50 50 L 38.876 1.251 A 50 50 0 0 1 61.124 1.251 Z" fill="#60a5fa" opacity="0" />
+          <path d="M 50 50 L 61.124 1.251 A 50 50 0 0 1 81.180 10.909 Z" fill="#0ea5e9" opacity="0" />
+          <path d="M 50 50 L 81.180 10.909 A 50 50 0 0 1 95.055 28.306 Z" fill="#38bdf8" opacity="0" />
+          <path d="M 50 50 L 95.055 28.306 A 50 50 0 0 1 100 50 Z" fill="#7dd3fc" opacity="0" />
         </svg>
 
         {/* Labels on larger invisible circle - above numbered circles */}
@@ -205,31 +205,31 @@ export function HalfCircle() {
           preserveAspectRatio="none"
         >
           {/* Circle + Number 1 - ANIMATED */}
-          <motion.circle cx="2.5" cy="39.2" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#7c2d12" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.06125, ease: "easeOut" }} style={{ transformOrigin: "2.5px 39.2px" }} />
+          <motion.circle cx="2.5" cy="39.2" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#1e40af" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.06125, ease: "easeOut" }} style={{ transformOrigin: "2.5px 39.2px" }} />
           <motion.text x="2.5" y="39.2" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.06125, ease: "easeOut" }} style={{ transformOrigin: "2.5px 39.2px" }}>01</motion.text>
 
           {/* Circle + Number 2 - ANIMATED */}
-          <motion.circle cx="11.9" cy="19.6" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#b91c1c" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.245, ease: "easeOut" }} style={{ transformOrigin: "11.9px 19.6px" }} />
+          <motion.circle cx="11.9" cy="19.6" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#2563eb" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.245, ease: "easeOut" }} style={{ transformOrigin: "11.9px 19.6px" }} />
           <motion.text x="11.9" y="19.6" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.245, ease: "easeOut" }} style={{ transformOrigin: "11.9px 19.6px" }}>02</motion.text>
 
           {/* Circle + Number 3 - ANIMATED */}
-          <motion.circle cx="28.8" cy="6.1" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#dc2626" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.42875, ease: "easeOut" }} style={{ transformOrigin: "28.8px 6.1px" }} />
+          <motion.circle cx="28.8" cy="6.1" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#3b82f6" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.42875, ease: "easeOut" }} style={{ transformOrigin: "28.8px 6.1px" }} />
           <motion.text x="28.8" y="6.1" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.42875, ease: "easeOut" }} style={{ transformOrigin: "28.8px 6.1px" }}>03</motion.text>
 
           {/* Circle + Number 4 - ANIMATED */}
-          <motion.circle cx="50" cy="1.25" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#ef4444" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.6125, ease: "easeOut" }} style={{ transformOrigin: "50px 1.25px" }} />
+          <motion.circle cx="50" cy="1.25" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#60a5fa" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.6125, ease: "easeOut" }} style={{ transformOrigin: "50px 1.25px" }} />
           <motion.text x="50" y="1.25" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.6125, ease: "easeOut" }} style={{ transformOrigin: "50px 1.25px" }}>04</motion.text>
 
           {/* Circle + Number 5 - ANIMATED */}
-          <motion.circle cx="71.2" cy="6.1" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#ea580c" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.79625, ease: "easeOut" }} style={{ transformOrigin: "71.2px 6.1px" }} />
+          <motion.circle cx="71.2" cy="6.1" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#60a5fa" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.79625, ease: "easeOut" }} style={{ transformOrigin: "71.2px 6.1px" }} />
           <motion.text x="71.2" y="6.1" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.79625, ease: "easeOut" }} style={{ transformOrigin: "71.2px 6.1px" }}>05</motion.text>
 
           {/* Circle + Number 6 - ANIMATED */}
-          <motion.circle cx="88.1" cy="19.6" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#f97316" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.98, ease: "easeOut" }} style={{ transformOrigin: "88.1px 19.6px" }} />
+          <motion.circle cx="88.1" cy="19.6" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#93c5fd" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.98, ease: "easeOut" }} style={{ transformOrigin: "88.1px 19.6px" }} />
           <motion.text x="88.1" y="19.6" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 0.98, ease: "easeOut" }} style={{ transformOrigin: "88.1px 19.6px" }}>06</motion.text>
 
           {/* Circle + Number 7 - ANIMATED */}
-          <motion.circle cx="97.5" cy="39.2" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#fdba74" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 1.16375, ease: "easeOut" }} style={{ transformOrigin: "97.5px 39.2px" }} />
+          <motion.circle cx="97.5" cy="39.2" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#bfdbfe" strokeWidth="0.15" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 1.16375, ease: "easeOut" }} style={{ transformOrigin: "97.5px 39.2px" }} />
           <motion.text x="97.5" y="39.2" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5" initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.06125, delay: 1.16375, ease: "easeOut" }} style={{ transformOrigin: "97.5px 39.2px" }}>07</motion.text>
         </svg>
 

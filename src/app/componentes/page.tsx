@@ -69,7 +69,7 @@ export default function ConveyorsIndustrialesPage() {
               {/* Logos de Marcas - probar las 3 variantes */}
               <div className={'flex flex-col md:flex-row mt-10 1728:mt-0 1200:mb-32 1280:-mb-40 1536:mb-10 1728:mb-32 1920:mb-32'}>
                   <div className={'flex-2'}><LogosMarcas/></div>
-                  <div className="shadow-xl md:flex-1 2240:flex-2 right-0 1200:translate-x-10 z-10 bg-gradient-to-bl from-orange-500 to-red-600 rounded-xs ">
+                  <div className="shadow-xl md:flex-1 2240:flex-2 right-0 1200:translate-x-10 z-10 bg-gradient-to-bl from-blue-600 to-sky-500 rounded-xs ">
                       <div className="flex flex-col gap-6">
                           <Titulo
                               as="h2"
@@ -124,7 +124,7 @@ export default function ConveyorsIndustrialesPage() {
                   {/* Columna izquierda: texto */}
                   <div className="order-1 ml-10 1200:ml-0 w-full 1200:w-5/12 flex flex-col gap-6 relative z-10 1200:-translate-y-32">
                       {/* Div naranja */}
-                      <div className="w-9/12 max-w-sm bg-gradient-to-tl p-16 from-orange-500 to-red-600 p-10 rounded-xs">
+                      <div className="w-9/12 max-w-sm bg-gradient-to-tl p-16 from-blue-600 to-sky-500 p-10 rounded-xs">
                           <div className="flex flex-col gap-6">
                               <Titulo
                                   as="h2"
@@ -145,7 +145,7 @@ export default function ConveyorsIndustrialesPage() {
                           </p>
                           <Link
                               href="/contacto"
-                              className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-md transition-colors w-fit"
+                              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors w-fit"
                           >
                               Contáctanos
                           </Link>
@@ -175,7 +175,7 @@ export default function ConveyorsIndustrialesPage() {
 
                           {/* Overlay rectangulo - posicionable */}
                           <motion.div
-                            className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-[40px] h-8 md:h-14 bg-gradient-to-tl from-orange-500 to-red-600 z-10 -rotate-12"
+                            className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-[40px] h-8 md:h-14 bg-gradient-to-tl from-blue-600 to-sky-500 z-10 -rotate-12"
                             initial={{ width: 0 }}
                             whileInView={{ width: "calc(58.33% - 0px)" }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -183,7 +183,7 @@ export default function ConveyorsIndustrialesPage() {
                           >
                             {/* Círculo inicio */}
                             <motion.div
-                              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-20 h-20 md:w-36 md:h-36 rounded-full bg-gradient-to-tl from-orange-500 to-red-600 flex items-center justify-center"
+                              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-20 h-20 md:w-36 md:h-36 rounded-full bg-gradient-to-tl from-blue-600 to-sky-500 flex items-center justify-center"
                               initial={{ rotate: 0 }}
                               whileInView={{ rotate: 360 }}
                               transition={{ duration: 0.6, delay: 0.8, ease: "easeInOut" }}
@@ -193,7 +193,7 @@ export default function ConveyorsIndustrialesPage() {
                             </motion.div>
                             {/* Círculo final */}
                             <motion.div
-                              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-20 h-20 md:w-36 md:h-36 rounded-full bg-gradient-to-tl from-orange-500 to-red-600 flex items-center justify-center"
+                              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-20 h-20 md:w-36 md:h-36 rounded-full bg-gradient-to-tl from-blue-600 to-sky-500 flex items-center justify-center"
                               initial={{ rotate: 0 }}
                               whileInView={{ rotate: 360 }}
                               transition={{ duration: 0.6, delay: 0.8, ease: "easeInOut" }}
@@ -239,7 +239,7 @@ export default function ConveyorsIndustrialesPage() {
             </section>
 
             {/* 2. STICKY - Orange/Red features content revealed */}
-            <StickyRevealContent className="bg-gradient-to-br from-orange-500 to-red-600">
+            <StickyRevealContent className="bg-gradient-to-br from-blue-600 to-sky-500">
               <HexagonFeatures />
             </StickyRevealContent>
 
@@ -265,7 +265,7 @@ export default function ConveyorsIndustrialesPage() {
                     strokeColor="stroke-white/30"
                     gridSize={100}
                     showHighlights={true}
-                    highlightColor="fill-orange-500/40"
+                    highlightColor="fill-blue-600/40"
                   />
                 </motion.div>
                 {/* Logo flotante en esquina inferior derecha */}
@@ -277,7 +277,7 @@ export default function ConveyorsIndustrialesPage() {
           </div>
 
           {/* Mobile version - Sin efecto de reveal */}
-          <section className="md:hidden bg-gradient-to-br from-orange-500 to-red-600">
+          <section className="md:hidden bg-gradient-to-br from-blue-600 to-sky-500">
             <HexagonFeatures />
           </section>
 

@@ -10,7 +10,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { ItemConveyor } from './item-conveyor'
 import Drawer from '@/components/tailwind/drawer'
-import type { ConveyorDrawerData } from '@/components/tailwind/drawer'
+import type { ServiceDrawerData } from '@/components/tailwind/drawer'
 
 const conveyorItems = [
   {
@@ -137,12 +137,12 @@ const conveyorItems = [
 
 export function ConveyorsGridSection() {
   const [drawerOpen, setDrawerOpen] = useState(false)
-  const [selectedConveyor, setSelectedConveyor] = useState<ConveyorDrawerData | null>(null)
+  const [selectedConveyor, setSelectedConveyor] = useState<ServiceDrawerData | null>(null)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const itemRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const handleConveyorClick = (item: typeof conveyorItems[0]) => {
-    const drawerData: ConveyorDrawerData = {
+    const drawerData: ServiceDrawerData = {
       id: item.id,
       name: item.name,
       shortDescription: item.shortDescription,
@@ -226,7 +226,7 @@ export function ConveyorsGridSection() {
         </div>
       </section>
 
-      <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} conveyor={selectedConveyor} />
+      <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} service={selectedConveyor} />
     </>
   )
 }

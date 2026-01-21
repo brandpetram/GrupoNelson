@@ -113,7 +113,7 @@ export function HalfCircleMobile() {
 
       {/* CAPA 1: Semicírculo gradiente base */}
       <div
-        className="bg-gradient-to-br from-orange-500 to-red-600 absolute left-0"
+        className="bg-gradient-to-br from-blue-600 to-sky-500 absolute left-0"
         style={{
           width: circleWidth,
           aspectRatio: "1 / 2",
@@ -140,13 +140,13 @@ export function HalfCircleMobile() {
         viewBox="0 0 50 100"
         preserveAspectRatio="none"
       >
-        <path d="M 0 50 L 0 0 A 50 50 0 0 1 21.64 4.74 Z" fill="#571f0c" />
-        <path d="M 0 50 L 21.64 4.74 A 50 50 0 0 1 39.01 18.82 Z" fill="#811313" />
-        <path d="M 0 50 L 39.01 18.82 A 50 50 0 0 1 48.78 38.87 Z" fill="#9a1a1a" />
-        <path d="M 0 50 L 48.78 38.87 A 50 50 0 0 1 48.78 61.13 Z" fill="#a72f2f" />
-        <path d="M 0 50 L 48.78 61.13 A 50 50 0 0 1 39.01 81.18 Z" fill="#a33d08" />
-        <path d="M 0 50 L 39.01 81.18 A 50 50 0 0 1 21.64 95.26 Z" fill="#ae500f" />
-        <path d="M 0 50 L 21.64 95.26 A 50 50 0 0 1 0 100 Z" fill="#b18251" />
+        <path d="M 0 50 L 0 0 A 50 50 0 0 1 21.64 4.74 Z" fill="#1e3a8a" />
+        <path d="M 0 50 L 21.64 4.74 A 50 50 0 0 1 39.01 18.82 Z" fill="#1e40af" />
+        <path d="M 0 50 L 39.01 18.82 A 50 50 0 0 1 48.78 38.87 Z" fill="#2563eb" />
+        <path d="M 0 50 L 48.78 38.87 A 50 50 0 0 1 48.78 61.13 Z" fill="#3b82f6" />
+        <path d="M 0 50 L 48.78 61.13 A 50 50 0 0 1 39.01 81.18 Z" fill="#60a5fa" />
+        <path d="M 0 50 L 39.01 81.18 A 50 50 0 0 1 21.64 95.26 Z" fill="#93c5fd" />
+        <path d="M 0 50 L 21.64 95.26 A 50 50 0 0 1 0 100 Z" fill="#bfdbfe" />
       </svg>
 
       {/* CAPA 3b: SVG de 7-divisiones - versión brillante (interior) */}
@@ -163,13 +163,13 @@ export function HalfCircleMobile() {
         viewBox="0 0 50 100"
         preserveAspectRatio="none"
       >
-        <path d="M 0 50 L 0 0 A 50 50 0 0 1 21.64 4.74 Z" fill="#7c2d12" />
-        <path d="M 0 50 L 21.64 4.74 A 50 50 0 0 1 39.01 18.82 Z" fill="#b91c1c" />
-        <path d="M 0 50 L 39.01 18.82 A 50 50 0 0 1 48.78 38.87 Z" fill="#dc2626" />
-        <path d="M 0 50 L 48.78 38.87 A 50 50 0 0 1 48.78 61.13 Z" fill="#ef4444" />
-        <path d="M 0 50 L 48.78 61.13 A 50 50 0 0 1 39.01 81.18 Z" fill="#ea580c" />
-        <path d="M 0 50 L 39.01 81.18 A 50 50 0 0 1 21.64 95.26 Z" fill="#f97316" />
-        <path d="M 0 50 L 21.64 95.26 A 50 50 0 0 1 0 100 Z" fill="#fdba74" />
+        <path d="M 0 50 L 0 0 A 50 50 0 0 1 21.64 4.74 Z" fill="#1e40af" />
+        <path d="M 0 50 L 21.64 4.74 A 50 50 0 0 1 39.01 18.82 Z" fill="#2563eb" />
+        <path d="M 0 50 L 39.01 18.82 A 50 50 0 0 1 48.78 38.87 Z" fill="#3b82f6" />
+        <path d="M 0 50 L 48.78 38.87 A 50 50 0 0 1 48.78 61.13 Z" fill="#60a5fa" />
+        <path d="M 0 50 L 48.78 61.13 A 50 50 0 0 1 39.01 81.18 Z" fill="#93c5fd" />
+        <path d="M 0 50 L 39.01 81.18 A 50 50 0 0 1 21.64 95.26 Z" fill="#bfdbfe" />
+        <path d="M 0 50 L 21.64 95.26 A 50 50 0 0 1 0 100 Z" fill="#dbeafe" />
       </svg>
 
       {/* SVG invisible de referencia - define estructura para líneas y círculos */}
@@ -186,13 +186,13 @@ export function HalfCircleMobile() {
         viewBox="0 0 50 100"
         preserveAspectRatio="none"
       >
-        <path d="M 0 50 L 0 0 A 50 50 0 0 1 21.64 4.74 Z" fill="#7c2d12" opacity="0" />
-        <path d="M 0 50 L 21.64 4.74 A 50 50 0 0 1 39.01 18.82 Z" fill="#b91c1c" opacity="0" />
-        <path d="M 0 50 L 39.01 18.82 A 50 50 0 0 1 48.78 38.87 Z" fill="#dc2626" opacity="0" />
-        <path d="M 0 50 L 48.78 38.87 A 50 50 0 0 1 48.78 61.13 Z" fill="#ef4444" opacity="0" />
-        <path d="M 0 50 L 48.78 61.13 A 50 50 0 0 1 39.01 81.18 Z" fill="#ea580c" opacity="0" />
-        <path d="M 0 50 L 39.01 81.18 A 50 50 0 0 1 21.64 95.26 Z" fill="#f97316" opacity="0" />
-        <path d="M 0 50 L 21.64 95.26 A 50 50 0 0 1 0 100 Z" fill="#fdba74" opacity="0" />
+        <path d="M 0 50 L 0 0 A 50 50 0 0 1 21.64 4.74 Z" fill="#1e40af" opacity="0" />
+        <path d="M 0 50 L 21.64 4.74 A 50 50 0 0 1 39.01 18.82 Z" fill="#2563eb" opacity="0" />
+        <path d="M 0 50 L 39.01 18.82 A 50 50 0 0 1 48.78 38.87 Z" fill="#3b82f6" opacity="0" />
+        <path d="M 0 50 L 48.78 38.87 A 50 50 0 0 1 48.78 61.13 Z" fill="#60a5fa" opacity="0" />
+        <path d="M 0 50 L 48.78 61.13 A 50 50 0 0 1 39.01 81.18 Z" fill="#93c5fd" opacity="0" />
+        <path d="M 0 50 L 39.01 81.18 A 50 50 0 0 1 21.64 95.26 Z" fill="#bfdbfe" opacity="0" />
+        <path d="M 0 50 L 21.64 95.26 A 50 50 0 0 1 0 100 Z" fill="#dbeafe" opacity="0" />
       </svg>
 
       {/* CAPA 6: Líneas divisoras blancas - extendidas más allá */}
@@ -281,37 +281,37 @@ export function HalfCircleMobile() {
         preserveAspectRatio="none"
       >
         {/* Círculo 1: ángulo -77.145° (centro entre -90° y -64.29°), radio 50 desde (0,50) */}
-        <circle cx="11.13" cy="2.51" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#7c2d12" strokeWidth="0.15" />
+        <circle cx="11.13" cy="2.51" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#1e40af" strokeWidth="0.15" />
         <text x="11.13" y="2.51" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">01</text>
 
         {/* Círculo 2: ángulo -51.43° (centro entre -64.29° y -38.57°), radio 50 desde (0,50) */}
-        <circle cx="31.18" cy="11.09" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#b91c1c" strokeWidth="0.15" />
+        <circle cx="31.18" cy="11.09" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#2563eb" strokeWidth="0.15" />
         <text x="31.18" y="11.09" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">02</text>
 
         {/* Círculo 3: ángulo -25.715° (centro entre -38.57° y -12.86°), radio 50 desde (0,50) */}
-        <circle cx="45.18" cy="28.41" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#dc2626" strokeWidth="0.15" />
+        <circle cx="45.18" cy="28.41" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#3b82f6" strokeWidth="0.15" />
         <text x="45.18" y="28.41" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">03</text>
 
         {/* Círculo 4: ángulo 0° (centro entre -12.86° y +12.86°), radio 50 desde (0,50) */}
-        <circle cx="50" cy="50" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#ef4444" strokeWidth="0.15" />
+        <circle cx="50" cy="50" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#60a5fa" strokeWidth="0.15" />
         <text x="50" y="50" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">04</text>
 
         {/* Círculo 5: ángulo +25.715° (centro entre +12.86° y +38.57°), radio 50 desde (0,50) */}
-        <circle cx="45.18" cy="71.59" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#ea580c" strokeWidth="0.15" />
+        <circle cx="45.18" cy="71.59" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#93c5fd" strokeWidth="0.15" />
         <text x="45.18" y="71.59" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">05</text>
 
         {/* Círculo 6: ángulo +51.43° (centro entre +38.57° y +64.29°), radio 50 desde (0,50) */}
-        <circle cx="31.18" cy="88.91" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#f97316" strokeWidth="0.15" />
+        <circle cx="31.18" cy="88.91" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#bfdbfe" strokeWidth="0.15" />
         <text x="31.18" y="88.91" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">06</text>
 
         {/* Círculo 7: ángulo +77.145° (centro entre +64.29° y +90°), radio 50 desde (0,50) */}
-        <circle cx="11.13" cy="97.49" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#fdba74" strokeWidth="0.15" />
+        <circle cx="11.13" cy="97.49" r="4.68" fill="rgba(0,0,0,0.7)" stroke="#dbeafe" strokeWidth="0.15" />
         <text x="11.13" y="97.49" fontSize="2.8" fill="white" textAnchor="middle" dominantBaseline="central" fontWeight="bold" letterSpacing="-0.5">07</text>
       </svg>
 
       {/* CAPA 7: Labels de texto - usando divs en lugar de SVG para evitar deformaciones */}
 
-      {/* Label 1: "Reparación Mantenimiento" */}
+      {/* Label 1: "World-Class Estándares" */}
       <div
         style={{
           position: "absolute",
@@ -328,11 +328,11 @@ export function HalfCircleMobile() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>Reparación</div>
-        <div>Mantenimiento</div>
+        <div>World-Class</div>
+        <div>Estándares</div>
       </div>
 
-      {/* Label 2: "Refacciones y Kits" */}
+      {/* Label 2: "Innovación Técnica" */}
       <div
         style={{
           position: "absolute",
@@ -349,8 +349,8 @@ export function HalfCircleMobile() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>Refacciones</div>
-        <div>y Kits</div>
+        <div>Innovación</div>
+        <div>Técnica</div>
       </div>
 
       {/* Label 3: "Built to Suit" */}
@@ -374,7 +374,7 @@ export function HalfCircleMobile() {
         <div>to Suit</div>
       </div>
 
-      {/* Label 4: "Nuevas Líneas" */}
+      {/* Label 4: "Naves en Mexicali" */}
       <div
         style={{
           position: "absolute",
@@ -391,11 +391,11 @@ export function HalfCircleMobile() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>Nuevas</div>
-        <div>Líneas</div>
+        <div>Naves en</div>
+        <div>Mexicali</div>
       </div>
 
-      {/* Label 5: "Industria Alimenticia" */}
+      {/* Label 5: "Parques Sustentables" */}
       <div
         style={{
           position: "absolute",
@@ -412,11 +412,11 @@ export function HalfCircleMobile() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>Industria</div>
-        <div>Alimenticia</div>
+        <div>Parques</div>
+        <div>Sustentables</div>
       </div>
 
-      {/* Label 6: "Industria Manufactura" */}
+      {/* Label 6: "Excelencia Industrial" */}
       <div
         style={{
           position: "absolute",
@@ -433,11 +433,11 @@ export function HalfCircleMobile() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>Industria</div>
-        <div>Manufactura</div>
+        <div>Excelencia</div>
+        <div>Industrial</div>
       </div>
 
-      {/* Label 7: "Industria Automotriz" */}
+      {/* Label 7: "Experiencia Probada" */}
       <div
         style={{
           position: "absolute",
@@ -454,8 +454,8 @@ export function HalfCircleMobile() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>Industria</div>
-        <div>Automotriz</div>
+        <div>Experiencia</div>
+        <div>Probada</div>
       </div>
 
       {/* CAPA 2: Semicírculo blanco central con texto */}

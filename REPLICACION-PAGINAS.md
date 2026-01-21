@@ -15,11 +15,80 @@ Cuando tenemos una junta con el cliente de Grupo Nelson, necesitamos mostrarle a
 
 ## Definición
 
-**Replicación de Páginas** es el proceso de copiar una página completa de un proyecto (fuente) a otro proyecto (destino), incluyendo todos sus componentes y dependencias, y reemplazando todas las imágenes con fotos del proyecto destino de manera secuencial y sin repeticiones.
+**Replicación de Páginas** es el proceso de:
+1. Copiar una página completa de un proyecto (fuente) a otro proyecto (destino)
+2. **Crear una lista de TODOS los componentes copiados**
+3. **Actualizar sistemáticamente CADA componente de la lista** (textos, fotos, alts, y a veces íconos/colores)
+4. Reemplazar todas las imágenes con fotos del proyecto destino de manera secuencial
+
+**La lista de componentes es obligatoria.** No es opcional, no es para verificación. Es la metodología central.
 
 ## Caso de Uso Real
 
 Mudamos `/conveyors-industriales` de SDI a `/componentes` en Grupo Nelson para mostrar al cliente los componentes funcionando con sus propias fotos.
+
+## Metodología Central: Proceso Incremental
+
+**🎯 CONCEPTO CLAVE:**
+
+El proceso NO se hace todo al mismo tiempo. Es **incremental con commits** después de cada etapa.
+
+**¿Por qué incremental?**
+- ⚠️ Si intentas reemplazar todo al mismo tiempo, se acaba la memoria de contexto
+- ✅ Con commits incrementales, puedes continuar después si se interrumpe
+- ✅ Cada commit es un checkpoint seguro
+- ✅ Es un checklist paso a paso
+
+**Flujo correcto (CADA PASO ES SEPARADO CON COMMIT):**
+
+```
+1. Copiar componentes + Crear lista
+   → Claude: Build que compile
+   → Claude: Reporta que está listo
+   → USUARIO HACE COMMIT
+
+2. Reemplazar SOLO las fotos/imágenes
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+
+3. Reemplazar SOLO los alts
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+
+4. Reemplazar SOLO los títulos
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+
+5. Reemplazar SOLO los textos
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+
+6. Reemplazar íconos (si aplica)
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+
+7. Reemplazar colores (si aplica)
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+
+8. Limpieza final
+   → Claude: Build
+   → Claude: Reporta completado
+   → USUARIO HACE COMMIT
+```
+
+**⚠️ IMPORTANTE: Claude NO hace commits. Después de cada etapa:**
+1. Claude hace build
+2. Claude reporta que está completado
+3. Claude pregunta "¿Qué sigue?"
+4. **Usuario hace el commit**
+5. Usuario indica la siguiente etapa
 
 ## Proceso General
 
@@ -38,6 +107,49 @@ Mudamos `/conveyors-industriales` de SDI a `/componentes` en Grupo Nelson para m
 
 ### 2. Copia de Componentes
 
+**⚠️ CRÍTICO: Al copiar cada componente, DEBES agregarlo a una lista de tracking.**
+
+**Por qué es obligatorio:**
+- TODOS los componentes que copies van a necesitar actualizaciones
+- En TODOS tendrás que reemplazar: textos, fotos, alts
+- A veces también: íconos, colores, otros assets
+- Sin lista, no sabrás cuáles componentes necesitan actualización
+
+**Crear archivo de tracking ANTES de empezar a copiar:**
+
+```markdown
+# Replicación: /[nombre-page]
+
+## Origen: [proyecto origen]
+## Destino: Grupo Nelson
+## Fecha: [fecha]
+
+### Componentes a copiar y actualizar:
+
+Page:
+- [ ] /app/[ruta]/page.tsx
+
+Componentes importados:
+- [ ] componente-1.tsx
+- [ ] componente-2.tsx
+- [ ] componente-3.tsx
+...
+
+Subcomponentes:
+- [ ] subcomponente.tsx (usado por componente-1)
+
+Compartidos:
+- [ ] drawer.tsx (usado por componente-2)
+
+**Total: X componentes**
+
+TODOS estos componentes necesitarán:
+✏️ Reemplazo de textos
+✏️ Reemplazo de fotos/imágenes
+✏️ Reemplazo de alts
+✏️ A veces: íconos, colores, otros assets
+```
+
 **Regla:** Mantener estructura de carpetas análoga
 
 ```
@@ -52,6 +164,8 @@ grupo-nelson/src/components/brandpetram/carrusel.tsx
 3. Componentes específicos (`/components/sdi/`, `/components/tailarkpro/`)
 4. Data files (`/data/`)
 5. Assets (`/componentes/`)
+
+**Al copiar cada archivo:** Marcarlo como `[ ]` copiado en la lista.
 
 ### 3. Creación de la Página
 
@@ -78,7 +192,17 @@ pnpm build
 2. Copiar archivo faltante
 3. Repetir hasta que compile
 
-### 5. Reemplazo de Imágenes
+### 5. Primera Etapa de Adaptación: Reemplazo de Imágenes
+
+**⚠️ Esta es la PRIMERA etapa de adaptación (después de copiar componentes)**
+
+**¿Por qué las fotos van primero?**
+- La mayoría de los componentes tienen fotografías
+- Si no las reemplazas, tendrías que traer las fotos del otro proyecto
+- NO queremos meter fotos de otro cliente dentro de este proyecto
+- Muchas veces los componentes funcionan aunque tengan broken images (el build no se rompe)
+
+**Objetivo de esta etapa:** Solo reemplazar rutas de imágenes, NADA MÁS.
 
 **⚠️ CRÍTICO: NO USAR SCRIPTS AUTOMATIZADOS**
 
@@ -194,9 +318,282 @@ pnpm dev
 # Abrir localhost:3000/nueva-ruta
 ```
 
+## Fases de Adaptación de Contenido (Incremental)
+
+Después de copiar todos los componentes y resolver dependencias, necesitamos adaptar el contenido del proyecto origen al proyecto destino.
+
+**⚠️ REGLA FUNDAMENTAL: Proceso incremental con commits**
+
+NO hacer todo al mismo tiempo. Cada tipo de reemplazo es una ETAPA SEPARADA con su propio commit.
+
+**Orden de las etapas:**
+
+1. **Etapa 1: Fotos/Imágenes** (va primero porque casi todos los componentes tienen fotos)
+   - Claude reemplaza SOLO rutas de imágenes
+   - Claude hace build y reporta
+   - Usuario hace commit
+   - Usuario indica siguiente etapa
+
+2. **Etapa 2: Alts** (textos alternativos)
+   - Claude reemplaza SOLO alts de imágenes → "Lorem ipsum"
+   - Claude hace build y reporta
+   - Usuario hace commit
+   - Usuario indica siguiente etapa
+
+3. **Etapa 3: Títulos** (headings, encabezados)
+   - Claude reemplaza SOLO títulos con keywords del cliente
+   - Claude hace build y reporta
+   - Usuario hace commit
+   - Usuario indica siguiente etapa
+
+4. **Etapa 4: Textos** (descripciones, párrafos, labels)
+   - Claude reemplaza SOLO textos con Lorem ipsum o contenido estratégico
+   - Claude hace build y reporta
+   - Usuario hace commit
+   - Usuario indica siguiente etapa
+
+5. **Etapa 5: Íconos** (si aplica)
+   - Claude reemplaza íconos que tengan marca del proyecto origen
+   - Claude hace build y reporta
+   - Usuario hace commit
+   - Usuario indica siguiente etapa
+
+6. **Etapa 6: Colores** (si aplica)
+   - Claude reemplaza paleta de colores del proyecto origen
+   - Claude hace build y reporta
+   - Usuario hace commit
+   - Usuario indica siguiente etapa
+
+**⚠️ CRÍTICO: Claude NUNCA hace commits. El usuario los hace después de cada etapa.**
+
+### ✅ Complementar Lista con Búsqueda de Palabras Clave
+
+**Buscar palabras clave ES útil y recomendado** como complemento a la lista.
+
+**Proceso correcto (combina ambos):**
+
+**1. Tener la lista de componentes** (obligatorio - base del proceso)
+
+**2. Preguntar al usuario las palabras clave del proyecto origen:**
+```
+Claude: "¿Cuáles son 2-3 palabras clave del proyecto origen a buscar?"
+Usuario: "conveyor, SDI, Soporte Dinámico"
+```
+
+**3. Buscar las palabras en singular Y plural:**
+```bash
+grep -rn "conveyor" src/
+grep -rn "conveyors" src/
+grep -rn "SDI" src/
+grep -rn "Soporte Dinámico" src/
+grep -rn "Soporte Dinámicos" src/
+```
+
+**4. Usar resultados del grep como referencia al trabajar la lista:**
+- La lista asegura que no omites componentes
+- El grep encuentra menciones específicas dentro de cada componente
+- Juntos dan cobertura completa
+
+**✅ Por qué funciona:**
+- Lista = Tracking sistemático de TODOS los componentes
+- Grep = Encuentra menciones específicas de palabras clave
+- Lista + Grep = Cobertura completa
+
+**❌ El ERROR es usar SOLO grep sin lista:**
+- Sin lista, no sabes cuántos componentes son
+- Sin lista, no tienes tracking del progreso
+- Solo grep puede omitir componentes sin esas palabras específicas
+
+**Ejemplo real:** En este proyecto, usar grep para "conveyor" fue útil para encontrar menciones. Pero sin revisar la lista sistemáticamente de componentes compartidos, nos perdimos el drawer.
+
+### Enfoque Correcto: Lista + Grep Complementario
+
+**Ya creaste la lista en la Fase 2 (Copia de Componentes):**
+
+```markdown
+# Componentes copiados para /componentes
+
+## Origen: SDI /conveyors-industriales
+## Fecha: 2026-01-21
+
+### Page:
+- [ ] /app/componentes/page.tsx
+
+### Componentes importados:
+- [ ] sidebar-sticky-1.tsx
+- [ ] conveyors-grid-section.tsx
+- [ ] ticker-marketing-2.tsx
+...
+
+### Subcomponentes:
+- [ ] item-conveyor.tsx (usado por conveyors-grid-section)
+
+### Compartidos:
+- [ ] drawer.tsx (usado por conveyors-grid-section)
+
+Total: 15 componentes
+```
+
+**Ahora, durante la adaptación de contenido**, trabajar CADA UNO de estos componentes:
+
+```markdown
+Progreso: 8/15
+
+- [x] sidebar-sticky-1.tsx - ✅ Alts, títulos, textos actualizados
+- [x] conveyors-grid-section.tsx - ✅ Actualizado
+- [ ] ticker-marketing-2.tsx - ⏳ Pendiente
+- [ ] drawer.tsx - ⏳ Pendiente
+...
+```
+
+**Para cada componente, actualizar:**
+- ✏️ Alts de imágenes → "Lorem ipsum"
+- ✏️ Títulos → Keywords del cliente
+- ✏️ Textos → Lorem ipsum o contenido estratégico del cliente
+- ✏️ Rutas de imágenes → Fotos del proyecto destino
+- ✏️ Íconos/SVGs con marca → Reemplazar si tienen marca del origen
+- ✏️ Tipos TypeScript → Cambiar nombres relacionados con el origen
+- ✏️ Props y variables → Cambiar nombres si están relacionados
+
+**Beneficios:**
+- ✅ Sabes exactamente cuántos componentes copiaste
+- ✅ Tracking claro del progreso (8/15 completados)
+- ✅ No omites componentes
+- ✅ Proceso sistemático y predecible
+- ✅ Fácil retomar si interrumpes el trabajo
+
+**Nota importante:** Este archivo de tracking se crea ANTES de empezar la adaptación de contenido, durante la fase de copia.
+
+### Ejemplo Completo del Flujo Incremental
+
+**1. Después de copiar componentes (Setup inicial):**
+
+```markdown
+# Replicación /componentes
+
+Total: 15 componentes copiados
+
+- [ ] sidebar-sticky-1.tsx
+- [ ] grid-poligonos-2x1-texto-vertical.tsx
+- [ ] conveyors-grid-section.tsx
+- [ ] ticker-marketing-2.tsx
+- [ ] masonry-1.tsx
+- [ ] half-circle.tsx
+- [ ] half-circle-mobile.tsx
+- [ ] hexagon-features.tsx
+- [ ] drawer.tsx
+- [ ] item-conveyor.tsx
+...
+
+Build: ✅ Compila
+Usuario hace commit inicial
+```
+
+**2. Etapa 1: Reemplazo de fotos (Progreso 5/15):**
+
+```markdown
+Usuario indica: "Reemplazar fotos"
+
+Fotos reemplazadas:
+- [x] sidebar-sticky-1.tsx → 3 fotos actualizadas (251-253)
+- [x] grid-poligonos-2x1-texto-vertical.tsx → 2 fotos (254-255)
+- [x] conveyors-grid-section.tsx → 10 fotos (256-265)
+- [x] ticker-marketing-2.tsx → 1 foto (266)
+- [x] masonry-1.tsx → 4 fotos (267-270)
+- [ ] half-circle.tsx - ⏳ Siguiente
+- [ ] half-circle-mobile.tsx
+...
+
+Progreso fotos: 5/15 componentes
+Build: ✅
+Claude: "¿Qué sigue?"
+Usuario hace commit
+```
+
+**3. Etapa 2: Reemplazo de alts (Progreso 3/15):**
+
+```markdown
+Usuario indica: "Reemplazar alts"
+
+Alts reemplazados:
+- [x] sidebar-sticky-1.tsx → 3 alts → "Lorem ipsum"
+- [x] grid-poligonos-2x1-texto-vertical.tsx → 2 alts
+- [x] conveyors-grid-section.tsx → 10 alts
+- [ ] ticker-marketing-2.tsx - ⏳ Siguiente
+...
+
+Progreso alts: 3/15 componentes
+Build: ✅
+Claude: "¿Qué sigue?"
+Usuario hace commit
+```
+
+**4. [Similar para cada etapa...]**
+
+**5. Todas las etapas completadas:**
+
+```markdown
+✅ Etapa 1: Fotos - 15/15 componentes ✅ Commit
+✅ Etapa 2: Alts - 15/15 componentes ✅ Commit
+✅ Etapa 3: Títulos - 15/15 componentes ✅ Commit
+✅ Etapa 4: Textos - 15/15 componentes ✅ Commit
+✅ Etapa 5: Íconos - 3/15 componentes (solo los que tenían) ✅ Commit
+✅ Etapa 6: Colores - Paleta actualizada ✅ Commit
+✅ Etapa 7: Limpieza - Completada ✅ Commit
+
+Proceso terminado. Listo para probar en navegador.
+```
+
+---
+
 ## Lecciones Aprendidas
 
-### 1. Scripts para Reemplazos Masivos son Peligrosos
+### 1. Proceso Incremental, No Todo al Mismo Tiempo
+
+**Error:** Intentar reemplazar fotos, alts, títulos, textos, íconos y colores todo en una sola pasada.
+
+**Consecuencia:** Se acaba la memoria de contexto, no se puede continuar, se pierde progreso.
+
+**Correcto:** Hacer el proceso en etapas separadas con commits incrementales:
+1. Fotos → Build → Usuario hace commit
+2. Alts → Build → Usuario hace commit
+3. Títulos → Build → Usuario hace commit
+4. Textos → Build → Usuario hace commit
+5. Íconos → Build → Usuario hace commit
+6. Colores → Build → Usuario hace commit
+
+**Por qué funciona mejor:**
+- Si se interrumpe, puedes continuar desde el último commit
+- Cada etapa es un checkpoint seguro
+- No se acaba la memoria de contexto
+- Claude pregunta "¿Qué sigue?" después de cada etapa
+
+**⚠️ CRÍTICO: Claude NUNCA hace commits. Después de cada etapa:**
+- Claude hace build y reporta
+- Usuario hace commit
+- Usuario indica siguiente etapa
+
+### 2. Combinar Lista de Componentes con Búsqueda de Palabras Clave
+
+**Error:** Usar SOLO grep sin tener lista de componentes.
+
+**Consecuencia:** Proceso caótico, se omiten componentes (ej: drawer), no hay tracking de progreso.
+
+**Correcto:** Combinar ambos métodos:
+1. **Lista de componentes** (obligatorio) - base del proceso
+2. **Buscar palabras clave** (complementario) - encuentra menciones específicas
+3. Preguntar al usuario 2-3 palabras clave del proyecto origen
+4. Buscar esas palabras en singular Y plural
+5. Usar resultados del grep como referencia al trabajar la lista sistemáticamente
+
+**Por qué funciona mejor:**
+- Lista = Tracking sistemático de TODOS los componentes
+- Grep = Encuentra menciones específicas de palabras clave
+- Lista + Grep = Cobertura completa
+- Sabes desde el inicio cuántos componentes son
+- No se te escapa ningún componente
+
+### 3. Scripts para Reemplazos Masivos son Peligrosos
 
 **Experiencia:** En este proyecto intentamos usar `sed` para reemplazar ~40 rutas de imágenes. Resultado:
 - Sintaxis rota en 3+ archivos
@@ -207,7 +604,7 @@ pnpm dev
 
 **Lección:** **Siempre hacer reemplazos manualmente, uno por uno.**
 
-### 2. Hacer Commits Antes de Operaciones Riesgosas
+### 4. Hacer Commits Antes de Operaciones Riesgosas
 
 **Regla de oro:**
 ```bash
@@ -219,7 +616,9 @@ Permite revertir fácilmente con:
 git reset --hard HEAD
 ```
 
-### 3. El Proceso Manual es Más Rápido
+**Nota:** En el proceso incremental, el usuario hace commits después de CADA etapa, por lo que siempre hay checkpoints.
+
+### 5. El Proceso Manual es Más Rápido
 
 **Paradoja:** Aunque parece más lento, el proceso manual es más rápido porque:
 - No rompe sintaxis
@@ -231,7 +630,7 @@ git reset --hard HEAD
 - Script: 10 min escribiendo + 2 horas debugging = **2h 10min**
 - Manual: 30-40 minutos de reemplazos = **40min**
 
-### 4. Numeración Secuencial de Imágenes
+### 6. Numeración Secuencial de Imágenes
 
 **Problema común:** Claude tiende a repetir la misma foto múltiples veces (ej: foto 261 aparece 15 veces).
 
@@ -248,7 +647,7 @@ git reset --hard HEAD
 - Mejor experiencia visual para el cliente
 - Aprovecha las 461 fotos disponibles
 
-### 5. Usar Task Tool para Exploración
+### 7. Usar Task Tool para Exploración
 
 NO hacer:
 ```bash
@@ -266,14 +665,15 @@ Task(
 )
 ```
 
-### 6. Build Frecuente
+### 8. Build Después de Cada Etapa
 
-Compilar después de cada 3-5 cambios, no al final:
+Compilar después de completar cada etapa de adaptación:
 - Detecta errores temprano
-- Más fácil identificar qué causó el problema
-- Menos estrés
+- Verifica que los cambios no rompieron nada
+- Confirma que es seguro hacer commit
+- Más fácil identificar qué causó el problema si algo falla
 
-### 7. Links vs Imágenes
+### 9. Links vs Imágenes
 
 Al buscar rutas rotas, diferenciar:
 - **Imágenes** (`src=`, `backgroundImage:`) → DEBEN reemplazarse
@@ -357,40 +757,114 @@ grep -n "nombreConstante" src/app/tu-pagina/page.tsx
 
 ## Tiempo Estimado
 
-Para una página con ~50 componentes:
+Para una página con ~15 componentes:
 
-| Fase | Tiempo |
-|------|--------|
+| Fase/Etapa | Tiempo |
+|------------|--------|
+| **Setup Inicial** | |
 | 1. Identificación | 10-15 min |
-| 2. Copia de componentes | 20-30 min |
+| 2. Copia de componentes + creación de lista | 20-30 min |
 | 3. Creación de página | 5-10 min |
 | 4. Resolución de dependencias | 15-30 min |
-| 5. Reemplazo de imágenes (manual) | 30-40 min |
-| 6. Verificación | 5-10 min |
-| 7. Limpieza post-replicación | 10-15 min |
-| **TOTAL** | **~2 horas 15 min** |
+| | |
+| **Etapas de Adaptación (incrementales)** | |
+| Etapa 1: Reemplazo de fotos | 30-40 min |
+| Etapa 2: Reemplazo de alts | 15-20 min |
+| Etapa 3: Reemplazo de títulos | 20-30 min |
+| Etapa 4: Reemplazo de textos | 25-35 min |
+| Etapa 5: Íconos (si aplica) | 10-15 min |
+| Etapa 6: Colores (si aplica) | 15-25 min |
+| | |
+| **Finalización** | |
+| Etapa 7: Limpieza | 10-15 min |
+| Verificación en navegador | 5-10 min |
+| **TOTAL** | **~3-3.5 horas** |
 
-**Si se usa script:** 3-4 horas (incluye debugging)
+**Notas:**
+- Cada etapa incluye: trabajo de Claude + build + commit del usuario
+- Entre etapas hay pausas donde usuario hace commit e indica siguiente paso
+- Tiempo total puede distribuirse en múltiples sesiones gracias a commits incrementales
+- Si NO usas lista (grep): +1 hora (múltiples pasadas, componentes perdidos)
+- Si usas script para imágenes: +2 horas debugging
 
 ## Checklist
 
 ```markdown
+### Fase 1: Setup Inicial
 - [ ] Identificar todos los componentes (Task tool)
+- [ ] **CREAR ARCHIVO DE LISTA** antes de copiar
 - [ ] Copiar componentes manteniendo estructura
+- [ ] **Agregar cada componente a la lista** al copiarlo
 - [ ] Crear página nueva
 - [ ] Resolver dependencias hasta que compile
-- [ ] **COMMIT antes de reemplazar imágenes**
-- [ ] Reemplazar imágenes MANUALMENTE uno por uno
-- [ ] Build después de cada 3-5 archivos
-- [ ] Verificar que no queden rutas rotas (grep)
-- [ ] Commit final
-- [ ] Probar en navegador
-- [ ] **LIMPIEZA POST-REPLICACIÓN:**
-  - [ ] Verificar y eliminar footer/header duplicados
-  - [ ] Limpiar imports no usados
-  - [ ] Eliminar constantes no usadas
-  - [ ] Build y commit de limpieza
+- [ ] Claude: Build exitoso
+- [ ] **USUARIO: Commit inicial**
+
+### Preparación para Adaptación
+- [ ] **Usuario indica: "Iniciar adaptación de contenido"**
+- [ ] Claude: Preguntar "¿Cuáles son 2-3 palabras clave del proyecto origen?"
+- [ ] Usuario proporciona palabras clave (ej: "conveyor, SDI")
+- [ ] Claude: Buscar palabras en singular y plural con grep
+- [ ] Claude: Tener resultados de grep como referencia
+
+### Etapa 1: Reemplazo de Fotos/Imágenes
+- [ ] **Usuario indica: "Reemplazar fotos"**
+- [ ] Claude: Trabajar lista de componentes usando grep como referencia
+- [ ] Claude: Reemplazar SOLO rutas de imágenes (manual, secuencial)
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit**
+
+### Etapa 2: Reemplazo de Alts
+- [ ] **Usuario indica: "Reemplazar alts"**
+- [ ] Claude: Trabajar lista, actualizar SOLO alts → "Lorem ipsum"
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit**
+
+### Etapa 3: Reemplazo de Títulos
+- [ ] **Usuario indica: "Reemplazar títulos"**
+- [ ] Claude: Trabajar lista, actualizar SOLO títulos con keywords cliente
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit**
+
+### Etapa 4: Reemplazo de Textos
+- [ ] **Usuario indica: "Reemplazar textos"**
+- [ ] Claude: Trabajar lista, actualizar SOLO textos (lorem ipsum o estratégico)
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit**
+
+### Etapa 5: Reemplazo de Íconos (si aplica)
+- [ ] **Usuario indica: "Reemplazar íconos"**
+- [ ] Claude: Trabajar lista, actualizar SOLO íconos con marca origen
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit**
+
+### Etapa 6: Reemplazo de Colores (si aplica)
+- [ ] **Usuario indica: "Reemplazar colores"**
+- [ ] Claude: Actualizar paleta de colores
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit**
+
+### Etapa 7: Limpieza Final
+- [ ] **Usuario indica: "Limpieza"**
+- [ ] Claude: Eliminar footer/header duplicados
+- [ ] Claude: Limpiar imports no usados
+- [ ] Claude: Eliminar constantes no usadas
+- [ ] Claude: Build
+- [ ] Claude: Reportar completado
+- [ ] **USUARIO: Commit final**
+- [ ] Usuario: Probar en navegador
 ```
+
+**⚠️ IMPORTANTE:**
+- Claude NUNCA hace commits
+- Después de cada etapa, Claude pregunta "¿Qué sigue?"
+- Usuario indica la siguiente etapa o da por terminado
 
 ## Archivos de Referencia
 

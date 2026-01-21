@@ -35,7 +35,7 @@ export function GridPoligonos2x1TextoVertical() {
           <div className="relative aspect-square">
             <PoligonoIcono1
               icon={<SdiEmblema />}
-              backgroundColor="bg-gradient-to-br from-orange-500 to-red-600"
+              backgroundColor="bg-gradient-to-br from-blue-600 to-sky-500"
               iconColor="text-white"
               iconSize="w-32 h-32"
               hoverEffect="rotate"
