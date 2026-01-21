@@ -36,8 +36,8 @@ export function LanguageFlags({ className, size = 'md', showLabels = false }: La
   };
 
   const languages = [
-    { code: 'es', flag: '/mex.png', label: 'Español' },
-    { code: 'en', flag: '/eua.png', label: 'English' },
+    { code: 'es', flag: '/mex.jpg', label: 'Español' },
+    { code: 'en', flag: '/eua.jpg', label: 'English' },
     { code: 'cn', flag: '/china.jpeg', label: '中文' },
   ];
 

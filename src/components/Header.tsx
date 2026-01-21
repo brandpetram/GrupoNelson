@@ -265,6 +265,8 @@ export default function Header({ variant = 'light' }: HeaderProps) {
   const isLarge = useMedia('(min-width: 64rem)');
 
   const isDarkVariant = variant === 'dark';
+  // Logo variant: 'auto' para fondos oscuros (blanco → negro al scroll), 'default' para fondos claros (siempre negro)
+  const logoVariant = isDarkVariant ? 'auto' : 'default';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -333,7 +335,7 @@ export default function Header({ variant = 'light' }: HeaderProps) {
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                  <LogoNelson variant="auto" width={140} className="scale-100 md:scale-125" />
+                  <LogoNelson variant={logoVariant} width={140} className="scale-100 md:scale-125" />
                 </Link>
 
                 {/* Banderas en móvil/tablet */}
@@ -376,7 +378,7 @@ export default function Header({ variant = 'light' }: HeaderProps) {
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                    <LogoNelson variant="auto" width={140} className="scale-100 md:scale-125" />
+                    <LogoNelson variant={logoVariant} width={140} className="scale-100 md:scale-125" />
                   </Link>
                 </div>
 
