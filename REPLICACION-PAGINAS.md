@@ -285,6 +285,76 @@ grep -r 'src="/ruta-vieja/' src/
 grep -r 'backgroundImage.*ruta-vieja' src/
 ```
 
+## 7. Limpieza Post-Replicación
+
+Después de que la página compile y funcione, hacer limpieza del código:
+
+### 7.1. Verificar Componentes Duplicados
+
+**Footer duplicado** es el caso más común:
+
+```bash
+# Buscar si el layout ya tiene el footer
+grep -n "Footer" src/app/layout.tsx
+
+# Si el layout tiene footer, eliminarlo de page.tsx
+```
+
+**Regla:** Si el `layout.tsx` ya tiene un componente global (Header, Footer), NO incluirlo en `page.tsx`.
+
+### 7.2. Limpiar Imports No Usados
+
+**Método 1: Verificar componentes realmente usados**
+```bash
+# Extraer todos los componentes usados en el JSX
+grep -o '<[A-Z][a-zA-Z0-9]*' src/app/tu-pagina/page.tsx | sort | uniq
+```
+
+**Método 2: Comparar con imports**
+- Leer la lista de imports al inicio del archivo
+- Comparar con los componentes extraídos
+- Eliminar imports que no aparecen en la lista
+
+**Ejemplo de lo que se puede eliminar:**
+```typescript
+// ❌ Imports no usados
+import { ComponenteA } from '...'  // Si <ComponenteA> no aparece en el JSX
+import { ComponenteB, ComponenteC } from '...'  // Si ninguno se usa
+
+// ✅ Solo imports usados
+import { ComponenteD } from '...'  // Aparece como <ComponenteD> en el JSX
+```
+
+### 7.3. Limpiar Constantes No Usadas
+
+Después de copiar una página, es común que tenga constantes que ya no se usan:
+
+```typescript
+// ❌ Constantes copiadas pero no usadas
+const products = [...]  // Si no se pasa a ningún componente
+const features = [...]  // Si no se usa en el JSX
+const ctaData = {...}   // Si no se usa
+
+// Eliminar estas constantes para reducir el tamaño del archivo
+```
+
+**Cómo verificar:**
+```bash
+# Buscar si una constante se usa
+grep -n "nombreConstante" src/app/tu-pagina/page.tsx
+
+# Si solo aparece en la declaración (1 línea), está sin usar
+```
+
+### 7.4. Beneficios de la Limpieza
+
+- **Reduce tamaño del bundle**: Menos código sin usar
+- **Mejora legibilidad**: Más fácil entender qué se usa
+- **Facilita mantenimiento**: Menos código que mantener
+- **Evita confusión**: No hay código "fantasma"
+
+**Tiempo estimado para limpieza:** 10-15 minutos
+
 ## Tiempo Estimado
 
 Para una página con ~50 componentes:
@@ -297,7 +367,8 @@ Para una página con ~50 componentes:
 | 4. Resolución de dependencias | 15-30 min |
 | 5. Reemplazo de imágenes (manual) | 30-40 min |
 | 6. Verificación | 5-10 min |
-| **TOTAL** | **~2 horas** |
+| 7. Limpieza post-replicación | 10-15 min |
+| **TOTAL** | **~2 horas 15 min** |
 
 **Si se usa script:** 3-4 horas (incluye debugging)
 
@@ -314,6 +385,11 @@ Para una página con ~50 componentes:
 - [ ] Verificar que no queden rutas rotas (grep)
 - [ ] Commit final
 - [ ] Probar en navegador
+- [ ] **LIMPIEZA POST-REPLICACIÓN:**
+  - [ ] Verificar y eliminar footer/header duplicados
+  - [ ] Limpiar imports no usados
+  - [ ] Eliminar constantes no usadas
+  - [ ] Build y commit de limpieza
 ```
 
 ## Archivos de Referencia
@@ -323,6 +399,9 @@ Este proceso fue documentado durante la replicación de `/conveyors-industriales
 **Commits relevantes:**
 - `e7addb2` - Componentes copiados, página creada
 - `ea61f6f` - Imágenes reemplazadas manualmente
+- `03271ab` - Numeración secuencial de imágenes corregida (251-303)
+- `a89a42d` - Footer duplicado eliminado
+- `f97a5d7` - Imports y constantes no usadas eliminadas
 
 **Archivos modificados en el proceso:**
 - `src/app/componentes/page.tsx` (nueva página)
