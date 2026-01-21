@@ -21,16 +21,12 @@ export default function Home() {
         videoBrightness={0.8}
         videoContrast={1.3}
         darkOverlay={0.2}
+        enableAnimations={true}
         gridConfig={{
           strokeColor: 'stroke-white/30',
           gridSize: 100,
           showHighlights: true,
           highlightColor: 'fill-blue-500/40',
-          animate: {
-            initial: { scaleY: 0 },
-            animate: { scaleY: 1 },
-            transition: { duration: 1.2, ease: 'easeOut' },
-          },
         }}
       >
         <TarjetaHeroOriginal />

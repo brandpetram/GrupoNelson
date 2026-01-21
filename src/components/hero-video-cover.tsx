@@ -35,6 +35,8 @@ interface HeroVideoCoverProps {
   darkOverlay?: number
   /** Configuración del grid overlay */
   gridConfig?: GridConfig
+  /** Habilitar animaciones de entrada (default: false) */
+  enableAnimations?: boolean
 }
 
 export function HeroVideoCover({
@@ -48,10 +50,36 @@ export function HeroVideoCover({
   videoContrast = 1.0,
   darkOverlay,
   gridConfig,
+  enableAnimations = false,
 }: HeroVideoCoverProps) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const hasStartedRef = useRef(false)
+
+  // Variantes de animación similar a SDI
+  const leftVariants = {
+    hidden: { x: '-100vw' },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94] as const
+      }
+    }
+  }
+
+  const rightVariants = {
+    hidden: { x: '100vw' },
+    visible: {
+      x: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94] as const
+      }
+    }
+  }
 
   useEffect(() => {
     const video = videoRef.current
@@ -163,14 +191,13 @@ export function HeroVideoCover({
           />
         )}
 
-        {/* Grid Overlay animado (opcional) */}
-        {gridConfig && gridConfig.animate && (
+        {/* Grid Overlay - entra desde la derecha si enableAnimations */}
+        {gridConfig && enableAnimations && (
           <motion.div
             className="absolute inset-0"
-            initial={gridConfig.animate.initial}
-            whileInView={gridConfig.animate.animate}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={gridConfig.animate.transition}
+            initial="hidden"
+            animate="visible"
+            variants={rightVariants}
           >
             <GridOverlay
               strokeColor={gridConfig.strokeColor || 'stroke-white/30'}
@@ -183,8 +210,8 @@ export function HeroVideoCover({
           </motion.div>
         )}
 
-        {/* Grid Overlay sin animación (opcional) */}
-        {gridConfig && !gridConfig.animate && (
+        {/* Grid Overlay sin animación */}
+        {gridConfig && !enableAnimations && (
           <GridOverlay
             strokeColor={gridConfig.strokeColor || 'stroke-white/30'}
             gridSize={gridConfig.gridSize || 100}
@@ -214,7 +241,17 @@ export function HeroVideoCover({
 
       <div className="relative z-10 flex h-full items-center">
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
-          {children}
+          {enableAnimations ? (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={leftVariants}
+            >
+              {children}
+            </motion.div>
+          ) : (
+            children
+          )}
         </div>
       </div>
     </section>
