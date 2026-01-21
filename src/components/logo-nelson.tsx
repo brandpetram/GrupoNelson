@@ -42,7 +42,7 @@ export function LogoNelson({
     default: 'fill-[#080909]',
     white: 'fill-white',
     monochrome: 'fill-current',
-    auto: 'fill-white transition-colors duration-300 in-data-scrolled:fill-[#080909]',
+    auto: 'fill-white transition-colors duration-300 in-data-scrolled:fill-[#080909] in-data-[state=active]:fill-[#080909]',
   }[variant];
 
   return (

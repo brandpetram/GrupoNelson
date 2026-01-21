@@ -313,7 +313,8 @@ export default function Header() {
               'max-lg:in-data-[state=active]:ring-foreground/5',
               'max-lg:in-data-[state=active]:bg-background/80',
               'max-lg:in-data-[state=active]:px-5',
-              'max-lg:in-data-[state=active]:shadow-black/10'
+              'max-lg:in-data-[state=active]:shadow-black/10',
+              'max-lg:in-data-[state=active]:h-full'
             )}
           >
             <div className="relative lg:py-4">
