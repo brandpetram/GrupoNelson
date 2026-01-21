@@ -2,49 +2,27 @@
 
 import Header from '@/components/Header'
 import { CarruselConveyors } from '@/components/brandpetram/carrusel'
-import { HeroMarketing1Video } from '@/components/brandpetram/hero-marketing-1-video'
-import { GridPoligonos2 } from '@/components/brandpetram/grid-poligonos-2'
-import { GridPoligonos2x1 } from '@/components/brandpetram/grid-poligonos-2x1'
 import { GridPoligonos2x1x2 } from '@/components/brandpetram/grid-poligonos-2x1x2'
-import { GridPoligonos2x1x2x1 } from '@/components/brandpetram/grid-poligonos-2x1x2x1'
 import { Titulo } from '@/components/ui/brandpetram/titulo'
 import { Parrafo } from '@/components/ui/brandpetram/parrafo'
-import { LineaL } from '@/components/ui/brandpetram/linea-l'
-import {
-  ProductGallery,
-  FeaturesSection,
-  CTASection
-} from '@/components/sdi/internal-pages'
-import {PoligonoTexto1} from "@/components/ui/brandpetram/poligono-texto-1";
-import {ImagenConEtiqueta} from "@/components/ui/brandpetram/imagen-con-etiqueta";
-import {BigNumber} from "@/components/brandpetram/big-number";
-import {GridOverlay} from "@/components/ui/brandpetram/grid";
-import {PoligonoImagen1} from "@/components/ui/brandpetram/poligono-imagen-1";
-import {PoligonoImagenCarrusel1} from "@/components/ui/brandpetram/poligono-imagen-carrusel-1";
-import {Flecha1} from "@/components/ui/brandpetram/flecha-1";
-import {LineaLFlex} from "@/components/ui/brandpetram/linea-l-flex";
-import Link from "next/link";
-import { HeroAnimado } from "@/components/brandpetram/hero-animado";
-import HeroSecondaryFour from "@/components/tailarkpro/secondary-hero-four";
-import {ImageIllustration} from "@/components/tailarkpro/secondary-hero-four/image-illustration";
-import { LogosMarcas, LogosMarcasCompacto, LogosMarcasDestacado } from "@/components/brandpetram/grid-marcas-de-conveyors";
-import { TickerMarketing2 } from "@/components/brandpetram/ticker-marketing-2";
-import { SidebarSticky1 } from "@/components/brandpetram/sidebar-sticky-1";
-import { Masonry1 } from "@/components/brandpetram/masonry-1";
-import { StickyRevealContent, StickyRevealCover } from "@/components/ui/sticky-reveal";
-import { HalfCircle } from "@/components/brandpetram/half-circle";
-import { HalfCircleMobile } from "@/components/brandpetram/half-circle-mobile";
-import { LogoWhite } from "@/components/logo-white";
-import { HexagonFeatures } from "@/components/brandpetram/hexagon-features";
-import { ConveyorsGridSection } from "@/components/brandpetram/conveyors-grid-section";
-import {
-  serviciosDeConveyorsLinks,
-  conveyorsMarcasLinks,
-  sectoresConveyorsLinks,
-} from '@/data/nav/conveyors-industriales';
-import FAQs from "@/components/tailarkpro/faqs-four";
-import { motion } from "motion/react";
-import { ScrollHighlightSDI } from "@/components/sdi/scroll-highlight-sdi";
+import { BigNumber } from "@/components/brandpetram/big-number"
+import { GridOverlay } from "@/components/ui/brandpetram/grid"
+import { PoligonoImagenCarrusel1 } from "@/components/ui/brandpetram/poligono-imagen-carrusel-1"
+import Link from "next/link"
+import { HeroAnimado } from "@/components/brandpetram/hero-animado"
+import { LogosMarcas } from "@/components/brandpetram/grid-marcas-de-conveyors"
+import { TickerMarketing2 } from "@/components/brandpetram/ticker-marketing-2"
+import { SidebarSticky1 } from "@/components/brandpetram/sidebar-sticky-1"
+import { Masonry1 } from "@/components/brandpetram/masonry-1"
+import { StickyRevealContent, StickyRevealCover } from "@/components/ui/sticky-reveal"
+import { HalfCircle } from "@/components/brandpetram/half-circle"
+import { HalfCircleMobile } from "@/components/brandpetram/half-circle-mobile"
+import { LogoWhite } from "@/components/logo-white"
+import { HexagonFeatures } from "@/components/brandpetram/hexagon-features"
+import { ConveyorsGridSection } from "@/components/brandpetram/conveyors-grid-section"
+import FAQs from "@/components/tailarkpro/faqs-four"
+import { motion } from "motion/react"
+import { ScrollHighlightSDI } from "@/components/sdi/scroll-highlight-sdi"
 
 const products = [
   {
