@@ -61,7 +61,7 @@ export function HeroMarketing1Video() {
           {/* Poster mientras no carga el video */}
           {!shouldLoadVideo ? (
             <Image
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-262.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
               alt=""
               width={1200}
               height={675}
@@ -70,7 +70,7 @@ export function HeroMarketing1Video() {
           ) : (
             <video
               src="/parques-industriales-mexicali-nelson-2.mp4"
-              poster="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-262.jpg"
+              poster="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
               autoPlay
               muted
               loop

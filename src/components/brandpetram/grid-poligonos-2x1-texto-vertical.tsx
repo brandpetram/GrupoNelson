@@ -22,7 +22,7 @@ export function GridPoligonos2x1TextoVertical() {
           {/* Primera imagen arriba izquierda - cuadrada */}
           <div className="relative aspect-square">
             <PoligonoImagen1
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-259.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
               alt="Conveyor aéreo industrial"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
               text="Conveyors Aéreos"
@@ -46,7 +46,7 @@ export function GridPoligonos2x1TextoVertical() {
           {/* Tercer polígono abajo - imagen */}
           <div className="relative col-span-2 aspect-[2/1]">
             <PoligonoImagen1
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-260.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg"
               alt="Soluciones industriales"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
               text="Conveyors Aéreos"

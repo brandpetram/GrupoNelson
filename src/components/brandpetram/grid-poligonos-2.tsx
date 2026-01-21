@@ -18,7 +18,7 @@ export function GridPoligonos2() {
         {/* Primera imagen arriba izquierda - cuadrada */}
         <div className="relative aspect-square">
           <PoligonoImagen1
-            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-295.jpg"
             alt="Conveyor aéreo industrial"
             overlayColor="oklch(21.6% 0.006 56.043 / 0.8)"
             text="Conveyors Aéreos"

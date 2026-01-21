@@ -38,7 +38,7 @@ export function TickerMarketing2() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage: 'url(/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg)'
+          backgroundImage: 'url(/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-283.jpg)'
         }}
       />
 

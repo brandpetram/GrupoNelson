@@ -15,7 +15,7 @@ import type { ConveyorDrawerData } from '@/components/tailwind/drawer'
 const conveyorItems = [
   {
     id: 'gravedad',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-284.jpg',
     textTop: 'Flujo por gravedad',
     textBottom: 'CONVEYORS\nDE GRAVEDAD',
     alt: 'Transportadores de Gravedad',
@@ -27,7 +27,7 @@ const conveyorItems = [
   },
   {
     id: 'banda',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-285.jpg',
     textTop: 'Transporte continuo',
     textBottom: 'CONVEYORS\nDE BANDA',
     alt: 'Transportadores de Banda',
@@ -39,7 +39,7 @@ const conveyorItems = [
   },
   {
     id: 'verticales',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-277.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-286.jpg',
     textTop: 'Transporte en altura',
     textBottom: 'CONVEYORS\nVERTICALES',
     alt: 'Conveyors Verticales',
@@ -51,7 +51,7 @@ const conveyorItems = [
   },
   {
     id: 'banda-plastica',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-287.jpg',
     textTop: 'Modulares y flexibles',
     textBottom: 'BANDA MODULAR\nPLÁSTICA',
     alt: 'Transportadores de Banda Plástica',
@@ -63,7 +63,7 @@ const conveyorItems = [
   },
   {
     id: 'rodillos',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-288.jpg',
     textTop: 'Carga pesada',
     textBottom: 'CONVEYORS\nDE RODILLOS',
     alt: 'Transportadores de Rodillos',
@@ -75,7 +75,7 @@ const conveyorItems = [
   },
   {
     id: 'precision',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-289.jpg',
     textTop: 'Control exacto',
     textBottom: 'CONVEYORS\nDE PRECISIÓN',
     alt: 'Transportadores de Precisión',
@@ -87,7 +87,7 @@ const conveyorItems = [
   },
   {
     id: 'aereos',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-290.jpg',
     textTop: 'Suspensión en línea',
     textBottom: 'CONVEYORS\nAÉREOS',
     alt: 'Transportadores Aéreos',
@@ -99,7 +99,7 @@ const conveyorItems = [
   },
   {
     id: 'magneticos',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-291.jpg',
     textTop: 'Automatización avanzada',
     textBottom: 'CONVEYORS\nMAGNÉTICOS',
     alt: 'Conveyors Magnéticos',
@@ -111,7 +111,7 @@ const conveyorItems = [
   },
   {
     id: 'cadena',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-292.jpg',
     textTop: 'Potencia industrial',
     textBottom: 'CONVEYORS\nDE CADENA',
     alt: 'Transportadores de Cadena',
@@ -123,7 +123,7 @@ const conveyorItems = [
   },
   {
     id: 'espiral',
-    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-257.jpg',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-293.jpg',
     textTop: 'Movimiento helicoidal',
     textBottom: 'CONVEYORS\nEN ESPIRAL',
     alt: 'Conveyors en Espiral',

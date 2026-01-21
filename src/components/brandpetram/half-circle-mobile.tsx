@@ -103,7 +103,7 @@ export function HalfCircleMobile() {
         padding: "0",
         position: "relative",
         overflow: "hidden",
-        backgroundImage: "url('/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg",
+        backgroundImage: "url('/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-303.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

@@ -41,20 +41,20 @@ export function CarruselConveyors() {
       <Carrusel1
         items={conveyorsCarruselItems.map((item, index) => {
           const imageMap: { [key: string]: string } = {
-            's1': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg',
-            's2': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg',
-            's3': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg',
-            's4': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
-            'm1': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
-            'm2': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg',
-            'm3': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-257.jpg',
-            'm4': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-258.jpg',
-            'm5': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-259.jpg',
-            'm6': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-260.jpg',
-            'm7': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg',
-            'm8': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-262.jpg',
-            'm9': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-263.jpg',
-            'm10': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-264.jpg',
+            's1': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg',
+            's2': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg',
+            's3': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
+            's4': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
+            'm1': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg',
+            'm2': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-257.jpg',
+            'm3': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-258.jpg',
+            'm4': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-259.jpg',
+            'm5': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-260.jpg',
+            'm6': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg',
+            'm7': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-262.jpg',
+            'm8': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-263.jpg',
+            'm9': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-264.jpg',
+            'm10': '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-265.jpg',
           };
 
           return {
@@ -66,7 +66,7 @@ export function CarruselConveyors() {
               >
                 <div className="aspect-square w-full rounded-xs bg-muted flex items-center justify-center mb-4 overflow-hidden relative">
                   <img
-                    src={imageMap[item.id] || '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg'}
+                    src={imageMap[item.id] || '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-294.jpg'}
                     alt={item.title}
                     className="w-full h-full object-cover brightness-75"
                   />

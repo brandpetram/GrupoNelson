@@ -25,7 +25,7 @@ export function GridPoligonos2x1x2x1() {
           {/* Imagen arriba izquierda - cuadrada */}
           <div className="relative aspect-square">
             <PoligonoImagen1
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-298.jpg"
               alt="Conveyor aéreo industrial"
               overlayColor="oklch(21.6% 0.006 56.043 / 0.8)"
               text="Conveyors Aéreos"
@@ -59,7 +59,7 @@ export function GridPoligonos2x1x2x1() {
         {/* === COLUMNA CENTRAL IZQUIERDA (1 columna vertical) === */}
         <div className="relative aspect-[2/1] md:aspect-auto order-3 md:order-2">
           <PoligonoImagen1
-            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-299.jpg"
             alt="Conveyor vertical helicoidal"
             overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
             text="Sistemas Verticales"
@@ -73,7 +73,7 @@ export function GridPoligonos2x1x2x1() {
           {/* Imagen arriba - rectangular */}
           <div className="relative col-span-2 aspect-[2/1.5] md:aspect-[2/1]">
             <PoligonoImagen1
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-300.jpg"
               alt="Conveyor vertical helicoidal"
               overlayColor="oklch(21.6% 0.006 56.043 / 0.9)"
               text="Sistemas Verticales"
@@ -94,7 +94,7 @@ export function GridPoligonos2x1x2x1() {
           {/* Imagen abajo derecha - cuadrada */}
           <div className="relative aspect-square">
             <PoligonoImagen1
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-301.jpg"
               alt="Sistemas de transporte"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
               text="Transporte"
@@ -107,7 +107,7 @@ export function GridPoligonos2x1x2x1() {
         {/* === COLUMNA DERECHA (1 columna vertical) === */}
         <div className="relative order-4 aspect-[2/1] md:aspect-auto">
           <PoligonoImagen1
-            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-302.jpg"
             alt="Integración industrial"
             overlayColor="oklch(14.7% 0.004 49.25 / 0.8)"
             text="Integración"

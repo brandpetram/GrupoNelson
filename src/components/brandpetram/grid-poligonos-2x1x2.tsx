@@ -27,7 +27,7 @@ export function GridPoligonos2x1x2() {
           {/* Imagen arriba izquierda - cuadrada */}
           <div className="relative aspect-square">
             <PoligonoImagen1
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-257.jpg"
+                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-266.jpg"
               alt="Conveyor aéreo con piezas metalicas colgando"
                 overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
                 text="Conveyors Aéreos"
@@ -61,7 +61,7 @@ export function GridPoligonos2x1x2() {
         {/* === COLUMNA CENTRAL (1 columna en desktop, orden 3 en móvil) === */}
         <div className="relative order-3 md:order-2">
           <PoligonoImagen1
-            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-258.jpg"
+            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-267.jpg"
             alt="Conveyor vertical helicoidal"
             overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
             text="Conveyors en Espiral"
@@ -75,7 +75,7 @@ export function GridPoligonos2x1x2() {
           {/* Icono arriba - rectangular */}
           <div className="relative col-span-2 aspect-[2/1.5] md:aspect-[2/1]">
               <PoligonoImagen1
-                  src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+                  src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
                   alt="Conveyor vertical helicoidal"
                   overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
                   text="Conveyors Modulares"
@@ -96,7 +96,7 @@ export function GridPoligonos2x1x2() {
           {/* Imagen abajo derecha - cuadrada */}
           <div className="relative aspect-square">
             <PoligonoImagen1
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
               alt="Sistemas de transporte"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
               text="Conveyors de Rodillos"
