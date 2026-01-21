@@ -18,6 +18,20 @@ export default function Home() {
         posterSrc="/hero-poster-0.jpg"
         alt="Parque Industrial Gulfstream - Vista aérea de instalaciones modernas"
         overlayOpacity={0.30}
+        videoBrightness={0.8}
+        videoContrast={1.3}
+        darkOverlay={0.2}
+        gridConfig={{
+          strokeColor: 'stroke-white/30',
+          gridSize: 100,
+          showHighlights: true,
+          highlightColor: 'fill-blue-500/40',
+          animate: {
+            initial: { scaleY: 0 },
+            animate: { scaleY: 1 },
+            transition: { duration: 1.2, ease: 'easeOut' },
+          },
+        }}
       >
         <TarjetaHeroOriginal />
       </HeroVideoCover>

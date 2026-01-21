@@ -318,22 +318,22 @@ export default function Header() {
               'max-lg:in-data-[state=active]:shadow-black/10'
             )}
           >
-            <div className="relative flex flex-wrap items-center justify-between lg:py-4">
+            <div className="relative lg:py-4">
+              {/* Mobile layout */}
               <div
                 className={cn(
-                  'flex justify-between gap-8 max-lg:h-14 max-lg:w-full',
-                  isMobileMenuOpen && 'max-lg:border-b'
+                  'flex justify-between gap-8 h-14 w-full lg:hidden',
+                  isMobileMenuOpen && 'border-b'
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
                   <LogoNelson variant="auto" width={140} />
                 </Link>
 
-                {isLarge && <NavMenu />}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   aria-label={isMobileMenuOpen ? 'Cerrar Menú' : 'Abrir Menú'}
-                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 lg:hidden text-white transition-colors duration-300 in-data-scrolled:text-foreground in-data-[state=active]:text-foreground"
+                  className="relative z-20 -m-2.5 -mr-3 block cursor-pointer p-2.5 text-white transition-colors duration-300 in-data-scrolled:text-foreground in-data-[state=active]:text-foreground"
                 >
                   <Menu
                     className={cn(
@@ -350,18 +350,33 @@ export default function Header() {
                 </button>
               </div>
 
+              {/* Desktop layout - 3 columns */}
+              <div className="hidden lg:grid lg:grid-cols-3 lg:items-center">
+                {/* Logo - izquierda */}
+                <div className="flex justify-start">
+                  <Link href="/" aria-label="home" className="flex items-center space-x-2">
+                    <LogoNelson variant="auto" width={140} />
+                  </Link>
+                </div>
+
+                {/* Menu - centro */}
+                <div className="flex justify-center">
+                  <NavMenu />
+                </div>
+
+                {/* Button - derecha */}
+                <div className="flex justify-end">
+                  <Button asChild size="sm">
+                    <Link href="/contact">
+                      <span>Contact</span>
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
               {!isLarge && isMobileMenuOpen && (
                 <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} />
               )}
-
-              {/* Desktop CTA button - solo en lg */}
-              <div className="hidden lg:flex lg:items-center lg:gap-3">
-                <Button asChild size="sm">
-                  <Link href="/contact">
-                    <span>Contact</span>
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         </div>
