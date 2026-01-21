@@ -4,14 +4,14 @@ import { TickerBase } from '../ui/brandpetram/ticker-base'
 import { TickerItemHighlight } from '../ui/brandpetram/ticker-item-highlight'
 
 const tickerItems = [
-  'Soluciones Galleteras',
-  'Producción Láctea',
-  'Conveyors Cárnicos',
-  'Tecnología Dulcera',
-  'Líneas de Bebidas',
-  'Sistemas de Panadería',
-  'Conveyors Congelados',
-  'Equipos Confiteros',
+  'Parque Nelson II',
+  'Parque Nelson I',
+  'Parque El Vigía I',
+  'Parque El Vigía II',
+  'Built to Suit',
+  'Llave en Mano',
+  'Naves Disponibles',
+  'Terrenos en Venta',
 ]
 
 export function TickerMarketing2() {
@@ -54,7 +54,7 @@ export function TickerMarketing2() {
              Soporte Dinámico Industrial
             </h2>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-md mt-5 ">
-             ¿Necesitas Conveyors de Grado Alimenticio?
+             ¿Buscas Naves Industriales en Mexicali?
             </h1>
             <p className="text-white/70 text-lg mb-8 max-w-sm">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero

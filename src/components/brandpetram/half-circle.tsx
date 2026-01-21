@@ -110,7 +110,7 @@ export function HalfCircle() {
           }}
         >
           <div className="text-center text-foreground font-black tracking-tighter uppercase ">
-            <div className="text-lg md:text-2xl 1200:text-3xl lg:text-3xl 1728:text-4xl 1920:text-5xl">Conveyors Industriales </div>
+            <div className="text-lg md:text-2xl 1200:text-3xl lg:text-3xl 1728:text-4xl 1920:text-5xl">Naves Industriales </div>
 
           </div>
         </div>

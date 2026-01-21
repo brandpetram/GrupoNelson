@@ -473,7 +473,7 @@ export function HalfCircleMobile() {
       >
         <div className="text-left text-foreground font-black tracking-tighter uppercase px-3 w-full">
           <div className="text-lg leading-tight">
-            Conveyors<br/>Industriales
+            Naves<br/>Industriales
           </div>
         </div>
       </div>

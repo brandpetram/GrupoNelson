@@ -30,7 +30,7 @@ export function GridPoligonos2x1x2() {
                 src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-266.jpg"
               alt="Lorem ipsum"
                 overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-                text="Conveyors Aéreos"
+                text="Parque Nelson II"
               textColor="text-white"
               className="rounded-none"
             />
@@ -64,7 +64,7 @@ export function GridPoligonos2x1x2() {
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-267.jpg"
             alt="Lorem ipsum"
             overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-            text="Conveyors en Espiral"
+            text="Parque El Vigía"
             textColor="text-white"
             className="rounded-none"
           />
@@ -78,7 +78,7 @@ export function GridPoligonos2x1x2() {
                   src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
                   alt="Lorem ipsum"
                   overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-                  text="Conveyors Modulares"
+                  text="Naves Disponibles"
                   textColor="text-white"
                   className="rounded-none"
               />
@@ -88,7 +88,7 @@ export function GridPoligonos2x1x2() {
           <div className="relative aspect-square">
             <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-tr from-orange-500 to-red-600 rounded-none">
                 <p className="p-6 w-full 1728:w-full text-white font-bold tracking-tighter leading-none text-center break-words transition-transform duration-300 group-hover:scale-110 text-md 393:text-md 430:text-xl 768:text-xl 834:text-3xl 1024:text-3xl 1200:text-3xl 1280:text-2xl 1366:text-2xl 1440:text-3xl 1536:text-3xl 1728:text-3xl 1920:text-3xl">
-                Automatización
+                Built to Suit
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export function GridPoligonos2x1x2() {
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
               alt="Lorem ipsum"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-              text="Conveyors de Rodillos"
+              text="Llave en Mano"
               textColor="text-white"
               className="rounded-none"
             />

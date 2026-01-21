@@ -10,7 +10,7 @@ export default function FAQs() {
     const faqItems = useMemo(
         () => [
             {
-                group: 'Mantenimiento a Conveyors',
+                group: 'Desarrollo de Parques Industriales',
                 icon: <Wrench />,
                 items: [
                     {
@@ -52,7 +52,7 @@ export default function FAQs() {
                 ],
             },
             {
-                group: 'Sistemas de conveyors built to suit (hechos a medida)',
+                group: 'Naves Industriales Built to Suit (hechas a medida)',
                 icon: <Ruler />,
                 items: [
                     {
@@ -73,7 +73,7 @@ export default function FAQs() {
                 ],
             },
             {
-                group: 'Integración de nuevas líneas de conveyors',
+                group: 'Arrendamiento y Venta de Naves Industriales',
                 icon: <Network />,
                 items: [
                     {

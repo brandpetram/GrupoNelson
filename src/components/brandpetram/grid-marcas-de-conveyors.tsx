@@ -1,60 +1,60 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Datos de marcas - editar directamente aquí
+// Datos de parques y servicios - editar directamente aquí
 const marcas = [
   {
-    href: '/conveyors-industriales/dorner',
-    name: 'Dorner',
-    description: 'Refacciones y kits para sistemas Dorner',
+    href: '/parques-industriales-mexicali/nelson-ii',
+    name: 'Parque Nelson II',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/dorner.svg',
   },
   {
-    href: '/conveyors-industriales/flexlink',
-    name: 'FlexLink',
-    description: 'Refacciones y kits para sistemas FlexLink',
+    href: '/parques-industriales-mexicali/nelson-i',
+    name: 'Parque Nelson I',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/flexlink.svg',
   },
   {
-    href: '/conveyors-industriales/rapid-industries',
-    name: 'Rapid Industries',
-    description: 'Conveyors de alta velocidad para industria',
+    href: '/parques-industriales-mexicali/el-vigia-i',
+    name: 'Parque El Vigía I',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/rapid-industries.svg',
   },
   {
-    href: '/conveyors-industriales/pacline',
-    name: 'Pacline',
-    description: 'Sistemas de conveyors aéreos y de piso',
+    href: '/parques-industriales-mexicali/el-vigia-ii',
+    name: 'Parque El Vigía II',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/pacline.svg',
   },
   {
-    href: '/conveyors-industriales/tci',
-    name: 'TCI',
-    description: 'Tecnología avanzada en sistemas de conveyors',
+    href: '/servicios/built-to-suit',
+    name: 'Built to Suit',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/tci-transportadores.svg',
   },
   {
-    href: '/conveyors-industriales/ambaflex',
-    name: 'Ambaflex',
-    description: 'Refacciones y kits para elevadores espirales',
+    href: '/servicios/llave-en-mano',
+    name: 'Llave en Mano',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/ambaflex.svg',
   },
   {
-    href: '/conveyors-industriales/hytrol',
-    name: 'Hytrol',
-    description: 'Soluciones de conveyors industriales robustos',
+    href: '/servicios/arrendamiento',
+    name: 'Arrendamiento',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/hytrol.svg',
   },
   {
-    href: '/conveyors-industriales/intralox',
-    name: 'Intralox',
-    description: 'Refacciones y kits para banda modular Intralox',
+    href: '/inventario/naves-disponibles',
+    name: 'Naves Disponibles',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/intralox.svg',
   },
   {
-    href: '/conveyors-industriales/omni-metal-craft',
-    name: 'Omni Metal Craft',
-    description: 'Fabricación especializada de conveyors metálicos',
+    href: '/inventario/terrenos',
+    name: 'Terrenos en Venta',
+    description: 'Lorem ipsum dolor sit amet consectetur',
     logoSrc: '/omni-metal-craft.svg',
   },
 
@@ -65,7 +65,7 @@ export function LogosMarcas() {
     <section className="container pt-12 ">
       {/* Título - editar aquí */}
       <p className="text-muted-foreground text-2xl 1024:text-3xl text-balance mb-6">
-        Marcas de conveyors con las que trabajamos:
+        Parques y Servicios de Desarrollo Industrial:
       </p>
 
       {/* Grid de marcas con líneas divisorias internas */}
@@ -121,7 +121,7 @@ export function LogosMarcasCompacto() {
   return (
     <section className="container mx-auto w-11/12 lg:max-w-6xl py-12">
       <p className="text-muted-foreground text-sm mb-6">
-        Marcas con las que trabajamos
+        Parques y Servicios Disponibles
       </p>
 
       <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
@@ -157,7 +157,7 @@ export function LogosMarcasDestacado() {
     <section className="bg-muted/30 py-16">
       <div className="container mx-auto w-11/12 lg:max-w-6xl">
         <p className="text-muted-foreground text-sm mb-8">
-          Marcas con las que trabajamos
+          Parques y Servicios Disponibles
         </p>
 
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

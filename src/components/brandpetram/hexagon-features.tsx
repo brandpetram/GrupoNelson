@@ -20,7 +20,7 @@ export function HexagonFeatures() {
   const features: Feature[] = [
     {
       title: 'Infraestructura Moderna',
-      description: 'Contamos con infraestructura de clase mundial y tecnología de punta para diseñar e instalar sistemas de conveyors que optimicen tu producción.'
+      description: 'Contamos con infraestructura de clase mundial y tecnología de punta para desarrollar y construir parques industriales que optimicen tu operación.'
     },
     {
       title: 'Personal Especializado',
@@ -31,8 +31,8 @@ export function HexagonFeatures() {
       description: 'Proveemos soluciones de calidad a cientos de clientes en toda la república mexicana desde hace más de 20 años.'
     },
     {
-      title: 'Marcas Líderes',
-      description: 'Trabajamos con las mejores marcas internacionales de conveyors: Dorner, Hytrol, FlexLink, Intralox y más.'
+      title: 'Ubicación Estratégica',
+      description: 'Parques industriales ubicados estratégicamente en Mexicali con acceso directo a la frontera y vías de comunicación principales.'
     },
     {
       title: 'Control y Calidad',
@@ -40,7 +40,7 @@ export function HexagonFeatures() {
     },
     {
       title: 'Soluciones Personalizadas',
-      description: 'Diseñamos sistemas de conveyors a medida para adaptarnos a las necesidades específicas y capacidad de tu operación.'
+      description: 'Desarrollamos naves industriales a medida para adaptarnos a las necesidades específicas y capacidad de tu operación industrial.'
     }
   ]
 

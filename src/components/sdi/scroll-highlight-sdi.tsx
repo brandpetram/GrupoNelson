@@ -20,7 +20,7 @@ const sdiWords: SDIWord[] = [
   { text: 'Monitoreo' },
   { text: 'Movimiento' },
   { text: 'Ergonomía' },
-  { text: 'Conveyors' },
+  { text: 'Naves Industriales' },
   { text: 'Industrial Store' },
   { text: 'Mesas de Elevación' },
   { text: 'Manejo de Materiales' },
