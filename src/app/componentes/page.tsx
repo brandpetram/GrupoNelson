@@ -37,7 +37,7 @@ export default function ConveyorsIndustrialesPage() {
           <HeroAnimado
               imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
               imagenIzquierdaAlt="Lorem ipsum"
-              textoPoligono="Conveyors Industriales en todo México"
+              textoPoligono="Parques Industriales en Mexicali Baja"
               imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg"
               imagenDerechaAlt="Lorem ipsum"
               parrafo1="Más de 18 años de experiencia en suministro diseño e instalación de Sistema Conveyors para empresas de manufactura que necesitan automatizar flujo de materiales, empaques, componentes o productos."
@@ -77,7 +77,7 @@ export default function ConveyorsIndustrialesPage() {
                               fontWeight="font-bold"
                               className="text-white dark:text-gray-50 leading-none px-10 pt-10"  // Blanco en light, gris oscuro en dark
                           >
-                              Sistemas de Conveyors a la Medida
+                              Naves Industriales Built-to-Suit
                           </Titulo>
                           <Parrafo
                               fontSize="1200:text-md 1728:text-xl 2560:text-2xl "
@@ -104,7 +104,7 @@ export default function ConveyorsIndustrialesPage() {
                   src: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg',
                   alt: 'Lorem ipsum',
                   overlayColor: 'rgba(249, 115, 22, 0.4)',
-                  text: 'Sistemas Verticales'
+                  text: 'Espacios Modulares'
                 }
               ]}
               objectPosition="object-center"
@@ -132,7 +132,7 @@ export default function ConveyorsIndustrialesPage() {
                                   fontWeight="font-bold"
                                   className="text-white dark:text-gray-50 leading-none"
                               >
-                                  Transporta desde el punto A hacia el punto B en tu Línea
+                                  Construye tu Nave Industrial en Mexicali desde Terreno
                               </Titulo>
 
                           </div>
@@ -162,7 +162,7 @@ export default function ConveyorsIndustrialesPage() {
                                       src: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
                                       alt: 'Lorem ipsum',
                                       overlayColor: 'rgba(249, 115, 22, 0.4)',
-                                      text: 'Sistemas Verticales'
+                                      text: 'Espacios Modulares'
                                   },
 
                               ]}
@@ -216,9 +216,9 @@ export default function ConveyorsIndustrialesPage() {
           <BigNumber
             imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
             imageAlt="Lorem ipsum"
-            number="+200"
-            title={<>Millones de <br /> productos al Año</>}
-            subtitle={<>Se mueven por sistemas <br /> de conveyors implementados por SDI industrial</>}
+            number="+4.5"
+            title={<>Millones de <br /> Pies² Desarrollados</>}
+            subtitle={<>Construidos en naves <br /> industriales en Mexicali desde 1965</>}
           />
 
 
@@ -227,7 +227,7 @@ export default function ConveyorsIndustrialesPage() {
 
 
 
-          {/* Carrusel de Conveyors Industriales */}
+          {/* Carrusel de Parques Industriales */}
           <CarruselConveyors />
 
 
