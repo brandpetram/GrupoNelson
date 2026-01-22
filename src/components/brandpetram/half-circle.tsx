@@ -1,12 +1,33 @@
 /**
  * Half Circle
  * Componente cero props, hardcodeado
- * Semicírculo en color emerald-600 - fácil de redimensionar
+ * Semicírculo con graduación de colores - fácil de redimensionar
  * Contenedor: 100vh | Half-circle: 50vh de altura
  *
  * PERSONALIZACIÓN:
  * - circleWidth: ancho del círculo exterior (ej: 80vw, 70vw, 90vw)
  *   Cambia este valor para hacer el círculo más ancho o más estrecho
+ *
+ * CAMBIO DE COLORES:
+ * El componente tiene 3 SVGs con 7 segmentos cada uno (graduación tipo arcoiris).
+ *
+ * ⚠️ IMPORTANTE al cambiar colores:
+ * - Mantener graduación SUAVE dentro de la MISMA familia de color
+ * - NO saltar entre familias (ej: blue → sky → cyan)
+ * - Usar progresión de intensidad (900 → 800 → 600 → 500 → 400 → 300 → 200 → 100)
+ *
+ * Ejemplo CORRECTO (familia blue):
+ *   #1e3a8a (blue-900) → #1e40af (blue-800) → #2563eb (blue-600) →
+ *   #3b82f6 (blue-500) → #60a5fa (blue-400) → #93c5fd (blue-300) →
+ *   #bfdbfe (blue-200) → #dbeafe (blue-100)
+ *
+ * Ejemplo INCORRECTO (mezcla familias):
+ *   #3b82f6 (blue-500) → #0ea5e9 (sky-500) ← SALTO ABRUPTO
+ *
+ * Los 3 SVGs a actualizar:
+ * - SVG 1 (darker version, líneas 68-75)
+ * - SVG 2 (bright version, líneas 77-97)
+ * - SVG círculos numerados (stroke colors, líneas 208-233)
  */
 
 import { motion } from 'motion/react';

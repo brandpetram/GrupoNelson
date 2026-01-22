@@ -32,6 +32,7 @@
     "motion": "^12.23.25",
     "motion-plus": "https://api.motion.dev/registry?package=motion-plus&version=2.0.2&token=5a54096caaedfdb408d4651454cd550ab4dc69d6da94491bdebd61495b578bdd",
     "next": "^16.1.4",
+    "next-themes": "^0.4.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-use-measure": "^2.1.7",

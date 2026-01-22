@@ -21,6 +21,27 @@
  * ✅ Usar font-black para peso pesado y text-left para alinear a la izquierda
  * ✅ Priorizar legibilidad sobre contención perfecta en el círculo
  *
+ * CAMBIO DE COLORES (GRADUACIÓN ARCOIRIS):
+ * Este componente tiene graduación de 7 colores tipo arcoiris.
+ *
+ * ⚠️ CRÍTICO al cambiar colores:
+ * - Mantener graduación SUAVE dentro de la MISMA familia de color
+ * - NO saltar entre familias de color (blue → sky → cyan)
+ * - Usar progresión de intensidad (900 → 800 → 600 → 500 → 400 → 300 → 200 → 100)
+ *
+ * Ejemplo CORRECTO (familia blue):
+ *   #1e3a8a (blue-900) → #1e40af (blue-800) → #2563eb (blue-600) →
+ *   #3b82f6 (blue-500) → #60a5fa (blue-400) → #93c5fd (blue-300) →
+ *   #bfdbfe (blue-200) → #dbeafe (blue-100)
+ *
+ * Ejemplo INCORRECTO (mezcla familias):
+ *   #60a5fa (blue-400) → #0ea5e9 (sky-500) ← SALTO ABRUPTO
+ *
+ * 3 SVGs a actualizar con los mismos colores:
+ * - SVG 1 (darker version)
+ * - SVG 2 (bright version)
+ * - SVG círculos numerados (stroke colors)
+ *
  * LECCIONES APRENDIDAS - SEMICÍRCULOS Y SVG:
  * ❌ Intento fallido #1: Crear SVG paths complejos traduciendo coordenadas sin entender estructura
  * ❌ Intento fallido #2: Usar conic-gradient (no da bordes nítidos entre colores)
