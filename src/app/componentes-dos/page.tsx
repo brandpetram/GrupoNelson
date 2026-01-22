@@ -73,7 +73,7 @@ export default function ConveyorsAmbaflexPage() {
             <div className="relative h-60 md:h-[35vh] lg:h-[40vh] 1200:h-[60vh] xl:h-[70vh] ">
                 <ImagenConEtiquetaAmbaflex
                     src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
-                    alt="Conveyors de gravedad"
+                    alt="Lorem ipsum"
                     etiqueta="Soluciones Ambaflex"
                     posicion="bottom-left"
                     offsetYClasses="translate-y-5 md:translate-y-[120px]"
@@ -124,7 +124,7 @@ export default function ConveyorsAmbaflexPage() {
 
         <BigNumber
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
-          imageAlt="Conveyors de banda industrial"
+          imageAlt="Lorem ipsum"
           number="+200"
           title={<>Millones de <br /> productos al Año</>}
           subtitle={<>Se mueven por sistemas de conveyors <br className={'hidden md:block'}/> implementados por SDI industrial</>}

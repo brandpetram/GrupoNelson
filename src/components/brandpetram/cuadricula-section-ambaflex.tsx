@@ -346,7 +346,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[136.62px] aspect-[1/2] overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl1}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage1}`}
                 style={{filter: filterImage1}}
               />
@@ -364,7 +364,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[126.62px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl2}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage2}`}
                 style={{filter: filterImage2}}
               />
@@ -378,7 +378,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[126.62px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl3}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage3}`}
                 style={{filter: filterImage3}}
               />
@@ -392,7 +392,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[126.62px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl4}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage4}`}
                 style={{filter: filterImage4}}
               />
@@ -413,7 +413,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[172.5px] aspect-square overflow-hidden rounded-none self-end ${borderClass}`}>
               <img
                 src={imageUrl5}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage5}`}
                 style={{filter: filterImage5}}
               />
@@ -429,7 +429,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[172.5px] aspect-square overflow-hidden rounded-none self-end ${borderClass}`}>
               <img
                 src={imageUrl6}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage6}`}
                 style={{filter: filterImage6}}
               />
@@ -447,7 +447,7 @@ export function CuadriculaSectionAmbaflex() {
                 <div className={`relative row-span-3 overflow-hidden rounded-none ${borderClass}`}>
                   <img
                     src={imageUrl7}
-                    alt="Ambaflex Conveyor"
+                    alt="Lorem ipsum"
                     className={`w-full h-full object-cover ${posImage7}`}
                     style={{filter: filterImage7}}
                   />
@@ -463,7 +463,7 @@ export function CuadriculaSectionAmbaflex() {
                 <div className={`relative overflow-hidden rounded-none ${borderClass}`}>
                   <img
                     src={imageUrl8}
-                    alt="Ambaflex Conveyor"
+                    alt="Lorem ipsum"
                     className={`w-full h-full object-cover ${posImage8}`}
                     style={{filter: filterImage8}}
                   />
@@ -479,7 +479,7 @@ export function CuadriculaSectionAmbaflex() {
                 <div className={`relative overflow-hidden rounded-none ${borderClass}`}>
                   <img
                     src={imageUrl9}
-                    alt="Ambaflex Conveyor"
+                    alt="Lorem ipsum"
                     className={`w-full h-full object-cover ${posImage9}`}
                     style={{filter: filterImage9}}
                   />
@@ -495,7 +495,7 @@ export function CuadriculaSectionAmbaflex() {
                 <div className={`relative overflow-hidden rounded-none ${borderClass}`}>
                   <img
                     src={imageUrl10}
-                    alt="Ambaflex Conveyor"
+                    alt="Lorem ipsum"
                     className={`w-full h-full object-cover ${posImage10}`}
                     style={{filter: filterImage10}}
                   />
@@ -512,7 +512,7 @@ export function CuadriculaSectionAmbaflex() {
               <div className={`relative w-[330px] h-[322px] overflow-hidden rounded-none ${borderClass}`}>
                 <img
                   src={imageUrl11}
-                  alt="Ambaflex Conveyor"
+                  alt="Lorem ipsum"
                   className={`w-full h-full object-cover ${posImage11}`}
                   style={{filter: filterImage11}}
                 />
@@ -533,7 +533,7 @@ export function CuadriculaSectionAmbaflex() {
               <div className={`relative w-[172.5px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
                 <img
                   src={imageUrl12}
-                  alt="Ambaflex Conveyor"
+                  alt="Lorem ipsum"
                   className={`w-full h-full object-cover ${posImage12}`}
                   style={{filter: filterImage12}}
                 />
@@ -547,7 +547,7 @@ export function CuadriculaSectionAmbaflex() {
               <div className={`relative w-[172.5px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
                 <img
                   src={imageUrl13}
-                  alt="Ambaflex Conveyor"
+                  alt="Lorem ipsum"
                   className={`w-full h-full object-cover ${posImage13}`}
                   style={{filter: filterImage13}}
                 />
@@ -561,7 +561,7 @@ export function CuadriculaSectionAmbaflex() {
               <div className={`relative w-[86.25px] aspect-square overflow-hidden rounded-none self-end ${borderClass}`}>
                 <img
                   src={imageUrl14}
-                  alt="Ambaflex Conveyor"
+                  alt="Lorem ipsum"
                   className={`w-full h-full object-cover ${posImage14}`}
                   style={{filter: filterImage14}}
                 />
@@ -578,7 +578,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[500px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl15}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage15}`}
                 style={{filter: filterImage15}}
               />
@@ -596,7 +596,7 @@ export function CuadriculaSectionAmbaflex() {
               <div className={`relative w-[248px] aspect-square overflow-hidden rounded-none mr-1 ${borderClass}`}>
                 <img
                   src={imageUrl16}
-                  alt="Ambaflex Conveyor"
+                  alt="Lorem ipsum"
                   className={`w-full h-full object-cover ${posImage16}`}
                   style={{filter: filterImage16}}
                 />
@@ -612,7 +612,7 @@ export function CuadriculaSectionAmbaflex() {
               <div className={`relative w-[248px] aspect-square overflow-hidden rounded-none ${borderClass}`}>
                 <img
                   src={imageUrl17}
-                  alt="Ambaflex Conveyor"
+                  alt="Lorem ipsum"
                   className={`w-full h-full object-cover ${posImage17}`}
                   style={{filter: filterImage17}}
                 />
@@ -632,7 +632,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[103.5px] aspect-[1/2] overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl18}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage18}`}
                 style={{filter: filterImage18}}
               />
@@ -647,7 +647,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[103.5px] aspect-[1/2] overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl19}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage19}`}
                 style={{filter: filterImage19}}
               />
@@ -662,7 +662,7 @@ export function CuadriculaSectionAmbaflex() {
             <div className={`relative w-[103.5px] aspect-[1/2] overflow-hidden rounded-none ${borderClass}`}>
               <img
                 src={imageUrl20}
-                alt="Ambaflex Conveyor"
+                alt="Lorem ipsum"
                 className={`w-full h-full object-cover ${posImage20}`}
                 style={{filter: filterImage20}}
               />

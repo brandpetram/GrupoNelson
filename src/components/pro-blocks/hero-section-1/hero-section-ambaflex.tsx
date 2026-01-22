@@ -44,7 +44,7 @@ export function HeroSectionAmbaflex() {
           <AspectRatio ratio={1 / 1}>
             <Image
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-280.jpg"
-              alt="Conveyors Ambaflex"
+              alt="Lorem ipsum"
               fill
               priority
               className="h-full w-full rounded-xl object-cover"

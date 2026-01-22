@@ -43,14 +43,14 @@ export function Mosaico2() {
           {/* Bloque 2: Imagen */}
           <ImagenRectangulo
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-273.jpg"
-            alt="Instalación industrial"
+            alt="Lorem ipsum"
             className="aspect-square"
           />
 
           {/* Bloque 3: Imagen */}
           <ImagenRectangulo
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg"
-            alt="Aire acondicionado industrial"
+            alt="Lorem ipsum"
             className="aspect-square"
           />
 
@@ -89,7 +89,7 @@ export function Mosaico2() {
         >
           <ImagenRectangulo
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg"
-            alt="Imagen destacada"
+            alt="Lorem ipsum"
             className="aspect-square 1024:aspect-auto 1024:h-full"
           />
         </motion.div>

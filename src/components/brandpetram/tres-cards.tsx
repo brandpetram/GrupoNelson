@@ -54,7 +54,7 @@ export function TresCards() {
           <div className="relative aspect-square bg-gray-200">
             <Image
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
-              alt="Ingeniería y Proyectos con Conveyors"
+              alt="Lorem ipsum"
               fill
               className="object-cover"
             />
@@ -79,7 +79,7 @@ export function TresCards() {
           <div className="relative aspect-square bg-gray-200">
             <Image
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
-              alt="Servicio y Refacciones para Conveyors"
+              alt="Lorem ipsum"
               fill
               className="object-cover"
             />
