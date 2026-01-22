@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
-interface ImagenConEtiquetaAmbaflexProps {
+interface ImagenConEtiqueta1Props {
   /** Ruta de la imagen */
   src: string
   /** Texto alternativo para la imagen */
@@ -75,25 +75,25 @@ interface ImagenConEtiquetaAmbaflexProps {
 }
 
 /**
- * Variante Ambaflex de ImagenConEtiqueta con control de width para texto multilínea.
+ * ImagenConEtiqueta con control de width para texto multilínea.
  * Permite especificar el ancho de la etiqueta para que el texto se ajuste a múltiples líneas.
  *
  * Uso básico:
  * <div className="relative aspect-video">
- *   <ImagenConEtiquetaAmbaflex
+ *   <ImagenConEtiqueta1
  *     src="/mi-imagen.jpg"
  *     alt="Descripción"
- *     etiqueta="Soluciones Ambaflex"
+ *     etiqueta="Tu texto aquí"
  *     etiquetaWidth="w-[15rem]"
  *     posicion="bottom-right"
  *   />
  * </div>
  *
  * Uso con breakpoints (usa translate-y/translate-x):
- * <ImagenConEtiquetaAmbaflex
+ * <ImagenConEtiqueta1
  *   src="/mi-imagen.jpg"
  *   alt="Descripción"
- *   etiqueta="Soluciones Ambaflex"
+ *   etiqueta="Tu texto aquí"
  *   posicion="bottom-left"
  *   offsetYClasses="[-120px] md:[-140px] lg:[-160px]"
  *   offsetXClasses="0"
@@ -103,7 +103,7 @@ interface ImagenConEtiquetaAmbaflexProps {
  * offsetYClasses="-translate-y-[120px] md:-translate-y-[140px]"
  * offsetXClasses="translate-x-0 md:translate-x-4"
  */
-export function ImagenConEtiquetaAmbaflex({
+export function ImagenConEtiqueta1({
   src,
   alt,
   etiqueta,
@@ -139,7 +139,7 @@ export function ImagenConEtiquetaAmbaflex({
   poligonoOffsetX = '0',
   poligonoOffsetY = '0',
   poligonoClassName,
-}: ImagenConEtiquetaAmbaflexProps) {
+}: ImagenConEtiqueta1Props) {
   // Usar offsetX/offsetY si están definidos, sino usar offset general
   const effectiveOffsetX = offsetX ?? offset
   const effectiveOffsetY = offsetY ?? offset

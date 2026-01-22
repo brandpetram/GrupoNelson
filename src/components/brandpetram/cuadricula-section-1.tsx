@@ -194,7 +194,7 @@ const showBorders = true // true = mostrar bordes, false = ocultar
 const borderWidth = 'border-0' // Opciones: 'border' (1px), 'border-2' (2px), 'border-4' (4px), 'border-8' (8px)
 const borderColor = 'border-blue-500' // Color del borde (cualquier clase de Tailwind)
 
-export function CuadriculaSectionAmbaflex() {
+export function CuadriculaSection1() {
   // Clase de bordes condicional
   const borderClass = showBorders ? `${borderWidth} ${borderColor}` : ''
 

@@ -1,28 +1,28 @@
 'use client'
 
 import Header from '@/components/Header'
-import { CuadriculaSectionAmbaflex } from '@/components/brandpetram/cuadricula-section-ambaflex'
+import { CuadriculaSection1 } from '@/components/brandpetram/cuadricula-section-1'
 import {LineaL} from "@/components/ui/brandpetram/linea-l";
 import {PoligonoTexto1} from "@/components/ui/brandpetram/poligono-texto-1";
 import {Titulo} from "@/components/ui/brandpetram/titulo";
 import {Parrafo} from "@/components/ui/brandpetram/parrafo";
 import {GridOverlay} from "@/components/ui/brandpetram/grid";
 import {BigNumber} from "@/components/brandpetram/big-number";
-import {ImagenConEtiquetaAmbaflex} from "@/components/brandpetram/imagen-con-etiqueta-ambaflex";
-import {HeroSectionAmbaflex} from "@/components/pro-blocks/hero-section-1/hero-section-ambaflex";
+import {ImagenConEtiqueta1} from "@/components/brandpetram/imagen-con-etiqueta-1";
+import {HeroSection1} from "@/components/pro-blocks/hero-section-1/hero-section-1";
 import {CuadroCirculoConEscuadra} from "@/components/brandpetram/cuadro-circulo-con-escuadra";
 import {Mosaico2} from "@/components/brandpetram/mosaico-2";
 import {Circulos} from "@/components/brandpetram/circulos";
 import {CuadritosLluviaDos} from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
 import {TresCards} from "@/components/brandpetram/tres-cards";
 
-export default function ConveyorsAmbaflexPage() {
+export default function ComponentesDosPage() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden mt-32">
       <Header />
 
       <main className="">
-        <CuadriculaSectionAmbaflex />
+        <CuadriculaSection1 />
 
         <div className="container mx-auto grid grid-cols-1 lg:mt-32 px-4 md:px-0">
             <div className="flex flex-col items-center md:ml-20 lg:ml-34 gap-0 lg:gap-12 xl:gap-6 md:items-end md:grid  768:grid-cols-[5rem_15rem_1fr] 834:grid-cols-[8rem_15rem_1fr] 1024:grid-cols-[4rem_20rem_1fr] 1200:grid-cols-[14rem_20rem_1fr] 1280:grid-cols-[10rem_20rem_1fr] 1366:grid-cols-[16rem_20rem_1fr] 1728:grid-cols-[1.4fr_20rem_4fr]  xl:gap-x-16 md:gap-y-8">
@@ -71,7 +71,7 @@ export default function ConveyorsAmbaflexPage() {
 
 
             <div className="relative h-60 md:h-[35vh] lg:h-[40vh] 1200:h-[60vh] xl:h-[70vh] ">
-                <ImagenConEtiquetaAmbaflex
+                <ImagenConEtiqueta1
                     src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
                     alt="Lorem ipsum"
                     etiqueta="Naves Industriales Mexicali"
@@ -109,7 +109,7 @@ export default function ConveyorsAmbaflexPage() {
             </div>
         </div>
 
-        {/* Línea decorativa top-right que conecta Soluciones Ambaflex con HeroSection1 */}
+        {/* Línea decorativa top-right */}
         <div className="w-1/2 1728:w-7/12 md:ml-auto relative mt-0 h-20 md:h-20 1200:h-40 1366:h-40 1728:h-64 mt-20 z-30 md:pr-4">
             <LineaL
                 orientacion="top-right"
@@ -119,7 +119,7 @@ export default function ConveyorsAmbaflexPage() {
             />
         </div>
 
-        <div className={'w-11/12 mx-auto 1200:-translate-y-16 1366:-translate-y-16 1728:-translate-y-24'}><HeroSectionAmbaflex/></div>
+        <div className={'w-11/12 mx-auto 1200:-translate-y-16 1366:-translate-y-16 1728:-translate-y-24'}><HeroSection1/></div>
         {/* Sección Text + Image */}
 
         <BigNumber

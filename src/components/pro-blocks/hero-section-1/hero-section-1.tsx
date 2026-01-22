@@ -6,7 +6,7 @@ import { Tagline } from "./tagline";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 
-export function HeroSectionAmbaflex() {
+export function HeroSection1() {
   return (
     <section
       className="bg-background section-padding-y"

@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import { TextoGradiente } from '../ui/brandpetram/texto-gradiente'
 
 /**
- * Circulos - Componente SDI
+ * Circulos - Componente brandpetram
  *
  * Componente zero-props con breakpoints personalizados.
  * Edita tamaños, textos y colores directamente en el código.
