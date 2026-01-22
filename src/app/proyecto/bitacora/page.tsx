@@ -7,9 +7,45 @@ import { ArrowLeft, Camera, FileImage, Globe, Menu, Badge, Component } from 'luc
 export default function BitacoraPage() {
   const entries = [
     {
+      title: 'Desarrollo de Componentes UI para /componentes-dos',
+      icon: Component,
+      date: '22 Enero 2026',
+      description: 'Construcción de 19 componentes optimizados para todas las resoluciones',
+      details: [
+        'Componentes principales construidos:',
+        '  • CuadriculaSection1 - Grid animado de imágenes tipo mosaico con 20 fotografías',
+        '  • HeroSection1 - Hero section con imagen, tagline y CTAs',
+        '  • Mosaico2 - Layout de mosaico responsive con 3 imágenes y texto',
+        '  • TresCards - Sistema de 3 tarjetas con video e imágenes',
+        '  • Circulos - Componente D-C-G con 3 círculos animados y textos',
+        '  • CuadroCirculoConEscuadra - Círculo 360° con checklist de 5 servicios',
+        '  • ImagenConEtiqueta1 - Imagen con etiqueta grande posicionable',
+        'Componentes UI helpers construidos:',
+        '  • LineaL - Líneas decorativas en forma de L con múltiples orientaciones',
+        '  • PoligonoTexto1 - Polígonos con texto personalizable y hover effects',
+        '  • GradientBlob - Nubes decorativas con gradientes difuminados',
+        '  • ImagenRectangulo - Imágenes con overlays y grid configurables',
+        '  • TextoGradiente - Texto con efectos de gradiente animados',
+        '  • CuadritosLluvia - Elementos decorativos en cascada',
+        '  • CuadritosLluviaDos - Variante de elementos decorativos',
+        'Optimizado para TODAS las resoluciones: 360px, 393px, 430px, 768px, 834px, 1024px, 1200px, 1280px, 1366px, 1440px, 1536px, 1728px, 1920px, 2240px, 2560px',
+        'Sistema de diseño consistente con paleta azul de Grupo Nelson (blue-600/700)',
+        'Componentes completamente responsive con tipografía adaptativa',
+        'Animaciones implementadas con motion/react para transiciones fluidas',
+        '30 fotografías integradas de parques industriales (fotos 251-280)',
+        'Contenido optimizado con keywords estratégicos: Parques Industriales Mexicali, Naves Industriales, Built-to-Suit, Construcción Llave en Mano',
+        'Vocabulario estratégico aplicado: turnkey, constructora in-house, 58 años de trayectoria, expertise fronterizo',
+        'Build exitoso - página /componentes-dos lista para revisión',
+      ],
+      link: {
+        text: 'Ver página /componentes-dos',
+        href: '/componentes-dos',
+      },
+    },
+    {
       title: 'Extracción de Fotografías de Videos',
       icon: Camera,
-      date: 'Fase 1',
+      date: '21 Enero 2026',
       description: 'Procesamiento automatizado de videos para generar biblioteca fotográfica',
       details: [
         'Se recibieron 86 videos del cliente',
@@ -27,7 +63,7 @@ export default function BitacoraPage() {
     {
       title: 'Selección de Fotografías Profesionales',
       icon: FileImage,
-      date: 'Fase 2',
+      date: '21 Enero 2026',
       description: 'Adquisición de fotografías de stock de alta calidad',
       details: [
         'Compra de 211 fotografías profesionales (fotos 251-461)',
@@ -44,7 +80,7 @@ export default function BitacoraPage() {
     {
       title: 'Extracción y Procesamiento de Imágenes de PDFs',
       icon: FileImage,
-      date: 'Fase 3',
+      date: '21 Enero 2026',
       description: 'Procesamiento de documentación técnica de parques industriales',
       details: [
         'Extracción automatizada de imágenes desde PDFs técnicos',
@@ -64,7 +100,7 @@ export default function BitacoraPage() {
     {
       title: 'Preparación para Sitio Multilingüe',
       icon: Globe,
-      date: 'Desarrollo',
+      date: '20 Enero 2026',
       description: 'Configuración de arquitectura para múltiples idiomas',
       details: [
         'Estructura de rutas preparada para español, inglés y chino',
@@ -77,7 +113,7 @@ export default function BitacoraPage() {
     {
       title: 'Sistema de Navegación',
       icon: Menu,
-      date: 'Desarrollo',
+      date: '20 Enero 2026',
       description: 'Implementación y corrección del menú principal',
       details: [
         'Header con navegación completa de 5 secciones principales',
@@ -92,7 +128,7 @@ export default function BitacoraPage() {
     {
       title: 'Creación de Páginas Internas',
       icon: FileImage,
-      date: 'Desarrollo',
+      date: '20 Enero 2026',
       description: 'Estructura de páginas para parques industriales',
       details: [
         'Página individual para cada parque industrial',
@@ -106,7 +142,7 @@ export default function BitacoraPage() {
     {
       title: 'Badge Conmemorativo "60 Años"',
       icon: Badge,
-      date: 'Diseño',
+      date: '20 Enero 2026',
       description: 'Elemento visual celebrando aniversario de Grupo Nelson',
       details: [
         'Badge animado con efecto de entrada',
@@ -119,7 +155,7 @@ export default function BitacoraPage() {
     {
       title: 'Catálogo de Componentes UI',
       icon: Component,
-      date: 'Desarrollo',
+      date: '21 Enero 2026',
       description: 'Sistema de componentes reutilizables construidos desde cero',
       details: [
         'Desarrollamos 15+ componentes ready-to-use completamente funcionales',
@@ -195,11 +231,11 @@ export default function BitacoraPage() {
                       <Icon className="w-6 h-6 text-blue-600" />
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h2 className="text-2xl font-bold">{entry.title}</h2>
-                        <span className="text-sm text-muted-foreground px-3 py-1 bg-muted rounded-full">
+                      <div className="mb-3">
+                        <div className="text-3xl md:text-4xl font-black text-blue-600 mb-2">
                           {entry.date}
-                        </span>
+                        </div>
+                        <h2 className="text-2xl font-bold">{entry.title}</h2>
                       </div>
                       <p className="text-muted-foreground mb-4">{entry.description}</p>
                     </div>
