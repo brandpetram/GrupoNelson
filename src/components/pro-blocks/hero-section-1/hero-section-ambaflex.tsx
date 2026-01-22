@@ -25,7 +25,7 @@ export function HeroSectionAmbaflex() {
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">
-              Sistemas de conveyors Ambaflex diseñados para optimizar tu operación industrial. Eficiencia, confiabilidad y rendimiento garantizado.
+              Naves industriales diseñadas para optimizar tu operación. Construye exactamente lo que necesitas con nuestra constructora in-house y 58 años de expertise en el mercado fronterizo.
             </p>
           </div>
 

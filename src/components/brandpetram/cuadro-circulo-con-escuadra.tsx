@@ -13,8 +13,7 @@ export function CuadroCirculoConEscuadra() {
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-            Nuestros sistemas de conveyors industriales para la industria alimenticia combinan ingeniería
-            de precisión y estrictos estándares de higiene, garantizando soluciones eficientes y seguras.
+            Construimos exactamente lo que tu operación necesita. Diseñamos la configuración según tus especificaciones y ejecutamos la construcción bajo un solo contrato turnkey.
           </p>
         </div>
 
@@ -38,7 +37,7 @@ export function CuadroCirculoConEscuadra() {
 
           {/* Círculo */}
           <div
-            className="-translate-30 360:-translate-20 md:-translate-10 1200:translate-0 size-70 md:size-90 1024:size-90 1200:size-85 1280:size-90 1366:size-100 1920:size-120 rounded-full bg-linear-to-b from-orange-600 to-red-600 flex flex-col items-center justify-center p-8"
+            className="-translate-30 360:-translate-20 md:-translate-10 1200:translate-0 size-70 md:size-90 1024:size-90 1200:size-85 1280:size-90 1366:size-100 1920:size-120 rounded-full bg-linear-to-b from-blue-600 to-blue-700 flex flex-col items-center justify-center p-8"
           >
             <div className="text-4xl md:text-6xl 1920:text-7xl font-black text-white mb-6">
               360<span className="text-2xl md:text-xl">°</span>
@@ -46,23 +45,23 @@ export function CuadroCirculoConEscuadra() {
             <div className="space-y-0 md:space-y-1 1280:space-y-2  text-white text-lg md:text-xl 1920:text-2xl font-semibold">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">✓</span>
-                <span>Equipo</span>
+                <span>Terreno</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">✓</span>
-                <span>Ingeniería</span>
+                <span>Diseño</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">✓</span>
-                <span>Instalación</span>
+                <span>Construcción</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">✓</span>
-                <span>Mantenimiento</span>
+                <span>Gestión</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">✓</span>
-                <span>Refacciones</span>
+                <span>Servicios</span>
               </div>
             </div>
           </div>

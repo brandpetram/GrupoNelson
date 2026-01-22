@@ -21,15 +21,15 @@ export function CuadritosLluvia() {
         style={{ top: '0px', left: '0px' }}
       />
 
-      {/* Cuadrito 2: Mediano, naranja, tocando esquina inferior derecha del 1 */}
+      {/* Cuadrito 2: Mediano, azul, tocando esquina inferior derecha del 1 */}
       <div
-        className="absolute w-10 h-10 bg-orange-600"
+        className="absolute w-10 h-10 bg-blue-600"
         style={{ top: '56px', left: '56px' }}
       />
 
-      {/* Cuadrito 3: Mediano-grande, rojo, tocando esquina inferior IZQUIERDA del 2 (dirección opuesta) */}
+      {/* Cuadrito 3: Mediano-grande, azul oscuro, tocando esquina inferior IZQUIERDA del 2 (dirección opuesta) */}
       <div
-        className="absolute w-12 h-12 bg-red-600"
+        className="absolute w-12 h-12 bg-blue-700"
         style={{ top: '96px', left: '8px' }}
       />
 

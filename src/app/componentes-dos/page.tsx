@@ -18,7 +18,7 @@ import {TresCards} from "@/components/brandpetram/tres-cards";
 
 export default function ConveyorsAmbaflexPage() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+    <div className="flex flex-col min-h-screen overflow-hidden mt-32">
       <Header />
 
       <main className="">
@@ -36,7 +36,7 @@ export default function ConveyorsAmbaflexPage() {
                 <div className="relative aspect-[1/1] size-[13rem] lg:size-[20rem] xl:size-auto  ">
                     <PoligonoTexto1
                         text="Parques Industriales en Mexicali"
-                        backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+                        backgroundColor="bg-gradient-to-r from-blue-600 to-blue-700"
                         textColor="text-white"
                         fontSize="text-2xl md:text-xl lg:text-4xl"
                         fontWeight="font-bold"
@@ -61,7 +61,7 @@ export default function ConveyorsAmbaflexPage() {
                         fontWeight="font-light"
                         maxWidth="md:max-w-[16rem] lg:max-w-[22rem] 1200:max-w-[22rem] 1280:max-w-[27rem]"
                     >
-                        La experiencia, confiabilidad e infraestructura que necesitas en un equipo especializado en conveyors industriales ambaflex
+                        Accede a infraestructura de clase mundial con 58 años de trayectoria en el desarrollo de parques industriales
                     </Parrafo>
                 </div>
             </div>
@@ -104,7 +104,7 @@ export default function ConveyorsAmbaflexPage() {
                     strokeColor="stroke-white/20"
                     gridSize={50}
                     showHighlights={true}
-                    highlightColor="fill-orange-500/8"  // Highlights naranjas sutiles
+                    highlightColor="fill-blue-600/40"
                 />
             </div>
         </div>
