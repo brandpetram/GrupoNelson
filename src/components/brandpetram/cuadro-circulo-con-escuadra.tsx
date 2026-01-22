@@ -9,7 +9,7 @@ export function CuadroCirculoConEscuadra() {
       <div className="relative translate-y-10 md:-translate-y-20 md:w-5/12 1200:w-5/12 1366:w-4/12 md:ml-10 1200:ml-20 1280:ml-20 1366:ml-48 bg-gray-100/80 dark:bg-gray-900/80 p-8 md:p-12 lg:p-16 max-h-140">
         <div className="max-w-2xl">
           <h2 className="text-5xl md:text-5xl lg:text-7xl font-extrabold text-foreground leading-none tracking-tighter mb-8">
-            Conveyors<br/>de Grado<br/>Alimenticio
+            Naves<br/>Industriales<br/>Built-to-Suit
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">

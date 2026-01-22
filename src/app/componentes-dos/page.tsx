@@ -35,7 +35,7 @@ export default function ConveyorsAmbaflexPage() {
                 />
                 <div className="relative aspect-[1/1] size-[13rem] lg:size-[20rem] xl:size-auto  ">
                     <PoligonoTexto1
-                        text="Sistemas Ambaflex en México"
+                        text="Parques Industriales en Mexicali"
                         backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
                         textColor="text-white"
                         fontSize="text-2xl md:text-xl lg:text-4xl"
@@ -53,7 +53,7 @@ export default function ConveyorsAmbaflexPage() {
                         lineHeight="leading-none"
                         width="md:max-w-xs lg:max-w-sm xl:max-w-md"
                     >
-                        Ingenieria, Suministro y Soluciones
+                        Construcción de Naves Industriales en Mexicali
                     </Titulo>
                     <Parrafo
                         fontSize="text-lg md:text-xl lg:text-2xl xl:text-3xl"
@@ -74,7 +74,7 @@ export default function ConveyorsAmbaflexPage() {
                 <ImagenConEtiquetaAmbaflex
                     src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
                     alt="Lorem ipsum"
-                    etiqueta="Soluciones Ambaflex"
+                    etiqueta="Naves Industriales Mexicali"
                     posicion="bottom-left"
                     offsetYClasses="translate-y-5 md:translate-y-[120px]"
                     offsetXClasses="translate-x-0"
@@ -125,9 +125,9 @@ export default function ConveyorsAmbaflexPage() {
         <BigNumber
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
           imageAlt="Lorem ipsum"
-          number="+200"
-          title={<>Millones de <br /> productos al Año</>}
-          subtitle={<>Se mueven por sistemas de conveyors <br className={'hidden md:block'}/> implementados por SDI industrial</>}
+          number="+4.5"
+          title={<>Millones de <br /> Pies² Desarrollados</>}
+          subtitle={<>Construidos en naves <br className={'hidden md:block'}/> industriales en Mexicali desde 1965</>}
         />
 
         <CuadroCirculoConEscuadra />

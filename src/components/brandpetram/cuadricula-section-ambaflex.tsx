@@ -315,9 +315,9 @@ export function CuadriculaSectionAmbaflex() {
         {/* Columna izquierda - Contenido de texto */}
         <div className="md:-mr-120 order-2 md:order-1 relative z-20 1280:max-w-2xl 1728:max-w-4xl p-5 md:p-10 1280:p-0 1200:-translate-y-20 1280:-translate-y-28 1366:-translate-y-28  1440:-translate-y-40 1536:-translate-y-24 1728:-translate-y-40 1920:-translate-y-56 1920:translate-x-10">
 
-          <span className="rounded-xl bg-orange-700/10 px-4 py-2 text-xs lg:text-lg font-semibold leading-6 text-red-600  ring-1 ring-inset ring-red-500/20">Expertos en soluciones y sistemas de</span>
+          <span className="rounded-xl bg-orange-700/10 px-4 py-2 text-xs lg:text-lg font-semibold leading-6 text-red-600  ring-1 ring-inset ring-red-500/20">Desarrollo y construcción de</span>
           <h1 className="mt-4 md:mt-5  text-3xl 393:text-4xl 430:text-5xl md:text-6xl 1024:text-7xl 1536:text-8xl font-extrabold text-foreground mb-6 leading-none tracking-tighter">
-           Conveyors Ambaflex <br/> en todo México
+           Parques Industriales <br/> en Mexicali
           </h1>
           <p className="md:max-w-xl -mt-3 md:mt-0 1200:w-9/12 430:text-xl 1024:text-2xl 1728:text-2xl text-muted-foreground mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.

@@ -11,7 +11,7 @@ export function TresCards() {
           {/* Área de texto - altura fija para alineación */}
           <div className="bg-gradient-to-br from-orange-400 to-orange-500 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-sm">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
-              Proveeduría<br/>de Conveyors
+              Renta de<br/>Naves Industriales
             </h3>
 
             <button className="flex items-center gap-3 text-white font-bold text-xl md:text-lg 1024:text-lg 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl group">
@@ -41,7 +41,7 @@ export function TresCards() {
           {/* Área de texto - altura fija para alineación */}
           <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-sm">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
-              Ingeniería y<br/>Proyectos<br/>con Conveyors
+              Construcción<br/>Llave en Mano<br/>Built-to-Suit
             </h3>
 
             <button className="flex items-center gap-3 text-white font-bold text-xl md:text-lg 1024:text-lg 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl group">
@@ -66,7 +66,7 @@ export function TresCards() {
           {/* Área de texto - altura fija para alineación */}
           <div className="bg-gradient-to-br from-slate-700 to-slate-800 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-sm">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
-              Servicio<br/>y Refacciones<br/>para Conveyors
+              Gestión y<br/>Mantenimiento<br/>de Parques
             </h3>
 
             <button className="flex items-center gap-3 text-white font-bold text-xl md:text-lg 1024:text-lg 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl group">

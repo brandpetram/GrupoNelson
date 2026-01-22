@@ -18,10 +18,10 @@ export function HeroSectionAmbaflex() {
           {/* Section Title */}
           <div className="section-title-gap-xl flex flex-col 1728:w-10/12 ">
             {/* Tagline */}
-            <Tagline>Conveyors Ambaflex</Tagline>
+            <Tagline>Naves Industriales en Mexicali</Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="text-5xl 1024:text-7xl font-extrabold tracking-tighter">
-              Soluciones de transporte industrial.
+              Infraestructura de Clase Mundial para tu Operación.
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">

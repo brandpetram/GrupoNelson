@@ -36,7 +36,7 @@ export function Circulos() {
         {/* Texto */}
         <div className="flex-1 md:max-w-2xl">
           <h3 className="text-2xl md:text-5xl 1200:text-[4.5rem] 1280:text-[6rem] 1366:text-[6rem] 1440:text-[6rem] 1536:text-[6rem] 1728:text-[6rem] 1920:text-[6rem] leading-none tracking-tight font-extrabold mb-2 md:mb-4 text-foreground">
-            Soporte
+            Desarrollo
           </h3>
           <p className="text-sm md:text-lg 1200:text-xl 1728:text-2xl 1920:text-2xl text-muted-foreground">
             Diseñamos y fabricamos sistemas de conveyors completos para tu planta. Te acompañamos desde el concepto hasta la puesta en marcha exitosa. Somos tu socio en proyectos llave en mano.
@@ -67,7 +67,7 @@ export function Circulos() {
         <div className="flex-1 md:max-w-2xl">
           <h3 className="text-2xl md:text-5xl 1200:text-[4.5rem] 1280:text-[6rem] 1366:text-[6rem] 1440:text-[6rem] 1536:text-[6rem] 1728:text-[6rem] 1920:text-[6rem] leading-none tracking-tight font-extrabold mb-2 md:mb-4">
             <TextoGradiente
-              texto="Dinámico"
+              texto="Construcción"
               gradienteFrom="from-orange-500"
               gradienteTo="to-red-600"
             />
@@ -100,7 +100,7 @@ export function Circulos() {
         {/* Texto */}
         <div className="flex-1 md:max-w-2xl">
           <h3 className="text-2xl md:text-5xl 1200:text-[4.5rem] 1280:text-[6rem] 1366:text-[6rem] 1440:text-[6rem] 1536:text-[6rem] 1728:text-[6rem] 1920:text-[6rem] leading-none tracking-tight font-extrabold mb-2 md:mb-4 text-foreground">
-            Industrial
+            Gestión
           </h3>
           <p className="text-sm md:text-lg 1200:text-xl 1728:text-2xl 1920:text-2xl text-muted-foreground">
             Integramos conveyors, automatización y cómputo industrial en tu operación diaria. Te brindamos mantenimiento preventivo y correctivo especializado de calidad. Nuestra experiencia con Fortune 500 respalda cada proyecto.

@@ -27,10 +27,10 @@ export function Mosaico2() {
             className="aspect-square bg-slate-900 text-white p-6 md:p-8 1024:p-10 flex flex-col justify-center items-start text-left will-change-transform"
           >
             <h3 className="text-base md:text-lg 1024:text-sm 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg font-bold tracking-wide uppercase 1200:leading-none">
-              Conveyor Industrial
+              Espacios Industriales
             </h3>
             <p className="mt-2 md:mt-3 text-lg md:text-xl 1024:text-lg 1024:text-2xl 1200:text-lg 1280:text-lg 1920:text-2xl font-normal leading-tight 1024:leading-none 1200:leading-none 1280:leading-normal text-balance max-w-xs">
-              Diseño e Instalación de Sistemas Conveyor
+              Naves Industriales Disponibles en Mexicali
             </p>
             <Link
               href="#"
