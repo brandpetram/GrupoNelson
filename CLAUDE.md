@@ -2,6 +2,36 @@
 
 Este es un sitio web de cliente construido con componentes de `@brandpetram/componentes-2026`.
 
+## Orígenes de Componentes y Brandpetramización
+
+### Biblioteca Multi-origen
+
+Los componentes en este proyecto provienen de diferentes fuentes:
+
+- **Tailark Pro** - Componentes premium de Tailark
+- **shadcn Pro Blocks** - Bloques pro de shadcn
+- **Tailwind UI** - Componentes oficiales de Tailwind
+- **Templates de Tailwind** - Plantillas y ejemplos
+- **Brandpetram** - Componentes brandpetramizados o construidos desde cero
+
+### Proceso de Brandpetramización
+
+**Brandpetramizar** significa tomar un componente de cualquier origen y adaptarlo al estilo Brandpetram.
+
+Los componentes brandpetramizados se identifican con sufijo `-BP`:
+
+```tsx
+// Componente brandpetramizado
+import { FaqsBP } from '@brandpetram/componentes-2026/brandpetram'
+
+// Versión con props (si existe)
+import { FaqsBPConProps } from '@brandpetram/componentes-2026/brandpetram'
+```
+
+**Nota:** Esta documentación es interna de Brandpetram y puede eliminarse del repositorio antes de entregar al cliente.
+
+---
+
 ## Arquitectura
 
 ```
