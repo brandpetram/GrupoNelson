@@ -15,6 +15,9 @@ import {Mosaico2} from "@/components/brandpetram/mosaico-2";
 import {Circulos} from "@/components/brandpetram/circulos";
 import {CuadritosLluviaDos} from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
 import {TresCards} from "@/components/brandpetram/tres-cards";
+import {FeatureSection5InvertedBP} from "@/components/brandpetram/feature-section-5-inverted-bp";
+import {FeatureSection3BP} from "@/components/brandpetram/feature-section-3-bp";
+import FaqSectionsThreeColumnsBP from "@/components/brandpetram/faq-sections-three-columns-bp";
 
 export default function ComponentesDosPage() {
   return (
@@ -140,9 +143,29 @@ export default function ComponentesDosPage() {
               <CuadritosLluviaDos />
             </div>
           </div>
+
+        <div className="flex flex-col gap-4">
+            <div className="container mx-auto w-10/12 1200:w-8/12 1366:w-8/12 1536:w-9/12  lg:max-w-6xl my-10 md:mt-20">
+            <Parrafo
+                fontSize="text-base text-3xl 768:text-3xl md:text-4xl 1024:text-5xl 1200:text-4xl 1536:text-5xl "
+                textColor="text-muted-foreground"
+            >
+               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor.
+
+            </Parrafo>
+
+            </div>
+        </div>
+
+        <div className="container mx-auto w-11/12">
+            <FeatureSection5InvertedBP/>
+            <FeatureSection3BP/>
+        </div>
       </main>
 
         <div className={'px-4 md:ml-10 1200:ml-32 mt-32 md:px-0'}><Circulos/></div>
+
+        <FaqSectionsThreeColumnsBP />
 
         <div className={'mt-20 1366:ml-16' }><TresCards/></div>
     </div>
