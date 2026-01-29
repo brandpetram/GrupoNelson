@@ -139,7 +139,7 @@ export default function ComponentesDosPage() {
             <Mosaico2/>
 
             {/* Cuadritos decorativos pegados debajo del mosaico */}
-            <div className="absolute top-full right-20 md:right-40 z-10 pointer-events-none">
+            <div className="absolute top-full right-20 md:right-40 z-10 pointer-events-none transform scale-50 md:scale-75 lg:scale-100 origin-top-right">
               <CuadritosLluviaDos />
             </div>
           </div>
