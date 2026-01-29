@@ -57,9 +57,9 @@ export default function ComponentesTresPage() {
               imagen18="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
               imagen19="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
               imagen20="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg"
-              badge="Expertos en soluciones y sistemas de"
-              titulo={<>Conveyors Ambaflex <br/> en todo México</>}
-              parrafo="Soluciones llave en mano con sistemas de conveyors espirales Ambaflex. Ahorra espacio hasta 66%, operación con un solo motor y mantenimiento preventivo con equipo técnico especializado en conveyors industriales para la industria Mexicana."
+              badge="Desarrollo industrial en Mexicali"
+              titulo={<>Parques Industriales <br/> en Mexicali</>}
+              parrafo="Renta y construcción de naves industriales en los mejores parques industriales de Mexicali. Ubicación estratégica, infraestructura de clase mundial y servicios completos para tu operación industrial."
               boton1Texto="Contáctanos"
               boton1Href="#"
               boton2Texto="Conoce más →"
@@ -74,9 +74,9 @@ export default function ComponentesTresPage() {
           {/*Gunlike Section con props */}
           <div>
               <GunLikeConProps
-              poligonoText="Sistemas Ambaflex en México"
-              titulo="Ingenieria, Suministro y Soluciones"
-              parrafo="La experiencia, confiabilidad e infraestructura que necesitas en un equipo especializado en conveyors industriales ambaflex"
+              poligonoText="Grupo Nelson en Mexicali"
+              titulo="Desarrollo, Renta y Construcción"
+              parrafo="La experiencia, confiabilidad e infraestructura que necesitas en parques industriales de primer nivel en Mexicali"
           />
           </div>
 
@@ -113,19 +113,19 @@ export default function ComponentesTresPage() {
         {/* Feature Section con props */}
         <div className={'w-11/12 mx-auto 1200:-translate-y-16 1366:-translate-y-16 1728:-translate-y-24'}>
             <FeatureSection6BPConProps
-              badge="Feature section"
-              title="Headline that shows solution's impact on user success"
-              description="Explain in one or two concise sentences how your solution transforms users' challenges into positive outcomes. Focus on the end benefits that matter most to your target audience. Keep it clear and compelling."
-              feature1Title="Feature de Autoridad"
-              feature1Description="Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details."
+              badge="Parques Industriales"
+              title="Ubicación estratégica para tu operación industrial"
+              description="Naves industriales en renta y construcción ubicadas en los mejores parques industriales de Mexicali, con acceso inmediato a la frontera y servicios de clase mundial."
+              feature1Title="Infraestructura Completa"
+              feature1Description="Servicios industriales completos: energía trifásica, agua, drenaje industrial, seguridad 24/7 y conectividad de alta velocidad."
               feature1Icon={<Settings className="h-5 w-5" />}
               feature1IconColor="text-orange-600"
-              feature2Title="Feature de Autoridad"
-              feature2Description="Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details."
+              feature2Title="Ubicación Estratégica"
+              feature2Description="Acceso inmediato a la frontera con Estados Unidos y principales vías de comunicación para optimizar tu logística."
               feature2Icon={<Zap className="h-5 w-5" />}
               feature2IconColor="text-blue-600"
-              button1Text="Cotiza Ahora"
-              button2Text="Conoce más"
+              button1Text="Solicitar Información"
+              button2Text="Ver Parques"
               imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
               imageAlt="Parque industrial"
             />
@@ -136,30 +136,29 @@ export default function ComponentesTresPage() {
               <BigNumberConProps
               imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-273.jpg"
               imageAlt="Nave industrial Mexicali"
-              number="+60%"
-              title={<>De Espacio <br/> Ahorrado</>}
-              subtitle={<>Gracias a los Conveyors Verticales <br className={'hidden md:block'}/> Ambaflex implementados
-                  por SDI industrial</>}
+              number="4"
+              title={<>Parques <br/> Industriales</>}
+              subtitle={<>Nelson I, Nelson II, Vigía I y Vigía II <br className={'hidden md:block'}/> en Mexicali</>}
           />
           </div>
 
         {/* Cuadro Circulo con props */}
         <div>
               <CuadroCirculoConEscuadraConProps
-              titulo={<>Conveyors<br/>de Grado<br/>Alimenticio</>}
-              parrafo="Nuestros sistemas de conveyors industriales para la industria alimenticia combinan ingeniería de precisión y estrictos estándares de higiene, garantizando soluciones eficientes y seguras."
-              numeroCirculo="360"
-              simboloNumero="°"
-              itemsCirculo={["Equipo", "Ingeniería", "Instalación", "Mantenimiento", "Refacciones"]}
+              titulo={<>Naves<br/>Industriales<br/>Personalizadas</>}
+              parrafo="Construcción de naves industriales con diseños adaptados a tus necesidades específicas, desde manufactura ligera hasta operaciones de alto rendimiento industrial."
+              numeroCirculo="100"
+              simboloNumero="%"
+              itemsCirculo={["Diseño", "Construcción", "Permisos", "Infraestructura", "Entrega"]}
           />
           </div>
 
         {/* Mosaico 2 con props */}
           <div className={'w-11/12 mx-auto -mt-20 md:-mt-64 1024:-mt-40 relative'}>
           <Mosaico2ConProps
-            bloque1Titulo="Conveyor Industrial"
-            bloque1Descripcion="Diseño e Instalación de Sistemas Conveyor Lorem"
-            bloque1LinkTexto="Ver Más"
+            bloque1Titulo="Renta de Naves"
+            bloque1Descripcion="Espacios industriales listos para operar en ubicaciones estratégicas"
+            bloque1LinkTexto="Ver Disponibles"
             bloque1LinkHref="#"
             bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg"
             bloque2ImagenAlt="Parque industrial"
@@ -191,46 +190,46 @@ export default function ComponentesTresPage() {
           {/*Feature section 5 inverted con props */}
         <div className="container mx-auto w-10/12 ">
             <FeatureSection5InvertedBPConProps
-              tagline="Soluciones Ambaflex"
-              titulo="Sistemas completos de transporte vertical"
-              descripcion="Conveyors espirales Ambaflex que maximizan el espacio disponible, reducen costos operativos y mejoran la eficiencia en tu planta de producción."
+              tagline="Parques Industriales Mexicali"
+              titulo="Infraestructura completa para tu operación"
+              descripcion="Parques industriales con servicios completos, ubicación estratégica y acceso inmediato a la frontera para optimizar tu operación manufacturera."
               imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-277.jpg"
               imagenAlt="Nave industrial en Mexicali"
               feature1Icon={<Wrench className="h-5 w-5" />}
               feature1IconColor="text-orange-600"
-              feature1Titulo="Instalación Profesional"
-              feature1Descripcion="Equipo técnico especializado con experiencia en implementación de sistemas Ambaflex en toda la industria mexicana."
+              feature1Titulo="Servicios Industriales"
+              feature1Descripcion="Energía trifásica, agua, drenaje industrial, gas natural y telecomunicaciones de alta velocidad en todos los parques."
               feature2Icon={<Truck className="h-5 w-5" />}
               feature2IconColor="text-blue-600"
-              feature2Titulo="Entregas Certificadas"
-              feature2Descripcion="Distribución garantizada y tiempos de entrega confiables para mantener tu operación funcionando sin interrupciones."
+              feature2Titulo="Logística Optimizada"
+              feature2Descripcion="Acceso directo a carreteras federales y proximidad inmediata con la frontera para facilitar tu operación binacional."
               feature3Icon={<Shield className="h-5 w-5" />}
               feature3IconColor="text-green-600"
-              feature3Titulo="Soporte Técnico"
-              feature3Descripcion="Mantenimiento preventivo y correctivo con refacciones originales para maximizar la vida útil de tu equipo."
+              feature3Titulo="Seguridad 24/7"
+              feature3Descripcion="Vigilancia las 24 horas, control de acceso y sistemas de seguridad perimetral en todos nuestros parques industriales."
               feature4Icon={<Clock className="h-5 w-5" />}
               feature4IconColor="text-purple-600"
-              feature4Titulo="Ahorro de Tiempo"
-              feature4Descripcion="Reducción significativa en tiempos de transporte vertical y optimización de flujos de producción."
+              feature4Titulo="Rápida Ocupación"
+              feature4Descripcion="Naves listas para operar o construcción rápida con permisos y gestión completa incluida."
             />
 
         </div>
           {/*Feature section 3 con props */}
           <div className="container mx-auto w-10/12 lg:mt-20">
               <FeatureSection3BPConProps
-                  tagline="Innovación Industrial"
-                  titulo="Tecnología Ambaflex para la industria moderna"
-                  descripcion="Soluciones de transporte que se adaptan a tus necesidades específicas con diseño modular y configuración flexible."
+                  tagline="Desarrollo Industrial"
+                  titulo="Espacios industriales diseñados para el éxito"
+                  descripcion="Naves industriales construidas con especificaciones de clase mundial, adaptadas a las necesidades de la industria manufacturera moderna."
                   imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
                   imagenAlt="Instalaciones industriales"
                   feature1Icon={<Settings className="h-5 w-5" />}
                   feature1IconColor="text-orange-600"
-                  feature1Titulo="Diseño Personalizado"
-                  feature1Descripcion="Sistemas configurables que se adaptan perfectamente a tu espacio disponible y requerimientos de producción."
+                  feature1Titulo="Construcción a Medida"
+                  feature1Descripcion="Naves industriales diseñadas específicamente para tus procesos de manufactura y requerimientos operacionales."
                   feature2Icon={<Zap className="h-5 w-5" />}
                   feature2IconColor="text-blue-600"
-                  feature2Titulo="Eficiencia Energética"
-                  feature2Descripcion="Operación con un solo motor que reduce consumo eléctrico hasta 60% comparado con sistemas tradicionales."
+                  feature2Titulo="Infraestructura Eficiente"
+                  feature2Descripcion="Instalaciones diseñadas para maximizar eficiencia operativa con servicios industriales de alta capacidad."
               />
           </div>
 
@@ -239,80 +238,80 @@ export default function ComponentesTresPage() {
               <SplitWithImageBPConProps
               imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
               imagenAlt="Parque industrial Grupo Nelson"
-              tagline="Soluciones Integrales"
-              titulo="Más que conveyors, soluciones completas"
-              parrafo1="En SDI Industrial no solo suministramos conveyors Ambaflex, desarrollamos soluciones completas de transporte vertical que optimizan tu operación y maximizan el espacio disponible en tu planta de producción."
-              parrafo2="Nuestro equipo técnico especializado cuenta con experiencia probada en implementación de sistemas Ambaflex en toda la industria mexicana. Desde el diseño hasta la puesta en marcha, te acompañamos en cada etapa del proyecto."
+              tagline="Grupo Nelson"
+              titulo="Más que espacios, soluciones industriales completas"
+              parrafo1="En Grupo Nelson no solo rentamos naves industriales, desarrollamos soluciones completas de infraestructura industrial que optimizan tu operación y maximizan tu productividad en Mexicali."
+              parrafo2="Nuestro equipo cuenta con amplia experiencia en desarrollo de parques industriales en Mexicali. Desde la planeación hasta la entrega de llaves, te acompañamos en cada etapa de tu proyecto industrial."
               feature1Icon={<CloudArrowUpIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
               feature1IconColor="text-orange-600 dark:text-orange-500"
-              feature1Titulo="Ahorro de Espacio."
-              feature1Descripcion="Reduce hasta 66% del espacio necesario para transporte vertical comparado con sistemas tradicionales de conveyors."
+              feature1Titulo="Ubicación Estratégica."
+              feature1Descripcion="Parques industriales ubicados estratégicamente cerca de la frontera con acceso inmediato a principales vías de comunicación."
               feature2Icon={<LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
               feature2IconColor="text-blue-600 dark:text-blue-500"
-              feature2Titulo="Operación Eficiente."
-              feature2Descripcion="Sistema con un solo motor que reduce consumo energético y costos de mantenimiento significativamente."
+              feature2Titulo="Servicios Completos."
+              feature2Descripcion="Infraestructura industrial completa con todos los servicios: energía, agua, drenaje, gas y telecomunicaciones."
               feature3Icon={<ServerIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
               feature3IconColor="text-green-600 dark:text-green-500"
-              feature3Titulo="Soporte Especializado."
-              feature3Descripcion="Mantenimiento preventivo y correctivo con refacciones originales y técnicos certificados Ambaflex."
-              parrafo3="Trabajamos con las principales empresas industriales de México, ofreciendo soluciones personalizadas que se adaptan perfectamente a tus necesidades específicas de producción y espacio disponible."
-              subtitulo="¿Necesitas optimizar tu espacio?"
-              parrafo4="Los conveyors espirales Ambaflex son la solución ideal cuando el espacio es limitado pero la eficiencia no puede comprometerse. Diseño modular, instalación rápida y operación confiable respaldada por más de 30 años de experiencia en la industria."
+              feature3Titulo="Soporte Continuo."
+              feature3Descripcion="Administración profesional de parques y mantenimiento de áreas comunes para garantizar operaciones sin interrupciones."
+              parrafo3="Trabajamos con empresas multinacionales y manufactureras de primer nivel, ofreciendo espacios industriales que se adaptan perfectamente a tus necesidades de producción y logística."
+              subtitulo="¿Necesitas expandir tu operación?"
+              parrafo4="Los parques industriales Grupo Nelson son la solución ideal cuando necesitas infraestructura confiable y ubicación estratégica. Naves listas para operar, construcción rápida y servicios completos respaldados por años de experiencia en desarrollo industrial."
           />
           </div>
 
         {/* Circulo con props */}
         <div className={'px-4 md:ml-10 1200:ml-32 mt-32 md:px-0'}>
           <CirculosConProps
-            circulo1Letra="S"
-            circulo1Titulo="Soporte"
-            circulo1Descripcion="Diseñamos y fabricamos sistemas de conveyors completos para tu planta. Te acompañamos desde el concepto hasta la puesta en marcha exitosa. Somos tu socio en proyectos llave en mano."
-            circulo2Letra="D"
-            circulo2Titulo="Dinámico"
-            circulo2Descripcion="Desarrollamos ingeniería de aplicación específica para tus necesidades únicas. Te apoyamos en instalación, troubleshooting y optimización continua de sistemas. Transformamos ideas en sistemas productivos reales y confiables."
-            circulo3Letra="I"
-            circulo3Titulo="Industrial"
-            circulo3Descripcion="Integramos conveyors, automatización y cómputo industrial en tu operación diaria. Te brindamos mantenimiento preventivo y correctivo especializado de calidad. Nuestra experiencia con Fortune 500 respalda cada proyecto."
+            circulo1Letra="N"
+            circulo1Titulo="Nelson I"
+            circulo1Descripcion="Parque industrial con infraestructura completa y naves disponibles para renta. Ubicación estratégica con acceso inmediato a la frontera. Servicios industriales de primer nivel."
+            circulo2Letra="N"
+            circulo2Titulo="Nelson II"
+            circulo2Descripcion="Desarrollo industrial de nueva generación con tecnología de punta. Construcción de naves a la medida y espacios listos para operar. Infraestructura moderna y eficiente."
+            circulo3Letra="V"
+            circulo3Titulo="Vigía"
+            circulo3Descripcion="Parques industriales Vigía I y Vigía II con ubicación privilegiada en Mexicali. Naves industriales con especificaciones internacionales. Seguridad y servicios completos."
           />
         </div>
 
         {/* Faqs Section Three Columns con props */}
           <div>
               <FaqSectionsThreeColumnsBPConProps
-              titulo="Preguntas Frecuentes Sobre Conveyors Ambaflex"
+              titulo="Preguntas Frecuentes Sobre Parques Industriales"
               descripcion="¿Tienes alguna pregunta adicional que no encontraste aquí? Contáctanos directamente por"
               linkTexto="correo electrónico"
-              linkHref="mailto:contacto@sdi.com"
+              linkHref="mailto:contacto@gruponelson.com"
               faqs={[
                   {
                       id: 1,
-                      question: "¿Qué ventajas tienen los conveyors espirales Ambaflex?",
-                      answer: "Los conveyors espirales Ambaflex ahorran hasta 66% del espacio comparado con sistemas tradicionales, operan con un solo motor reduciendo consumo energético, y requieren menos mantenimiento. Son ideales para transporte vertical eficiente en espacios reducidos.",
+                      question: "¿Qué ventajas tienen los parques industriales Grupo Nelson?",
+                      answer: "Los parques industriales Grupo Nelson ofrecen ubicación estratégica cerca de la frontera, infraestructura completa con todos los servicios industriales, seguridad 24/7 y gestión profesional. Son ideales para operaciones manufactureras que requieren conectividad binacional.",
                   },
                   {
                       id: 2,
-                      question: "¿Qué tipo de productos pueden transportar?",
-                      answer: "Los sistemas Ambaflex pueden transportar una amplia variedad de productos: cajas, paquetes, botellas, contenedores, y más. Son versátiles y se adaptan a diferentes industrias como alimenticia, farmacéutica, manufactura y logística.",
+                      question: "¿Qué tipo de naves industriales tienen disponibles?",
+                      answer: "Contamos con naves industriales desde 5,000 hasta 100,000 pies cuadrados, tanto para renta como construcción a la medida. Se adaptan a diferentes industrias: manufactura, logística, distribución, ensamble y más.",
                   },
                   {
                       id: 3,
-                      question: "¿Cuánto tiempo toma la instalación?",
-                      answer: "El tiempo de instalación varía según el tamaño y complejidad del sistema, pero típicamente se completa en 2-4 semanas. Nuestro equipo técnico especializado garantiza una puesta en marcha rápida y eficiente minimizando interrupciones en tu operación.",
+                      question: "¿Cuánto tiempo toma construir una nave industrial?",
+                      answer: "El tiempo de construcción varía según el tamaño y especificaciones, pero típicamente se completa en 6-9 meses. Incluimos gestión completa de permisos y supervisión de obra para garantizar entrega a tiempo.",
                   },
                   {
                       id: 4,
-                      question: "¿Ofrecen servicio de mantenimiento?",
-                      answer: "Sí, ofrecemos planes completos de mantenimiento preventivo y correctivo. Contamos con técnicos certificados y refacciones originales Ambaflex para garantizar la máxima disponibilidad y vida útil de tu equipo.",
+                      question: "¿Qué servicios incluyen los parques?",
+                      answer: "Todos nuestros parques incluyen: energía trifásica, agua, drenaje industrial, gas natural, seguridad 24/7, control de acceso, mantenimiento de áreas comunes, telecomunicaciones y gestión administrativa profesional.",
                   },
                   {
                       id: 5,
-                      question: "¿Puedo integrar el sistema con mi línea existente?",
-                      answer: "Absolutamente. Los sistemas Ambaflex tienen diseño modular y se integran fácilmente con líneas de producción existentes. Nuestro equipo de ingeniería desarrolla soluciones personalizadas para cada aplicación específica.",
+                      question: "¿Puedo personalizar el diseño de mi nave?",
+                      answer: "Absolutamente. Ofrecemos construcción a la medida donde tu equipo de ingeniería puede especificar todos los detalles: altura de nave, sistemas eléctricos, pisos industriales, muelles de carga y más.",
                   },
                   {
                       id: 6,
-                      question: "¿Qué garantía tienen los equipos?",
-                      answer: "Todos los equipos Ambaflex cuentan con garantía del fabricante y respaldo de SDI Industrial. Además, ofrecemos contratos de servicio extendido para proteger tu inversión a largo plazo.",
+                      question: "¿Qué contratos de renta ofrecen?",
+                      answer: "Ofrecemos contratos de renta flexibles desde 3 años. Incluyen mantenimiento de la nave, seguridad del parque y todos los servicios industriales. Además, manejamos toda la gestión administrativa.",
                   },
               ]}
           />
@@ -321,19 +320,19 @@ export default function ComponentesTresPage() {
         {/* Tres Cards con props */}
         <div className={'mt-32 1366:ml-16'}>
           <TresCardsConProps
-            card1Titulo={<>Proveeduría<br/>de Conveyors<br/>Ambaflex</>}
-            card1BotonTexto="Solicitar Cotización"
-            card1BotonHref="#cotizar"
+            card1Titulo={<>Renta de<br/>Naves<br/>Industriales</>}
+            card1BotonTexto="Ver Disponibles"
+            card1BotonHref="#rentar"
             card1VideoSrc="/conveyors-industriales/videos/conveyors-industriales-de-banda-en-todo-mexico.mp4"
             card1VideoPoster="/conveyors-industriales/videos/conveyors-industriales-de-banda-en-todo-mexico-poster.jpg"
-            card2Titulo={<>Ingeniería<br/>de Aplicación<br/>Ambaflex</>}
-            card2BotonTexto="Consultar Proyecto"
-            card2BotonHref="#proyectos"
+            card2Titulo={<>Construcción<br/>de Naves<br/>a Medida</>}
+            card2BotonTexto="Iniciar Proyecto"
+            card2BotonHref="#construir"
             card2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-280.jpg"
             card2ImagenAlt="Renta de naves industriales"
-            card3Titulo={<>Servicio<br/>y Refacciones<br/>Ambaflex</>}
-            card3BotonTexto="Solicitar Servicio"
-            card3BotonHref="#servicio"
+            card3Titulo={<>Nuestros<br/>Parques<br/>Industriales</>}
+            card3BotonTexto="Conocer Parques"
+            card3BotonHref="#parques"
             card3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-281.jpg"
             card3ImagenAlt="Construcción de naves industriales"
           />
