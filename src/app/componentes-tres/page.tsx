@@ -37,26 +37,26 @@ export default function ComponentesTresPage() {
         {/* Cuadricula Section con props */}
           <div>
               <CuadriculaSectionConProps
-              imagen1="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-8.jpg"
-              imagen2="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-2.jpg"
-              imagen3="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-4.jpg"
-              imagen4="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-5.jpg"
-              imagen5="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-12.webp"
-              imagen6="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-11.webp"
-              imagen7="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-1.jpg"
-              imagen8="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-6.jpg"
-              imagen9="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-7.jpg"
-              imagen10="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-9.jpg"
-              imagen11="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-32.jpg"
-              imagen12="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-10.jpg"
-              imagen13="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-13.jpg"
-              imagen14="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-14.jpg"
-              imagen15="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-3.jpg"
-              imagen16="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-17.jpg"
-              imagen17="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-28.jpg"
-              imagen18="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-15.jpg"
-              imagen19="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-16.jpg"
-              imagen20="/conveyors-industriales/img/ambaflex/conveyors-ambaflex-mexico-18.jpg"
+              imagen1="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
+              imagen2="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg"
+              imagen3="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg"
+              imagen4="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg"
+              imagen5="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
+              imagen6="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
+              imagen7="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-257.jpg"
+              imagen8="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-258.jpg"
+              imagen9="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-259.jpg"
+              imagen10="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-260.jpg"
+              imagen11="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg"
+              imagen12="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-262.jpg"
+              imagen13="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-263.jpg"
+              imagen14="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-264.jpg"
+              imagen15="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-265.jpg"
+              imagen16="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-266.jpg"
+              imagen17="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-267.jpg"
+              imagen18="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
+              imagen19="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
+              imagen20="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg"
               badge="Expertos en soluciones y sistemas de"
               titulo={<>Conveyors Ambaflex <br/> en todo México</>}
               parrafo="Soluciones llave en mano con sistemas de conveyors espirales Ambaflex. Ahorra espacio hasta 66%, operación con un solo motor y mantenimiento preventivo con equipo técnico especializado en conveyors industriales para la industria Mexicana."
@@ -84,9 +84,9 @@ export default function ComponentesTresPage() {
         <div className="container mx-auto mt-16 md:mt-32 w-11/12 ">
             <div className="relative h-60 md:h-[35vh] lg:h-[40vh] 1200:h-[60vh] xl:h-[70vh] ">
                 <ImagenConEtiquetaConProps
-                    src="/conveyors-industriales/img/conveyors-de-gravedad-mexico.jpg"
-                    alt="Conveyors de gravedad"
-                    etiqueta="Soluciones Ambaflex"
+                    src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
+                    alt="Parques industriales Mexicali"
+                    etiqueta="Soluciones Industriales"
                 />
                 {/* Grid overlay decorativo */}
                 <GridOverlay
@@ -126,16 +126,16 @@ export default function ComponentesTresPage() {
               feature2IconColor="text-blue-600"
               button1Text="Cotiza Ahora"
               button2Text="Conoce más"
-              imageSrc="https://ui.shadcn.com/placeholder.svg"
-              imageAlt="Hero image"
+              imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
+              imageAlt="Parque industrial"
             />
         </div>
 
         {/* BigNumber con props */}
         <div>
               <BigNumberConProps
-              imageSrc="/conveyors-industriales/img/conveyors-industriales-de-banda-en-mexico-5.jpg"
-              imageAlt="Conveyors de banda industrial"
+              imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-273.jpg"
+              imageAlt="Nave industrial Mexicali"
               number="+60%"
               title={<>De Espacio <br/> Ahorrado</>}
               subtitle={<>Gracias a los Conveyors Verticales <br className={'hidden md:block'}/> Ambaflex implementados
@@ -161,16 +161,16 @@ export default function ComponentesTresPage() {
             bloque1Descripcion="Diseño e Instalación de Sistemas Conveyor Lorem"
             bloque1LinkTexto="Ver Más"
             bloque1LinkHref="#"
-            bloque2ImagenSrc="/brandpetram/imagen-de-template-2.jpg"
-            bloque2ImagenAlt="Instalación industrial"
-            bloque3ImagenSrc="/brandpetram/imagen-de-template-3.jpg"
-            bloque3ImagenAlt="Aire acondicionado industrial"
+            bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg"
+            bloque2ImagenAlt="Parque industrial"
+            bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg"
+            bloque3ImagenAlt="Nave industrial"
             bloque4Titulo="¿Tienes preguntas?"
             bloque4Descripcion="Contáctanos ahora para resolver tus preguntas"
             bloque4LinkTexto="Contactar Aquí"
             bloque4LinkHref="#"
-            imagenDerechaSrc="/brandpetram/imagen-de-template-1.jpg"
-            imagenDerechaAlt="Imagen destacada"
+            imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
+            imagenDerechaAlt="Parque industrial destacado"
           />
 
           {/* Cuadritos decorativos */}
@@ -194,8 +194,8 @@ export default function ComponentesTresPage() {
               tagline="Soluciones Ambaflex"
               titulo="Sistemas completos de transporte vertical"
               descripcion="Conveyors espirales Ambaflex que maximizan el espacio disponible, reducen costos operativos y mejoran la eficiencia en tu planta de producción."
-              imagenSrc="https://ui.shadcn.com/placeholder.svg"
-              imagenAlt="Conveyor Ambaflex en operación"
+              imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-277.jpg"
+              imagenAlt="Nave industrial en Mexicali"
               feature1Icon={<Wrench className="h-5 w-5" />}
               feature1IconColor="text-orange-600"
               feature1Titulo="Instalación Profesional"
@@ -221,8 +221,8 @@ export default function ComponentesTresPage() {
                   tagline="Innovación Industrial"
                   titulo="Tecnología Ambaflex para la industria moderna"
                   descripcion="Soluciones de transporte que se adaptan a tus necesidades específicas con diseño modular y configuración flexible."
-                  imagenSrc="https://ui.shadcn.com/placeholder.svg"
-                  imagenAlt="Tecnología Ambaflex"
+                  imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
+                  imagenAlt="Instalaciones industriales"
                   feature1Icon={<Settings className="h-5 w-5" />}
                   feature1IconColor="text-orange-600"
                   feature1Titulo="Diseño Personalizado"
@@ -237,8 +237,8 @@ export default function ComponentesTresPage() {
         {/* Split image con props */}
           <div>
               <SplitWithImageBPConProps
-              imagenSrc="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-              imagenAlt="Sistemas Ambaflex en operación"
+              imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
+              imagenAlt="Parque industrial Grupo Nelson"
               tagline="Soluciones Integrales"
               titulo="Más que conveyors, soluciones completas"
               parrafo1="En SDI Industrial no solo suministramos conveyors Ambaflex, desarrollamos soluciones completas de transporte vertical que optimizan tu operación y maximizan el espacio disponible en tu planta de producción."
@@ -329,13 +329,13 @@ export default function ComponentesTresPage() {
             card2Titulo={<>Ingeniería<br/>de Aplicación<br/>Ambaflex</>}
             card2BotonTexto="Consultar Proyecto"
             card2BotonHref="#proyectos"
-            card2ImagenSrc="/conveyors-industriales/img/conveyors-industriales-de-banda-en-mexico-12.jpg"
-            card2ImagenAlt="Ingeniería y Proyectos Ambaflex"
+            card2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-280.jpg"
+            card2ImagenAlt="Renta de naves industriales"
             card3Titulo={<>Servicio<br/>y Refacciones<br/>Ambaflex</>}
             card3BotonTexto="Solicitar Servicio"
             card3BotonHref="#servicio"
-            card3ImagenSrc="/conveyors-industriales/img/conveyors-industriales-de-banda-en-mexico-14.jpg"
-            card3ImagenAlt="Servicio y Refacciones Ambaflex"
+            card3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-281.jpg"
+            card3ImagenAlt="Construcción de naves industriales"
           />
         </div>
       </main>
