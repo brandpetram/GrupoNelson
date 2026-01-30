@@ -12,6 +12,8 @@ import { DiagonalDivider } from '@/components/diagonal-divider'
 import { BadgeAniversario } from '@/components/badge-aniversario'
 import Header from '@/components/Header'
 import { motion } from 'motion/react'
+import {Mosaico2ConProps} from "@/components/brandpetram/con-props/mosaico-2-con-props";
+import {MosaicoInvertidoConProps} from "@/components/brandpetram/con-props/mosaico-invertido-con-props";
 
 export default function Home() {
   return (
@@ -77,6 +79,46 @@ export default function Home() {
 
       {/* Sección sobre nosotros con números animados */}
       <RadiantHeader />
+
+      {/* CON PROPS (propeado) */}
+      <div className={'w-full p-10 mx-auto mt-32 relative'}>
+              <Mosaico2ConProps
+                  bloque1Titulo="Soluciones Industriales"
+                  bloque1Descripcion="Infraestructura de calidad con soluciones a medida"
+                  bloque1LinkTexto="Explorar"
+                  bloque1LinkHref="#"
+                  bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
+                  bloque2ImagenAlt="Lorem ipsum"
+                  bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg"
+                  bloque3ImagenAlt="Lorem ipsum"
+                  bloque4Titulo="¿Necesitas información?"
+                  bloque4Descripcion="Contáctanos para conocer nuestras soluciones"
+                  bloque4LinkTexto="Contactar"
+                  bloque4LinkHref="#"
+                  imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg"
+                  imagenDerechaAlt="Lorem ipsum"
+              />
+
+              {/* VERSIÓN INVERTIDA (propeado) */}
+              <div className="-mt-1">
+                  <MosaicoInvertidoConProps
+                      bloque1Titulo="Soluciones Industriales"
+                      bloque1Descripcion="Infraestructura de calidad con soluciones a medida"
+                      bloque1LinkTexto="Explorar"
+                      bloque1LinkHref="#"
+                      bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg"
+                      bloque2ImagenAlt="Lorem ipsum"
+                      bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
+                      bloque3ImagenAlt="Lorem ipsum"
+                      bloque4Titulo="¿Necesitas información?"
+                      bloque4Descripcion="Contáctanos para conocer nuestras soluciones"
+                      bloque4LinkTexto="Contactar"
+                      bloque4LinkHref="#"
+                      imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
+                      imagenIzquierdaAlt="Lorem ipsum"
+                  />
+              </div>
+          </div>
 
       {/* Sección de características en hexágonos */}
         <div className={'mt-20'}><HexagonFeatures/></div>
