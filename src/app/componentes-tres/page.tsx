@@ -30,7 +30,7 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
 
 export default function ComponentesTresPage() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+      <div className="flex flex-col min-h-screen overflow-hidden mt-32">
       <Header />
 
       <main>
