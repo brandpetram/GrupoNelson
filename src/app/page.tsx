@@ -14,6 +14,7 @@ import Header from '@/components/Header'
 import { motion } from 'motion/react'
 import {Mosaico2ConProps} from "@/components/brandpetram/con-props/mosaico-2-con-props";
 import {MosaicoInvertidoConProps} from "@/components/brandpetram/con-props/mosaico-invertido-con-props";
+import TickerOverflow from '@/components/motion-plus/ticker-overflow';
 
 export default function Home() {
   return (
@@ -76,6 +77,13 @@ export default function Home() {
           <DiagonalDivider fillColor="white" height={150} slope={100} invertDirection={true} />
         </div>
       </div>
+
+      {/* Ticker con imágenes */}
+      <section className="w-full bg-white py-20">
+        <div className="flex justify-center">
+          <TickerOverflow />
+        </div>
+      </section>
 
       {/* Sección sobre nosotros con números animados */}
       <RadiantHeader />
