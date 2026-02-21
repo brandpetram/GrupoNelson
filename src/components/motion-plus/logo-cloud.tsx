@@ -2,10 +2,12 @@
 
 import { motion } from "motion/react"
 
-function LogoCliente({ src }: { src: string }) {
+function LogoCliente({ src, isBig = false }: { src: string; isBig?: boolean }) {
+    const sizeClass = isBig ? "h-32 w-32" : "h-20 object-contain w-full max-w-[250px]"
+
     return (
         <motion.img
-            className="h-20 object-contain w-full max-w-[250px]"
+            className={`${sizeClass} object-contain`}
             src={`/logos-clientes/${src}`}
             alt={"Logo cliente"}
             initial={{ opacity: 0 }}
@@ -18,30 +20,30 @@ function LogoCliente({ src }: { src: string }) {
 export default function LogoCloud() {
     // Todos los logos disponibles
     const todosLosLogos = [
-        "logo-accuride.svg",
-        "logo-baxter.svg",
-        "logo-belvedere-maletti.svg",
-        "logo-cornell-dubilier.svg",
-        "logo-creation-technologies.svg",
-        "logo-dentsply.svg",
-        "logo-dhl.svg",
-        "logo-direct-pack.svg",
-        "logo-gameloft.svg",
-        "logo-general-dynamics.svg",
-        "logo-goodrich.svg",
-        "logo-gulfstream.svg",
-        "logo-hirsh-industries.svg",
         "logo-honeywell.svg",
-        "logo-intuitive.svg",
-        "logo-ivemsa.svg",
-        "logo-jonathan.svg",
-        "logo-liebert.svg",
-        "logo-mohawk.svg",
-        "logo-psf.svg",
-        "logo-rheem.svg",
-        "logo-sds-sybron-dental-specialities.svg",
-        "logo-utc-aerospace-systems.svg",
+        "logo-dhl.svg",
+        "logo-gulfstream.svg",
+        "logo-general-dynamics.svg",
+        "logo-baxter.svg",
         "logo-air-liquide.svg",
+        "logo-utc-aerospace-systems.svg",
+        "logo-goodrich.svg",
+        "logo-dentsply.svg",
+        "logo-rheem.svg",
+        "logo-intuitive.svg",
+        "logo-liebert.svg",
+        "logo-sds-sybron-dental-specialities.svg",
+        "logo-gameloft.svg",
+        "logo-cornell-dubilier.svg",
+        "logo-accuride.svg",
+        "logo-mohawk.svg",
+        "logo-creation-technologies.svg",
+        "logo-direct-pack.svg",
+        "logo-hirsh-industries.svg",
+        "logo-ivemsa.svg",
+        "logo-belvedere-maletti.svg",
+        "logo-jonathan.svg",
+        "logo-psf.svg",
     ]
 
     return (
@@ -53,11 +55,14 @@ export default function LogoCloud() {
 
                 {/* Grid responsive: 1 col en mobile, 2 cols en tablet, hidden en desktop */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0 place-items-center divide-y md:divide-y md:divide-x divide-gray-100">
-                    {todosLosLogos.map((logo, index) => (
-                        <div key={index} className="w-full py-8 px-4 flex justify-center">
-                            <LogoCliente src={logo} />
-                        </div>
-                    ))}
+                    {todosLosLogos.map((logo, index) => {
+                        const isBig = ["logo-rheem.svg", "logo-psf.svg", "logo-sds-sybron-dental-specialities.svg"].includes(logo)
+                        return (
+                            <div key={index} className="w-full py-8 px-4 flex justify-center">
+                                <LogoCliente src={logo} isBig={isBig} />
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>
