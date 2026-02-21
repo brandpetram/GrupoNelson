@@ -17,7 +17,6 @@ export default function TickerOverflow() {
     // Todos los logos disponibles
     const todosLosLogos = [
         { src: "logo-accuride.svg", key: "1" },
-        { src: "logo-air-liquide.svg", key: "2" },
         { src: "logo-baxter.svg", key: "3" },
         { src: "logo-belvedere-maletti.svg", key: "4" },
         { src: "logo-cornell-dubilier.svg", key: "5" },
@@ -40,6 +39,7 @@ export default function TickerOverflow() {
         { src: "logo-rheem.svg", key: "22" },
         { src: "logo-sds-sybron-dental-specialities.svg", key: "23" },
         { src: "logo-utc-aerospace-systems.svg", key: "24" },
+        { src: "logo-air-liquide.svg", key: "2" },
     ]
 
     // Primera mitad: 12 logos
