@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function TarjetaHeroOriginal() {
   return (
-    <div className="max-w-md mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-2xl p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
+    <div className="max-w-md mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
       {/* Sección de badges */}
       <div className="hidden 360:flex items-center gap-3 mb-3">
         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">

@@ -35,10 +35,10 @@ export default function Home() {
           videoContrast={1.3}
           videoFilterDesktop="brightness(1.10) saturate(1.15) contrast(1.05)"
           videoFilterMobile="brightness(1.05) saturate(1.10) contrast(1.02)"
-          videoOverlayDesktop="rgba(100, 150, 250, 0.75)"
-          videoOverlayMobile="rgba(30, 80, 255, 0.90)"
+          videoOverlayDesktop="rgba(100, 150, 250, 0.25)"
+          videoOverlayMobile="rgba(30, 80, 255, 0.20)"
           videoOverlayBlendMode="multiply"
-          darkOverlay={0.3}
+          darkOverlay={0.5}
           darkOverlayMobile={0.3}
           enableAnimations={true}
           gridConfig={{
@@ -60,7 +60,7 @@ export default function Home() {
 
         {/* Badge de aniversario - Posicionado en el hero */}
         <motion.div
-          className="absolute top-32 right-8 1024:top-100 1536:top-150 -rotate-10 md:right-16 lg:right-24"
+          className="hidden md:block md:absolute 360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem] 1200:text-[1.75rem] 1280:text-[1.85rem] 1366:text-[1.95rem] 1440:text-[2.1rem] 1536:text-[2.3rem] 1728:text-[2.55rem] 1920:text-[2.8rem] bottom-10 right-5 -rotate-10"
           style={{ zIndex: 10 }}
           initial={{ opacity: 0, scale: 0, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: -10 }}
@@ -70,7 +70,7 @@ export default function Home() {
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
         >
-          <BadgeAniversario size={200} sizeMd={280} sizeLg={450} />
+          <BadgeAniversario size={100} sizeMd={280} sizeLg={350} />
         </motion.div>
 
         {/* Divider diagonal - Posicionado al final del hero, fuera para evitar animación */}

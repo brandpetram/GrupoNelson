@@ -16,6 +16,7 @@ function LogoCliente({ src }: { src: string }) {
 export default function TickerOverflow() {
     // Todos los logos disponibles
     const todosLosLogos = [
+        { src: "logo-gulfstream.svg", key: "13" },
         { src: "logo-accuride.svg", key: "1" },
         { src: "logo-baxter.svg", key: "3" },
         { src: "logo-belvedere-maletti.svg", key: "4" },
@@ -27,7 +28,6 @@ export default function TickerOverflow() {
         { src: "logo-gameloft.svg", key: "10" },
         { src: "logo-general-dynamics.svg", key: "11" },
         { src: "logo-goodrich.svg", key: "12" },
-        { src: "logo-gulfstream.svg", key: "13" },
         { src: "logo-hirsh-industries.svg", key: "14" },
         { src: "logo-honeywell.svg", key: "15" },
         { src: "logo-intuitive.svg", key: "16" },
@@ -40,19 +40,25 @@ export default function TickerOverflow() {
         { src: "logo-sds-sybron-dental-specialities.svg", key: "23" },
         { src: "logo-utc-aerospace-systems.svg", key: "24" },
         { src: "logo-air-liquide.svg", key: "2" },
+        { src: "logo-vertiv.svg", key: "25" },
+        { src: "logo-aqua-lung.svg", key: "26" },
+        { src: "logo-celestica.svg", key: "27" },
+        { src: "logo-garret.svg", key: "28" },
+        { src: "logo-fastenal.svg", key: "29" },
     ]
 
-    // Primera mitad: 12 logos
-    const logosFirstHalf = todosLosLogos.slice(0, 12)
+    // Primera mitad: ~15 logos
+    const logosFirstHalf = todosLosLogos.slice(0, 15)
 
-    // Segunda mitad: 12 logos
-    const logosSecondHalf = todosLosLogos.slice(12, 24)
+    // Segunda mitad: ~15 logos
+    const logosSecondHalf = todosLosLogos.slice(15)
 
     return (
         <article>
-            <p className="small">
-                Nuestros clientes confían en nosotros para sus proyectos industriales.
-            </p>
+            <h2 className="360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem] 1200:text-[1.75rem] 1280:text-[1.85rem] 1366:text-[1.95rem] 1440:text-[2.1rem] 1536:text-[2.3rem] 1728:text-[2.55rem] 1920:text-[3rem] font-semibold tracking-tighter leading-tight text-center mb-12 px-4 text-balance">
+                Clientes y Proveedores que confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el
+                Desarrollo de Naves y Parques Industriales en Mexicali.
+            </h2>
 
             {/* Primer ticker - RTL (izquierda) */}
             <div className="ticker-container">

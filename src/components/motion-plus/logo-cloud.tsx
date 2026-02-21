@@ -44,14 +44,20 @@ export default function LogoCloud() {
         "logo-belvedere-maletti.svg",
         "logo-jonathan.svg",
         "logo-psf.svg",
+        "logo-vertiv.svg",
+        "logo-aqua-lung.svg",
+        "logo-celestica.svg",
+        "logo-garret.svg",
+        "logo-fastenal.svg",
     ]
 
     return (
         <section className="w-full py-20 px-4 xl:hidden">
             <div className="mx-auto">
-                <p className="text-center mb-12 text-lg font-semibold">
-                    Nuestros clientes confían en nosotros para sus proyectos industriales.
-                </p>
+                <h2 className="360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem] 1200:text-[1.75rem] 1280:text-[1.85rem] 1366:text-[1.95rem] 1440:text-[2.1rem] 1536:text-[2.3rem] 1728:text-[2.55rem] 1920:text-[3rem] font-semibold tracking-tighter leading-tight text-center mb-12 px-4 text-balance">
+                    Clientes y Proveedores que confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el
+                    Desarrollo de Naves y Parques Industriales en Mexicali.
+                </h2>
 
                 {/* Grid responsive: 1 col en mobile, 2 cols en tablet, hidden en desktop */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0 place-items-center divide-y md:divide-y md:divide-x divide-gray-100">
