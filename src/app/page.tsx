@@ -17,6 +17,7 @@ import {MosaicoInvertidoConProps} from "@/components/brandpetram/con-props/mosai
 import TickerOverflow from '@/components/motion-plus/ticker-overflow';
 import LogoCloud from '@/components/motion-plus/logo-cloud';
 import { AlphaBP } from '@/components/brandpetram/alpha-bp';
+import { ScrollStorytelling } from '@/components/brandpetram/scroll-storytelling';
 
 export default function Home() {
   return (
@@ -83,12 +84,7 @@ export default function Home() {
       {/* Logo Cloud (mobile/tablet) */}
       <LogoCloud />
 
-      {/* Ticker con logos (desktop) */}
-      <section className="w-full bg-white py-20 hidden xl:block">
-        <div className="flex justify-center">
-          <TickerOverflow />
-        </div>
-      </section>
+
 
       {/* Componente Alpha - Fase 3: Brandpetramizado (CON 13 BREAKPOINTS) */}
       <div className="container mx-auto 1200:px-4 py-16">
@@ -140,6 +136,11 @@ export default function Home() {
 
       {/* Sección de características en hexágonos */}
         <div className={'mt-20'}><HexagonFeatures/></div>
+
+      {/* ScrollStorytelling - Storytelling interactivo con scroll */}
+      <div className={'1200:mt-80 relative'}>
+        <ScrollStorytelling mediaAspectRatio="aspect-[16/9]" />
+      </div>
 
       {/* TODO: Migrar KeynoteHero */}
       {/* <section id="screencasts" className="min-h-screen py-20">

@@ -13,6 +13,7 @@
 "use client"
 
 import Image from "next/image"
+import TickerOverflow from "@/components/motion-plus/ticker-overflow"
 
 export function AlphaBP() {
   return (
@@ -97,22 +98,10 @@ export function AlphaBP() {
             <rect fill="url(#dot-pattern-right-bp-desktop)" width="100%" height="100%" />
         </svg>
 
-      {/* Sección de textos arriba */}
-      <div className="flex flex-col 1200:flex-row  gap-8 360:gap-8 393:gap- 430:gap-10 768:gap-12 834:gap-12 1024:gap-14 1200:gap-12 1280:gap-12 1366:gap-14 1440:gap-16 1536:gap-16 1728:gap-18 1920:gap-20 w-full 360:w-full 393:w-11/12 430:w-11/12 768:w-11/12 834:w-10/12 1024:w-10/12 1200:w-10/12 1280:w-10/12 1366:w-10/12 1440:w-10/12 1536:w-10/12 1728:w-10/12 1920:w-10/12 translate-x-3 360:translate-x-3 393:translate-x-8 430:translate-x-6 768:translate-x-10 834:translate-x-14 1024:translate-x-22 1200:translate-x-40 1280:translate-x-48 1366:translate-x-52 1440:translate-x-56 1536:translate-x-60 1728:translate-x-60 1920:translate-x-60 ">
-        {/* H2 - Lado izquierdo */}
-        <div className="flex-1 ">
-          <h2 className="768:mt-5 834:mt-5 1024:mt-6 1200:mt-5 1280:mt-5 1366:mt-5 1440:mt-6 1536:mt-6 1728:mt-6 1920:mt-6 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[4rem] 1280:text-[4.3rem] 1366:text-[4.7rem] 1440:text-[5rem] 1536:text-[5.3rem] 1728:text-[6rem] 1920:text-[7rem] font-extrabold text-foreground leading-none tracking-tighter">
-            Tu producción <br/>
-              en movimiento.
-          </h2>
-        </div>
 
-        {/* Párrafo - Lado derecho */}
-        <div className="flex-1 place-content-center">
-          <p className="text-sm 360:text-sm 393:text-base 430:text-base 768:text-2xl 834:text-2xl 1024:text-3xl 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-[1.7rem] md:max-w-xl tracking-wider leading-loose -mt-3 md:mt-0  w-11/12 1200:w-[19rem] 1280:w-[22rem] 1366:w-[22rem] 1440:w-[22rem] 1536:w-[24rem] 1728:w-[30rem] 1920:w-[32rem] text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-        </div>
+      {/* Sección de logos - Solo en desktop */}
+      <div className="hidden xl:block w-full">
+        <TickerOverflow />
       </div>
 
       {/* Layout existente de imagen + div naranja */}
@@ -120,7 +109,7 @@ export function AlphaBP() {
       {/* Imagen */}
       <div className="w-full 360:w-full 393:w-11/12 430:w-10/12 768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-8/12 1280:w-8/12 1366:w-8/12 1440:w-8/12 1536:w-8/12 1728:w-8/12 1920:w-8/12 aspect-[4/3] 360:aspect-[4/3] 393:aspect-[4/3] 430:aspect-[4.5/3] 768:aspect-[2.8/3] 834:aspect-[3/3] 1024:aspect-[3/3] 1200:aspect-[4.5/3] 1280:aspect-[4.5/3] 1366:aspect-[4.5/3] 1440:aspect-[4.5/3] 1536:aspect-[4.5/3] 1728:aspect-[4.5/3] 1920:aspect-[4.5/3] relative rounded-xs overflow-hidden">
         <Image
-          src="https://ui.shadcn.com/placeholder.svg"
+          src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-424.jpg"
           alt="Conveyors para Industria Alimenticia"
           fill
           className="object-cover"
@@ -128,13 +117,13 @@ export function AlphaBP() {
       </div>
 
       {/* Div con contenido - posicionado con translate negativo */}
-      <div className="relative -translate-x-20 360:-translate-x-20 393:-translate-x-24 430:-translate-x-28 768:-translate-x-20 834:-translate-x-26 1024:-translate-x-30 1200:-translate-x-44 1280:-translate-x-48 1366:-translate-x-52 1440:-translate-x-54 1536:-translate-x-57 1728:-translate-x-60 1920:-translate-x-60 w-full 360:w-full 393:w-11/12 430:w-10/12 768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-[26rem] 1280:w-[28rem] 1366:w-[30rem] 1440:w-[32rem] 1536:w-[34rem] 1728:w-[33rem] 1920:w-[40rem] bg-gradient-to-br from-orange-600/95 to-red-600/95 backdrop-blur-sm rounded-xs p-8 360:p-8 393:p-10 430:p-12 768:p-12 834:p-14 1024:p-16 1200:p-14 1280:p-15 1366:p-16 1440:p-17 1536:p-17 1728:p-18 1920:p-20 border border-white/20 shadow-2xl z-10">
+      <div className="relative -translate-x-20 360:-translate-x-20 393:-translate-x-24 430:-translate-x-28 768:-translate-x-20 834:-translate-x-26 1024:-translate-x-30 1200:-translate-x-44 1280:-translate-x-48 1366:-translate-x-52 1440:-translate-x-54 1536:-translate-x-57 1728:-translate-x-60 1920:-translate-x-60 w-full 360:w-full 393:w-11/12 430:w-10/12 768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-[26rem] 1280:w-[28rem] 1366:w-[30rem] 1440:w-[32rem] 1536:w-[34rem] 1728:w-[33rem] 1920:w-[40rem] bg-gradient-to-br from-blue-600/95 to-sky-600/95 backdrop-blur-sm rounded-xs p-8 360:p-8 393:p-10 430:p-12 768:p-12 834:p-14 1024:p-16 1200:p-14 1280:p-15 1366:p-16 1440:p-17 1536:p-17 1728:p-18 1920:p-20 border border-white/20 shadow-2xl z-10">
         {/* Título principal - h1 vacío eliminado por no tener contenido */}
 
         {/* Descripción */}
         <p className="text-base 360:text-base 393:text-lg 430:text-lg 768:text-2xl 834:text-2xl 1024:text-3xl 1200:text-[1.65rem] 1280:text-[1.75rem] 1366:text-[1.9rem] 1440:text-[2.05rem] 1536:text-[2.25rem] 1728:text-[2.5rem] 1920:text-[3rem] text-white/90 text-pretty leading-relaxed font-medium">
           {
-            "Sistemas de transporte diseñados específicamente para cumplir con los más altos estándares de higiene y seguridad."
+            "Diseñamos y construimos parques industriales y naves a medida en Mexicali desde hace más de 60 años."
           }
         </p>
       </div>

@@ -47,18 +47,25 @@ export default function TickerOverflow() {
         { src: "logo-fastenal.svg", key: "29" },
     ]
 
-    // Primera mitad: ~15 logos
-    const logosFirstHalf = todosLosLogos.slice(0, 15)
+    // Fila superior (RTL): Gulfstream aparece dos veces, separadas por ~7 logos entre sí
+    const logosFirstHalf = [
+        todosLosLogos[0],                                    // Gulfstream (1ª vez)
+        ...todosLosLogos.slice(1, 8),                        // logos 1–7
+        { src: "logo-gulfstream.svg", key: "13-b" },         // Gulfstream (2ª vez)
+        ...todosLosLogos.slice(8, 15),                       // logos 8–14
+    ]
 
-    // Segunda mitad: ~15 logos
+    // Fila inferior (LTR): logos 15–28
     const logosSecondHalf = todosLosLogos.slice(15)
 
     return (
         <article>
-            <h2 className="360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem] 1200:text-[1.75rem] 1280:text-[1.85rem] 1366:text-[1.95rem] 1440:text-[2.1rem] 1536:text-[2.3rem] 1728:text-[2.55rem] 1920:text-[3rem] font-semibold tracking-tighter leading-tight text-center mb-12 px-4 text-balance">
-                Clientes y Proveedores que confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el
-                Desarrollo de Naves y Parques Industriales en Mexicali.
-            </h2>
+
+            <div className={'ml-80 mb-28'}><h2
+                className="768:mt-5 834:mt-5 1024:mt-6 1200:mt-5 1280:mt-5 1366:mt-5 1440:mt-6 1536:mt-6 1728:mt-6 1920:mt-6 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[4rem] 1280:text-[4.3rem] 1366:text-[4.7rem] 1440:text-[5rem] 1536:text-[5.3rem] 1728:text-[6rem] 1920:text-[5rem] font-extrabold text-foreground leading-none tracking-tighter text-left text-balance w-7/12">
+                Clientes de Clase Mundial confían en <span
+                className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson:</span>
+            </h2></div>
 
             {/* Primer ticker - RTL (izquierda) */}
             <div className="ticker-container">

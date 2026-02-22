@@ -5,11 +5,11 @@ import { Heading, Lead, Subheading } from './text'
 export function Header() {
   return (
     <Container className="mx-10 mt-16 lg:mt-16">
-      <h1 className={' w-full text-balance text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >Desarrollamos parques industriales de clase mundial en Mexicali desde 1965.
-
+      <h1 className={' w-full text-balance text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >
+        Grupo Nelson es la empresa que fundó la industria maquiladora de México.
       </h1>
       <Lead className="mt-6 max-w-3xl">
-        Somos pioneros en el desarrollo de espacios industriales en la región fronteriza, ofreciendo soluciones Built to Suit para empresas globales.
+        Desde 1965, desarrollamos los parques industriales donde las empresas globales más exigentes del mundo eligen operar.
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
