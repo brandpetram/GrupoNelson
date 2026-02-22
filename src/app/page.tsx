@@ -16,6 +16,7 @@ import {Mosaico2ConProps} from "@/components/brandpetram/con-props/mosaico-2-con
 import {MosaicoInvertidoConProps} from "@/components/brandpetram/con-props/mosaico-invertido-con-props";
 import TickerOverflow from '@/components/motion-plus/ticker-overflow';
 import LogoCloud from '@/components/motion-plus/logo-cloud';
+import { AlphaBP } from '@/components/brandpetram/alpha-bp';
 
 export default function Home() {
   return (
@@ -70,7 +71,7 @@ export default function Home() {
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
         >
-          <BadgeAniversario size={100} sizeMd={280} sizeLg={350} />
+          <BadgeAniversario className="w-[180px] h-[180px] 768:w-[280px] 768:h-[280px] 1024:w-[350px] 1024:h-[350px]" />
         </motion.div>
 
         {/* Divider diagonal - Posicionado al final del hero, fuera para evitar animación */}
@@ -88,6 +89,11 @@ export default function Home() {
           <TickerOverflow />
         </div>
       </section>
+
+      {/* Componente Alpha - Fase 3: Brandpetramizado (CON 13 BREAKPOINTS) */}
+      <div className="container mx-auto 1200:px-4 py-16">
+        <AlphaBP />
+      </div>
 
       {/* Sección sobre nosotros con números animados */}
       <RadiantHeader />

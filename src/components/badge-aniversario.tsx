@@ -1,122 +1,102 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-
 interface BadgeAniversarioProps {
-  /**
-   * Número de años (el texto grande)
-   */
   numero?: string
-  /**
-   * Texto inferior (ej: "años")
-   */
   textoInferior?: string
-  /**
-   * Tamaño del badge en píxeles para móvil
-   */
-  size?: number
-  /**
-   * Tamaño del badge en píxeles para tablet (md breakpoint)
-   */
-  sizeMd?: number
-  /**
-   * Tamaño del badge en píxeles para desktop (lg breakpoint)
-   */
-  sizeLg?: number
+  /** Clases de Tailwind para controlar el tamaño del badge, ej: "w-48 h-48 md:w-64 md:h-64" */
+  className?: string
+  /** Letter spacing del texto curvo "CELEBRANDO", en unidades SVG. Negativo = más apretado. Default: -0.4 (tracking-tighter) */
+  curvedTextTracking?: number
+  /** Desplazamiento vertical del contenido "60 años" en unidades SVG. Negativo = sube, positivo = baja. Default: -8 */
+  contentOffsetY?: number
+  /** Radio del arco del texto "CELEBRANDO". 50 = borde del círculo, mayor = más alejado. Default: 58 */
+  curvedTextRadius?: number
 }
 
 export function BadgeAniversario({
   numero = '60',
   textoInferior = 'años',
-  size = 200,
-  sizeMd,
-  sizeLg,
+  className = 'w-[200px] h-[200px]',
+  curvedTextTracking = 0.9,
+  contentOffsetY = -3,
+  curvedTextRadius = 58,
 }: BadgeAniversarioProps) {
-  // Detectar el breakpoint actual
-  const [currentSize, setCurrentSize] = useState(size)
-
-  useEffect(() => {
-    const updateSize = () => {
-      const width = window.innerWidth
-      if (width >= 1024 && sizeLg) {
-        setCurrentSize(sizeLg)
-      } else if (width >= 768 && sizeMd) {
-        setCurrentSize(sizeMd)
-      } else {
-        setCurrentSize(size)
-      }
-    }
-
-    updateSize()
-    window.addEventListener('resize', updateSize)
-    return () => window.removeEventListener('resize', updateSize)
-  }, [size, sizeMd, sizeLg])
-
   return (
-    <div
-      className="relative flex items-center justify-center"
-      style={{
-        width: `${currentSize}px`,
-        height: `${currentSize}px`,
-      }}
-    >
-      {/* Círculo exterior (borde) - Gradiente azul */}
-      <div
-        className="absolute inset-0 rounded-full"
-        style={{
-          background: 'linear-gradient(135deg, #60a5fa 0%, #2563eb 50%, #1e40af 100%)',
-          boxShadow: '0 20px 60px rgba(37, 99, 235, 0.4)',
-        }}
-      />
+    <div className={`relative flex items-center justify-center ${className}`}>
 
-      {/* Círculo medio - Azul más oscuro */}
-      <div
-        className="absolute rounded-full"
-        style={{
-          width: `${currentSize * 0.85}px`,
-          height: `${currentSize * 0.85}px`,
-          background: 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)',
-        }}
-      />
-
-      {/* Círculo interior (contenido) - Gradiente azul oscuro */}
-      <div
-        className="absolute rounded-full flex flex-col items-center justify-center"
-        style={{
-          width: `${currentSize * 0.7}px`,
-          height: `${currentSize * 0.7}px`,
-          background: 'linear-gradient(135deg, #1e3a8a 0%, #172554 50%, #0f172a 100%)',
-          boxShadow: 'inset 0 8px 20px rgba(0, 0, 0, 0.7)',
-        }}
+      {/* SVG único que maneja todo — viewBox 0-100 para unidades relativas */}
+      <svg
+        viewBox="0 0 100 100"
+        className="absolute inset-0 w-full h-full overflow-visible"
       >
-        {/* Número grande */}
-        <div
-          className="font-black leading-none"
-          style={{
-            fontSize: `${currentSize * 0.35}px`,
-            color: '#ffffff',
-            fontFamily: 'system-ui, -apple-system, sans-serif',
-            letterSpacing: '-0.05em',
-            textShadow: '0 4px 8px rgba(0, 0, 0, 0.5)',
-          }}
+        {/* Círculo exterior — gradiente azul */}
+        <defs>
+          <radialGradient id="grad-exterior" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#60a5fa" />
+            <stop offset="50%" stopColor="#2563eb" />
+            <stop offset="100%" stopColor="#1e40af" />
+          </radialGradient>
+          <radialGradient id="grad-medio" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#1e40af" />
+            <stop offset="100%" stopColor="#1e3a8a" />
+          </radialGradient>
+          <radialGradient id="grad-interior" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#1e3a8a" />
+            <stop offset="50%" stopColor="#172554" />
+            <stop offset="100%" stopColor="#0f172a" />
+          </radialGradient>
+          <path
+            id="celebrando-arc"
+            d={`M ${50 - curvedTextRadius},50 A ${curvedTextRadius},${curvedTextRadius} 0 0 1 ${50 + curvedTextRadius},50`}
+          />
+        </defs>
+
+        {/* Círculo exterior */}
+        <circle cx="50" cy="50" r="50" fill="url(#grad-exterior)" />
+
+        {/* Círculo medio */}
+        <circle cx="50" cy="50" r="42.5" fill="url(#grad-medio)" />
+
+        {/* Círculo interior */}
+        <circle cx="50" cy="50" r="35" fill="url(#grad-interior)" />
+
+        {/* Número grande + texto inferior — centrados con contentOffsetY */}
+        <text
+          x="50"
+          y={50 + contentOffsetY}
+          textAnchor="middle"
+          dominantBaseline="middle"
+          fill="white"
+          fontSize="32"
+          fontWeight="900"
+          letterSpacing="-1.5"
+          fontFamily="system-ui, -apple-system, sans-serif"
         >
           {numero}
-        </div>
+        </text>
 
         {/* Texto inferior */}
-        <div
-          className="font-light tracking-wide"
-          style={{
-            fontSize: `${currentSize * 0.12}px`,
-            color: '#ffffff',
-            marginTop: `${currentSize * -0.05}px`,
-            textTransform: 'lowercase',
-            textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
-          }}
+        <text
+          x="50"
+          y={50 + contentOffsetY + 18}
+          textAnchor="middle"
+          fill="white"
+          fontSize="11"
+          fontWeight="300"
+          letterSpacing="1"
+          fontFamily="system-ui, -apple-system, sans-serif"
         >
           {textoInferior}
-        </div>
-      </div>
+        </text>
+
+        {/* Texto curvo "CELEBRANDO" fuera del perímetro */}
+        <text fill="white" fontSize="8.5" fontWeight="800" fontFamily="system-ui, -apple-system, sans-serif">
+          <textPath href="#celebrando-arc" startOffset="50%" textAnchor="middle" letterSpacing={curvedTextTracking}>
+            CELEBRANDO
+          </textPath>
+        </text>
+      </svg>
+
     </div>
   )
 }
