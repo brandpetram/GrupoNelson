@@ -160,3 +160,4 @@ export interface IndustrialPark {
   hasSpecs: boolean
   coordinates?: { lat: number; lng: number }
   mapsUrl?: string
+}

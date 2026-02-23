@@ -137,6 +137,8 @@ function VideoPlayer({
       src={videoArray[currentVideoIndex]}
       poster={posterImage}
       preload="none"
+      autoPlay
+      loop={!hasMultipleVideos}
       muted
       playsInline
       onEnded={handleVideoEnd}
@@ -151,7 +153,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">1</span><div>Elección de Sitio en <br/>Méxicalí y Consultoría</div></div>,
     description:
       'Analizamos sus requerimientos operativos — capacidad eléctrica, altura de nave, superficie, especificaciones técnicas — y le presentamos la ubicación exacta que su operación necesita en Mexicali.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/video-1-720p.mp4',
     tag: {
       icon: <Compass className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Consultoría',
@@ -169,7 +171,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">2</span><div>Diseño y Desarrollo <br/>de la Ingeniería</div></div>,
     description:
       'Nuestro equipo de arquitectos e ingenieros traduce sus especificaciones en un proyecto ejecutivo completo: estructural, eléctrico, mecánico y civil. Cada metro cuadrado se diseña alrededor de su proceso productivo.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/video-2-720p.mp4',
     tag: {
       icon: <Ruler className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Diseño Ejecutivo',
