@@ -123,6 +123,7 @@ function Stylesheet() {
            height: 100px;
            object-fit: contain;
            margin: 0 20px;
+           background-color: transparent;
         }
 
         .ticker {

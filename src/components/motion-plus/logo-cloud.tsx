@@ -7,12 +7,13 @@ function LogoCliente({ src, isBig = false }: { src: string; isBig?: boolean }) {
 
     return (
         <motion.img
-            className={`${sizeClass} object-contain`}
+            className={`${sizeClass} object-contain bg-transparent`}
             src={`/logos-clientes/${src}`}
             alt={"Logo cliente"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            style={{ backgroundColor: "transparent" }}
         />
     )
 }
