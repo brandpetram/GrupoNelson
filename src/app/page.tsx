@@ -97,7 +97,7 @@ export default function Home() {
 
 
       {/* Componente Alpha - Fase 3: Brandpetramizado (CON 13 BREAKPOINTS) */}
-      <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
+      <div className="container mx-auto 1200:px-4 py-16 overflow-hidden bg-gray-900">
         <AlphaBP />
       </div>
 
