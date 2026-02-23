@@ -8,7 +8,7 @@ import { Compass, Ruler, Hammer, CheckCircle, Shield, Wrench, TrendingUp, Play }
 
 interface ContentItem {
   caption: string
-  title: string
+  title: React.ReactNode
   description: string
   image?: string
   video?: string | string[] // Puede ser un video o array de videos

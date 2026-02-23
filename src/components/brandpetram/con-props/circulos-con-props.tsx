@@ -53,8 +53,8 @@ export function CirculosConProps({
           delay: 0
         }}
       >
-        {/* Círculo S */}
-        <div className="w-24 h-40 md:w-50 md:h-60 1200:w-60 1200:h-72 1280:w-65 1280:h-80 1366:w-70 1366:h-84 1440:w-75 1440:h-90 1536:w-80 1536:h-96 1728:w-85 1728:h-102 1920:w-90 1920:h-108 bg-slate-900 rounded-none flex items-center justify-center shrink-0">
+        {/* Círculo G */}
+        <div className="w-24 h-40 md:w-50 md:h-60 1200:w-60 1200:h-72 1280:w-65 1280:h-80 1366:w-70 1366:h-84 1440:w-75 1440:h-90 1536:w-80 1536:h-96 1728:w-85 1728:h-102 1920:w-90 1920:h-108 bg-gradient-to-br from-blue-500 to-blue-700 rounded-none flex items-center justify-center shrink-0">
           <span className="text-[3rem] md:text-[6rem] 1200:text-[7rem] 1280:text-[7.5rem] 1366:text-[8rem] 1440:text-[8.5rem] 1536:text-[9rem] 1728:text-[9.5rem] 1920:text-[10rem] font-black text-white leading-none flex items-center justify-center">
             {circulo1Letra}
           </span>
@@ -84,7 +84,7 @@ export function CirculosConProps({
         }}
       >
         {/* Círculo D animado */}
-        <div className="w-24 h-40 md:w-50 md:h-60 1200:w-60 1200:h-72 1280:w-65 1280:h-80 1366:w-70 1366:h-84 1440:w-75 1440:h-90 1536:w-80 1536:h-96 1728:w-85 1728:h-102 1920:w-90 1920:h-108 bg-gradient-to-r from-orange-500 to-red-600 rounded-none flex items-center justify-center shrink-0">
+        <div className="w-24 h-40 md:w-50 md:h-60 1200:w-60 1200:h-72 1280:w-65 1280:h-80 1366:w-70 1366:h-84 1440:w-75 1440:h-90 1536:w-80 1536:h-96 1728:w-85 1728:h-102 1920:w-90 1920:h-108 bg-gray-900 rounded-none flex items-center justify-center shrink-0">
           <span className="text-[3rem] md:text-[6rem] 1200:text-[7rem] 1280:text-[7.5rem] 1366:text-[8rem] 1440:text-[8.5rem] 1536:text-[9rem] 1728:text-[9.5rem] 1920:text-[10rem] font-black text-white leading-none flex items-center justify-center">
             {circulo2Letra}
           </span>
@@ -92,12 +92,8 @@ export function CirculosConProps({
 
         {/* Texto */}
         <div className="flex-1 md:max-w-2xl">
-          <h3 className="text-2xl md:text-5xl 1200:text-[4.5rem] 1280:text-[6rem] 1366:text-[6rem] 1440:text-[6rem] 1536:text-[6rem] 1728:text-[6rem] 1920:text-[6rem] leading-none tracking-tight font-extrabold mb-2 md:mb-4">
-            <TextoGradiente
-              texto={circulo2Titulo}
-              gradienteFrom="from-orange-500"
-              gradienteTo="to-red-600"
-            />
+          <h3 className="text-2xl md:text-5xl 1200:text-[4.5rem] 1280:text-[6rem] 1366:text-[6rem] 1440:text-[6rem] 1536:text-[6rem] 1728:text-[6rem] 1920:text-[6rem] leading-none tracking-tight font-extrabold mb-2 md:mb-4 text-gray-900">
+            {circulo2Titulo}
           </h3>
           <p className="text-sm md:text-lg 1200:text-xl 1728:text-2xl 1920:text-2xl text-muted-foreground">
             {circulo2Descripcion}
@@ -118,7 +114,7 @@ export function CirculosConProps({
         }}
       >
         {/* Círculo I */}
-        <div className="w-24 h-40 md:w-50 md:h-60 1200:w-60 1200:h-72 1280:w-65 1280:h-80 1366:w-70 1366:h-84 1440:w-75 1440:h-90 1536:w-80 1536:h-96 1728:w-85 1728:h-102 1920:w-90 1920:h-108 bg-slate-900 rounded-none flex items-center justify-center shrink-0">
+        <div className="w-24 h-40 md:w-50 md:h-60 1200:w-60 1200:h-72 1280:w-65 1280:h-80 1366:w-70 1366:h-84 1440:w-75 1440:h-90 1536:w-80 1536:h-96 1728:w-85 1728:h-102 1920:w-90 1920:h-108 bg-gradient-to-br from-blue-500 to-blue-700 rounded-none flex items-center justify-center shrink-0">
           <span className="text-[3rem] md:text-[6rem] 1200:text-[7rem] 1280:text-[7.5rem] 1366:text-[8rem] 1440:text-[8.5rem] 1536:text-[9rem] 1728:text-[9.5rem] 1920:text-[10rem] font-black text-white leading-none flex items-center justify-center">
             {circulo3Letra}
           </span>

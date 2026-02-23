@@ -19,6 +19,9 @@ import LogoCloud from '@/components/motion-plus/logo-cloud';
 import { AlphaBP } from '@/components/brandpetram/alpha-bp';
 import { ScrollStorytelling } from '@/components/brandpetram/scroll-storytelling';
 import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia';
+import { CirculosConProps } from '@/components/brandpetram/con-props/circulos-con-props';
+import { FaqSectionsThreeColumnsBPConProps } from '@/components/brandpetram/con-props/faq-sections-three-columns-bp-con-props';
+import { CincoCardsConProps } from '@/components/brandpetram/con-props/cinco-cards-con-props';
 
 export default function Home() {
   return (
@@ -145,6 +148,108 @@ export default function Home() {
       {/* ScrollStorytelling - Storytelling interactivo con scroll */}
       <div className={'1200:mt-80 relative'}>
         <ScrollStorytelling mediaAspectRatio="aspect-[16/9]" />
+      </div>
+
+      {/* Imagen grande */}
+      <div className="h-full mt-32">
+        <img
+          src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-9.jpeg"
+          alt="Parques industriales Grupo Nelson en Mexicali"
+          className="w-full h-full object-cover aspect-[1/1] lg:aspect-auto object-center"
+        />
+      </div>
+
+      {/* Círculos */}
+      <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
+        <CirculosConProps
+          circulo1Letra="G"
+          circulo1Titulo="Grupo"
+          circulo1Descripcion="Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali. Somos el socio estratégico que su empresa necesita para establecerse con éxito en México."
+          circulo2Letra="N"
+          circulo2Titulo="Nelson"
+          circulo2Descripcion="Familia empresarial con raíces profundas en Mexicali. Nuestro compromiso generacional con la región nos permite ofrecer soluciones industriales personalizadas, desde la renta de naves hasta la construcción build-to-suit."
+          circulo3Letra="I"
+          circulo3Titulo="Parques Industriales"
+          circulo3Descripcion="Cuatro parques industriales estratégicamente ubicados en los corredores industriales más importantes de Mexicali. Infraestructura de primer nivel con seguridad 24/7, servicios completos y tecnología de punta."
+        />
+      </div>
+
+      {/* FAQs */}
+      <div className="mt-32">
+        <FaqSectionsThreeColumnsBPConProps
+          titulo="Preguntas Frecuentes"
+          descripcion="¿Tienes alguna pregunta adicional? Contáctanos directamente por"
+          linkTexto="correo electrónico"
+          linkHref="mailto:contacto@nelson.com.mx"
+          faqs={[
+            {
+              id: 1,
+              question: "¿Qué tipos de naves industriales ofrecen?",
+              answer: "Contamos con naves industriales en renta y construcción build-to-suit en nuestros cuatro parques en Mexicali. Desde espacios de 500 m² hasta proyectos a medida de más de 25,000 m².",
+            },
+            {
+              id: 2,
+              question: "¿Cuál es la ubicación de sus parques industriales?",
+              answer: "Nuestros parques están ubicados en los corredores industriales estratégicos de Mexicali, B.C.: Nelson I, Nelson II, El Vigía I y El Vigía II, con acceso directo a carreteras principales y frontera con EUA.",
+            },
+            {
+              id: 3,
+              question: "¿Ofrecen construcción build-to-suit?",
+              answer: "Sí. Diseñamos y construimos naves industriales completamente a la medida de sus requerimientos operativos: capacidad eléctrica, altura de nave, andenes, oficinas, y especificaciones técnicas particulares.",
+            },
+            {
+              id: 4,
+              question: "¿Qué servicios de infraestructura incluyen?",
+              answer: "Todos nuestros parques cuentan con seguridad 24/7, agua potable, drenaje, electricidad, gas natural, acceso pavimentado, telecomunicaciones y sistema centralizado de protección contra incendios bajo estándares NFPA y FM.",
+            },
+            {
+              id: 5,
+              question: "¿Cuánto tiempo lleva Grupo Nelson en la industria?",
+              answer: "Grupo Nelson tiene más de 60 años de experiencia desarrollando infraestructura industrial en Mexicali. Somos una empresa familiar con profundo conocimiento de la región fronteriza y sus necesidades industriales.",
+            },
+            {
+              id: 6,
+              question: "¿Cómo puedo obtener información sobre disponibilidad?",
+              answer: "Contáctenos directamente por correo o teléfono. Nuestro equipo le atenderá para presentarle las opciones disponibles según sus requerimientos específicos de espacio, ubicación y especificaciones técnicas.",
+            },
+          ]}
+        />
+      </div>
+
+      {/* Cinco Cards */}
+      <div className="mt-32">
+        <CincoCardsConProps
+          card1Titulo={<>Parque Industrial<br/>Nelson II</>}
+          card1BotonTexto="Ver especificaciones"
+          card1BotonHref="/parques-industriales-mexicali/nelson-ii"
+          card1VideoSrc="/parques-industriales-mexicali-nelson-3-optimizado.mp4"
+          card1VideoPoster="/hero-poster-0.jpg"
+
+          card2Titulo={<>Parque Industrial<br/>Nelson I</>}
+          card2BotonTexto="Ver más"
+          card2BotonHref="/parques-industriales-mexicali/nelson-i"
+          card2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-2.jpeg"
+          card2ImagenAlt="Parque Industrial Nelson I en Mexicali"
+
+          card3Titulo={<>Parque Industrial<br/>El Vigía I</>}
+          card3BotonTexto="Ver especificaciones"
+          card3BotonHref="/parques-industriales-mexicali/vigia-i"
+          card3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-4.jpeg"
+          card3ImagenAlt="Parque Industrial El Vigía I en Mexicali"
+
+          card4Titulo={<>Parque Industrial<br/>El Vigía II</>}
+          card4BotonTexto="Ver especificaciones"
+          card4BotonHref="/parques-industriales-mexicali/vigia-ii"
+          card4ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-6.jpeg"
+          card4ImagenAlt="Parque Industrial El Vigía II en Mexicali"
+
+          card5Titulo={<>Honeywell<br/>en Mexicali</>}
+          card5BotonTexto="Conocer más"
+          card5BotonHref="#"
+          card5ImagenSrc="/honeywell/honeywell-en-parque-industrial-de-mexicali-1.jpeg"
+          card5ImagenAlt="Honeywell en Parque Industrial de Mexicali"
+          mostrarCard5={false}
+        />
       </div>
 
       {/* TODO: Migrar KeynoteHero */}
