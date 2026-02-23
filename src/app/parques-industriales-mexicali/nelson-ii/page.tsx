@@ -14,7 +14,23 @@ export default function NelsonIIPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ParkHero park={park} />
+      <ParkHero
+        park={park}
+        gradientTop={0.4}
+        gradientBottom={0.85}
+        darkOverlay={0.25}
+        overlayColor="rgba(10, 20, 60, 0.3)"   // azul oscuro
+
+        gridConfig={{
+            strokeColor: 'stroke-white/15',
+            gridSize: 120,
+            showHighlights: true,
+            highlightColor: 'fill-blue-600/10',   // ← color + opacidad
+            fadeRadius: '100rem',               // ← más grande = se ve más del grid
+            fadePosition: 'center',
+
+        }}
+      />
       <ParkSpecsLayout park={park} allParks={industrialParks} />
     </div>
   )

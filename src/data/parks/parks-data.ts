@@ -922,7 +922,7 @@ export const industrialParks: IndustrialPark[] = [
     name: 'Parque Industrial Nelson II',
     shortName: 'Nelson II',
     description: 'Parque industrial de primer nivel con ubicación estratégica',
-    heroImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg',
+    heroImage: '/parques-industriales-mexicali/nelson2/nave-industrial-en-parque-industrial-nelson2-8.jpeg',
     since: 2018,
     location: 'Corredor Industrial, Blvd. Venustiano Carranza, entre Av. Piñon y Manzanilla',
     address: 'Venustiano Carranza #350, Mexicali B.C. CP. 21383',
