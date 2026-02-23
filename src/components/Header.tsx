@@ -75,51 +75,51 @@ interface FeatureLink {
 
 // === Icon Maps ===
 const whyNelsonIconMap: Record<string, React.ReactElement> = {
-  history: <History className="size-5 fill-blue-600" />,
-  star: <Star className="size-5 fill-blue-600" />,
-  users: <Users className="size-5 fill-blue-600" />,
-  trophy: <Trophy className="size-5 fill-blue-600" />,
+  history: <History className="size-5 fill-blue-600 stroke-blue-100" />,
+  star: <Star className="size-5 fill-blue-600 stroke-blue-100" />,
+  users: <Users className="size-5 fill-blue-600 stroke-blue-100" />,
+  trophy: <Trophy className="size-5 fill-blue-600 stroke-blue-100" />,
 };
 
 const parksIconMap: Record<string, React.ReactElement> = {
-  building: <Building2 className="size-5 fill-blue-600" />,
-  warehouse: <Warehouse className="size-5 fill-blue-600" />,
-  map: <Map className="size-5 fill-blue-600" />,
-  grid: <LayoutGrid className="size-5 fill-blue-600" />,
+  building: <Building2 className="size-5 fill-blue-600 stroke-blue-100" />,
+  warehouse: <Warehouse className="size-5 fill-blue-600 stroke-blue-100" />,
+  map: <Map className="size-5 fill-blue-600 stroke-blue-100" />,
+  grid: <LayoutGrid className="size-5 fill-blue-600 stroke-blue-100" />,
 };
 
 const solutionsIconMap: Record<string, React.ReactElement> = {
-  hammer: <Hammer className="size-5 fill-blue-600" />,
-  key: <KeyRound className="size-5 fill-blue-600" />,
-  fileContract: <FileText className="size-5 fill-blue-600" />,
-  layers: <Layers className="size-5 fill-blue-600" />,
-  plane: <Plane className="size-5 fill-blue-600" />,
-  truck: <Truck className="size-5 fill-blue-600" />,
-  factory: <Factory className="size-5 fill-blue-600" />,
-  cpu: <Cpu className="size-5 fill-blue-600" />,
-  compass: <Compass className="size-5 fill-blue-600" />,
-  hardHat: <HardHat className="size-5 fill-blue-600" />,
-  leaf: <Leaf className="size-5 fill-blue-600" />,
-  globe: <Globe className="size-5 fill-blue-600" />,
-  trophy: <Trophy className="size-5 fill-blue-600" />,
-  award: <Award className="size-5 fill-blue-600" />,
+  hammer: <Hammer className="size-5 fill-blue-600 stroke-blue-100" />,
+  key: <KeyRound className="size-5 fill-blue-600 stroke-blue-100" />,
+  fileContract: <FileText className="size-5 fill-blue-600 stroke-blue-100" />,
+  layers: <Layers className="size-5 fill-blue-600 stroke-blue-100" />,
+  plane: <Plane className="size-5 fill-blue-600 stroke-blue-100" />,
+  truck: <Truck className="size-5 fill-blue-600 stroke-blue-100" />,
+  factory: <Factory className="size-5 fill-blue-600 stroke-blue-100" />,
+  cpu: <Cpu className="size-5 fill-blue-600 stroke-blue-100" />,
+  compass: <Compass className="size-5 fill-blue-600 stroke-blue-100" />,
+  hardHat: <HardHat className="size-5 fill-blue-600 stroke-blue-100" />,
+  leaf: <Leaf className="size-5 fill-blue-600 stroke-blue-100" />,
+  globe: <Globe className="size-5 fill-blue-600 stroke-blue-100" />,
+  trophy: <Trophy className="size-5 fill-blue-600 stroke-blue-100" />,
+  award: <Award className="size-5 fill-blue-600 stroke-blue-100" />,
 };
 
 const expertiseIconMap: Record<string, React.ReactElement> = {
-  hardHat: <HardHat className="size-5 fill-blue-600" />,
-  compass: <Compass className="size-5 fill-blue-600" />,
-  settings: <Settings className="size-5 fill-blue-600" />,
-  leaf: <Leaf className="size-5 fill-blue-600" />,
-  globe: <Globe className="size-5 fill-blue-600" />,
-  award: <Award className="size-5 fill-blue-600" />,
+  hardHat: <HardHat className="size-5 fill-blue-600 stroke-blue-100" />,
+  compass: <Compass className="size-5 fill-blue-600 stroke-blue-100" />,
+  settings: <Settings className="size-5 fill-blue-600 stroke-blue-100" />,
+  leaf: <Leaf className="size-5 fill-blue-600 stroke-blue-100" />,
+  globe: <Globe className="size-5 fill-blue-600 stroke-blue-100" />,
+  award: <Award className="size-5 fill-blue-600 stroke-blue-100" />,
 };
 
 const insightsIconMap: Record<string, React.ReactElement> = {
-  newspaper: <Newspaper className="size-5 fill-blue-600" />,
-  bookOpen: <BookOpen className="size-5 fill-blue-600" />,
-  download: <Download className="size-5 fill-blue-600" />,
-  megaphone: <Megaphone className="size-5 fill-blue-600" />,
-  calendar: <Calendar className="size-5 fill-blue-600" />,
+  newspaper: <Newspaper className="size-5 fill-blue-600 stroke-blue-100" />,
+  bookOpen: <BookOpen className="size-5 fill-blue-600 stroke-blue-100" />,
+  download: <Download className="size-5 fill-blue-600 stroke-blue-100" />,
+  megaphone: <Megaphone className="size-5 fill-blue-600 stroke-blue-100" />,
+  calendar: <Calendar className="size-5 fill-blue-600 stroke-blue-100" />,
 };
 
 // === Processed Data ===
@@ -127,63 +127,63 @@ const whyNelsonLinks: FeatureLink[] = whyNelsonLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: whyNelsonIconMap[item.iconKey] ?? <Star className="size-5 fill-blue-600" />,
+  icon: whyNelsonIconMap[item.iconKey] ?? <Star className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const parksMexicaliLinks: FeatureLink[] = parksMexicaliLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: parksIconMap[item.iconKey] ?? <Building2 className="size-5 fill-blue-600" />,
+  icon: parksIconMap[item.iconKey] ?? <Building2 className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const parksInventoryLinks: FeatureLink[] = parksInventoryLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: parksIconMap[item.iconKey] ?? <Warehouse className="size-5 fill-blue-600" />,
+  icon: parksIconMap[item.iconKey] ?? <Warehouse className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const solutionsServicesLinks: FeatureLink[] = solutionsServicesLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: solutionsIconMap[item.iconKey] ?? <Hammer className="size-5 fill-blue-600" />,
+  icon: solutionsIconMap[item.iconKey] ?? <Hammer className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const solutionsIndustryLinks: FeatureLink[] = solutionsIndustryLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: solutionsIconMap[item.iconKey] ?? <Factory className="size-5 fill-blue-600" />,
+  icon: solutionsIconMap[item.iconKey] ?? <Factory className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const expertiseCapabilitiesLinks: FeatureLink[] = expertiseCapabilitiesLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: expertiseIconMap[item.iconKey] ?? <HardHat className="size-5 fill-blue-600" />,
+  icon: expertiseIconMap[item.iconKey] ?? <HardHat className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const expertiseStandardsLinks: FeatureLink[] = expertiseStandardsLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: expertiseIconMap[item.iconKey] ?? <Award className="size-5 fill-blue-600" />,
+  icon: expertiseIconMap[item.iconKey] ?? <Award className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const insightsLearnLinks: FeatureLink[] = insightsLearnLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: insightsIconMap[item.iconKey] ?? <Newspaper className="size-5 fill-blue-600" />,
+  icon: insightsIconMap[item.iconKey] ?? <Newspaper className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 const insightsConnectLinks: FeatureLink[] = insightsConnectLinksData.map((item) => ({
   href: item.href,
   name: item.name,
   description: item.description,
-  icon: insightsIconMap[item.iconKey] ?? <Calendar className="size-5 fill-blue-600" />,
+  icon: insightsIconMap[item.iconKey] ?? <Calendar className="size-5 fill-blue-600 stroke-blue-100" />,
 }));
 
 // === Mobile Menu Data ===
