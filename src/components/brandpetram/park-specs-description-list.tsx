@@ -11,8 +11,8 @@ function SpecRow({ label, value }: { label: string; value: string | undefined })
   if (!value) return null
   return (
     <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-1 md:gap-4 py-2 border-b border-border/50 last:border-b-0">
-      <dt className="text-sm font-medium text-muted-foreground">{label}</dt>
-      <dd className="text-sm text-foreground">{value}</dd>
+      <dt className="text-base font-medium text-muted-foreground">{label}</dt>
+      <dd className="text-base text-foreground">{value}</dd>
     </div>
   )
 }
@@ -21,8 +21,8 @@ function SpecRow({ label, value }: { label: string; value: string | undefined })
 function SpecSubRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-1 md:gap-4 py-1.5 pl-4 md:pl-6">
-      <dt className="text-sm text-muted-foreground/80">{label}</dt>
-      <dd className="text-sm text-foreground/80">{value}</dd>
+      <dt className="text-base text-muted-foreground/80">{label}</dt>
+      <dd className="text-base text-foreground/80">{value}</dd>
     </div>
   )
 }
@@ -31,7 +31,7 @@ function SpecSubRow({ label, value }: { label: string; value: string }) {
 function SpecSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h3 className="text-base font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
+      <h3 className="text-lg font-semibold text-blue-600 border-b-2 border-stone-900/20 pb-2 mb-3">
         {title}
       </h3>
       <dl className="space-y-0">{children}</dl>

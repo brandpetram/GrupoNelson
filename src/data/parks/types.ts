@@ -158,4 +158,5 @@ export interface IndustrialPark {
   infrastructure: string[]
   buildings: Building[]
   hasSpecs: boolean
-}
+  coordinates?: { lat: number; lng: number }
+  mapsUrl?: string

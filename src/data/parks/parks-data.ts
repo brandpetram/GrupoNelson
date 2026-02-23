@@ -942,6 +942,8 @@ export const industrialParks: IndustrialPark[] = [
     ],
     buildings: nelsonIIBuildings,
     hasSpecs: true,
+    coordinates: { lat: 32.576968954561124, lng: -115.41184960281856 },
+    mapsUrl: 'https://www.google.com/maps?ll=32.576752,-115.41185&z=12&t=h&hl=es-MX&gl=MX&mapclient=embed&cid=15970312143839776453',
   },
   {
     slug: 'nelson-i',

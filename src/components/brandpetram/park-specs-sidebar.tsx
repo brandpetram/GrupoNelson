@@ -20,7 +20,7 @@ export function ParkSpecsSidebar({
       className="sticky self-start hidden lg:block lg:col-span-3"
       style={{ top: '100px' }}
     >
-      <div className="p-6 text-muted-foreground text-sm space-y-6">
+      <div className="p-6 text-muted-foreground text-base space-y-6">
         {/* Navegación entre parques */}
         <div>
           <h3 className="font-semibold text-foreground text-lg mb-3 leading-none">
@@ -50,15 +50,16 @@ export function ParkSpecsSidebar({
         {/* Selector de naves */}
         {currentPark.buildings.length > 0 && (
           <div className="pt-4 border-t border-border">
-            <h3 className="font-semibold text-foreground text-lg mb-3 leading-none">
-              Naves
-            </h3>
+            <div className="mb-3">
+              <h3 className="font-semibold text-foreground text-lg leading-none">Naves</h3>
+              <p className="text-sm text-muted-foreground/60 mt-1">{currentPark.shortName}</p>
+            </div>
             <ul className="space-y-1">
               {currentPark.buildings.map((building) => (
                 <li key={building.id}>
                   <button
                     onClick={() => onSelectBuilding(building.id)}
-                    className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
+                    className={`w-full text-left px-3 py-2 rounded-md text-base transition-colors ${
                       building.id === selectedBuildingId
                         ? 'bg-primary/10 text-primary font-medium border-l-2 border-primary'
                         : 'hover:bg-muted'

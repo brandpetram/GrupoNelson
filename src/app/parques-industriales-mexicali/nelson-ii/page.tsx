@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { ParkSpecsLayout } from '@/components/brandpetram/park-specs-layout'
+import { ParkMap } from '@/components/brandpetram/park-map'
 import { getParkBySlug, industrialParks } from '@/data/parks/parks-data'
 
 export const metadata = {
@@ -14,24 +15,32 @@ export default function NelsonIIPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ParkHero
-        park={park}
-        gradientTop={0.4}
-        gradientBottom={0.85}
-        darkOverlay={0.25}
-        overlayColor="rgba(10, 20, 60, 0.3)"   // azul oscuro
+        <div className={'mt-24 md:mt-32 1200:mt-28'}><ParkHero
+            park={park}
+            gradientTop={0.4}
+            gradientBottom={0.85}
+            overlayColor="#2563eb1a"   // 10% de opacidad
+            gridConfig={{
+                strokeColor: 'stroke-white/15',
+                gridSize: 120,
+                showHighlights: true,
+                highlightColor: 'fill-blue-600/10',   // ← color + opacidad
+                fadeRadius: '100rem',               // ← más grande = se ve más del grid
+                fadePosition: 'center',
 
-        gridConfig={{
-            strokeColor: 'stroke-white/15',
-            gridSize: 120,
-            showHighlights: true,
-            highlightColor: 'fill-blue-600/10',   // ← color + opacidad
-            fadeRadius: '100rem',               // ← más grande = se ve más del grid
-            fadePosition: 'center',
-
-        }}
-      />
-      <ParkSpecsLayout park={park} allParks={industrialParks} />
+            }}
+        /></div>
+        <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}><ParkSpecsLayout park={park} allParks={industrialParks}/>
+            {park.coordinates && (
+                <ParkMap
+                    parkName={park.name}
+                    address={park.address ?? park.location}
+                    lat={park.coordinates.lat}
+                    lng={park.coordinates.lng}
+                    zoom={16}
+                    mapsUrl={park.mapsUrl}
+                />
+      )}</div>
     </div>
   )
 }
