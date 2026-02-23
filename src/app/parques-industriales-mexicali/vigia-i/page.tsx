@@ -14,7 +14,21 @@ export default function VigiaIPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <ParkHero park={park} />
+        <div className={'mt-24 md:mt-32 1200:mt-28'}><ParkHero
+            park={park}
+            gradientTop={0.4}
+            gradientBottom={0.85}
+            overlayColor="#2563eb1a"   // 10% de opacidad
+            gridConfig={{
+                strokeColor: 'stroke-white/15',
+                gridSize: 120,
+                showHighlights: true,
+                highlightColor: 'fill-blue-600/10',   // ← color + opacidad
+                fadeRadius: '100rem',               // ← más grande = se ve más del grid
+                fadePosition: 'center',
+
+            }}
+        /></div>
       <ParkSpecsLayout park={park} allParks={industrialParks} />
     </div>
   )

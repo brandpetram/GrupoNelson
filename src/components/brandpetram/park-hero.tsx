@@ -37,7 +37,7 @@ export function ParkHero({
 }: ParkHeroProps) {
   return (
     <section className="relative">
-      <div className="aspect-[1/1.4] md:aspect-[1/.7] 1280:aspect-[16/5] overflow-hidden">
+      <div className="aspect-[1/1.4] md:aspect-[1/.7] 1280:aspect-[16/7] overflow-hidden">
         <img
           src={park.heroImage}
           alt={park.name}

@@ -66,7 +66,7 @@ export default function Home() {
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
         >
-          <BadgeAniversario size={200} sizeMd={280} sizeLg={450} />
+          <BadgeAniversario className="w-[200px] h-[200px] md:w-[280px] md:h-[280px] lg:w-[450px] lg:h-[450px]" />
         </motion.div>
 
         {/* Divider diagonal - Posicionado al final del hero, fuera para evitar animación */}

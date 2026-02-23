@@ -922,7 +922,7 @@ export const industrialParks: IndustrialPark[] = [
     name: 'Parque Industrial Nelson II',
     shortName: 'Nelson II',
     description: 'Parque industrial de primer nivel con ubicación estratégica',
-    heroImage: '/parques-industriales-mexicali/nelson2/nave-industrial-en-parque-industrial-nelson2-8.jpeg',
+    heroImage: '/parque-industrial-nelson-2-en-mexicali.jpeg',
     since: 2018,
     location: 'Corredor Industrial, Blvd. Venustiano Carranza, entre Av. Piñon y Manzanilla',
     address: 'Venustiano Carranza #350, Mexicali B.C. CP. 21383',
@@ -950,7 +950,9 @@ export const industrialParks: IndustrialPark[] = [
     name: 'Parque Industrial Nelson I',
     shortName: 'Nelson I',
     description: 'Centro industrial establecido con más de 50 años de historia',
-    heroImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-249.jpg',
+    heroImage: '/parque-industrial-nelson-1-en-mexicali.jpeg',
+
+
     since: 1987,
     location: 'Carretera a San Luis R.C. Km 14',
     landSizeHectares: 27,
@@ -975,7 +977,8 @@ export const industrialParks: IndustrialPark[] = [
     name: 'Parque Industrial El Vigía I',
     shortName: 'El Vigía I',
     description: 'Ubicación estratégica con infraestructura completa',
-    heroImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg',
+    heroImage: '/parque-industrial-el-vigia-1-en-mexicali.jpeg',
+
     since: 1967,
     location: 'Carretera a San Luis Km. 12.5',
     landSizeHectares: 14,
@@ -999,7 +1002,8 @@ export const industrialParks: IndustrialPark[] = [
     name: 'Parque Industrial El Vigía II',
     shortName: 'El Vigía II',
     description: 'Instalaciones modernas con tecnología de punta',
-    heroImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
+    heroImage: '/parque-industrial-el-vigia-2-en-mexicali.jpeg',
+
     since: 1987,
     location: 'Carretera a San Luis Km. 12.5',
     address: 'Carretera a San Luis R.C. KM 12, Mexicali B.C.',
