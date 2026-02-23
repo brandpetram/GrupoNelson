@@ -1,25 +1,19 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useState, useEffect } from "react"
 
 function LogoCliente({ src, isBig = false }: { src: string; isBig?: boolean }) {
-    const [svgContent, setSvgContent] = useState("")
-    const sizeClass = isBig ? "h-32 w-32" : "h-20 w-full max-w-[250px]"
-
-    useEffect(() => {
-        fetch(`/logos-clientes/${src}`)
-            .then(r => r.text())
-            .then(text => setSvgContent(text))
-    }, [src])
+    const sizeClass = isBig ? "h-32 w-32" : "h-20 object-contain w-full max-w-[250px]"
 
     return (
-        <motion.div
-            className={`${sizeClass} flex items-center justify-center [&_svg]:h-full [&_svg]:w-auto`}
-            dangerouslySetInnerHTML={{ __html: svgContent }}
+        <motion.img
+            className={`${sizeClass} object-contain bg-transparent`}
+            src={`/logos-clientes/${src}`}
+            alt={"Logo cliente"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            style={{ backgroundColor: "transparent" }}
         />
     )
 }

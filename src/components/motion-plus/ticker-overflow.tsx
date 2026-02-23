@@ -1,21 +1,14 @@
 "use client"
 
 import { Ticker } from "motion-plus/react"
-import { useState, useEffect } from "react"
+import { motion } from "motion/react"
 
 function LogoCliente({ src }: { src: string }) {
-    const [svgContent, setSvgContent] = useState("")
-
-    useEffect(() => {
-        fetch(`/logos-clientes/${src}`)
-            .then(r => r.text())
-            .then(text => setSvgContent(text))
-    }, [src])
-
     return (
-        <div
+        <motion.img
             className="logo-cliente"
-            dangerouslySetInnerHTML={{ __html: svgContent }}
+            src={`/logos-clientes/${src}`}
+            alt={"Logo cliente"}
         />
     )
 }
@@ -128,17 +121,9 @@ function Stylesheet() {
 
         .logo-cliente {
            height: 100px;
-           width: auto;
+           object-fit: contain;
            margin: 0 20px;
-           display: flex;
-           align-items: center;
-           background: transparent;
-        }
-
-        .logo-cliente svg {
-           height: 100%;
-           width: auto;
-           display: block;
+           background-color: transparent;
         }
 
         .ticker {
