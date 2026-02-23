@@ -210,7 +210,7 @@ const mobileMenuData: MobileMenuSection[] = [
     ],
   },
   {
-    name: 'Solutions',
+    name: 'Builder',
     categories: [
       { title: 'Construction Services', links: solutionsServicesLinks },
       { title: 'Quality & Standards', links: solutionsIndustryLinks },
