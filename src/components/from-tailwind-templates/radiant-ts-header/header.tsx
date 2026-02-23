@@ -5,7 +5,7 @@ import { Heading, Lead, Subheading } from './text'
 export function Header() {
   return (
     <Container className="mx-10 mt-16 lg:mt-16">
-      <h1 className={' w-full text-balance text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >
+      <h1 className={' w-full text-balance text-[2rem] 430:text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >
         Grupo Nelson es la empresa que fundó la industria maquiladora de México.
       </h1>
       <Lead className="mt-6 max-w-3xl">
@@ -37,14 +37,14 @@ export function Header() {
             <div className="-mt-8 aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
               <img
                 alt="Parque Industrial Mexicali - Instalaciones de clase mundial"
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-249.jpg"
+                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-382.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
                 alt="Parque Industrial Mexicali - Infraestructura industrial"
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg"
+                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-407.jpg"
                 className="block size-full object-cover"
               />
             </div>

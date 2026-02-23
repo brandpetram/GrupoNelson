@@ -18,6 +18,7 @@ import TickerOverflow from '@/components/motion-plus/ticker-overflow';
 import LogoCloud from '@/components/motion-plus/logo-cloud';
 import { AlphaBP } from '@/components/brandpetram/alpha-bp';
 import { ScrollStorytelling } from '@/components/brandpetram/scroll-storytelling';
+import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia';
 
 export default function Home() {
   return (
@@ -60,9 +61,14 @@ export default function Home() {
           <TarjetaHeroOriginal />
         </HeroVideoCover>
 
+        {/* Cuadritos de lluvia decorativos - Lado derecho del hero */}
+        <div className="absolute top-full right-40 md:right-60 lg:right-80 z-10 pointer-events-none">
+          <CuadritosLluvia />
+        </div>
+
         {/* Badge de aniversario - Posicionado en el hero */}
         <motion.div
-          className="hidden md:block md:absolute bottom-10 right-5 -rotate-10"
+          className="absolute translate-y-10 md:translate-y-0 left-5 md:left-auto md:bottom-10 md:right-5 -rotate-10"
           style={{ zIndex: 10, opacity: 0 }}
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}

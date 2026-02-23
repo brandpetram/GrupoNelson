@@ -104,20 +104,20 @@ export function AlphaBP() {
         <TickerOverflow />
       </div>
 
-      {/* Layout existente de imagen + div naranja */}
-      <div className="relative flex items-center translate-x-0 360:translate-x-0 393:translate-x-4 430:translate-x-8 768:translate-x-8 834:translate-x-10 1024:translate-x-10 1200:translate-x-24 1280:translate-x-28 1366:translate-x-30 1440:translate-x-30 1536:translate-x-30 1728:translate-x-30 1920:translate-x-30">
+      {/* Layout existente de imagen + div color */}
+      <div className="-mt-48 mb-56 md:mt-0 md:mb-0 relative flex items-center translate-x-10 360:translate-x-8 393:translate-x-10 430:translate-x-16 768:translate-x-8 834:translate-x-10 1024:translate-x-10 1200:translate-x-24 1280:translate-x-28 1366:translate-x-30 1440:translate-x-30 1536:translate-x-30 1728:translate-x-30 1920:translate-x-30">
       {/* Imagen */}
-      <div className="w-full 360:w-full 393:w-11/12 430:w-10/12 768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-8/12 1280:w-8/12 1366:w-8/12 1440:w-8/12 1536:w-8/12 1728:w-8/12 1920:w-8/12 aspect-[4/3] 360:aspect-[4/3] 393:aspect-[4/3] 430:aspect-[4.5/3] 768:aspect-[2.8/3] 834:aspect-[3/3] 1024:aspect-[3/3] 1200:aspect-[4.5/3] 1280:aspect-[4.5/3] 1366:aspect-[4.5/3] 1440:aspect-[4.5/3] 1536:aspect-[4.5/3] 1728:aspect-[4.5/3] 1920:aspect-[4.5/3] relative rounded-xs overflow-hidden">
+      <div className="w-full 360:w-full  768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-8/12 1280:w-8/12 1366:w-8/12 1440:w-8/12 1536:w-8/12 1728:w-8/12 1920:w-8/12 aspect-[4/3] 360:aspect-4/3 393:aspect-[4/3] 430:aspect-[4/3] 768:aspect-[2.8/3] 834:aspect-[3/3] 1024:aspect-[3/3] 1200:aspect-[4.5/3] 1280:aspect-[4.5/3] 1366:aspect-[4.5/3] 1440:aspect-[4.5/3] 1536:aspect-[4.5/3] 1728:aspect-[4.5/3] 1920:aspect-[4.5/3] relative rounded-xs overflow-hidden">
         <Image
           src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-424.jpg"
           alt="Conveyors para Industria Alimenticia"
           fill
-          className="object-cover"
+          className="object-cover z-50 md:z-0"
         />
       </div>
 
       {/* Div con contenido - posicionado con translate negativo */}
-      <div className="relative -translate-x-20 360:-translate-x-20 393:-translate-x-24 430:-translate-x-28 768:-translate-x-20 834:-translate-x-26 1024:-translate-x-30 1200:-translate-x-44 1280:-translate-x-48 1366:-translate-x-52 1440:-translate-x-54 1536:-translate-x-57 1728:-translate-x-60 1920:-translate-x-60 w-full 360:w-full 393:w-11/12 430:w-10/12 768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-[26rem] 1280:w-[28rem] 1366:w-[30rem] 1440:w-[32rem] 1536:w-[34rem] 1728:w-[33rem] 1920:w-[40rem] bg-gradient-to-br from-blue-600/95 to-sky-600/95 backdrop-blur-sm rounded-xs p-8 360:p-8 393:p-10 430:p-12 768:p-12 834:p-14 1024:p-16 1200:p-14 1280:p-15 1366:p-16 1440:p-17 1536:p-17 1728:p-18 1920:p-20 border border-white/20 shadow-2xl z-10">
+      <div className="relative -translate-x-20 360:-translate-x-20 393:-translate-x-24 430:-translate-x-28 768:-translate-x-20 834:-translate-x-26 1024:-translate-x-30 1200:-translate-x-44 1280:-translate-x-48 1366:-translate-x-52 1440:-translate-x-54 1536:-translate-x-57 1728:-translate-x-60 1920:-translate-x-60 w-full 360:w-full 393:w-11/12 430:w-10/12 768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-[26rem] 1280:w-[28rem] 1366:w-[30rem] 1440:w-[32rem] 1536:w-[34rem] 1728:w-[33rem] 1920:w-[40rem] bg-gradient-to-br from-blue-600/95 to-sky-600/95 backdrop-blur-sm rounded-xs p-8 360:p-8 393:p-10 430:p-12 768:p-12 834:p-14 1024:p-16 1200:p-14 1280:p-15 1366:p-16 1440:p-17 1536:p-17 1728:p-18 1920:p-20 border border-white/20 shadow-2xl z-10 translate-y-56 md:translate-y-0">
         {/* Título principal - h1 vacío eliminado por no tener contenido */}
 
         {/* Descripción */}
