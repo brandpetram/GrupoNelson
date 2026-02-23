@@ -93,7 +93,7 @@ export default function Home() {
 
 
       {/* Componente Alpha - Fase 3: Brandpetramizado (CON 13 BREAKPOINTS) */}
-      <div className="container mx-auto 1200:px-4 py-16">
+      <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP />
       </div>
 
@@ -140,8 +140,7 @@ export default function Home() {
               </div>
           </div>
 
-      {/* Sección de características en hexágonos */}
-        <div className={'mt-20'}><HexagonFeatures/></div>
+
 
       {/* ScrollStorytelling - Storytelling interactivo con scroll */}
       <div className={'1200:mt-80 relative'}>
