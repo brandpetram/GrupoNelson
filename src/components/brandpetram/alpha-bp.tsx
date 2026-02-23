@@ -109,7 +109,7 @@ export function AlphaBP() {
       {/* Imagen */}
       <div className="w-full 360:w-full  768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-8/12 1280:w-8/12 1366:w-8/12 1440:w-8/12 1536:w-8/12 1728:w-8/12 1920:w-8/12 aspect-[4/3] 360:aspect-4/3 393:aspect-[4/3] 430:aspect-[4/3] 768:aspect-[2.8/3] 834:aspect-[3/3] 1024:aspect-[3/3] 1200:aspect-[4.5/3] 1280:aspect-[4.5/3] 1366:aspect-[4.5/3] 1440:aspect-[4.5/3] 1536:aspect-[4.5/3] 1728:aspect-[4.5/3] 1920:aspect-[4.5/3] relative rounded-xs overflow-hidden">
         <Image
-          src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-424.jpg"
+          src="/parque-industrial-nelson-2-en-mexicali-2.jpeg"
           alt="Conveyors para Industria Alimenticia"
           fill
           className="object-cover z-50 md:z-0"

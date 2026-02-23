@@ -107,15 +107,15 @@ export default function Home() {
                   bloque1Descripcion="Infraestructura de calidad con soluciones a medida"
                   bloque1LinkTexto="Explorar"
                   bloque1LinkHref="#"
-                  bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg"
+                  bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
                   bloque2ImagenAlt="Lorem ipsum"
-                  bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg"
+                  bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
                   bloque3ImagenAlt="Lorem ipsum"
                   bloque4Titulo="¿Necesitas información?"
                   bloque4Descripcion="Contáctanos para conocer nuestras soluciones"
                   bloque4LinkTexto="Contactar"
                   bloque4LinkHref="#"
-                  imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg"
+                  imagenDerechaSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-5.jpeg"
                   imagenDerechaAlt="Lorem ipsum"
               />
 
