@@ -52,7 +52,7 @@ export default function LogoCloud() {
     ]
 
     return (
-        <section className="w-full py-20 px-4 xl:hidden">
+        <section className="w-full py-20 px-4">
             <div className="mx-auto">
                 <h2 className="360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem] 1200:text-[1.75rem] 1280:text-[1.85rem] 1366:text-[1.95rem] 1440:text-[2.1rem] 1536:text-[2.3rem] 1728:text-[2.55rem] 1920:text-[3rem] font-semibold tracking-tighter leading-tight text-center mb-12 px-4 text-balance">
                     Clientes y Proveedores que confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el

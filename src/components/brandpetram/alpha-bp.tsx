@@ -100,7 +100,7 @@ export function AlphaBP() {
 
 
       {/* Sección de logos - Solo en desktop */}
-      <div className="hidden xl:block w-full">
+      <div className="hidden 1200:block w-full">
         <TickerOverflow />
       </div>
 

@@ -62,12 +62,12 @@ export default function Home() {
 
         {/* Badge de aniversario - Posicionado en el hero */}
         <motion.div
-          className="hidden md:block md:absolute 360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem] 1200:text-[1.75rem] 1280:text-[1.85rem] 1366:text-[1.95rem] 1440:text-[2.1rem] 1536:text-[2.3rem] 1728:text-[2.55rem] 1920:text-[2.8rem] bottom-10 right-5 -rotate-10"
-          style={{ zIndex: 10 }}
-          initial={{ opacity: 0, scale: 0, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: -10 }}
+          className="hidden md:block md:absolute bottom-10 right-5 -rotate-10"
+          style={{ zIndex: 10, opacity: 0 }}
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{
-            duration: 0.6,
+            duration: 0.7,
             delay: 1.8,
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       {/* Logo Cloud (mobile/tablet) */}
-      <LogoCloud />
+        <div className={'1200:hidden'}><LogoCloud/></div>
 
 
 
