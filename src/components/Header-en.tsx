@@ -203,7 +203,7 @@ const mobileMenuData: MobileMenuSection[] = [
     categories: [{ title: 'The Company', links: whyNelsonLinks }],
   },
   {
-    name: 'Parks',
+    name: 'Parks & Buildings',
     categories: [
       { title: 'Mexicali', links: parksMexicaliLinks },
       { title: 'Inventory', links: parksInventoryLinks },
