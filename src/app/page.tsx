@@ -12,6 +12,7 @@ import { DiagonalDivider } from '@/components/diagonal-divider'
 import { BadgeAniversario } from '@/components/badge-aniversario'
 import Header from '@/components/Header'
 import { motion } from 'motion/react'
+import Image from 'next/image'
 import {Mosaico2ConProps} from "@/components/brandpetram/con-props/mosaico-2-con-props";
 import {MosaicoInvertidoConProps} from "@/components/brandpetram/con-props/mosaico-invertido-con-props";
 import TickerOverflow from '@/components/motion-plus/ticker-overflow';
@@ -151,11 +152,14 @@ export default function Home() {
       </div>
 
       {/* Imagen grande */}
-      <div className="h-full mt-32">
-        <img
-          src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-9.jpeg"
+      <div className="relative h-full mt-32 aspect-square lg:aspect-auto lg:h-[70vh]">
+        <Image
+          src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-336.jpg"
           alt="Parques industriales Grupo Nelson en Mexicali"
-          className="w-full h-full object-cover aspect-[1/1] lg:aspect-auto object-center"
+          fill
+          loading="lazy"
+          className="object-cover object-center"
+          sizes="100vw"
         />
       </div>
 

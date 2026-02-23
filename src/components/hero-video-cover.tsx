@@ -163,20 +163,20 @@ export function HeroVideoCover({
     <section className={`relative w-full pb-32 1280:pb-0 md:h-screen overflow-hidden ${className}`} aria-label="Hero section">
       {/* Contenedor de aspecto fijo para prevenir CLS */}
       <div className="absolute inset-0">
-        {/* Imagen estática - carga inmediatamente para FCP óptimo */}
+        {/* Imagen estática - fetchPriority="high" permite que el preload scanner del browser la descubra temprano (mejora LCP) */}
         <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 overflow-hidden transition-opacity duration-1000 ease-in-out ${
             isVideoLoaded ? "opacity-0" : "opacity-100"
           }`}
-          style={{
-            backgroundImage: `url(${posterSrc})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          role="img"
-          aria-label={alt}
-        />
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={posterSrc}
+            alt={alt}
+            fetchPriority="high"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         {/* Video para móvil (con filtros mobile) */}
         {videoFilterMobile && (
@@ -194,7 +194,7 @@ export function HeroVideoCover({
               loop
               muted
               playsInline
-              preload="metadata"
+              preload="none"
               poster={posterSrc}
               aria-label={alt}
             >
@@ -229,7 +229,7 @@ export function HeroVideoCover({
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="none"
           poster={posterSrc}
           aria-label={alt}
         >

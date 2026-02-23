@@ -13,6 +13,20 @@ const nextConfig: NextConfig = {
         hostname: 'img.brandpetram.com',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
+  },
+  async headers() {
+    const cacheHeaders = [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }]
+    return [
+      { source: '/:path*.mp4',  headers: cacheHeaders },
+      { source: '/:path*.jpg',  headers: cacheHeaders },
+      { source: '/:path*.jpeg', headers: cacheHeaders },
+      { source: '/:path*.png',  headers: cacheHeaders },
+      { source: '/:path*.webp', headers: cacheHeaders },
+      { source: '/:path*.avif', headers: cacheHeaders },
+      { source: '/:path*.svg',  headers: cacheHeaders },
+    ]
   },
 };
 
