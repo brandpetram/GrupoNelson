@@ -81,60 +81,60 @@ export const parksInventoryLinks = [
   },
 ];
 
-// === SOLUCIONES ===
-// Columna 1: Servicios
+// === CONSTRUCCIÓN ===
+// Columna 1: Servicios de Construcción
 export const solutionsServicesLinks = [
   {
+    href: '/solutions/design-engineering',
+    name: 'Diseño e Ingeniería',
+    description: 'Diseño integral bajo códigos internacionales',
+    iconKey: 'compass',
+  },
+  {
     href: '/solutions/build-to-suit',
-    name: 'Built to Suit',
-    description: 'Instalaciones personalizadas desde cero',
+    name: 'Construcción Build-to-Suit',
+    description: 'Naves diseñadas y construidas a la medida',
     iconKey: 'hammer',
   },
   {
     href: '/solutions/turnkey',
-    name: 'Llave en Mano',
-    description: 'Operaciones listas para usar',
+    name: 'Soluciones Llave en Mano',
+    description: 'Naves de inventario listas para operar',
     iconKey: 'key',
   },
   {
-    href: '/solutions/leasing',
-    name: 'Arrendamiento Industrial',
-    description: 'Opciones flexibles de espacio',
-    iconKey: 'fileContract',
-  },
-  {
-    href: '/solutions/land-development',
-    name: 'Desarrollo de Terrenos',
-    description: 'Terreno industrial de primera',
-    iconKey: 'layers',
+    href: '/solutions/specialized-projects',
+    name: 'Proyectos Especializados',
+    description: 'Instalaciones aeroespaciales, túneles de viento, celdas',
+    iconKey: 'hardHat',
   },
 ];
 
-// Columna 2: Por Industria
+// Columna 2: Calidad y Estándares
 export const solutionsIndustryLinks = [
   {
-    href: '/industries/aerospace',
-    name: 'Aeroespacial y Defensa',
-    description: 'Manufactura de alta precisión',
-    iconKey: 'plane',
+    href: '/expertise/leed-certification',
+    name: 'Certificación LEED',
+    description: 'Construcción sustentable certificada',
+    iconKey: 'leaf',
   },
   {
-    href: '/industries/logistics',
-    name: 'Logística y Distribución',
-    description: 'Almacenamiento estratégico',
-    iconKey: 'truck',
+    href: '/expertise/international-standards',
+    name: 'Estándares Internacionales',
+    description: 'Códigos US, FM Global, NFPA',
+    iconKey: 'globe',
   },
   {
-    href: '/industries/manufacturing',
-    name: 'Manufactura Avanzada',
-    description: 'Excelencia en producción',
-    iconKey: 'factory',
+    href: '/portfolio',
+    name: 'Portafolio de Proyectos',
+    description: 'Gulfstream, Honeywell, Hirsh, Direct Pack',
+    iconKey: 'trophy',
   },
   {
-    href: '/industries/technology',
-    name: 'Tecnología y Electrónica',
-    description: 'Instalaciones para innovación',
-    iconKey: 'cpu',
+    href: '/about/baumex',
+    name: 'Baumex Constructora',
+    description: 'Constructora in-house con 25+ años',
+    iconKey: 'award',
   },
 ];
 
