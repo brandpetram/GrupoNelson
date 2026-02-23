@@ -642,9 +642,9 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* SOLUTIONS - 2 columns */}
+        {/* BUILDER - 2 columns */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Builder</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
