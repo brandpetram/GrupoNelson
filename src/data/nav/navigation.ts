@@ -5,25 +5,25 @@
 // Columna única: La Empresa
 export const whyNelsonLinks = [
   {
-    href: '/about/our-story',
+    href: '/nelson/nuestra-historia',
     name: 'Nuestra Historia',
     description: '60 años de experiencia en desarrollo industrial',
     iconKey: 'history',
   },
   {
-    href: '/about/difference',
+    href: '/nelson/diferencia-nelson',
     name: 'La Diferencia Nelson',
     description: 'Lo que nos distingue',
     iconKey: 'star',
   },
   {
-    href: '/about/leadership',
+    href: '/nelson/liderazgo',
     name: 'Liderazgo',
     description: 'Tres generaciones de experiencia',
     iconKey: 'users',
   },
   {
-    href: '/about/track-record',
+    href: '/nelson/trayectoria',
     name: 'Trayectoria Comprobada',
     description: 'Empresas Fortune 500 confían en nosotros',
     iconKey: 'trophy',
@@ -62,13 +62,13 @@ export const parksMexicaliLinks = [
 // Columna 2: Inventario
 export const parksInventoryLinks = [
   {
-    href: '/inventory/available-buildings',
+    href: '/inventario/naves-disponibles',
     name: 'Naves Disponibles',
     description: 'Espacios listos para ocupar',
     iconKey: 'warehouse',
   },
   {
-    href: '/inventory/land',
+    href: '/inventario/terrenos',
     name: 'Terrenos en Venta',
     description: 'Terreno industrial de primera',
     iconKey: 'map',
@@ -85,25 +85,25 @@ export const parksInventoryLinks = [
 // Columna 1: Servicios de Construcción
 export const solutionsServicesLinks = [
   {
-    href: '/solutions/design-engineering',
+    href: '/constructora/diseno-e-ingenieria',
     name: 'Diseño e Ingeniería',
     description: 'Diseño integral bajo códigos internacionales',
     iconKey: 'compass',
   },
   {
-    href: '/solutions/build-to-suit',
+    href: '/constructora/build-to-suit',
     name: 'Construcción Build-to-Suit',
     description: 'Naves diseñadas y construidas a la medida',
     iconKey: 'hammer',
   },
   {
-    href: '/solutions/turnkey',
+    href: '/constructora/llave-en-mano',
     name: 'Soluciones Llave en Mano',
     description: 'Naves de inventario listas para operar',
     iconKey: 'key',
   },
   {
-    href: '/solutions/specialized-projects',
+    href: '/constructora/proyectos-especializados',
     name: 'Proyectos Especializados',
     description: 'Instalaciones aeroespaciales, túneles de viento, celdas',
     iconKey: 'hardHat',
@@ -113,25 +113,25 @@ export const solutionsServicesLinks = [
 // Columna 2: Calidad y Estándares
 export const solutionsIndustryLinks = [
   {
-    href: '/expertise/leed-certification',
+    href: '/constructora/certificacion-leed',
     name: 'Certificación LEED',
     description: 'Construcción sustentable certificada',
     iconKey: 'leaf',
   },
   {
-    href: '/expertise/international-standards',
+    href: '/constructora/estandares-internacionales',
     name: 'Estándares Internacionales',
     description: 'Códigos US, FM Global, NFPA',
     iconKey: 'globe',
   },
   {
-    href: '/portfolio',
+    href: '/constructora/portafolio',
     name: 'Portafolio de Proyectos',
     description: 'Gulfstream, Honeywell, Hirsh, Direct Pack',
     iconKey: 'trophy',
   },
   {
-    href: '/about/baumex',
+    href: '/constructora/baumex',
     name: 'Baumex Constructora',
     description: 'Constructora in-house con 25+ años',
     iconKey: 'award',
@@ -142,19 +142,19 @@ export const solutionsIndustryLinks = [
 // Columna 1: Capacidades
 export const expertiseCapabilitiesLinks = [
   {
-    href: '/expertise/construction',
+    href: '/experiencia/construccion-propia',
     name: 'Construcción Propia',
     description: 'Ventaja de integración vertical',
     iconKey: 'hardHat',
   },
   {
-    href: '/expertise/engineering',
+    href: '/experiencia/ingenieria',
     name: 'Ingeniería Innovadora',
     description: 'Instalaciones del futuro',
     iconKey: 'compass',
   },
   {
-    href: '/expertise/operations',
+    href: '/experiencia/excelencia-operativa',
     name: 'Excelencia Operativa',
     description: 'Confiabilidad garantizada',
     iconKey: 'settings',
@@ -164,19 +164,19 @@ export const expertiseCapabilitiesLinks = [
 // Columna 2: Estándares
 export const expertiseStandardsLinks = [
   {
-    href: '/expertise/sustainability',
+    href: '/experiencia/leed-y-sustentabilidad',
     name: 'LEED y Sustentabilidad',
     description: 'Compromiso con construcción verde',
     iconKey: 'leaf',
   },
   {
-    href: '/expertise/compliance',
+    href: '/experiencia/cumplimiento-global',
     name: 'Cumplimiento Global',
     description: 'Estándares internacionales',
     iconKey: 'globe',
   },
   {
-    href: '/expertise/certifications',
+    href: '/experiencia/certificaciones',
     name: 'Certificaciones de Calidad',
     description: 'Excelencia comprobada',
     iconKey: 'award',
@@ -193,13 +193,13 @@ export const insightsLearnLinks = [
     iconKey: 'newspaper',
   },
   {
-    href: '/case-studies',
+    href: '/casos-de-exito',
     name: 'Casos de Éxito',
     description: 'Historias de clientes',
     iconKey: 'bookOpen',
   },
   {
-    href: '/resources',
+    href: '/recursos',
     name: 'Recursos',
     description: 'Guías y descargas',
     iconKey: 'download',
@@ -209,13 +209,13 @@ export const insightsLearnLinks = [
 // Columna 2: Conectar
 export const insightsConnectLinks = [
   {
-    href: '/news',
+    href: '/noticias',
     name: 'Noticias',
     description: 'Últimos anuncios',
     iconKey: 'megaphone',
   },
   {
-    href: '/events',
+    href: '/eventos',
     name: 'Eventos',
     description: 'Reuniones de la industria',
     iconKey: 'calendar',
