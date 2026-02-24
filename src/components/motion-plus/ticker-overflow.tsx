@@ -16,42 +16,41 @@ function LogoCliente({ src }: { src: string }) {
 export default function TickerOverflow() {
     // Todos los logos disponibles
     const todosLosLogos = [
-        { src: "logo-gulfstream.svg", key: "13" },
-        { src: "logo-accuride.svg", key: "1" },
-        { src: "logo-baxter.svg", key: "3" },
-        { src: "logo-belvedere-maletti.svg", key: "4" },
-        { src: "logo-cornell-dubilier.svg", key: "5" },
-        { src: "logo-creation-technologies.svg", key: "6" },
-        { src: "logo-dentsply.svg", key: "7" },
-        { src: "logo-dhl.svg", key: "8" },
-        { src: "logo-direct-pack.svg", key: "9" },
-        { src: "logo-gameloft.svg", key: "10" },
-        { src: "logo-general-dynamics.svg", key: "11" },
-        { src: "logo-goodrich.svg", key: "12" },
-        { src: "logo-hirsh-industries.svg", key: "14" },
-        { src: "logo-honeywell.svg", key: "15" },
+        { src: "logo-gulfstream-2.svg", key: "13" },
+        { src: "logo-accuride-2.svg", key: "1" },
+        { src: "logo-baxter-2.svg", key: "3" },
+        { src: "logo-dhl-2.svg", key: "4" },
+        { src: "logo-cornell-dubilier-2.svg", key: "5" },
+        { src: "logo-creation-technologies-2.svg", key: "6" },
+        { src: "logo-dentsply-2.svg", key: "7" },
+        { src: "logo-dhl-2.svg", key: "8" },
+        { src: "logo-direct-pack-2.svg", key: "9" },
+        { src: "logo-general-dynamics-2.svg", key: "11" },
+        { src: "logo-goodrich-2.svg", key: "12" },
+        { src: "logo-hirsh-industries-2.svg", key: "14" },
+        { src: "logo-honeywell-2.svg", key: "15" },
         { src: "logo-intuitive-2.svg", key: "16" },
-        { src: "logo-ivemsa.svg", key: "17" },
-        { src: "logo-jonathan.svg", key: "18" },
-        { src: "logo-liebert.svg", key: "19" },
+        { src: "logo-ivemsa-2.svg", key: "17" },
+        { src: "logo-jonathan-2.svg", key: "18" },
+        { src: "logo-liebert-2.svg", key: "19" },
         { src: "logo-mohawk-2.svg", key: "20" },
-        { src: "logo-psf.svg", key: "21" },
-        { src: "logo-rheem.svg", key: "22" },
-        { src: "logo-sds-sybron-dental-specialities.svg", key: "23" },
-        { src: "logo-utc-aerospace-systems.svg", key: "24" },
-        { src: "logo-air-liquide.svg", key: "2" },
-        { src: "logo-vertiv.svg", key: "25" },
-        { src: "logo-aqua-lung.svg", key: "26" },
-        { src: "logo-celestica.svg", key: "27" },
-        { src: "logo-garret.svg", key: "28" },
-        { src: "logo-fastenal.svg", key: "29" },
+        { src: "logo-psf-2.svg", key: "21" },
+        { src: "logo-rheem-2.svg", key: "22" },
+        { src: "logo-sds-sybron-dental-specialities-2.svg", key: "23" },
+        { src: "logo-utc-aerospace-systems-2.svg", key: "24" },
+        { src: "logo-air-liquide-2.svg", key: "2" },
+        { src: "logo-vertiv-2.svg", key: "25" },
+        { src: "logo-aqua-lung-2.svg", key: "26" },
+        { src: "logo-celestica-3.svg", key: "27" },
+        { src: "logo-garret-2.svg", key: "28" },
+        { src: "logo-fastenal-2.svg", key: "29" },
     ]
 
     // Fila superior (RTL): Gulfstream aparece dos veces, separadas por ~7 logos entre sí
     const logosFirstHalf = [
         todosLosLogos[0],                                    // Gulfstream (1ª vez)
         ...todosLosLogos.slice(1, 8),                        // logos 1–7
-        { src: "logo-gulfstream.svg", key: "13-b" },         // Gulfstream (2ª vez)
+        { src: "logo-gulfstream-2.svg", key: "13-b" },         // Gulfstream (2ª vez)
         ...todosLosLogos.slice(8, 15),                       // logos 8–14
     ]
 
