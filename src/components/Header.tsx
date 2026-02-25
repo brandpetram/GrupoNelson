@@ -384,7 +384,7 @@ export default function Header({ variant = 'light' }: HeaderProps) {
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                    <LogoNelson variant={logoVariant} width={140} className="scale-100 md:scale-125 in-data-scrolled:scale-90 in-data-scrolled:md:scale-100 transition-transform duration-500" />
+                    <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-125 in-data-scrolled:scale-90 in-data-scrolled:md:scale-100 transition-transform duration-500" />
                   </Link>
                 </div>
 

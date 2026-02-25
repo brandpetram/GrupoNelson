@@ -36,7 +36,7 @@ export default function Mu() {
       {/* Patrón de puntos */}
       <div className="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
         <svg
-          className="absolute bottom-[10rem] right-0 translate-x-1/2  text-blue-100  xl:translate-x-0"
+          className="absolute bottom-[10rem] right-0 translate-x-1/2  text-blue-100/30  xl:translate-x-0"
           width={364}
           height={384}
           viewBox="0 0 364 384"
@@ -60,7 +60,7 @@ export default function Mu() {
 
       <div className="relative pt-6 pb-16 sm:pb-24">
         <main className="mt-32 sm:mt-40 lg:mt-48">
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto md:max-w-5xl 1024:max-w-3xl 1200:max-w-5xl 1280:max-w-6xl 1536:max-w-7xl 1728:max-w-400 1920:max-w-440 ">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
               <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center ">
                 <div>
@@ -72,16 +72,15 @@ export default function Mu() {
                       Lorem
                     </span>
                     <span className="ml-4 text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem]">
-                      Ipsum dolor sit amet consectetur
+                      Ipsum dolor sit amet
                     </span>
                   </a>
-                  <h1 className="mt-4 text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none lg:mt-6">
-                    Lorem ipsum dolor sit amet petram sepharim mexico
+                  <h1 className="mt-4 text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-[3.5rem] 834:text-[3.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none lg:mt-6">
+                    Lorem ipsum dolor sit amet petram mexico
 
                   </h1>
-                  <p className="mt-3 text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
+                  <p className="mt-3 text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-xl 834:text-xl 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur deleniti deserunt dignissimos ducimus eaque facere incidunt ipsa, iste iure laudantium neque nesciunt odit placeat suscipit? Adipisci animi dolore.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md shadow">
