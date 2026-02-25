@@ -38,17 +38,17 @@ export default function Pi() {
 
       {/* Mobile: imagen con texto superpuesto */}
       <div className="md:hidden relative pt-10">
-        <div className="ml-3 -mt-10 p-0 text-foreground absolute mt-0 bg-white bg-opacity-50 w-40">
-          <h3 className="text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] uppercase font-extrabold">Lorem ipsum</h3>
-          <h2 className="mt-5 pl-3 pb-5 text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] font-bold leading-none">
-           Lorem  ipsums dolor sit amet, consectetur adipiscing elit.
+          <div className="flex flex-col text-foreground bg-white/40 backdrop-blur-sm pt-8 pb-16 px-5 overflow-hidden w-[11rem] md:w-[13rem] lg:w-[13rem] xl:w-[14rem] 1366:w-[15rem] 1440:w-[16rem] 1536:w-[18rem] 1728:w-[22rem] 1920:w-[26rem] aspect-[4/5] z-10 absolute left-0  rounded-xs">
+          <h3 className="text-xs uppercase font-extrabold">Lorem ipsum</h3>
+          <h2 className="mt-5 pl-3 pb-5 text-xl 360:text-[1.2rem] 393:text-[1.2rem] 430:text-[1.2rem]  font-bold leading-none">
+           Lorem ipsums dolor sit amet, consectetur adipiscing elit.
           </h2>
         </div>
         <img
           src="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
           alt="Nave industrial"
           className="mx-auto mt-10"
-          style={{ aspectRatio: "1/2.7", objectFit: "cover" }}
+          style={{ aspectRatio: "1/1", objectFit: "cover" }}
         />
       </div>
 
