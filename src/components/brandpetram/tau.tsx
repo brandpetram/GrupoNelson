@@ -36,13 +36,13 @@ export default function Tau() {
           {/* Celda 1: texto sobre fondo blanco */}
           <div className="relative">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-              <h2 className="text-center mb-3 uppercase text-xs text-foreground font-bold">
+              <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] text-foreground font-bold">
                 Grupo Nelson
               </h2>
-              <h1 className="text-center uppercase tracking-widest leading-tight font-bold text-xs md:text-lg lg:text-sm 2xl:text-lg">
+              <h1 className="text-center uppercase tracking-widest leading-tight font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
                 Lorem ipsum <br className="hidden md:block" /> dolor sit
               </h1>
-              <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-xs md:text-lg lg:text-sm 2xl:text-lg">
+              <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem]">
                 Consectetur <br /> adipiscing elit
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function Tau() {
                   alt="Nave industrial"
                   className="my-3 md:my-0 pt-3 pl-8 pr-8 pb-8 ml-5 md:p-10 xl:p-12 overflow-hidden object-cover aspect-square"
                 />
-                <h1 className="text-xs lg:text-sm md:text-lg absolute bottom-0 right-0 mb-3 mr-3 leading-none">
+                <h1 className="text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] absolute bottom-0 right-0 mb-3 mr-3 leading-none">
                   Lorem <br className="md:hidden" /> ipsum
                 </h1>
               </div>
@@ -80,13 +80,13 @@ export default function Tau() {
           {/* Celda 3: texto sobre fondo azul */}
           <div className="relative bg-linear-to-br from-blue-500 to-blue-700 text-white">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-              <h2 className="text-center mb-3 uppercase text-xs font-bold">
+              <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-bold">
                 Grupo Nelson
               </h2>
-              <h1 className="text-center uppercase tracking-widest leading-tight font-bold text-xs md:text-lg lg:text-sm 2xl:text-lg">
+              <h1 className="text-center uppercase tracking-widest leading-tight font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
                 Dolor sit <br className="hidden md:block" /> amet
               </h1>
-              <p className="hidden md:block text-center mt-5 font-light text-xs md:text-lg lg:text-sm 2xl:text-lg">
+              <p className="hidden md:block text-center mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem]">
                 Sed do eiusmod <br /> tempor
               </p>
             </div>
@@ -119,13 +119,13 @@ export default function Tau() {
           {/* Texto */}
           <div className="relative">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-              <h2 className="text-center mb-3 uppercase text-xs text-foreground font-bold">
+              <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] text-foreground font-bold">
                 Grupo Nelson
               </h2>
-              <h1 className="text-center uppercase tracking-widest text-sm leading-tight font-bold 2xl:text-lg">
+              <h1 className="text-center uppercase tracking-widest leading-tight font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
                 Consectetur <br className="hidden md:block" /> adipiscing
               </h1>
-              <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-xs lg:text-sm 2xl:text-lg">
+              <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem]">
                 Eiusmod tempor
               </p>
             </div>
@@ -134,13 +134,13 @@ export default function Tau() {
           {/* Texto */}
           <div className="relative">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-              <h2 className="text-center mb-3 uppercase text-xs text-foreground font-bold">
+              <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] text-foreground font-bold">
                 Grupo Nelson
               </h2>
-              <h1 className="text-center uppercase tracking-widest text-sm leading-tight font-bold 2xl:text-lg">
+              <h1 className="text-center uppercase tracking-widest leading-tight font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
                 Labore et <br className="hidden md:block" /> dolore
               </h1>
-              <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-xs lg:text-sm 2xl:text-lg">
+              <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem]">
                 Magna aliqua
               </p>
             </div>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function DisenoEIngenieriaPage() {
   return (
     <div className={'overflow-hidden'}>
-      <Header />
+      <Header variant="dark" />
       <Mu />
       <Nu />
       <Xi />
