@@ -38,19 +38,19 @@ export default function Nu() {
             <rect width="404" height="784" fill="url(#nu-dot-pattern)" />
           </svg>
 
-          <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
+          <div className="relative lg:grid lg:grid-cols-3 gap-x-40 1728:gap-x-56">
             {/* Columna izquierda: título */}
-            <div className="lg:col-span-1 1280:px-20 1366:px-20">
-              <h3 className="text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-9 font-extrabold tracking-tight text-foreground sm:leading-10">
+            <div className="lg:col-span-1 ml-5 md:ml-10 1728:ml-0">
+              <h3 className="text-[2rem] 360:text-[2rem] 393:text-[2rem] 430:text-[2rem] 768:text-[3rem] 834:text-[3rem] 1024:text-[3rem] 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-9 font-extrabold tracking-tight text-foreground leading-none">
                 Lorem ipsum dolor sit amet{" "}
                 <span className="text-blue-600">consectetur adipiscing</span>
               </h3>
             </div>
 
             {/* Columnas derecha: texto + lista */}
-            <div className="mt-10 sm:grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:col-span-2 lg:mt-0">
+            <div className="ml-5 md:ml-10 1200:ml-0 mt-10 sm:grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:col-span-2 lg:mt-0">
               {/* Texto descriptivo */}
-              <div className="sm:max-w-xs lg:max-w-lg xl:max-w-sm lg:ml-40 xl:ml-0 leading-loose text-muted-foreground text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[1.15rem] 1280:text-[1.3rem] 1366:text-[1.35rem] 1440:text-[1.4rem] 1536:text-[1.5rem] 1728:text-[1.6rem] 1920:text-[1.7rem]">
+              <div className="sm:max-w-xs lg:max-w-lg xl:max-w-sm lg:ml-40 xl:ml-0 leading-loose text-muted-foreground text-[1rem] 360:text-[1rem] 393:text-[1.3rem] 430:text-[1.3rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.5rem] 1200:text-[1.45rem] 1280:text-[1.2rem] 1366:text-[1.3rem] 1440:text-[1.3rem] 1536:text-[1.3rem] 1728:text-[1.3rem] 1920:text-[1.7rem]">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur{" "}
                   <span className="text-blue-700 font-bold">adipiscing elit</span>{" "}
@@ -70,9 +70,9 @@ export default function Nu() {
               </div>
 
               {/* Caja con lista */}
-              <div className="lg:hidden xl:block mt-12 sm:mt-0 sm:max-w-xs lg:max-w-lg xl:ml-16 2xl:ml-24">
+              <div className="lg:hidden xl:block mt-12 sm:mt-0 sm:max-w-xs lg:max-w-lg mr-5 md:mr-0 md:ml-10 1366:ml-16 1440:ml-24">
                 <div className="border py-10 px-10 font-bold">
-                  <h5 className="text-foreground text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-none w-10/12">
+                  <h5 className="text-foreground text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.3rem] 834:text-[1.3rem] 1024:text-[1.3rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-none w-10/12">
                     Lorem ipsum{" "}
                     <br className="md:hidden" />{" "}
                     dolor sit amet{" "}
