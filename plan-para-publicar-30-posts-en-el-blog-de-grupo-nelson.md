@@ -117,7 +117,13 @@ Para cada post crear en Sanity:
 - **Category:** la categoría correspondiente
 - **Cover image:** imagen placeholder (usar cualquiera de `/public/imagen-de-template-X.jpg`)
 - **Published At:** fecha del día
-- **Body:** 3–5 párrafos de Lorem Ipsum para que el post no esté vacío
+- **Body:** 6 secciones en PortableText (~850 palabras):
+  1. **Introducción** — 1 párrafo (~150 palabras)
+  2. **[Sección 1]** — h2 + 1 párrafo (~150 palabras)
+  3. **[Sección 2]** — h2 + 1 párrafo (~150 palabras)
+  4. **[Sección 3]** — h2 + 1 párrafo (~150 palabras)
+  5. **[Sección 4]** — h2 + 1 párrafo (~150 palabras)
+  6. **Conclusión** — h2 + 1 párrafo (~100 palabras)
 
 Publicar los 30 en una sola sesión de trabajo.
 

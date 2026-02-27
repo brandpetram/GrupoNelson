@@ -1,5 +1,5 @@
 import { BlogFilter } from '@/app/blog/category-filter'
-import { getInitialPosts, getTotalPostsCount } from '@/lib/actions'
+import { getInitialPosts, getTotalPostsCount, getAllCategories } from '@/lib/actions'
 import { Category } from '@/types/post'
 import Link from 'next/link'
 import { Container } from '@/components/container'
@@ -10,9 +10,8 @@ import { formatDate } from '@/lib/format-date'
 const PAGE_SIZE = 12
 
 export default async function BlogLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-    const [posts] = await Promise.all([getInitialPosts(PAGE_SIZE), getTotalPostsCount()])
+    const [posts, categories] = await Promise.all([getInitialPosts(PAGE_SIZE), getAllCategories()])
     const articles = posts.slice(-2)
-    const categories: Category[] = Array.from(new Map(posts.filter((post) => post.category).map((post) => [post.category.slug, post.category.title]))).map(([slug, title]) => ({ slug, title }))
 
     return (
         <>

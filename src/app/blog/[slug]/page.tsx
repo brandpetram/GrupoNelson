@@ -128,13 +128,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                             key={index}
                                             className="grid grid-cols-[auto_1fr] items-center gap-2">
                                             <div className="ring-border-illustration bg-card aspect-square size-6 overflow-hidden rounded-md border border-transparent shadow-md shadow-black/15 ring-1">
-                                                <Image
-                                                    src={author.image}
-                                                    alt={author.name}
-                                                    width={460}
-                                                    height={460}
-                                                    className="size-full object-cover"
-                                                />
+                                                {author.image ? (
+                                                    <Image
+                                                        src={author.image}
+                                                        alt={author.name}
+                                                        width={460}
+                                                        height={460}
+                                                        className="size-full object-cover"
+                                                    />
+                                                ) : (
+                                                    <span className="bg-muted flex size-full items-center justify-center text-[10px] font-semibold uppercase">
+                                                        {author.name.charAt(0)}
+                                                    </span>
+                                                )}
                                             </div>
                                             <span className="text-foreground line-clamp-1 text-sm">{author.name}</span>
                                         </div>
