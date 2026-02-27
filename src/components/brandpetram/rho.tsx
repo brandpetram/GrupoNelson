@@ -9,7 +9,7 @@ export default function Rho() {
       id="rho"
       className="mt-32 overflow-hidden relative z-10 [clip-path:polygon(0_0%,100%_3%,100%_100%,0_100%)] md:[clip-path:polygon(0_0%,100%_10%,100%_100%,0_100%)]"
     >
-      <section className="bg-linear-to-br from-blue-500 to-blue-700">
+      <section className="bg-linear-to-br from-blue-600 to-blue-700">
         {/* Testimonio / cita */}
         <div className="container text-gray-100 max-w-2xl mx-auto px-20 md:px-0 pt-156">
           <div className={'-translate-y-80'}><h1
@@ -25,7 +25,7 @@ export default function Rho() {
 
         {/* Texto decorativo de fondo */}
         <h1 className="hidden md:block text-[7rem] 360:text-[7rem] 393:text-[8rem] 430:text-[9rem] 768:text-[15rem] 834:text-[17rem] 1024:text-[20rem] 1200:text-[24rem] 1280:text-[26rem] 1366:text-[27rem] 1440:text-[29rem] 1536:text-[31rem] 1728:text-[35rem] 1920:text-[39rem] text-white font-extrabold tracking-tighter overflow-hidden opacity-20 md:-mt-48 leading-none">
-          Nelson
+          Lorem
         </h1>
 
         <h1 className="md:hidden text-[7rem] text-center text-[14rem] 393:text-[17rem] text-white font-extrabold tracking-tighter overflow-hidden opacity-20 md:-mt-48 leading-none">

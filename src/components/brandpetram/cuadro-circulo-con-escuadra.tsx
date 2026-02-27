@@ -9,11 +9,11 @@ export function CuadroCirculoConEscuadra() {
       <div className="relative translate-y-10 md:-translate-y-20 md:w-5/12 1200:w-5/12 1366:w-4/12 md:ml-10 1200:ml-20 1280:ml-20 1366:ml-48 bg-gray-100/80 dark:bg-gray-900/80 p-8 md:p-12 lg:p-16 max-h-140">
         <div className="max-w-2xl">
           <h2 className="text-5xl md:text-5xl lg:text-7xl font-extrabold text-foreground leading-none tracking-tighter mb-8">
-            Naves<br/>Industriales<br/>Built-to-Suit
+            Lorem<br/>Ipsum<br/>Consectetur
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-            Construimos exactamente lo que tu operación necesita. Diseñamos la configuración según tus especificaciones y ejecutamos la construcción bajo un solo contrato turnkey.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export function CuadroCirculoConEscuadra() {
 
           {/* Círculo */}
           <div
-            className="-translate-30 360:-translate-20 md:-translate-10 1200:translate-0 size-70 md:size-90 1024:size-90 1200:size-85 1280:size-90 1366:size-100 1920:size-120 rounded-full bg-linear-to-b from-blue-600 to-blue-700 flex flex-col items-center justify-center p-8"
+            className="-translate-30 360:-translate-20 md:-translate-10 1200:translate-0 size-70 md:size-90 1024:size-90 1200:size-85 1280:size-90 1366:size-100 1920:size-120 rounded-full bg-linear-to-b from-orange-600 to-red-700 flex flex-col items-center justify-center p-8"
           >
             <div className="text-4xl md:text-6xl 1920:text-7xl font-black text-white mb-6">
               360<span className="text-2xl md:text-xl">°</span>

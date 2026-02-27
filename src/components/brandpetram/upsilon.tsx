@@ -15,6 +15,17 @@ const pills = [
   "eiusmod",
   "tempor",
   "incididunt",
+  "labore",
+  "magna",
+  "aliqua",
+  "veniam",
+  "nostrud",
+  "exercitation",
+  "ullamco",
+  "laboris",
+  "nisi",
+  "aliquip",
+  "commodo",
 ]
 
 export default function Upsilon() {
@@ -29,7 +40,7 @@ export default function Upsilon() {
           {pills.map((word) => (
             <span
               key={word}
-              className="my-auto bg-linear-to-br from-blue-500 to-blue-700 text-white px-2 py-1 flex-none text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] font-light"
+              className="my-auto bg-blue-600 text-white px-4 py-2 flex-none text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] font-light"
             >
               {word}
             </span>
@@ -51,7 +62,7 @@ export default function Upsilon() {
       {/* Texto inferior con tachado */}
       <h3 className="mt-10 text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] font-light text-foreground">
         Con{" "}
-        <span className="font-black tracking-tight text-blue-600">Grupo Nelson</span>{" "}
+        <span className="font-black tracking-tight text-blue-600">Lorem Ipsum</span>{" "}
         ya no tienes que preocuparte por{" "}
         <span className="line-through">
           <br className="md:hidden" />

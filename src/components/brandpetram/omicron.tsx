@@ -10,7 +10,13 @@ export default function Omicron() {
       <div className="grid grid-cols-12 gap-5 lg:gap-20 mb-10 md:mb-0">
         <div className="col-span-3 md:col-span-4">
           <svg viewBox="0 0 100 100" className="w-full">
-            <circle cx="50" cy="50" r="50" fill="#1d4ed8" />
+            <defs>
+              <linearGradient id="circle-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#2563eb" />
+                <stop offset="100%" stopColor="#1d4ed8" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="50" fill="url(#circle-grad-1)" />
             <text x="50" y="50" dominantBaseline="central" textAnchor="middle"
               fill="white" fontWeight="bold" fontSize="60">1</text>
           </svg>
@@ -34,7 +40,13 @@ export default function Omicron() {
       <div className="grid grid-cols-12 gap-5 lg:gap-20 mb-10 md:mb-0 1024:-my-10">
         <div className="col-span-3 md:col-span-4 opacity-80">
           <svg viewBox="0 0 100 100" className="w-full">
-            <circle cx="50" cy="50" r="50" fill="#2563eb" />
+            <defs>
+              <linearGradient id="circle-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#2563eb" />
+                <stop offset="100%" stopColor="#1d4ed8" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="50" fill="url(#circle-grad-2)" />
             <text x="50" y="50" dominantBaseline="central" textAnchor="middle"
               fill="white" fontWeight="bold" fontSize="60">2</text>
           </svg>
@@ -58,7 +70,13 @@ export default function Omicron() {
       <div className="grid grid-cols-12 gap-5 lg:gap-20 ">
         <div className="col-span-3 md:col-span-4">
           <svg viewBox="0 0 100 100" className="w-full">
-            <circle cx="50" cy="50" r="50" fill="#3b82f6" />
+            <defs>
+              <linearGradient id="circle-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#2563eb" />
+                <stop offset="100%" stopColor="#1d4ed8" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="50" fill="url(#circle-grad-3)" />
             <text x="50" y="50" dominantBaseline="central" textAnchor="middle"
               fill="white" fontWeight="bold" fontSize="60">3</text>
           </svg>

@@ -22,15 +22,15 @@ export function FeatureSection5InvertedBP() {
         <div className="w-full 360:w-full 393:w-full 430:w-full 768:w-full 834:w-full 1024:flex-1 1200:flex-1 1280:flex-1 1366:flex-1 1440:flex-1 1536:flex-1 1728:flex-1 1920:flex-1 relative">
           <AspectRatio ratio={3 / 4}>
             <Image
-              src="https://ui.shadcn.com/placeholder.svg"
+              src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-6.jpeg"
               alt="Feature section image"
               fill
-              className="rounded-xl object-cover"
+              className="rounded-xs object-cover"
             />
           </AspectRatio>
 
           {/* Cuadritos decorativos pegados debajo de la imagen */}
-          <div className="absolute top-full left-20  z-10 pointer-events-none">
+          <div className="scale-50 1024:scale-100 absolute top-full right-20 1200:right-auto 1024:left-20 z-10 pointer-events-none">
             <CuadritosLluviaTres />
           </div>
         </div>
@@ -39,7 +39,7 @@ export function FeatureSection5InvertedBP() {
         <div className="flex flex-1 flex-col gap-8">
           <div className="section-title-gap-lg flex flex-col">
             <Tagline>Feature section</Tagline>
-            <h2 className="text-2xl 360:text-2xl 393:text-2xl 430:text-3xl 768:text-3xl 834:text-4xl 1024:text-4xl 1200:text-5xl 1280:text-5xl 1366:text-6xl 1440:text-6xl 1536:text-6xl 1728:text-7xl 1920:text-7xl leading-none tracking-tighter font-extrabold text-foreground">
+            <h2 className="text-2xl 360:text-2xl 393:text-2xl 430:text-3xl 768:text-[4rem] 834:text-[4rem] 1024:text-[4rem] 1200:text-5xl 1280:text-5xl 1366:text-6xl 1440:text-6xl 1536:text-6xl 1728:text-7xl 1920:text-7xl leading-none tracking-tighter font-extrabold text-foreground">
               Headline that shows solution's impact on user success
             </h2>
             <p className="text-xs 360:text-xs 393:text-sm 430:text-sm 768:text-base 834:text-base 1024:text-lg 1200:text-lg 1280:text-xl 1366:text-xl 1440:text-2xl 1536:text-2xl 1728:text-2xl 1920:text-2xl text-muted-foreground">
@@ -51,7 +51,7 @@ export function FeatureSection5InvertedBP() {
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8">
             <div className="flex flex-col gap-5">
-              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-md border shadow-xs">
+              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-xs border shadow-xs">
                 <Rocket className="text-primary h-5 w-5" />
               </div>
               <div className="flex flex-col gap-2">
@@ -65,7 +65,7 @@ export function FeatureSection5InvertedBP() {
               </div>
             </div>
             <div className="flex flex-col gap-5">
-              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-md border shadow-xs">
+              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-xs border shadow-xs">
                 <Rocket className="text-primary h-5 w-5" />
               </div>
               <div className="flex flex-col gap-2">
@@ -79,7 +79,7 @@ export function FeatureSection5InvertedBP() {
               </div>
             </div>
             <div className="flex flex-col gap-5">
-              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-md border shadow-xs">
+              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-xs border shadow-xs">
                 <Rocket className="text-primary h-5 w-5" />
               </div>
               <div className="flex flex-col gap-2">
@@ -93,7 +93,7 @@ export function FeatureSection5InvertedBP() {
               </div>
             </div>
             <div className="flex flex-col gap-5">
-              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-md border shadow-xs">
+              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-xs border shadow-xs">
                 <Rocket className="text-primary h-5 w-5" />
               </div>
               <div className="flex flex-col gap-2">

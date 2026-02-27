@@ -21,7 +21,7 @@ export default function Mu() {
           Multiply:   bg-indigo-900/50 mix-blend-multiply
           Screen:     bg-indigo-400/30 mix-blend-screen
           Sin efecto: quitar este div */}
-      <div className="absolute inset-0 bg-blue-900/80 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gray-900/60" />
 
       {/* SVG diagonal inferior */}
       <svg
@@ -36,7 +36,7 @@ export default function Mu() {
       {/* Patrón de puntos */}
       <div className="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
         <svg
-          className="absolute bottom-[10rem] right-0 translate-x-1/2  text-blue-100/30  xl:translate-x-0"
+          className="absolute bottom-[10rem] right-0 translate-x-1/2 text-foreground/10 xl:translate-x-0"
           width={364}
           height={384}
           viewBox="0 0 364 384"
@@ -68,7 +68,7 @@ export default function Mu() {
                     href="#"
                     className="hidden md:inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base 1200:text-sm xl:text-base hover:text-gray-200"
                   >
-                    <span className="px-3 py-0.5 text-white text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-semibold leading-5 uppercase tracking-wide bg-linear-to-br from-blue-500 to-blue-700 rounded-full">
+                    <span className="px-3 py-0.5 text-white text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-semibold leading-5 uppercase tracking-wide bg-linear-to-br from-blue-600 to-blue-700 rounded-full">
                       Lorem
                     </span>
                     <span className="ml-4 text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem]">
@@ -83,10 +83,10 @@ export default function Mu() {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur deleniti deserunt dignissimos ducimus eaque facere incidunt ipsa, iste iure laudantium neque nesciunt odit placeat suscipit? Adipisci animi dolore.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
-                    <div className="rounded-md shadow">
+                    <div className="rounded-xs shadow">
                       <a
                         href="#"
-                        className="cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-linear-to-br from-blue-500 to-blue-700 hover:opacity-90 md:py-4 md:text-lg md:px-10"
+                        className="cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-white bg-linear-to-br from-blue-600 to-blue-700 hover:opacity-90 md:py-4 md:text-lg md:px-10"
                       >
                         Conocer más
                       </a>
@@ -94,7 +94,7 @@ export default function Mu() {
                     <div className="mt-3 sm:mt-0 sm:ml-3">
                       <a
                         href="#"
-                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
+                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
                       >
                         Contacto
                       </a>

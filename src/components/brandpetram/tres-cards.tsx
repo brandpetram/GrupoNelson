@@ -18,9 +18,9 @@ export function TresCards() {
         {/* Card 1 - Video */}
         <div className="flex-1 flex flex-col">
           {/* Área de texto - altura fija para alineación */}
-          <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-sm">
+          <div className="bg-gradient-to-br from-orange-600 to-red-700 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
-              Renta de<br/>Naves Industriales
+              Lorem de<br/>Ipsum Consectetur
             </h3>
 
             <button className="flex items-center gap-3 text-white font-bold text-xl md:text-lg 1024:text-lg 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl group">
@@ -48,9 +48,9 @@ export function TresCards() {
         {/* Card 2 - Imagen */}
         <div className="flex-1 flex flex-col">
           {/* Área de texto - altura fija para alineación */}
-          <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-sm">
+          <div className="bg-gradient-to-br from-orange-600 to-red-700 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
-              Construcción<br/>Llave en Mano<br/>Built-to-Suit
+              Lorem<br/>Ipsum Dolor<br/>Sit Amet
             </h3>
 
             <button className="flex items-center gap-3 text-white font-bold text-xl md:text-lg 1024:text-lg 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl group">
@@ -73,9 +73,9 @@ export function TresCards() {
         {/* Card 3 - Imagen */}
         <div className="flex-1 flex flex-col">
           {/* Área de texto - altura fija para alineación */}
-          <div className="bg-gradient-to-br from-slate-700 to-slate-800 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-sm">
+          <div className="bg-gradient-to-br from-slate-700 to-slate-800 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
-              Gestión y<br/>Mantenimiento<br/>de Parques
+              Lorem y<br/>Consectetur<br/>Adipiscing
             </h3>
 
             <button className="flex items-center gap-3 text-white font-bold text-xl md:text-lg 1024:text-lg 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl group">

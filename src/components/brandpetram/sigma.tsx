@@ -48,7 +48,7 @@ const communicationFeatures = [
 
 export default function Sigma() {
   return (
-    <div id="sigma" className="py-16 bg-gray-50 overflow-hidden lg:py-24">
+    <div id="sigma" className="py-16 bg-background overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         {/* Patrón de puntos izquierdo */}
         <svg
@@ -68,7 +68,7 @@ export default function Sigma() {
               height={20}
               patternUnits="userSpaceOnUse"
             >
-              <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+              <rect x={0} y={0} width={4} height={4} className="text-foreground/10" fill="currentColor" />
             </pattern>
           </defs>
           <rect width={404} height={784} fill="url(#sigma-dots-1)" />
@@ -99,7 +99,7 @@ export default function Sigma() {
               {transferFeatures.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-linear-to-br from-blue-500 to-blue-700 text-white">
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-xs bg-linear-to-br from-blue-600 to-blue-700 text-white">
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <p className="ml-16 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-6 font-medium text-foreground">
@@ -131,7 +131,7 @@ export default function Sigma() {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                  <rect x={0} y={0} width={4} height={4} className="text-foreground/10" fill="currentColor" />
                 </pattern>
               </defs>
               <rect width={784} height={404} fill="url(#sigma-dots-2)" />
@@ -163,7 +163,7 @@ export default function Sigma() {
               height={20}
               patternUnits="userSpaceOnUse"
             >
-              <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+              <rect x={0} y={0} width={4} height={4} className="text-foreground/10" fill="currentColor" />
             </pattern>
           </defs>
           <rect width={404} height={784} fill="url(#sigma-dots-3)" />
@@ -184,7 +184,7 @@ export default function Sigma() {
                 {communicationFeatures.map((item) => (
                   <div key={item.id} className="relative">
                     <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-linear-to-br from-blue-500 to-blue-700 text-white">
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-xs bg-linear-to-br from-blue-600 to-blue-700 text-white">
                         <item.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
                       <p className="ml-16 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-6 font-medium text-foreground">
@@ -217,7 +217,7 @@ export default function Sigma() {
                     height={20}
                     patternUnits="userSpaceOnUse"
                   >
-                    <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                    <rect x={0} y={0} width={4} height={4} className="text-foreground/10" fill="currentColor" />
                   </pattern>
                 </defs>
                 <rect width={784} height={404} fill="url(#sigma-dots-4)" />

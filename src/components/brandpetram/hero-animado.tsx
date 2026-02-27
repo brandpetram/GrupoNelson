@@ -157,7 +157,7 @@ export function HeroAnimado({
                         {/* Patrón de dots arriba de la imagen */}
                         <svg
                             aria-hidden="true"
-                            className="absolute 768:-top-35 1200:-top-40 right-0 w-40 768:h-[24rem] 1024:h-[27rem] 1200:h-[35rem] fill-orange-500/79 pointer-events-none z-0"
+                            className="absolute 768:-top-35 1200:-top-40 right-0 w-40 768:h-[24rem] 1024:h-[27rem] 1200:h-[35rem] text-foreground/20 pointer-events-none z-0"
                         >
                             <defs>
                                 <pattern
@@ -168,7 +168,7 @@ export function HeroAnimado({
                                     height="17"
                                     patternUnits="userSpaceOnUse"
                                 >
-                                    <circle cx="16" cy="16" r="3" />
+                                    <circle cx="16" cy="16" r="3" fill="currentColor" />
                                 </pattern>
                             </defs>
                             <rect

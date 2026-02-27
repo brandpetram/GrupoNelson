@@ -23,30 +23,30 @@ export function SidebarSticky1() {
           style={{ top: '100px' }}
         >
           <div className="p-6 text-muted-foreground text-sm space-y-6">
-            {/* Parques en Mexicali */}
+            {/* Lorem en Ipsum */}
             <div>
               <h3 className="font-semibold text-foreground text-lg mb-3 leading-none">
-                Parques en Mexicali
+                Lorem en Ipsum
               </h3>
               <ul className="space-y-2">
                 <li className="leading-snug">
-                  <a href="/parques-industriales-mexicali/nelson-ii" className="hover:text-orange-500 transition-colors leading-none">
-                    Parque Nelson II
+                  <a href="/lorem/ipsum-ii" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem Ipsum II
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/parques-industriales-mexicali/nelson-i" className="hover:text-orange-500 transition-colors leading-none">
-                    Parque Nelson I
+                  <a href="/lorem/ipsum-i" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem Ipsum I
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/parques-industriales-mexicali/el-vigia-i" className="hover:text-orange-500 transition-colors leading-none">
-                    Parque El Vigía I
+                  <a href="/lorem/ipsum-iii" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem Ipsum III
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/parques-industriales-mexicali/el-vigia-ii" className="hover:text-orange-500 transition-colors leading-none">
-                    Parque El Vigía II
+                  <a href="/lorem/ipsum-iv" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem Ipsum IV
                   </a>
                 </li>
               </ul>
@@ -59,38 +59,38 @@ export function SidebarSticky1() {
               </h3>
               <ul className="grid grid-cols-2 gap-2">
                 <li className="leading-snug">
-                  <a href="/servicios/built-to-suit" className="hover:text-orange-500 transition-colors leading-none">
-                    Built to Suit
+                  <a href="/lorem/to-sit" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem to Sit
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/servicios/llave-en-mano" className="hover:text-orange-500 transition-colors leading-none">
-                    Llave en Mano
+                  <a href="/lorem/en-amet" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem en Amet
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/servicios/arrendamiento" className="hover:text-orange-500 transition-colors leading-none">
-                    Arrendamiento
+                  <a href="/lorem/consectetur" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem consectetur
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/servicios/desarrollo-terrenos" className="hover:text-orange-500 transition-colors leading-none">
-                    Desarrollo de Terrenos
+                  <a href="/lorem/adipiscing" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem de Adipiscing
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/inventario/naves-disponibles" className="hover:text-orange-500 transition-colors leading-none">
-                    Naves Disponibles
+                  <a href="/lorem/disponible" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem Disponible
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/inventario/terrenos" className="hover:text-orange-500 transition-colors leading-none">
-                    Terrenos en Venta
+                  <a href="/lorem/venta" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem en Venta
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/parques-industriales-mexicali" className="hover:text-orange-500 transition-colors leading-none">
-                    Todos los Parques
+                  <a href="/lorem/ipsum" className="hover:text-orange-500 transition-colors leading-none">
+                    Todos los Lorem
                   </a>
                 </li>
               </ul>
@@ -103,18 +103,18 @@ export function SidebarSticky1() {
               </h3>
               <ul className="space-y-2">
                 <li className="leading-snug">
-                  <a href="/industrias/manufactura" className="hover:text-orange-500 transition-colors leading-none">
-                    Industria Manufacturera
+                  <a href="/lorem/manufactura" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem Manufacturera
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/industrias/logistica" className="hover:text-orange-500 transition-colors leading-none">
-                    Logística y Distribución
+                  <a href="/lorem/logistica" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem y Distribución
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/industrias/tecnologia" className="hover:text-orange-500 transition-colors leading-none">
-                    Tecnología y Electrónica
+                  <a href="/lorem/tecnologia" className="hover:text-orange-500 transition-colors leading-none">
+                    Lorem y Electrónica
                   </a>
                 </li>
               </ul>
@@ -125,9 +125,9 @@ export function SidebarSticky1() {
         {/* Contenido principal */}
         <div className="lg:col-span-9">
           <article className="space-y-7">
-            <section className="bg-muted/30 rounded-lg space-y-7 text-xl leading-relaxed">
+            <section className="space-y-7 text-xl leading-relaxed">
               <h2 className=" text-2xl font-bold text-foreground">
-                Desarrollo de Parques Industriales
+                Lorem de Ipsum Consectetur
               </h2>
               <p className="text-muted-foreground">
                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -139,9 +139,9 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
               </p>
               <GridPoligonos2x1TextoVertical />
             </section>
-            <section className="bg-muted/30 rounded-lg space-y-7 text-xl leading-relaxed">
+            <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-             Construcción de Naves Industriales
+             Lorem de Ipsum Consectetur
               </h2>
               <p className="mb-4 text-muted-foreground">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
@@ -160,9 +160,9 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
               </p>
               <GridPoligonos1x2TextoLargo />
             </section>
-            <section className="bg-muted/30 rounded-lg space-y-7 text-xl leading-relaxed">
+            <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-                Arrendamiento de Naves Industriales
+                Lorem de Ipsum Adipiscing
               </h2>
               <p className="mb-4 text-muted-foreground">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore

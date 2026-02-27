@@ -6,7 +6,7 @@
 export default function Nu() {
   return (
     <div id="nu">
-      <div className="my-24 bg-white overflow-hidden">
+      <div className="my-24 bg-background overflow-hidden">
         <div className="relative max-w-screen-2xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           {/* Patrón de puntos */}
           <svg
@@ -30,7 +30,7 @@ export default function Nu() {
                   y="0"
                   width="4"
                   height="4"
-                  className="text-gray-200"
+                  className="text-foreground/10"
                   fill="currentColor"
                 />
               </pattern>
@@ -71,7 +71,7 @@ export default function Nu() {
 
               {/* Caja con lista */}
               <div className="mt-12 sm:mt-0 sm:max-w-xs 1200:max-w-lg mr-5 md:mr-0 md:ml-10 1366:ml-16 1440:ml-24">
-                <div className="border py-10 px-10 font-bold">
+                <div className="border border-foreground/20 py-10 px-10 font-bold">
                   <h5 className="text-foreground text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.3rem] 834:text-[1.3rem] 1024:text-[1.3rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-none w-10/12">
                     Lorem ipsum{" "}
                     <br className="md:hidden" />{" "}

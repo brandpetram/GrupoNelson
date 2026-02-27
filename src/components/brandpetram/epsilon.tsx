@@ -1,9 +1,9 @@
 /**
  * Componente: Epsilon
  * Creado: 6 de febrero de 2026
- * Proyecto: SDI Industrial - Industria Alimenticia
+ * Proyecto: ABC Industrial - Industria Alimenticia
  *
- * Layout: Fondo naranja-rojo con letras SDI gigantes en opacity baja + dos columnas de lista
+ * Layout: Fondo naranja-rojo con letras ABC gigantes en opacity baja + dos columnas de lista
  * Fase 1: Construir (sin responsive completo todavía)
  */
 
@@ -12,10 +12,10 @@
 export function Epsilon() {
   return (
     <div className="relative bg-gradient-to-br from-orange-600 to-red-700 py-32 px-16 overflow-hidden">
-      {/* Letras SDI gigantes de fondo */}
+      {/* Letras ABC gigantes de fondo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <h1 className="text-[40rem] font-black text-white opacity-5 tracking-tighter leading-none">
-          GN
+          ABC
         </h1>
       </div>
 

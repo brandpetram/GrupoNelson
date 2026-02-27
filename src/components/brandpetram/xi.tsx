@@ -5,7 +5,7 @@
 
 export default function Xi() {
   return (
-    <div id="xi" className="relative bg-white">
+    <div id="xi" className="relative bg-background">
       {/* Imagen — posicionada absolutamente para llenar toda la altura */}
       <div className="md:absolute md:inset-0">
         <div className="md:absolute md:inset-y-0 md:left-0 md:w-1/2">
@@ -22,7 +22,7 @@ export default function Xi() {
         <div className="md:col-start-2 md:pl-8 1728:translate-x-20">
           <div className="px-10 768:px-5 834:px-10 1280:px-0 text-base max-w-prose mx-auto md:max-w-lg md:ml-auto md:mr-0">
             <h2 className="leading-6 text-blue-600 font-semibold tracking-wide uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem]">
-              Grupo Nelson
+              Lorem ipsum
             </h2>
             <h3 className="mt-2 text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-none font-extrabold tracking-tight text-foreground">
               Lorem ipsum dolor
@@ -54,7 +54,7 @@ export default function Xi() {
               </p>
               <div className="pb-12">
                 <a href="#">
-                  <button className="bg-linear-to-br rounded-sm from-blue-500 to-blue-700 hover:opacity-90 py-4 px-6 text-white">
+                  <button className="bg-linear-to-br rounded-xs from-blue-600 to-blue-700 hover:opacity-90 py-4 px-6 text-white">
                     Contáctanos
                   </button>
                 </a>

@@ -54,7 +54,7 @@ export function BigNumber({
         {/* Texto overlay derecha */}
         <div className="absolute inset-0 flex place-items-end md:items-center justify-end">
           <motion.div
-            className="flex flex-col bg-white/70 md:bg-white/90 px-8 py-12 md:rounded-lg max-w-3xl"
+            className="flex flex-col bg-white/70 md:bg-white/90 px-8 py-12 md:rounded-xs max-w-3xl"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -62,7 +62,7 @@ export function BigNumber({
           >
             {/* +200 */}
             <motion.h2
-              className="text-right text-7xl md:text-[6rem] 1200:text-[10rem] 1366:text-[12rem] font-black leading-none tracking-tighter bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent"
+              className="text-right text-7xl md:text-[6rem] 1200:text-[10rem] 1366:text-[12rem] font-black leading-none tracking-tighter bg-gradient-to-r from-orange-600 to-red-700 bg-clip-text text-transparent"
               variants={itemVariants}
             >
               {number}
@@ -133,7 +133,7 @@ export function BigNumberLeft({
         {/* Texto overlay izquierda */}
         <div className="absolute inset-0 flex place-items-end md:items-center justify-start">
           <motion.div
-            className="flex flex-col bg-white/70 md:bg-white/90 px-8 py-12 md:rounded-lg max-w-3xl"
+            className="flex flex-col bg-white/70 md:bg-white/90 px-8 py-12 md:rounded-xs max-w-3xl"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -141,7 +141,7 @@ export function BigNumberLeft({
           >
             {/* +200 */}
             <motion.h2
-              className="text-left text-7xl md:text-[10rem] 1200:text-[15rem] 1366:text-[17rem] font-black leading-none tracking-tighter bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent"
+              className="text-left text-7xl md:text-[10rem] 1200:text-[15rem] 1366:text-[17rem] font-black leading-none tracking-tighter bg-gradient-to-r from-orange-600 to-red-700 bg-clip-text text-transparent"
               variants={itemVariants}
             >
               {number}

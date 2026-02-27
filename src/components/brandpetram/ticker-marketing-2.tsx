@@ -31,7 +31,7 @@ export function TickerMarketing2() {
 
   return (
     <div
-      className="relative overflow-hidden bg-black flex items-center lg:rounded-xl w-full md:w-11/12 1200:w-10/12 mx-auto"
+      className="relative overflow-hidden bg-black flex items-center lg:rounded-xs w-full md:w-11/12 1200:w-10/12 mx-auto"
 
     >
       {/* Imagen de fondo */}
@@ -51,15 +51,15 @@ export function TickerMarketing2() {
           {/* Lado izquierdo - Contenido */}
           <div className="flex flex-col justify-start p-10">
             <h2 className="text-white text-xl mb-2 max-w-sm">
-             Soporte Dinámico Industrial
+             Lorem Ipsum Dolor
             </h2>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-md mt-5 ">
-             ¿Buscas Naves Industriales en Mexicali?
+             ¿Buscas Lorem Ipsum Dolor Sit Amet?
             </h1>
             <p className="text-white/70 text-lg mb-8 max-w-sm">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
           </p>
-            <button className="bg-blue-600  text-white px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors w-fit">
+            <button className="bg-orange-600  text-white px-6 py-3 rounded-xs font-medium hover:bg-white/90 transition-colors w-fit">
               Cotiza Ahora
             </button>
           </div>
@@ -69,7 +69,7 @@ export function TickerMarketing2() {
             <div
               className="p-6 lg:p-12 w-full max-w-[700px] h-[400px] md:h-[600px] 1728:h-[700px]"
             >
-              <div className="bg-white/5 backdrop-blur-md rounded-lg p-8 h-full w-full border border-white/10 shadow-2xl">
+              <div className="bg-white/5 backdrop-blur-md rounded-xs p-8 h-full w-full border border-white/10 shadow-2xl">
                 <TickerBase
                   velocidadBase={22}
                   multiplicadorScroll={4}

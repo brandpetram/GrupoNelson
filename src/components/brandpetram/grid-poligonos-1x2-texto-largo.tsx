@@ -1,6 +1,6 @@
 import { PoligonoImagen1 } from '@/components/ui/brandpetram/poligono-imagen-1'
 import { PoligonoIcono1 } from '@/components/ui/brandpetram/poligono-icono-1'
-import { SdiEmblema } from '@/components/ui/icons/sdi-emblema'
+import { EmblemaGrupoNelson } from '@/components/ui/brandpetram/emblema-nelson'
 
 /**
  * Grid de Polígonos 1x2 - Texto Largo en Polígono Vertical
@@ -34,7 +34,7 @@ export function GridPoligonos1x2TextoLargo() {
           {/* Primera imagen arriba izquierda - cuadrada */}
           <div className="relative aspect-square">
             <PoligonoIcono1
-                icon={<SdiEmblema />}
+                icon={<EmblemaGrupoNelson />}
                 backgroundColor="bg-gradient-to-br from-blue-600 to-blue-700"
                 iconColor="text-white"
                 iconSize="w-32 h-32"

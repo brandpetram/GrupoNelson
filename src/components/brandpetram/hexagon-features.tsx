@@ -19,28 +19,28 @@ export function HexagonFeatures() {
   // Edita aquí los items directamente
   const features: Feature[] = [
     {
-      title: 'Infraestructura Moderna',
-      description: 'Contamos con infraestructura de clase mundial y tecnología de punta para desarrollar y construir parques industriales que optimicen tu operación.'
+      title: 'Lorem Ipsum I',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      title: 'Personal Especializado',
-      description: 'Equipo de ingenieros y técnicos con décadas de experiencia en automatización industrial y sistemas de transporte de carga diversa.'
+      title: 'Lorem Ipsum II',
+      description: 'Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.'
     },
     {
-      title: 'Experiencia Probada',
-      description: 'Proveemos soluciones de calidad a cientos de clientes en toda la república mexicana desde hace más de 20 años.'
+      title: 'Lorem Ipsum III',
+      description: 'Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidatat.'
     },
     {
-      title: 'Ubicación Estratégica',
-      description: 'Parques industriales ubicados estratégicamente en Mexicali con acceso directo a la frontera y vías de comunicación principales.'
+      title: 'Lorem Ipsum IV',
+      description: 'Sunt in culpa qui officia deserunt mollit anim id est laborum sed perspiciatis unde omnis iste natus error sit voluptatem.'
     },
     {
-      title: 'Control y Calidad',
-      description: 'Supervisamos cada etapa del proceso de instalación y mantenimiento con estándares internacionales de calidad y seguridad.'
+      title: 'Lorem Ipsum V',
+      description: 'Accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis quasi architecto beatae vitae.'
     },
     {
-      title: 'Soluciones Personalizadas',
-      description: 'Desarrollamos naves industriales a medida para adaptarnos a las necesidades específicas y capacidad de tu operación industrial.'
+      title: 'Lorem Ipsum VI',
+      description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos ratione.'
     }
   ]
 

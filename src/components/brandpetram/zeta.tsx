@@ -71,11 +71,11 @@ const textVariants = {
 
 export function Zeta() {
     const palabrasLista = [
-        'De Banda',
-        'De Rodillos',
-        'De Cadena',
-        'Espirales',
-        'Aéreos'
+        'Deck',
+        'Plafón',
+        'Lambrín',
+        'Viga',
+        'Celosía'
     ]
 
     return (
@@ -91,8 +91,8 @@ export function Zeta() {
                             className="w-full h-full"
                         >
                             <PoligonoImagen1
-                                src="https://ui.shadcn.com/placeholder.svg"
-                                alt="Nave industrial en Mexicali"
+                                src="/parque-industrial-nelson-1-en-mexicali.jpeg"
+                                alt="Placeholder de tempus"
                             />
                         </motion.div>
 
@@ -103,7 +103,7 @@ export function Zeta() {
                             variants={poligonoTextoVariants}
                         >
                             <PoligonoTexto1
-                                text="Soluciones industriales llave en mano en Mexicali"
+                                text="Soluciones exemplaris modernos"
                                 backgroundColor="bg-background/80"
                                 textColor="text-foreground"
                                 fontSize="text-3xl 360:text-3xl 393:text-3xl 430:text-4xl 768:text-[3.6rem] 834:text-[3.8rem] 1024:text-[4.5rem] 1200:text-[4.3rem] 1280:text-[4.7rem] 1366:text-[5rem] 1440:text-[5.3rem] 1536:text-8xl 1920:text-[7rem] 2240:text-8xl"
@@ -127,7 +127,7 @@ export function Zeta() {
                     >
                         <svg
                             aria-hidden="true"
-                            className="absolute 768:-top-35 1200:-top-40 right-0 w-40 768:h-[24rem] 1024:h-[27rem] 1200:h-[45rem] 1728:h-[60rem] fill-orange-500/79 pointer-events-none z-0"
+                            className="absolute 768:-top-35 1200:-top-40 right-0 w-40 768:h-[24rem] 1024:h-[27rem] 1200:h-[45rem] 1728:h-[60rem] text-foreground/10 pointer-events-none z-0"
                         >
                             <defs>
                                 <pattern
@@ -138,7 +138,7 @@ export function Zeta() {
                                     height="17"
                                     patternUnits="userSpaceOnUse"
                                 >
-                                    <circle cx="16" cy="16" r="3" />
+                                    <circle cx="16" cy="16" r="3" fill="currentColor" />
                                 </pattern>
                             </defs>
                             <rect
@@ -164,8 +164,8 @@ export function Zeta() {
                         )}
 
                         <PoligonoImagen1
-                            src="https://ui.shadcn.com/placeholder.svg"
-                            alt="Instalaciones industriales Grupo Nelson"
+                            src="/parque-industrial-nelson-2-en-mexicali.jpeg"
+                            alt="Placeholder verticorum"
                             textColor="text-white"
                             objectPosition="object-left"
                             className="w-1/2 md:w-full relative z-10 translate-y-32 md:-translate-y-20 rounded-xs"
@@ -185,8 +185,8 @@ export function Zeta() {
                         fontSize="text-xl 768:text-2xl 834:text-2xl 1024:text-2xl 1200:text-[1.8rem] 1280:text-[1.8rem] 1366:text-[2rem] 1440:text-[2rem] 1536:text-[2.2rem] 1728:text-[2.3rem] 1920:text-[2.7rem]"
                         textColor="text-muted-foreground"
                     >
-                        Más de 60 años desarrollando infraestructura industrial de clase mundial en Mexicali. Naves industriales en renta y construcción build-to-suit para empresas que buscan establecerse con éxito en la región fronteriza.
-                        <Link href="/contacto" className="text-blue-600 hover:text-blue-700 transition-colors">
+                        Plures viginti annorum experientia providendi designandi installationis solutionum systematum empresarum manufacturae necesitantium automatizare fluxum materialium packaging componentorum productorum.
+                        <Link href="/contacto" className="text-orange-600 hover:text-orange-700 transition-colors">
                             <Flecha1 />
                         </Link>
                     </Parrafo>

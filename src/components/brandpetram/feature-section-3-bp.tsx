@@ -33,7 +33,7 @@ export function FeatureSection3BP() {
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-5">
-              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-md border shadow-xs">
+              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-xs border shadow-xs">
                 <Rocket className="text-primary h-5 w-5" />
               </div>
               <div className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ export function FeatureSection3BP() {
               </div>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-5">
-              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-md border shadow-xs">
+              <div className="bg-background flex h-10 w-10 shrink-0 items-center justify-center rounded-xs border shadow-xs">
                 <Rocket className="text-primary h-5 w-5" />
               </div>
               <div className="flex flex-col gap-2">
@@ -65,15 +65,15 @@ export function FeatureSection3BP() {
         <div className="w-full 360:w-full 393:w-full 430:w-full 768:w-full 834:w-full 1024:flex-1 1200:flex-1 1280:flex-1 1366:flex-1 1440:flex-1 1536:flex-1 1728:flex-1 1920:flex-1 relative">
           <AspectRatio ratio={1}>
             <Image
-              src="https://ui.shadcn.com/placeholder.svg"
+              src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-4.jpeg"
               alt="Feature section image"
               fill
-              className="rounded-xl object-cover"
+              className="rounded-xs object-cover"
             />
           </AspectRatio>
 
           {/* Cuadritos decorativos pegados debajo de la imagen */}
-          <div className="absolute top-full right-20 md:right-40 z-10 pointer-events-none">
+          <div className="scale-70 md:scale-100 absolute top-full right-20 md:right-40 z-10 pointer-events-none">
             <CuadritosLluvia />
           </div>
         </div>
