@@ -1,12 +1,12 @@
 import { BlogFilter, Category } from '@/app/noticias/category-filter'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList } from '@/components/ui/breadcrumb'
 import { BlogListWithPagination } from '@/app/noticias/blog-list-with-pagination'
-import { loadMorePosts, getInitialPosts, getTotalPostsCount } from '@/lib/actions'
+import { loadMoreNoticias, getInitialNoticias, getTotalNoticiasCount } from '@/lib/actions'
 
 const PAGE_SIZE = 12
 
 export default async function NoticiasPage() {
-    const [posts, totalCount] = await Promise.all([getInitialPosts(PAGE_SIZE), getTotalPostsCount()])
+    const [posts, totalCount] = await Promise.all([getInitialNoticias(PAGE_SIZE), getTotalNoticiasCount()])
 
     const categories: Category[] = Array.from(new Map(posts.filter((post) => post.category).map((post) => [post.category.slug, post.category.title]))).map(([slug, title]) => ({ slug, title }))
 
@@ -33,7 +33,7 @@ export default async function NoticiasPage() {
             <BlogListWithPagination
                 initialPosts={posts}
                 totalCount={totalCount}
-                loadMoreAction={loadMorePosts}
+                loadMoreAction={loadMoreNoticias}
             />
         </>
     )

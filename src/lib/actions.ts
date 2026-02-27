@@ -100,3 +100,57 @@ export async function getAllCategories(): Promise<{title: string; slug: string}[
         {next: {revalidate: 30}}
     )
 }
+
+// --- Noticias ---
+
+export async function getInitialNoticias(limit: number = 9, lang: Lang = 'es'): Promise<Post[]> {
+    const query = `*[_type == "noticia" && defined(slug.current)]|order(publishedAt desc)[0...${limit}]${postProjection(lang)}`
+    return client.fetch<Post[]>(query, {}, {next: {revalidate: 30}})
+}
+
+export async function loadMoreNoticias(offset: number, limit: number = 9, lang: Lang = 'es'): Promise<Post[]> {
+    const end = offset + limit
+    const query = `*[_type == "noticia" && defined(slug.current)]|order(publishedAt desc)[$offset...$end]${postProjection(lang)}`
+    return client.fetch<Post[]>(query, {offset, end}, {next: {revalidate: 30}})
+}
+
+export async function getTotalNoticiasCount(): Promise<number> {
+    return client.fetch<number>(`count(*[_type == "noticia" && defined(slug.current)])`, {}, {next: {revalidate: 30}})
+}
+
+export async function getNoticiaBySlug(slug: string, lang: Lang = 'es'): Promise<PostWithBody | null> {
+    const query = `*[_type == "noticia" && slug.current == $slug][0]${postWithBodyProjection(lang)}`
+    return client.fetch<PostWithBody>(query, {slug}, {next: {revalidate: 30}})
+}
+
+export async function getAllNoticiasSlugs(): Promise<{slug: string}[]> {
+    return client.fetch<{slug: string}[]>(
+        `*[_type == "noticia" && defined(slug.current)]{"slug": slug.current}`,
+        {},
+        {next: {revalidate: 30}}
+    )
+}
+
+export async function getCategoryNoticias(category: string, limit: number = 9, lang: Lang = 'es'): Promise<Post[]> {
+    const query = `*[_type == "noticia" && defined(slug.current) && category->slug.current == $category]|order(publishedAt desc)[0...${limit}]${postProjection(lang)}`
+    return client.fetch<Post[]>(query, {category}, {next: {revalidate: 30}})
+}
+
+export async function loadMoreCategoryNoticias(category: string, offset: number, limit: number = 9, lang: Lang = 'es'): Promise<Post[]> {
+    const end = offset + limit
+    const query = `*[_type == "noticia" && defined(slug.current) && category->slug.current == $category]|order(publishedAt desc)[$offset...$end]${postProjection(lang)}`
+    return client.fetch<Post[]>(query, {category, offset, end}, {next: {revalidate: 30}})
+}
+
+export async function getCategoryNoticiasCount(category: string): Promise<number> {
+    return client.fetch<number>(
+        `count(*[_type == "noticia" && defined(slug.current) && category->slug.current == $category])`,
+        {category},
+        {next: {revalidate: 30}}
+    )
+}
+
+export async function getAllNoticias(lang: Lang = 'es'): Promise<Post[]> {
+    const query = `*[_type == "noticia" && defined(slug.current)]|order(publishedAt desc)${postProjection(lang)}`
+    return client.fetch<Post[]>(query, {}, {next: {revalidate: 30}})
+}

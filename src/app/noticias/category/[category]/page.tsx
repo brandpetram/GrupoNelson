@@ -2,7 +2,7 @@ import { BlogFilter, Category } from '@/app/noticias/category-filter'
 import { notFound } from 'next/navigation'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { CategoryBlogListWithPagination } from '@/app/noticias/category-blog-list-with-pagination'
-import { loadMoreCategoryPosts, getCategoryPosts, getCategoryPostsCount, getAllPosts, getAllCategories } from '@/lib/actions'
+import { loadMoreCategoryNoticias, getCategoryNoticias, getCategoryNoticiasCount, getAllNoticias, getAllCategories } from '@/lib/actions'
 
 const PAGE_SIZE = 9
 
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
     const { category } = await params
-    const [posts, totalCount, allPosts] = await Promise.all([getCategoryPosts(category, PAGE_SIZE), getCategoryPostsCount(category), getAllPosts()])
+    const [posts, totalCount, allPosts] = await Promise.all([getCategoryNoticias(category, PAGE_SIZE), getCategoryNoticiasCount(category), getAllNoticias()])
 
     if (posts.length === 0) {
         notFound()
@@ -43,7 +43,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     const categoryTitle = posts[0]?.category?.title || category
 
     // Acción del servidor para cargar más posts de esta categoría
-    const loadMoreAction = loadMoreCategoryPosts.bind(null, category)
+    const loadMoreAction = loadMoreCategoryNoticias.bind(null, category)
 
     return (
         <>

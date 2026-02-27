@@ -4,10 +4,10 @@ import { PortableText } from '@portabletext/react'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { formatDate } from '@/lib/format-date'
 import { portableTextComponents } from '@/components/content-components'
-import { getPostBySlug, getAllPostSlugs } from '@/lib/actions'
+import { getNoticiaBySlug, getAllNoticiasSlugs } from '@/lib/actions'
 
 export async function generateStaticParams() {
-    const posts = await getAllPostSlugs()
+    const posts = await getAllNoticiasSlugs()
     return posts.map((post) => ({
         slug: post.slug,
     }))
@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
-    const post = await getPostBySlug(slug)
+    const post = await getNoticiaBySlug(slug)
 
     if (!post) {
         return {
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function NoticiaPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
-    const post = await getPostBySlug(slug)
+    const post = await getNoticiaBySlug(slug)
 
     if (!post) {
         notFound()
