@@ -113,58 +113,58 @@ const posImage20 = 'object-center'
 const overlayBlendMode = 'multiply' // Cambia aquí el modo
 
 // COLUMNA 1
-const overlayImage1 = 'rgba(100, 150, 250, 0.5)'
+const overlayImage1 = ''
 // COLUMNA 2
-const overlayImage2 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage3 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage4 = 'rgba(100, 150, 250, 0.5)'
+const overlayImage2 = ''
+const overlayImage3 = ''
+const overlayImage4 = ''
 // COLUMNA 3
-const overlayImage5 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage6 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage7 = 'rgba(100, 150, 250, 0.4)'
-const overlayImage8 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage9 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage10 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage11 = 'rgba(100, 150, 250, 0.5)'
+const overlayImage5 = ''
+const overlayImage6 = ''
+const overlayImage7 = ''
+const overlayImage8 = ''
+const overlayImage9 = ''
+const overlayImage10 = ''
+const overlayImage11 = ''
 // COLUMNA 4
-const overlayImage12 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage13 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage14 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage15 = 'rgba(100, 150, 250, 0.5)' // ★ PRINCIPAL
-const overlayImage16 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage17 = 'rgba(100, 150, 250, 0.5)'
+const overlayImage12 = ''
+const overlayImage13 = ''
+const overlayImage14 = ''
+const overlayImage15 = '' // ★ PRINCIPAL
+const overlayImage16 = ''
+const overlayImage17 = ''
 // COLUMNA 5
-const overlayImage18 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage19 = 'rgba(100, 150, 250, 0.5)'
-const overlayImage20 = 'rgba(100, 150, 250, 0.5)'
+const overlayImage18 = ''
+const overlayImage19 = ''
+const overlayImage20 = ''
 
 // Rutas de las imágenes (ordenadas por columna: izquierda→derecha, arriba→abajo)
 // COLUMNA 1: img1
-const imageUrl1 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-251.jpg'
+const imageUrl1 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-351.jpg'
 // COLUMNA 2: img2, img3, img4
-const imageUrl2 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-252.jpg'
-const imageUrl3 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-253.jpg'
-const imageUrl4 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg'
+const imageUrl2 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-356.jpg'
+const imageUrl3 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-361.jpg'
+const imageUrl4 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-366.jpg'
 // COLUMNA 3: img5, img6, img7, img8, img9, img10, img11
-const imageUrl5 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg'
-const imageUrl6 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg'
-const imageUrl7 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-257.jpg'
-const imageUrl8 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-258.jpg'
-const imageUrl9 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-259.jpg'
-const imageUrl10 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-260.jpg'
-const imageUrl11 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-261.jpg'
+const imageUrl5 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-371.jpg'
+const imageUrl6 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-376.jpg'
+const imageUrl7 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-381.jpg'
+const imageUrl8 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-386.jpg'
+const imageUrl9 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-391.jpg'
+const imageUrl10 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-396.jpg'
+const imageUrl11 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-401.jpg'
 
-// COLUMNA 4: img12, img13, img14, img15, img16, img17, img18
-const imageUrl12 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-262.jpg'
-const imageUrl13 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-263.jpg'
-const imageUrl14 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-264.jpg'
-const imageUrl15 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-265.jpg'
-const imageUrl16 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-266.jpg'
-const imageUrl17 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-267.jpg'
+// COLUMNA 4: img12, img13, img14, img15, img16, img17
+const imageUrl12 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-406.jpg'
+const imageUrl13 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-411.jpg'
+const imageUrl14 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-416.jpg'
+const imageUrl15 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-421.jpg'
+const imageUrl16 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-426.jpg'
+const imageUrl17 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-431.jpg'
 // COLUMNA 5: img18, img19, img20
-const imageUrl18 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg'
-const imageUrl19 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg'
-const imageUrl20 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg'
+const imageUrl18 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-436.jpg'
+const imageUrl19 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-441.jpg'
+const imageUrl20 = '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-446.jpg'
 
 // CONTROL DE ESCALA DEL MOSAICO POR BREAKPOINT
 // Escala todo el mosaico proporcionalmente en diferentes tamaños de pantalla
