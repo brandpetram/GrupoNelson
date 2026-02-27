@@ -1,23 +1,22 @@
-'use client';
+"use client"
 
-import * as React from 'react';
+import { useState, useEffect } from "react"
 
-export function useMedia(query: string, defaultState = false) {
-  const [state, setState] = React.useState(defaultState);
+export function useMedia(query: string): boolean {
+  const [matches, setMatches] = useState(true)
 
-  React.useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const mql = window.matchMedia(query);
+  useEffect(() => {
+    const matchMedia = window.matchMedia(query)
+    setMatches(matchMedia.matches)
 
-    const onChange = (e: MediaQueryListEvent) => setState(e.matches);
-    setState(mql.matches);
+    const handleChange = () => setMatches(matchMedia.matches)
 
-    mql.addEventListener?.('change', onChange);
+    matchMedia.addEventListener("change", handleChange)
 
     return () => {
-      mql.removeEventListener?.('change', onChange);
-    };
-  }, [query]);
+      matchMedia.removeEventListener("change", handleChange)
+    }
+  }, [query])
 
-  return state;
+  return matches
 }

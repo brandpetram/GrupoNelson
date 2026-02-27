@@ -35,9 +35,6 @@
     --breakpoint-3840: 240rem;      /* 3840px / 16 */
 }
 
-
-
-
 /* Custom variant para dark mode */
 @custom-variant dark (&:is(.dark *));
 
