@@ -57,6 +57,12 @@ interface ContentText1Props {
    * @example "bg-[#440393]", "bg-primary", "bg-gradient-to-r from-emerald-500 to-blue-500"
    */
   clasesLinea?: string
+
+  /**
+   * Indica si se debe mostrar la línea decorativa
+   * @default true
+   */
+  mostrarLinea?: boolean
 }
 
 const colorLineaClasses: Record<string, string> = {
@@ -160,6 +166,7 @@ export function ContentText1({
   clasesTitulo,
   clasesTexto,
   clasesLinea,
+  mostrarLinea = true,
 }: ContentText1Props) {
   const variante = escalaVariantes[escala]
 
@@ -173,7 +180,7 @@ export function ContentText1({
       <div className={cn('mx-auto', variante.anchoInterno, variante.padding)}>
         {/* Título */}
         <h2 className={cn(
-          'font-bold tracking-tight text-center text-foreground',
+          'font-bold tracking-tight text-foreground',
           variante.titulo,
           clasesTitulo
         )}>
@@ -181,13 +188,15 @@ export function ContentText1({
         </h2>
         
         {/* Línea decorativa */}
-        <div className={cn('flex justify-center', variante.espacioTitulo)}>
-          <div className={cn(
-            altoLineaClasses[altoLinea], 
-            anchoLineaClasses[anchoLinea], 
-            clasesLinea || colorLineaClasses[colorLinea]
-          )} />
-        </div>
+        {mostrarLinea && (
+          <div className={cn('flex justify-center', variante.espacioTitulo)}>
+            <div className={cn(
+              altoLineaClasses[altoLinea], 
+              anchoLineaClasses[anchoLinea], 
+              clasesLinea || colorLineaClasses[colorLinea]
+            )} />
+          </div>
+        )}
         
         {/* Texto */}
         {children && (

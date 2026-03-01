@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.orbentech.com',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,

@@ -263,14 +263,20 @@ function ListItem({ title, description, children, href }: ListItemProps) {
 // === Main Header Component ===
 interface HeaderProps {
   variant?: 'dark' | 'light';
+  mobileVariant?: 'dark' | 'light';
 }
 
-export default function Header({ variant = 'light' }: HeaderProps) {
+export default function Header({ 
+  variant = 'light',
+  mobileVariant 
+}: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const isLarge = useMedia('(min-width: 64rem)');
 
-  const isDarkVariant = variant === 'dark';
+  // Determine active variant based on screen size
+  const activeVariant = isLarge ? variant : (mobileVariant ?? variant);
+  const isDarkVariant = activeVariant === 'dark';
   // Logo variant: 'auto' para fondos oscuros (blanco → negro al scroll), 'default' para fondos claros (siempre negro)
   const logoVariant = isDarkVariant ? 'auto' : 'default';
 
@@ -389,17 +395,17 @@ export default function Header({ variant = 'light' }: HeaderProps) {
                 </div>
 
                 {/* Menu - centro */}
-                <div className="flex justify-center">
-                  <NavMenu variant={variant} />
+                <div className="flex justify-center pt-3">
+                  <NavMenu variant={activeVariant} />
                 </div>
 
                 {/* Banderas - antes del botón (ocultas en 1024) */}
-                <div className="hidden 1280:flex justify-end">
+                <div className="hidden 1280:flex justify-end pt-3">
                   <LanguageFlags size="md" />
                 </div>
 
                 {/* Button - derecha */}
-                <div className="flex justify-end in-data-scrolled:justify-center in-data-scrolled:-translate-x-10">
+                <div className="flex justify-end in-data-scrolled:justify-center in-data-scrolled:-translate-x-10 pt-3">
                   <Button asChild size="sm">
                     <Link href="/contact">
                       <span>Contacto</span>
