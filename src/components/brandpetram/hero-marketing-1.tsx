@@ -24,21 +24,22 @@ export function HeroMarketing1() {
     titulo: 'Tu Nave Industrial con Certificación LEED en Mexicali',
     clasesLinea: 'bg-gray-300',
       mostrarLinea: false,
-    emblema: (
-        <PoligonoIcono1
-            icon={<EmblemaGrupoNelson className="w-32 h-auto" />}
-            backgroundColor="bg-blue-500"
-            iconColor="text-white"
-            iconSize="size-32"
-            hoverEffect="rotate"
-            className="rounded-xl p-7"
-        />
-    ),
-      clasesEmblema: 'bg-gray-300 aspect-square max-h-10 lg:max-h-72 bg-transparent',
+
+      emblemaInterior: (
+          <PoligonoIcono1
+              icon={<EmblemaGrupoNelson className="w-32 h-auto" />}
+              backgroundColor="bg-blue-500"
+              iconColor="text-white"
+              iconSize="size-32"
+              hoverEffect="rotate"
+              className="rounded-xl p-7"
+          />
+      ),
+      clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 lg:max-h-72 bg-transparent',
     anchoLinea: 'full' as const,
     altoLinea: 'thin' as const,
     clasesTitulo: 'leading-none font-extrabold lg:text-[4rem] text-left ',
-    clasesTexto: 'leading-normal text-balance xl:text-justify font-normal',
+    clasesTexto: 'leading-normal text-balance tracking-wide 1200:text-[2rem] font-light',
   }
 
   return (
@@ -92,12 +93,7 @@ export function HeroMarketing1() {
               custom para generar demanda altamente calificada y optimizar
               operaciones, multiplicando ventas de forma medible y sostenida.
             </p>
-            <p>
-              Nuestros casos exitosos demuestran aumentos del 700% en leads,
-              reducciones del 70% en costos operativos, y somos la primera
-              agencia mexicana especializada en posicionamiento B2B en Google y
-              plataformas AI.
-            </p>
+
           </ContentText1>
         </div>
       </div>

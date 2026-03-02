@@ -73,6 +73,16 @@ interface ContentText1Props {
    * Clases adicionales para el contenedor del emblema
    */
   clasesEmblema?: string
+
+  /**
+   * Emblema opcional que se muestra dentro del texto (antes del contenido)
+   */
+  emblemaInterior?: React.ReactNode
+
+  /**
+   * Clases adicionales para el contenedor del emblema interior
+   */
+  clasesEmblemaInterior?: string
 }
 
 const colorLineaClasses: Record<string, string> = {
@@ -179,6 +189,8 @@ export function ContentText1({
   mostrarLinea = true,
   emblema,
   clasesEmblema,
+  emblemaInterior,
+  clasesEmblemaInterior,
 }: ContentText1Props) {
   const variante = escalaVariantes[escala]
 
@@ -233,6 +245,11 @@ export function ContentText1({
               variante.espacioTexto,
               clasesTexto
             )}>
+              {emblemaInterior && (
+                <div className={cn('float-left mr-6 mb-2', clasesEmblemaInterior)}>
+                  {emblemaInterior}
+                </div>
+              )}
               {children}
             </div>
           )}
