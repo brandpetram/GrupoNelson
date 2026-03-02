@@ -105,11 +105,11 @@ export function ContentText1({
   return (
     <div
       className={cn(
-        'py-12 md:py-16 lg:py-20 bg-white/95',
+        'py-12 md:py-16 lg:pt-20 bg-white/95 ',
         className
       )}
     >
-      <div className="w-full">
+      <div className="w-full ">
         <div className="w-full">
           {/* Fila del Emblema + Título */}
           <div className={cn(

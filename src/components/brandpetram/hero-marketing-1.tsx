@@ -67,7 +67,7 @@ export function HeroMarketing1() {
       </div>
 
       {/* Caja de texto superpuesta */}
-      <div className="relative z-10 -translate-y-30  md:-translate-y-20 xl:-translate-y-80">
+      <div className="relative z-10 -mt-30  md:-mt-20 xl:-mt-80">
 
         {/* Pantallas ≥ 1536px */}
         <div className="">
