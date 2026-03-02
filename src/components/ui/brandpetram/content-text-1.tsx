@@ -7,12 +7,6 @@ interface ContentText1Props {
   titulo: string
   
   /**
-   * Escala proporcional (ajusta font size, ancho interno, padding y espacios)
-   * @default "lg"
-   */
-  escala?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
-  
-  /**
    * Color de la línea decorativa
    * @default "emerald"
    */
@@ -115,69 +109,8 @@ const altoLineaClasses: Record<string, string> = {
   chonky: 'h-3',
 }
 
-// Variantes proporcionales: font size + ancho interno
-const escalaVariantes = {
-  sm: {
-    titulo: 'text-xl md:text-2xl lg:text-3xl',
-    texto: 'text-sm md:text-base',
-    anchoInterno: 'max-w-2xl',
-    padding: 'px-6 md:px-10 lg:px-14',
-    espacioTitulo: 'mt-4 md:mt-5',
-    espacioTexto: 'mt-5 md:mt-6',
-  },
-  md: {
-    titulo: 'text-2xl md:text-3xl lg:text-4xl',
-    texto: 'text-base md:text-lg',
-    anchoInterno: 'max-w-3xl',
-    padding: 'px-6 md:px-12 lg:px-18',
-    espacioTitulo: 'mt-5 md:mt-6',
-    espacioTexto: 'mt-6 md:mt-8',
-  },
-  lg: {
-    titulo: 'text-3xl md:text-4xl lg:text-5xl',
-    texto: 'text-base md:text-lg',
-    anchoInterno: 'max-w-4xl',
-    padding: 'px-8 md:px-16 lg:px-24',
-    espacioTitulo: 'mt-6 md:mt-8',
-    espacioTexto: 'mt-8 md:mt-10',
-  },
-  xl: {
-    titulo: 'text-4xl md:text-5xl lg:text-6xl',
-    texto: 'text-lg md:text-xl',
-    anchoInterno: 'max-w-5xl',
-    padding: 'px-10 md:px-20 lg:px-28',
-    espacioTitulo: 'mt-8 md:mt-10',
-    espacioTexto: 'mt-10 md:mt-12',
-  },
-  '2xl': {
-    titulo: 'text-5xl md:text-6xl lg:text-7xl',
-    texto: 'text-xl md:text-2xl',
-    anchoInterno: 'max-w-6xl',
-    padding: 'px-12 md:px-24 lg:px-32',
-    espacioTitulo: 'mt-10 md:mt-12',
-    espacioTexto: 'mt-12 md:mt-14',
-  },
-  '3xl': {
-    titulo: 'text-6xl md:text-7xl lg:text-8xl',
-    texto: 'text-xl md:text-2xl lg:text-3xl',
-    anchoInterno: 'max-w-7xl',
-    padding: 'px-14 md:px-28 lg:px-36',
-    espacioTitulo: 'mt-12 md:mt-14',
-    espacioTexto: 'mt-14 md:mt-16',
-  },
-  '4xl': {
-    titulo: 'text-7xl md:text-8xl lg:text-9xl',
-    texto: 'text-2xl md:text-3xl lg:text-4xl',
-    anchoInterno: 'max-w-full',
-    padding: 'px-16 md:px-32 lg:px-40',
-    espacioTitulo: 'mt-14 md:mt-16',
-    espacioTexto: 'mt-16 md:mt-20',
-  },
-}
-
 export function ContentText1({
   titulo,
-  escala = 'lg',
   colorLinea = 'emerald',
   anchoLinea = 'md',
   altoLinea = 'normal',
@@ -192,8 +125,6 @@ export function ContentText1({
   emblemaInterior,
   clasesEmblemaInterior,
 }: ContentText1Props) {
-  const variante = escalaVariantes[escala]
-
   return (
     <div
       className={cn(
@@ -201,7 +132,7 @@ export function ContentText1({
         className
       )}
     >
-      <div className={cn('mx-auto', variante.anchoInterno, variante.padding)}>
+      <div className={cn('')}>
         <div className="w-full">
           {/* Fila del Emblema + Título */}
           <div className={cn(
@@ -219,7 +150,7 @@ export function ContentText1({
             <h2 className={cn(
               'font-bold tracking-tight text-foreground flex-1',
               !emblema && 'mx-auto',
-              variante.titulo,
+              'text-3xl md:text-4xl lg:text-5xl',
               clasesTitulo
             )}>
               {titulo}
@@ -228,7 +159,7 @@ export function ContentText1({
           
           {/* Línea decorativa */}
           {mostrarLinea && (
-            <div className={cn('flex justify-center', variante.espacioTitulo)}>
+            <div className={cn('flex justify-center mt-6 md:mt-8')}>
               <div className={cn(
                 altoLineaClasses[altoLinea], 
                 anchoLineaClasses[anchoLinea], 
@@ -240,9 +171,9 @@ export function ContentText1({
           {/* Texto */}
           {children && (
             <div className={cn(
-              'space-y-6 text-muted-foreground leading-relaxed',
-              variante.texto,
-              variante.espacioTexto,
+              'space-y-6 text-muted-foreground',
+              'text-base md:text-lg',
+              'mt-8 md:mt-10',
               clasesTexto
             )}>
               {emblemaInterior && (

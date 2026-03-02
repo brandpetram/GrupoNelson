@@ -16,11 +16,12 @@ import { ContentText1 } from '../ui/brandpetram/content-text-1'
 import { ImagenRectangulo } from '../ui/brandpetram/imagen-rectangulo'
 import {EmblemaGrupoNelson} from "@/components/ui/brandpetram/emblema-nelson";
 import {PoligonoIcono1} from "@/components/ui/brandpetram/poligono-icono-1";
+import { cn } from '@/lib/utils'
 
 export function HeroMarketing1() {
   // Configuración del contenido de texto
   const propsContenido = {
-    className: 'rounded-2xl bg-white/80',
+    className: 'rounded-2xl bg-background/80',
     titulo: 'Tu Nave Industrial con Certificación LEED en Mexicali',
     clasesLinea: 'bg-gray-300',
       mostrarLinea: false,
@@ -38,8 +39,8 @@ export function HeroMarketing1() {
       clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 lg:max-h-72 bg-transparent',
     anchoLinea: 'full' as const,
     altoLinea: 'thin' as const,
-    clasesTitulo: 'leading-none font-extrabold lg:text-[4rem] text-left ',
-    clasesTexto: 'leading-normal text-balance tracking-wide 1200:text-[2rem] font-light',
+    clasesTitulo: 'leading-none font-extrabold text-left 1920:text-[5rem] ',
+    clasesTexto: 'leading-normal tracking-wide 1200:text-[2rem] font-light',
   }
 
   return (
@@ -68,16 +69,12 @@ export function HeroMarketing1() {
       </div>
 
       {/* Caja de texto superpuesta */}
-      <div className="relative z-10 max-w-7xl -translate-y-60 -mb-60 lg:-translate-y-80 lg:-mb-80 xl:-translate-y-80 xl:-mb-80 w-11/12 lg:w-10/12 xl:w-8/12 2xl:w-9/12 mx-auto">
+      <div className="relative z-10 -translate-y-60  lg:-translate-y-80 xl:-translate-y-80">
         {/* Pantallas < 1536px */}
         <div className="2xl:hidden">
-          <ContentText1  escala="lg" {...propsContenido}>
+          <ContentText1 {...propsContenido}>
             <p>
-              Brandpetram es una agencia B2B con más de 12 años de experiencia
-              transformando empresas industriales mexicanas exitosamente.
-              Combinamos comunicación estratégica, SEO avanzado y sistemas
-              custom para generar demanda altamente calificada y optimizar
-              operaciones, multiplicando ventas de forma medible y sostenida.
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
 
           </ContentText1>
@@ -85,13 +82,15 @@ export function HeroMarketing1() {
 
         {/* Pantallas ≥ 1536px */}
         <div className="hidden 2xl:block z-50">
-          <ContentText1  escala="2xl" {...propsContenido}>
+          <ContentText1
+            {...propsContenido}
+            clasesTitulo={cn(propsContenido.clasesTitulo, '')}
+            clasesTexto={cn(propsContenido.clasesTexto, '')}
+            className={cn(propsContenido.className, 'px-[6rem] mx-[15rem]')}
+          >
             <p>
-              Brandpetram es una agencia B2B con más de 12 años de experiencia
-              transformando empresas industriales mexicanas exitosamente.
-              Combinamos comunicación estratégica, SEO avanzado y sistemas
-              custom para generar demanda altamente calificada y optimizar
-              operaciones, multiplicando ventas de forma medible y sostenida.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
             </p>
 
           </ContentText1>
