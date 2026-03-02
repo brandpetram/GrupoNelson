@@ -162,7 +162,7 @@ export function ContentText1({
           {/* Botón */}
           {mostrarBoton && (
             <div className={cn('flex justify-center mt-10 md:mt-12', clasesBoton)}>
-              <Button className="bg-blue-600 py-8 md:py-10 font-semibold w-full text-[1.5rem] md:text-[2rem] 1200:text-[2.4rem]">
+              <Button className="bg-blue-600 hover:bg-blue-700 py-8 md:py-10 font-semibold w-full text-[1.5rem] md:text-[2rem] 1200:text-[2.4rem]">
                 <Link href={botonUrl}>
                   {botonTexto}
                 </Link>

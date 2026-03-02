@@ -39,10 +39,10 @@ export function LogoNelson({
   }[variant];
 
   const textColor = {
-    default: 'fill-[#080909]',
+    default: 'fill-[#080909] dark:fill-white',
     white: 'fill-white',
     monochrome: 'fill-current',
-    auto: 'fill-white transition-colors duration-300 in-data-scrolled:fill-[#080909] in-data-[state=active]:fill-[#080909]',
+    auto: 'fill-white transition-colors duration-300 in-data-scrolled:fill-[#080909] dark:in-data-scrolled:fill-white in-data-[state=active]:fill-[#080909] dark:in-data-[state=active]:fill-white',
   }[variant];
 
   return (

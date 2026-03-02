@@ -21,7 +21,7 @@ import {PoligonoIcono1} from "@/components/ui/brandpetram/poligono-icono-1";
 export function HeroMarketing1() {
   // Configuración del contenido de texto
   const propsContenido = {
-    className: 'rounded-2xl bg-background/80 px-[2rem] mx-[1rem] md:px-[3rem] md:mx-[5rem]  1920:px-[6rem] 1920:mx-[15rem]',
+    className: 'rounded-2xl bg-background/80 px-[2rem] mx-[1rem] md:px-[3rem] md:mx-[5rem]  1728:px-[6rem] 1728:mx-[12rem] 1920:px-[6rem] 1920:mx-[15rem]',
     titulo: 'Tu Nave Industrial con Certificación LEED en Mexicali',
     clasesLinea: 'bg-gray-300 w-full h-1',
       mostrarLinea: true,
@@ -37,7 +37,7 @@ export function HeroMarketing1() {
           />
       ),
       clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 md:max-h-20 1024:max-h-32 bg-transparent',
-    clasesTitulo: 'leading-none font-extrabold text-left 1920:text-[5rem]',
+    clasesTitulo: 'leading-none font-extrabold text-left 1728:text-[4rem] 1920:text-[5rem]',
     clasesTexto: 'leading-normal tracking-wide 1200:text-[2rem] font-light',
   }
 

@@ -16,7 +16,6 @@ export function LanguageFlags({ className, size = 'md', showLabels = false }: La
   // Determinar idioma actual basado en la ruta
   const getCurrentLang = () => {
     if (pathname?.startsWith('/en')) return 'en';
-    if (pathname?.startsWith('/cn')) return 'cn';
     return 'es';
   };
 
@@ -38,7 +37,6 @@ export function LanguageFlags({ className, size = 'md', showLabels = false }: La
   const languages = [
     { code: 'es', flag: '/mex.jpg', label: 'Español' },
     { code: 'en', flag: '/eua.jpg', label: 'English' },
-    { code: 'cn', flag: '/china.jpeg', label: '中文' },
   ];
 
   return (

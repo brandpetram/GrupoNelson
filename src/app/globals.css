@@ -239,13 +239,13 @@
 
   /* Tema OSCURO con clase .dark */
   .dark {
-    --background: #00030c;
+    --background: #0a1628;
     --foreground: var(--color-white);
-    --card: #00030c;
+    --card: #0a1628;
     --card-foreground: var(--color-white);
-    --illustration: var(--color-zinc-900);
+    --illustration: #0d1f3c;
     --border-illustration: color-mix(in oklab, var(--color-white) 7.5%, transparent);
-    --popover: #00030c;
+    --popover: #0a1628;
     --popover-foreground: var(--color-white);
     --primary: #F15C00;
     --primary-foreground: var(--color-white);

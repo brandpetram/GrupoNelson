@@ -50,6 +50,7 @@ import {
   Calendar,
 } from 'lucide-react';
 import { useMedia } from '@/hooks/use-media';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
 
 // === Data imports ===
@@ -405,7 +406,8 @@ export default function Header({
                 </div>
 
                 {/* Button - derecha */}
-                <div className="flex justify-end in-data-scrolled:justify-center in-data-scrolled:-translate-x-10 pt-3">
+                <div className="flex items-center gap-2 justify-end in-data-scrolled:justify-center in-data-scrolled:-translate-x-10 pt-3">
+                  <ThemeToggle variant={activeVariant} />
                   <Button asChild size="sm">
                     <Link href="/contact">
                       <span>Contacto</span>
@@ -458,11 +460,14 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 
         {/* CTA Button and Language Flags at bottom */}
         <div className="border-t px-4 py-4 space-y-3">
-          <Button asChild size="lg" className="w-full">
-            <Link href="/contact" onClick={closeMenu}>
-              <span>Contacto</span>
-            </Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <Button asChild size="lg" className="flex-1">
+              <Link href="/contact" onClick={closeMenu}>
+                <span>Contacto</span>
+              </Link>
+            </Button>
+          </div>
 
           {/* Banderas en menú móvil */}
           <div className="flex justify-center pt-2">
