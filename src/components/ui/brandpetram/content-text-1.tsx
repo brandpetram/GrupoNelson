@@ -1,38 +1,10 @@
-import { cn } from '../../../lib/utils'
+import { cn } from '@/lib/utils'
 
 interface ContentText1Props {
   /**
    * Título principal
    */
   titulo: string
-  
-  /**
-   * Color de la línea decorativa
-   * @default "emerald"
-   */
-  colorLinea?: 'emerald' | 'blue' | 'indigo' | 'purple' | 'red' | 'amber' | 'slate'
-  
-  /**
-   * Ancho de la línea decorativa
-   * @default "md"
-   */
-  anchoLinea?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'
-  
-  /**
-   * Grosor de la línea decorativa
-   * @default "normal"
-   */
-  altoLinea?: 'hairline' | 'thin' | 'light' | 'normal' | 'thick' | 'fat' | 'chonky'
-  
-  /**
-   * Contenido de texto (párrafos)
-   */
-  children?: React.ReactNode
-  
-  /**
-   * Clases adicionales para el contenedor
-   */
-  className?: string
   
   /**
    * Clases adicionales para el título (leading, tracking, etc.)
@@ -47,8 +19,8 @@ interface ContentText1Props {
   clasesTexto?: string
   
   /**
-   * Clases adicionales para la línea decorativa (sobreescribe colorLinea si se usa)
-   * @example "bg-[#440393]", "bg-primary", "bg-gradient-to-r from-emerald-500 to-blue-500"
+   * Clases adicionales para la línea decorativa
+   * @example "bg-[#440393] w-24 h-1", "bg-primary w-full h-px"
    */
   clasesLinea?: string
 
@@ -79,41 +51,8 @@ interface ContentText1Props {
   clasesEmblemaInterior?: string
 }
 
-const colorLineaClasses: Record<string, string> = {
-  emerald: 'bg-emerald-600',
-  blue: 'bg-blue-600',
-  indigo: 'bg-indigo-600',
-  purple: 'bg-purple-600',
-  red: 'bg-red-600',
-  amber: 'bg-amber-500',
-  slate: 'bg-slate-600',
-}
-
-const anchoLineaClasses: Record<string, string> = {
-  xs: 'w-12 md:w-16',
-  sm: 'w-16 md:w-24',
-  md: 'w-24 md:w-32 lg:w-40',
-  lg: 'w-1/3 md:w-2/5',
-  xl: 'w-1/2 md:w-3/5',
-  '2xl': 'w-2/3 md:w-3/4',
-  full: 'w-full',
-}
-
-const altoLineaClasses: Record<string, string> = {
-  hairline: 'h-px',
-  thin: 'h-0.5',
-  light: 'h-[3px]',
-  normal: 'h-1',
-  thick: 'h-1.5',
-  fat: 'h-2',
-  chonky: 'h-3',
-}
-
 export function ContentText1({
   titulo,
-  colorLinea = 'emerald',
-  anchoLinea = 'md',
-  altoLinea = 'normal',
   children,
   className,
   clasesTitulo,
@@ -160,11 +99,7 @@ export function ContentText1({
           {/* Línea decorativa */}
           {mostrarLinea && (
             <div className={cn('flex justify-center mt-6 md:mt-8')}>
-              <div className={cn(
-                altoLineaClasses[altoLinea], 
-                anchoLineaClasses[anchoLinea], 
-                clasesLinea || colorLineaClasses[colorLinea]
-              )} />
+              <div className={clasesLinea} />
             </div>
           )}
           

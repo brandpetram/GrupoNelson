@@ -21,10 +21,10 @@ import { cn } from '@/lib/utils'
 export function HeroMarketing1() {
   // Configuración del contenido de texto
   const propsContenido = {
-    className: 'rounded-2xl bg-background/80',
+    className: 'rounded-2xl bg-background/80 px-[2rem] mx-[1rem] md:px-[3rem] md:mx-[5rem]  1920:px-[6rem] 1920:mx-[15rem]',
     titulo: 'Tu Nave Industrial con Certificación LEED en Mexicali',
-    clasesLinea: 'bg-gray-300',
-      mostrarLinea: false,
+    clasesLinea: 'bg-gray-300 w-full h-1',
+      mostrarLinea: true,
 
       emblemaInterior: (
           <PoligonoIcono1
@@ -37,9 +37,7 @@ export function HeroMarketing1() {
           />
       ),
       clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 lg:max-h-72 bg-transparent',
-    anchoLinea: 'full' as const,
-    altoLinea: 'thin' as const,
-    clasesTitulo: 'leading-none font-extrabold text-left 1920:text-[5rem] ',
+    clasesTitulo: 'leading-none font-extrabold text-left 1920:text-[5rem]',
     clasesTexto: 'leading-normal tracking-wide 1200:text-[2rem] font-light',
   }
 
@@ -69,7 +67,7 @@ export function HeroMarketing1() {
       </div>
 
       {/* Caja de texto superpuesta */}
-      <div className="relative z-10 -translate-y-60  lg:-translate-y-80 xl:-translate-y-80">
+      <div className="relative z-10 -translate-y-30  md:-translate-y-20 xl:-translate-y-80">
         {/* Pantallas < 1536px */}
         <div className="2xl:hidden">
           <ContentText1 {...propsContenido}>
@@ -82,17 +80,10 @@ export function HeroMarketing1() {
 
         {/* Pantallas ≥ 1536px */}
         <div className="hidden 2xl:block z-50">
-          <ContentText1
-            {...propsContenido}
-            clasesTitulo={cn(propsContenido.clasesTitulo, '')}
-            clasesTexto={cn(propsContenido.clasesTexto, '')}
-            className={cn(propsContenido.className, 'px-[6rem] mx-[15rem]')}
-          >
+          <ContentText1 {...propsContenido}>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
             </p>
-
           </ContentText1>
         </div>
       </div>
