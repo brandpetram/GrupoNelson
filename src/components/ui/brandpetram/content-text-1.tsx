@@ -1,10 +1,23 @@
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import type { ReactNode } from 'react'
 
 interface ContentText1Props {
   /**
    * Título principal
    */
   titulo: string
+
+  /**
+   * Clases adicionales para el contenedor principal
+   */
+  className?: string
+
+  /**
+   * Contenido adicional (texto, párrafos, etc.)
+   */
+  children?: ReactNode
   
   /**
    * Clases adicionales para el título (leading, tracking, etc.)
@@ -33,7 +46,7 @@ interface ContentText1Props {
   /**
    * Emblema o imagen que se muestra a la izquierda del contenido
    */
-  emblema?: React.ReactNode
+  emblema?: ReactNode
 
   /**
    * Clases adicionales para el contenedor del emblema
@@ -43,12 +56,33 @@ interface ContentText1Props {
   /**
    * Emblema opcional que se muestra dentro del texto (antes del contenido)
    */
-  emblemaInterior?: React.ReactNode
+  emblemaInterior?: ReactNode
 
   /**
    * Clases adicionales para el contenedor del emblema interior
    */
   clasesEmblemaInterior?: string
+
+  /**
+   * Texto del botón
+   */
+  botonTexto?: string
+
+  /**
+   * URL del botón
+   */
+  botonUrl?: string
+
+  /**
+   * Indica si se debe mostrar el botón
+   * @default false
+   */
+  mostrarBoton?: boolean
+
+  /**
+   * Clases adicionales para el contenedor del botón
+   */
+  clasesBoton?: string
 }
 
 export function ContentText1({
@@ -63,6 +97,10 @@ export function ContentText1({
   clasesEmblema,
   emblemaInterior,
   clasesEmblemaInterior,
+  botonTexto = 'Cotiza Aquí',
+  botonUrl = '/contacto',
+  mostrarBoton = true,
+  clasesBoton,
 }: ContentText1Props) {
   return (
     <div
@@ -71,12 +109,13 @@ export function ContentText1({
         className
       )}
     >
-      <div className={cn('')}>
+      <div className="w-full">
         <div className="w-full">
           {/* Fila del Emblema + Título */}
           <div className={cn(
-            'flex  md:flex-row items-center gap-6 md:gap-8',
-            !emblema && 'block text-center'
+            emblema 
+              ? 'flex md:flex-row items-center gap-6 md:gap-8' 
+              : 'block text-center'
           )}>
             {/* Emblema */}
             {emblema && (
@@ -99,7 +138,7 @@ export function ContentText1({
           {/* Línea decorativa */}
           {mostrarLinea && (
             <div className={cn('flex justify-center mt-6 md:mt-8')}>
-              <div className={clasesLinea} />
+              <div className={cn('bg-primary w-24 h-1', clasesLinea)} />
             </div>
           )}
           
@@ -117,6 +156,17 @@ export function ContentText1({
                 </div>
               )}
               {children}
+            </div>
+          )}
+
+          {/* Botón */}
+          {mostrarBoton && (
+            <div className={cn('flex justify-center mt-10 md:mt-12', clasesBoton)}>
+              <Button className="bg-blue-600 py-8 md:py-10 font-semibold w-full text-[1.5rem] md:text-[2rem] 1200:text-[2.4rem]">
+                <Link href={botonUrl}>
+                  {botonTexto}
+                </Link>
+              </Button>
             </div>
           )}
         </div>

@@ -29,7 +29,7 @@ export function HeroMarketing1() {
       emblemaInterior: (
           <PoligonoIcono1
               icon={<EmblemaGrupoNelson className="w-8 md:w-10 1024:w-16 1200:w-20 h-auto" />}
-              backgroundColor="bg-blue-600 to-emerald-600 bg-linear-to-br"
+              backgroundColor="bg-blue-500 to-blue-600 bg-linear-to-br"
               iconColor="text-white"
               iconSize="size:10 md:size:20 1024s:size-16"
               hoverEffect="rotate"
@@ -68,23 +68,15 @@ export function HeroMarketing1() {
 
       {/* Caja de texto superpuesta */}
       <div className="relative z-10 -translate-y-30  md:-translate-y-20 xl:-translate-y-80">
-        {/* Pantallas < 1536px */}
-        <div className="2xl:hidden">
-          <ContentText1 {...propsContenido}>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-
-          </ContentText1>
-        </div>
 
         {/* Pantallas ≥ 1536px */}
-        <div className="hidden 2xl:block z-50">
+        <div className="">
           <ContentText1 {...propsContenido}>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
             </p>
           </ContentText1>
+
         </div>
       </div>
     </div>
