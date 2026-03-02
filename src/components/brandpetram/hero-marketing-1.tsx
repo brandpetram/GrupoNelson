@@ -16,7 +16,7 @@ import { ContentText1 } from '../ui/brandpetram/content-text-1'
 import { ImagenRectangulo } from '../ui/brandpetram/imagen-rectangulo'
 import {EmblemaGrupoNelson} from "@/components/ui/brandpetram/emblema-nelson";
 import {PoligonoIcono1} from "@/components/ui/brandpetram/poligono-icono-1";
-import { cn } from '@/lib/utils'
+
 
 export function HeroMarketing1() {
   // Configuración del contenido de texto
@@ -28,15 +28,15 @@ export function HeroMarketing1() {
 
       emblemaInterior: (
           <PoligonoIcono1
-              icon={<EmblemaGrupoNelson className="w-32 h-auto" />}
-              backgroundColor="bg-blue-500"
+              icon={<EmblemaGrupoNelson className="w-8 md:w-10 1024:w-16 1200:w-20 h-auto" />}
+              backgroundColor="bg-blue-600 to-emerald-600 bg-linear-to-br"
               iconColor="text-white"
-              iconSize="size-32"
+              iconSize="size:10 md:size:20 1024s:size-16"
               hoverEffect="rotate"
-              className="rounded-xl p-7"
+              className="rounded-sm p-7"
           />
       ),
-      clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 lg:max-h-72 bg-transparent',
+      clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 md:max-h-20 1024:max-h-32 bg-transparent',
     clasesTitulo: 'leading-none font-extrabold text-left 1920:text-[5rem]',
     clasesTexto: 'leading-normal tracking-wide 1200:text-[2rem] font-light',
   }
