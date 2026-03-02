@@ -1,4 +1,5 @@
 import { BlogFilter } from '@/app/blog/category-filter'
+import { ScrollToTop } from '@/components/scroll-to-top'
 import { getInitialPosts, getTotalPostsCount, getAllCategories } from '@/lib/actions'
 import { Category } from '@/types/post'
 import Link from 'next/link'
@@ -94,6 +95,7 @@ export default async function BlogLayout({ children }: Readonly<{ children: Reac
                 ))}
             </Container>
 
+            <ScrollToTop />
             <BlogFilter
                 categories={categories}
                 posts={posts}
