@@ -14,17 +14,30 @@
 
 import { ContentText1 } from '../ui/brandpetram/content-text-1'
 import { ImagenRectangulo } from '../ui/brandpetram/imagen-rectangulo'
+import {EmblemaGrupoNelson} from "@/components/ui/brandpetram/emblema-nelson";
+import {PoligonoIcono1} from "@/components/ui/brandpetram/poligono-icono-1";
 
 export function HeroMarketing1() {
   // Configuración del contenido de texto
   const propsContenido = {
-    className: 'rounded-2xl bg-white/90',
+    className: 'rounded-2xl bg-white/80',
     titulo: 'Tu Nave Industrial con Certificación LEED en Mexicali',
     clasesLinea: 'bg-gray-300',
-      mostrarLinea: true,
+      mostrarLinea: false,
+    emblema: (
+        <PoligonoIcono1
+            icon={<EmblemaGrupoNelson className="w-32 h-auto" />}
+            backgroundColor="bg-blue-500"
+            iconColor="text-white"
+            iconSize="size-32"
+            hoverEffect="rotate"
+            className="rounded-xl p-7"
+        />
+    ),
+      clasesEmblema: 'bg-gray-300 aspect-square max-h-10 lg:max-h-72 bg-transparent',
     anchoLinea: 'full' as const,
     altoLinea: 'thin' as const,
-    clasesTitulo: 'leading-none font-extrabold lg:text-[4rem] ',
+    clasesTitulo: 'leading-none font-extrabold lg:text-[4rem] text-left ',
     clasesTexto: 'leading-normal text-balance xl:text-justify font-normal',
   }
 

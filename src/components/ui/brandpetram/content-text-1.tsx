@@ -63,6 +63,16 @@ interface ContentText1Props {
    * @default true
    */
   mostrarLinea?: boolean
+
+  /**
+   * Emblema o imagen que se muestra a la izquierda del contenido
+   */
+  emblema?: React.ReactNode
+
+  /**
+   * Clases adicionales para el contenedor del emblema
+   */
+  clasesEmblema?: string
 }
 
 const colorLineaClasses: Record<string, string> = {
@@ -167,6 +177,8 @@ export function ContentText1({
   clasesTexto,
   clasesLinea,
   mostrarLinea = true,
+  emblema,
+  clasesEmblema,
 }: ContentText1Props) {
   const variante = escalaVariantes[escala]
 
@@ -178,37 +190,53 @@ export function ContentText1({
       )}
     >
       <div className={cn('mx-auto', variante.anchoInterno, variante.padding)}>
-        {/* Título */}
-        <h2 className={cn(
-          'font-bold tracking-tight text-foreground',
-          variante.titulo,
-          clasesTitulo
-        )}>
-          {titulo}
-        </h2>
-        
-        {/* Línea decorativa */}
-        {mostrarLinea && (
-          <div className={cn('flex justify-center', variante.espacioTitulo)}>
-            <div className={cn(
-              altoLineaClasses[altoLinea], 
-              anchoLineaClasses[anchoLinea], 
-              clasesLinea || colorLineaClasses[colorLinea]
-            )} />
-          </div>
-        )}
-        
-        {/* Texto */}
-        {children && (
+        <div className="w-full">
+          {/* Fila del Emblema + Título */}
           <div className={cn(
-            'space-y-6 text-muted-foreground leading-relaxed',
-            variante.texto,
-            variante.espacioTexto,
-            clasesTexto
+            'flex  md:flex-row items-center gap-6 md:gap-8',
+            !emblema && 'block text-center'
           )}>
-            {children}
+            {/* Emblema */}
+            {emblema && (
+              <div className={cn('flex-shrink-0', clasesEmblema)}>
+                {emblema}
+              </div>
+            )}
+
+            {/* Título */}
+            <h2 className={cn(
+              'font-bold tracking-tight text-foreground flex-1',
+              !emblema && 'mx-auto',
+              variante.titulo,
+              clasesTitulo
+            )}>
+              {titulo}
+            </h2>
           </div>
-        )}
+          
+          {/* Línea decorativa */}
+          {mostrarLinea && (
+            <div className={cn('flex justify-center', variante.espacioTitulo)}>
+              <div className={cn(
+                altoLineaClasses[altoLinea], 
+                anchoLineaClasses[anchoLinea], 
+                clasesLinea || colorLineaClasses[colorLinea]
+              )} />
+            </div>
+          )}
+          
+          {/* Texto */}
+          {children && (
+            <div className={cn(
+              'space-y-6 text-muted-foreground leading-relaxed',
+              variante.texto,
+              variante.espacioTexto,
+              clasesTexto
+            )}>
+              {children}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )
