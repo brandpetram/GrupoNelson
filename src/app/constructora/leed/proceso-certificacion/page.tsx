@@ -12,7 +12,7 @@ export default function ProcesoCertificacionPage() {
     <LeedPageLayout
       titulo="Proceso & Certificación LEED"
       intro="La certificación LEED no se obtiene al final de la obra; se gana o se pierde en las primeras semanas de diseño. El proceso integrativo que exige LEED v4 BD+C requiere que arquitectura, ingeniería MEP, consultoría de sustentabilidad y construcción estén alineados desde el predesign."
-      imageSrc="/leed/leed2-mexicali-nave-industrial-certificacion-bdc-1.png"
+      imageSrc="/leed/leed2-mexicali-nave-industrial-certificacion-bdc-3.png"
       imageAlt="Proceso de certificación LEED v4 BD+C — Nave industrial Mexicali"
       parrafos={[
         'La Comisión Europea reconoció en 2025 la alineación entre LEED y el marco europeo Level(s), confirmando que el sistema de certificación cumple estándares de rigor documental comparables a los de la taxonomía verde de la Unión Europea. Ese nivel de exigencia no se improvisa: se domina con proceso.',

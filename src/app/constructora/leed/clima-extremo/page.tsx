@@ -12,7 +12,7 @@ export default function ClimaExtremoPage() {
     <LeedPageLayout
       titulo="Experiencia en Clima Extremo"
       intro="No todas las naves LEED son iguales. Un diseño que funciona en Monterrey o Querétaro colapsa operativamente en Mexicali, donde el termómetro supera los 48°C en verano y la radiación solar acumulada excede los 2,400 kWh/m² anuales."
-      imageSrc="/leed/leed1-mexicali-nave-industrial-clima-extremo-1.png"
+      imageSrc="/leed/leed1-mexicali-nave-industrial-clima-extremo-2.png"
       imageAlt="Nave industrial LEED en clima extremo — Mexicali, Baja California"
       parrafos={[
         'El Fraunhofer Institute for Building Physics documenta que el rendimiento de la envolvente térmica varía drásticamente según la zona climática, y que sin simulación higrotérmica específica para el contexto local, las decisiones de aislamiento y ventilación se toman a ciegas. Construir una nave industrial en clima extremo exige un nivel de ingeniería que solo se adquiere con décadas de ejecución en esa misma zona — no con manuales genéricos ni con extrapolaciones de otros mercados.',

@@ -2,6 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { CarruselLeed } from '@/components/brandpetram/carrusel-leed'
+import { GridOverlay } from '@/components/ui/grid'
+import type { GridProps } from '@/components/ui/grid'
+type BlendMode = 'normal' | 'multiply' | 'screen' | 'overlay' | 'darken' | 'lighten' | 'color-dodge' | 'color-burn' | 'hard-light' | 'soft-light' | 'difference' | 'exclusion' | 'hue' | 'saturation' | 'color' | 'luminosity'
 
 export interface LeedFeature {
   icon?: React.ReactNode
@@ -31,6 +34,14 @@ export interface LeedPageLayoutProps {
   fuentes?: string
   /** Clases adicionales para el wrapper */
   className?: string
+  /** Opacidad del overlay oscuro sobre la imagen (0-1) */
+  overlayOpacity?: number
+  /** Clases de gradiente o color para overlay con efecto blend en la imagen */
+  colorOverlay?: string
+  /** Blend mode para el colorOverlay de la imagen */
+  blendMode?: BlendMode
+  /** Configuración del grid overlay sobre la imagen */
+  gridConfig?: Omit<GridProps, 'mode' | 'children' | 'height'>
 }
 
 export function LeedPageLayout({
@@ -45,6 +56,16 @@ export function LeedPageLayout({
   parrafoCierre,
   fuentes,
   className,
+  overlayOpacity = 0.25,
+  colorOverlay = 'bg-gradient-to-br from-blue-600/90 to-blue-500/90',
+  blendMode = 'multiply',
+  gridConfig = {
+    strokeColor: 'stroke-white/30',
+    gridSize: 70,
+    showHighlights: false,
+    fadePosition: 'center' as const,
+    fadeRadius: '18rem',
+  },
 }: LeedPageLayoutProps) {
   return (
     <div className={cn('relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0', className)}>
@@ -115,8 +136,22 @@ export function LeedPageLayout({
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
+            {/* Overlay oscuro */}
+            {overlayOpacity > 0 && (
+              <div className="absolute inset-0" style={{ backgroundColor: `rgba(0,0,0,${overlayOpacity})` }} />
+            )}
+            {/* Color overlay con blend mode */}
+            {colorOverlay && (
+              <div className={cn('absolute inset-0', colorOverlay)} style={{ mixBlendMode: blendMode }} />
+            )}
+            {/* Grid overlay */}
+            {gridConfig && (
+              <GridOverlay
+                {...gridConfig}
+              />
+            )}
             {/* Badge LEED */}
-            <div className="absolute bottom-4 left-4 bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full tracking-wider uppercase">
+            <div className="absolute bottom-4 left-4 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full tracking-wider uppercase">
               LEED Certified
             </div>
           </div>

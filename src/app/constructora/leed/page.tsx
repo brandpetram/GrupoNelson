@@ -2,6 +2,21 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CarruselLeed } from '@/components/brandpetram/carrusel-leed'
+import { GridOverlay } from '@/components/ui/grid'
+import type { GridProps } from '@/components/ui/grid'
+import { cn } from '@/lib/utils'
+type BlendMode = 'normal' | 'multiply' | 'screen' | 'overlay' | 'darken' | 'lighten' | 'color-dodge' | 'color-burn' | 'hard-light' | 'soft-light' | 'difference' | 'exclusion' | 'hue' | 'saturation' | 'color' | 'luminosity'
+
+const overlayOpacity = 0.25
+const colorOverlay = 'bg-gradient-to-br from-blue-600/90 to-blue-500/90'
+const blendMode: BlendMode = 'multiply'
+const gridConfig: Omit<GridProps, 'mode' | 'children' | 'height'> = {
+  strokeColor: 'stroke-white/30',
+  gridSize: 40,
+  showHighlights: false,
+  fadePosition: 'center',
+  fadeRadius: '8rem',
+}
 
 export const metadata: Metadata = {
   title: 'Certificación LEED | Grupo Nelson',
@@ -26,7 +41,7 @@ const temas = [
     slug: 'sistemas-operativos',
     titulo: 'Sistemas Operativos Inteligentes',
     subtitulo: 'BMS con submedición independiente de energía y agua en tiempo real.',
-    imagen: '/leed/leed3-mexicali-nave-industrial-sistemas-bms-1.png',
+    imagen: '/leed/leed3-mexicali-nave-industrial-sistemas-bms-2.png',
   },
   {
     slug: 'sitios-sostenibles',
@@ -100,9 +115,9 @@ export default function LeedHubPage() {
           <Link
             key={tema.slug}
             href={`/constructora/leed/${tema.slug}`}
-            className="group block rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
+            className="group block rounded-sm overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-shadow"
           >
-            <div className="relative aspect-[16/9] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={tema.imagen}
                 alt={tema.titulo}
@@ -110,7 +125,16 @@ export default function LeedHubPage() {
                 className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              {/* Overlay oscuro */}
+              {overlayOpacity > 0 && (
+                <div className="absolute inset-0" style={{ backgroundColor: `rgba(0,0,0,${overlayOpacity})` }} />
+              )}
+              {/* Color overlay con blend mode */}
+              {colorOverlay && (
+                <div className={cn('absolute inset-0', colorOverlay)} style={{ mixBlendMode: blendMode }} />
+              )}
+              {/* Grid overlay */}
+              <GridOverlay {...gridConfig} />
               <div className="absolute bottom-3 left-3 right-3">
                 <span className="text-white font-extrabold tracking-tighter text-lg leading-tight">
                   {tema.titulo}

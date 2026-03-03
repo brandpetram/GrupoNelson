@@ -32,7 +32,7 @@ const leedCarruselItems = [
 ]
 export function CarruselLeed({
   overlayOpacity = 0.25,
-  colorOverlay = 'bg-gradient-to-br from-emerald-600/90 to-blue-500/90',
+  colorOverlay = 'bg-gradient-to-br from-blue-600/90 to-blue-500/90',
   blendMode = 'multiply',
   gridConfig = {
     strokeColor: 'stroke-white/30',
