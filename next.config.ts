@@ -24,6 +24,15 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
   },
+  async redirects() {
+    return [
+      {
+        source: '/constructora/certificacion-leed',
+        destination: '/constructora/leed',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     const cacheHeaders = [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }]
     return [

@@ -22,13 +22,13 @@ interface CarruselLeedProps {
 // Items del carrusel de Certificación LEED
 // Items del carrusel de Certificación LEED
 const leedCarruselItems = [
-    { id: 'leed1', title: 'Experiencia en<br>Clima Extremo', subtitle: 'Mexicali exige un nivel de diseño distinto. Nuestra experiencia local en zonas con +45°C y alta radiación solar es lo que diferencia una nave LEED en papel de una que funciona en la realidad.', href: '/leed/clima-extremo', etiqueta: 'Experiencia en Clima Extremo' },
-    { id: 'leed2', title: 'Proceso &<br>Certificación LEED', subtitle: 'Domina la documentación técnica y los submittals ante el USGBC bajo LEED v4 BD+C, con proceso integrativo desde el diseño conceptual hasta la entrega del certificado.', href: '/leed/proceso-certificacion', etiqueta: 'Proceso & Certificación LEED' },
-    { id: 'leed3', title: 'Sistemas Operativos<br>Inteligentes', subtitle: 'Integra BMS y submedición de energía y agua para que el operador de la nave tenga control total y datos en tiempo real de todos sus sistemas.', href: '/leed/sistemas-operativos', etiqueta: 'Sistemas Operativos Inteligentes' },
-    { id: 'leed4', title: 'Sitios Sostenibles<br>& Agua', subtitle: 'Reduce la isla de calor con techos reflectivos y pavimentos claros, y optimiza cada litro de agua con fixtures de alta eficiencia en una de las zonas más áridas del país.', href: '/leed/sitios-sostenibles', etiqueta: 'Sitios Sostenibles & Agua' },
-    { id: 'leed5', title: 'Calidad Ambiental<br>Interior', subtitle: 'Garantiza aire limpio, confort térmico y niveles óptimos de iluminación para los trabajadores, usando materiales de bajo COV y sistemas de ventilación certificados.', href: '/leed/calidad-ambiental', etiqueta: 'Calidad Ambiental Interior' },
-    { id: 'leed6', title: 'Materiales<br>& Recursos', subtitle: 'Selecciona materiales con EPDs verificadas, alto contenido reciclado y origen regional, gestionando el 100% de los residuos de obra con desvío mínimo del 50% a vertedero.', href: '/leed/materiales-recursos', etiqueta: 'Materiales & Recursos' },
-    { id: 'leed7', title: 'Energía<br>& Atmósfera', subtitle: 'Diseña cada nave para superar los estándares ASHRAE 90.1 mediante modelado energético, envolvente térmica de alto rendimiento y sistemas fotovoltaicos en cubierta.', href: '/leed/energia-atmosfera', etiqueta: 'Energía & Atmósfera' },
+    { id: 'leed1', title: 'Experiencia en<br>Clima Extremo', subtitle: 'Mexicali exige un nivel de diseño distinto. Nuestra experiencia local en zonas con +45°C y alta radiación solar es lo que diferencia una nave LEED en papel de una que funciona en la realidad.', href: '/constructora/leed/clima-extremo', etiqueta: 'Experiencia en Clima Extremo' },
+    { id: 'leed2', title: 'Proceso &<br>Certificación LEED', subtitle: 'Domina la documentación técnica y los submittals ante el USGBC bajo LEED v4 BD+C, con proceso integrativo desde el diseño conceptual hasta la entrega del certificado.', href: '/constructora/leed/proceso-certificacion', etiqueta: 'Proceso & Certificación LEED' },
+    { id: 'leed3', title: 'Sistemas Operativos<br>Inteligentes', subtitle: 'Integra BMS y submedición de energía y agua para que el operador de la nave tenga control total y datos en tiempo real de todos sus sistemas.', href: '/constructora/leed/sistemas-operativos', etiqueta: 'Sistemas Operativos Inteligentes' },
+    { id: 'leed4', title: 'Sitios Sostenibles<br>& Agua', subtitle: 'Reduce la isla de calor con techos reflectivos y pavimentos claros, y optimiza cada litro de agua con fixtures de alta eficiencia en una de las zonas más áridas del país.', href: '/constructora/leed/sitios-sostenibles', etiqueta: 'Sitios Sostenibles & Agua' },
+    { id: 'leed5', title: 'Calidad Ambiental<br>Interior', subtitle: 'Garantiza aire limpio, confort térmico y niveles óptimos de iluminación para los trabajadores, usando materiales de bajo COV y sistemas de ventilación certificados.', href: '/constructora/leed/calidad-ambiental', etiqueta: 'Calidad Ambiental Interior' },
+    { id: 'leed6', title: 'Materiales<br>& Recursos', subtitle: 'Selecciona materiales con EPDs verificadas, alto contenido reciclado y origen regional, gestionando el 100% de los residuos de obra con desvío mínimo del 50% a vertedero.', href: '/constructora/leed/materiales-recursos', etiqueta: 'Materiales & Recursos' },
+    { id: 'leed7', title: 'Energía<br>& Atmósfera', subtitle: 'Diseña cada nave para superar los estándares ASHRAE 90.1 mediante modelado energético, envolvente térmica de alto rendimiento y sistemas fotovoltaicos en cubierta.', href: '/constructora/leed/energia-atmosfera', etiqueta: 'Energía & Atmósfera' },
 ]
 export function CarruselLeed({
   overlayOpacity = 0.25,
@@ -48,9 +48,9 @@ export function CarruselLeed({
         as="h2"
         fontSize="text-3xl md:text-6xl 1280:text-7xl"
         fontWeight="font-bold"
-        className="mb-8 tracking-tighter leading-none w-10/12 1536:w-7/12"
+        className="mb-8 tracking-tighter leading-none w-10/12 1536:w-9/12"
       >
-        Proyectos con Certificación LEED
+        Certifica tu Nave Industrial con LEED
       </Titulo>
       <Carrusel1
         items={leedCarruselItems.map((item) => {
