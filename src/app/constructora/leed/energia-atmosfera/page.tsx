@@ -12,7 +12,7 @@ export default function EnergiaAtmosferaPage() {
     <LeedPageLayout
       titulo="Energía & Atmósfera"
       intro="El estándar de eficiencia energética ASHRAE 90.1 es el piso, no el techo. Cada crédito de la categoría de Energía y Atmósfera de LEED se gana demostrando cuánto supera tu nave ese baseline — y en Mexicali, donde la demanda de enfriamiento domina el perfil energético, superar el estándar requiere modelado energético desde la fase conceptual."
-      imageSrc="/leed/leed7-mexicali-nave-industrial-energia-atmosfera-1.png"
+      imageSrc="/leed/leed7-mexicali-nave-industrial-energia-atmosfera-1.jpeg"
       imageAlt="Energía y atmósfera — Nave industrial LEED con fotovoltaicos en Mexicali"
       parrafos={[
         'El World Green Building Council documenta en su "Global Status Report 2024" que los edificios representan el 37% de las emisiones globales de CO₂ relacionadas con energía, y que el diseño integrativo es la estrategia con mayor impacto demostrado para reducir el consumo energético de edificios nuevos. No se trata de agregar tecnología al final; se trata de diseñar el edificio como sistema eficiente desde el primer trazo.',

@@ -12,7 +12,7 @@ export default function SitiosSosteniblesPage() {
     <LeedPageLayout
       titulo="Sitios Sostenibles & Agua"
       intro="Mexicali se encuentra en una de las regiones con mayor estrés hídrico de Norteamérica. Operar una nave industrial aquí sin estrategia de eficiencia hídrica no es solo un riesgo ambiental — es un riesgo operativo."
-      imageSrc="/leed/leed4-mexicali-nave-industrial-sitios-sostenibles-1.png"
+      imageSrc="/leed/leed4-mexicali-nave-industrial-sitios-sostenibles-1.jpeg"
       imageAlt="Sitios sostenibles y eficiencia hídrica — Nave industrial LEED Mexicali"
       parrafos={[
         'La Agencia Europea de Medio Ambiente reporta en "Europe\'s State of Water 2024" que las zonas bajo estrés hídrico enfrentan restricciones de suministro que pueden forzar reducciones o paradas de producción industrial. Esa realidad ya no es exclusiva de Europa mediterránea: es la realidad de Baja California, donde cada litro que tu nave consume debe justificarse y cada litro que puede recuperarse debe recuperarse.',

@@ -85,6 +85,12 @@ export const parksInventoryLinks = [
 // Columna 1: Servicios de Construcción
 export const solutionsServicesLinks = [
   {
+    href: '/constructora/baumex',
+    name: 'Baumex Constructora',
+    description: 'Constructora in-house con 25+ años',
+    iconKey: 'award',
+  },
+    {
     href: '/constructora/diseno-e-ingenieria',
     name: 'Diseño e Ingeniería',
     description: 'Diseño integral bajo códigos internacionales',
@@ -101,13 +107,7 @@ export const solutionsServicesLinks = [
     name: 'Soluciones Llave en Mano',
     description: 'Naves de inventario listas para operar',
     iconKey: 'key',
-  },
-  {
-    href: '/constructora/proyectos-especializados',
-    name: 'Proyectos Especializados',
-    description: 'Instalaciones aeroespaciales, túneles de viento, celdas',
-    iconKey: 'hardHat',
-  },
+  }
 ];
 
 // Columna 2: Calidad y Estándares
@@ -130,11 +130,12 @@ export const solutionsIndustryLinks = [
     description: 'Gulfstream, Honeywell, Hirsh, Direct Pack',
     iconKey: 'trophy',
   },
+
   {
-    href: '/constructora/baumex',
-    name: 'Baumex Constructora',
-    description: 'Constructora in-house con 25+ años',
-    iconKey: 'award',
+    href: '/constructora/proyectos-especializados',
+    name: 'Proyectos Especializados',
+    description: 'Instalaciones aeroespaciales, túneles de viento, celdas',
+    iconKey: 'hardHat',
   },
 ];
 

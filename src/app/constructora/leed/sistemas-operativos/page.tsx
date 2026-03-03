@@ -12,7 +12,7 @@ export default function SistemasOperativosPage() {
     <LeedPageLayout
       titulo="Sistemas Operativos Inteligentes"
       intro="Una nave industrial certificada LEED no termina cuando se corta el listón. La operación diaria determina si el edificio mantiene el desempeño que se diseñó o si lo pierde en los primeros meses."
-      imageSrc="/leed/leed3-mexicali-nave-industrial-sistemas-bms-2.png"
+      imageSrc="/leed/leed3-mexicali-nave-industrial-sistemas-bms-2.jpeg"
       imageAlt="BMS y sistemas inteligentes en nave industrial LEED — Mexicali"
       parrafos={[
         'La Directiva Europea de Eficiencia Energética en Edificios (EPBD 2024) ya exige que todos los edificios no residenciales con sistemas HVAC superiores a 290 kW instalen Sistemas de Automatización y Control de Edificios (BACS) — un reconocimiento regulatorio de que sin monitoreo inteligente, la eficiencia se degrada. En los parques industriales de Mexicali, donde la carga térmica es extrema y el consumo energético de climatización puede representar más del 40% del gasto operativo, esa inteligencia no es un lujo: es lo que separa una nave eficiente de una nave cara.',

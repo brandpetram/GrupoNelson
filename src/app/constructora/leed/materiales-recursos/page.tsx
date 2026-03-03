@@ -12,7 +12,7 @@ export default function MaterialesRecursosPage() {
     <LeedPageLayout
       titulo="Materiales & Recursos"
       intro="El acero estructural de tu nave puede tener 90% de contenido reciclado o puede tener 15% — y ambos proveedores te van a decir que su producto es 'sustentable.' La diferencia está en la Declaración Ambiental de Producto (EPD)."
-      imageSrc="/leed/leed6-mexicali-nave-industrial-materiales-recursos-1.png"
+      imageSrc="/leed/leed6-mexicali-nave-industrial-materiales-recursos-1.jpeg"
       imageAlt="Materiales con EPD verificada en nave industrial LEED — Mexicali"
       parrafos={[
         'Eurofer, la Asociación Europea del Acero, reporta en "European Steel in Figures 2024" que el 56% del acero producido en la Unión Europea proviene de chatarra reciclada, con una tasa de recolección superior al 90%. Cada tonelada de chatarra reciclada evita 1.5 toneladas de CO₂. Exige esos números con EPD — no con palabras.',

@@ -12,7 +12,7 @@ export default function CalidadAmbientalPage() {
     <LeedPageLayout
       titulo="Calidad Ambiental Interior"
       intro="La calidad del ambiente interior de una nave industrial no es un tema secundario — es lo que determina la productividad, la salud y la retención de tu fuerza laboral."
-      imageSrc="/leed/leed5-mexicali-nave-industrial-calidad-ambiental-1.png"
+      imageSrc="/leed/leed5-mexicali-nave-industrial-calidad-ambiental-1.jpeg"
       imageAlt="Calidad ambiental interior en nave industrial LEED — Mexicali"
       parrafos={[
         'La Organización Mundial de la Salud declaró el aire interior limpio como un derecho humano fundamental, y sus guías de calidad del aire establecen límites específicos para formaldehído, benceno y otros compuestos orgánicos volátiles (COV) que se emiten desde pinturas, selladores, adhesivos y recubrimientos de piso. En Mexicali, donde las naves operan con recirculación intensiva de aire por las temperaturas extremas, controlar las fuentes de emisión interior no es opcional — es lo que protege a las personas que trabajan dentro.',

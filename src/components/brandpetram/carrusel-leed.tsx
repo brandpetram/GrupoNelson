@@ -55,13 +55,13 @@ export function CarruselLeed({
       <Carrusel1
         items={leedCarruselItems.map((item) => {
           const imageMap: { [key: string]: string } = {
-            leed1: '/leed/leed1-mexicali-nave-industrial-clima-extremo-1.png',
-            leed2: '/leed/leed2-mexicali-nave-industrial-certificacion-bdc-1.png',
-            leed3: '/leed/leed3-mexicali-nave-industrial-sistemas-bms-1.png',
-            leed4: '/leed/leed4-mexicali-nave-industrial-sitios-sostenibles-1.png',
-            leed5: '/leed/leed5-mexicali-nave-industrial-calidad-ambiental-1.png',
-            leed6: '/leed/leed6-mexicali-nave-industrial-materiales-recursos-1.png',
-            leed7: '/leed/leed7-mexicali-nave-industrial-energia-atmosfera-1.png',
+            leed1: '/leed/leed1-mexicali-nave-industrial-clima-extremo-1.jpeg',
+            leed2: '/leed/leed2-mexicali-nave-industrial-certificacion-bdc-1.jpeg',
+            leed3: '/leed/leed3-mexicali-nave-industrial-sistemas-bms-1.jpeg',
+            leed4: '/leed/leed4-mexicali-nave-industrial-sitios-sostenibles-1.jpeg',
+            leed5: '/leed/leed5-mexicali-nave-industrial-calidad-ambiental-1.jpeg',
+            leed6: '/leed/leed6-mexicali-nave-industrial-materiales-recursos-1.jpeg',
+            leed7: '/leed/leed7-mexicali-nave-industrial-energia-atmosfera-1.jpeg',
           };
 
           return {
