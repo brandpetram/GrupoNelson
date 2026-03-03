@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-image": "tsx --env-file=.env.local scripts/generate-image.ts"
+    "generate-image": "tsx --env-file=.env.local scripts/generate-image.ts",
+    "generate-leed": "tsx --env-file=.env.local scripts/generate-leed-batch.ts"
+
   },
   "dependencies": {
     "@google/genai": "^1.43.0",
