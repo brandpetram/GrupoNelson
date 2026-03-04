@@ -121,7 +121,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
               </thead>
 
               {/* Cuerpo — agrupado por parque */}
-              <tbody className="bg-white dark:bg-gray-900">
+              <tbody>
                 {PARQUES.map((parque) => {
                   const navesDelParque = naves.filter(n => n.parque === parque)
                   if (navesDelParque.length === 0) return null
@@ -129,7 +129,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                   return (
                     <Fragment key={parque}>
                       {/* Fila de agrupación */}
-                      <tr className="border-t border-gray-200 dark:border-white/10">
+                      <tr className="border-t border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900">
                         <th
                           scope="colgroup"
                           colSpan={7}
@@ -157,11 +157,11 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                               'cursor-pointer transition-colors',
                               isSelected
                                 ? 'bg-blue-50 dark:bg-blue-900/20'
-                                : '',
+                                : 'bg-white dark:bg-gray-900',
                             ].join(' ')}
                           >
                             {/* Botón ⊕ — sticky izquierda */}
-                            <td className={`sticky left-0 z-10 pl-4 pr-3 py-4 sm:pl-3 transition-colors ${isSelected ? 'bg-blue-50 dark:bg-blue-900/20' : 'bg-white dark:bg-gray-900'}`}>
+                            <td className="sticky left-0 z-10 pl-4 pr-3 py-4 sm:pl-3 [background:inherit]">
                               <button
                                 type="button"
                                 onClick={(e) => { e.stopPropagation(); onVerMas(nave) }}
