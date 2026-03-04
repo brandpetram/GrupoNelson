@@ -13,9 +13,9 @@ export type DrawerProps = {
 
 // ── Colores de badge de estatus ───────────────────────────────────────────────
 const estatusBadgeClasses: Record<NaveIndustrial['estatus'], string> = {
-  'Disponible':       'bg-emerald-100 text-emerald-800',
-  'Ocupada':          'bg-gray-100 text-gray-600',
-  'En construcción':  'bg-amber-100 text-amber-800',
+  'Disponible':       'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300',
+  'Ocupada':          'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400',
+  'En construcción':  'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300',
 }
 
 export default function Drawer({ open, onClose, nave }: DrawerProps) {
@@ -24,19 +24,26 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
 
   useEffect(() => {
     if (!mounted) return
-    const html = document.documentElement
     const body = document.body
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+    const fixedEls = Array.from(
+      document.querySelectorAll<HTMLElement>('[class*="fixed"][class*="inset-x-0"]')
+    )
     if (open) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
-      html.style.overflow = 'hidden'
-      if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`
+      body.style.overflow = 'hidden'
+      if (scrollbarWidth > 0) {
+        body.style.paddingRight = `${scrollbarWidth}px`
+        fixedEls.forEach(el => { el.style.paddingRight = `${scrollbarWidth}px` })
+      }
     } else {
-      html.style.overflow = ''
+      body.style.overflow = ''
       body.style.paddingRight = ''
+      fixedEls.forEach(el => { el.style.paddingRight = '' })
     }
     return () => {
-      html.style.overflow = ''
+      body.style.overflow = ''
       body.style.paddingRight = ''
+      fixedEls.forEach(el => { el.style.paddingRight = '' })
     }
   }, [open, mounted])
 
@@ -155,10 +162,10 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
         role={viewerOpen ? undefined : 'dialog'}
         aria-modal={viewerOpen ? undefined : true}
         aria-label={nave?.nave ?? 'Nave industrial'}
-        className={`fixed right-0 top-0 h-[100dvh] w-[96vw] lg:w-[56vw] bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'} flex flex-col transform-gpu will-change-transform`}
+        className={`fixed right-0 top-0 h-[100dvh] w-[96vw] lg:w-[56vw] bg-white dark:bg-gray-900 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'} flex flex-col transform-gpu will-change-transform`}
       >
         {/* Header */}
-        <div className="px-4 py-6 sm:px-6 border-b flex-shrink-0">
+        <div className="px-4 py-6 sm:px-6 border-b border-gray-200 dark:border-white/10 flex-shrink-0">
           <div className="flex items-start justify-between">
             <p className="text-sm font-semibold text-primary uppercase tracking-widest">
               Grupo Nelson
@@ -166,7 +173,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
             <button
               type="button"
               onClick={onClose}
-              className="relative rounded-xs p-1.5 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="relative rounded-xs p-1.5 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               <span className="sr-only">Cerrar panel</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
@@ -276,26 +283,26 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
         {/* Contenido scrollable */}
         <div
           ref={scrollContainerRef}
-          className={`flex-1 divide-y divide-gray-200 ${viewerOpen ? 'overflow-hidden' : 'overflow-y-auto'}`}
+          className={`flex-1 divide-y divide-gray-200 dark:divide-white/10 ${viewerOpen ? 'overflow-hidden' : 'overflow-y-auto'}`}
         >
 
           {/* Hero: nombre + parque + estatus + descripción + CTAs */}
           <div className="pb-6">
-            <div className="h-24 bg-gradient-to-bl from-blue-700 to-blue-900 sm:h-20 lg:h-28" />
+            <div className="h-24 bg-gradient-to-bl from-blue-700 to-blue-700 sm:h-12 lg:h-20" />
             <div className="px-4 sm:px-6 mt-4">
               <div className="flex flex-wrap items-center gap-2 mb-1">
-                <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">{nave?.nave}</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">{nave?.nave}</h2>
                 {nave && (
                   <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${estatusBadgeClasses[nave.estatus]}`}>
                     {nave.estatus}
                   </span>
                 )}
               </div>
-              <p className="text-sm text-gray-500">{nave?.parque}</p>
-              <p className="mt-2 text-sm text-gray-600 text-balance">{nave?.shortDescription}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{nave?.parque}</p>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 text-balance">{nave?.shortDescription}</p>
 
               {nave?.nota && (
-                <p className="mt-3 flex items-start gap-1.5 rounded-sm bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                <p className="mt-3 flex items-start gap-1.5 rounded-sm bg-amber-50 dark:bg-amber-900/30 px-3 py-2 text-xs text-amber-800 dark:text-amber-300">
                   <span className="mt-px flex-shrink-0">⚠️</span>
                   <span>{nave.nota}</span>
                 </p>
@@ -311,7 +318,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
                 </button>
                 <a
                   href="/contacto"
-                  className="inline-flex items-center justify-center rounded-xs bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  className="inline-flex items-center justify-center rounded-xs bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/20 hover:bg-gray-50 dark:hover:bg-gray-700"
                 >
                   Solicitar información
                 </a>
@@ -329,12 +336,12 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           {/* Grid de especificaciones */}
           {specs.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="text-sm font-semibold text-gray-900 mb-4">Especificaciones</h3>
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Especificaciones</h3>
               <dl className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
                 {specs.map(({ label, value }) => (
                   <div key={label} className="flex flex-col">
-                    <dt className="text-xs font-medium text-gray-500 uppercase tracking-wide">{label}</dt>
-                    <dd className="mt-0.5 text-sm text-gray-900">{String(value)}</dd>
+                    <dt className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">{label}</dt>
+                    <dd className="mt-0.5 text-sm text-gray-900 dark:text-gray-100">{String(value)}</dd>
                   </div>
                 ))}
               </dl>
@@ -344,10 +351,10 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           {/* Aplicaciones */}
           {nave?.applications && nave.applications.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="text-sm font-semibold text-gray-900 mb-3">Usos ideales</h3>
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Usos ideales</h3>
               <div className="flex flex-wrap gap-2">
                 {nave.applications.map(a => (
-                  <span key={a} className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
+                  <span key={a} className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">
                     {a}
                   </span>
                 ))}
@@ -358,8 +365,8 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           {/* Galería — strip de thumbnails + grid clicable */}
           {images.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="text-sm font-semibold text-gray-900 mb-3">
-                Fotos {images.length > 1 && <span className="font-normal text-gray-400">({images.length})</span>}
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                Fotos {images.length > 1 && <span className="font-normal text-gray-400 dark:text-gray-500">({images.length})</span>}
               </h3>
 
               {/* Strip de thumbnails cuando hay más de 1 */}
@@ -370,7 +377,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
                       key={img}
                       type="button"
                       onClick={() => setActiveImage(img)}
-                      className={`flex-shrink-0 w-16 h-16 rounded-xs overflow-hidden border-2 transition-all ${activeImage === img ? 'border-blue-600' : 'border-transparent hover:border-gray-300'}`}
+                      className={`flex-shrink-0 w-16 h-16 rounded-xs overflow-hidden border-2 transition-all ${activeImage === img ? 'border-blue-600' : 'border-transparent hover:border-gray-300 dark:hover:border-gray-600'}`}
                       aria-label={`Foto ${i + 1}`}
                     >
                       <img src={img} alt={`${nave?.nave} foto ${i + 1}`} className="w-full h-full object-cover" />
