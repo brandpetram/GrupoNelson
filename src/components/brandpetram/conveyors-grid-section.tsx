@@ -9,8 +9,16 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { ItemConveyor } from './item-conveyor'
-import Drawer from '@/components/tailwind/drawer'
-import type { ServiceDrawerData } from '@/components/tailwind/drawer'
+type ServiceDrawerData = {
+  id: string
+  name: string
+  shortDescription: string
+  image: string
+  alt: string
+  description?: string
+  features?: string[]
+  applications?: string[]
+}
 
 const conveyorItems = [
   {
@@ -226,7 +234,7 @@ export function ConveyorsGridSection() {
         </div>
       </section>
 
-      <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} service={selectedConveyor} />
+      {/* Drawer pendiente de implementar para conveyors */}
     </>
   )
 }
