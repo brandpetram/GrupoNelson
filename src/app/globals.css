@@ -217,7 +217,7 @@
     --border-illustration: color-mix(in oklab, var(--color-zinc-950) 7.5%, transparent);
     --popover: var(--color-white);
     --popover-foreground: var(--color-zinc-950);
-    --primary: #F15C00;
+    --primary: #002c81;
     --primary-foreground: var(--color-white);
     --secondary: var(--color-zinc-100);
     --secondary-foreground: var(--color-zinc-950);
@@ -247,7 +247,7 @@
     --border-illustration: color-mix(in oklab, var(--color-white) 7.5%, transparent);
     --popover: #0a1628;
     --popover-foreground: var(--color-white);
-    --primary: #F15C00;
+    --primary: #0055ff;
     --primary-foreground: var(--color-white);
     --secondary: var(--color-zinc-800);
     --secondary-foreground: var(--color-white);
@@ -285,7 +285,7 @@
   --color-card-foreground: var(--color-white);
   --color-popover: var(--color-zinc-900);
   --color-popover-foreground: var(--color-white);
-  --color-primary: #F15C00;
+  --color-primary: #0055ff;
   --color-primary-foreground: var(--color-white);
   --color-secondary: var(--color-zinc-800);
   --color-secondary-foreground: var(--color-white);

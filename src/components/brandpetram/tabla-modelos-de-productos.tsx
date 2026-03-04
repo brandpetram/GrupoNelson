@@ -91,19 +91,19 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                     scope="col"
                     className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Superficie m²
+                    Superficie (m² / ft²)
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
+                  >
+                    Ciudad
                   </th>
                   <th
                     scope="col"
                     className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Superficie ft²
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
-                  >
-                    Clear Height ft
+                    Clear Height (m / ft)
                   </th>
                   <th
                     scope="col"
@@ -132,7 +132,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                       <tr className="border-t border-gray-200 dark:border-white/10 bg-background">
                         <th
                           scope="colgroup"
-                          colSpan={7}
+                          colSpan={8}
                           className="bg-gray-50 py-2 pr-3 pl-4 text-left text-sm font-bold uppercase tracking-tighter text-gray-900 sm:pl-3 dark:bg-gray-800/50 dark:text-white"
                         >
                           {parque}
@@ -177,19 +177,31 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                               {nave.nave}
                             </td>
 
-                            {/* Superficie m² */}
+                          {/* Superficie (m² / ft²) */}
                             <td className="px-3 py-4 text-sm whitespace-nowrap text-right text-gray-700 dark:text-gray-300 font-medium tabular-nums">
-                              {nave.superficieM2 > 0 ? nave.superficieM2.toLocaleString('es-MX') : '—'}
+                              {nave.superficieM2 > 0 ? (
+                                <>
+                                  <span className="text-gray-900 dark:text-white">{nave.superficieM2.toLocaleString('es-MX')} m²</span>
+                                  <span className="mx-1 text-gray-400">/</span>
+                                  <span className="text-gray-500 dark:text-gray-400 text-xs">{nave.superficieFt2.toLocaleString('es-MX')} ft²</span>
+                                </>
+                              ) : '—'}
                             </td>
 
-                            {/* Superficie ft² */}
-                            <td className="px-3 py-4 text-sm whitespace-nowrap text-right text-gray-500 dark:text-gray-400 tabular-nums">
-                              {nave.superficieFt2 > 0 ? nave.superficieFt2.toLocaleString('es-MX') : '—'}
+                            {/* Ciudad */}
+                            <td className="px-3 py-4 text-sm whitespace-nowrap text-left text-gray-500 dark:text-gray-400 font-medium">
+                              Mexicali
                             </td>
 
                             {/* Clear Height */}
                             <td className="px-3 py-4 text-sm whitespace-nowrap text-right text-gray-700 dark:text-gray-300 font-medium tabular-nums">
-                              {nave.clearHeightFt} ft
+                              {nave.clearHeightFt > 0 ? (
+                                <>
+                                  <span className="text-gray-900 dark:text-white">{(nave.clearHeightFt * 0.3048).toFixed(1)} m</span>
+                                  <span className="mx-1 text-gray-400">/</span>
+                                  <span className="text-gray-500 dark:text-gray-400 text-xs">{nave.clearHeightFt} ft</span>
+                                </>
+                              ) : '—'}
                             </td>
 
                             {/* Docks */}
