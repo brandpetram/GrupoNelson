@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 type BlendMode = 'normal' | 'multiply' | 'screen' | 'overlay' | 'darken' | 'lighten' | 'color-dodge' | 'color-burn' | 'hard-light' | 'soft-light' | 'difference' | 'exclusion' | 'hue' | 'saturation' | 'color' | 'luminosity'
 
 const overlayOpacity = 0.25
-const colorOverlay = 'bg-gradient-to-br from-blue-600/90 to-blue-500/90'
+const colorOverlay = 'bg-gradient-to-br from-blue-600/40 to-blue-500/70'
 const blendMode: BlendMode = 'multiply'
 const gridConfig: Omit<GridProps, 'mode' | 'children' | 'height'> = {
   strokeColor: 'stroke-white/30',
