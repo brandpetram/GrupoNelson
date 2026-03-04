@@ -48,7 +48,11 @@ export const navesIndustriales: NaveIndustrial[] = [
     iluminacion: '30 ft/candle en área de producción',
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/NELSON II/parque-industrial-nelson-2-1.JPG',
+      '/fotos-dron/NELSON II/parque-industrial-nelson-2-2.JPG',
+      '/fotos-dron/NELSON II/parque-industrial-nelson-2-3.JPG',
+    ],
     shortDescription: '6,002 m² con 6 andenes, patio de maniobras de 1,800 m² y 66 cajones de estacionamiento.',
     features: [
       'Superficie: 6,002 m² (64,609 sq ft)',
@@ -86,7 +90,11 @@ export const navesIndustriales: NaveIndustrial[] = [
     patioManiobras: '1,800 m² concreto',
     sprinklers: false,
     estatus: 'Ocupada',
-    images: [],
+    images: [
+      '/fotos-dron/NELSON II/nave-dhl-en-parque-el-vigia-2-1.JPG',
+      '/fotos-dron/NELSON II/nave-dhl-en-parque-el-vigia-2-2.JPG',
+      '/fotos-dron/NELSON II/nave-dhl-en-parque-el-vigia-2-3.JPG',
+    ],
     shortDescription: '6,002 m² con 6 andenes con niveladores, 1 andén a nivel de piso y subestación 225 KVA.',
     features: [
       'Superficie: 6,002 m² (65,651 sq ft)',
@@ -122,7 +130,11 @@ export const navesIndustriales: NaveIndustrial[] = [
     hvac: true,
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/NELSON II/parque-industrial-nelson-2-1.JPG',
+      '/fotos-dron/NELSON II/parque-industrial-nelson-2-2.JPG',
+      '/fotos-dron/NELSON II/parque-industrial-nelson-2-3.JPG',
+    ],
     shortDescription: '5,652 m² con HVAC en oficinas, 6 andenes con niveladores y 45 cajones de estacionamiento.',
     features: [
       'Superficie: 5,652 m² (60,841 sq ft)',
@@ -157,7 +169,13 @@ export const navesIndustriales: NaveIndustrial[] = [
     subestacion: '1/300 KVA',
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-2.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-3.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-4.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG',
+    ],
     shortDescription: '525 m² con marco rígido metálico, subestación 300 KVA y 1 andén.',
     features: [
       'Superficie: 525 m² (5,652 sq ft)',
@@ -190,7 +208,12 @@ export const navesIndustriales: NaveIndustrial[] = [
     iluminacion: 'Metal hide GHB high bay 450W/480 · Wall pack exterior 250W',
     sprinklers: false,
     estatus: 'Ocupada',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA I/NAVES 24-27/naves-24-27-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 24-27/naves-24-27-en-parque-el-vigia-1-2.JPG',
+      '/fotos-dron/VIGIA I/NAVES 24-27/naves-24-27-en-parque-el-vigia-1-3.JPG',
+      '/fotos-dron/VIGIA I/NAVES 24-27/naves-24-27-en-parque-el-vigia-1-4.JPG',
+    ],
     shortDescription: '1,623 m² con 2 andenes para camión y baños completos en área de producción.',
     features: [
       'Superficie: 1,623 m² (17,480 sq ft)',
@@ -222,7 +245,11 @@ export const navesIndustriales: NaveIndustrial[] = [
     subestacion: '1/300 KVA (compartida)',
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-2.JPG',
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-3.JPG',
+    ],
     shortDescription: '3,886 m² con muro de concreto y techo de marco metálico, 3 andenes con niveladores.',
     features: [
       'Superficie: 3,886 m² (41,831 sq ft)',
@@ -254,7 +281,11 @@ export const navesIndustriales: NaveIndustrial[] = [
     subestacion: '1/300 KVA (compartida)',
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-2.JPG',
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-3.JPG',
+    ],
     shortDescription: '1,572 m² con oficinas de 205 m², 1 andén y subestación 300 KVA.',
     features: [
       'Superficie: 1,572 m² (16,922 sq ft)',
@@ -318,7 +349,13 @@ export const navesIndustriales: NaveIndustrial[] = [
     subestacion: '1/500 KVA',
     sprinklers: false,
     estatus: 'Ocupada',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-2.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-3.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-4.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG',
+    ],
     shortDescription: '2,019 m² con subestación 500 KVA y tragaluces en techo.',
     features: [
       'Superficie: 2,019 m² (21,738 sq ft)',
@@ -349,7 +386,13 @@ export const navesIndustriales: NaveIndustrial[] = [
     subestacion: '500 KVA',
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA I/NAVES 29-31/naves-29-31-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 29-31/naves-29-31-en-parque-el-vigia-1-2.JPG',
+      '/fotos-dron/VIGIA I/NAVES 29-31/naves-29-31-en-parque-el-vigia-1-3.JPG',
+      '/fotos-dron/VIGIA I/NAVES 29-31/naves-29-31-en-parque-el-vigia-1-4.JPG',
+      '/fotos-dron/VIGIA I/NAVES 29-31/naves-29-31-en-parque-el-vigia-1-5.JPG',
+    ],
     shortDescription: '5,459 m² con 7 andenes, subestación 500 KVA y andenes Norte y Sur independientes.',
     features: [
       'Superficie: 5,459 m² (58,769 sq ft)',
@@ -381,7 +424,17 @@ export const navesIndustriales: NaveIndustrial[] = [
     subestacion: '1/225 KVA',
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-1.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-2.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-3.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-4.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-5.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-6.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-7.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-8.JPG',
+      '/fotos-dron/VIGIA II/NAVE 1/nave-1-en-parque-el-vigia-2-9.JPG',
+    ],
     shortDescription: '6,074 m² con acceso ferroviario (3 puertas), 7 andenes y subestación 225 KVA.',
     features: [
       'Superficie: 6,074 m² (65,388 sq ft)',
@@ -416,7 +469,15 @@ export const navesIndustriales: NaveIndustrial[] = [
     hvac: true,
     sprinklers: false,
     estatus: 'Disponible',
-    images: [],
+    images: [
+      '/fotos-dron/VIGIA II/NAVE 2 (BAXTER)/nave-2-baxter-en-parque-el-vigia-2-1.JPG',
+      '/fotos-dron/VIGIA II/NAVE 2 (BAXTER)/nave-2-baxter-en-parque-el-vigia-2-2.JPG',
+      '/fotos-dron/VIGIA II/NAVE 2 (BAXTER)/nave-2-baxter-en-parque-el-vigia-2-3.JPG',
+      '/fotos-dron/VIGIA II/NAVE 2 (BAXTER)/nave-2-baxter-en-parque-el-vigia-2-4.JPG',
+      '/fotos-dron/VIGIA II/NAVE 2 (BAXTER)/nave-2-baxter-en-parque-el-vigia-2-5.JPG',
+      '/fotos-dron/VIGIA II/NAVE 2 (BAXTER)/nave-2-baxter-en-parque-el-vigia-2-6.JPG',
+      '/fotos-dron/VIGIA II/nave-2-baxter-en-parque-el-vigia-2-7.JPG',
+    ],
     shortDescription: '5,061 m² con HVAC en oficinas, 5 andenes con niveladores y 54 cajones de estacionamiento.',
     features: [
       'Superficie: 5,061 m² (54,485 sq ft)',
