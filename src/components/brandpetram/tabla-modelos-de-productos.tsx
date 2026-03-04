@@ -69,15 +69,15 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
       <div className="flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table className="min-w-full">
+            <table className="min-w-full bg-background">
 
               {/* Encabezados */}
-              <thead className="bg-white dark:bg-gray-900">
+              <thead className="bg-background">
                 <tr>
                   {/* Col sticky izquierda — botón ver más */}
                   <th
                     scope="col"
-                    className="sticky left-0 z-10 bg-white dark:bg-gray-900 py-3.5 pl-4 pr-3 sm:pl-3"
+                    className="sticky left-0 z-10 bg-background py-3.5 pl-4 pr-3 sm:pl-3"
                   >
                     <span className="sr-only">Ver más</span>
                   </th>
@@ -129,7 +129,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                   return (
                     <Fragment key={parque}>
                       {/* Fila de agrupación */}
-                      <tr className="border-t border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900">
+                      <tr className="border-t border-gray-200 dark:border-white/10 bg-background">
                         <th
                           scope="colgroup"
                           colSpan={7}
@@ -154,14 +154,14 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                               idx === 0
                                 ? 'border-t border-gray-300 dark:border-white/15'
                                 : 'border-t border-gray-200 dark:border-white/10',
-                              'cursor-pointer transition-colors',
+                              'cursor-pointer',
                               isSelected
                                 ? 'bg-blue-50 dark:bg-blue-900/20'
-                                : 'bg-white dark:bg-gray-900',
+                                : 'bg-background',
                             ].join(' ')}
                           >
                             {/* Botón ⊕ — sticky izquierda */}
-                            <td className="sticky left-0 z-10 pl-4 pr-3 py-4 sm:pl-3 [background:inherit]">
+                            <td className={`sticky left-0 z-10 pl-4 pr-3 py-4 sm:pl-3 ${isSelected ? 'bg-blue-50 dark:bg-blue-900/20' : 'bg-background'}`}>
                               <button
                                 type="button"
                                 onClick={(e) => { e.stopPropagation(); onVerMas(nave) }}
