@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Header from '@/components/Header'
-import Footer1 from '@/components/brandpetram/footer-1'
 import TablaModelosDeProductos from '@/components/brandpetram/tabla-modelos-de-productos'
 import Drawer from '@/components/tailwind/drawer'
 import { navesIndustriales, NaveIndustrial } from '@/data/naves-industriales'
@@ -44,8 +43,6 @@ export default function NavesDisponiblesClient() {
           />
         </section>
       </main>
-      <Footer1 />
-
       <Drawer
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}

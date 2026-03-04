@@ -22,46 +22,90 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
-  const savedScrollY = useRef(0)
-
   useEffect(() => {
     if (!mounted) return
+    const html = document.documentElement
     const body = document.body
     if (open) {
       const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
-      savedScrollY.current = window.scrollY
-      body.style.position = 'fixed'
-      body.style.top = `-${savedScrollY.current}px`
-      body.style.width = '100%'
-      body.style.paddingRight = `${scrollbarWidth}px`
+      html.style.overflow = 'hidden'
+      if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`
     } else {
-      body.style.position = ''
-      body.style.top = ''
-      body.style.width = ''
+      html.style.overflow = ''
       body.style.paddingRight = ''
-      window.scrollTo(0, savedScrollY.current)
     }
     return () => {
-      body.style.position = ''
-      body.style.top = ''
-      body.style.width = ''
+      html.style.overflow = ''
       body.style.paddingRight = ''
     }
   }, [open, mounted])
 
+  const [viewerOpen, setViewerOpen] = useState(false)
+  const [activeImage, setActiveImage] = useState<string | null>(null)
+  const thumbBtnRef = useRef<HTMLButtonElement | null>(null)
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null)
   const scrollContainerRef = useRef<HTMLDivElement | null>(null)
+  const touchStartXRef = useRef<number | null>(null)
+  const swipedRef = useRef(false)
 
+  // Resetear imagen activa y scroll cuando cambia la nave
   useEffect(() => {
-    if (!open) return
+    setActiveImage(nave?.images?.[0] ?? null)
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0
+    }
+  }, [nave?.id])
+
+  const closeViewer = () => {
+    setViewerOpen(false)
+    setTimeout(() => thumbBtnRef.current?.focus(), 0)
+  }
+
+  // Escape cierra el drawer (cuando el viewer está cerrado)
+  useEffect(() => {
+    if (!open || viewerOpen) return
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { e.preventDefault(); onClose() }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [open, onClose])
+  }, [open, viewerOpen, onClose])
 
+  // Escape + ArrowLeft/Right cuando el viewer está abierto
   useEffect(() => {
-    if (!open) return
+    if (!viewerOpen) return
+    closeBtnRef.current?.focus()
+    const images = nave?.images ?? []
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        closeViewer()
+      } else if (e.key === 'Tab') {
+        e.preventDefault()
+        closeBtnRef.current?.focus()
+      } else if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && images.length > 1) {
+        e.preventDefault()
+        setActiveImage((current) => {
+          const idx = images.indexOf(current ?? '')
+          const next = e.key === 'ArrowRight'
+            ? (idx + 1) % images.length
+            : (idx - 1 + images.length) % images.length
+          return images[next]
+        })
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [viewerOpen, nave])
+
+  // Cerrar viewer si se cierra el drawer
+  useEffect(() => {
+    if (!open && viewerOpen) setViewerOpen(false)
+  }, [open, viewerOpen])
+
+  // ArrowUp/Down para scroll del drawer
+  useEffect(() => {
+    if (!open || viewerOpen) return
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault()
@@ -73,14 +117,14 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
     }
     window.addEventListener('keydown', onKey, { capture: true })
     return () => window.removeEventListener('keydown', onKey, { capture: true })
-  }, [open])
+  }, [open, viewerOpen])
 
   if (!mounted) return null
 
   // ── Filas del grid de especificaciones ────────────────────────────────────
   const specs: { label: string; value: string | number | undefined }[] = nave ? [
     { label: 'Ubicación',       value: nave.ubicacion },
-    { label: 'Superficie',      value: `${nave.superficieM2.toLocaleString('es-MX')} m²  ·  ${nave.superficieFt2.toLocaleString('es-MX')} sq ft` },
+    { label: 'Superficie',      value: nave.superficieM2 > 0 ? `${nave.superficieM2.toLocaleString('es-MX')} m²  ·  ${nave.superficieFt2.toLocaleString('es-MX')} sq ft` : undefined },
     { label: 'Terreno',         value: nave.terreno },
     { label: 'Clear height',    value: `${nave.clearHeightFt} ft` },
     { label: 'Altura máxima',   value: nave.alturaMaxM ? `${nave.alturaMaxM} m` : undefined },
@@ -96,6 +140,8 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
     { label: 'Sprinklers',      value: nave.sprinklers ? 'Sí' : undefined },
   ].filter(s => s.value !== undefined && s.value !== '') : []
 
+  const images = nave?.images ?? []
+
   const overlay = (
     <div
       className={`fixed inset-0 z-[1100] transition-opacity duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
@@ -106,10 +152,10 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
 
       {/* Panel */}
       <div
-        role="dialog"
-        aria-modal="true"
+        role={viewerOpen ? undefined : 'dialog'}
+        aria-modal={viewerOpen ? undefined : true}
         aria-label={nave?.nave ?? 'Nave industrial'}
-        className={`fixed right-0 top-0 h-[100dvh] w-[96vw] max-w-2xl bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'} flex flex-col transform-gpu will-change-transform`}
+        className={`fixed right-0 top-0 h-[100dvh] w-[96vw] lg:w-[56vw] bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'} flex flex-col transform-gpu will-change-transform`}
       >
         {/* Header */}
         <div className="px-4 py-6 sm:px-6 border-b flex-shrink-0">
@@ -130,8 +176,108 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           </div>
         </div>
 
+        {/* Lightbox viewer */}
+        {viewerOpen && (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Visor de imagen: ${nave?.nave ?? 'Nave industrial'}`}
+            className="absolute inset-0 z-20 bg-black/90 flex items-center justify-center"
+            style={{ touchAction: 'none' }}
+            onTouchStart={(e) => {
+              touchStartXRef.current = e.touches[0].clientX
+              swipedRef.current = false
+            }}
+            onTouchEnd={(e) => {
+              if (touchStartXRef.current === null) return
+              const delta = e.changedTouches[0].clientX - touchStartXRef.current
+              if (Math.abs(delta) > 50 && images.length > 1) {
+                swipedRef.current = true
+                setActiveImage((current) => {
+                  const idx = images.indexOf(current ?? '')
+                  const next = delta < 0
+                    ? (idx + 1) % images.length
+                    : (idx - 1 + images.length) % images.length
+                  return images[next]
+                })
+              }
+            }}
+            onClick={(e) => { e.stopPropagation(); if (!swipedRef.current) closeViewer() }}
+          >
+            {/* Botón cerrar viewer */}
+            <button
+              ref={closeBtnRef}
+              type="button"
+              onClick={(e) => { e.stopPropagation(); closeViewer() }}
+              className="absolute top-3 left-3 z-30 inline-flex items-center rounded-xs bg-blue-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              Cerrar
+            </button>
+
+            {/* Flecha izquierda */}
+            {images.length > 1 && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setActiveImage((current) => {
+                    const idx = images.indexOf(current ?? '')
+                    return images[(idx - 1 + images.length) % images.length]
+                  })
+                }}
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center size-14 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-white"
+                aria-label="Foto anterior"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+            )}
+
+            {/* Flecha derecha */}
+            {images.length > 1 && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setActiveImage((current) => {
+                    const idx = images.indexOf(current ?? '')
+                    return images[(idx + 1) % images.length]
+                  })
+                }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center size-14 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-white"
+                aria-label="Foto siguiente"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            )}
+
+            {/* Contador */}
+            {images.length > 1 && (
+              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 text-white/70 text-sm tabular-nums">
+                {images.indexOf(activeImage ?? '') + 1} / {images.length}
+              </p>
+            )}
+
+            {activeImage && (
+              <div className="relative z-10 w-full h-full pointer-events-none">
+                <img
+                  src={activeImage}
+                  alt={`${nave?.nave ?? ''} foto`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Contenido scrollable */}
-        <div ref={scrollContainerRef} className="overflow-y-auto flex-1 divide-y divide-gray-200">
+        <div
+          ref={scrollContainerRef}
+          className={`flex-1 divide-y divide-gray-200 ${viewerOpen ? 'overflow-hidden' : 'overflow-y-auto'}`}
+        >
 
           {/* Hero: nombre + parque + estatus + descripción + CTAs */}
           <div className="pb-6">
@@ -147,6 +293,13 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
               </div>
               <p className="text-sm text-gray-500">{nave?.parque}</p>
               <p className="mt-2 text-sm text-gray-600 text-balance">{nave?.shortDescription}</p>
+
+              {nave?.nota && (
+                <p className="mt-3 flex items-start gap-1.5 rounded-sm bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                  <span className="mt-px flex-shrink-0">⚠️</span>
+                  <span>{nave.nota}</span>
+                </p>
+              )}
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <button
@@ -202,19 +355,52 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
             </div>
           )}
 
-          {/* Galería — solo cuando hay imágenes */}
-          {nave?.images && nave.images.length > 0 && (
+          {/* Galería — strip de thumbnails + grid clicable */}
+          {images.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="text-sm font-semibold text-gray-900 mb-3">Fotos</h3>
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                Fotos {images.length > 1 && <span className="font-normal text-gray-400">({images.length})</span>}
+              </h3>
+
+              {/* Strip de thumbnails cuando hay más de 1 */}
+              {images.length > 1 && (
+                <div className="flex gap-2 overflow-x-auto pb-2 mb-3">
+                  {images.map((img, i) => (
+                    <button
+                      key={img}
+                      type="button"
+                      onClick={() => setActiveImage(img)}
+                      className={`flex-shrink-0 w-16 h-16 rounded-xs overflow-hidden border-2 transition-all ${activeImage === img ? 'border-blue-600' : 'border-transparent hover:border-gray-300'}`}
+                      aria-label={`Foto ${i + 1}`}
+                    >
+                      <img src={img} alt={`${nave?.nave} foto ${i + 1}`} className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Grid clicable — abre el lightbox */}
               <div className="grid grid-cols-2 gap-2">
-                {nave.images.map((img, i) => (
-                  <div key={img} className="relative aspect-square overflow-hidden rounded-xs">
+                {images.map((img, i) => (
+                  <button
+                    ref={i === 0 ? thumbBtnRef : undefined}
+                    key={img}
+                    type="button"
+                    onClick={() => { setActiveImage(img); setViewerOpen(true) }}
+                    className={`relative aspect-square overflow-hidden rounded-xs group border-2 transition-colors ${activeImage === img ? 'border-blue-600' : 'border-transparent'}`}
+                    aria-label={`Ver foto ${i + 1} en pantalla completa`}
+                  >
                     <img
                       src={img}
-                      alt={`${nave.nave} foto ${i + 1}`}
-                      className="w-full h-full object-cover"
+                      alt={`${nave?.nave} foto ${i + 1}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                  </div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" className="h-6 w-6 opacity-0 group-hover:opacity-100 transition-opacity drop-shadow">
+                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                      </svg>
+                    </div>
+                  </button>
                 ))}
               </div>
             </div>
