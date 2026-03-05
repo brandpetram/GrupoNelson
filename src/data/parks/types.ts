@@ -138,6 +138,16 @@ export interface Building {
   exteriorArea?: ExteriorArea
   fireProtection: FireProtection
   hvac?: HvacSpec
+  /** Empresa inquilina (si se conoce) */
+  tenant?: string
+}
+
+// === GALERÍA DE FOTOS ===
+
+export interface GalleryGroup {
+  /** Etiqueta visible: "Parque", "DHL", "Gulfstream", etc. */
+  label: string
+  images: string[]
 }
 
 // === NIVEL PARQUE (data general/común) ===
@@ -160,4 +170,5 @@ export interface IndustrialPark {
   hasSpecs: boolean
   coordinates?: { lat: number; lng: number }
   mapsUrl?: string
+  gallery?: GalleryGroup[]
 }

@@ -189,7 +189,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
             role="dialog"
             aria-modal="true"
             aria-label={`Visor de imagen: ${nave?.nave ?? 'Nave industrial'}`}
-            className="absolute inset-0 z-20 bg-black/90 flex items-center justify-center"
+            className="absolute inset-0 z-20 bg-black/40 backdrop-blur-xl flex items-center justify-center"
             style={{ touchAction: 'none' }}
             onTouchStart={(e) => {
               touchStartXRef.current = e.touches[0].clientX
@@ -269,11 +269,11 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
             )}
 
             {activeImage && (
-              <div className="relative z-10 w-full h-full pointer-events-none">
+              <div className="relative z-10 w-full h-full pointer-events-none flex items-center justify-center">
                 <img
                   src={activeImage}
                   alt={`${nave?.nave ?? ''} foto`}
-                  className="w-full h-full object-contain"
+                  className="max-w-full max-h-full object-contain border-y-4 border-white"
                 />
               </div>
             )}

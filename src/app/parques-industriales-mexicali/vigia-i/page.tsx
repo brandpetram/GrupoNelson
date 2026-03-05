@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
-import { ParkSpecsLayout } from '@/components/brandpetram/park-specs-layout'
-import { getParkBySlug, industrialParks } from '@/data/parks/parks-data'
+import { FichaTecnicaParqueEmbeddable } from '@/components/brandpetram/ficha-tecnica-parque-embeddable'
+import { getParkBySlug } from '@/data/parks/parks-data'
 
 export const metadata = {
   title: 'Parque Industrial El Vigía I | Grupo Nelson',
@@ -29,7 +29,9 @@ export default function VigiaIPage() {
 
             }}
         /></div>
-      <ParkSpecsLayout park={park} allParks={industrialParks} />
+      <div className="w-11/12 1200:w-10/12 mx-auto mb-32">
+        <FichaTecnicaParqueEmbeddable park={park} />
+      </div>
     </div>
   )
 }

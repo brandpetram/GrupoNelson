@@ -1,8 +1,8 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
-import { ParkSpecsLayout } from '@/components/brandpetram/park-specs-layout'
+import { FichaTecnicaParqueEmbeddable } from '@/components/brandpetram/ficha-tecnica-parque-embeddable'
 import { ParkMap } from '@/components/brandpetram/park-map'
-import { getParkBySlug, industrialParks } from '@/data/parks/parks-data'
+import { getParkBySlug } from '@/data/parks/parks-data'
 
 export const metadata = {
   title: 'Parque Industrial Nelson II | Grupo Nelson',
@@ -30,7 +30,8 @@ export default function NelsonIIPage() {
 
             }}
         /></div>
-        <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}><ParkSpecsLayout park={park} allParks={industrialParks}/>
+        <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}>
+            <FichaTecnicaParqueEmbeddable park={park} />
             {park.coordinates && (
                 <ParkMap
                     parkName={park.name}
