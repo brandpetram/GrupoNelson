@@ -60,7 +60,7 @@ export default function LogoCloud() {
                 </h2>
 
                 {/* Grid responsive: 1 col en mobile, 2 cols en tablet, hidden en desktop */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 place-items-center divide-y md:divide-y md:divide-x divide-gray-200">
+                <div className="grid grid-cols-2 gap-0 place-items-center divide-y divide-x divide-gray-200">
                     {todosLosLogos.map((logo, index) => {
                         const isBig = ["logo-rheem.svg", "logo-psf.svg", "logo-sds-sybron-dental-specialities.svg"].includes(logo)
                         return (
