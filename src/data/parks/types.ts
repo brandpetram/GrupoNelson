@@ -177,7 +177,7 @@ export interface IndustrialPark {
   establishedCompanies: number
   totalBuildings?: number
   /** Empresas establecidas en el parque (independiente de las naves) */
-  tenants?: string[]
+  tenants?: { name: string; logo?: string }[]
   /** 'pending' cuando hay información por confirmar con el cliente */
   availableInfo?: 'pending'
   infrastructure: string[]

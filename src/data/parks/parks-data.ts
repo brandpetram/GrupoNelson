@@ -949,12 +949,12 @@ export const industrialParks: IndustrialPark[] = [
     establishedCompanies: 6,
     availableInfo: 'pending',
     tenants: [
-      'Gulfstream',
-      'DHL',
-      'Direct Pack',
-      'Envista',
-      'Jonathan',
-      'Rheem',
+      { name: 'Gulfstream',   logo: '/logos-clientes/logo-gulfstream.svg' },
+      { name: 'DHL',          logo: '/logos-clientes/logo-dhl.svg' },
+      { name: 'Direct Pack',  logo: '/logos-clientes/logo-direct-pack.svg' },
+      { name: 'Envista',      logo: '/logos-clientes/logo-envista.svg' },
+      { name: 'Jonathan',     logo: '/logos-clientes/logo-jonathan.svg' },
+      { name: 'Rheem',        logo: '/logos-clientes/logo-rheem.svg' },
     ],
     infrastructure: [
       'Seguridad 24/7',

@@ -7,6 +7,7 @@
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import type { IndustrialPark, Building, GalleryGroup } from "@/data/parks/types"
+import { LogosParque } from "@/components/brandpetram/logos-parque"
 
 // === Helpers ===
 
@@ -385,6 +386,9 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
         {/* Columna derecha — especificaciones */}
         <div className="flex-1 space-y-0">
 
+          {/* Logos de empresas establecidas */}
+          <LogosParque park={park} />
+
           {/* Tabla de specs generales */}
           {especificaciones.map((seccion, si) => (
             <div key={si}>
@@ -407,25 +411,6 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
               <div className="mb-4" />
             </div>
           ))}
-
-          {/* Empresas establecidas */}
-          {park.tenants && park.tenants.length > 0 && (
-            <div className="mb-4">
-              <div className="px-4 py-2.5 rounded-sm" style={{ backgroundColor: "var(--primary)" }}>
-                <span className="text-sm font-semibold text-white">Empresas establecidas</span>
-              </div>
-              {park.tenants.map((tenant, ti) => (
-                <div
-                  key={tenant}
-                  className={`flex items-center px-4 py-3 text-sm border-b border-zinc-100 dark:border-zinc-800 ${
-                    ti % 2 === 0 ? "bg-white dark:bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
-                  }`}
-                >
-                  <span className="text-zinc-700 dark:text-zinc-300">{tenant}</span>
-                </div>
-              ))}
-            </div>
-          )}
 
           {/* Naves expandibles */}
           {park.buildings.length > 0 && (
