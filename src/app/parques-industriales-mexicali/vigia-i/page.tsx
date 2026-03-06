@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
-import { FichaTecnicaParqueEmbeddable } from '@/components/brandpetram/ficha-tecnica-parque-embeddable'
+import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
 import { getParkBySlug } from '@/data/parks/parks-data'
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default function VigiaIPage() {
             }}
         /></div>
       <div className="w-11/12 1200:w-10/12 mx-auto mb-32">
-        <FichaTecnicaParqueEmbeddable park={park} />
+        <FichaTecnicaParque park={park} />
       </div>
     </div>
   )

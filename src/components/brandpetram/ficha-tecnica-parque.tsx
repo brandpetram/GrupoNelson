@@ -27,17 +27,11 @@ function buildEspecificaciones(park: IndustrialPark) {
     {
       grupo: "Datos generales",
       filas: [
+        { label: "Parque", valor: park.name },
         { label: "Año de operación", valor: String(park.since) },
         { label: "Superficie total", valor: `${park.landSizeHectares} hectáreas` },
         { label: "Ubicación", valor: park.location },
         ...(park.address ? [{ label: "Dirección", valor: park.address }] : []),
-      ],
-    },
-    {
-      grupo: "Capacidad",
-      filas: [
-        ...(navesTotal > 0 ? [{ label: "Naves totales", valor: String(navesTotal) }] : []),
-        { label: "Empresas establecidas", valor: String(park.establishedCompanies) },
       ],
     },
   ]
@@ -257,9 +251,74 @@ function ParkGallery({ park }: { park: IndustrialPark }) {
   )
 }
 
+// === Nave expandida ===
+
+function NavCell({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">{label}</p>
+      <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{value}</p>
+    </div>
+  )
+}
+
+function NaveDetalle({ building }: { building: Building }) {
+  const summary = buildNaveSummary(building)
+  const sub = building.generalData.subAreas
+  const ext = building.exteriorArea
+  const luz = building.constructionSpecs.lighting
+  const iluminacion = [luz.substation, luz.warehouseLighting].filter(Boolean).join(" · ")
+
+  return (
+    <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+        {/* Áreas */}
+        <NavCell label="Área total" value={summary.area} />
+        {sub?.warehouse && (
+          <NavCell label="Almacén" value={formatArea(sub.warehouse.m2, sub.warehouse.sqft)} />
+        )}
+        {sub?.offices && (
+          <NavCell label="Oficinas" value={formatArea(sub.offices.m2, sub.offices.sqft)} />
+        )}
+        {sub?.mezzanine && (
+          <NavCell label="Mezzanine" value={formatArea(sub.mezzanine.m2, sub.mezzanine.sqft)} />
+        )}
+
+        {/* Alturas */}
+        {summary.maxH && <NavCell label="Altura máxima" value={summary.maxH} />}
+        {summary.clearH && <NavCell label="Altura libre" value={summary.clearH} />}
+
+        {/* Carga y maniobras */}
+        <NavCell label="Andenes" value={summary.docks} />
+        {ext?.maneuveringYard && (
+          <NavCell label="Patio de maniobras" value={ext.maneuveringYard} />
+        )}
+        {ext?.parkingSpaces && (
+          <NavCell label="Estacionamiento" value={`${ext.parkingSpaces} espacios`} />
+        )}
+
+        {/* Construcción */}
+        <NavCell label="Estructura" value={summary.structure} />
+        <NavCell label="Piso" value={building.constructionSpecs.floor.description} />
+        <NavCell label="Techo" value={building.constructionSpecs.roof.material} />
+        <NavCell label="Muros" value={building.constructionSpecs.walls.material} />
+
+        {/* Instalaciones */}
+        {iluminacion && <NavCell label="Iluminación" value={iluminacion} />}
+        <NavCell label="Baños" value={building.constructionSpecs.bathrooms.description} />
+        {building.hvac && <NavCell label="HVAC" value={building.hvac.description} />}
+
+        {/* Seguridad */}
+        <NavCell label="Protección contra incendio" value={building.fireProtection.description ?? "Incluida"} />
+      </div>
+    </div>
+  )
+}
+
 // === Componente principal ===
 
-export function FichaTecnicaParqueEmbeddable({ park }: { park: IndustrialPark }) {
+export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
   const [naveExpandida, setNaveExpandida] = useState<string | null>(null)
 
   const especificaciones = buildEspecificaciones(park)
@@ -304,6 +363,25 @@ export function FichaTecnicaParqueEmbeddable({ park }: { park: IndustrialPark })
             </div>
           ))}
 
+          {/* Empresas establecidas */}
+          {park.tenants && park.tenants.length > 0 && (
+            <div className="mb-4">
+              <div className="px-4 py-2.5 rounded-sm" style={{ backgroundColor: "var(--primary)" }}>
+                <span className="text-sm font-semibold text-white">Empresas establecidas</span>
+              </div>
+              {park.tenants.map((tenant, ti) => (
+                <div
+                  key={tenant}
+                  className={`flex items-center px-4 py-3 text-sm border-b border-zinc-100 dark:border-zinc-800 ${
+                    ti % 2 === 0 ? "bg-white dark:bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
+                  }`}
+                >
+                  <span className="text-zinc-700 dark:text-zinc-300">{tenant}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
           {/* Naves expandibles */}
           {park.buildings.length > 0 && (
             <div>
@@ -314,9 +392,6 @@ export function FichaTecnicaParqueEmbeddable({ park }: { park: IndustrialPark })
               </div>
               {park.buildings.map((building, ni) => {
                 const summary = buildNaveSummary(building)
-                const label = building.tenant
-                  ? `${building.name} — ${building.tenant}`
-                  : building.name
                 return (
                   <div key={building.id}>
                     <button
@@ -325,7 +400,7 @@ export function FichaTecnicaParqueEmbeddable({ park }: { park: IndustrialPark })
                         ni % 2 === 0 ? "bg-white dark:bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
                       }`}
                     >
-                      <span className="font-semibold text-zinc-800 dark:text-zinc-200">{label}</span>
+                      <span className="font-semibold text-zinc-800 dark:text-zinc-200">{building.name}</span>
                       <div className="flex items-center gap-3">
                         <span className="text-zinc-500 dark:text-zinc-400 text-right hidden sm:inline">{summary.area}</span>
                         <svg
@@ -337,50 +412,7 @@ export function FichaTecnicaParqueEmbeddable({ park }: { park: IndustrialPark })
                       </div>
                     </button>
                     {naveExpandida === building.id && (
-                      <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Área total</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{summary.area}</p>
-                          </div>
-                          {summary.maxH && (
-                            <div>
-                              <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Altura máxima</p>
-                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{summary.maxH}</p>
-                            </div>
-                          )}
-                          {summary.clearH && (
-                            <div>
-                              <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Altura libre</p>
-                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{summary.clearH}</p>
-                            </div>
-                          )}
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Andenes</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{summary.docks}</p>
-                          </div>
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Estructura</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{summary.structure}</p>
-                          </div>
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Piso</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs.floor.description}</p>
-                          </div>
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Techo</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs.roof.material}</p>
-                          </div>
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Muros</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs.walls.material}</p>
-                          </div>
-                          <div>
-                            <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Protección contra incendio</p>
-                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.fireProtection.description}</p>
-                          </div>
-                        </div>
-                      </div>
+                      <NaveDetalle building={building} />
                     )}
                   </div>
                 )

@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
-import { FichaTecnicaParqueEmbeddable } from '@/components/brandpetram/ficha-tecnica-parque-embeddable'
+import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
 import { ParkMap } from '@/components/brandpetram/park-map'
 import { getParkBySlug } from '@/data/parks/parks-data'
 
@@ -31,7 +31,7 @@ export default function NelsonIIPage() {
             }}
         /></div>
         <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}>
-            <FichaTecnicaParqueEmbeddable park={park} />
+            <FichaTecnicaParque park={park} />
             {park.coordinates && (
                 <ParkMap
                     parkName={park.name}

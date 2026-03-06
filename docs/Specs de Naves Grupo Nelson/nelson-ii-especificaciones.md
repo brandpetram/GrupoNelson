@@ -24,7 +24,7 @@
 #### Piso
 - Losa de concreto de 6" con resistencia de 3500 PSI
 - Juntas de control y construcción selladas
-- Acabado endurecedor de piso
+- Acabado endurecedor de piso``
 
 #### Techo
 - KR-18 SSR calibre 24 con aislamiento de fibra de vidrio R-19
@@ -36,7 +36,7 @@
 
 #### Iluminación
 - 30 ft/candle en área de producción (básico)
-
+``
 #### Baños
 - Actualmente solo en área de oficinas
 - Baños en área de almacén por construir

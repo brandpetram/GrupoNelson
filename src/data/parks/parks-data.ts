@@ -737,7 +737,6 @@ const nelsonIIBuildings: Building[] = [
   {
     id: 'nelson-ii-nave-1',
     name: 'Nave 1',
-    tenant: 'Gulfstream',
     generalData: {
       landArea: { m2: 25308.47, sqft: 272431 },
       totalConstructionArea: { m2: 6002.42, sqft: 64609.52 },
@@ -796,7 +795,6 @@ const nelsonIIBuildings: Building[] = [
   {
     id: 'nelson-ii-nave-2',
     name: 'Nave 2',
-    tenant: 'DHL',
     generalData: {
       landArea: { m2: 12014.81 },
       totalConstructionArea: { m2: 6002.42, sqft: 65651 },
@@ -856,7 +854,6 @@ const nelsonIIBuildings: Building[] = [
   {
     id: 'nelson-ii-nave-3',
     name: 'Nave 3',
-    tenant: 'Direct Pack',
     generalData: {
       landArea: { m2: 12014.81 },
       totalConstructionArea: { m2: 5652.40, sqft: 60841.92 },
@@ -915,265 +912,6 @@ const nelsonIIBuildings: Building[] = [
       description: 'Área de oficinas contará con HVAC. Extractores en baños.',
     },
   },
-  {
-    id: 'nelson-ii-nave-4',
-    name: 'Nave 4',
-    tenant: 'Envista',
-    generalData: {
-      landArea: { m2: 14200, sqft: 152847 },
-      totalConstructionArea: { m2: 5800, sqft: 62431 },
-      subAreas: {
-        warehouse: { m2: 5280, sqft: 56834 },
-        offices: { m2: 320, sqft: 3444 },
-        mezzanine: { m2: 200, sqft: 2153 },
-      },
-    },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 10.78, ft: 35.37 },
-      minHeight: { m: 8.53, ft: 28 },
-    },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 3,500 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        substation: '1/225 KVA',
-        warehouseLighting: '30 ft/candle en área de producción (básico)',
-      },
-      bathrooms: {
-        description: 'Baños en área de oficinas y producción',
-        details: [
-          { area: 'Producción - Hombres', fixtures: '4 WC, 3 urinales, 3 lavabos' },
-          { area: 'Producción - Mujeres', fixtures: '3 WC, 3 lavabos' },
-        ],
-      },
-    },
-    loadingArea: {
-      totalDocks: 6,
-      docksWithLevelers: 5,
-      floorLevelDoors: 1,
-      description: '5 andenes con niveladores, 1 a nivel de piso',
-    },
-    exteriorArea: {
-      parkingSpaces: 55,
-      maneuveringYard: '1,600 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: false,
-      sprinklers: false,
-      waterTank: false,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema centralizado de protección contra incendios bajo estándares NFPA y FM. Cumple con códigos locales.',
-    },
-    hvac: {
-      description: 'HVAC en área de oficinas. Extractores industriales en producción.',
-    },
-  },
-  {
-    id: 'nelson-ii-nave-5',
-    name: 'Nave 5',
-    tenant: 'Jonathan',
-    generalData: {
-      landArea: { m2: 10500, sqft: 113021 },
-      totalConstructionArea: { m2: 4850, sqft: 52204 },
-      subAreas: {
-        warehouse: { m2: 4500, sqft: 48438 },
-        offices: { m2: 350, sqft: 3767 },
-      },
-    },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 10.78, ft: 35.37 },
-      clearHeight: { m: 8.53, ft: 27.98 },
-    },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 3,500 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        substation: '1/150 KVA',
-        warehouseLighting: '30 ft/candle en área de producción (básico)',
-      },
-      bathrooms: { description: 'En área de oficinas.' },
-    },
-    loadingArea: {
-      totalDocks: 5,
-      docksWithLevelers: 4,
-      floorLevelDoors: 1,
-      description: '4 andenes con niveladores, 1 a nivel de piso',
-    },
-    exteriorArea: {
-      parkingSpaces: 40,
-      maneuveringYard: '1,500 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: false,
-      sprinklers: false,
-      waterTank: false,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema centralizado de protección contra incendios bajo estándares NFPA y FM. Cumple con códigos locales.',
-    },
-  },
-  {
-    id: 'nelson-ii-nave-6',
-    name: 'Nave 6',
-    tenant: 'Rheem',
-    generalData: {
-      landArea: { m2: 18500, sqft: 199132 },
-      totalConstructionArea: { m2: 8200, sqft: 88264 },
-      subAreas: {
-        warehouse: { m2: 7500, sqft: 80729 },
-        offices: { m2: 450, sqft: 4844 },
-        mezzanine: { m2: 250, sqft: 2691 },
-      },
-    },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 12.19, ft: 40 },
-      minHeight: { m: 9.14, ft: 30 },
-      clearHeight: { m: 9.14, ft: 30 },
-    },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 4,000 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        skylights: true,
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        substation: '1/500 KVA',
-        warehouseLighting: '30 ft/candle en área de producción',
-        officeLighting: 'Fluorescente LED',
-      },
-      bathrooms: {
-        description: 'Baños de oficina y producción',
-        details: [
-          { area: 'Oficina', fixtures: '2 WC, 1 lavabo' },
-          { area: 'Producción - Hombres', fixtures: '6 WC, 4 urinales, 5 lavabos' },
-          { area: 'Producción - Mujeres', fixtures: '5 WC, 4 lavabos' },
-        ],
-      },
-    },
-    loadingArea: {
-      totalDocks: 8,
-      docksWithLevelers: 7,
-      floorLevelDoors: 1,
-      description: '7 andenes con niveladores, 1 a nivel de piso',
-    },
-    exteriorArea: {
-      parkingSpaces: 80,
-      truckSpaces: 5,
-      maneuveringYard: '2,200 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: true,
-      sprinklers: true,
-      waterTank: true,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema completo contra incendios: sprinklers, gabinetes, cisterna con bomba. Estándares NFPA y FM.',
-    },
-    hvac: {
-      description: 'HVAC en oficinas y sistema de ventilación industrial en producción.',
-    },
-  },
-  {
-    id: 'nelson-ii-nave-7',
-    name: 'Nave 7',
-    generalData: {
-      landArea: { m2: 11000, sqft: 118403 },
-      totalConstructionArea: { m2: 5400, sqft: 58125 },
-      subAreas: {
-        warehouse: { m2: 5050, sqft: 54358 },
-        offices: { m2: 350, sqft: 3767 },
-      },
-    },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 10.78, ft: 35.37 },
-      clearHeight: { m: 8.53, ft: 27.98 },
-    },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 3,500 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        substation: '1/150 KVA',
-        warehouseLighting: '30 ft/candle en área de producción (básico)',
-      },
-      bathrooms: { description: 'Baños en área de oficinas.' },
-    },
-    loadingArea: {
-      totalDocks: 5,
-      docksWithLevelers: 5,
-      description: '5 andenes con niveladores de andén',
-    },
-    exteriorArea: {
-      parkingSpaces: 50,
-      maneuveringYard: '1,800 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: false,
-      sprinklers: false,
-      waterTank: false,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema centralizado de protección contra incendios bajo estándares NFPA y FM. Cumple con códigos locales.',
-    },
-  },
 ]
 
 // === LOS 4 PARQUES INDUSTRIALES ===
@@ -1190,7 +928,15 @@ export const industrialParks: IndustrialPark[] = [
     address: 'Venustiano Carranza #350, Mexicali B.C. CP. 21383',
     landSizeHectares: 26.6,
     establishedCompanies: 6,
-    totalBuildings: 7,
+    availableInfo: 'pending',
+    tenants: [
+      'Gulfstream',
+      'DHL',
+      'Direct Pack',
+      'Envista',
+      'Jonathan',
+      'Rheem',
+    ],
     infrastructure: [
       'Seguridad 24/7',
       'Agua potable',

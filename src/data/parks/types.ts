@@ -165,6 +165,10 @@ export interface IndustrialPark {
   landSizeHectares: number
   establishedCompanies: number
   totalBuildings?: number
+  /** Empresas establecidas en el parque (independiente de las naves) */
+  tenants?: string[]
+  /** 'pending' cuando hay información por confirmar con el cliente */
+  availableInfo?: 'pending'
   infrastructure: string[]
   buildings: Building[]
   hasSpecs: boolean
