@@ -384,7 +384,7 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
         </div>
 
         {/* Columna derecha — especificaciones */}
-        <div className="flex-1 space-y-0">
+        <div className="flex-1 space-y-0 min-w-0">
 
           {/* Logos de empresas establecidas */}
           <LogosParque park={park} />

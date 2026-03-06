@@ -103,6 +103,7 @@
   --animate-scale-out: scale-out 0.2s ease-in;
   --animate-fade-in: fade-in 0.2s ease-out;
   --animate-fade-out: fade-out 0.2s ease-in;
+  --animate-marquee: marquee 18s linear infinite;
 
   /* Keyframes */
   @keyframes accordion-down {
@@ -452,4 +453,9 @@
   .section-title-gap-sm {
     gap: 1rem;
   }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
