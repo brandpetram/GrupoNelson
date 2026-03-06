@@ -737,6 +737,11 @@ const nelsonIIBuildings: Building[] = [
   {
     id: 'nelson-ii-nave-1',
     name: 'Nave 1',
+    availability: {
+      status: undefined,
+      availableM2: undefined,
+      availableFrom: undefined,
+    },
     generalData: {
       landArea: { m2: 25308.47, sqft: 272431 },
       totalConstructionArea: { m2: 6002.42, sqft: 64609.52 },
@@ -795,6 +800,11 @@ const nelsonIIBuildings: Building[] = [
   {
     id: 'nelson-ii-nave-2',
     name: 'Nave 2',
+    availability: {
+      status: undefined,
+      availableM2: undefined,
+      availableFrom: undefined,
+    },
     generalData: {
       landArea: { m2: 12014.81 },
       totalConstructionArea: { m2: 6002.42, sqft: 65651 },
@@ -854,6 +864,11 @@ const nelsonIIBuildings: Building[] = [
   {
     id: 'nelson-ii-nave-3',
     name: 'Nave 3',
+    availability: {
+      status: undefined,
+      availableM2: undefined,
+      availableFrom: undefined,
+    },
     generalData: {
       landArea: { m2: 12014.81 },
       totalConstructionArea: { m2: 5652.40, sqft: 60841.92 },
@@ -927,6 +942,10 @@ export const industrialParks: IndustrialPark[] = [
     location: 'Corredor Industrial, Blvd. Venustiano Carranza, entre Av. Piñon y Manzanilla',
     address: 'Venustiano Carranza #350, Mexicali B.C. CP. 21383',
     landSizeHectares: 26.6,
+    availableBuildings: undefined,
+    availableAreaM2: undefined,
+    availableLandM2: undefined,
+    immediateAvailability: undefined,
     establishedCompanies: 6,
     availableInfo: 'pending',
     tenants: [

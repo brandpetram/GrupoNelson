@@ -127,10 +127,17 @@ export interface HvacSpec {
   description: string
 }
 
+export interface BuildingAvailability {
+  status?: 'available' | 'occupied' | 'partial'
+  availableM2?: number
+  availableFrom?: string
+}
+
 /** Una nave (building) individual */
 export interface Building {
   id: string
   name: string
+  availability?: BuildingAvailability
   generalData: GeneralData
   structure: StructureData
   constructionSpecs: ConstructionSpecs
@@ -163,6 +170,10 @@ export interface IndustrialPark {
   location: string
   address?: string
   landSizeHectares: number
+  availableBuildings?: number
+  availableAreaM2?: number
+  availableLandM2?: number
+  immediateAvailability?: boolean
   establishedCompanies: number
   totalBuildings?: number
   /** Empresas establecidas en el parque (independiente de las naves) */

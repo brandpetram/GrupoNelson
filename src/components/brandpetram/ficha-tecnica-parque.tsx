@@ -21,8 +21,9 @@ function formatHeight(m: number, ft?: number) {
   return `${m} m`
 }
 
+const CONSULTAR = "Consultar"
+
 function buildEspecificaciones(park: IndustrialPark) {
-  const navesTotal = park.totalBuildings ?? park.buildings.length
   return [
     {
       grupo: "Datos generales",
@@ -30,6 +31,29 @@ function buildEspecificaciones(park: IndustrialPark) {
         { label: "Parque", valor: park.name },
         { label: "Año de operación", valor: String(park.since) },
         { label: "Superficie total", valor: `${park.landSizeHectares} hectáreas` },
+        {
+          label: "Naves disponibles",
+          valor: park.availableBuildings !== undefined ? String(park.availableBuildings) : CONSULTAR,
+          highlight: park.availableBuildings !== undefined && park.availableBuildings > 0,
+        },
+        {
+          label: "M² disponibles en nave",
+          valor: park.availableAreaM2 !== undefined
+            ? `${park.availableAreaM2.toLocaleString("es-MX")} m²`
+            : CONSULTAR,
+        },
+        {
+          label: "Terreno disponible",
+          valor: park.availableLandM2 !== undefined
+            ? `${park.availableLandM2.toLocaleString("es-MX")} m²`
+            : CONSULTAR,
+        },
+        {
+          label: "Disponibilidad inmediata",
+          valor: park.immediateAvailability !== undefined
+            ? (park.immediateAvailability ? "Sí" : "No")
+            : CONSULTAR,
+        },
         { label: "Ubicación", valor: park.location },
         ...(park.address ? [{ label: "Dirección", valor: park.address }] : []),
       ],
@@ -268,10 +292,29 @@ function NaveDetalle({ building }: { building: Building }) {
   const ext = building.exteriorArea
   const luz = building.constructionSpecs.lighting
   const iluminacion = [luz.substation, luz.warehouseLighting].filter(Boolean).join(" · ")
+  const avail = building.availability
 
   return (
     <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+        {/* Disponibilidad */}
+        {avail && (
+          <>
+            <NavCell
+              label="Estado"
+              value={avail.status === 'available' ? "Disponible" : avail.status === 'occupied' ? "Ocupada" : avail.status === 'partial' ? "Disponibilidad parcial" : "Consultar"}
+            />
+            <NavCell
+              label="M² disponibles"
+              value={avail.availableM2 !== undefined ? `${avail.availableM2.toLocaleString("es-MX")} m²` : "Consultar"}
+            />
+            <NavCell
+              label="Disponible desde"
+              value={avail.availableFrom ?? "Consultar"}
+            />
+          </>
+        )}
 
         {/* Áreas */}
         <NavCell label="Área total" value={summary.area} />
@@ -356,7 +399,9 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
                   }`}
                 >
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200 mr-4 shrink-0">{fila.label}</span>
-                  <span className="text-zinc-600 dark:text-zinc-400 text-right">{fila.valor}</span>
+                  <span className={`text-right ${'highlight' in fila && fila.highlight ? "font-bold text-green-600 dark:text-green-400" : "text-zinc-600 dark:text-zinc-400"}`}>
+                    {fila.valor}
+                  </span>
                 </div>
               ))}
               <div className="mb-4" />
@@ -392,6 +437,18 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
               </div>
               {park.buildings.map((building, ni) => {
                 const summary = buildNaveSummary(building)
+                const avail = building.availability
+                const status = avail?.status
+                const badgeClass =
+                  status === 'available' ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400" :
+                  status === 'occupied'  ? "bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400" :
+                  status === 'partial'   ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400" :
+                  "bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
+                const badgeLabel =
+                  status === 'available' ? "Disponible" :
+                  status === 'occupied'  ? "Ocupada" :
+                  status === 'partial'   ? "Disponibilidad parcial" :
+                  "Consultar"
                 return (
                   <div key={building.id}>
                     <button
@@ -400,7 +457,12 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
                         ni % 2 === 0 ? "bg-white dark:bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
                       }`}
                     >
-                      <span className="font-semibold text-zinc-800 dark:text-zinc-200">{building.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold text-zinc-800 dark:text-zinc-200">{building.name}</span>
+                        <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${badgeClass}`}>
+                          {badgeLabel}
+                        </span>
+                      </div>
                       <div className="flex items-center gap-3">
                         <span className="text-zinc-500 dark:text-zinc-400 text-right hidden sm:inline">{summary.area}</span>
                         <svg
@@ -417,6 +479,13 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
                   </div>
                 )
               })}
+            </div>
+          )}
+
+          {/* Sin naves disponibles */}
+          {park.availableBuildings === 0 && (
+            <div className="mt-4 px-4 py-5 text-sm text-zinc-600 dark:text-zinc-400 border border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg">
+              Este parque no tiene naves disponibles actualmente. Contáctenos para explorar opciones build-to-suit.
             </div>
           )}
 
