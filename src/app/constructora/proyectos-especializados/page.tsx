@@ -25,6 +25,188 @@ export default function ComponentesDosPage() {
       <Header />
 
       <main className="">
+
+        {/* ══════════════════════════════════════════════════════════
+            COPY COMERCIAL — Proyectos Especializados (Tema G)
+            Fuente: docs/fase-2-desempaquetado-comercial-baumex.md
+            Vocabulario: docs/5-vocabulario-estrategico-...md
+            Reglas: docs/research-copywriting-b2b-industrial.md
+            Status: BORRADOR — pendiente de aprobación
+            ══════════════════════════════════════════════════════════ */}
+        <div className="px-8 md:px-12 pt-20 pb-32">
+
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+            Construye tu nave industrial en Mexicali con ingeniería especializada — 28 años de proyectos únicos demostrados
+          </h1>
+
+          <p className="text-xl leading-relaxed mb-12">
+            Muchas operaciones industriales requieren algo más que una nave rectangular con piso de concreto.
+            Un túnel de viento para pruebas aeroespaciales dentro de la planta. Un puente vehicular que conecte
+            dos edificios sobre una vialidad pública. Sistemas antisísmicos que no existían en la región.
+            Cimentaciones de precisión milimétrica para equipos de proceso pesado.
+            Cuando tu nave industrial incluye un proyecto especial, Baumex tiene 28 años
+            de experiencia resolviendo exactamente eso.
+          </p>
+
+          <div className="flex flex-wrap gap-12 mb-24">
+            <div><p className="text-4xl font-bold leading-none">95 m</p><p className="text-muted-foreground">claro libre sin columnas</p></div>
+            <div><p className="text-4xl font-bold leading-none">55,500 m²</p><p className="text-muted-foreground">nave más grande de Mexicali</p></div>
+            <div><p className="text-4xl font-bold leading-none">3,000 HP</p><p className="text-muted-foreground">blower aeroespacial</p></div>
+            <div><p className="text-4xl font-bold leading-none">15 m</p><p className="text-muted-foreground">cimentación profunda</p></div>
+          </div>
+
+          <hr className="border-border my-16" />
+
+          {/* ── PROYECTO 1: Puente vehicular Skyworks ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Construcción de puente vehicular de 95 metros sin columnas para nave industrial de semiconductores
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Evalúa lo que implica este proyecto. Skyworks necesitaba conectar dos plantas separadas por un boulevard y un dren federal de CNA.
+            La función: transportar microchips en carritos de golf con temperatura controlada entre la planta
+            de producción y la planta de pruebas. La solución: un puente de 95 metros de claro libre
+            sin columnas intermedias, estructura metálica con diseño europeo de arco, elevadores especiales
+            en ambos extremos.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Cimentación profunda con pilas de concreto armado a 18 metros — suelo arenoso colapsable
+            en zona sísmica 4. Colado del puente completo en un solo día con dos bombas de concreto,
+            sin juntas de construcción. Una sola pieza. Diseño calculado para minimizar vibraciones,
+            verificado con un automóvil compacto cruzando a velocidad.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Gestión de permisos con tres niveles de gobierno: CNA (federal), gobierno del estado (vialidades)
+            y municipio. Dos meses de coordinación logística. Solo cerraron la vialidad un domingo.
+            Montaje de la estructura metálica en dos etapas — dos domingos consecutivos.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── PROYECTO 2: Gulfstream 550K ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Nave industrial de 55,500 m² en Mexicali: Gulfstream 550K con sistemas antisísmicos BRB y 10 MW solares
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            La nave industrial más grande construida en Mexicali. 5.5 hectáreas bajo techo.
+            13,500 m² de oficinas — 1.3 hectáreas, sin precedente en la localidad para una nave industrial.
+            Altura libre de 28 pies (8.53 m). Todo diseñado y ejecutado por Baumex.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Contexto: el terremoto de magnitud 7.2 en 2010 dañó la planta existente de Gulfstream (35,000 m²)
+            y causó dos semanas de paro de producción. Baumex propuso sistemas antisísmicos BRB
+            (Buckling-Restrained Braces) — disipadores de energía en puntos estratégicos de la estructura.
+            Primera implementación de esta tecnología en Mexicali. Gulfstream aceptó.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Cubierta TPO con garantía de impermeabilización de 20 años. 10 MW de paneles solares distribuidos
+            en 50,000 m²: 20,000 m² en cubierta y 30,000 m² en carports del estacionamiento.
+            3,200 toneladas de aire acondicionado de mínimo consumo (42 manejadoras) con recuperación
+            del 90% del agua de condensación reutilizada en torres de enfriamiento.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            20 MW de capacidad eléctrica instalada — 50% será energía solar limpia.
+            Certificación Factory Mutual (FM Global) en muros, cubierta TPO, estructura metálica
+            y sistema contraincendio. Reduce significativamente la prima de seguro.
+            Apuntando a certificación LEED Gold.
+          </p>
+
+          <ul className="list-disc pl-6 text-lg leading-relaxed mb-16 space-y-2">
+            <li>55,500 m² bajo techo (5.5 hectáreas)</li>
+            <li>13,500 m² de oficinas</li>
+            <li>Sistemas antisísmicos BRB — primera vez en Mexicali</li>
+            <li>10 MW de paneles solares en cubierta y carports</li>
+            <li>3,200 toneladas de A/C con recuperación del 90% de agua</li>
+            <li>20 MW de capacidad eléctrica instalada</li>
+            <li>Certificación FM Global en toda la envolvente</li>
+            <li>Cubierta TPO con garantía de 20 años</li>
+          </ul>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Accede a este nivel de ingeniería para tu próxima nave industrial en Mexicali.
+            Cada sistema — antisísmico, solar, HVAC, contraincendio — fue diseñado y ejecutado por Baumex.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── PROYECTO 3: Túnel de viento Honeywell ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Construcción de túnel de viento aeroespacial en Mexicali: blower de 3,000 HP con ductos de placa estructural
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Considera lo que este proyecto exige de una constructora. Honeywell necesitaba simular condiciones
+            de vuelo — velocidad y volumen de aire reales — para pruebas de componentes aeroespaciales.
+            Baumex diseñó y construyó el edificio de 20 metros de altura que aloja el sistema completo.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            El blower opera a 3,000 HP (los compresores típicos industriales son de 200-250 HP),
+            alimentado con alta tensión de 4.16 KV. Los ductos de 2.5 × 2.5 metros están fabricados
+            con placa estructural soldada — no lámina — porque la fuerza del aire exige ese nivel
+            de resistencia. Puertas blindadas antisonido. Cimentación y estructura calculadas
+            para soportar vibraciones extremas de operación continua.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Proyecto colaborativo: ingenieros de Honeywell e ingenieros de Baumex elaboraron
+            el proyecto ejecutivo conjuntamente. 8 meses de construcción, seguidos de meses adicionales
+            de pruebas por parte de Honeywell.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── PROYECTO 4: Planta recicladora Deacero ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Construcción de planta industrial de acero en Mexicali: 50,000 m² con cimentaciones a 15 metros y precisión milimétrica
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Deacero requería 5 hectáreas de patios industriales — terracerías, pisos y cimentaciones —
+            para instalar dos grúas industriales de gran escala, bandas transportadoras y líneas de proceso.
+            El reto principal: cientos de bases y anclas embebidas en el concreto con precisión topográfica
+            milimétrica.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Cimentaciones profundas a 15 metros con pilas de concreto armado para soportar las grúas.
+            Baumex entregó la obra terminada y Deacero instaló equipos que debían calzar milimétricamente
+            en cada ancla. Almacenes y estructuras de soporte para equipos de proceso completaron el proyecto.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Si tu operación depende de que cada ancla esté exactamente donde el plano indica — sin tolerancia
+            para ajustes en campo — necesitas una constructora con la topografía y la ejecución de cimentaciones
+            que este nivel de precisión exige.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── CTA ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Construye tu nave industrial en Mexicali con la ingeniería que Gulfstream y Honeywell ya validaron
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Puentes sin columnas, túneles de viento, sistemas antisísmicos BRB, cimentaciones de precisión
+            milimétrica. Si tu operación necesita una nave industrial con ingeniería que va más allá
+            de lo estándar, hablemos.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            Baumex lleva 28 años ejecutando proyectos especializados para corporaciones internacionales.
+            Solicita una consulta para tu proyecto.
+          </p>
+
+        </div>
+        {/* FIN COPY COMERCIAL */}
+
         <CuadriculaSection1 />
 
         <div className="container mx-auto grid grid-cols-1 lg:mt-32 px-4 md:px-0">

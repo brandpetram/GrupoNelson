@@ -15,7 +15,7 @@ Al desarrollar estos temas, **no debemos olvidar que ese es el objetivo**. Aunqu
 
 ---
 
-## ¿Qué es este documento?
+## ¿Qué es este documento?``
 
 Este documento define **los temas** que Grupo Nelson comunicará en su sitio web y **cómo desarrollarlos**. Los temas son las grandes ideas, los territorios conceptuales donde Grupo Nelson tiene autoridad y diferenciación.
 
