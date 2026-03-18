@@ -84,9 +84,9 @@ const sections: SectionDefinition[] = [
         id: 'diferencia-nelson',
         name: 'La Diferencia Nelson',
         url: '/nelson/diferencia-nelson',
-        status: 'stub',
+        status: 'con-contenido',
         summary:
-          'Página vacía. Debe comunicar qué distingue a Grupo Nelson de competidores como Yamsa, Pimsa, etc.',
+          'Copy comercial escrito. H1: "Con Nelson, hablas con los dueños". 3 diferenciadores: 60+ años, owner-operated, constructora in-house. Infraestructura Fortune 500. Pendiente: QA y migración a componentes.',
         topics: [
           {
             title: 'Owner Involvement: Hablas directo con los dueños',
@@ -117,9 +117,9 @@ const sections: SectionDefinition[] = [
         id: 'liderazgo',
         name: 'Liderazgo',
         url: '/nelson/liderazgo',
-        status: 'stub',
+        status: 'con-contenido',
         summary:
-          'Página vacía. Tres generaciones de liderazgo familiar. Presentar al equipo directivo actual.',
+          'Copy comercial escrito. H1: "Hacemos nearshoring en Mexicali desde antes de que existiera la palabra". 80% repeat, casos Gulfstream/Honeywell/Interiores Aéreos, directiva familiar. Pendiente: QA y migración a componentes.',
         topics: [
           {
             title: 'Tres generaciones al frente',
@@ -136,9 +136,9 @@ const sections: SectionDefinition[] = [
         id: 'trayectoria',
         name: 'Trayectoria Comprobada',
         url: '/nelson/trayectoria',
-        status: 'stub',
+        status: 'con-contenido',
         summary:
-          'Página vacía. Mostrar track record con empresas Fortune 500 y clientes de largo plazo.',
+          'Copy comercial escrito. H1: "60 años construyendo naves industriales para empresas Fortune 500". Timeline 1965→hoy, 8 números, placeholder grid 30 logos. Pendiente: QA, componente visual de logos y migración.',
         topics: [
           {
             title: 'Clientes Fortune 500 que confían en nosotros',
@@ -172,9 +172,9 @@ const sections: SectionDefinition[] = [
         id: 'baumex',
         name: 'Baumex Constructora',
         url: '/constructora/baumex',
-        status: 'con-componentes',
+        status: 'con-contenido',
         summary:
-          'Tiene 20+ componentes con props. Es la página más densa del sitio. Los 6 temas del desempaquetado comercial (fase-2-desempaquetado-comercial-baumex.md) definen el contenido.',
+          'Copy comercial aprobado 17/17 QA (rev03). 6 temas: constructora propia, track record, project management, safety, certificaciones, ejecución completa. Debajo: 20+ componentes con props placeholder pendientes de migración.',
         topics: [
           {
             title: 'Constructora propia, no subcontratada',
@@ -427,9 +427,9 @@ const sections: SectionDefinition[] = [
         id: 'proyectos-especializados',
         name: 'Proyectos Especializados',
         url: '/constructora/proyectos-especializados',
-        status: 'con-componentes',
+        status: 'con-contenido',
         summary:
-          'Tema 7: Proyectos que demuestran capacidades más allá de naves estándar. Material de entrevista con Armando Wilhelmy (12 mar 2026).',
+          'Copy comercial aprobado 18/18 QA (rev02). 4 proyectos: puente Skyworks 95m, Gulfstream 550K 55,500m², túnel de viento Honeywell 3,000HP, planta Deacero 50,000m². Debajo: componentes con props placeholder.',
         topics: [
           {
             title: 'Puente Vehicular Industrial — Skyworks Semiconductores',
