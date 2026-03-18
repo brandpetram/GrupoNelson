@@ -220,8 +220,7 @@ const mobileMenuData: MobileMenuSection[] = [
   {
     name: 'Experiencia',
     categories: [
-      { title: 'Capacidades', links: expertiseCapabilitiesLinks },
-      { title: 'Estándares', links: expertiseStandardsLinks },
+      { title: 'Resultados', links: expertiseCapabilitiesLinks },
     ],
   },
   {
@@ -704,17 +703,17 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* EXPERIENCIA - 2 columnas */}
+        {/* EXPERIENCIA - links + visual */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>Experiencia</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
-                <div className="grid grid-cols-2 gap-6 divide-x divide-foreground/10">
-                  {/* Capacidades */}
-                  <div className="pr-6">
+                <div className="grid grid-cols-[45%_55%] gap-4 pr-4">
+                  {/* Resultados links */}
+                  <div>
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Capacidades
+                      Resultados
                     </span>
                     <ul className="mt-3 space-y-1">
                       {expertiseCapabilitiesLinks.map((item, index) => (
@@ -729,23 +728,11 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
                       ))}
                     </ul>
                   </div>
-                  {/* Estándares */}
-                  <div className="pl-6">
-                    <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Estándares
-                    </span>
-                    <ul className="mt-3 space-y-1">
-                      {expertiseStandardsLinks.map((item, index) => (
-                        <ListItem
-                          key={index}
-                          href={item.href}
-                          title={item.name}
-                          description={item.description}
-                        >
-                          {item.icon}
-                        </ListItem>
-                      ))}
-                    </ul>
+                  {/* Visual content placeholder */}
+                  <div className="flex items-center justify-center rounded-lg bg-blue-600 p-4">
+                    <div className="text-center">
+                      <p className="text-white text-sm font-medium">Visual content</p>
+                    </div>
                   </div>
                 </div>
               </div>

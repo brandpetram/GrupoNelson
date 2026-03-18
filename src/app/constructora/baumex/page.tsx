@@ -34,6 +34,223 @@ export default function ComponentesTresPage() {
       <Header />
 
       <main>
+        {/* ══════════════════════════════════════════════════════════
+            COPY COMERCIAL — Baumex Constructora
+            Basado en: fase-2-desempaquetado-comercial-baumex.md
+            Reglas: docs/research-copywriting-b2b-industrial.md
+            Status: BORRADOR — pendiente de aprobación
+            ══════════════════════════════════════════════════════════ */}
+        <div className="px-8 md:px-12 pt-20 pb-32">
+
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+            Construye tu nave industrial en Mexicali con la constructora que Gulfstream eligió para 52,200 m²
+          </h1>
+
+          <p className="text-xl leading-relaxed mb-12">
+            Somos la constructora in-house de Grupo Nelson. 28 años de experiencia. 75 proyectos completados.
+            4.5 millones de pies cuadrados construidos para 33 corporaciones internacionales, incluyendo Gulfstream,
+            Honeywell, DHL y Vertiv. Desde terracerías hasta acabados — un solo equipo, un solo contrato,
+            un solo responsable.
+          </p>
+
+          <div className="flex flex-wrap gap-12 mb-24">
+            <div><p className="text-4xl font-bold leading-none">4.5M ft²</p><p className="text-muted-foreground">construidos</p></div>
+            <div><p className="text-4xl font-bold leading-none">75+</p><p className="text-muted-foreground">proyectos</p></div>
+            <div><p className="text-4xl font-bold leading-none">28</p><p className="text-muted-foreground">años</p></div>
+            <div><p className="text-4xl font-bold leading-none">33</p><p className="text-muted-foreground">corporaciones internacionales</p></div>
+          </div>
+
+          <hr className="border-border my-16" />
+
+          {/* ── TEMA 1: Constructora propia, no subcontratada ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Elimina intermediarios: construcción de naves industriales con equipo propio
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Ejecuta tu proyecto build-to-suit con un solo punto de responsabilidad. Mientras otros
+            desarrolladores industriales subcontratan la construcción a terceros, nosotros diseñamos
+            y construimos con nuestro propio equipo. Esto elimina intermediarios,
+            acorta tiempos y concentra la responsabilidad desde el primer plano
+            hasta la última inspección.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Contamos con departamentos propios de arquitectura, ingeniería civil, estructural,
+            eléctrica, mecánica y plomería. No subcontratamos el diseño. Tenemos nuestro propio departamento
+            de estimación y costos. Y una estructura operativa clara: dos Project Executives,
+            Director Administrativo, Project Manager, superintendentes y equipos de ejecución directa
+            en campo.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── TEMA 2: Track record ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            4.5 millones de pies cuadrados construidos en Mexicali para 33 corporaciones internacionales
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Gulfstream, Honeywell, DHL, Vertiv, Skyworks,
+            Intuitive Surgical, Rheem, Hirsh, Direct Pack, Barcel. Desde naves de 5,000 m² hasta
+            el proyecto industrial más grande de Mexicali: Gulfstream 550K con 52,200 m².
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Hemos operado en Mexicali, Hermosillo, San Luis Potosí, Tecate, El Salto (Jalisco)
+            y Los Cabos. 75 proyectos documentados desde 1997. Diversidad de industrias: aeroespacial,
+            manufactura de precisión, logística, procesamiento de alimentos, papel, dispositivos
+            médicos, semiconductores y reciclado de acero.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            En el proyecto Gulfstream 550K, gestionamos simultáneamente 45 empresas
+            subcontratistas, 450 trabajadores en campo, y acumulamos más de 1,092,745 horas hombre
+            trabajadas.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── TEMA 3: Gestión de proyecto con rigor institucional ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Gestiona tu proyecto build-to-suit con ruta crítica de 18 hitos
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Baumex gestiona simultáneamente
+            permisos municipales, cadenas de suministro con tiempos de entrega de meses, 18 hitos
+            críticos interdependientes y decenas de subcontratistas — todo bajo la presión de que
+            un día de retraso en la ruta crítica es un día perdido sin recuperación.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Operamos con 11 puntos de control de calidad documentados: desde Design Build
+            Planning y selección de subcontratistas hasta Submittals, Long Lead Items y Quality
+            Testing con laboratorio externo. Cada material se envía al cliente para aprobación
+            antes de instalarse. Cada equipo crítico — transformadores, generadores, chillers,
+            bombas contra incendio — se monitorea preventivamente desde que se ordena hasta que
+            llega a obra.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Las reuniones semanales de obra incluyen 16 o más asistentes con firmas autógrafas:
+            contratista general, subcontratistas eléctricos, de estructura, albañilería, HVAC,
+            laminación y plomería. Cada minuta documenta acuerdos, responsables y fechas. Gestión
+            centralizada con software ERP de construcción.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── TEMA 4: Seguridad industrial ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Asegura tu operación: 1,092,745 horas hombre con cero muertes en construcción industrial
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Gulfstream y Honeywell exigen que sus contratistas demuestren seguridad con datos, no con palabras.
+            Baumex documenta cada turno, cada incidente, cada métrica.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            No decimos "nos importa la seguridad". Tenemos un sistema documentado que opera
+            diariamente: manual HSE de 18 capítulos, permisos de trabajo antes de cada turno con
+            matriz de riesgo cuantitativa (Impacto × Probabilidad), permisos especializados atados
+            a Normas Oficiales Mexicanas para trabajo en alturas (NOM-009-STPS-2011) y soldadura
+            (NOM-027-STPS-2008), y un scorecard donde registra transparentemente cada incidente —
+            incluyendo los menores.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Cada día, antes de trabajar, el personal llena una matriz de riesgos identificando
+            peligros, equipo necesario y plan de emergencia. Los trabajadores en alturas se les
+            mide la presión arterial antes de subir. Las zonas de soldadura tienen un "Vigía
+            Vigilante de Incendios" asignado. Los trabajadores cuentan con certificación DC-3
+            y la jornada máxima está limitada a 12 horas.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            404 días consecutivos sin accidentes en el proyecto Gulfstream 550K. 1,092,745 horas hombre
+            trabajadas con cero muertes. El scorecard de seguridad está disponible para revisión.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── TEMA 5: Certificaciones ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Accede a certificaciones que abren puertas: ISN "Recomendado" por Honeywell, LEED Gold, FM Global
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Las certificaciones no son trofeos — son filtros de acceso. Sin ISN, no entras a la
+            cadena de proveedores de Honeywell. Sin cumplir los ensayos de EPGC, no apruebas la
+            cimentación.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Contamos con certificación ISN (ISNetworld) activa con calificación "Recomendado" por
+            Honeywell International para Aero-Mexicali y Honeywell Mexico-Corporate — algo que solo
+            se obtiene después de demostrar cumplimiento sostenido en seguridad, documentación y
+            calidad. Validamos nuestro trabajo con auditorías de laboratorios externos independientes
+            como EPGC (Especialistas en Geotecnia y Concretos), cuyos ensayos de compactación
+            confirman que cada cimentación cumple las especificaciones del proyecto.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Somos LEED Knowledgeable. La nave Gulfstream 550K se está certificando como LEED
+            Gold — nuestra primera certificación de este nivel en una nave industrial.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── TEMA 6: Ejecución completa ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Construye de terracerías a acabados con un solo equipo: 10 disciplinas in-house
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Cuando decimos "in-house", no es una media verdad. Ejecutamos
+            directamente desde el primer movimiento de tierras hasta el último acabado interior:
+          </p>
+
+          <ul className="text-lg leading-loose mb-6 pl-6 list-disc">
+            <li>Terracerías y nivelación</li>
+            <li>Cimentación (zapatas, colado)</li>
+            <li>Mampostería (muros de block)</li>
+            <li>Estructura metálica</li>
+            <li>Techumbre (lámina)</li>
+            <li>Fachadas metálicas con aislante térmico</li>
+            <li>Interiores (tablaroca)</li>
+            <li>Acabados (pisos, pintura, sanitarios)</li>
+            <li>Instalación eléctrica (desde subestaciones hasta luminarias)</li>
+            <li>Instalación mecánica (HVAC, fire protection)</li>
+          </ul>
+
+          <p className="text-lg leading-relaxed mb-16">
+            Baumex ejecuta cada etapa con personal propio en campo — desde la motoniveladora
+            compactando el terreno hasta la instalación de subestaciones eléctricas.
+            Evidencia fotográfica documentada de cada fase.
+          </p>
+
+          <hr className="border-border my-16" />
+
+          {/* ── CTA ── */}
+          <h2 className="text-3xl font-bold leading-snug mb-6">
+            Solicita una consulta para tu proyecto
+          </h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Gulfstream lleva 35 años construyendo con Baumex. Honeywell, 30. DHL y Vertiv regresaron
+            después del primer proyecto. El 80% de nuestros clientes repiten.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            Si tu operación necesita una nave industrial diseñada y construida con estándares
+            internacionales en Mexicali o el noroeste de México, hablemos.
+          </p>
+
+        </div>
+        {/* FIN COPY COMERCIAL */}
+
         {/* Cuadricula Section con props */}
           <div>
               <CuadriculaSectionConProps

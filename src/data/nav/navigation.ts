@@ -69,8 +69,8 @@ export const parksInventoryLinks = [
   },
   {
     href: '/inventario/terrenos',
-    name: 'Terrenos en Venta',
-    description: 'Terreno industrial de primera',
+    name: 'Terrenos Disponibles',
+    description: 'Terrenos industriales disponibles',
     iconKey: 'map',
   },
   {
@@ -140,64 +140,43 @@ export const solutionsIndustryLinks = [
 ];
 
 // === EXPERIENCIA ===
-// Columna 1: Capacidades
+// Columna única: Resultados
+// Redefinida para enfocarse en evidencia y resultados demostrados,
+// no en capacidades (que ya están en Constructora).
+// Ver: docs/porque-eliminamos-algunas-secciones-del-menu-de-navegacion.md
 export const expertiseCapabilitiesLinks = [
-  {
-    href: '/experiencia/construccion-propia',
-    name: 'Construcción Propia',
-    description: 'Ventaja de integración vertical',
-    iconKey: 'hardHat',
-  },
-  {
-    href: '/experiencia/ingenieria',
-    name: 'Ingeniería Innovadora',
-    description: 'Instalaciones del futuro',
-    iconKey: 'compass',
-  },
   {
     href: '/experiencia/excelencia-operativa',
     name: 'Excelencia Operativa',
-    description: 'Confiabilidad garantizada',
+    description: 'Confiabilidad garantizada en la operación de parques',
     iconKey: 'settings',
   },
-];
-
-// Columna 2: Estándares
-export const expertiseStandardsLinks = [
   {
-    href: '/experiencia/leed-y-sustentabilidad',
-    name: 'LEED y Sustentabilidad',
-    description: 'Compromiso con construcción verde',
-    iconKey: 'leaf',
-  },
-  {
-    href: '/experiencia/cumplimiento-global',
-    name: 'Cumplimiento Global',
-    description: 'Estándares internacionales',
-    iconKey: 'globe',
+    href: '/experiencia/casos-de-exito',
+    name: 'Casos de Éxito',
+    description: 'Gulfstream, Honeywell, Interiores Aéreos',
+    iconKey: 'award',
   },
   {
     href: '/experiencia/certificaciones',
-    name: 'Certificaciones de Calidad',
-    description: 'Excelencia comprobada',
+    name: 'Certificaciones Obtenidas',
+    description: 'Logros verificables: LEED, FM Global',
     iconKey: 'award',
   },
 ];
 
+// Columna 2: Vacía (se mantiene el export para no romper imports)
+export const expertiseStandardsLinks: typeof expertiseCapabilitiesLinks = [];
+
 // === RECURSOS ===
 // Columna 1: Aprender
+// Casos de Éxito se movió a Experiencia (ver docs/porque-eliminamos-algunas-secciones-del-menu-de-navegacion.md)
 export const insightsLearnLinks = [
   {
     href: '/blog',
     name: 'Blog',
     description: 'Tendencias de la industria',
     iconKey: 'newspaper',
-  },
-  {
-    href: '/casos-de-exito',
-    name: 'Casos de Éxito',
-    description: 'Historias de clientes',
-    iconKey: 'bookOpen',
   },
   {
     href: '/recursos',
@@ -208,17 +187,12 @@ export const insightsLearnLinks = [
 ];
 
 // Columna 2: Conectar
+// Eventos eliminado: no aplica para Grupo Nelson (no realizan eventos públicos)
 export const insightsConnectLinks = [
   {
     href: '/noticias',
     name: 'Noticias',
     description: 'Últimos anuncios',
     iconKey: 'megaphone',
-  },
-  {
-    href: '/eventos',
-    name: 'Eventos',
-    description: 'Reuniones de la industria',
-    iconKey: 'calendar',
   },
 ];
