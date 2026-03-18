@@ -1,0 +1,204 @@
+# Vocabulario Genérico B2B
+
+Glosario obligatorio para cualquier proyecto de copywriting B2B de Brandpetram. Aplica a cualquier cliente, cualquier industria, cualquier región. Si escribes copy B2B para Brandpetram, usas estas palabras.
+
+Este documento se complementa con:
+- `reglas-de-copywriting-b2b.md` — Las 16 reglas de escritura
+- Un vocabulario de sector específico según el cliente (parques industriales, construcción, alimentos, etc.)
+
+---
+
+## Verbos Imperativos (Tú)
+
+El lector es el protagonista. Estos verbos abren headlines, CTAs y aperturas de sección.
+
+**Verbos de acción directa (fuertes — para headlines):**
+
+| Verbo | Contexto | Ejemplo |
+|-------|----------|---------|
+| Accede | A infraestructura, capacidades, mercados | "Accede a infraestructura certificada" |
+| Escala | Operaciones, capacidad, producción | "Escala tu operación sin interrupciones" |
+| Opera | Producción, planta, instalaciones | "Opera con la certeza de estándares internacionales" |
+| Construye | Nave, planta, operación, negocio | "Construye exactamente lo que tu operación necesita" |
+| Reduce | Riesgos, tiempos, costos, complejidad | "Reduce tu time-to-market a la mitad" |
+| Elimina | Intermediarios, incertidumbre, fricciones | "Elimina intermediarios: un solo contrato" |
+| Acelera | Expansión, entrada a mercado, timelines | "Acelera tu entrada al mercado" |
+| Asegura | Continuidad, compliance, calidad | "Asegura continuidad operativa" |
+| Simplifica | Procesos, instalación, decisiones | "Simplifica tu proceso de instalación" |
+| Maximiza | ROI, eficiencia, rendimiento | "Maximiza el rendimiento de tu inversión" |
+| Consolida | Operaciones, presencia, capacidad | "Consolida tu presencia en el mercado" |
+| Optimiza | Costos, procesos, tiempos | "Optimiza tu cadena de suministro" |
+
+**Verbos de resultado (para CTAs y cierres):**
+
+| Verbo | Contexto | Ejemplo |
+|-------|----------|---------|
+| Obtén | Cotización, consulta, specs | "Obtén una consulta para tu proyecto" |
+| Solicita | Propuesta, visita, información | "Solicita una propuesta" |
+| Consulta | Inventario, disponibilidad, specs | "Consulta disponibilidad actualizada" |
+| Agenda | Reunión, visita, llamada | "Agenda una reunión con nuestro equipo" |
+
+**Verbos débiles (evitar en headlines, aceptables en body copy):**
+
+| Verbo | Por qué es débil | Usar en su lugar |
+|-------|-----------------|------------------|
+| Descubre | Implica que no sabes nada | Accede, Consulta |
+| Explora | Turismo, no negocios | Evalúa, Revisa |
+| Aprende | Condescendiente en B2B | Consulta, Revisa |
+| Conoce | Pasivo | Accede, Evalúa |
+
+---
+
+## Verbos de Capacidad (Nosotros)
+
+La empresa como sujeto. Para descripciones de servicio, procesos y capacidades.
+
+| Verbo | Cuándo usar | Evitar |
+|-------|-------------|--------|
+| Ejecutamos | Acciones completas, proyectos | "Hacemos", "Realizamos" |
+| Entregamos | Compromiso cumplido, resultado final | "Damos" |
+| Desarrollamos | Proyectos, infraestructura | Sobreusar en todo contexto |
+| Construimos | Literal y metafórico | — |
+| Gestionamos | Procesos complejos: permisos, compliance, cadena de suministro | Para tareas simples |
+| Coordinamos | Múltiples stakeholders, proveedores | — |
+| Integramos | Capacidades, sistemas, procesos | — |
+| Habilitamos | Operación, producción, infraestructura | — |
+| Garantizamos | Solo cuando sea verificable con dato | Promesas sin respaldo |
+| Diseñamos | Proyectos, configuraciones | — |
+| Administramos | Propiedades, inventario, operación | — |
+| Operamos | Instalaciones, sistemas | — |
+| Resolvemos | Problemas específicos, retos técnicos | Sin especificar qué |
+
+---
+
+## Sustantivos de Autoridad
+
+Palabras que comunican credibilidad y peso institucional. Registro tipo Deloitte/McKinsey/PwC.
+
+| Palabra/Frase | Cuándo usar | Evitar |
+|---------------|-------------|--------|
+| Trayectoria | Con número de años: "60 años de trayectoria" | "Experiencia" (demasiado genérico) |
+| Track record | Para métricas verificables: "track record de 75 proyectos" | Traducir como "historial" (pierde peso) |
+| Expertise | Sin traducir; para dominios específicos | "Conocimiento" (débil), "Pericia" (anticuado) |
+| Especialización | "Nuestra especialización en [dominio]" | "Especializados" (adjetivo más débil) |
+| Referente | "Referente en [campo específico]" | "Líderes" (afirmación sin prueba) |
+| Benchmark | Para comparativas técnicas específicas | En contextos no técnicos |
+| Estándares | Siempre en plural + calificador: "estándares internacionales" | "Estándar" singular sin calificar |
+| Certificaciones | Siempre con nombres específicos | "Certificados" genérico |
+| Solidez | Financiera, institucional, estructural | — |
+| Respaldo | "Con el respaldo de [dato]" | Sin dato que lo respalde |
+| Certeza | "Opera con certeza" — reducción de riesgo | "Seguridad" (ambiguo) |
+| Confiabilidad | Sustantivo técnico, medible | "Confianza" (más emocional) |
+| Continuidad | De negocio, operativa, generacional | — |
+| Permanencia | Relaciones de largo plazo, estabilidad | — |
+| Credenciales | Para validaciones externas | — |
+| Due diligence | Proceso de evaluación corporativa — NO traducir | — |
+| Compliance | Contexto regulatorio — NO traducir | — |
+| Profesionales | Solo como sustantivo: "nuestros profesionales de ingeniería" | Como adjetivo vacío: "servicio profesional" |
+
+---
+
+## Sustantivos de Resultado
+
+Palabras que comunican lo que el cliente obtiene. Siempre con métrica.
+
+| Palabra | Contexto | Regla |
+|---------|----------|-------|
+| Eficiencia | Operativa, energética, de costos | Siempre con número |
+| Productividad | Para manufactura, producción | Siempre con métrica |
+| Rendimiento | De inversión, operativo | Con dato comparativo |
+| Retorno | De inversión (ROI) | Con porcentaje o plazo |
+| Desempeño | Operativo, de sistemas | Con indicador |
+| Ahorro | De costos, de tiempo | Siempre con número |
+| Reducción | De riesgos, de tiempos, de costos | Siempre con métrica |
+| Crecimiento | De operación, de capacidad, de mercado | Con dato: "crecimiento de 5,000 a 550,000 ft²" |
+
+---
+
+## Sustantivos de Relación
+
+Palabras para el vínculo empresa-cliente.
+
+| Palabra/Frase | Cuándo usar | Evitar |
+|---------------|-------------|--------|
+| Socio | Preferir sobre "partner" en español | "Partner" (innecesario en español) |
+| Aliado | "Aliado estratégico" — con calificador | Sin calificador |
+| Compromiso | Como sustantivo con especificación | "Comprometidos con" (cliché vacío) |
+| Punto de contacto | "Un solo punto de contacto" | — |
+| Responsable | "Un solo responsable de principio a fin" | — |
+
+---
+
+## Calificadores
+
+Adjetivos y modificadores que agregan peso. Usar con moderación — los datos son mejores que los adjetivos.
+
+| Calificador | Contexto | Regla |
+|-------------|----------|-------|
+| Verificable | Datos, métricas, track record | Solo si realmente se puede verificar |
+| Documentado | Procesos, resultados, seguridad | Solo si existe el documento |
+| Certificado | Con nombre de certificación específica | Nunca solo "certificado" |
+| Probado | Infraestructura, procesos, relaciones | Solo con evidencia |
+| Integrado | Servicios, capacidades, sistemas | — |
+| Escalable | Infraestructura, operación, capacidad | — |
+| Internacional | Estándares, empresas, certificaciones | — |
+| Dedicado | Recurso exclusivo para el cliente | — |
+| Transparente | Costos, procesos, información | — |
+| Directo | Acceso, comunicación, trato | — |
+
+---
+
+## Frases Estructurales Reutilizables
+
+Patrones que funcionan en cualquier proyecto B2B.
+
+**Para abrir secciones:**
+- "Desde [año], [acción continua]..."
+- "Con [número] de [métrica], [afirmación]..."
+- "[Número] [métrica]. [Número] [métrica]. [Afirmación]." (proof bar)
+
+**Para calls-to-action:**
+- "[Verbo imperativo] con la certeza de [beneficio]"
+- "[Verbo imperativo] tu [operación/expansión/proyecto]"
+- "Solicita [qué específico] →"
+
+**Para credenciales:**
+- "[Número] de [métrica] lo respaldan"
+- "Empresas como [nombres] confían en [capacidad específica]"
+- "[Número] años en [actividad específica]"
+
+**Para transiciones:**
+- "Por eso [afirmación de capacidad]"
+- "Lo que significa [beneficio tangible para el lector]"
+- "El resultado: [dato verificable]"
+
+---
+
+## Palabras y Frases PROHIBIDAS
+
+Prohibidas en todo copy B2B de Brandpetram. Sin excepciones. Sin contexto que las justifique.
+
+| Prohibida | Por qué | Usar en su lugar |
+|-----------|---------|------------------|
+| Solución integral | Cliché universal | Describir qué incluye específicamente |
+| Comprometidos con | Vacío | "Ejecutamos [qué]" |
+| Líderes en/del | Sin prueba | "Referente en" + evidencia |
+| Los mejores | Superlativo vacío | Métrica específica |
+| Calidad total | Jerga de los 90s | "Estándares [específicos]" |
+| Excelencia | Vacío sin métrica | Dato concreto |
+| Innovador / Vanguardia | Sobre-usado | Describir la innovación concreta |
+| Servicio personalizado | Genérico | "Acceso directo a [quién]" |
+| Cliente satisfecho | Débil | Testimonial con nombre |
+| Precio competitivo / Precio justo | Lenguaje de commodity | "Estructura de costos transparente" |
+| De clase mundial | Vacío sin evidencia | Solo si va seguido de evidencia inmediata |
+| Aclamados / Reconocidos | Publicidad de TV | Dato verificable |
+| De boca en boca / Nos recomiendan | Coloquial | "Referidos por clientes actuales" |
+| Meses sin intereses | Registro de retail | Eliminar |
+| Capital humano / Colaboradores | Jerga de RRHH | "Equipo de [especialidad]" |
+| Propuesta de valor | Meta-lenguaje de marketing | Decir la propuesta directamente |
+| Mejores prácticas | Consultora genérica | Describir la práctica específica |
+
+---
+
+*Vocabulario genérico B2B — Brandpetram*
+*Aplicable a cualquier cliente B2B de cualquier sector*

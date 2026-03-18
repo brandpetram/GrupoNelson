@@ -1,0 +1,311 @@
+# Reglas de Copywriting B2B Industrial
+
+Manual de escritura comercial para sitios web de empresas B2B del sector industrial. Aplicable a cualquier cliente, región o subsector industrial.
+
+Este documento contiene **16 reglas**. Todas tienen el mismo peso. El copy debe cumplir las 16 para considerarse listo.
+
+---
+
+## Marco Conceptual
+
+Estos cuatro principios son la base filosófica detrás de las 16 reglas. Entenderlos es requisito para aplicar las reglas correctamente.
+
+### Registro lingüístico del sector
+
+Todo campo profesional desarrolla un vocabulario técnico que funciona como señal de pertenencia. Cuando un interlocutor usa ese vocabulario con precisión, activa en el receptor un reconocimiento implícito: "esta persona sabe de qué habla". Un copywriter que escribe para industria manufacturera debe haber internalizado términos como "altura libre", "carga de piso", "suministro trifásico" o "doble articulado" no como decoración técnica, sino porque esos son exactamente los criterios con los que el decisor evalúa una propuesta. La ausencia de ese vocabulario no es neutral — es una señal negativa activa. El lector industrial que encuentra "espacio perfecto para crecer" no piensa "qué genérico", piensa "este proveedor no entiende mi operación".
+
+### Calibración del registro emocional según el modo de compra
+
+Las decisiones de compra no son homogéneas en su carga emocional. La construcción de una nave industrial, la contratación de un servicio de ingeniería o la renta de espacio productivo pertenecen firmemente al grupo de compras de alta implicación racional: el decisor es frecuentemente un director de operaciones, un CFO o un comité de compras que debe sustentar la decisión con números, plazos y especificaciones. Introducir hipérbole, mayúsculas o lenguaje de "transformación" en ese contexto no amplifica el mensaje — lo contamina, porque activa el escepticismo del lector racional. El copy correcto habla en el mismo idioma que un reporte interno: precio cerrado, semanas de entrega, norma aplicable. No porque sea aburrido, sino porque eso es lo que reduce la fricción cognitiva del decisor.
+
+### Supresión del yo enunciativo
+
+Existe en todo escritor una tendencia natural a dejar huella de su presencia en el texto — una metáfora elaborada, un giro sintáctico inesperado, una voz reconocible. Esa tendencia es valiosa en literatura y contraproducente en copywriting. El problema no es estético sino funcional: cuando el lector percibe la voz del escritor, su atención se divide entre el mensaje y la performance. El buen copy opera en modo transparente — el lector no experimenta el texto como texto, sino como una descripción directa de su propia situación o de una solución a su problema. Esa invisibilidad es el oficio real.
+
+### Calibración de categoría
+
+Existe una tensión irresuelta en el copywriting de marcas con autoridad real: nombrar el producto genérico como verbo principal destruye el posicionamiento porque iguala a la marca con cualquier competidor del directorio. Pero omitir la categoría completamente deja al visitante sin ancla. La resolución no es elegir entre los dos extremos sino entender que operan en capas distintas. La categoría debe aparecer como credencial o contexto histórico — no como transacción. "Parques industriales desde 1965" comunica pertenencia y trayectoria. "Rentamos naves industriales" comunica que hay algo disponible a cambio de dinero. El contenido es idéntico; el efecto en la autoridad percibida es opuesto.
+
+---
+
+## Las 16 Reglas
+
+Todas las reglas tienen el mismo peso. El copy debe cumplir las 16.
+
+---
+
+### Regla 1 — Vocabulario técnico del sector
+
+**Instrucción:** Usa las palabras que el sector usa internamente, no las que usa cuando vende. Extrae el vocabulario técnico específico del campo e identifica los criterios con los que el decisor evalúa una compra. Si no puedes completar este paso, investiga antes de escribir.
+
+**Señal de falla:** El copy puede aplicarse a cualquier industria sin cambiar una sola palabra.
+
+**MALO:**
+> "¡Tu empresa merece el espacio perfecto! Construimos instalaciones increíbles para que tu negocio crezca sin límites. Diseños modernos, materiales de calidad y entregas a tiempo. ¡Contáctanos hoy y hagamos realidad tu visión!"
+
+**BUENO:**
+> "Nave de 5,000 m² lista para línea de producción en 14 semanas. Diseño y construcción con cimentaciones para cargas pesadas, alturas libres desde 8 m, accesos para doble articulado y suministro trifásico desde proyecto."
+
+---
+
+### Regla 2 — Registro emocional calibrado al modo de compra
+
+**Instrucción:** Clasifica la compra en una escala de 1 a 5 donde 1 = decisión puramente racional (comité, presupuesto, riesgo) y 5 = decisión puramente emocional (identidad, deseo, imagen). Para compras entre 1 y 2 — que es donde cae prácticamente todo el B2B industrial — elimina exclamaciones, superlativos, mayúsculas de énfasis y lenguaje de transformación. Sustituye por métricas, plazos, garantías y reducciones de riesgo.
+
+**Señal de falla:** El tono del copy no cambiaría si lo aplicaras a un producto de consumo masivo.
+
+**MALO:**
+> "¡La nave industrial que TRANSFORMARÁ tu empresa! No construimos solo estructuras — construimos el FUTURO de tu operación. Nuestras naves son obras maestras de ingeniería que llevarán tu producción al siguiente nivel. ¡El cambio empieza aquí!"
+
+**BUENO:**
+> "Reducción del tiempo de construcción sin comprometer especificaciones estructurales. Sistemas constructivos en acero prefabricado con proveedores certificados. Entregas en obra en 10–14 semanas según superficie y complejidad. Precio cerrado desde proyecto ejecutivo."
+
+---
+
+### Regla 3 — Supresión de la voz del escritor
+
+**Instrucción:** Identifica toda construcción que llame atención hacia sí misma — metáforas elaboradas, ritmo literario, giros inesperados. Evalúa si esa construcción acelera o ralentiza la comprensión del beneficio para el lector. Si la respuesta no es "acelera claramente", elimínala y reescribe en la forma más directa posible.
+
+**Señal de falla:** Al leer el copy en voz alta, suena a que alguien está escribiendo, no a que alguien está resolviendo un problema.
+
+**MALO:**
+> "Donde el concreto encuentra su destino. Hay una geometría en las cosas que duran. Líneas que no ceden, estructuras que respiran industria. Nosotros no levantamos paredes — trazamos el perímetro de lo que tu empresa puede llegar a ser."
+
+**BUENO:**
+> "Entregamos la nave. Tú arrancas producción. Proyecto ejecutivo, permisos de construcción, estructura, instalaciones y acabados en un solo contrato. Sin subcontratos que gestionar, sin sorpresas en el presupuesto final."
+
+---
+
+### Regla 4 — Categoría como credencial, no como transacción
+
+**Instrucción:** Verifica que la categoría del producto o servicio aparezca en el texto, pero como credencial o contexto histórico, no como verbo de venta. Si el copy suena a anuncio clasificado, la categoría está mal posicionada. Si el copy suena aspiracional pero el visitante no sabe qué vendes, falta el ancla de categoría.
+
+**Señal de falla tipo A:** Suena a directorio de empresas. Cualquier competidor podría firmarlo sin cambiar una palabra.
+
+**Señal de falla tipo B:** El visitante termina de leer sin saber con certeza qué ofreces.
+
+**MALO:**
+> "Rentamos naves industriales. Contáctanos para cotizar tu espacio ideal."
+
+**BUENO:**
+> "Parques industriales desde 1965. Empresas Fortune 500 llevan décadas operando aquí. Build-to-suit o disponibilidad inmediata."
+
+---
+
+### Regla 5 — Second-Person Imperative como modo primario
+
+**Instrucción:** Usar verbos imperativos como primera palabra de headlines y aperturas de sección. El lector es el sujeto, no la empresa. Este es el patrón estructural:
+
+```
+[Verbo imperativo] + [objeto del cliente] + [con/sin/en] + [beneficio o diferenciador]
+```
+
+**Verbos fuertes:** Construye, Escala, Opera, Acelera, Consolida, Asegura, Reduce, Elimina, Maximiza, Simplifica.
+
+**Verbos débiles (evitar en headlines):** Descubre, Explora, Aprende, Conoce — implican que el lector todavía está investigando, no actuando.
+
+**MALO:**
+> "En nuestra empresa te ayudamos a escalar tu operación con las mejores soluciones industriales del mercado."
+
+**BUENO:**
+> "Escala tu operación en parques industriales donde empresas Fortune 500 ya operan."
+
+---
+
+### Regla 6 — Todo dato debe ser específico y verificable
+
+**Instrucción:** Cada afirmación de capacidad debe incluir un número, un nombre propio o una fecha. Sin excepción. Si no tienes el dato, no hagas la afirmación.
+
+**MALO:**
+> "Amplia experiencia en construcción de naves industriales de alta calidad."
+
+**BUENO:**
+> "52,000 m² construidos con certificación LEED Gold. Cero accidentes fatales en más de un millón de horas hombre trabajadas."
+
+---
+
+### Regla 7 — Nombres propios sobre categorías abstractas
+
+**Instrucción:** Siempre que puedas nombrar al cliente, nómbralo. Los nombres son verificables; las categorías son abstractas. Un nombre propio comunica más confianza que cualquier adjetivo.
+
+**MALO:**
+> "Importantes empresas internacionales nos eligen como su proveedor de confianza."
+
+**BUENO:**
+> "Gulfstream, Honeywell y DHL operan en nuestros parques."
+
+---
+
+### Regla 8 — Narrativa de hechos, no de opinión
+
+**Instrucción:** Contar lo que pasó, no lo que opinas de ti mismo. La autoridad emerge de los hechos, no de los adjetivos. Describe acciones verificables, no juicios de valor sobre tu propia empresa.
+
+**MALO:**
+> "Somos la constructora de confianza preferida por las empresas más exigentes del mercado."
+
+**BUENO:**
+> "El cliente no licitó la nave de 52,000 m². Asignó directamente después de 20 años de relación."
+
+---
+
+### Regla 9 — El test del competidor
+
+**Instrucción:** Antes de publicar cualquier frase, preguntar: "¿Mi competidor podría decir exactamente lo mismo?" Si sí, reescribir con datos que solo esta empresa tiene. Si un competidor puede firmar tu copy sin cambiar una palabra, el copy no vale nada.
+
+**MALO:**
+> "Somos líderes en desarrollo industrial con años de experiencia y compromiso con la calidad."
+
+**BUENO:**
+> "Instalamos la primera maquiladora de esta ciudad en 1965. Ningún otro desarrollador de la región puede decir eso."
+
+---
+
+### Regla 10 — Cero clichés. Cero excepciones.
+
+**Instrucción:** Las siguientes frases están prohibidas en copy B2B industrial. No hay contexto en el que se justifiquen.
+
+| Prohibida | Por qué | Reemplazar con |
+|-----------|---------|----------------|
+| Solución integral | Cliché gastado | Describir qué incluye: "Desde terracerías hasta acabados, un solo contrato" |
+| Comprometidos con | Vacío sin especificar | "Ejecutamos [qué específico]" |
+| Líderes en/del | Afirmación sin prueba | "Referente en" + evidencia verificable |
+| Los mejores | Superlativo vacío | Métrica específica |
+| Calidad total | Jerga de los 90s | "Estándares [específicos]" |
+| Innovador / Vanguardia | Sobre-usado, vacío | Describir la innovación concreta |
+| Servicio personalizado | Genérico | "Acceso directo a [quién específico]" |
+| Cliente satisfecho | Débil | Testimonial con nombre y dato |
+| Precio competitivo | Lenguaje de commodity | "Estructura de costos transparente" |
+| De clase mundial | Vacío sin evidencia | Aceptable SOLO si va seguido de evidencia inmediata |
+| Cutting-edge / Industry-leading | Gobbledygook | Eliminar o reemplazar con dato |
+
+**MALO:**
+> "Somos líderes en soluciones integrales de construcción industrial, comprometidos con la calidad total y la innovación de vanguardia para clientes satisfechos."
+
+**BUENO:**
+> "75 proyectos entregados en 28 años. Desde naves estándar de 2,000 m² hasta instalaciones aeroespaciales de 52,000 m² con certificación LEED Gold."
+
+---
+
+### Regla 11 — Estructura para scanning, no para lectura
+
+**Instrucción:** El visitante tiene 30 segundos. La estructura de cada sección debe ser: (1) header con keyword descriptivo, (2) dato duro en primer párrafo, (3) bullet points con métricas, (4) CTA claro. Nunca abrir con historia de la empresa, misión/visión, o cita inspiracional.
+
+**MALO:**
+> "Nuestra empresa fue fundada en 1965 con la visión de crear espacios industriales de excelencia. A lo largo de los años, hemos crecido y evolucionado, siempre manteniendo nuestros valores fundacionales de integridad, compromiso y servicio. Hoy, con más de medio siglo de historia, seguimos transformando el panorama industrial de la región..."
+
+**BUENO:**
+> **Construcción de Naves Industriales Build-to-Suit**
+>
+> 75 proyectos. 28 años. 4.5 millones de pies cuadrados.
+>
+> - Entregas en 10–14 semanas según complejidad
+> - Certificaciones LEED, FM Global, NFPA
+> - Un solo contrato, un solo responsable
+>
+> → Solicita una consulta para tu proyecto
+
+---
+
+### Regla 12 — Keywords integrados en frases imperativas
+
+**Instrucción:** Cada keyword objetivo debe aparecer al menos una vez integrado en una frase imperativa natural. El keyword no debe sentirse forzado. Densidad recomendada: el keyword principal en (1) el H1, (2) el primer párrafo, (3) al menos un H2, (4) la meta description, y (5) 2-3 veces más en el body — pero solo donde sea natural.
+
+**MALO:**
+> "Naves industriales Monterrey. Ofrecemos naves industriales en Monterrey. Si buscas naves industriales en Monterrey, contáctanos para naves industriales en Monterrey."
+
+**BUENO:**
+> "Construye tu nave industrial en Monterrey con estándares FM Global y certificación LEED."
+
+---
+
+### Regla 13 — Headers descriptivos para SEO y GEO
+
+**Instrucción:** Los H1 y H2 deben contener el keyword y describir exactamente qué encontrará el lector en esa sección. Los motores de IA (ChatGPT, Perplexity, Google AI Overviews) usan headers para entender la estructura del contenido. Un header creativo que no describe el contenido es invisible para motores de IA.
+
+**MALO:**
+> H2: "Tu Nave, Tu Manera"
+
+**BUENO:**
+> H2: "Construcción Build-to-Suit: Naves Diseñadas para tu Operación"
+
+---
+
+### Regla 14 — Respuesta directa en los primeros 40-60 palabras
+
+**Instrucción:** Cada página debe abrir respondiendo la pregunta implícita del visitante en las primeras 40-60 palabras. Esto optimiza para Google AI Overviews y ChatGPT, que extraen respuestas de las primeras líneas del contenido.
+
+**MALO:**
+> "Bienvenidos a nuestro sitio web. Somos una empresa con una larga tradición de excelencia en el sector de la construcción industrial. Fundada hace décadas por visionarios que creyeron en el potencial de esta región..."
+
+**BUENO:**
+> "[Empresa] es la constructora in-house de [Grupo] con 28 años de experiencia y 75+ proyectos completados, incluyendo la nave industrial más grande de la ciudad: 52,000 m² con certificación LEED Gold."
+
+---
+
+### Regla 15 — Alternar imperativo con datos
+
+**Instrucción:** Si cada frase es imperativa, se vuelve agresivo. La secuencia efectiva es: Imperativo → Dato verificable → Imperativo → Narrativa factual → Dato. Nunca más de dos imperativos seguidos.
+
+**MALO:**
+> "Escala. Construye. Opera. Crece. Expande. Acelera. Consolida."
+
+**BUENO:**
+> "Escala tu operación sin interrupciones. El parque cuenta con subestación eléctrica dedicada, sistema centralizado contra incendios NFPA, y seguridad 24/7. Opera con la certeza que solo décadas de experiencia respaldan."
+
+---
+
+### Regla 16 — Una estadística cada 150-200 palabras
+
+**Instrucción:** Para optimización GEO y credibilidad, incluir al menos un dato duro cuantitativo cada 150-200 palabras de copy. Los modelos de IA priorizan contenido con datos verificables. Secciones largas de prosa sin datos cuantitativos pierden credibilidad y visibilidad en motores de IA.
+
+**MALO:**
+> "Nuestras naves cuentan con sistemas de aire acondicionado de alta eficiencia, paneles solares de última generación y sistemas de recuperación de agua que demuestran nuestro compromiso con la sustentabilidad y el medio ambiente."
+
+**BUENO:**
+> "3,200 toneladas de aire acondicionado de mínimo consumo. 10 MW de paneles solares en 50,000 m² de cubierta. Sistema de recuperación que reutiliza el 90% del agua de condensación."
+
+---
+
+## Estructura Recomendada de Página
+
+Para páginas de servicios en sitios web B2B industriales:
+
+```
+1. HERO (10-15 palabras)
+   → Frase imperativa con keyword + beneficio
+
+2. SUBTÍTULO (20-30 palabras)
+   → Dato duro + contexto
+
+3. PROOF BAR (3-4 métricas)
+   → Números grandes visibles sin necesidad de leer texto
+
+4. BODY — Alternar:
+   → Párrafo imperativo con beneficio
+   → Párrafo factual con datos y nombres de clientes
+   → Caso de éxito breve (3-4 líneas)
+   → Repetir patrón
+
+5. SOCIAL PROOF
+   → Logos de clientes
+   → Certificaciones con nombre específico
+
+6. CTA
+   → Frase imperativa + botón
+```
+
+---
+
+## Criterio de Salida
+
+El copy está listo para publicar cuando cumple las cuatro condiciones:
+
+1. **Un profesional del sector lo lee y no detecta que fue escrito por alguien de fuera.** El vocabulario técnico es preciso y natural.
+2. **El decisor puede extraer los criterios de evaluación sin interpretar ni inferir.** Los números, plazos y especificaciones están explícitos.
+3. **El texto puede ser eliminado y lo que queda es solo la promesa y el beneficio.** No hay artificio literario que distraiga.
+4. **La categoría es reconocible pero no suena a transacción.** El lector sabe qué vendes sin sentir que le están vendiendo.
+
+---
+
+*Manual de copywriting B2B industrial — Brandpetram*
+*Aplicable a cualquier cliente del sector industrial*

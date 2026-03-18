@@ -1,0 +1,93 @@
+# Vocabulario de Sector: Parques Industriales y Desarrollo Inmobiliario Industrial
+
+Términos específicos del sector de desarrollo, administración y renta de parques industriales. Estas son las palabras que un VP de Real Estate, un director de operaciones, un CFO o un broker industrial usa cuando evalúa opciones.
+
+Se complementa con `vocabulario-generico-b2b.md` (obligatorio leer primero).
+
+---
+
+## Inmobiliario Industrial
+
+| Término | Qué significa | Cuándo usar |
+|---------|---------------|-------------|
+| Clear height / Altura libre | Distancia del piso al obstáculo más bajo del techo | Specs de naves — uno de los primeros criterios que evalúa el decisor |
+| Spec building / Shell building | Nave construida sin cliente específico (especulativa) | Cuando se compara modelo especulativo vs. build-to-suit |
+| Build-to-suit | Construcción a la medida exacta del cliente | Servicio principal de constructoras como Baumex |
+| Move-in ready | Nave lista para ocupar inmediatamente | Inventario disponible — el cliente llega y arranca |
+| Tenant / Inquilino | Empresa que renta espacio en un parque | Descripciones de parque, prueba social |
+| Tenant improvement (TI) | Adaptaciones a la nave para el inquilino específico | Negociaciones de contrato |
+| Lease / Contrato de arrendamiento | Acuerdo formal de renta | Términos comerciales |
+| Triple net lease (NNN) | Inquilino paga renta + impuestos + seguro + mantenimiento | Términos financieros — estándar en industrial |
+| Vacancy rate / Tasa de vacancia | Porcentaje de espacio desocupado | Indicadores de salud del mercado |
+| Absorption / Absorción | m² netos ocupados en un periodo | Indicador de demanda del mercado |
+| Price per square foot (PSF) | Precio por pie cuadrado — la métrica estándar del sector | Cotizaciones, comparativas |
+| Due diligence | Evaluación corporativa antes de firmar — incluye inspección técnica, legal, financiera | Todo el proceso de venta |
+| LOI (Letter of Intent) | Carta de intención — primer paso formal antes del contrato | Proceso de cierre |
+| Occupancy rate / Tasa de ocupación | Porcentaje de espacio rentado | Prueba de demanda |
+| Anchor tenant | Inquilino principal que da credibilidad al parque | Gulfstream es anchor tenant de Nelson |
+| Campus | Conjunto de edificios de un solo cliente dentro de un parque | Honeywell tiene campus en los parques Nelson |
+| Common area maintenance (CAM) | Costos de mantenimiento de áreas comunes | Términos financieros |
+| Expansion land / Terreno de expansión | Terreno disponible para crecimiento futuro | Nelson III |
+
+---
+
+## Infraestructura de Parques
+
+| Término | Qué significa | Cuándo usar |
+|---------|---------------|-------------|
+| Subestación eléctrica dedicada | Punto de transformación exclusivo para el parque | Capacidad eléctrica — ventaja en zonas con déficit |
+| Capacidad instalada | KVA o MW disponibles para el parque | Specs eléctricas |
+| Redundancia eléctrica | Sistema de respaldo que previene interrupciones | Continuidad operativa |
+| Sistema contraincendio centralizado | Sistema compartido por todo el parque (tanque + bombas) | Ahorro para el inquilino vs. sistemas individuales |
+| Tanque de almacenamiento | Reserva de agua para sistema contraincendio | Specs de parque |
+| Suministro trifásico | Alimentación eléctrica industrial estándar | Specs básicas |
+| Dock / Andén | Punto de carga y descarga de camiones | Specs de naves |
+| Dock high / Dock level | Nivel del andén para carga directa desde camión | Specs logísticas |
+| Drive-in door | Puerta a nivel de piso para acceso vehicular | Specs de naves |
+| Column spacing / Distancia entre columnas | Espacio libre entre columnas interiores | Afecta layout de producción |
+| Floor load capacity / Carga de piso | Peso que soporta el piso por m² | Manufactura pesada |
+| Doble articulado | Camión largo que requiere accesos y radios de giro amplios | Logística |
+| Barda perimetral | Muro de seguridad alrededor del parque | Seguridad física |
+| Control de acceso | Sistema de entrada/salida regulada | Seguridad |
+
+---
+
+## Certificaciones y Normativas
+
+| Término | Qué significa | Cuándo usar |
+|---------|---------------|-------------|
+| LEED | Leadership in Energy and Environmental Design — certificación de edificios verdes | Sustentabilidad, ESG |
+| FM Global / Factory Mutual | Certificadora internacional de riesgo — reduce primas de seguro | Seguros, infraestructura |
+| NFPA | National Fire Protection Association — estándares de protección contra incendio | Sistemas contraincendio |
+| ISN / ISNetworld | Plataforma global de gestión de contratistas | Calificación de proveedores |
+| IBC | International Building Code — códigos de construcción | Compliance constructivo |
+| NOM | Norma Oficial Mexicana — regulaciones técnicas obligatorias | Compliance local |
+| ESG | Environmental, Social, Governance — marco de reportes corporativos | Sustentabilidad corporativa |
+| IMMEX | Programa mexicano de manufactura para exportación (antes maquila) | Régimen aduanero |
+| USMCA / T-MEC | Tratado comercial México-EE.UU.-Canadá | Comercio binacional |
+
+---
+
+## Mercado y Negocio
+
+| Término | Qué significa | Cuándo usar |
+|---------|---------------|-------------|
+| Nearshoring | Mover producción a un país cercano en vez de lejano | Posicionamiento regional |
+| Reshoring | Regresar producción al país de origen | Contexto de mercado |
+| Time-to-market | Tiempo desde decisión hasta inicio de operación | Beneficio de velocidad |
+| Single point of contact | Un solo responsable para todo el proceso | Ventaja de servicio |
+| Cost certainty | Precio cerrado sin sorpresas | Reducción de riesgo |
+| Repeat business | Clientes que regresan — medido en porcentaje | Prueba de satisfacción |
+| Owner-operated | Operado directamente por los dueños, no por inversionistas | Diferenciación vs. corporativos/REITs |
+| Fortune 500 | Las 500 empresas más grandes de EE.UU. por ingresos | Prueba social |
+| Tier 1 | Proveedor directo de un fabricante original (OEM) | Nivel de cliente |
+| Triple A / AAA | Empresa de primer nivel (calificación informal del sector) | Nivel de cliente |
+| Broker | Agente de bienes raíces industrial (CBRE, JLL, Colliers) | Canal de ventas |
+| FIBRA / REIT | Fideicomiso de inversión inmobiliaria | Modelo de competidores como VESTA |
+| Maquiladora | Planta de manufactura para exportación en México | Contexto histórico |
+| Shelter company | Empresa que opera como empleador legal para extranjeros en México | Modelo de IVEMSA |
+
+---
+
+*Vocabulario de sector: Parques Industriales — Brandpetram*
+*Para clientes del sector de desarrollo y administración de parques industriales*
