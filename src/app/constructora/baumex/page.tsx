@@ -68,11 +68,10 @@ export default function ComponentesTresPage() {
           </h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            Ejecuta tu proyecto build-to-suit con un solo punto de responsabilidad. Mientras otros
-            desarrolladores industriales subcontratan la construcción a terceros, nosotros diseñamos
-            y construimos con nuestro propio equipo. Esto elimina intermediarios,
-            acorta tiempos y concentra la responsabilidad desde el primer plano
-            hasta la última inspección.
+            Ejecuta tu proyecto build-to-suit con un solo punto de responsabilidad. Baumex diseña
+            y construye con equipo propio — sin intermediarios, sin subcontratos de diseño,
+            sin terceros entre tu proyecto y quien lo ejecuta. Un solo contrato que concentra
+            la responsabilidad desde el primer plano hasta la última inspección.
           </p>
 
           <p className="text-lg leading-relaxed mb-16">
@@ -152,8 +151,8 @@ export default function ComponentesTresPage() {
           </p>
 
           <p className="text-lg leading-relaxed mb-6">
-            No decimos "nos importa la seguridad". Tenemos un sistema documentado que opera
-            diariamente: manual HSE de 18 capítulos, permisos de trabajo antes de cada turno con
+            La seguridad en Baumex es un sistema documentado que opera
+            diariamente, no una declaración: manual HSE de 18 capítulos, permisos de trabajo antes de cada turno con
             matriz de riesgo cuantitativa (Impacto × Probabilidad), permisos especializados atados
             a Normas Oficiales Mexicanas para trabajo en alturas (NOM-009-STPS-2011) y soldadura
             (NOM-027-STPS-2008), y un scorecard donde registra transparentemente cada incidente —
