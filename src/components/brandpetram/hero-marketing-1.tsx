@@ -73,7 +73,7 @@ export function HeroMarketing1() {
         <div className="">
           <ContentText1 {...propsContenido}>
             <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Gulfstream 550K: 52,200 m² con 10 MW de paneles solares, sistemas antisísmicos BRB y certificación FM Global — en proceso de certificación LEED Gold. Baumex, la constructora in-house de Grupo Nelson, gestiona los 7 pilares del proceso en una de las zonas climáticas más demandantes de Norteamérica.
             </p>
           </ContentText1>
 

@@ -23,98 +23,84 @@ export function SidebarSticky1() {
           style={{ top: '100px' }}
         >
           <div className="p-6 text-muted-foreground text-sm space-y-6">
-            {/* Lorem en Ipsum */}
+            {/* 7 Pilares LEED */}
             <div>
               <h3 className="font-semibold text-foreground text-lg mb-3 leading-none">
-                Lorem en Ipsum
+                7 Pilares LEED
               </h3>
               <ul className="space-y-2">
                 <li className="leading-snug">
-                  <a href="/lorem/ipsum-ii" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem Ipsum II
+                  <a href="/constructora/leed/clima-extremo" className="hover:text-blue-600 transition-colors leading-none">
+                    Clima Extremo
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/lorem/ipsum-i" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem Ipsum I
+                  <a href="/constructora/leed/energia-atmosfera" className="hover:text-blue-600 transition-colors leading-none">
+                    Energía y Atmósfera
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/lorem/ipsum-iii" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem Ipsum III
+                  <a href="/constructora/leed/sitios-sostenibles" className="hover:text-blue-600 transition-colors leading-none">
+                    Sitios Sostenibles y Agua
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/lorem/ipsum-iv" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem Ipsum IV
+                  <a href="/constructora/leed/calidad-ambiental" className="hover:text-blue-600 transition-colors leading-none">
+                    Calidad Ambiental Interior
+                  </a>
+                </li>
+                <li className="leading-snug">
+                  <a href="/constructora/leed/materiales-recursos" className="hover:text-blue-600 transition-colors leading-none">
+                    Materiales y Recursos
+                  </a>
+                </li>
+                <li className="leading-snug">
+                  <a href="/constructora/leed/sistemas-operativos" className="hover:text-blue-600 transition-colors leading-none">
+                    Sistemas Operativos
+                  </a>
+                </li>
+                <li className="leading-snug">
+                  <a href="/constructora/leed/proceso-certificacion" className="hover:text-blue-600 transition-colors leading-none">
+                    Proceso de Certificación
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Servicios */}
+            {/* Datos Clave */}
             <div className="pt-4 border-t border-border">
               <h3 className="font-semibold text-foreground text-lg mb-3 leading-none">
-                Servicios
+                Datos Clave
               </h3>
-              <ul className="grid grid-cols-2 gap-2">
-                <li className="leading-snug">
-                  <a href="/lorem/to-sit" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem to Sit
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  <a href="/lorem/en-amet" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem en Amet
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  <a href="/lorem/consectetur" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem consectetur
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  <a href="/lorem/adipiscing" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem de Adipiscing
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  <a href="/lorem/disponible" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem Disponible
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  <a href="/lorem/venta" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem en Venta
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  <a href="/lorem/ipsum" className="hover:text-orange-500 transition-colors leading-none">
-                    Todos los Lorem
-                  </a>
-                </li>
+              <ul className="space-y-2">
+                <li className="leading-snug text-foreground font-medium">52,200 m² — nave más grande de Mexicali</li>
+                <li className="leading-snug">10 MW paneles solares</li>
+                <li className="leading-snug">LEED Gold (objetivo)</li>
+                <li className="leading-snug">FM Global certificada</li>
+                <li className="leading-snug">28 años de experiencia</li>
+                <li className="leading-snug">75+ proyectos</li>
               </ul>
             </div>
 
-            {/* Soluciones */}
+            {/* Constructora */}
             <div className="pt-4 border-t border-border">
               <h3 className="font-semibold text-foreground text-lg mb-3 leading-none">
-                Soluciones
+                Constructora
               </h3>
               <ul className="space-y-2">
                 <li className="leading-snug">
-                  <a href="/lorem/manufactura" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem Manufacturera
+                  <a href="/constructora/baumex" className="hover:text-blue-600 transition-colors leading-none">
+                    Baumex Constructora
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/lorem/logistica" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem y Distribución
+                  <a href="/constructora/build-to-suit" className="hover:text-blue-600 transition-colors leading-none">
+                    Build-to-Suit
                   </a>
                 </li>
                 <li className="leading-snug">
-                  <a href="/lorem/tecnologia" className="hover:text-orange-500 transition-colors leading-none">
-                    Lorem y Electrónica
+                  <a href="/constructora/proyectos-especializados" className="hover:text-blue-600 transition-colors leading-none">
+                    Proyectos Especializados
                   </a>
                 </li>
               </ul>
@@ -126,60 +112,39 @@ export function SidebarSticky1() {
         <div className="lg:col-span-9">
           <article className="space-y-7">
             <section className="space-y-7 text-xl leading-relaxed">
-              <h2 className=" text-2xl font-bold text-foreground">
-                Lorem de Ipsum Consectetur
+              <h2 className="text-2xl font-bold text-foreground">
+                Clima Extremo y Energía: construir LEED a +45°C en Mexicali
               </h2>
               <p className="text-muted-foreground">
-               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-
+                Mexicali supera los 48°C en verano con radiación solar de 2,400 kWh/m² anuales. Un diseño LEED genérico colapsa operativamente aquí. Baumex calibra la envolvente térmica específicamente para el desierto sonorense: R-19 en muros, R-30 en cubierta, cubiertas reflectivas SRI mayor a 78 y sellado al 100% en muelles de carga.
+              </p>
+              <p className="text-muted-foreground">
+                Gulfstream 550K opera con 3,200 toneladas de A/C de mínimo consumo distribuidas en 42 manejadoras, con recuperación del 90% del agua de condensación. 10 MW de paneles solares en 50,000 m² (cubierta + carports). 20 MW de capacidad eléctrica instalada, 50% energía solar limpia. Ahorro documentado del 35-50% frente a nave convencional.
               </p>
               <GridPoligonos2x1TextoVertical />
             </section>
             <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-             Lorem de Ipsum Consectetur
+                Agua, Materiales y Calidad Ambiental: los créditos que definen la certificación
               </h2>
               <p className="mb-4 text-muted-foreground">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
+                Mexicali está en una de las regiones con mayor estrés hídrico de Norteamérica. Nelson II opera con tanque contraincendio de 360,000 galones centralizado que ahorra al inquilino el 60% del costo. Captación pluvial, fixtures de ultra-bajo flujo y recuperación de condensación reducen el consumo total de agua un 40%.
               </p>
               <p className="mb-4 text-muted-foreground">
-
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-
-                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-
+                Cada material estructural llega con Declaración Ambiental de Producto (EPD) verificada por tercero. Acero con contenido reciclado documentado. Abastecimiento regional dentro de 160 km. Gestión de residuos con desvío mínimo del 50% de vertedero. Pinturas con COV por debajo de 50 g/L, ventilación ASHRAE 62.1 con filtración para polvo del desierto, y confort térmico controlado para operación industrial continua.
               </p>
               <GridPoligonos1x2TextoLargo />
             </section>
             <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-                Lorem de Ipsum Adipiscing
+                Sistemas Inteligentes y Proceso de Certificación LEED en Mexicali
               </h2>
               <p className="mb-4 text-muted-foreground">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
+                Building Management System con submedición independiente por circuito: HVAC, iluminación, bombas, fotovoltaicos y consumo hídrico monitoreados en tiempo real. Detección de ineficiencias en horas, no en meses. Dashboards que alimentan reportes ESG sin esfuerzo manual — lo que empresas Fortune 500 como Gulfstream y Honeywell exigen en sus instalaciones.
               </p>
               <p className="mb-4 text-muted-foreground">
-
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-
-                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-
+                Baumex gestiona el proceso integrativo LEED v4 BD+C desde el predesign: registro, Design Review, gestión de evidencias en construcción y Construction Review con trazabilidad completa en LEED Online. Gulfstream 550K en 53-55 puntos (Silver), apuntando a Gold con los 10 MW solares. 28 años de experiencia. 75+ proyectos. Un solo equipo que diseña, construye y certifica.
               </p>
-
             </section>
 
           </article>
