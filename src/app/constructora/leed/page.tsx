@@ -110,6 +110,9 @@ export default function LeedHubPage() {
       </div>
 
       {/* Grid de temas */}
+      <h2 className="text-2xl font-bold tracking-tight text-foreground mb-8">
+        7 pilares de construcción LEED para naves industriales en Mexicali
+      </h2>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {temas.map((tema) => (
           <Link
