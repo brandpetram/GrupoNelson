@@ -2,40 +2,40 @@ import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
 
 export const metadata: Metadata = {
-  title: 'Energía & Atmósfera',
-  description: 'Modelado energético, envolvente de alto rendimiento y fotovoltaicos en cubierta para naves industriales LEED en Mexicali. Ahorro del 35-50% vs nave convencional. Grupo Nelson.',
+  title: 'Energía y Atmósfera LEED | Grupo Nelson Mexicali',
+  description: 'Naves industriales LEED en Mexicali con 10 MW de paneles solares, ahorro del 35-50% vs nave convencional. Modelado energético desde fase conceptual. Grupo Nelson.',
   alternates: { canonical: 'https://gruponelson.mx/constructora/leed/energia-atmosfera' },
 }
 
 export default function EnergiaAtmosferaPage() {
   return (
     <LeedPageLayout
-      titulo="Energía & Atmósfera"
-      intro="El estándar de eficiencia energética ASHRAE 90.1 es el piso, no el techo. Cada crédito de la categoría de Energía y Atmósfera de LEED se gana demostrando cuánto supera tu nave ese baseline — y en Mexicali, donde la demanda de enfriamiento domina el perfil energético, superar el estándar requiere modelado energético desde la fase conceptual."
+      titulo="Reduce el gasto energético de tu nave industrial en Mexicali un 35-50% con diseño LEED y 10 MW de paneles solares"
+      intro="Gulfstream 550K en Mexicali: 10 MW de paneles solares en 50,000 m² (cubierta + carports), 20 MW de capacidad eléctrica instalada, 50% energía solar limpia. 3,200 toneladas de A/C de mínimo consumo. Estos son los resultados reales de la categoría de Energía y Atmósfera de LEED ejecutada por Baumex en la nave industrial más grande de la ciudad."
       imageSrc="/leed/leed7-mexicali-nave-industrial-energia-atmosfera-1.jpeg"
       imageAlt="Energía y atmósfera — Nave industrial LEED con fotovoltaicos en Mexicali"
       parrafos={[
-        'El World Green Building Council documenta en su "Global Status Report 2024" que los edificios representan el 37% de las emisiones globales de CO₂ relacionadas con energía, y que el diseño integrativo es la estrategia con mayor impacto demostrado para reducir el consumo energético de edificios nuevos. No se trata de agregar tecnología al final; se trata de diseñar el edificio como sistema eficiente desde el primer trazo.',
-        'Grupo Nelson coordina tres estrategias mediante modelado energético que simula el desempeño real de la nave en las condiciones climáticas de Mexicali: la envolvente térmica reduce la carga de enfriamiento, la iluminación LED de gran altura con controles de ocupación y daylighting reduce la demanda eléctrica base, y el sistema fotovoltaico en cubierta genera la energía que el edificio ya no desperdicia.',
-        'El Fraunhofer Institute for Solar Energy Systems (ISE) documenta que la combinación de aislamiento de alto rendimiento con fotovoltaicos en cubierta puede reducir el consumo neto de energía de un edificio industrial entre 60% y 85% frente a un diseño convencional. En una nave de Mexicali con más de 5,000 m² de cubierta orientada al sur, el potencial de generación fotovoltaica es excepcional — y cada kWh generado en sitio reduce la dependencia de la red y suma créditos en Energía Renovable de LEED.',
+        'Optimiza el perfil energético de tu nave industrial en Mexicali desde la fase conceptual. Baumex coordina tres estrategias con modelado energético específico para las condiciones climáticas del sitio: la envolvente térmica reduce la carga de enfriamiento (R-19 muros, R-30 cubierta), la iluminación LED de gran altura con controles de ocupación reduce la demanda eléctrica base, y el sistema fotovoltaico en cubierta genera la energía que el edificio ya no desperdicia.',
+        'La nave Gulfstream 550K documenta los resultados: 10 MW de paneles solares distribuidos en 20,000 m² de cubierta y 30,000 m² de carports del estacionamiento. 20 MW de capacidad eléctrica total instalada. 42 manejadoras de aire acondicionado de mínimo consumo con recuperación del 90% del agua de condensación reutilizada en torres de enfriamiento. Certificación FM Global en toda la envolvente.',
+        'Escala tu capacidad de generación solar en Mexicali. Con más de 5,000 m² de cubierta orientada al sur, el potencial fotovoltaico de una nave industrial en esta región es excepcional — cada kWh generado en sitio reduce la dependencia de la red de CFE y suma créditos en Energía Renovable de LEED. Baumex gestiona la integración completa: estructura preparada para carga de paneles, instalación eléctrica dimensionada y conexión a red.',
       ]}
       features={[
         {
-          title: 'Modelado energético desde fase conceptual',
-          description: 'Simulación del desempeño real de la nave en las condiciones climáticas de Mexicali — no en condiciones promedio de una base de datos genérica.',
+          title: '10 MW de paneles solares instalados',
+          description: 'Gulfstream 550K: 20,000 m² en cubierta + 30,000 m² en carports. 50% de la energía total será solar limpia.',
         },
         {
-          title: 'Fotovoltaicos en cubierta >5,000 m²',
-          description: 'Cubierta orientada al sur con potencial de generación excepcional. Cada kWh generado en sitio reduce la dependencia de la red y suma créditos en Energía Renovable de LEED.',
+          title: 'Modelado energético desde fase conceptual',
+          description: 'Simulación del desempeño real en condiciones climáticas de Mexicali — no en promedios nacionales. Cada decisión de diseño cuantificada.',
         },
         {
           title: 'Ahorro del 35-50% vs nave convencional',
-          description: 'Resultado documentado de combinar envolvente calibrada para clima extremo, iluminación inteligente y generación solar en cubierta en los parques industriales de Mexicali.',
+          description: 'Resultado de combinar envolvente calibrada para 48°C, iluminación inteligente y generación solar en parques industriales de Mexicali.',
         },
       ]}
-      subtituloSeccion="La categoría de mayor peso en LEED: dominarla define la diferencia entre Certified y Gold"
-      parrafoCierre="Reduce tu gasto energético entre un 35% y un 50% frente a una nave convencional del mismo tamaño en la misma zona. Ese ahorro no es una proyección teórica — es el resultado documentado de combinar envolvente calibrada para clima extremo, iluminación inteligente y generación solar en cubierta en los parques industriales de Mexicali."
-      fuentes="World Green Building Council, 'Global Status Report for Buildings and Construction 2024' · Fraunhofer ISE, 'Building Envelopes: Optimization of Multifunctional Properties for Climate-Neutral Buildings'"
+      subtituloSeccion="Energía y Atmósfera: la categoría de mayor peso en LEED para naves industriales en Mexicali"
+      parrafoCierre="Maximiza los créditos de Energía y Atmósfera en tu nave industrial de Mexicali. Con envolvente calibrada, iluminación eficiente y paneles solares en cubierta, Baumex ha demostrado ahorros del 35-50% en la nave más grande de la ciudad. Solicita una consulta para tu proyecto."
+      fuentes="ASHRAE 90.1 (Energy Baseline) · LEED v4.1 Energy & Atmosphere Credits · Datos de proyecto: Gulfstream 550K, Baumex (2024-2026)"
     />
   )
 }

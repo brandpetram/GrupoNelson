@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
 
 export const metadata: Metadata = {
-  title: 'Calidad Ambiental Interior',
+  title: 'Calidad Ambiental Interior | LEED | Grupo Nelson',
   description: 'Materiales de bajo COV, ventilación ASHRAE 62.1 y confort térmico para naves industriales LEED en Mexicali. Protege la salud y productividad de tu equipo. Grupo Nelson.',
   alternates: { canonical: 'https://gruponelson.mx/constructora/leed/calidad-ambiental' },
 }
@@ -10,32 +10,32 @@ export const metadata: Metadata = {
 export default function CalidadAmbientalPage() {
   return (
     <LeedPageLayout
-      titulo="Calidad Ambiental Interior"
-      intro="La calidad del ambiente interior de una nave industrial no es un tema secundario — es lo que determina la productividad, la salud y la retención de tu fuerza laboral."
+      titulo="Construye tu nave industrial en Mexicali con calidad ambiental interior certificada LEED"
+      intro="Pinturas con COV por debajo de 50 g/L. Ventilación diseñada para clima desértico con filtración ASHRAE 62.1. Confort térmico controlado para operación industrial continua. Estos son los estándares de calidad ambiental interior que Grupo Nelson integra en la construcción de naves industriales en Mexicali — y los que permiten obtener créditos LEED en la categoría de ambiente interior."
       imageSrc="/leed/leed5-mexicali-nave-industrial-calidad-ambiental-1.jpeg"
       imageAlt="Calidad ambiental interior en nave industrial LEED — Mexicali"
       parrafos={[
-        'La Organización Mundial de la Salud declaró el aire interior limpio como un derecho humano fundamental, y sus guías de calidad del aire establecen límites específicos para formaldehído, benceno y otros compuestos orgánicos volátiles (COV) que se emiten desde pinturas, selladores, adhesivos y recubrimientos de piso. En Mexicali, donde las naves operan con recirculación intensiva de aire por las temperaturas extremas, controlar las fuentes de emisión interior no es opcional — es lo que protege a las personas que trabajan dentro.',
-        'Elimina las fuentes de emisión tóxica del interior de tu nave especificando materiales que cumplen los umbrales de LEED para la categoría de Calidad del Ambiente Interior. Eso significa pinturas y recubrimientos con COV por debajo de 50 g/L, selladores por debajo de 250 g/L, adhesivos por debajo de 70 g/L, y sistemas de piso que cumplen la norma FloorScore o equivalente.',
-        'REHVA, la Federación Europea de Asociaciones de HVAC, actualizó en 2024 sus directrices técnicas de calidad ambiental interior en respuesta a la nueva Directiva Europea de Eficiencia Energética en Edificios (EPBD), reforzando que ventilación y calidad del aire son inseparables del desempeño energético del edificio. Grupo Nelson integra estos criterios desde la especificación de materiales: cada producto que entra a la nave se verifica contra los umbrales LEED antes de instalarse.',
+        'Especifica materiales verificados contra umbrales LEED antes de que se instalen en tu nave. Pinturas y recubrimientos con compuestos orgánicos volátiles por debajo de 50 g/L, selladores por debajo de 250 g/L, adhesivos por debajo de 70 g/L, y sistemas de piso con certificación FloorScore. Baumex verifica cada producto que entra a obra contra estos umbrales — en Mexicali, donde las naves operan con recirculación intensiva de aire por temperaturas que superan los 45°C, controlar las fuentes de emisión interior protege directamente a las personas que trabajan dentro.',
+        'Asegura ventilación adecuada para el entorno desértico de Mexicali. Los sistemas de ventilación de Grupo Nelson se diseñan conforme a ASHRAE 62.1 con filtración específica para las condiciones de polvo y partículas de la región — una consideración que los diseños genéricos no contemplan. La nave Gulfstream 550K (52,200 m²) opera con 42 manejadoras de aire y 3,200 toneladas de aire acondicionado de mínimo consumo, con recuperación del 90% del agua de condensación.',
+        'Reduce el riesgo de rotación laboral con condiciones de trabajo documentables. Iluminación natural y artificial optimizada para operación industrial, temperatura interior controlada, y aire libre de contaminantes. Estos parámetros no solo suman créditos LEED — cumplen la expectativa de cualquier empresa multinacional que evalúa instalarse en parques industriales de Mexicali.',
       ]}
       features={[
         {
-          title: 'Materiales de bajo COV verificados',
-          description: 'Pinturas <50 g/L, selladores <250 g/L, adhesivos <70 g/L y pisos con certificación FloorScore — verificados antes de instalarse en obra.',
+          title: 'Materiales de bajo COV verificados en obra',
+          description: 'Pinturas <50 g/L, selladores <250 g/L, adhesivos <70 g/L y pisos FloorScore — cada producto verificado contra umbrales LEED antes de instalarse.',
         },
         {
           title: 'Ventilación ASHRAE 62.1 para clima desértico',
-          description: 'Sistemas diseñados con filtración adecuada para las condiciones de polvo y partículas del entorno desértico de Mexicali — una consideración que los diseños genéricos no contemplan.',
+          description: 'Filtración diseñada para polvo y partículas del entorno de Mexicali. Gulfstream 550K: 42 manejadoras, 3,200 toneladas de A/C, 90% de recuperación de agua.',
         },
         {
-          title: 'Confort térmico controlado',
-          description: 'Iluminación natural y artificial optimizada para operación industrial, con temperatura interior controlada para maximizar la productividad del equipo de trabajo.',
+          title: 'Confort térmico para operación industrial continua',
+          description: 'Temperatura controlada, iluminación optimizada y aire limpio — condiciones documentables que facilitan auditorías corporativas y retención de personal.',
         },
       ]}
-      subtituloSeccion="Productividad que se mide en aire, luz y temperatura"
-      parrafoCierre="Garantiza un espacio de trabajo donde tu equipo rinde al máximo: confort térmico controlado, iluminación natural y artificial optimizada para operación industrial, y aire libre de contaminantes. Eso no solo cumple créditos LEED — cumple la expectativa de cualquier empresa multinacional que opere en los parques industriales de la frontera norte."
-      fuentes="WHO, 'Guidelines for Indoor Air Quality: Selected Pollutants' · REHVA, 'Model Indoor Environmental Quality Regulation to Fulfil New Provisions of 2024 EPBD Recast'"
+      subtituloSeccion="Calidad ambiental que se mide: aire, luz y temperatura en tu nave industrial de Mexicali"
+      parrafoCierre="Opera tu nave industrial en Mexicali con calidad ambiental interior que cumple créditos LEED, estándares ASHRAE y las expectativas de empresas Fortune 500. Gulfstream, Honeywell y 30 corporaciones internacionales ya operan en parques de Grupo Nelson con estos estándares. Solicita una consulta para tu proyecto."
+      fuentes="ASHRAE Standard 62.1 (Ventilation for Acceptable Indoor Air Quality) · LEED v4.1 Indoor Environmental Quality Credits · FloorScore Standard (Resilient Floor Covering Institute)"
     />
   )
 }

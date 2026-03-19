@@ -94,10 +94,10 @@ export default function LeedHubPage() {
       <div className="max-w-2xl mb-16">
         <p className="text-base/7 font-semibold text-emerald-600">Constructora · Grupo Nelson</p>
         <h1 className="mt-2 text-4xl font-extrabold tracking-tighter text-foreground sm:text-5xl">
-          Certificación LEED
+          Construye tu nave industrial LEED en Mexicali — Gulfstream 550K apuntando a Gold
         </h1>
         <p className="mt-6 text-xl/8 text-muted-foreground">
-          Construimos naves industriales certificadas LEED en Mexicali, Baja California — una de las zonas climáticas más demandantes de Norteamérica. Explora los 7 pilares de nuestra metodología.
+          52,200 m² con 10 MW de paneles solares, sistemas antisísmicos BRB y certificación FM Global. La nave industrial más grande de Mexicali está en proceso de certificación LEED Gold. Baumex gestiona los 7 pilares del proceso — desde envolvente térmica para 48°C hasta trazabilidad de materiales con EPD.
         </p>
         <div className="mt-8">
           <Link
