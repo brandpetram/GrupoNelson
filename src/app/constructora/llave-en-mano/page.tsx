@@ -17,112 +17,140 @@ export default function LlaveEnManoPage() {
       <Header />
 
       {/* ══════════════════════════════════════════════════════════
-          COPY COMERCIAL — Llave en Mano (Turnkey)
-          Fuente: docs/fase-2-desempaquetado-comercial-baumex.md (Temas A, C, F)
-          Fuente: docs/4-los-10-temas-comerciales-de-grupo-nelson.md (#2 Turnkey Solutions)
+          COPY COMERCIAL — Llave en Mano (Turnkey / Move-in Ready)
+          Ángulo: Naves existentes en inventario, listas para operar.
+          El cliente entra y arranca — se adapta a lo que hay.
+          Fuente: docs/copy/temario-desarrolladora-grupo-nelson.md (Tema F, Camino 1)
+          Fuente: docs/turn-key-vs-built-to-suit.md (investigación)
           Reglas: /Proyectos/copywriting-b2b/reglas-de-copywriting-b2b.md
           Status: BORRADOR — pendiente de aprobación
           ══════════════════════════════════════════════════════════ */}
       <div className="px-8 md:px-12 pt-20 pb-32">
 
         <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-          Recibe tu nave industrial en Mexicali lista para operar — diseño, permisos, construcción y entrega bajo un solo contrato
+          Ocupa tu nave industrial en Mexicali en semanas — inventario disponible listo para operar
         </h1>
 
         <p className="text-xl leading-relaxed mb-12">
-          Llave en mano significa que defines tus requerimientos y recibes la nave terminada.
-          Baumex gestiona todo el proceso: diseño con departamentos propios de arquitectura
-          e ingeniería, permisos municipales, estatales y federales, construcción con 10 disciplinas
-          in-house, y entrega con evidencia documentada de cada fase. Un solo contrato.
-          Un solo responsable. Tú arrancas producción.
+          Llave en mano significa que la nave ya existe. Entras, instalas tu equipo y arrancas
+          producción. Sin esperar diseño, permisos ni construcción. Grupo Nelson tiene naves
+          disponibles en 4 parques industriales de Mexicali — desde espacios económicos en El Vigía
+          hasta infraestructura Fortune 500 en Nelson II con subestación eléctrica dedicada
+          y sistema contraincendio central de 360,000 galones. 30 corporaciones internacionales
+          ya operan aquí.
         </p>
 
         <div className="flex flex-wrap gap-12 mb-24">
-          <div><p className="text-4xl font-bold leading-none">1</p><p className="text-muted-foreground">solo contrato</p></div>
-          <div><p className="text-4xl font-bold leading-none">10</p><p className="text-muted-foreground">disciplinas in-house</p></div>
-          <div><p className="text-4xl font-bold leading-none">75+</p><p className="text-muted-foreground">proyectos entregados</p></div>
-          <div><p className="text-4xl font-bold leading-none">28</p><p className="text-muted-foreground">años de ejecución</p></div>
+          <div><p className="text-4xl font-bold leading-none">4</p><p className="text-muted-foreground">parques con inventario</p></div>
+          <div><p className="text-4xl font-bold leading-none">4M ft²</p><p className="text-muted-foreground">desarrollados</p></div>
+          <div><p className="text-4xl font-bold leading-none">30</p><p className="text-muted-foreground">corporaciones operando</p></div>
+          <div><p className="text-4xl font-bold leading-none">80%</p><p className="text-muted-foreground">clientes que regresan</p></div>
         </div>
 
         <hr className="border-border my-16" />
 
-        {/* ── Qué incluye ── */}
+        {/* ── Portafolio de parques ── */}
         <h2 className="text-3xl font-bold leading-snug mb-6">
-          Qué incluye la construcción llave en mano de naves industriales en Mexicali
+          4 generaciones de naves industriales en Mexicali — desde económicas hasta clase mundial
         </h2>
 
         <p className="text-lg leading-relaxed mb-6">
-          Baumex ejecuta cada etapa con personal propio en campo. Desde la motoniveladora
-          compactando el terreno hasta la instalación de subestaciones eléctricas:
+          Grupo Nelson tiene 4 parques activos en Mexicali, cada uno con un perfil diferente.
+          Selecciona el que se ajusta a tu operación y tu presupuesto:
         </p>
 
-        <ul className="list-disc pl-6 text-lg leading-relaxed mb-6 space-y-2">
-          <li>Proyecto ejecutivo: arquitectura, ingeniería civil, estructural, eléctrica, mecánica</li>
-          <li>Gestión de permisos: municipales, estatales, federales (CFE, CNA, CESPM)</li>
-          <li>Terracerías, cimentación, mampostería, estructura metálica</li>
-          <li>Techumbre, fachadas metálicas con aislante, interiores (tablaroca), acabados</li>
-          <li>Instalación eléctrica: desde subestaciones hasta luminarias</li>
-          <li>Instalación mecánica: HVAC, fire protection, plomería</li>
-          <li>Control de calidad con laboratorio externo (EPGC)</li>
-          <li>Evidencia fotográfica documentada de cada fase</li>
+        <ul className="list-disc pl-6 text-lg leading-relaxed mb-6 space-y-4">
+          <li><strong>El Vigía</strong> (primera generación) — Rentas más económicas del portafolio.
+            Ideal para operaciones que inician o presupuestos ajustados. Interiores Aéreos empezó
+            aquí con 5,000 ft² y hoy ocupa 550,000.</li>
+          <li><strong>Nelson I</strong> (segunda generación, 1984-2000) — Primer parque moderno de Grupo Nelson.
+            Áreas verdes, estacionamiento, barda perimetral.</li>
+          <li><strong>Vigía II</strong> — Honeywell Aerospace opera aquí desde hace 30+ años.</li>
+          <li><strong>Nelson II</strong> (tercera generación, 2000+) — El parque más moderno.
+            27 hectáreas. Subestación eléctrica dedicada. Sistema contraincendio central
+            con tanque de 360,000 galones (ahorra 60% al inquilino). Gulfstream, DHL y Vertiv operan aquí.</li>
         </ul>
 
         <p className="text-lg leading-relaxed mb-16">
-          Simplifica tu expansión en Mexicali. No coordinas subcontratistas, no gestionas permisos,
-          no supervisas obra. Baumex entrega la nave lista para que instales tu equipo y operes.
+          Accede al portafolio completo. Desde naves renovadas a renta económica hasta infraestructura
+          que ya pasó auditorías de empresas Fortune 500.
         </p>
 
         <hr className="border-border my-16" />
 
-        {/* ── Gestión de proyecto ── */}
+        {/* ── Velocidad ── */}
         <h2 className="text-3xl font-bold leading-snug mb-6">
-          Gestión de proyecto con ruta crítica de 18 hitos para tu nave industrial en Mexicali
+          Acelera tu entrada a Mexicali — arranca operaciones sin esperar construcción
         </h2>
 
         <p className="text-lg leading-relaxed mb-6">
-          El modelo llave en mano de Baumex opera con 11 puntos de control de calidad documentados
-          y 18 hitos críticos interdependientes. Cada material se envía al cliente para aprobación
-          antes de instalarse (submittals). Cada equipo de largo tiempo de entrega — transformadores,
-          generadores, chillers, bombas contra incendio — se monitorea preventivamente desde que se
-          ordena hasta que llega a obra.
+          Para empresas que llegan a México por nearshoring y necesitan arrancar rápido,
+          una nave llave en mano elimina los 12-24 meses de un proyecto build-to-suit.
+          Visitas la nave, verificas que cumple tus requerimientos, firmas el contrato
+          y comienzas a operar en semanas.
         </p>
 
         <p className="text-lg leading-relaxed mb-16">
-          Reuniones semanales de obra con 16+ asistentes. Minutas con acuerdos, responsables y fechas.
-          Gestión centralizada con software ERP de construcción. Gulfstream, Honeywell y DHL
-          han operado bajo este modelo con Baumex.
+          Gulfstream, Honeywell, DHL, Baxter y 26 corporaciones más ya eligieron este camino.
+          Seguridad 24/7 en todos los parques. Contratos de 10 a 15 años.
+          El 80% de los clientes de Grupo Nelson son recurrentes — no solo llegan, se quedan.
         </p>
 
         <hr className="border-border my-16" />
 
-        {/* ── Por qué in-house ── */}
+        {/* ── Infraestructura incluida ── */}
         <h2 className="text-3xl font-bold leading-snug mb-6">
-          Constructora in-house: la ventaja de la construcción llave en mano con Grupo Nelson en Mexicali
+          Infraestructura incluida en naves industriales llave en mano de Mexicali
         </h2>
 
         <p className="text-lg leading-relaxed mb-6">
-          Baumex es la constructora propia de Grupo Nelson. El mismo grupo que administra el parque
-          industrial es el que diseña y construye la nave. Esto significa que quien negocia tu contrato
-          de renta conoce las capacidades de la constructora, y quien construye conoce las restricciones
-          del parque. Un solo ecosistema.
+          Las naves de Grupo Nelson incluyen la infraestructura del parque donde operan.
+          En Nelson II, eso significa:
+        </p>
+
+        <ul className="list-disc pl-6 text-lg leading-relaxed mb-6 space-y-2">
+          <li>Subestación eléctrica dedicada para el parque</li>
+          <li>Sistema contraincendio central con tanque de 360,000 galones y línea eléctrica dedicada</li>
+          <li>Seguridad 24/7 con control de acceso</li>
+          <li>Barda perimetral</li>
+          <li>Vialidades internas y estacionamiento</li>
+        </ul>
+
+        <p className="text-lg leading-relaxed mb-16">
+          Reduce tu inversión inicial. La infraestructura del parque ya existe y se comparte
+          entre inquilinos — el sistema contraincendio central ahorra al inquilino el 60% del costo
+          frente a un sistema individual. No construyes infraestructura: la usas.
+        </p>
+
+        <hr className="border-border my-16" />
+
+        {/* ── Si no encuentras lo que necesitas ── */}
+        <h2 className="text-3xl font-bold leading-snug mb-6">
+          Si ninguna nave del inventario cumple tus especificaciones — Baumex la construye a tu medida
+        </h2>
+
+        <p className="text-lg leading-relaxed mb-6">
+          Si tu operación requiere especificaciones que no existen en el inventario disponible
+          — alturas específicas, capacidad eléctrica de alta demanda, sistemas especializados —
+          Baumex, la constructora in-house de Grupo Nelson, diseña y construye la nave a tu medida
+          exacta. Un solo proveedor para ambos caminos: nave existente o nave nueva.
         </p>
 
         <p className="text-lg leading-relaxed mb-16">
-          Accede a este modelo integrado. Gulfstream lleva 35 años construyendo con Baumex.
-          Honeywell, 30. DHL y Vertiv regresaron después del primer proyecto.
-          80% de clientes recurrentes.
+          Gulfstream necesitó 52,200 m² con sistemas antisísmicos y 20 MW de capacidad eléctrica.
+          No existía en inventario. Baumex lo construyó. 28 años, 75+ proyectos build-to-suit.
         </p>
 
         <hr className="border-border my-16" />
 
         {/* ── CTA ── */}
         <h2 className="text-3xl font-bold leading-snug mb-6">
-          Solicita tu nave industrial llave en mano en Mexicali
+          Consulta el inventario disponible de naves industriales en Mexicali
         </h2>
 
         <p className="text-lg leading-relaxed">
-          Define tus requerimientos. Baumex entrega la nave lista para operar.
-          Un solo contrato, un solo responsable.
+          4 parques. Naves desde 5,000 ft² hasta infraestructura Fortune 500.
+          Solicita disponibilidad y especificaciones actualizadas.
         </p>
 
       </div>
