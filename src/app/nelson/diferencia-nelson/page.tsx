@@ -21,7 +21,7 @@ export default function DiferenciaNelsonPage() {
         <div className="px-8 md:px-12 pt-20 pb-32">
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Con Nelson, hablas con los dueños
+            Instala tu nave industrial en Mexicali con el único desarrollador operado por su familia fundadora desde 1965
           </h1>
 
           <p className="text-xl leading-relaxed mb-12">

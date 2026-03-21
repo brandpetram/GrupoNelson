@@ -21,7 +21,7 @@ export default function LiderazgoPage() {
         <div className="px-8 md:px-12 pt-20 pb-32">
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Hacemos nearshoring en Mexicali desde antes de que existiera la palabra
+            Opera tu nave industrial en Mexicali con el desarrollador que hace nearshoring desde 1965 — 60 años antes del término
           </h1>
 
           <p className="text-xl leading-relaxed mb-12">
