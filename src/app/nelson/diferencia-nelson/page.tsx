@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { FeatureSection8BP } from '@/components/brandpetram/feature-section-8-bp'
 import { OffsetWithFeatureListBP } from '@/components/brandpetram/offset-with-feature-list-bp'
-import { SplitSimpleBP } from '@/components/brandpetram/split-simple-bp'
+import { SplitSimpleBP, splitParagraphClass } from '@/components/brandpetram/split-simple-bp'
 
 export const metadata: Metadata = {
   title: 'La Diferencia Nelson | Grupo Nelson',
@@ -26,11 +26,10 @@ export default function DiferenciaNelsonPage() {
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
           imageAlt="Parque industrial Nelson en Mexicali — 60 años de historia"
-          paragraphs={[
-            <>En <strong>1965</strong>, Rodolfo Nelson Sr. instaló la primera maquiladora de <strong>Mexicali</strong>. No existía la palabra &quot;nearshoring&quot;. No existían los parques industriales modernos de la región. No existía el ecosistema manufacturero que hoy alberga a <strong>30 corporaciones internacionales</strong>. Todo eso se construyó sobre lo que Grupo Nelson empezó.</>,
-            <>Tres generaciones después, la familia sigue operando. <strong>4 millones de pies cuadrados</strong> desarrollados. 5 parques industriales. Presencia en <strong>Mexicali, Hermosillo y San Luis Potosí</strong>. No llegaron al nearshoring cuando se puso de moda — lo practicaban 50 años antes de que existiera el término.</>,
-          ]}
-        />
+        >
+          <p className={splitParagraphClass}>En <strong>1965</strong>, Rodolfo Nelson Sr. instaló la primera maquiladora de <strong>Mexicali</strong>. No existía la palabra &quot;nearshoring&quot;. No existían los parques industriales modernos de la región. No existía el ecosistema manufacturero que hoy alberga a <strong>30 corporaciones internacionales</strong>. Todo eso se construyó sobre lo que Grupo Nelson empezó.</p>
+          <p className={splitParagraphClass}>Tres generaciones después, la familia sigue operando. <strong>4 millones de pies cuadrados</strong> desarrollados. 5 parques industriales. Presencia en <strong>Mexicali, Hermosillo y San Luis Potosí</strong>. No llegaron al nearshoring cuando se puso de moda — lo practicaban 50 años antes de que existiera el término.</p>
+        </SplitSimpleBP>
 
         {/* ── Diferenciador 2: Owner-operated ── */}
         <SplitSimpleBP
@@ -39,12 +38,11 @@ export default function DiferenciaNelsonPage() {
           imagePosition="right"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg"
           imageAlt="Familia Nelson — operación directa en Mexicali"
-          paragraphs={[
-            <><strong>Humberto Juárez Nelson</strong> atiende a los clientes directamente. <strong>Rodolfo Nelson L.</strong> supervisa la construcción. <strong>Juan Carlos Nelson L.</strong> dirige la administración. <strong>Alfredo Martínez Nelson</strong> gestiona los servicios del parque. Cuatro miembros de la familia en roles operativos activos. Estructura plana.</>,
-            <>En otros desarrolladores industriales de Mexicali necesitas tres niveles de aprobación para cambiar una cláusula del contrato. En Grupo Nelson necesitas una llamada. <strong>Gulfstream</strong> no licitó su quinta expansión — después de <strong>35 años</strong> de relación con la familia, asignó directamente.</>,
-            <>Reduce la complejidad de tu instalación en Mexicali. Contratos de <strong>10 a 15 años</strong> negociados con quienes toman las decisiones, no con gerentes regionales que rotan cada dos años.</>,
-          ]}
-        />
+        >
+          <p className={splitParagraphClass}><strong>Humberto Juárez Nelson</strong> atiende a los clientes directamente. <strong>Rodolfo Nelson L.</strong> supervisa la construcción. <strong>Juan Carlos Nelson L.</strong> dirige la administración. <strong>Alfredo Martínez Nelson</strong> gestiona los servicios del parque. Cuatro miembros de la familia en roles operativos activos. Estructura plana.</p>
+          <p className={splitParagraphClass}>En otros desarrolladores industriales de Mexicali necesitas tres niveles de aprobación para cambiar una cláusula del contrato. En Grupo Nelson necesitas una llamada. <strong>Gulfstream</strong> no licitó su quinta expansión — después de <strong>35 años</strong> de relación con la familia, asignó directamente.</p>
+          <p className={splitParagraphClass}>Reduce la complejidad de tu instalación en Mexicali. Contratos de <strong>10 a 15 años</strong> negociados con quienes toman las decisiones, no con gerentes regionales que rotan cada dos años.</p>
+        </SplitSimpleBP>
 
         {/* ── Diferenciador 3: Baumex ── */}
         <SplitSimpleBP
@@ -53,12 +51,11 @@ export default function DiferenciaNelsonPage() {
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
           imageAlt="Baumex constructora — naves industriales en Mexicali"
-          paragraphs={[
-            <>Si necesitas una nave que no existe en inventario, <strong>Baumex</strong> la diseña y construye. Es la constructora propia de Grupo Nelson — no un tercero subcontratado. Un solo contrato cubre diseño, permisos, construcción y entrega. <strong>10 disciplinas constructivas</strong> ejecutadas con equipo propio, desde terracerías hasta acabados.</>,
-            <><strong>Gulfstream 550K: 52,200 m²</strong> con certificación LEED Gold, sistemas antisísmicos BRB y 10 MW de paneles solares. La nave industrial más grande de Mexicali, diseñada y construida por Baumex. <strong>1,092,745 horas hombre</strong> trabajadas con cero accidentes fatales.</>,
-            <>Escala tu operación con un solo proveedor. Nave disponible hoy o construida a tu medida — el mismo grupo que administra el parque es el que construye la nave.</>,
-          ]}
-        />
+        >
+          <p className={splitParagraphClass}>Si necesitas una nave que no existe en inventario, <strong>Baumex</strong> la diseña y construye. Es la constructora propia de Grupo Nelson — no un tercero subcontratado. Un solo contrato cubre diseño, permisos, construcción y entrega. <strong>10 disciplinas constructivas</strong> ejecutadas con equipo propio, desde terracerías hasta acabados.</p>
+          <p className={splitParagraphClass}><strong>Gulfstream 550K: 52,200 m²</strong> con certificación LEED Gold, sistemas antisísmicos BRB y 10 MW de paneles solares. La nave industrial más grande de Mexicali, diseñada y construida por Baumex. <strong>1,092,745 horas hombre</strong> trabajadas con cero accidentes fatales.</p>
+          <p className={splitParagraphClass}>Escala tu operación con un solo proveedor. Nave disponible hoy o construida a tu medida — el mismo grupo que administra el parque es el que construye la nave.</p>
+        </SplitSimpleBP>
 
         {/* ── Infraestructura ── */}
         <OffsetWithFeatureListBP />

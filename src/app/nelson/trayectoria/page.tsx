@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
-import { LogosGridBP } from '@/components/brandpetram/logos-grid-bp'
+import { LogosGridBP2 } from '@/components/brandpetram/logos-grid-bp-2'
 
 export const metadata: Metadata = {
   title: 'Trayectoria | Grupo Nelson',
@@ -14,7 +14,7 @@ export default function TrayectoriaPage() {
       <main>
         {/* ── Logos Grid — Hero de la página ── */}
         <div className="pt-20">
-          <LogosGridBP />
+          <LogosGridBP2 />
         </div>
 
         {/* ══════════════════════════════════════════════════════════

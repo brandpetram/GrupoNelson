@@ -11,19 +11,23 @@
 
 import Image from 'next/image'
 
+const pClass = "text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1rem] 834:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide"
+
 interface SplitSimpleBPProps {
     tagline?: string
     title: string
-    paragraphs: React.ReactNode[]
+    children: React.ReactNode
     imageSrc: string
     imageAlt: string
     imagePosition?: 'left' | 'right'
 }
 
+export { pClass as splitParagraphClass }
+
 export function SplitSimpleBP({
     tagline,
     title,
-    paragraphs,
+    children,
     imageSrc,
     imageAlt,
     imagePosition = 'right',
@@ -39,17 +43,7 @@ export function SplitSimpleBP({
                 {title}
             </h2>
             <div className="mt-[1rem] 768:mt-[1.5rem] 1200:mt-[2rem] space-y-[0.75rem] 768:space-y-[1rem] 1200:space-y-[1.25rem]">
-                {paragraphs.map((paragraph, i) => {
-                    const key = `split-p-${i}`
-                    return (
-                        <p
-                            key={key}
-                            className="text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1rem] 834:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide"
-                        >
-                            {paragraph}
-                        </p>
-                    )
-                })}
+                {children}
             </div>
         </div>
     )

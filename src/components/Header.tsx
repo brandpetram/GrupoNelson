@@ -347,7 +347,7 @@ export default function Header({
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                  <LogoNelson variant={logoVariant} width={140} className="scale-100 md:scale-125" />
+                  <LogoNelson variant={logoVariant} width={140} className="scale-100 md:scale-150" />
                 </Link>
 
                 {/* Banderas en móvil/tablet */}
@@ -390,7 +390,7 @@ export default function Header({
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                    <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-125 in-data-scrolled:scale-90 in-data-scrolled:md:scale-100 transition-transform duration-500" />
+                    <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-150 in-data-scrolled:scale-90 in-data-scrolled:md:scale-[1.2] transition-transform duration-500" />
                   </Link>
                 </div>
 
@@ -443,7 +443,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           activeSubmenu ? '-translate-x-full' : 'translate-x-0'
         )}
       >
-        <ul className="flex-1 px-2 py-4">
+        <ul className="px-2 py-4">
           {mobileMenuData.map((section, index) => (
             <li key={index}>
               <button
