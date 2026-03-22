@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import { LogosGridBP } from '@/components/brandpetram/logos-grid-bp'
 
 export const metadata: Metadata = {
   title: 'Trayectoria | Grupo Nelson',
@@ -11,29 +12,15 @@ export default function TrayectoriaPage() {
       <Header />
 
       <main>
-        {/* ══════════════════════════════════════════════════════════
-            COPY COMERCIAL — Trayectoria
-            Fuente: docs/copy/desempaquetado-nelson-desarrolladora.md
-            Vocabulario: docs/5-vocabulario-estrategico-...md
-            Reglas: /Proyectos/copywriting-b2b/reglas-de-copywriting-b2b.md
-            Status: BORRADOR — pendiente de aprobación
+        {/* ── Logos Grid — Hero de la página ── */}
+        <div className="pt-20">
+          <LogosGridBP />
+        </div>
 
-            NOTA: Esta página será principalmente visual — grid de logos
-            + números impresionantes. El copy aquí es de soporte.
-            Se escribe completo para tenerlo disponible; el diseño
-            determinará cuánto se usa.
+        {/* ══════════════════════════════════════════════════════════
+            COPY COMERCIAL RESTANTE — pendiente de migrar a componentes
             ══════════════════════════════════════════════════════════ */}
         <div className="px-8 md:px-12 pt-20 pb-32">
-
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            60 años construyendo naves industriales para empresas Fortune 500
-          </h1>
-
-          <p className="text-xl leading-relaxed mb-12">
-            Grupo Nelson fundó la industria maquiladora de Mexicali en 1965. Tres generaciones,
-            5 parques industriales, 30 corporaciones internacionales. Estos son los números
-            y los nombres que respaldan 6 décadas de trayectoria.
-          </p>
 
           {/* ── NÚMEROS IMPRESIONANTES ── */}
           <div className="flex flex-wrap gap-12 mb-24">
@@ -111,32 +98,6 @@ export default function TrayectoriaPage() {
                 solares. La nave industrial más grande de Mexicali. Diseñada y construida por Baumex.
               </p>
             </div>
-          </div>
-
-          <hr className="border-border my-16" />
-
-          {/* ── LOGOS / CLIENTES ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            30 corporaciones internacionales operan en naves industriales de Grupo Nelson en Mexicali
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Aeroespacial, dispositivos médicos, electrónica, HVAC, logística, automotriz.
-            7 sectores industriales. 4 empresas Fortune 500.
-            Cada logo representa una empresa que eligió Grupo Nelson y se quedó.
-          </p>
-
-          {/* Grid de logos — placeholder para componente visual */}
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-8 mb-16 py-12">
-            <p className="col-span-full text-muted-foreground text-center">
-              {/* Aquí irá el grid de logos de los 30 clientes:
-                  Gulfstream, Honeywell, General Dynamics, DHL, Vertiv, Baxter,
-                  Celestica, Garrett, UTC Aerospace, Intuitive, Rheem, Accuride,
-                  Air Liquide, Aqua Lung, Belvedere Maletti, Cornell Dubilier,
-                  Creation Technologies, Dentsply, Direct Pack, Envista, Fastenal,
-                  Gameloft, Goodrich, Hirsh Industries, IVEMSA, Jonathan, Liebert,
-                  Mohawk, PSF, SDS */}
-            </p>
           </div>
 
           <hr className="border-border my-16" />
