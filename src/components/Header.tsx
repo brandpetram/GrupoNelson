@@ -272,7 +272,7 @@ export default function Header({
 }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
-  const isLarge = useMedia('(min-width: 64rem)');
+  const isLarge = useMedia('(min-width: 75rem)');
 
   // Determine active variant based on screen size
   const activeVariant = isLarge ? variant : (mobileVariant ?? variant);
@@ -311,16 +311,16 @@ export default function Header({
         {/* Contenedor externo fijo */}
         <div
           className={cn(
-            'fixed inset-x-0 top-0 z-50 pt-4 md:pt-6 lg:pt-3',
-            !isLarge && !isMobileMenuOpen && 'h-18 md:h-28 max-lg:overflow-hidden max-lg:px-2',
-            isMobileMenuOpen && 'max-lg:bg-background/75 max-lg:h-screen max-lg:backdrop-blur max-lg:px-2'
+            'fixed inset-x-0 top-0 z-50 pt-4 md:pt-6 1200:pt-3',
+            !isLarge && !isMobileMenuOpen && 'h-18 md:h-28 max-1200:overflow-hidden max-1200:px-2',
+            isMobileMenuOpen && 'max-1200:bg-background/75 max-1200:h-screen max-1200:backdrop-blur max-1200:px-2'
           )}
         >
           {/* Contenedor interno que se encoge con efecto */}
           <div
             className={cn(
               // Estado inicial
-              'mx-auto w-full max-w-[1280px] rounded-2xl border border-transparent px-4 lg:px-6',
+              'mx-auto w-full max-w-[1280px] rounded-2xl border border-transparent px-4 1200:px-6',
               'ring-1 ring-transparent shadow-md shadow-transparent',
               'transition-all duration-500 ease-in-out',
               // Estado scroll - SE ENCOGE y aparece fondo
@@ -330,28 +330,28 @@ export default function Header({
               'in-data-scrolled:ring-foreground/5',
               'in-data-scrolled:shadow-black/10',
               // Mobile menu activo
-              'max-lg:in-data-[state=active]:backdrop-blur',
-              'max-lg:in-data-[state=active]:ring-foreground/5',
-              'max-lg:in-data-[state=active]:bg-background/80',
-              'max-lg:in-data-[state=active]:px-5',
-              'max-lg:in-data-[state=active]:shadow-black/10',
-              'max-lg:in-data-[state=active]:h-full'
+              'max-1200:in-data-[state=active]:backdrop-blur',
+              'max-1200:in-data-[state=active]:ring-foreground/5',
+              'max-1200:in-data-[state=active]:bg-background/80',
+              'max-1200:in-data-[state=active]:px-5',
+              'max-1200:in-data-[state=active]:shadow-black/10',
+              'max-1200:in-data-[state=active]:h-full'
             )}
           >
-            <div className="relative lg:py-4">
+            <div className="relative 1200:py-4">
               {/* Mobile layout */}
               <div
                 className={cn(
-                  'flex justify-between items-center gap-4 h-14 md:h-20 w-full lg:hidden',
+                  'flex justify-between items-center gap-4 h-14 md:h-20 w-full 1200:hidden px-2 768:px-8',
                   isMobileMenuOpen && 'border-b'
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                  <LogoNelson variant={logoVariant} width={140} className="scale-100 md:scale-150" />
+                  <LogoNelson variant={logoVariant} width={140} className="scale-100 768:scale-[1.35] 1024:scale-150" />
                 </Link>
 
                 {/* Banderas en móvil/tablet */}
-                <LanguageFlags size="sm" className="flex-shrink-0" />
+                <LanguageFlags size="sm" className="flex-shrink-0 768:scale-[1.7] 768:gap-6" />
 
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -365,7 +365,7 @@ export default function Header({
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100"
                     className={cn(
-                      'm-auto size-6 md:size-8 duration-200 fill-current',
+                      'm-auto size-6 768:size-10 duration-200 fill-current',
                       isMobileMenuOpen && 'rotate-180 scale-0 opacity-0'
                     )}
                   >
@@ -375,7 +375,7 @@ export default function Header({
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 99.082 100"
                     className={cn(
-                      'absolute inset-0 m-auto size-6 md:size-8 -rotate-180 scale-0 opacity-0 duration-200 fill-current',
+                      'absolute inset-0 m-auto size-6 768:size-10 -rotate-180 scale-0 opacity-0 duration-200 fill-current',
                       isMobileMenuOpen && 'rotate-0 scale-100 opacity-100'
                     )}
                   >
@@ -386,7 +386,7 @@ export default function Header({
               </div>
 
               {/* Desktop layout - 3 cols en 1024, 4 cols en 1280+ */}
-              <div className="hidden lg:grid lg:grid-cols-[auto_1fr_auto] 1280:grid-cols-[auto_1fr_auto_auto] lg:items-center lg:gap-x-6 1024:gap-x-8">
+              <div className="hidden 1200:grid 1200:grid-cols-[auto_1fr_auto] 1280:grid-cols-[auto_1fr_auto_auto] 1200:items-center 1200:gap-x-6 1024:gap-x-8">
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
@@ -435,7 +435,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
     : null;
 
   return (
-    <nav role="navigation" className="fixed inset-x-0 top-[4.5rem] md:top-[7rem] lg:top-14 bottom-0 z-40 flex bg-background">
+    <nav role="navigation" className="fixed inset-x-0 top-[4.5rem] md:top-[7rem] 1200:top-14 bottom-0 z-40 flex bg-background">
       {/* Main Menu */}
       <div
         className={cn(
@@ -544,7 +544,7 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
   return (
     <NavigationMenu
         className={cn(
-          'max-lg:hidden',
+          'max-1200:hidden',
           // Estilos base del trigger
           '**:data-[slot=navigation-menu-trigger]:text-sm **:data-[slot=navigation-menu-trigger]:uppercase **:data-[slot=navigation-menu-trigger]:tracking-wide **:data-[slot=navigation-menu-trigger]:font-semibold',
           // Colores iniciales según variant
