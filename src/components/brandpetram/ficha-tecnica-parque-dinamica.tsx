@@ -45,8 +45,8 @@ function buildEspecificaciones(park: IndustrialPark) {
 
 function buildNaveSummary(building: Building) {
   const area = formatArea(
-    building.generalData.totalConstructionArea.m2,
-    building.generalData.totalConstructionArea.sqft
+    building.generalData?.totalConstructionArea?.m2 ?? 0,
+    building.generalData?.totalConstructionArea?.sqft
   )
   const maxH = building.structure?.maxHeight
     ? formatHeight(building.structure.maxHeight.m, building.structure.maxHeight.ft)
@@ -60,7 +60,7 @@ function buildNaveSummary(building: Building) {
       : "N/A"
   )
 
-  return { area, maxH, clearH, docks, structure: building.structure.type }
+  return { area, maxH, clearH, docks, structure: building.structure?.type }
 }
 
 export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
@@ -266,19 +266,19 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
                             </div>
                             <div>
                               <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Piso</p>
-                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs.floor.description}</p>
+                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs?.floor?.description}</p>
                             </div>
                             <div>
                               <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Techo</p>
-                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs.roof.material}</p>
+                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs?.roof?.material}</p>
                             </div>
                             <div>
                               <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Muros</p>
-                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs.walls.material}</p>
+                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.constructionSpecs?.walls?.material}</p>
                             </div>
                             <div>
                               <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Protección contra incendio</p>
-                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.fireProtection.description}</p>
+                              <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{building.fireProtection?.description}</p>
                             </div>
                           </div>
                         </div>
