@@ -63,7 +63,7 @@ export function LogosGridBP2({
                 {/* Logos — 60% */}
                 <div className="lg:w-[60%]">
                     {/* Grid principal: 4x3 */}
-                    <div className="grid grid-cols-4 border-t border-l border-border">
+                    <div className="grid grid-cols-3 1200:grid-cols-4 border-t border-l border-border">
                         {logos.map((logo) => (
                             <div
                                 key={logo.alt}
