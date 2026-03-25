@@ -48,14 +48,14 @@ function buildNaveSummary(building: Building) {
     building.generalData.totalConstructionArea.m2,
     building.generalData.totalConstructionArea.sqft
   )
-  const maxH = building.structure.maxHeight
+  const maxH = building.structure?.maxHeight
     ? formatHeight(building.structure.maxHeight.m, building.structure.maxHeight.ft)
     : null
-  const clearH = building.structure.clearHeight
+  const clearH = building.structure?.clearHeight
     ? formatHeight(building.structure.clearHeight.m, building.structure.clearHeight.ft)
     : null
-  const docks = building.loadingArea.description ?? (
-    building.loadingArea.totalDocks
+  const docks = building.loadingArea?.description ?? (
+    building.loadingArea?.totalDocks
       ? `${building.loadingArea.totalDocks} andenes`
       : "N/A"
   )
