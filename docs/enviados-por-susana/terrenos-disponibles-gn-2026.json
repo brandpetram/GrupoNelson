@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "titulo": "Inmuebles y Propiedades Desocupadas — Grupo Nelson 2026",
+    "fuente": "Susana Osuna",
+    "fecha_recibido": "2026-03-24",
+    "fecha_documento": "2026-03-17",
+    "notas": "Terrenos disponibles separados por entidad legal. Probablemente para la sección de Terrenos Disponibles del sitio web. Pendiente confirmar con Susana/Humberto: (1) qué terrenos van al sitio web, (2) servicios reales de cada terreno — 'Lote Baldío' podría no ser preciso para terrenos dentro de parques operando, (3) nomenclatura definitiva de terrenos.",
+    "contexto_correo": "Susana dice: 'Estuve revisando y estos son los terrenos que tenemos disponibles separados por empresas. Te envío los deslindes de los terrenos y las ubicaciones de los que están dentro de Parque como son Parque Industrial Nelson y Parque Industrial Nelson II.'"
+  },
+  "empresas": [
+    {
+      "nombre": "Naves Industriales de Baja California, S.A. de C.V.",
+      "prefijo": "NI",
+      "subtotal_terreno_m2": 101001.09,
+      "subtotal_edificio_sqft": null,
+      "terrenos": [
+        {
+          "id": null,
+          "clave_catastral": "K05-011-02",
+          "ubicacion_corta": "Terreno Spot Technology",
+          "superficie_m2_terreno": 20000,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote 11 Fraccion 1 Porcion 2 Colonia 2 Division 2, Cerro Prieto, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NI C Calles 018",
+          "clave_catastral": "Q5-018-014",
+          "ubicacion_corta": "Terreno Col Calles",
+          "superficie_m2_terreno": 3800,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote 18 Fraccion Este Porcion 3 Col. Calles, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NI C Calles 008",
+          "clave_catastral": "Q5-018-008",
+          "ubicacion_corta": "Terreno Col Calles",
+          "superficie_m2_terreno": 868.10,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote 18 Fraccion Este Porcion 3 Col. Calles, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NI R Clifford 007",
+          "clave_catastral": "P8-500-007",
+          "ubicacion_corta": "Terreno Rancho Clifford",
+          "superficie_m2_terreno": 10242.30,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Derecho paso de servidumbre CFE Rancho Clifford, Progreso Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NI R Clifford 009",
+          "clave_catastral": "P8-500-009",
+          "ubicacion_corta": "Terreno Rancho Clifford",
+          "superficie_m2_terreno": 66090.69,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote SN Fraccion Oeste Porcion Central 3 Fraccion Sur, Col. Rancho Clifford Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        }
+      ]
+    },
+    {
+      "nombre": "Inmobiliaria Nelson Luken, S.A. de C.V.",
+      "prefijo": "NL",
+      "subtotal_terreno_m2": 5558.73,
+      "subtotal_edificio_sqft": null,
+      "terrenos": [
+        {
+          "id": "NL Carranza P3",
+          "clave_catastral": "G4-007-026",
+          "ubicacion_corta": "Terreno Carranza Lote 7 F4 P6 FB P3",
+          "superficie_m2_terreno": 1699.33,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Calzada Venustiano Carranza SN Lote 7 Fraccion 4 Porcion 6 Fraccion B porcion 3 Colonia 2 Division 2, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NL Carranza P4",
+          "clave_catastral": "G4-007-027",
+          "ubicacion_corta": "Terreno Carranza Lote 7 F4 P6 FB P4",
+          "superficie_m2_terreno": 1319.02,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Calzada Venustiano Carranza SN Lote 7 Fraccion 4 Porcion 6 Fraccion B porcion 4 Colonia 2 Division 2, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NL Carranza P5",
+          "clave_catastral": "G4-007-028",
+          "ubicacion_corta": "Terreno Carranza Lote 7 F4 P6 FB P5",
+          "superficie_m2_terreno": 1280.35,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Calzada Venustiano Carranza SN Lote 7 Fraccion 4 Porcion 6 Fraccion B porcion 5 Colonia 2 Division 2, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "NL Carranza P6",
+          "clave_catastral": "G4-007-029",
+          "ubicacion_corta": "Terreno Carranza Lote 7 F4 P6 FB P6",
+          "superficie_m2_terreno": 1260.04,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Calzada Venustiano Carranza SN Lote 7 Fraccion 4 Porcion 6 Fraccion B porcion 6 Colonia 2 Division 2, Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        }
+      ]
+    },
+    {
+      "nombre": "Constructora Bademi S.A. de C.V.",
+      "prefijo": "CB",
+      "subtotal_terreno_m2": 44812.74,
+      "subtotal_edificio_sqft": null,
+      "terrenos": [
+        {
+          "id": "CB Ej Puebla Fr 2",
+          "clave_catastral": "R5-050-002",
+          "ubicacion_corta": "Ejido Puebla Parcela 50",
+          "superficie_m2_terreno": 2106.71,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Parcela 50 Z-1 P-1/6 Fraccion 2 Ejido Puebla Mexicali",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "CB Ej Puebla Fr 3",
+          "clave_catastral": "R5-050-003",
+          "ubicacion_corta": "Ejido Puebla Parcela 50",
+          "superficie_m2_terreno": 20000,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Parcela 50 Z-1 P-1/6 Fraccion 3 Ejido Puebla Mexicali",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "CB Ej Puebla Fr 4",
+          "clave_catastral": "R5-050-004",
+          "ubicacion_corta": "Ejido Puebla Parcela 50",
+          "superficie_m2_terreno": 22706.03,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Parcela 50 Z-1 P-1/6 Fraccion 4 Ejido Puebla Mexicali",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        }
+      ]
+    },
+    {
+      "nombre": "Propiedades Nelson de Mexicali S.A. de C.V.",
+      "prefijo": "PN",
+      "subtotal_terreno_m2": 681568.30,
+      "subtotal_edificio_sqft": 52646.29,
+      "terrenos": [
+        {
+          "id": "PN Ej Puebla P72",
+          "clave_catastral": "R5-072-001",
+          "ubicacion_corta": "Ejido Puebla Parcela 72",
+          "superficie_m2_terreno": 212353.99,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Parcela 72 Z-1 P 1/6 Sin Manzana Ejido Puebla MEXICALI",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali",
+          "nota": "Terreno más grande de Propiedades Nelson. Posiblemente Nelson III o terreno para desarrollo futuro."
+        },
+        {
+          "id": "PN Ej Puebla P66",
+          "clave_catastral": "R5-066-003",
+          "ubicacion_corta": "Ejido Puebla Parcela 66",
+          "superficie_m2_terreno": 141509.65,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Parcela 66 Z-1 p 1/6 F.S. P.I. Sin Manzana Ejido Puebla MEXICALI",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "PN Col Calles L6",
+          "clave_catastral": "Q5-006-005",
+          "ubicacion_corta": "Terreno Sr. Moreno Lote 6 Col. Calles",
+          "superficie_m2_terreno": 15363.15,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Urbano Vazquez SN Col. Calles Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "PN R Clifford 008",
+          "clave_catastral": "P8-500-008",
+          "ubicacion_corta": "Terreno Rancho Clifford",
+          "superficie_m2_terreno": 3363.04,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote Derecho de paso servidumbre CFE 2 Manzana S/M",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "PN R Clifford 010",
+          "clave_catastral": "P8-500-010",
+          "ubicacion_corta": "Terreno Rancho Clifford",
+          "superficie_m2_terreno": 42407.34,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote SN Fraccion Oeste Porcion Central 4 Manzana S/N Rancho Clifford",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "PN El Colorado 023",
+          "clave_catastral": "G4-013-023",
+          "ubicacion_corta": "Terreno El Colorado",
+          "superficie_m2_terreno": 21288.44,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Calle Siderurgia SN Col Dos Division Dos",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali"
+        },
+        {
+          "id": "PN R Clifford 030",
+          "clave_catastral": "P8-500-030",
+          "ubicacion_corta": "Terreno Rancho Clifford",
+          "superficie_m2_terreno": 192339.51,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote SN Fraccion Oeste Porcion Sur Fraccion 1 Manzana S/N Rancho Clifford",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali",
+          "nota": "Terreno más grande de todo el inventario en Mexicali (192K m²)"
+        },
+        {
+          "id": "PN SLP 004",
+          "clave_catastral": "R5-050-004",
+          "ubicacion_corta": "Edificio SLP",
+          "superficie_m2_terreno": 52943.18,
+          "superficie_sqft_edificio": 52646.29,
+          "ubicacion_legal": "Calle 4 exterior 500, San Luis Potosí, San Luis Potosí, C.P. 78426",
+          "servicios": "Energía eléctrica / agua",
+          "ciudad": "San Luis Potosí",
+          "nota": "Coincide con PN_03 del inventario de naves (52,646 sqft, DISPONIBLE SLP)"
+        }
+      ]
+    },
+    {
+      "nombre": "Amboise",
+      "prefijo": "A",
+      "subtotal_terreno_m2": 120000,
+      "subtotal_edificio_sqft": null,
+      "terrenos": [
+        {
+          "id": "A C Prieto L22",
+          "clave_catastral": "F4-022-009",
+          "ubicacion_corta": "Terreno Sres Hurtado",
+          "superficie_m2_terreno": 120000,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote 22 Fraccion 1 Colonia 1 Division 2 Cerro Prieto Mexicali B.C.",
+          "servicios": "Lote Baldío",
+          "ciudad": "Mexicali (Cerro Prieto)"
+        }
+      ]
+    },
+    {
+      "nombre": "Arisonora Industrial Park",
+      "prefijo": "AIP",
+      "subtotal_terreno_m2": 350052.54,
+      "subtotal_edificio_sqft": 48383.88,
+      "terrenos": [
+        {
+          "id": "AIP SLR C PB",
+          "clave_catastral": "670010008041*",
+          "ubicacion_corta": "Terreno SLRC Porcion B",
+          "superficie_m2_terreno": 48174.20,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote Poligono 11 Fraccion Norte Porcion B Parque Industria Internacional San Luis Rio Colorado, Sonora",
+          "servicios": "Lote Baldío",
+          "ciudad": "San Luis Río Colorado, Sonora"
+        },
+        {
+          "id": "AIP SLR C PC",
+          "clave_catastral": "670010008008*",
+          "ubicacion_corta": "Terreno SLRC Porcion C",
+          "superficie_m2_terreno": 286302.57,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote Poligono 11 Fraccion Norte Porcion C Parque Industria Internacional San Luis Rio Colorado, Sonora",
+          "servicios": "Lote Baldío",
+          "ciudad": "San Luis Río Colorado, Sonora"
+        },
+        {
+          "id": "AIP SLR C PA",
+          "clave_catastral": "670010008042*",
+          "ubicacion_corta": "Terreno SLRC Porcion A",
+          "superficie_m2_terreno": 15575.77,
+          "superficie_sqft_edificio": 48383.88,
+          "ubicacion_legal": "Lote Poligono 11 Fraccion Norte Porcion A Parque Industria Internacional San Luis Rio Colorado, Sonora",
+          "servicios": "Energía eléctrica",
+          "ciudad": "San Luis Río Colorado, Sonora",
+          "nota": "Coincide con AS_01 del inventario de naves (48,384 sqft, NAVE INVENTARIO 45K)"
+        }
+      ]
+    },
+    {
+      "nombre": "MED BCN",
+      "prefijo": "MED",
+      "subtotal_terreno_m2": 10000,
+      "subtotal_edificio_sqft": null,
+      "terrenos": [
+        {
+          "id": "MED ENS El Morro",
+          "clave_catastral": "ZP-100-367",
+          "ubicacion_corta": "Terreno Ensenada",
+          "superficie_m2_terreno": 10000,
+          "superficie_sqft_edificio": null,
+          "ubicacion_legal": "Lote Predio el Morro Fraccion A-2 Zona Playitas, Ensenada BC",
+          "servicios": "Lote Baldío",
+          "ciudad": "Ensenada"
+        }
+      ]
+    }
+  ],
+  "terrenos_dentro_de_parques": [
+    {
+      "parque": "Parque Industrial Nelson",
+      "terrenos": [
+        {
+          "id": "N L13",
+          "clave_catastral": "XN-001-013",
+          "superficie_m2": 8719.30,
+          "ubicacion_legal": "Circuito Norte Lote 13, Carretera a San Luis Km 14 Parque Industrial Nelson",
+          "servicios": "Energía eléctrica, drenaje y pluvial, telecomunicaciones"
+        },
+        {
+          "id": "N L9",
+          "clave_catastral": "XN-001-009",
+          "superficie_m2": 8450.00,
+          "ubicacion_legal": "Circuito Norte Lote 9, Carretera a San Luis Km 14 Parque Industrial Nelson",
+          "servicios": "Energía eléctrica, drenaje y pluvial, telecomunicaciones"
+        }
+      ],
+      "subtotal_m2": 17169.30
+    },
+    {
+      "parque": "Parque Industrial Nelson II",
+      "terrenos": [
+        {
+          "id": "N2 UC-1.1A",
+          "clave_catastral": null,
+          "superficie_m2": 19634.98,
+          "ubicacion_legal": "Blvd. Venustiano Carranza entre Manzanilla y Piñón",
+          "servicios": "Energía eléctrica, drenaje y pluvial, telecomunicaciones"
+        },
+        {
+          "id": "N2 UC-2.1B",
+          "clave_catastral": null,
+          "superficie_m2": 43336.81,
+          "ubicacion_legal": "Blvd. Venustiano Carranza entre Manzanilla y Piñón",
+          "servicios": "Energía eléctrica, drenaje y pluvial, telecomunicaciones"
+        },
+        {
+          "id": "N2 UC-2.1C",
+          "clave_catastral": null,
+          "superficie_m2": 9292.58,
+          "ubicacion_legal": "Blvd. Venustiano Carranza entre Manzanilla y Piñón",
+          "servicios": "Energía eléctrica, drenaje y pluvial, telecomunicaciones"
+        }
+      ],
+      "subtotal_m2": 72264.37
+    }
+  ],
+  "resumen": {
+    "total_terreno_m2": 1402992.81,
+    "total_edificios_sqft": 101030.17,
+    "total_propiedades": 27,
+    "por_ciudad": {
+      "Mexicali": { "propiedades": 18, "terreno_m2": 806242.27 },
+      "San Luis Río Colorado": { "propiedades": 3, "terreno_m2": 350052.54 },
+      "Ensenada": { "propiedades": 1, "terreno_m2": 10000 },
+      "San Luis Potosí": { "propiedades": 1, "terreno_m2": 52943.18 }
+    },
+    "con_servicios_completos": [
+      "N L13 — Parque Industrial Nelson (8,719 m²)",
+      "N L9 — Parque Industrial Nelson (8,450 m²)",
+      "N2 UC-1.1A — Parque Industrial Nelson II (19,635 m²)",
+      "N2 UC-2.1B — Parque Industrial Nelson II (43,337 m²)",
+      "N2 UC-2.1C — Parque Industrial Nelson II (9,293 m²)"
+    ],
+    "con_servicios_parciales": [
+      "PN SLP 004 — Edificio SLP (52,943 m², energía/agua)",
+      "AIP SLR C PA — SLRC Porcion A (15,576 m², energía eléctrica)"
+    ],
+    "conexiones_con_inventario_naves": [
+      { "terreno": "PN SLP 004", "nave": "PN_03", "nota": "Mismo inmueble: 52,646 sqft disponible en SLP" },
+      { "terreno": "AIP SLR C PA", "nave": "AS_01", "nota": "Mismo inmueble: 48,384 sqft nave inventario 45K en SLRC" }
+    ],
+    "preguntas_pendientes": [
+      "¿Cuáles de estos terrenos van al sitio web en la sección de Terrenos Disponibles?",
+      "¿Los terrenos 'Lote Baldío' realmente no tienen servicios, o es una clasificación catastral?",
+      "¿PN Ej Puebla P72 (212K m²) es el terreno de Nelson III?",
+      "¿Nomenclatura definitiva para terrenos? Susana dijo que quería verlo con Humberto y Rodolfo",
+      "¿El terreno de Valle de Puebla que mencionó Susana el 6 de marzo está en este listado?",
+      "¿Los lotes de Rancho Clifford (NI y PN) están cerca del Desarrollo Industrial Colorado (DC_01, nave de Gulfstream)?",
+      "¿El terreno de Parque Nelson que actualmente es estacionamiento es el N L9 o el N L13?"
+    ]
+  }
+}

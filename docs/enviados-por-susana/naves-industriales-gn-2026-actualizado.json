@@ -1,0 +1,794 @@
+{
+  "metadata": {
+    "titulo": "Clasificación de Naves Industriales Grupo Nelson 2026 — ACTUALIZADO",
+    "fuente": "Susana Osuna",
+    "fecha_recibido": "2026-03-18",
+    "version_anterior": "2026-03-06",
+    "notas": "Versión actualizada con altura libre, rampas y ciudad. Aún falta info de Tijuana, Hermosillo, SLP, SLRC y rampas de algunas naves. Terrenos pendientes de revisar nomenclatura con Humberto y Rodolfo.",
+    "cambios_vs_anterior": [
+      "Columnas nuevas: area_m2, clear_height_ft, clear_height_m, rampas, ciudad",
+      "V1_26-27 y V1_29-33 fusionadas en V1_26-33 (84,550.38 sqft)",
+      "V2_02 Baxter: área corregida a 54,485.84 sqft",
+      "Datos de rampas con notas descriptivas para Nelson II y otras"
+    ]
+  },
+  "parques": [
+    {
+      "nombre": "Arisonora Industrial Park",
+      "prefijo": "AS",
+      "ciudad": "SLRC",
+      "naves": [
+        {
+          "id": "AS_01",
+          "area_sqft": 48384.00,
+          "area_m2": 4494.87,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "inventario",
+          "nota": "Nave inventario 45K"
+        }
+      ]
+    },
+    {
+      "nombre": "El Vigía",
+      "prefijo": "V1",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "V1_2-4",
+          "area_sqft": 41831.90,
+          "area_m2": 3886.18,
+          "clear_height_ft": 15.05,
+          "clear_height_m": 4.59,
+          "rampas": 4,
+          "subdivisible": true,
+          "estatus": "disponible"
+        },
+        {
+          "id": "V1_5-6",
+          "area_sqft": 20867.08,
+          "area_m2": 1938.55,
+          "clear_height_ft": 30.00,
+          "clear_height_m": 9.14,
+          "rampas": 2,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "SB Distribuidora"
+        },
+        {
+          "id": "V1_13-16",
+          "area_sqft": 39801.23,
+          "area_m2": 3697.53,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 2,
+          "rampas_nota": "Llega al patio de maniobras, no hay andén",
+          "subdivisible": false,
+          "estatus": "en_remodelacion"
+        },
+        {
+          "id": "V1_17A",
+          "area_sqft": 4550.00,
+          "area_m2": 422.70,
+          "clear_height_ft": 16.00,
+          "clear_height_m": 4.88,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Mexicali Plating, S de RL de CV"
+        },
+        {
+          "id": "V1_17B",
+          "area_sqft": 5652.82,
+          "area_m2": 525.15,
+          "clear_height_ft": 16.00,
+          "clear_height_m": 4.88,
+          "rampas": 1,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CS Manufacturing"
+        },
+        {
+          "id": "V1_18-19",
+          "area_sqft": 21738.95,
+          "area_m2": 2019.55,
+          "clear_height_ft": 16.00,
+          "clear_height_m": 4.88,
+          "rampas": 2,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Distribuciones Rembao"
+        },
+        {
+          "id": "V1_20-21",
+          "area_sqft": 27233.06,
+          "area_m2": 2529.95,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 3,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "SM Sourcing (Fevisa)"
+        },
+        {
+          "id": "V1_22B",
+          "area_sqft": 5817.89,
+          "area_m2": 540.48,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "SM Sourcing (Fevisa)"
+        },
+        {
+          "id": "V1_22A",
+          "area_sqft": 13114.00,
+          "area_m2": 1218.29,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Manufacturing Solutions de Mexico, SA de CV"
+        },
+        {
+          "id": "V1_23",
+          "area_sqft": 16300.00,
+          "area_m2": 1514.27,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Fastenal Mexico S de RL de CV"
+        },
+        {
+          "id": "V1_24",
+          "area_sqft": 17480.15,
+          "area_m2": 1623.91,
+          "clear_height_ft": 16.00,
+          "clear_height_m": 4.88,
+          "rampas": 1,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Avangard Mexico"
+        },
+        {
+          "id": "V1_25",
+          "area_sqft": 13347.95,
+          "area_m2": 1240.02,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "en_remodelacion"
+        },
+        {
+          "id": "V1_26-33",
+          "area_sqft": 84550.38,
+          "area_m2": 7854.73,
+          "clear_height_ft": 16.00,
+          "clear_height_m": 4.88,
+          "rampas": 8,
+          "subdivisible": true,
+          "estatus": "en_remodelacion",
+          "nota": "Fusión de V1_26-27 y V1_29-33 de versión anterior"
+        },
+        {
+          "id": "V1_34-37",
+          "area_sqft": 52248.00,
+          "area_m2": 4853.84,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 4,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Emermex, S.A. de C.V."
+        },
+        {
+          "id": "V1_39-43",
+          "area_sqft": 80869.00,
+          "area_m2": 7512.73,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Emermex, S.A. de C.V."
+        },
+        {
+          "id": "V1_44-53",
+          "area_sqft": 118873.00,
+          "area_m2": 11043.30,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 8,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Emermex, S.A. de C.V."
+        },
+        {
+          "id": "V1_67-73",
+          "area_sqft": 75410.00,
+          "area_m2": 7005.59,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 8,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Emermex, S.A. de C.V."
+        },
+        {
+          "id": "V1_55-57",
+          "area_sqft": 62614.14,
+          "area_m2": 5816.85,
+          "clear_height_ft": 22.00,
+          "clear_height_m": 6.71,
+          "rampas": 4,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Global Logistics G3PL"
+        },
+        {
+          "id": "V1_55-56_oficinas",
+          "area_sqft": 4958.86,
+          "area_m2": 460.68,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "disponible",
+          "nota": "Oficinas desocupadas"
+        },
+        {
+          "id": "V1_58-62",
+          "area_sqft": 81544.00,
+          "area_m2": 7575.44,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 3,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Garret Motion Mexico, S.A. de C.V."
+        }
+      ]
+    },
+    {
+      "nombre": "El Vigía II",
+      "prefijo": "V2",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "V2_01",
+          "area_sqft": 65388.50,
+          "area_m2": 6074.59,
+          "clear_height_ft": 25.60,
+          "clear_height_m": 7.80,
+          "rampas": 7,
+          "rampas_nota": "Una es a nivel de piso",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "LG Electronics Reynosa SA de CV"
+        },
+        {
+          "id": "V2_02",
+          "area_sqft": 54485.84,
+          "area_m2": 5061.73,
+          "clear_height_ft": 27.00,
+          "clear_height_m": 8.23,
+          "rampas": 5,
+          "rampas_nota": "Una es ascendente",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Baxter"
+        }
+      ]
+    },
+    {
+      "nombre": "IIBC",
+      "prefijo": null,
+      "ciudad": "Tecate",
+      "naves": [
+        {
+          "id": "Rancho_Tanama",
+          "area_sqft": 35149.53,
+          "area_m2": 3265.39,
+          "clear_height_ft": 20.00,
+          "clear_height_m": 6.10,
+          "rampas": 2,
+          "subdivisible": false,
+          "estatus": "disponible"
+        }
+      ]
+    },
+    {
+      "nombre": "Nuevo Centro Industrial y Comercial",
+      "prefijo": "NCIC",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "NCIC_01",
+          "area_sqft": 23842.00,
+          "area_m2": 2214.92,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Carley de Mexico, SA de CV"
+        },
+        {
+          "id": "NCIC_02",
+          "area_sqft": 14234.00,
+          "area_m2": 1322.34,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Rugido Camisetas"
+        },
+        {
+          "id": "NCIC_03",
+          "area_sqft": 31577.00,
+          "area_m2": 2933.50,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Gameloft, SA de CV"
+        },
+        {
+          "id": "NCIC_04",
+          "area_sqft": 5842.00,
+          "area_m2": 542.72,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Apex Implant Components"
+        },
+        {
+          "id": "NCIC_05",
+          "area_sqft": 125000.00,
+          "area_m2": 11612.50,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Creation Technologies Mexicali, SA de CV (Valassis)"
+        }
+      ]
+    },
+    {
+      "nombre": "PINSA (Nelson I)",
+      "prefijo": "N1",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "N1_2",
+          "area_sqft": 49700.00,
+          "area_m2": 4617.13,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 3,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Aqualung de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "N1_3-4",
+          "area_sqft": 148536.68,
+          "area_m2": 13799.06,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 1,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "SDS de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "N1_14",
+          "area_sqft": 69270.71,
+          "area_m2": 6435.25,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 1,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "QLTL Mexico SA de CV"
+        },
+        {
+          "id": "N1_15",
+          "area_sqft": 40000.00,
+          "area_m2": 3716.00,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 2,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "QLTL Mexico SA de CV"
+        },
+        {
+          "id": "N1_8",
+          "area_sqft": 42789.00,
+          "area_m2": 3975.10,
+          "clear_height_ft": 24.00,
+          "clear_height_m": 7.31,
+          "rampas": 4,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Farmacos Nacionales"
+        },
+        {
+          "id": "N1_21N",
+          "area_sqft": 11611.91,
+          "area_m2": 1078.75,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Intuitive Surgical, S. de R.L. de C.V."
+        },
+        {
+          "id": "N1_21S",
+          "area_sqft": 33417.79,
+          "area_m2": 3104.51,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 2,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Intuitive Surgical, S. de R.L. de C.V."
+        },
+        {
+          "id": "N1_19",
+          "area_sqft": 48356.00,
+          "area_m2": 4492.27,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 3,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Intuitive Surgical, S. de R.L. de C.V."
+        },
+        {
+          "id": "N1_20",
+          "area_sqft": 32712.00,
+          "area_m2": 3038.94,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 3,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Intuitive Surgical, S. de R.L. de C.V."
+        },
+        {
+          "id": "N1_16",
+          "area_sqft": 32712.00,
+          "area_m2": 3038.94,
+          "clear_height_ft": 28.00,
+          "clear_height_m": 8.53,
+          "rampas": 4,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CMI de Mexico International S de RL de CV"
+        },
+        {
+          "id": "N1_1",
+          "area_sqft": 2583.26,
+          "area_m2": 239.98,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "en_remodelacion"
+        },
+        {
+          "id": "N1_17-19",
+          "area_sqft": 90236.73,
+          "area_m2": 8382.99,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 11,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "DHL Metropolitan Logistics SC Mexico, SA de CV"
+        }
+      ]
+    },
+    {
+      "nombre": "PINSA II (Nelson II)",
+      "prefijo": "N2",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "N2_01",
+          "area_sqft": 131477.05,
+          "area_m2": 12214.22,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 16,
+          "rampas_nota": "15 a nivel de piso y 1 ascendente",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "DHL Metropolitan Logistics SC Mexico, SA de CV"
+        },
+        {
+          "id": "N2_02",
+          "area_sqft": 206743.00,
+          "area_m2": 19206.42,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 9,
+          "rampas_nota": "8 a nivel de piso + 1 ascendente",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Direct Pack de Mexico S de RL de CV"
+        },
+        {
+          "id": "N2_03",
+          "area_sqft": 96294.00,
+          "area_m2": 8945.71,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 2,
+          "rampas_nota": "1 es ascendente",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "SDS de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "N2_04",
+          "area_sqft": 162793.91,
+          "area_m2": 15123.55,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 20,
+          "rampas_nota": "18 a nivel de piso y 2 ascendentes",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Rheem Mexicali, S de RL de CV"
+        },
+        {
+          "id": "N2_05",
+          "area_sqft": 263025.00,
+          "area_m2": 24435.02,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 5,
+          "rampas_nota": "2 son a nivel de piso",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Jonathan MFG"
+        },
+        {
+          "id": "N2_06",
+          "area_sqft": 60842.00,
+          "area_m2": 5652.22,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 6,
+          "rampas_nota": "1 es ascendente",
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Interiores Aereos, S.A. de C.V."
+        }
+      ]
+    },
+    {
+      "nombre": "Promotora Industrial de Mexicali",
+      "prefijo": "P",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "P_09",
+          "area_sqft": 18929.56,
+          "area_m2": 1758.56,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "en_remodelacion"
+        },
+        {
+          "id": "P_01",
+          "area_sqft": 58192.00,
+          "area_m2": 5406.04,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 1,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CD Electronica de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "P_02",
+          "area_sqft": 23168.49,
+          "area_m2": 2152.35,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 1,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CD Electronica de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "P_03",
+          "area_sqft": 4638.69,
+          "area_m2": 430.93,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CD Electronica de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "P_04",
+          "area_sqft": 3974.57,
+          "area_m2": 369.24,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CD Electronica de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "P_05",
+          "area_sqft": 28531.22,
+          "area_m2": 2650.55,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": 0,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "CD Electronica de Mexico, S.A. de C.V."
+        },
+        {
+          "id": "P_06",
+          "area_sqft": 41010.45,
+          "area_m2": 3809.87,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Fabrica de Papel San Francisco, S.A. de C.V."
+        },
+        {
+          "id": "P_07",
+          "area_sqft": 39071.87,
+          "area_m2": 3629.78,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Fabrica de Papel San Francisco, S.A. de C.V."
+        },
+        {
+          "id": "P_08",
+          "area_sqft": 105378.58,
+          "area_m2": 9789.67,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Fabrica de Papel San Francisco, S.A. de C.V."
+        }
+      ]
+    },
+    {
+      "nombre": "Propiedades Nelson",
+      "prefijo": "PN",
+      "ciudad": null,
+      "naves": [
+        {
+          "id": "PN_01",
+          "area_sqft": 81075.00,
+          "area_m2": 7531.87,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Late Coere",
+          "ciudad": "Tijuana"
+        },
+        {
+          "id": "PN_02",
+          "area_sqft": 61999.00,
+          "area_m2": 5759.71,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Synergic Production TCI",
+          "ciudad": "Hermosillo"
+        },
+        {
+          "id": "PN_03",
+          "area_sqft": 52646.00,
+          "area_m2": 4890.81,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "disponible",
+          "ciudad": "SLP"
+        }
+      ]
+    },
+    {
+      "nombre": "Desarrollo Industrial Colorado",
+      "prefijo": "DC",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "DC_01",
+          "area_sqft": 550000.00,
+          "area_m2": 51095.00,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Interiores Aereos, S.A. de C.V."
+        }
+      ]
+    },
+    {
+      "nombre": "Tecnológico",
+      "prefijo": "T",
+      "ciudad": "Mexicali",
+      "naves": [
+        {
+          "id": "T_01",
+          "area_sqft": 200000.00,
+          "area_m2": 18580.00,
+          "clear_height_ft": null,
+          "clear_height_m": null,
+          "rampas": null,
+          "subdivisible": false,
+          "estatus": "ocupada",
+          "cliente": "Interiores Aereos, S.A. de C.V."
+        }
+      ]
+    }
+  ],
+  "resumen": {
+    "total_naves": 56,
+    "ocupadas": 44,
+    "disponibles": 4,
+    "en_remodelacion": 7,
+    "inventario": 1,
+    "naves_con_clear_height": 12,
+    "naves_con_rampas": 42,
+    "naves_sin_datos_rampas": 14,
+    "naves_disponibles": [
+      { "id": "V1_2-4", "parque": "El Vigía", "area_sqft": 41831.90, "area_m2": 3886.18, "subdivisible": true, "clear_height_ft": 15.05, "rampas": 4, "ciudad": "Mexicali" },
+      { "id": "V1_55-56_oficinas", "parque": "El Vigía", "area_sqft": 4958.86, "area_m2": 460.68, "nota": "Oficinas", "ciudad": "Mexicali" },
+      { "id": "Rancho_Tanama", "parque": "IIBC", "area_sqft": 35149.53, "area_m2": 3265.39, "clear_height_ft": 20.00, "rampas": 2, "ciudad": "Tecate" },
+      { "id": "PN_03", "parque": "Propiedades Nelson", "area_sqft": 52646.00, "area_m2": 4890.81, "ciudad": "SLP" }
+    ],
+    "info_pendiente": [
+      "Datos completos de Tijuana (PN_01)",
+      "Datos completos de Hermosillo (PN_02)",
+      "Datos completos de SLP (PN_03)",
+      "Datos completos de SLRC (AS_01)",
+      "Rampas faltantes en varias naves",
+      "Terrenos disponibles — pendiente nomenclatura con Humberto y Rodolfo"
+    ]
+  }
+}
