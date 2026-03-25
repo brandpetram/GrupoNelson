@@ -64,8 +64,8 @@ function buildEspecificaciones(park: IndustrialPark) {
 
 function buildNaveSummary(building: Building) {
   const area = formatArea(
-    building.generalData.totalConstructionArea.m2,
-    building.generalData.totalConstructionArea.sqft
+    building.generalData?.totalConstructionArea?.m2 ?? 0,
+    building.generalData?.totalConstructionArea?.sqft
   )
   const maxH = building.structure?.maxHeight
     ? formatHeight(building.structure.maxHeight.m, building.structure.maxHeight.ft)
