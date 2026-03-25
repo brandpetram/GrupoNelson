@@ -113,9 +113,9 @@ export function ParkHero({
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-sm text-white">
               {park.establishedCompanies} {park.establishedCompanies === 1 ? 'empresa' : 'empresas'} establecidas
             </span>
-            {(park.totalBuildings ?? park.buildings.length) > 0 && (
+            {(park.totalBuildings ?? (park.buildings?.length ?? 0)) > 0 && (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-sm text-white">
-                {park.totalBuildings ?? park.buildings.length} naves
+                {park.totalBuildings ?? (park.buildings?.length ?? 0)} naves
               </span>
             )}
           </div>
