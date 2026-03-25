@@ -34,24 +34,24 @@ function buildEspecificaciones(park: IndustrialPark) {
         { label: "Superficie total", valor: `${park.landSizeHectares} hectáreas` },
         {
           label: "Naves disponibles",
-          valor: park.availableBuildings !== undefined ? String(park.availableBuildings) : CONSULTAR,
-          highlight: park.availableBuildings !== undefined && park.availableBuildings > 0,
+          valor: park.availableBuildings != null ? String(park.availableBuildings) : CONSULTAR,
+          highlight: park.availableBuildings != null && park.availableBuildings > 0,
         },
         {
           label: "M² disponibles en nave",
-          valor: park.availableAreaM2 !== undefined
+          valor: park.availableAreaM2 != null
             ? `${park.availableAreaM2.toLocaleString("es-MX")} m²`
             : CONSULTAR,
         },
         {
           label: "Terreno disponible",
-          valor: park.availableLandM2 !== undefined
+          valor: park.availableLandM2 != null
             ? `${park.availableLandM2.toLocaleString("es-MX")} m²`
             : CONSULTAR,
         },
         {
           label: "Disponibilidad inmediata",
-          valor: park.immediateAvailability !== undefined
+          valor: park.immediateAvailability != null
             ? (park.immediateAvailability ? "Sí" : "No")
             : CONSULTAR,
         },
@@ -310,7 +310,7 @@ function NaveDetalle({ building }: { building: Building }) {
             {building.tenant && (
               <NavCell label="Ocupada por" value={building.tenant} />
             )}
-            {avail.status !== 'occupied' && avail.availableM2 !== undefined && (
+            {avail.status !== 'occupied' && avail.availableM2 != null && (
               <NavCell
                 label="M² disponibles"
                 value={`${avail.availableM2.toLocaleString("es-MX")} m²`}
