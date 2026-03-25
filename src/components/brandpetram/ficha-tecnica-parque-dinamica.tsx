@@ -20,7 +20,7 @@ function formatHeight(m: number, ft?: number) {
 }
 
 function buildEspecificaciones(park: IndustrialPark) {
-  const navesTotal = park.totalBuildings ?? park.buildings.length
+  const navesTotal = park.totalBuildings ?? (park.buildings?.length ?? 0)
 
   return [
     {
@@ -170,7 +170,7 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
                 <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">Infraestructura</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                {park.infrastructure.map((item) => (
+                {(park.infrastructure ?? []).map((item) => (
                   <span
                     key={item}
                     className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1.5 rounded-full"
@@ -209,14 +209,14 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
             ))}
 
             {/* Naves */}
-            {park.buildings.length > 0 && (
+            {(park.buildings?.length ?? 0) > 0 && (
               <div>
                 <div className="px-4 py-2.5 rounded-sm" style={{ backgroundColor: "var(--primary)" }}>
                   <span className="text-sm font-semibold text-white">
-                    Naves industriales ({park.buildings.length})
+                    Naves industriales ({(park.buildings?.length ?? 0)})
                   </span>
                 </div>
-                {park.buildings.map((building, ni) => {
+                {(park.buildings ?? []).map((building, ni) => {
                   const summary = buildNaveSummary(building)
                   return (
                     <div key={building.id}>
@@ -290,7 +290,7 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
             )}
 
             {/* Parque sin fichas */}
-            {park.buildings.length === 0 && !park.hasSpecs && (
+            {(park.buildings?.length ?? 0) === 0 && !park.hasSpecs && (
               <div className="px-4 py-8 text-center text-sm text-zinc-400 dark:text-zinc-500 border border-dashed border-zinc-200 dark:border-zinc-800 rounded-lg">
                 Las fichas técnicas de naves para este parque aún no están disponibles.
               </div>

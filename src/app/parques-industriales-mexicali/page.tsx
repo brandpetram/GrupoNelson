@@ -57,9 +57,9 @@ export default async function ParquesIndustrialesMexicaliPage() {
                       <h2 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                         {park.name}
                       </h2>
-                      {(park.totalBuildings ?? park.buildings.length) > 0 && (
+                      {(park.totalBuildings ?? (park.buildings?.length ?? 0)) > 0 && (
                         <p className="text-sm text-muted-foreground">
-                          {park.totalBuildings ?? park.buildings.length} naves
+                          {park.totalBuildings ?? (park.buildings?.length ?? 0)} naves
                         </p>
                       )}
                     </div>

@@ -18,7 +18,7 @@ export function ParkSpecsLayout({ park, allParks }: ParkSpecsLayoutProps) {
   const selectedBuilding = park.buildings.find((b) => b.id === selectedBuildingId)
 
   // Parque sin specs (ej: Nelson I)
-  if (!park.hasSpecs || park.buildings.length === 0) {
+  if (!park.hasSpecs || (park.buildings?.length ?? 0) === 0) {
     return (
       <section className="container mx-auto md:w-10/12 px-4 py-16 lg:py-24">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
@@ -49,7 +49,7 @@ export function ParkSpecsLayout({ park, allParks }: ParkSpecsLayoutProps) {
       <div className="mb-10">
         <h2 className="text-xl font-semibold text-foreground mb-4">Infraestructura del Parque</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {park.infrastructure.map((item) => (
+          {(park.infrastructure ?? []).map((item) => (
             <div
               key={item}
               className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -64,7 +64,7 @@ export function ParkSpecsLayout({ park, allParks }: ParkSpecsLayoutProps) {
       {/* Selector de naves mobile */}
       <div className="lg:hidden mb-6 overflow-x-auto -mx-4 px-4">
         <div className="flex gap-2 min-w-max pb-2">
-          {park.buildings.map((building) => (
+          {(park.buildings ?? []).map((building) => (
             <button
               key={building.id}
               onClick={() => setSelectedBuildingId(building.id)}
