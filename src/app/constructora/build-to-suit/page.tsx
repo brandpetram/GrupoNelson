@@ -47,7 +47,12 @@ export default function BuiltToSuitPage() {
             fadeRadius: '20rem',
           }}
         >
-          <TarjetaHeroOriginal />
+          <TarjetaHeroOriginal
+            badge1="Build-to-Suit"
+            badge2="Construcción a la medida"
+            titulo="Construye la nave que no existe en ningún catálogo"
+            descripcion="Diseñada desde cero para tu operación exacta. 52,200 m² para Gulfstream. 95 metros de puente para Skyworks. Túnel de viento de 3,000 HP para Honeywell."
+          />
         </HeroVideoCover>
       </div>
 

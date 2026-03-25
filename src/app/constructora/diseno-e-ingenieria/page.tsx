@@ -50,8 +50,8 @@ export default function DisenoEIngenieriaPage() {
             imagen19="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-341.jpg"
             imagen20="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-346.jpg"
             badge="Diseño e Ingeniería"
-            titulo={<>6 Departamentos<br/>de Ingeniería</>}
-            parrafo="El equipo que diseña tu nave es el mismo que la construye. Arquitectura, civil, estructural, eléctrica, mecánica y estimación de costos — todo in-house."
+            titulo={<>Opera con 6 departamentos<br/>de ingeniería bajo un solo techo</>}
+            parrafo="Cuando una empresa necesita cimentaciones profundas, capacidad eléctrica de alta demanda o sistemas antisísmicos, la primera pregunta es quién diseña el proyecto ejecutivo. Aquí, el equipo que calcula la cimentación es el mismo que la construye."
             boton1Texto="Solicitar consulta"
             boton1Href="/contacto"
             boton2Texto="Ver proyectos →"
@@ -68,8 +68,8 @@ export default function DisenoEIngenieriaPage() {
         <div>
           <GunLikeConProps
             poligonoText="Baumex Constructora"
-            titulo="Diseño e Ingeniería In-House"
-            parrafo="75 proyectos diseñados y ejecutados por el mismo equipo. Sin subcontratos de diseño, sin terceros entre tu proyecto y quien lo construye."
+            titulo="6 disciplinas de diseño integradas"
+            parrafo="Cada proyecto ejecutivo pasa por 6 departamentos propios antes de llegar a obra. Sin traducciones entre firmas, sin pérdida de información entre el plano y la obra."
           />
         </div>
 
@@ -173,7 +173,7 @@ export default function DisenoEIngenieriaPage() {
         <div className="flex flex-col gap-4">
           <div className="container ml-10 md:mx-auto 1200:-translate-x-16 w-7/12 md:w-8/12 1200:w-8/12 1366:w-8/12 1536:w-9/12 lg:max-w-6xl my-10 md:mt-20">
             <ParrafoBigConProps>
-              Baumex proyecta con estándares internacionales desde el primer trazo. Certificación FM Global en muros, cubierta, estructura y sistema contraincendio. Diseño conforme a NFPA, IBC y Normas Oficiales Mexicanas. LEED Knowledgeable y calificación &quot;Recomendado&quot; por Honeywell en ISN.
+              Un día de retraso en la ruta crítica es un día perdido sin recuperación. El sistema de gestión monitorea 18 hitos secuenciales donde cada tarea tiene un cálculo de holgura. 11 puntos de control de calidad. Reuniones semanales con 16+ asistentes y acuerdos firmados.
             </ParrafoBigConProps>
           </div>
         </div>
@@ -230,24 +230,24 @@ export default function DisenoEIngenieriaPage() {
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
             imagenAlt="Ingeniería Baumex"
             tagline="Baumex Constructora"
-            titulo="6 departamentos de ingeniería. 75 proyectos. Un solo equipo."
-            parrafo1="El equipo que diseña tu nave es el mismo que la construye. Sin traducciones entre firmas, sin pérdida de información entre el plano y la obra."
-            parrafo2="Desde sistemas antisísmicos BRB hasta túneles de viento con ductos de placa estructural — la capacidad de ingeniería se mide en proyectos ejecutados, no en presentaciones."
+            titulo="Asegura tu obra con un sistema que acumula más de un millón de horas hombre sin muertes."
+            parrafo1="Para un director de planta de Gulfstream o Honeywell, la seguridad no es un punto en la presentación. Es condición necesaria para que exista la conversación."
+            parrafo2="El sistema HSE incluye un manual de 18 capítulos. Permisos de trabajo diarios con matriz de riesgo cuantitativa. NOM-009-STPS para alturas, NOM-027-STPS para soldadura. Certificación DC-3. Jornada máxima de 12 horas."
             feature1Icon={<CloudArrowUpIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature1IconColor="text-orange-600 dark:text-orange-500"
-            feature1Titulo="Diseño Integrado."
-            feature1Descripcion="6 disciplinas de diseño bajo un solo techo: arquitectura, civil, estructural, eléctrica, mecánica y costos."
+            feature1Titulo="404 días sin accidentes."
+            feature1Descripcion="Scorecard del proyecto Gulfstream: 1,092,745 horas hombre trabajadas con cero fatalidades. Registro transparente de cada incidente."
             feature2Icon={<LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature2IconColor="text-blue-600 dark:text-blue-500"
-            feature2Titulo="Ingeniería Verificable."
-            feature2Descripcion="Gulfstream 550K, túnel de viento Honeywell, puente Skyworks — proyectos que no se licitan en un directorio."
+            feature2Titulo="Permisos antes de cada turno."
+            feature2Descripcion="Matriz de riesgo cuantitativa diaria. Control de presión arterial para alturas. Vigía Vigilante de Incendios en soldadura."
             feature3Icon={<ServerIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature3IconColor="text-green-600 dark:text-green-500"
-            feature3Titulo="Estándares Internacionales."
-            feature3Descripcion="FM Global, LEED, NFPA, IBC y NOMs — diseño que cumple los códigos que tu corporativo exige."
-            parrafo3="Cada proyecto es diseñado y ejecutado por el mismo equipo de Baumex. 75 proyectos completados para 33 corporaciones internacionales."
-            subtitulo="¿Necesitas diseño e ingeniería?"
-            parrafo4="Solicita una consulta para tu proyecto en Mexicali. El mismo equipo que diseñó la nave más grande de la ciudad puede diseñar la tuya."
+            feature3Titulo="Normatividad verificable."
+            feature3Descripcion="NOM-009-STPS-2011 (alturas), NOM-027-STPS-2008 (soldadura). Todo el personal con certificación DC-3."
+            parrafo3="6 departamentos. 11 puntos de control. 18 hitos en ruta crítica. Un solo equipo que diseña, supervisa y construye."
+            subtitulo="Solicita una consulta de ingeniería"
+            parrafo4="para tu proyecto industrial en Mexicali."
           />
         </div>
 

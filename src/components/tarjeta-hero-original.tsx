@@ -3,30 +3,40 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export function TarjetaHeroOriginal() {
+interface TarjetaHeroOriginalProps {
+  badge1?: string
+  badge2?: string
+  titulo?: string
+  descripcion?: string
+}
+
+export function TarjetaHeroOriginal({
+  badge1 = "Built to Suit",
+  badge2 = "Sustainable Design",
+  titulo = "Los Expertos en Parques Industriales en Mexicali",
+  descripcion = "60 años creando soluciones llave en mano para empresas globales en parques y espacios industriales en Mexicali",
+}: TarjetaHeroOriginalProps) {
   return (
     <div className="max-w-md mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
       {/* Sección de badges */}
       <div className="hidden 360:flex items-center gap-3 mb-3">
         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
-          <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg font-medium text-white">{"Built to Suit"}</span>
+          <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg font-medium text-white">{badge1}</span>
         </div>
         <div className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-          <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg font-medium">{"Sustainable Design"}</span>
+          <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg font-medium">{badge2}</span>
           <ArrowRight className="h-4 w-4 md:h-5 md:w-5 1024:h-5 1024:w-5 1200:h-4 1200:w-4 1280:h-4 1280:w-4 1366:h-4 1366:w-4 1440:h-5 1440:w-5 1536:h-5 1536:w-5 1728:h-5 1728:w-5 1920:h-6 1920:w-6" />
         </div>
       </div>
 
       {/* Título principal */}
       <h1 className="text-3xl 360:text-4xl 393:text-5xl leading-none font-bold tracking-tight text-white text-balance md:text-5xl 1024:text-6xl 1200:text-4xl 1280:text-4xl 1366:text-4xl 1440:text-5xl 1536:text-5xl 1728:text-5xl 1920:text-6xl mb-6">
-        {"Los Expertos en Parques Industriales en Mexicali"}
+        {titulo}
       </h1>
 
       {/* Descripción */}
       <p className="text-lg text-white/70 text-pretty md:text-xl 1024:text-2xl 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl max-w-3xl mb-10 leading-relaxed">
-        {
-          "60 años creando soluciones llave en mano para empresas globales en parques y espacios industriales en Mexicali"
-        }
+        {descripcion}
       </p>
 
       {/* Botones CTA */}

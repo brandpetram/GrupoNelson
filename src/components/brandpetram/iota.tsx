@@ -6,7 +6,7 @@ export function Iota() {
         {/* Bloque de texto con padding-left generoso */}
           <div className="flex flex-col gap-10">
               <h2 className="text-[1.5rem] 360:text-[1.8rem] 393:text-[2rem] 430:text2.2rem] 768:text-[2rem] 834:text-[2.45rem] 1024:text-[2.8rem] 1200:text-[2.2rem] 1280:text-[2.3rem] 1366:text-[2.4rem] 1440:text-[2.5rem] 1536:text-[2.7rem] 1728:text-[3rem] 1920:text-[3.3rem] font-semibold leading-none text-black dark:text-white">
-                  Infraestructura incluida en naves Nelson II.
+                  Reduce tu inversión inicial — la infraestructura del parque ya existe.
               </h2>
 
               <p className="text-[1rem] 360:text-[1rem] 393:text-[1.2rem] 430:text-[1.3rem] 768:text-[1.15rem] 834:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.2rem] 1280:text-[1.3rem] 1366:text-[1.4rem] 1440:text-[1.5rem] 1536:text-[1.7rem] 1728:text-[2rem] 1920:text-[2.3rem] leading-relaxed text-gray-600 dark:text-gray-400">

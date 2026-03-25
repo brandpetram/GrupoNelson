@@ -9,7 +9,6 @@
     "lint": "next lint",
     "generate-image": "tsx --env-file=.env.local scripts/generate-image.ts",
     "generate-leed": "tsx --env-file=.env.local scripts/generate-leed-batch.ts"
-
   },
   "dependencies": {
     "@google/genai": "^1.43.0",
@@ -32,6 +31,7 @@
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
+    "@vercel/toolbar": "^0.2.2",
     "@vis.gl/react-google-maps": "^1.7.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

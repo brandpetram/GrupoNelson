@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createWithVercelToolbar from "@vercel/toolbar/plugins/next";
+
+const withVercelToolbar = createWithVercelToolbar();
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@brandpetram/componentes-2026'],
@@ -41,4 +44,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withVercelToolbar(nextConfig);

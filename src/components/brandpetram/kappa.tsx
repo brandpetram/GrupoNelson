@@ -13,7 +13,7 @@ export function Kappa() {
                             ¿No encuentras lo que necesitas?
                         </h2>
                         <p className="w-9/12 text-[0.7rem] 360:text-[0.7rem] 393:text-[0.75rem] 430:text-[0.8rem] 768:text-[0.85rem] 834:text-[0.9rem] 1024:text-[0.95rem] 1200:text-[1rem] 1280:text-[1.1rem] 1366:text-[1.2rem] 1440:text-[1.3rem] 1536:text-[1.4rem] 1728:text-[1.5rem] 1920:text-[1.6rem] text-gray-600 dark:text-gray-400 mt-4">
-Si ninguna nave del inventario cumple tus especificaciones, Baumex construye a la medida. Un solo proveedor para ambos caminos.
+Si tu operación requiere alturas específicas, capacidad eléctrica de alta demanda, cuartos limpios o sistemas especializados que no existen en el inventario, Baumex — la constructora in-house de Grupo Nelson — diseña y construye la nave según tus especificaciones exactas. Un solo proveedor para ambos caminos.
                         </p>
                     </div>
 

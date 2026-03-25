@@ -3,6 +3,8 @@
 //   heroicons v1, headlessui. Navegación eliminada (es sección, no header).
 //   style jsx → inline style. Imagen local GrupoNelson.
 
+import { TypewriterClients } from '@/components/motion-plus/typewriter-clients'
+
 export default function Mu() {
   return (
     <div
@@ -21,7 +23,7 @@ export default function Mu() {
           Multiply:   bg-indigo-900/50 mix-blend-multiply
           Screen:     bg-indigo-400/30 mix-blend-screen
           Sin efecto: quitar este div */}
-      <div className="absolute inset-0 bg-gray-900/60" />
+      <div className="absolute inset-0 bg-gray-900/70" />
 
       {/* SVG diagonal inferior */}
       <svg
@@ -76,11 +78,11 @@ export default function Mu() {
                     </span>
                   </a>
                   <h1 className="mt-4 text-2xl 360:text-[2rem] 393:text-[2.5rem] 430:text-[3rem] 768:text-[3.5rem] 834:text-[3.75rem] 1024:text-[4rem] 1200:text-[2.5rem] 1280:text-[3rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none 1200:mt-6">
-                    Construye tu nave industrial en Mexicali con la constructora que Gulfstream eligió para 52,200 m²
+                    La Constructora en Mexicali que sirve a <TypewriterClients />
 
                   </h1>
                   <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
-                    Constructora in-house de Grupo Nelson. 28 años. 75 proyectos. 4.5 millones de pies cuadrados para 33 corporaciones internacionales.
+                    Empresas de clase mundial como Gulfstream llevan más de 20 años construyendo con nosotros. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 corporaciones internacionales eligen a Baumex proyecto tras proyecto. 4.5 millones de pies cuadrados construidos desde 1997. El 80% regresa.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
                     <div className="rounded-xs shadow">

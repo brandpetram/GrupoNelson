@@ -40,10 +40,10 @@ export default function Nu() {
 
           <div className="relative 1200:grid 1200:grid-cols-3 gap-x-40 1728:gap-x-56">
             {/* Columna izquierda: título */}
-            <div className="1200:col-span-1 ml-5 md:ml-10 1728:ml-0">
+            <div className="1200:col-span-1 1200:min-w-[20rem] 1536:min-w-[24rem] ml-5 md:ml-10 1728:ml-0">
               <h3 className="text-[2rem] 360:text-[2rem] 393:text-[2rem] 430:text-[2rem] 768:text-[3rem] 834:text-[3rem] 1024:text-[3.5rem] 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-9 font-extrabold tracking-tight text-foreground leading-none">
-                Elimina intermediarios:{" "}
-                <span className="text-blue-600">construcción con equipo propio</span>
+                Construcción Industrial{" "}
+                <span className="text-blue-600">de Clase Mundial</span>
               </h3>
             </div>
 
@@ -52,15 +52,11 @@ export default function Nu() {
               {/* Texto descriptivo */}
               <div className="sm:max-w-xs 1200:max-w-lg 1366:max-w-sm  1366:ml-0 leading-loose text-muted-foreground text-[1rem] 360:text-[1rem] 393:text-[1.3rem] 430:text-[1.3rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.5rem] 1200:text-[1.45rem] 1280:text-[1.2rem] 1366:text-[1.3rem] 1440:text-[1.3rem] 1536:text-[1.3rem] 1728:text-[1.3rem] 1920:text-[1.7rem]">
                 <p>
-                  Un solo punto de responsabilidad. Baumex{" "}
-                  <span className="text-blue-700 font-bold">diseña y construye</span>{" "}
-                  con equipo propio. Departamentos de arquitectura, ingeniería civil, estructural,{" "}
-                  <span className="text-blue-700 font-bold">eléctrica, mecánica y plomería.</span>
+                  Baumex{" "}
+                  <span className="text-blue-700 font-bold">concentra diseño, estimación, construcción y supervisión</span>{" "}
+                  bajo un mismo contrato. El arquitecto que traza el layout trabaja en el mismo edificio que el superintendente que supervisa el colado.
                 </p>
                 <div className="mt-12">
-                  Departamento de{" "}
-                  <span className="text-blue-700 font-bold">estimación y costos{" "}</span>
-                  integrado. Sin intermediarios, sin sorpresas en presupuesto.
                   <div className="cursor-pointer mt-4">
                     <a href="#" className="text-blue-700 font-medium hover:text-blue-900">
                       Contáctanos →
@@ -70,8 +66,8 @@ export default function Nu() {
               </div>
 
               {/* Caja con lista */}
-              <div className="mt-12 sm:mt-0 sm:max-w-xs 1200:max-w-lg mr-5 md:mr-0 md:ml-10 1366:ml-16 1440:ml-24">
-                <div className="border border-foreground/20 py-10 px-10 font-bold">
+              <div className="mt-12 sm:mt-0 sm:max-w-md 1200:max-w-xl 1536:max-w-2xl 1728:max-w-3xl mr-5 md:mr-0 md:ml-10 1366:ml-16 1440:ml-24">
+                <div className="border border-foreground/20 py-10 px-10 font-bold 1200:w-[18rem] 1366:w-[20rem] 1536:w-[22rem] 1728:w-[24rem] 1920:w-[26rem]">
                   <h5 className="text-foreground text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.3rem] 834:text-[1.3rem] 1024:text-[1.3rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-none w-10/12">
                     Disciplinas{" "}
                     <br className="md:hidden" />{" "}
@@ -88,7 +84,7 @@ export default function Nu() {
                             </svg>
                           </div>
                         </div>
-                        <p className="ml-6">Arquitectura</p>
+                        <p className="ml-6">Diseño Arquitectónico Industrial</p>
                       </div>
                       <div className="flex my-1">
                         <div className="flex-shrink-0">
@@ -98,7 +94,7 @@ export default function Nu() {
                             </svg>
                           </div>
                         </div>
-                        <p className="ml-6">Ingeniería civil y estructural</p>
+                        <p className="ml-6">Ingeniería Estructural y Sísmica</p>
                       </div>
                       <div className="flex my-1">
                         <div className="flex-shrink-0">
@@ -108,7 +104,7 @@ export default function Nu() {
                             </svg>
                           </div>
                         </div>
-                        <p className="ml-6">Eléctrica, mecánica y plomería</p>
+                        <p className="ml-6">Sistemas Eléctricos de Alta Capacidad</p>
                       </div>
                     </li>
                   </ul>

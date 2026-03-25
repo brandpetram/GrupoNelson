@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer1 from "@/components/brandpetram/footer-1";
 import { ThemeProvider } from "@/components/theme-provider";
+import { VercelToolbar } from "@vercel/toolbar/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
           {children}
           <Footer1 />
         </ThemeProvider>
+        {process.env.NODE_ENV === "development" && <VercelToolbar />}
       </body>
     </html>
   );

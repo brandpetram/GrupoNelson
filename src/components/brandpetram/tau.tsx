@@ -33,20 +33,20 @@ export default function Tau() {
 
         {/* Bloque derecho: grid 2×2 con texto e imagen */}
         <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2">
-          {/* Celda 1: texto sobre fondo blanco */}
-          <div className="aspect-square relative">
-            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer">
+          {/* Celda 1: Diseño e Ingeniería */}
+          <a href="/constructora/diseno-e-ingenieria" className="aspect-square relative group">
+            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-colors group-hover:bg-blue-50 dark:group-hover:bg-blue-950/20">
               <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] text-foreground font-light leading-none">
-                Certificación
+                Servicios
               </h2>
               <h1 className="text-center uppercase tracking-tight leading-none font-extrabold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
-                ISN recomendado <br className="hidden md:block" /> por Honeywell
+                Diseño e <br className="hidden md:block" /> Ingeniería
               </h1>
               <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] leading-none">
-                Seguridad industrial <br /> verificada
+                6 departamentos <br /> bajo un solo techo
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Celda 2: imagen + triángulo azul */}
           <div className="aspect-square bg-linear-to-br from-blue-600 to-blue-700 relative overflow-hidden">
@@ -77,20 +77,20 @@ export default function Tau() {
             </div>
           </div>
 
-          {/* Celda 3: texto sobre fondo azul */}
-          <div className="aspect-square relative bg-linear-to-br from-blue-600 to-blue-700 text-white">
-            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer">
+          {/* Celda 3: Build-to-Suit */}
+          <a href="/constructora/build-to-suit" className="aspect-square relative bg-linear-to-br from-blue-600 to-blue-700 text-white group">
+            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-opacity group-hover:opacity-80">
               <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-light leading-none">
-                Sustentabilidad
+                Servicios
               </h2>
               <h1 className="text-center uppercase tracking-tight leading-none font-extrabold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
-                LEED <br className="hidden md:block" /> Gold
+                Build-to- <br className="hidden md:block" /> Suit
               </h1>
               <p className="hidden md:block text-center mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] leading-none">
-                Construcción <br /> sustentable
+                Naves diseñadas <br /> a tu medida exacta
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Celda 4: imagen */}
           <div className="aspect-square overflow-hidden">
@@ -116,35 +116,35 @@ export default function Tau() {
             />
           </div>
 
-          {/* Texto */}
-          <div className="aspect-square relative">
-            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer">
+          {/* Llave en Mano */}
+          <a href="/constructora/llave-en-mano" className="aspect-square relative group">
+            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-colors group-hover:bg-blue-50 dark:group-hover:bg-blue-950/20">
               <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] text-foreground font-light leading-none">
-                Aseguradoras
+                Servicios
               </h2>
               <h1 className="text-center uppercase tracking-tight leading-none font-extrabold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
-                FM <br className="hidden md:block" /> Global
+                Llave en <br className="hidden md:block" /> Mano
               </h1>
               <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] leading-none">
-                Estándar internacional
+                Naves de inventario <br /> listas para operar
               </p>
             </div>
-          </div>
+          </a>
 
-          {/* Texto */}
-          <div className="aspect-square relative">
-            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer">
+          {/* Portafolio */}
+          <a href="/constructora/portafolio" className="aspect-square relative group">
+            <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-colors group-hover:bg-blue-50 dark:group-hover:bg-blue-950/20">
               <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] text-foreground font-light leading-none">
-                Normatividad
+                Proyectos
               </h2>
               <h1 className="text-center uppercase tracking-tight leading-none font-extrabold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">
-                NOM-STPS <br className="hidden md:block" /> DC-3
+                Portafolio <br className="hidden md:block" /> Completo
               </h1>
               <p className="hidden md:block text-center text-muted-foreground mt-5 font-light text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] leading-none">
-                Personal certificado
+                75 proyectos <br /> desde 1997
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Imagen */}
           <div className="aspect-square overflow-hidden">
