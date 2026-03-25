@@ -3,9 +3,9 @@ import { useState } from 'react'
 import Header from '@/components/Header'
 import TablaModelosDeProductos from '@/components/brandpetram/tabla-modelos-de-productos'
 import Drawer from '@/components/tailwind/drawer'
-import { navesIndustriales, NaveIndustrial } from '@/data/naves-industriales'
+import type { NaveIndustrial } from '@/data/naves-industriales'
 
-export default function NavesDisponiblesClient() {
+export default function NavesDisponiblesClient({ naves }: { naves: NaveIndustrial[] }) {
   const [naveSeleccionada, setNaveSeleccionada] = useState<NaveIndustrial | null>(null)
   const [drawerOpen, setDrawerOpen] = useState(false)
 
@@ -14,7 +14,7 @@ export default function NavesDisponiblesClient() {
     setDrawerOpen(true)
   }
 
-  const disponibles = navesIndustriales.filter(n => n.estatus === 'Disponible').length
+  const disponibles = naves.filter(n => n.estatus === 'Disponible').length
 
   return (
     <div className="overflow-x-clip">
@@ -38,7 +38,7 @@ export default function NavesDisponiblesClient() {
 
         <section className="py-10 max-w-[1440px] mx-auto">
           <TablaModelosDeProductos
-            naves={navesIndustriales}
+            naves={naves}
             onVerMas={handleVerMas}
           />
         </section>
