@@ -10,15 +10,14 @@ import {BigNumberConProps} from "@/components/brandpetram/con-props/big-number-c
 import {ImagenConEtiquetaConProps} from "@/components/brandpetram/con-props/imagen-con-etiqueta-con-props"
 import {CuadroCirculoConEscuadraConProps} from "@/components/brandpetram/con-props/cuadro-circulo-con-escuadra-con-props"
 import {Mosaico2ConProps} from "@/components/brandpetram/con-props/mosaico-2-con-props"
-import {CirculosConProps} from "@/components/brandpetram/con-props/circulos-con-props"
 import {CuadritosLluviaDos} from "@/components/ui/brandpetram/cuadritos-lluvia-dos"
 import {FaqSectionsThreeColumnsBPConProps} from '@/components/brandpetram/con-props/faq-sections-three-columns-bp-con-props'
 import {FeatureSection3BPConProps} from '@/components/brandpetram/con-props/feature-section-3-bp-con-props'
 import {FeatureSection5InvertedBPConProps} from '@/components/brandpetram/con-props/feature-section-5-inverted-bp-con-props'
 import {FeatureSection6BPConProps} from "@/components/brandpetram/con-props/feature-section-6-bp-con-props"
 import {SplitWithImageBPConProps} from '@/components/brandpetram/con-props/split-with-image-bp-con-props'
-import { Compass, Layers, Ruler, Zap, Shield, Settings } from 'lucide-react'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { Compass, Zap, Shield, Ruler, ClipboardCheck, FileSearch, Settings } from 'lucide-react'
+import { CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 
 export default function DisenoEIngenieriaPage() {
   return (
@@ -49,13 +48,13 @@ export default function DisenoEIngenieriaPage() {
             imagen18="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-336.jpg"
             imagen19="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-341.jpg"
             imagen20="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-346.jpg"
-            badge="Diseño e Ingeniería"
-            titulo={<>Opera con 6 departamentos<br/>de ingeniería bajo un solo techo</>}
-            parrafo="Cuando una empresa necesita cimentaciones profundas, capacidad eléctrica de alta demanda o sistemas antisísmicos, la primera pregunta es quién diseña el proyecto ejecutivo. Aquí, el equipo que calcula la cimentación es el mismo que la construye."
-            boton1Texto="Solicitar consulta"
+            badge="Ingeniería Industrial en Mexicali"
+            titulo={<>Ingeniería diseñada<br/>para tu operación</>}
+            parrafo="Cimentaciones profundas en suelo colapsable. Sistemas antisísmicos BRB. Subestaciones de 20 MW. HVAC con recuperación de agua al 90%. Seis disciplinas de ingeniería trabajan en paralelo para resolver lo que tu operación exige — desde el proyecto ejecutivo hasta la entrega."
+            boton1Texto="Contacto"
             boton1Href="/contacto"
-            boton2Texto="Ver proyectos →"
-            boton2Href="/constructora/proyectos-especializados"
+            boton2Texto="Ver más →"
+            boton2Href="/constructora/build-to-suit"
             overlayColor="rgba(30, 64, 175, 0.22)"
             overlayBlendMode="multiply"
             filterBrightness={1.05}
@@ -67,9 +66,9 @@ export default function DisenoEIngenieriaPage() {
         {/* Gunlike — Intro */}
         <div>
           <GunLikeConProps
-            poligonoText="Baumex Constructora"
-            titulo="6 disciplinas de diseño integradas"
-            parrafo="Cada proyecto ejecutivo pasa por 6 departamentos propios antes de llegar a obra. Sin traducciones entre firmas, sin pérdida de información entre el plano y la obra."
+            poligonoText="Ingeniería Industrial de Clase Mundial"
+            titulo="Seis disciplinas de ingeniería"
+            parrafo="Civil, estructural, eléctrica, mecánica, arquitectura y costos. Desde cimentaciones en zona sísmica 4 hasta subestaciones de 20 MW y fire protection FM Global."
           />
         </div>
 
@@ -79,7 +78,7 @@ export default function DisenoEIngenieriaPage() {
             <ImagenConEtiquetaConProps
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
               alt="Diseño e ingeniería industrial Mexicali"
-              etiqueta="Ingeniería Industrial"
+              etiqueta="Resolvemos Problemas"
             />
             <GridOverlay
               fadeRadius="16rem"
@@ -105,59 +104,59 @@ export default function DisenoEIngenieriaPage() {
         {/* Feature Section — Departamentos */}
         <div className="w-11/12 mx-auto 1200:-translate-y-16 1366:-translate-y-16 1728:-translate-y-24">
           <FeatureSection6BPConProps
-            badge="Diseño Integrado"
-            title="6 departamentos de ingeniería bajo un solo techo"
-            description="Cada proyecto ejecutivo integra las 6 disciplinas de diseño sin subcontratos. El equipo que calcula la cimentación es el mismo que la construye."
-            feature1Title="Arquitectura y Estructural"
-            feature1Description="Layout de planta, fachadas, estructura metálica, sistemas antisísmicos BRB y cálculo de cargas."
+            badge="Tu Proyecto Ejecutivo"
+            title="¿Qué necesita tu nave industrial? Eso define nuestra ingeniería"
+            description="Tus requerimientos técnicos determinan qué disciplinas se activan y con qué profundidad. No aplicamos una fórmula — resolvemos tu problema específico."
+            feature1Title="¿Suelo difícil? Lo resolvemos desde el estudio"
+            feature1Description="Mecánica de suelos, pilas de concreto a 18 m en suelo arenoso colapsable, sistemas antisísmicos BRB para zona sísmica 4. Tu cimentación se calcula para tu terreno exacto."
             feature1Icon={<Compass className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
-            feature2Title="Eléctrica y Mecánica"
-            feature2Description="Subestaciones, paneles solares, HVAC, fire protection y ductos especializados."
+            feature2Title="¿Alta demanda eléctrica? La dimensionamos desde proyecto"
+            feature2Description="Desde 500 KVA hasta 20 MW de capacidad instalada. Subestaciones, paneles solares, HVAC con recuperación de agua al 90%. Todo integrado en un solo proyecto ejecutivo."
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
-            button1Text="Solicitar diseño"
-            button2Text="Ver capacidades"
+            button1Text="Consulta de ingeniería"
+            button2Text="Ver lo que hemos resuelto"
             imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
             imageAlt="Diseño industrial"
           />
         </div>
 
-        {/* BigNumber — 6 departamentos */}
+        {/* BigNumber — Escala de ingeniería */}
         <div>
           <BigNumberConProps
             imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-273.jpg"
-            imageAlt="Ingeniería industrial Mexicali"
-            number="6"
-            title={<>Departamentos<br/>de Ingeniería</>}
-            subtitle={<>Arquitectura, civil, estructural,<br className="hidden md:block"/>eléctrica, mecánica y costos</>}
+            imageAlt="Nave industrial más grande de Mexicali"
+            number="550K"
+            title={<>Pies cuadrados<br/>con ingeniería<br/>de primera</>}
+            subtitle={<>La nave industrial más grande<br className="hidden md:block"/>de Mexicali — para Gulfstream</>}
           />
         </div>
 
-        {/* Cuadro Circulo — Proyectos especiales */}
+        {/* Cuadro Circulo — Problemas de ingeniería resueltos */}
         <div>
           <CuadroCirculoConEscuadraConProps
-            titulo={<>Ingeniería<br/>Demostrada<br/>en Mexicali</>}
-            parrafo="Desde sistemas antisísmicos BRB hasta túneles de viento aeroespaciales. La capacidad de ingeniería se mide en proyectos ejecutados."
-            numeroCirculo="75"
-            simboloNumero="+"
-            itemsCirculo={["Gulfstream", "Honeywell", "Skyworks", "Deacero", "DHL"]}
+            titulo={<>Problemas que<br/>otros no han<br/>resuelto aquí</>}
+            parrafo="¿Necesitas sistemas antisísmicos que no existen en Mexicali? ¿Un puente sin columnas sobre un dren federal? ¿Un túnel de viento con presión de 3,000 HP? Ya lo diseñamos y construimos."
+            numeroCirculo="18"
+            simboloNumero="m"
+            itemsCirculo={["BRB antisísmico", "Puente 95 m", "Túnel de viento", "Pilas profundas", "20 MW eléctricos"]}
           />
         </div>
 
         {/* Mosaico — Proyectos destacados */}
         <div className="w-11/12 mx-auto -mt-20 md:-mt-64 1024:-mt-40 relative">
           <Mosaico2ConProps
-            bloque1Titulo="Gulfstream 550K"
-            bloque1Descripcion="55,500 m² con BRB, 20 MW y certificación LEED Gold"
-            bloque1LinkTexto="Ver proyecto"
-            bloque1LinkHref="/constructora/proyectos-especializados"
+            bloque1Titulo="52,200 m² para Gulfstream"
+            bloque1Descripcion="BRB antisísmico, 20 MW, LEED Gold — diseñado para una operación que no cabía en ningún catálogo"
+            bloque1LinkTexto="Ver cómo se hizo"
+            bloque1LinkHref="/constructora/build-to-suit"
             bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg"
             bloque2ImagenAlt="Proyecto Gulfstream"
             bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg"
             bloque3ImagenAlt="Construcción industrial"
-            bloque4Titulo="¿Tienes un proyecto?"
-            bloque4Descripcion="Consulta de diseño sin costo"
+            bloque4Titulo="¿Tu nave no existe en ningún catálogo?"
+            bloque4Descripcion="La diseñamos desde cero para tu operación"
             bloque4LinkTexto="Contactar"
             bloque4LinkHref="/contacto"
             imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
@@ -173,54 +172,54 @@ export default function DisenoEIngenieriaPage() {
         <div className="flex flex-col gap-4">
           <div className="container ml-10 md:mx-auto 1200:-translate-x-16 w-7/12 md:w-8/12 1200:w-8/12 1366:w-8/12 1536:w-9/12 lg:max-w-6xl my-10 md:mt-20">
             <ParrafoBigConProps>
-              Un día de retraso en la ruta crítica es un día perdido sin recuperación. El sistema de gestión monitorea 18 hitos secuenciales donde cada tarea tiene un cálculo de holgura. 11 puntos de control de calidad. Reuniones semanales con 16+ asistentes y acuerdos firmados.
+              Pilas de concreto armado a 18 metros de profundidad en suelo arenoso colapsable. Sistemas antisísmicos BRB para zona sísmica 4. Un puente vehicular de 95 metros sin una sola columna. Un túnel de viento que soporta 3,000 HP de presión. Eso es ingeniería.
             </ParrafoBigConProps>
           </div>
         </div>
 
-        {/* Feature 5 — Disciplinas */}
+        {/* Feature 5 — Gestión de proyecto */}
         <div className="container mx-auto w-10/12">
           <FeatureSection5InvertedBPConProps
-            tagline="Diseño Integral"
-            titulo="Cada disciplina integrada en un solo proyecto ejecutivo"
-            descripcion="Las 6 disciplinas de diseño trabajan bajo un mismo techo. Sin traducciones entre firmas, sin pérdida de información entre el plano y la obra."
+            tagline="Ingeniería Especializada"
+            titulo="Ingeniería que va más allá de la nave estándar"
+            descripcion="Cuando tu proyecto exige algo que no existe en ningún catálogo, estas son las capacidades que se activan."
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-277.jpg"
-            imagenAlt="Ingeniería integrada"
-            feature1Icon={<Ruler className="h-5 w-5" />}
+            imagenAlt="Ingeniería especializada Mexicali"
+            feature1Icon={<Shield className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
-            feature1Titulo="Civil y Cimentación"
-            feature1Descripcion="Mecánica de suelos, cimentaciones profundas hasta 18 m con pilas de concreto armado en zonas sísmicas."
-            feature2Icon={<Layers className="h-5 w-5" />}
+            feature1Titulo="Ingeniería antisísmica"
+            feature1Descripcion="Sistemas BRB (Buckling-Restrained Braces) para zona sísmica 4. Primera implementación en Mexicali — tecnología de Japón y Ciudad de México."
+            feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
-            feature2Titulo="Estructural"
-            feature2Descripcion="Estructura metálica, sistemas antisísmicos BRB y cubierta TPO con garantía de 20 años."
-            feature3Icon={<Zap className="h-5 w-5" />}
+            feature2Titulo="Alta tensión y energía solar"
+            feature2Descripcion="Subestaciones de hasta 20 MW. 10 MW en paneles solares distribuidos en cubierta y carports. Tramitología completa con CFE."
+            feature3Icon={<Compass className="h-5 w-5" />}
             feature3IconColor="text-green-600"
-            feature3Titulo="Eléctrica"
-            feature3Descripcion="Desde subestaciones y 20 MW de capacidad instalada hasta paneles solares de 10 MW."
-            feature4Icon={<Shield className="h-5 w-5" />}
+            feature3Titulo="Cimentaciones profundas"
+            feature3Descripcion="Pilas de concreto armado a 18 m en suelo arenoso colapsable. Mecánica de suelos verificada con laboratorio independiente EPGC."
+            feature4Icon={<Ruler className="h-5 w-5" />}
             feature4IconColor="text-purple-600"
-            feature4Titulo="Mecánica y Fire Protection"
-            feature4Descripcion="HVAC con recuperación de agua al 90%, sistemas contraincendio FM Global y ductos de placa estructural."
+            feature4Titulo="Estructuras de claro libre"
+            feature4Descripcion="Puentes vehiculares sin columnas de hasta 95 m. Naves de gran altura para túneles de viento y equipos industriales de gran escala."
           />
         </div>
 
         {/* Feature 3 — Certificaciones */}
         <div className="container mx-auto w-10/12 lg:mt-20">
           <FeatureSection3BPConProps
-            tagline="Estándares Internacionales"
-            titulo="Diseño que cumple los códigos que tu corporativo exige"
-            descripcion="FM Global, NFPA, IBC, Normas Oficiales Mexicanas y LEED — desde el primer trazo."
+            tagline="Tus Estándares, Desde el Primer Trazo"
+            titulo="¿Tu corporativo exige FM Global, LEED o ISN? Lo integramos desde el diseño"
+            descripcion="No certificamos al final — diseñamos para cumplir desde el proyecto ejecutivo. Eso elimina retrabajo y reduce tu prima de seguro."
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
             imagenAlt="Certificaciones industriales"
             feature1Icon={<Settings className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
-            feature1Titulo="FM Global y LEED"
-            feature1Descripcion="Certificación Factory Mutual en muros, cubierta, estructura y contraincendio. LEED Knowledgeable con Gulfstream 550K certificando Gold."
+            feature1Titulo="FM Global y LEED desde proyecto"
+            feature1Descripcion="Tu nave se diseña para pasar auditoría FM Global en muros, cubierta, estructura y contraincendio. Gulfstream 550K está certificando LEED Gold con 10 MW solares."
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
-            feature2Titulo="ISN Recomendado"
-            feature2Descripcion="Calificación 'Recomendado' por Honeywell International en plataforma ISN — cumplimiento sostenido en seguridad y calidad."
+            feature2Titulo="ISN activo — acceso a cadenas Fortune 500"
+            feature2Descripcion="Calificación 'Recomendado' por Honeywell en ISN. Sin eso, no entras a su cadena de proveedores. Con eso, tu nave la construye un equipo pre-aprobado."
           />
         </div>
 
@@ -229,40 +228,21 @@ export default function DisenoEIngenieriaPage() {
           <SplitWithImageBPConProps
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
             imagenAlt="Ingeniería Baumex"
-            tagline="Baumex Constructora"
-            titulo="Asegura tu obra con un sistema que acumula más de un millón de horas hombre sin muertes."
-            parrafo1="Para un director de planta de Gulfstream o Honeywell, la seguridad no es un punto en la presentación. Es condición necesaria para que exista la conversación."
-            parrafo2="El sistema HSE incluye un manual de 18 capítulos. Permisos de trabajo diarios con matriz de riesgo cuantitativa. NOM-009-STPS para alturas, NOM-027-STPS para soldadura. Certificación DC-3. Jornada máxima de 12 horas."
+            tagline="Tu Obra Segura"
+            titulo="Tu personal y el nuestro protegidos por el mismo sistema que aprobó Gulfstream"
+            parrafo1="Si tu corporativo audita seguridad antes de autorizar un constructor, este es el scorecard: 1,092,745 horas hombre trabajadas con cero muertes. 404 días consecutivos sin accidentes."
+            parrafo2="Manual HSE de 18 capítulos. Permisos antes de cada turno. Control de presión arterial antes de subir a alturas. Certificación DC-3 para todo el personal. Jornada máxima de 12 horas."
             feature1Icon={<CloudArrowUpIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature1IconColor="text-orange-600 dark:text-orange-500"
-            feature1Titulo="404 días sin accidentes."
-            feature1Descripcion="Scorecard del proyecto Gulfstream: 1,092,745 horas hombre trabajadas con cero fatalidades. Registro transparente de cada incidente."
+            feature1Titulo="404 días consecutivos sin accidentes."
+            feature1Descripcion="Scorecard público del proyecto Gulfstream. Registro transparente de cada incidente — incluyendo los menores."
             feature2Icon={<LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature2IconColor="text-blue-600 dark:text-blue-500"
-            feature2Titulo="Permisos antes de cada turno."
-            feature2Descripcion="Matriz de riesgo cuantitativa diaria. Control de presión arterial para alturas. Vigía Vigilante de Incendios en soldadura."
-            feature3Icon={<ServerIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
-            feature3IconColor="text-green-600 dark:text-green-500"
-            feature3Titulo="Normatividad verificable."
-            feature3Descripcion="NOM-009-STPS-2011 (alturas), NOM-027-STPS-2008 (soldadura). Todo el personal con certificación DC-3."
-            parrafo3="6 departamentos. 11 puntos de control. 18 hitos en ruta crítica. Un solo equipo que diseña, supervisa y construye."
-            subtitulo="Solicita una consulta de ingeniería"
-            parrafo4="para tu proyecto industrial en Mexicali."
-          />
-        </div>
-
-        {/* Círculos — Capacidades */}
-        <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
-          <CirculosConProps
-            circulo1Letra="A"
-            circulo1Titulo="Arquitectura"
-            circulo1Descripcion="Layout de planta, oficinas, fachadas y distribución de espacios optimizados para tu proceso productivo."
-            circulo2Letra="E"
-            circulo2Titulo="Estructural"
-            circulo2Descripcion="Estructura metálica, sistemas antisísmicos BRB, cimentaciones profundas y cubierta TPO con garantía de 20 años."
-            circulo3Letra="M"
-            circulo3Titulo="Mecánica"
-            circulo3Descripcion="HVAC, fire protection con certificación FM Global, plomería y ductos especializados — desde los de 2.5 × 2.5 m hasta instalaciones estándar."
+            feature2Titulo="Matriz de riesgo antes de cada turno."
+            feature2Descripcion="Impacto por probabilidad. Peligros identificados, equipo requerido, plan de emergencia. Vigía Vigilante de Incendios asignado en cada zona de soldadura."
+            parrafo3="Dinos qué necesita tu operación. Te entregamos el proyecto ejecutivo completo — diseño, ingeniería, presupuesto cerrado y cronograma."
+            subtitulo="Consulta de ingeniería sin costo"
+            parrafo4="para tu próximo proyecto industrial en Mexicali."
           />
         </div>
 
