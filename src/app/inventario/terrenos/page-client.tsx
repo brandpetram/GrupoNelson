@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Header from '@/components/Header'
-import { terrenos, type Terreno } from '@/data/terrenos'
+import type { Terreno } from '@/data/terrenos'
 import { MapPinIcon, Square3Stack3DIcon, BoltIcon, BuildingOffice2Icon } from '@heroicons/react/24/outline'
 
 // === Helpers ===
@@ -23,7 +23,7 @@ function formatM2Full(m2: number) {
 
 // === Ciudades únicas para filtro ===
 
-const ciudades = [...new Set(terrenos.map(t => t.ciudad))].sort()
+// ciudades se calcula dentro del componente a partir de la prop
 
 // === Componente Card ===
 
@@ -199,7 +199,8 @@ function DrawerRow({ label, value }: { label: string; value: string }) {
 
 // === Página principal ===
 
-export default function TerrenosClient() {
+export default function TerrenosClient({ terrenos }: { terrenos: Terreno[] }) {
+  const ciudades = [...new Set(terrenos.map(t => t.ciudad))].sort()
   const [search, setSearch] = useState('')
   const [ciudadFiltro, setCiudadFiltro] = useState<string | null>(null)
   const [soloConServicios, setSoloConServicios] = useState(false)

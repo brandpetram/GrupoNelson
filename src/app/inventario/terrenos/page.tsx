@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import { client } from '@/sanity/lib/client'
+import { allTerrenosQuery } from '@/sanity/lib/queries/terrenos'
 import TerrenosClient from './page-client'
+import type { Terreno } from '@/data/terrenos'
 
 export const metadata: Metadata = {
   title: 'Terrenos Disponibles | Grupo Nelson',
@@ -7,6 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://gruponelson.mx/inventario/terrenos' },
 }
 
-export default function TerrenosPage() {
-  return <TerrenosClient />
+export default async function TerrenosPage() {
+  const terrenos: Terreno[] = await client.fetch(allTerrenosQuery)
+  return <TerrenosClient terrenos={terrenos} />
 }

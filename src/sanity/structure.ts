@@ -24,5 +24,15 @@ export const structure: StructureResolver = (S) =>
             ])
         ),
       S.divider(),
+      S.listItem()
+        .title('Inventario')
+        .child(
+          S.list()
+            .title('Inventario')
+            .items([
+              S.documentTypeListItem('terreno').title('Terrenos'),
+            ])
+        ),
+      S.divider(),
       S.documentTypeListItem('author').title('Autores'),
     ])
