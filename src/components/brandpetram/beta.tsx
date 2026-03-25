@@ -35,7 +35,7 @@ export function Beta() {
       <div className="mt-32 md:mt-0 md:w-[48%] 1024:w-[45%] 1200:w-[48%] 1280:w-[45%] 1920:w-[48%] md:aspect-[1/1.5] 1200:aspect-[4.3/3]  relative overflow-visible">
         {/* Div ABC posicionado arriba a la derecha, por detrás */}
         <div className="md:absolute translate-x-16 360:translate-x-25 393:translate-x-30 430:translate-x-40 md:translate-x-0 -translate-y-30 right-20 w-50 h-60 bg-linear-to-tr from-orange-500 to-red-600 rounded-t-xs flex items-center justify-center -z-10">
-          <span className="text-[6rem] font-black text-white -translate-y-15 tracking-tighter">ABC</span>
+          <span className="text-[6rem] font-black text-white -translate-y-15 tracking-tighter">BTS</span>
         </div>
 
         {/* Div pequeño centrado en la esquina superior izquierda, por delante */}

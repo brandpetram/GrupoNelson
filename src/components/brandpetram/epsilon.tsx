@@ -19,28 +19,31 @@ export function Epsilon() {
         </h1>
       </div>
 
-      {/* Dos columnas de listas */}
-      <div className="relative z-10 grid grid-cols-2 gap-0 max-w-sm ">
-        {/* Columna 1 */}
-        <ul className="space-y-5">
-          <li className="text-white text-xl">Aeroespacial</li>
-          <li className="text-white text-xl">Dispositivos Médicos</li>
-          <li className="text-white text-xl">Electrónica</li>
-          <li className="text-white text-xl">HVAC</li>
-          <li className="text-white text-xl">Logística</li>
-          <li className="text-white text-xl">Manufactura Pesada</li>
-          <li className="text-white text-xl">Papel</li>
+      {/* Beneficios build-to-suit */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12 max-w-4xl ml-16 1200:ml-32 1920:ml-48">
+        <ul className="space-y-12">
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Tu Proceso, Tu Nave</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Tu Terreno, Tu Cimentación</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Eléctrica sin Límite</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Antisísmico BRB</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Cubierta TPO 20 Años</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">FM Global Incluido</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">LEED Gold Integrado</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Paneles Solares</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">HVAC Recuperación 90%</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Fire Protection NFPA</li>
         </ul>
-
-        {/* Columna 2 */}
-        <ul className="space-y-5">
-          <li className="text-white text-xl">Gulfstream</li>
-          <li className="text-white text-xl">Honeywell</li>
-          <li className="text-white text-xl">Skyworks</li>
-          <li className="text-white text-xl">DHL</li>
-          <li className="text-white text-xl">Vertiv</li>
-          <li className="text-white text-xl">Rheem</li>
-          <li className="text-white text-xl">Deacero</li>
+        <ul className="space-y-12">
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Puentes sin Columnas</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Naves de Gran Altura</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Cuartos Limpios</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Subestaciones a Medida</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Ductos Placa Estructural</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Pilas a 18 Metros</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Permisos 3 Gobiernos</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Precisión Milimétrica</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Grúas Industriales</li>
+          <li className="text-white text-2xl 1200:text-3xl 1920:text-4xl font-light leading-none whitespace-nowrap">Precio Cerrado</li>
         </ul>
       </div>
     </div>

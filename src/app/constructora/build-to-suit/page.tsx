@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { HeroVideoCover } from '@/components/hero-video-cover'
-import { TarjetaHeroOriginal } from '@/components/tarjeta-hero-original'
-import { AlphaBP } from '@/components/brandpetram/alpha-bp'
+import { TarjetaHeroOriginalBeta } from '@/components/tarjeta-hero-original-beta'
 import { Beta } from '@/components/brandpetram/beta'
 import { Gamma } from '@/components/brandpetram/gamma'
 import { Delta } from '@/components/brandpetram/delta'
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 export default function BuiltToSuitPage() {
   return (
     <div className="[&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white">
-      <Header />
+      <Header variant="dark" />
 
       <div className="mt-0">
         <HeroVideoCover
@@ -47,7 +46,7 @@ export default function BuiltToSuitPage() {
             fadeRadius: '20rem',
           }}
         >
-          <TarjetaHeroOriginal
+          <TarjetaHeroOriginalBeta
             badge1="Build-to-Suit"
             badge2="Construcción a la medida"
             titulo="Construye la nave que no existe en ningún catálogo"
@@ -56,9 +55,13 @@ export default function BuiltToSuitPage() {
         </HeroVideoCover>
       </div>
 
-      {/* Componente AlphaBP */}
+      {/* Título + descripción (sin logos) */}
       <div className="container mx-auto 1200:px-4 py-16">
-        <AlphaBP descripcion="Build-to-suit no es personalizar una nave estándar. Es diseñar y construir una instalación que no existía — desde los cálculos de mecánica de suelos hasta el último acabado interior — exactamente como tu operación la necesita." />
+        <div className="ml-10 1200:ml-40 1920:ml-60 mb-12">
+          <h2 className="text-4xl 360:text-5xl 393:text-5xl 768:text-7xl 1200:text-[3rem] 1280:text-[3.3rem] 1366:text-[3.5rem] 1440:text-[3.5rem] 1536:text-[5.3rem] 1728:text-[6rem] 1920:text-[5rem] font-medium text-foreground leading-none tracking-tighter text-balance w-10/12">
+            Clientes de Clase Mundial confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black">Grupo Nelson:</span>
+          </h2>
+        </div>
       </div>
 
       {/* Componente Beta */}

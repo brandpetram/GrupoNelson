@@ -92,8 +92,8 @@ export const solutionsServicesLinks = [
   },
     {
     href: '/constructora/diseno-e-ingenieria',
-    name: 'Diseño e Ingeniería',
-    description: 'Diseño integral bajo códigos internacionales',
+    name: 'Ingeniería y Diseño',
+    description: 'Ingeniería industrial bajo códigos internacionales',
     iconKey: 'compass',
   },
   {

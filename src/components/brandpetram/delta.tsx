@@ -26,8 +26,8 @@ export function Delta() {
 
       {/* Div derecho: Texto muy grande (una palabra) */}
       <div className="flex-1 flex items-center justify-center">
-        <h2 className="text-9xl font-black text-foreground leading-none tracking-tighter">
-          Build-to-Suit
+        <h2 className="text-5xl 1200:text-6xl 1536:text-7xl 1920:text-8xl font-black text-foreground leading-none tracking-tighter">
+          Tu Nave Como<br/>Siempre la Quisiste
         </h2>
       </div>
     </div>

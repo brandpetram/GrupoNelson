@@ -78,7 +78,7 @@ export default function Mu() {
                     </span>
                   </a>
                   <h1 className="mt-4 text-2xl 360:text-[2rem] 393:text-[2.5rem] 430:text-[3rem] 768:text-[3.5rem] 834:text-[3.75rem] 1024:text-[4rem] 1200:text-[2.5rem] 1280:text-[3rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none 1200:mt-6">
-                    La Constructora en Mexicali que sirve a<br className="md:block 1200:hidden" /> <TypewriterClients />
+                    La Constructora en Mexicali que sirve a<br /> <span className="block h-[1em]"><TypewriterClients /></span>
 
                   </h1>
                   <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">

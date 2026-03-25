@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import { CuadriculaSectionConProps } from '@/components/brandpetram/con-props/cuadricula-section-con-props'
 import { GunLikeConProps } from '@/components/brandpetram/con-props/gun-like-con-props'
@@ -18,6 +19,46 @@ import {FeatureSection6BPConProps} from "@/components/brandpetram/con-props/feat
 import {SplitWithImageBPConProps} from '@/components/brandpetram/con-props/split-with-image-bp-con-props'
 import { Compass, Zap, Shield, Ruler, ClipboardCheck, FileSearch, Settings } from 'lucide-react'
 import { CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
+
+const PROBLEMAS = [
+  'Sísmicos',
+  'Eléctricos',
+  'Estructurales',
+  'Térmicos',
+  'de Suelo',
+  'de Fuego',
+  'Ambientales',
+  'Hidráulicos',
+]
+
+function TypewriterProblema() {
+  const [index, setIndex] = useState(0)
+  const [displayed, setDisplayed] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const word = PROBLEMAS[index]
+    const speed = isDeleting ? 40 : 80
+    const pause = !isDeleting && displayed === word ? 2000 : isDeleting && displayed === '' ? 300 : speed
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && displayed === word) {
+        setIsDeleting(true)
+      } else if (isDeleting && displayed === '') {
+        setIsDeleting(false)
+        setIndex((i) => (i + 1) % PROBLEMAS.length)
+      } else if (isDeleting) {
+        setDisplayed(word.slice(0, displayed.length - 1))
+      } else {
+        setDisplayed(word.slice(0, displayed.length + 1))
+      }
+    }, pause)
+
+    return () => clearTimeout(timer)
+  }, [displayed, isDeleting, index])
+
+  return <span>{displayed}<span className="animate-pulse">|</span></span>
+}
 
 export default function DisenoEIngenieriaPage() {
   return (
@@ -78,7 +119,7 @@ export default function DisenoEIngenieriaPage() {
             <ImagenConEtiquetaConProps
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
               alt="Diseño e ingeniería industrial Mexicali"
-              etiqueta="Resolvemos Problemas"
+              etiqueta={<>Resolvemos Problemas<br /><span className="block h-[1em]"><TypewriterProblema /></span></>}
             />
             <GridOverlay
               fadeRadius="16rem"
@@ -249,40 +290,40 @@ export default function DisenoEIngenieriaPage() {
         {/* FAQs */}
         <div>
           <FaqSectionsThreeColumnsBPConProps
-            titulo="Preguntas Sobre Diseño e Ingeniería"
-            descripcion="¿Tienes alguna pregunta adicional? Contáctanos directamente por"
+            titulo="Preguntas Sobre Ingeniería Industrial"
+            descripcion="¿Necesitas más información? Contáctanos por"
             linkTexto="correo electrónico"
             linkHref="mailto:contacto@gruponelson.com"
             faqs={[
               {
                 id: 1,
-                question: "¿Baumex subcontrata el diseño de naves industriales?",
-                answer: "No. Contamos con 6 departamentos propios de ingeniería: arquitectura, civil, estructural, eléctrica, mecánica y estimación de costos. El equipo que diseña tu nave es el mismo que la construye.",
+                question: "¿Cómo logro que mi nave cumpla FM Global desde el primer día?",
+                answer: "La ingeniería de muros, cubierta, estructura y sistema contraincendio se calcula desde el proyecto ejecutivo para pasar auditoría FM Global. Eso reduce tu prima de seguro y elimina retrabajo.",
               },
               {
                 id: 2,
-                question: "¿Qué certificaciones de diseño maneja Baumex?",
-                answer: "FM Global en muros, cubierta, estructura y sistema contraincendio. LEED Knowledgeable. Diseño conforme a NFPA, IBC y Normas Oficiales Mexicanas. Calificación 'Recomendado' por Honeywell en ISN.",
+                question: "¿Puedo obtener certificación LEED Gold para mi nave industrial?",
+                answer: "Sí. El proyecto ejecutivo integra paneles solares, HVAC de alta eficiencia con recuperación de agua al 90%, y materiales certificados. Gulfstream 550K está en proceso de LEED Gold con 10 MW solares.",
               },
               {
                 id: 3,
-                question: "¿Qué son los sistemas antisísmicos BRB?",
-                answer: "Los Buckling-Restrained Braces son disipadores de energía sísmica en puntos estratégicos de la estructura. Baumex los implementó por primera vez en Mexicali para el proyecto Gulfstream 550K — tecnología usada en Ciudad de México y Japón.",
+                question: "¿Cómo protejo mi nave en zona sísmica 4?",
+                answer: "Con sistemas antisísmicos BRB (Buckling-Restrained Braces) — disipadores de energía sísmica en puntos estratégicos de la estructura. Tecnología usada en Japón y Ciudad de México, implementada por primera vez en Mexicali.",
               },
               {
                 id: 4,
-                question: "¿Cuánta capacidad eléctrica pueden diseñar?",
-                answer: "Hasta 20 MW de capacidad instalada, como en el proyecto Gulfstream 550K. Incluye diseño de subestaciones, paneles solares y sistemas de distribución completos.",
+                question: "¿Qué capacidad eléctrica puedo alcanzar en mi nave?",
+                answer: "La que tu operación necesite. Desde subestaciones de 500 KVA hasta 20 MW de capacidad instalada. Incluye tramitología completa con CFE, paneles solares y sistemas de distribución.",
               },
               {
                 id: 5,
-                question: "¿Pueden diseñar proyectos especiales fuera de naves estándar?",
-                answer: "Sí. Hemos diseñado un puente vehicular de 95 m sin columnas para Skyworks, un túnel de viento con blower de 3,000 HP para Honeywell, y cimentaciones de precisión milimétrica para Deacero.",
+                question: "¿Puedo construir en terreno con suelo difícil?",
+                answer: "Sí. La ingeniería civil incluye mecánica de suelos con laboratorio independiente y cimentaciones profundas — pilas de concreto armado a 18 metros en suelo arenoso colapsable, verificadas con ensayos documentados.",
               },
               {
                 id: 6,
-                question: "¿Cuánto tarda el diseño de un proyecto ejecutivo?",
-                answer: "Depende de la complejidad, pero un proyecto ejecutivo completo típicamente se desarrolla en 2-4 meses. El cronograma incluye todas las disciplinas trabajando en paralelo bajo un solo techo.",
+                question: "¿En cuánto tiempo obtengo mi proyecto ejecutivo completo?",
+                answer: "Entre 2 y 4 meses dependiendo de la complejidad. Las 6 disciplinas de ingeniería trabajan en paralelo, no en secuencia — eso comprime el cronograma sin sacrificar profundidad.",
               },
             ]}
           />

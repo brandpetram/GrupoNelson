@@ -76,29 +76,29 @@ export default function TablaPortafolioBaumex({ proyectos }: TablaPortafolioProp
                       isSelected ? 'bg-blue-50 dark:bg-blue-900/20' : 'hover:bg-gray-50/50 dark:hover:bg-white/5'
                     }`}
                   >
-                    <td className={`sticky left-0 z-10 py-8 pl-4 pr-3 text-sm font-medium text-gray-900 dark:text-white sm:pl-3 [background:inherit]`}>
+                    <td className={`sticky left-0 z-10 py-8 pl-4 pr-3 text-base 1200:text-lg font-medium text-gray-900 dark:text-white sm:pl-3 [background:inherit]`}>
                       {proyecto.anio}
                     </td>
-                    <td className="px-3 py-8 text-sm">
+                    <td className="px-3 py-8 text-base 1200:text-lg">
                       <div className="font-semibold text-gray-900 dark:text-white leading-tight">
                         {proyecto.proyecto}
                       </div>
-                      <div className="mt-1 text-gray-500 dark:text-gray-400 font-medium">
+                      <div className="mt-1 text-sm 1200:text-base text-gray-500 dark:text-gray-400 font-medium">
                         {proyecto.cliente !== '—' ? proyecto.cliente : '—'}
                       </div>
                     </td>
-                    <td className="px-3 py-8 text-sm">
-                      <span className="inline-flex items-center rounded-md bg-gray-50 dark:bg-gray-800 px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-white/10">
+                    <td className="px-3 py-8 text-base 1200:text-lg">
+                      <span className="inline-flex items-center rounded-md bg-gray-50 dark:bg-gray-800 px-2.5 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-white/10">
                         {proyecto.servicio}
                       </span>
                     </td>
-                    <td className="px-3 py-8 text-sm text-right tabular-nums">
+                    <td className="px-3 py-8 text-base 1200:text-lg text-right tabular-nums">
                       {proyecto.superficieM2 ? (
                         <div className="flex flex-col items-end">
                           <span className="font-semibold text-gray-900 dark:text-white">
                             {proyecto.superficieM2.toLocaleString('es-MX')} m²
                           </span>
-                          <span className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                          <span className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
                             {proyecto.superficieFt2?.toLocaleString('es-MX')} ft²
                           </span>
                         </div>
@@ -106,7 +106,7 @@ export default function TablaPortafolioBaumex({ proyectos }: TablaPortafolioProp
                         <span className="text-gray-400">—</span>
                       )}
                     </td>
-                    <td className="px-3 py-8 text-sm text-gray-500 dark:text-gray-400">
+                    <td className="px-3 py-8 text-base 1200:text-lg text-gray-500 dark:text-gray-400">
                       {proyecto.ubicacion}
                     </td>
                   </tr>
