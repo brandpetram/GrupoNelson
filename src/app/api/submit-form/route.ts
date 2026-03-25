@@ -1,7 +1,12 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error('RESEND_API_KEY not configured')
+  }
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 const RECIPIENTS = [
   'hjg@nelson.com.mx',
@@ -59,6 +64,7 @@ export async function POST(request: Request) {
       { label: 'Mensaje', value: body.message },
     ].filter(f => f.value)
 
+    const resend = getResend()
     const { error } = await resend.emails.send({
       from: 'Grupo Nelson <leads@brandpetram.marketing>',
       to: RECIPIENTS,
