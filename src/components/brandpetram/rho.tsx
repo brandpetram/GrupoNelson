@@ -14,22 +14,22 @@ export default function Rho() {
         <div className="container text-gray-100 max-w-2xl mx-auto px-20 md:px-0 pt-156">
           <div className={'-translate-y-80'}><h1
               className=" text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-relaxed tracking-wide font-light">
-            Lorem ipsum dolor sit amet,{" "}
-            <span className="font-bold">consectetur adipiscing</span>,{" "}
-            sed do eiusmod tempor
+            Gulfstream lleva 35 años{" "}
+            <span className="font-bold">construyendo con Baumex</span>.{" "}
+            El 80% de clientes repiten
           </h1>
             <h2 className="mt-10 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] font-bold">
-              Lorem Ipsum — Cargo Lorem Ipsum
+              Baumex Constructora — Grupo Nelson
             </h2></div>
         </div>
 
         {/* Texto decorativo de fondo */}
         <h1 className="hidden md:block text-[7rem] 360:text-[7rem] 393:text-[8rem] 430:text-[9rem] 768:text-[15rem] 834:text-[17rem] 1024:text-[20rem] 1200:text-[24rem] 1280:text-[26rem] 1366:text-[27rem] 1440:text-[29rem] 1536:text-[31rem] 1728:text-[35rem] 1920:text-[39rem] text-white font-extrabold tracking-tighter overflow-hidden opacity-20 md:-mt-48 leading-none">
-          Lorem
+          Baumex
         </h1>
 
         <h1 className="md:hidden text-[7rem] text-center text-[14rem] 393:text-[17rem] text-white font-extrabold tracking-tighter overflow-hidden opacity-20 md:-mt-48 leading-none">
-          GN
+          BX
         </h1>
 
         {/* Grid de 6 celdas — flat grid: md=2 cols, 1024+=3 cols */}
@@ -39,39 +39,33 @@ export default function Rho() {
         >
           {/* Item 1 — md: fila 1 izq | 1024: fila 1 izq */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] 1536:text-[1.5rem] text-balance border-b md:border-r border-blue-400">
-            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Lorem ipsum dolor</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">28 años de experiencia</h1>
+            Constructora in-house de Grupo Nelson desde 1998. Equipo propio de arquitectura, ingeniería y construcción.
           </div>
           {/* Item 2 — md: fila 1 der | 1024: fila 1 centro */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] 1536:text-[1.5rem] text-balance border-b border-blue-400 1200:border-r">
-            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Sit amet consectetur</h1>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat duis aute irure dolor.
+            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">75 proyectos completados</h1>
+            4.5 millones de pies cuadrados construidos. Naves desde 5,000 m² hasta 52,200 m² para 33 corporaciones.
           </div>
           {/* Item 3 — md: fila 2 izq | 1024: fila 1 der (sin border-r) */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] 1536:text-[1.5rem] text-balance border-b md:border-r 1200:border-r-0 border-blue-400">
-            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Adipiscing elit eiusmod</h1>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur excepteur sint occaecat.
+            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">450 trabajadores en campo</h1>
+            45 subcontratistas coordinados. 1,092,745 horas hombre documentadas con cero muertes.
           </div>
           {/* Item 4 — md: fila 2 der | 1024: fila 2 izq (sin border-b) */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] text-balance border-b 1200:border-b-0 1200:border-r border-blue-400">
-            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Tempor incididunt labore</h1>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum lorem ipsum dolor.
+            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">ISN + LEED Gold + FM Global</h1>
+            Recomendados por Honeywell en ISN. Certificación LEED Gold. Cumplimiento FM Global para aseguradoras internacionales.
           </div>
           {/* Item 5 — md: fila 3 izq (sin border-b) | 1024: fila 2 centro (sin border-b) */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] text-balance border-b md:border-b-0 md:border-r border-blue-400">
-            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Dolore magna aliqua</h1>
-            In culpa qui officia deserunt mollit anim id est laborum lorem ipsum dolor
-            sit amet consectetur adipiscing elit sed do eiusmod.
+            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Ruta crítica de 18 hitos</h1>
+            11 puntos de control de calidad. Reuniones semanales con 16+ asistentes. ERP de construcción integrado.
           </div>
           {/* Item 6 — md: fila 3 der | 1024: fila 2 der (sin bordes) */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] text-balance">
-            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Quis nostrud exercitation</h1>
-            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua ut enim ad minim veniam quis.
+            <h1 className="text-center my-10 font-bold text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">80% de clientes repiten</h1>
+            Gulfstream, Honeywell, DHL, Vertiv, Skyworks. La retención de clientes habla más que cualquier promesa.
           </div>
         </div>
       </section>

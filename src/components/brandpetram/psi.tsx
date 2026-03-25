@@ -4,39 +4,39 @@
 const faqs = [
   {
     id: 1,
-    question: "Lorem ipsum dolor sit amet consectetur adipiscing elit?",
+    question: "Qué diferencia a Baumex de otras constructoras en Mexicali?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Baumex es constructora in-house de Grupo Nelson. Diseña y construye con equipo propio: arquitectura, ingeniería civil, estructural, eléctrica, mecánica y plomería. Un solo punto de responsabilidad.",
   },
   {
     id: 2,
-    question: "Sed do eiusmod tempor incididunt ut labore et dolore magna?",
+    question: "Qué tamaño de nave industrial pueden construir?",
     answer:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Desde 5,000 m² hasta 52,200 m². En 28 años hemos completado 75 proyectos y 4.5 millones de pies cuadrados para 33 corporaciones internacionales.",
   },
   {
     id: 3,
-    question: "Quis nostrud exercitation ullamco laboris nisi ut aliquip?",
+    question: "Qué certificaciones tiene Baumex?",
     answer:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "ISN recomendado por Honeywell, LEED Gold y FM Global. Cumplimos NOM-009-STPS-2011 (alturas), NOM-027-STPS-2008 (soldadura) y todo el personal cuenta con DC-3.",
   },
   {
     id: 4,
-    question: "Excepteur sint occaecat cupidatat non proident sunt culpa?",
+    question: "Cómo gestionan la seguridad en obra?",
     answer:
-      "Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur.",
+      "Manual HSE de 18 capítulos. Permisos diarios con matriz de riesgo. 1,092,745 horas hombre con cero muertes. 404 días sin accidentes en el proyecto Gulfstream.",
   },
   {
     id: 5,
-    question: "In culpa qui officia deserunt mollit anim id est laborum?",
+    question: "Para qué empresas han construido?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "Gulfstream, Honeywell, DHL, Vertiv, Skyworks, entre otras. Gulfstream lleva 35 años construyendo con Baumex. El 80% de nuestros clientes repiten proyecto.",
   },
   {
     id: 6,
-    question: "Consectetur adipiscing elit sed do eiusmod tempor incididunt?",
+    question: "Qué tipo de construcción realizan?",
     answer:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      "Build-to-suit (nave nueva a medida), expansión de naves existentes y tenant improvement. 10 disciplinas in-house: terracerías, cimentación, mampostería, estructura, techumbre, fachadas, interiores, acabados, eléctrica y mecánica.",
   },
 ]
 
@@ -52,7 +52,7 @@ export default function Psi() {
             Preguntas frecuentes
           </h2>
           <p className="mt-4 text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground">
-            Lorem ipsum dolor sit amet consectetur.{" "}
+            Si no encuentras tu pregunta aquí,{" "}
             <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
               Contáctanos
             </a>{" "}

@@ -23,15 +23,13 @@ export default function Omicron() {
         </div>
         <div className="col-span-9 md:col-span-7 lg:col-span-8 my-auto md:leading-relaxed">
           <h1 className="text-foreground mb-5 font-bold text-3xl 360:text-[2rem] 393:text-[2.2rem] 430:text-[2.5rem] 768:text-[2.8rem] 834:text-[2.8rem] 1024:text-[4rem] 1200:text-[2.8rem] 1280:text-[3.2rem] 1366:text-[3.5rem] 1440:text-[3.8rem] 1536:text-[4.2rem] 1728:text-[5rem] 1920:text-[6rem] leading-none">
-            Lorem ipsum
+            Ruta crítica
           </h1>
           <p className="1200:hidden">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            18 hitos de construcción. Reuniones semanales con 16+ asistentes. Submittals y long lead items controlados.
           </p>
           <p className="hidden 1200:block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at autem corporis delectus error excepturi facere hic inventore iusto,
+            18 hitos de construcción documentados. Reuniones semanales con 16+ asistentes. Submittals y long lead items controlados desde el día uno. ERP de construcción para visibilidad en tiempo real del avance de obra.
           </p>
         </div>
       </div>
@@ -53,15 +51,13 @@ export default function Omicron() {
         </div>
         <div className="col-span-9 md:col-span-7 lg:col-span-8 my-auto md:leading-relaxed">
           <h1 className="text-foreground mb-5 font-bold text-3xl 360:text-[2rem] 393:text-[2.2rem] 430:text-[2.5rem] 768:text-[2.8rem] 834:text-[2.8rem] 1024:text-[4rem] 1200:text-[2.8rem] 1280:text-[3.2rem] 1366:text-[3.5rem] 1440:text-[3.8rem] 1536:text-[4.2rem] 1728:text-[5rem] 1920:text-[6rem] leading-none">
-            Dolor sit amet
+            Control de calidad
           </h1>
           <p className="1200:hidden">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            11 puntos de control de calidad. Inspecciones documentadas en cada fase crítica de la construcción.
           </p>
           <p className="hidden 1200:block">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at autem corporis delectus error excepturi facere hic inventore iusto,
+            11 puntos de control de calidad integrados en la ruta crítica. Inspecciones documentadas en cada fase crítica: cimentación, estructura, techumbre, fachadas, instalaciones eléctricas y mecánicas. Nada avanza sin aprobación.
           </p>
         </div>
       </div>
@@ -83,15 +79,13 @@ export default function Omicron() {
         </div>
         <div className="col-span-9 md:col-span-7 lg:col-span-8 my-auto md:leading-relaxed">
           <h1 className="text-foreground mb-5 font-bold text-3xl 360:text-[2rem] 393:text-[2.2rem] 430:text-[2.5rem] 768:text-[2.8rem] 834:text-[2.8rem] 1024:text-[4rem] 1200:text-[2.8rem] 1280:text-[3.2rem] 1366:text-[3.5rem] 1440:text-[3.8rem] 1536:text-[4.2rem] 1728:text-[5rem] 1920:text-[6rem] leading-none">
-            Consectetur
+            ERP de construcción
           </h1>
           <p className="1200:hidden">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur.
+            Sistema ERP para gestión integral de obra. Presupuestos, órdenes de compra y avance en una sola plataforma.
           </p>
           <p className="hidden 1200:block">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid at autem corporis delectus error excepturi facere hic inventore iusto,
+            Sistema ERP para gestión integral de obra. Presupuestos, órdenes de compra, control de inventario y avance de obra en una sola plataforma. Reportes semanales con fotografías, porcentaje de avance y proyecciones de entrega.
           </p>
         </div>
       </div>

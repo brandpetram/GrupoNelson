@@ -4,28 +4,24 @@
 //   Hardcodeados 11 pills de texto. Imagen local GrupoNelson.
 
 const pills = [
-  "Lorem",
-  "ipsum",
-  "dolor",
-  "sit",
-  "amet",
-  "consectetur",
-  "adipiscing",
-  "elit",
-  "eiusmod",
-  "tempor",
-  "incididunt",
-  "labore",
-  "magna",
-  "aliqua",
-  "veniam",
-  "nostrud",
-  "exercitation",
-  "ullamco",
-  "laboris",
-  "nisi",
-  "aliquip",
-  "commodo",
+  "Aeroespacial",
+  "Automotriz",
+  "Electrónica",
+  "Dispositivos médicos",
+  "Logística",
+  "Alimentos",
+  "Manufactura",
+  "Plásticos",
+  "Metalmecánica",
+  "Energía",
+  "Telecomunicaciones",
+  "Textil",
+  "Farmacéutica",
+  "Agroindustria",
+  "Empaque",
+  "Defensa",
+  "HVAC",
+  "Semiconductores",
 ]
 
 export default function Upsilon() {
@@ -35,7 +31,7 @@ export default function Upsilon() {
         {/* Título con pills */}
         <div className="-mt-1 flex flex-wrap gap-3 my-10">
           <span className="text-3xl 360:text-[2rem] 393:text-[2.2rem] 430:text-[2.5rem] 768:text-5xl 834:text-[3.5rem] 1024:text-6xl 1200:text-[2.8rem] 1280:text-[3.2rem] 1366:text-[3.5rem] 1440:text-[3.8rem] 1536:text-[4.2rem] 1728:text-[5rem] 1920:text-[6rem] font-bold w-full text-foreground mb-5 leading-none">
-            Lorem ipsum dolor sit amet
+            Industrias que construimos en Mexicali
           </span>
           {pills.map((word) => (
             <span
@@ -46,7 +42,7 @@ export default function Upsilon() {
             </span>
           ))}
           <span className="text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] font-bold text-foreground">
-            consectetur adipiscing
+            33 corporaciones internacionales
           </span>
         </div>
       </div>
@@ -62,14 +58,14 @@ export default function Upsilon() {
       {/* Texto inferior con tachado */}
       <h3 className="mt-10 text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] font-light text-foreground">
         Con{" "}
-        <span className="font-black tracking-tight text-blue-600">Lorem Ipsum</span>{" "}
+        <span className="font-black tracking-tight text-blue-600">Baumex</span>{" "}
         ya no tienes que preocuparte por{" "}
         <span className="line-through">
           <br className="md:hidden" />
-          lorem ipsum dolor sit amet
+          coordinar múltiples contratistas
         </span>{" "}
         <br className="md:hidden" />
-        <span className="text-foreground font-black">consectetur adipiscing.</span>
+        <span className="text-foreground font-black">un solo responsable.</span>
       </h3>
     </div>
   )

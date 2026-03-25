@@ -8,23 +8,23 @@ import { Globe, Scale, Zap, MessageSquare, Mail } from "lucide-react"
 const transferFeatures = [
   {
     id: 1,
-    name: "Lorem ipsum dolor sit amet",
+    name: "Terracerías y cimentación",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Preparación del terreno y cimentación con control de compactación. Base sólida para naves de cualquier escala.",
     icon: Globe,
   },
   {
     id: 2,
-    name: "Consectetur adipiscing elit",
+    name: "Estructura y techumbre",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Montaje de estructura metálica y techumbre con estándares FM Global. Diseño para claros libres de hasta 50 metros.",
     icon: Scale,
   },
   {
     id: 3,
-    name: "Sed do eiusmod tempor",
+    name: "Fachadas e interiores",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Mampostería, fachadas arquitectónicas y acabados interiores. Oficinas, áreas de producción y almacenamiento.",
     icon: Zap,
   },
 ]
@@ -32,16 +32,16 @@ const transferFeatures = [
 const communicationFeatures = [
   {
     id: 1,
-    name: "Excepteur sint occaecat",
+    name: "Instalaciones eléctricas",
     description:
-      "Sunt in culpa qui officia deserunt mollit anim id est laborum lorem ipsum dolor sit amet consectetur.",
+      "Subestaciones, distribución eléctrica y sistemas de respaldo. Capacidad desde 500 KVA hasta especificaciones Fortune 500.",
     icon: MessageSquare,
   },
   {
     id: 2,
-    name: "Cupidatat non proident",
+    name: "Instalaciones mecánicas",
     description:
-      "In culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipiscing.",
+      "Sistemas HVAC, plomería industrial y redes contra incendio. Diseño conforme a normas NFPA y FM Global.",
     icon: Mail,
   },
 ]
@@ -77,11 +77,10 @@ export default function Sigma() {
         {/* Título principal */}
         <div className="relative">
           <h2 className="text-center text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-none font-extrabold tracking-tight text-foreground">
-            Lorem ipsum dolor sit amet consectetur adipiscing
+            10 disciplinas de construcción in-house
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-center text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad
-            minim veniam quis nostrud exercitation.
+            Terracerías, cimentación, mampostería, estructura, techumbre, fachadas, interiores, acabados, eléctrica, mecánica.
           </p>
         </div>
 
@@ -89,11 +88,10 @@ export default function Sigma() {
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="relative">
             <h3 className="text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] font-extrabold text-foreground tracking-tight">
-              Lorem ipsum dolor sit amet consectetur
+              De la terracería al acabado final
             </h3>
             <p className="mt-3 text-lg text-muted-foreground">
-              Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua enim ad minim veniam quis nostrud.
+              Baumex ejecuta las 10 disciplinas con equipo propio. Sin intermediarios entre el diseño y la entrega de tu nave industrial.
             </p>
             <dl className="mt-10 space-y-10">
               {transferFeatures.map((item) => (
@@ -174,11 +172,10 @@ export default function Sigma() {
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="lg:col-start-2">
               <h3 className="text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-lg 834:text-lg 1024:text-xl 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] font-extrabold text-foreground tracking-tight">
-                Nostrud exercitation ullamco laboris nisi
+                Certificaciones que exigen las Fortune 500
               </h3>
               <p className="mt-3 text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground">
-                Ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat.
+                ISN recomendado por Honeywell. LEED Gold. FM Global. Cumplimos los estándares que las corporaciones internacionales requieren.
               </p>
               <dl className="mt-10 space-y-10">
                 {communicationFeatures.map((item) => (

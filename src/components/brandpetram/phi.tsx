@@ -22,28 +22,27 @@ export default function Phi() {
       {/* Texto — flujo normal, determina la altura del componente */}
       <div className="px-5 md:px-10 1024:px-0 mt-20 1200:mt-0 relative z-10 lg:ml-20 3xl:ml-40 lg:pt-16 1200:max-w-3xl 1536:max-w-4xl pb-16 1728:translate-x-[10%]">
         <h1 className="text-foreground w-10/12 md:w-full mx-5 lg:mx-0 text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-[4rem] 834:text-[4rem] 1024:text-[5rem] 1200:text-[2.5rem] 1280:text-[3rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4.5rem] 1920:text-[5rem] leading-none font-bold tracking-tighter">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
+          1,092,745 horas hombre con cero muertes en obra
         </h1>
 
         <div className="py-16 px-0 lg:py-16 lg:px-0 768:grid 768:grid-cols-2 834:grid-cols-2 1024:grid-cols-[16rem_1fr] 1200:grid-cols-[17rem_1fr] 1366:grid-cols-[20rem_1fr] 1536:grid-cols-[25rem_1fr] 768:gap-x-8">
           {/* Subtítulo */}
           <div className="mx-5 768:mx-0 text-foreground tracking-tight">
             <h2 className="-mt-10 text-[1.2rem] 360:text-[1.2rem] 393:text-[1.4rem] 430:text-[1.2rem] 768:text-[1.05rem] 834:text-[1.05rem] 1024:text-[1.05rem] 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[1rem] 1728:text-[1rem] 1920:text-[1.1rem] font-semibold text-muted-foreground uppercase leading-none">
-              Lorem ipsum <br className="md:hidden" />
-              consectetur adipiscing
+              Manual HSE <br className="md:hidden" />
+              18 capítulos
             </h2>
             <p className="w-10/12 md:w-2/3 lg:w-full mt-5 text-lg 360:text-lg 393:text-[1.2rem] 430:text-[1.3rem] 768:text-[1.35rem] 834:text-[1.35rem] 1024:text-[1.5rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-7 font-semibold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
+              Permisos diarios con matriz de riesgo. 404 días sin accidentes en Gulfstream.
             </p>
             <p className="w-full md:w-2/3 lg:w-full mt-7 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.35rem] 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] leading-7 text-muted-foreground">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              DC-3 certificados para todo el personal. Cumplimiento de normas STPS en cada obra.
             </p>
-            <h4 className="mt-10 font-bold text-lg 360:text-lg 393:text-[1.2rem] 430:text-[1.3rem] 768:text-[1.35rem] 834:text-[1.35rem] 1024:text-[1.5rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Lorem ipsum:</h4>
+            <h4 className="mt-10 font-bold text-lg 360:text-lg 393:text-[1.2rem] 430:text-[1.3rem] 768:text-[1.35rem] 834:text-[1.35rem] 1024:text-[1.5rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem]">Normatividad:</h4>
             <ul className="mt-5 space-y-3 text-muted-foreground text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.35rem] 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem]">
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Adipiscing elit sed do eiusmod tempor</li>
-              <li>Incididunt ut labore et dolore magna</li>
+              <li>NOM-009-STPS-2011 (trabajo en alturas)</li>
+              <li>NOM-027-STPS-2008 (soldadura y corte)</li>
+              <li>ISN recomendado por Honeywell</li>
             </ul>
           </div>
 
@@ -53,12 +52,11 @@ export default function Phi() {
               {/* Servicio 1 */}
               <div className="space-y-2 pb-6">
                 <dt className="text-[2.25rem] 360:text-[2.25rem] 393:text-[2.4rem] 430:text-[2.6rem] 768:text-[1.35rem] 834:text-[1.35rem] 1024:text-[1.5rem] 1200:text-[.9rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1.1rem] 1728:text-[1.2rem] 1920:text-[1.5rem] font-medium text-foreground leading-none">
-                  Lorem ipsum dolor sit amet catena
+                  Construcción build-to-suit
                 </dt>
                 <dd className="flex flex-col gap-3 768:flex-row 768:gap-0">
                   <span className="flex-1 768:mr-6 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.35rem] 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1rem] 1728:text-[1.1rem] 1920:text-[1.3rem] leading-6 text-muted-foreground">
-                    Consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.
+                    Nave diseñada y construida a la medida de tu operación. Desde 5,000 m² hasta 52,200 m².
                   </span>
                   <div className="flex-none">
                     <a href="#">
@@ -73,12 +71,11 @@ export default function Phi() {
               {/* Servicio 2 */}
               <div className="space-y-2 border-b border-t py-6">
                 <dt className="text-[2.25rem] 360:text-[2.25rem] 393:text-[2.4rem] 430:text-[2.6rem] 768:text-[1.35rem] 834:text-[1.35rem] 1024:text-[1.5rem] 1200:text-[.9rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1.1rem] 1728:text-[1.2rem] 1920:text-[1.5rem] font-medium text-foreground leading-none">
-                  Ut enim ad minim veniam lotus
+                  Expansión de naves existentes
                 </dt>
                 <dd className="flex flex-col gap-3 768:flex-row 768:gap-0">
                   <span className="flex-1 768:mr-6 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.35rem] 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1rem] 1728:text-[1.1rem] 1920:text-[1.3rem] leading-6 text-muted-foreground">
-                    Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat duis aute irure dolor.
+                    Ampliación de instalaciones sin detener tu operación. Coordinación con tu equipo de planta.
                   </span>
                   <div className="flex-none">
                     <a href="#">
@@ -93,12 +90,11 @@ export default function Phi() {
               {/* Servicio 3 */}
               <div className="space-y-2 pt-6">
                 <dt className="text-[2.25rem] 360:text-[2.25rem] 393:text-[2.4rem] 430:text-[2.6rem] 768:text-[1.35rem] 834:text-[1.35rem] 1024:text-[1.5rem] 1200:text-[.9rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1.1rem] 1728:text-[1.2rem] 1920:text-[1.5rem] font-medium text-foreground leading-none">
-                  Duis aute irure dolor patram oexis
+                  Tenant improvement
                 </dt>
                 <dd className="flex flex-col gap-3 768:flex-row 768:gap-0">
                   <span className="flex-1 768:mr-6 text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.35rem] 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1rem] 1728:text-[1.1rem] 1920:text-[1.3rem] leading-6 text-muted-foreground">
-                    In voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    excepteur sint occaecat cupidatat.
+                    Adecuación de nave existente a los requerimientos específicos de tu operación industrial.
                   </span>
                   <div className="flex-none">
                     <a href="#">
