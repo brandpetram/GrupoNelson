@@ -55,9 +55,6 @@ Thumbs.db
 .idea/
 .idea/
 
-# Videos (demasiado pesados para git, se sirven localmente o desde YouTube)
-public/video/
-
 # Screenshots temporales (no agregar al git)
 public/screenshots-temp/
 

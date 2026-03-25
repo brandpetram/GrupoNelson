@@ -1,6 +1,21 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia'
 
 export function StatsGridBPGamma() {
+  const [showVideo, setShowVideo] = useState(false)
+
+  useEffect(() => {
+    if (document.readyState === 'complete') {
+      setShowVideo(true)
+    } else {
+      const handleLoad = () => setShowVideo(true)
+      window.addEventListener('load', handleLoad)
+      return () => window.removeEventListener('load', handleLoad)
+    }
+  }, [])
+
   return (
     <section className="relative py-16 sm:py-24">
       {/* Dot pattern — lado izquierdo */}
@@ -151,16 +166,18 @@ export function StatsGridBPGamma() {
                 Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.
               </p>
 
-              {/* Video */}
-              <div className="relative w-full aspect-video rounded-xs overflow-hidden">
-                <video
-                  src="/video/trayectoria-grupo-nelson-mexicali.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
+              {/* Video — se carga después que la página */}
+              <div className="relative w-full aspect-video rounded-xs overflow-hidden bg-blue-800">
+                {showVideo && (
+                  <video
+                    src="/video/trayectoria-grupo-nelson-mexicali-15s.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
 
               <a
