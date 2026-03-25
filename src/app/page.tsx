@@ -23,6 +23,7 @@ import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia';
 import { CirculosConProps } from '@/components/brandpetram/con-props/circulos-con-props';
 import { FaqSectionsThreeColumnsBPConProps } from '@/components/brandpetram/con-props/faq-sections-three-columns-bp-con-props';
 import { CincoCardsConProps } from '@/components/brandpetram/con-props/cinco-cards-con-props';
+import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp';
 
 export default function Home() {
   return (
@@ -255,6 +256,9 @@ export default function Home() {
           mostrarCard5={false}
         />
       </div>
+
+      {/* Tour Virtual 360° */}
+      <VirtualTourBP tourId="hY5fjENu2" />
 
       {/* TODO: Migrar KeynoteHero */}
       {/* <section id="screencasts" className="min-h-screen py-20">

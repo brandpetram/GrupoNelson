@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { Compass, Ruler, Hammer, CheckCircle, Shield, Wrench, TrendingUp, Play } from 'lucide-react'
+import { Compass, Ruler, Hammer, CheckCircle, Shield, Wrench, TrendingUp, Play, Star } from 'lucide-react'
 
 interface ContentItem {
   caption: string
@@ -274,6 +274,24 @@ const defaultItems: ContentItem[] = [
       { text: 'Planifica tu expansión', href: '#contacto', primary: false },
     ],
   },
+  {
+    caption: 'Fase 8: Proyectos Especiales',
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">8</span><div>Construcciones Industriales<br/>Especiales en Mexicali</div></div>,
+    description:
+      '95 metros sin columnas. Sin precedente. Un puente vehicular de estructura metálica con diseño europeo de arco, cimentación a 18 metros de profundidad en zona sísmica 4, montado en dos domingos para no cerrar la vialidad. Cuando Skyworks necesitó conectar dos plantas de semiconductores sobre un boulevard y un dren federal, nos buscaron a nosotros.',
+    image: '/contructora-mexicali/puente-skyworks-2.jpg',
+    tag: {
+      icon: <Star className="w-5 h-5 text-gray-400" fill="currentColor" />,
+      text: 'Construcciones Industriales Especiales en Mexicali',
+      href: '/constructora/proyectos-especializados',
+      gradientFrom: '#2563eb',
+      gradientTo: '#0ea5e9',
+    },
+    buttons: [
+      { text: 'Ver proyectos especiales', href: '/constructora/proyectos-especializados', primary: true },
+      { text: 'Contactar', href: '#contacto', primary: false },
+    ],
+  },
 ]
 
 export function ScrollStorytelling({
@@ -342,7 +360,7 @@ export function ScrollStorytelling({
 
       <div className="flex flex-col 1200:flex-row items-start">
         {/* Columna de texto - scrollea normalmente */}
-        <div className="w-full 1200:w-1/2 2xl:w-1/2  1200:min-h-[215vh] px-4 sm:px-6 1200:pl-8 xl:pl-16 2xl:pl-32 1200:pr-12">
+        <div className="w-full 1200:w-1/2 2xl:w-1/2  1200:min-h-[250vh] px-4 sm:px-6 1200:pl-8 xl:pl-16 2xl:pl-32 1200:pr-12">
           {items.map((item, index) => (
             <div
               key={index}
