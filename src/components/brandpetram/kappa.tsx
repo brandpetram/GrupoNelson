@@ -10,10 +10,10 @@ export function Kappa() {
                 <div className="relative w-full 360:w-[100%] 393:w-[95%] 430:w-[90%] 768:w-[80%] 834:w-[75%] 1024:w-[70%] 1200:w-[60%] 1536:w-[60%] mx-auto">
                     <div className="mb-12 ">
                         <h2 className="text-[1.5rem] 360:text-[1.5rem] 393:text-[1.6rem] 430:text-[1.7rem] 768:text-[1.9rem] 834:text-[2rem] 1024:text-[2.2rem] 1200:text-[2.5rem] 1280:text-[2.7rem] 1366:text-[2.9rem] 1440:text-[3.1rem] 1536:text-[3.4rem] 1728:text-[3.8rem] 1920:text-[4.2rem] font-semibold text-white leading-tight">
-                            Lorem Ipusm Dolr Sit
+                            ¿No encuentras lo que necesitas?
                         </h2>
                         <p className="w-9/12 text-[0.7rem] 360:text-[0.7rem] 393:text-[0.75rem] 430:text-[0.8rem] 768:text-[0.85rem] 834:text-[0.9rem] 1024:text-[0.95rem] 1200:text-[1rem] 1280:text-[1.1rem] 1366:text-[1.2rem] 1440:text-[1.3rem] 1536:text-[1.4rem] 1728:text-[1.5rem] 1920:text-[1.6rem] text-gray-600 dark:text-gray-400 mt-4">
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+Si ninguna nave del inventario cumple tus especificaciones, Baumex construye a la medida. Un solo proveedor para ambos caminos.
                         </p>
                     </div>
 
@@ -29,7 +29,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                     <div
                         className="hidden 768:absolute 768:left-[-7rem] 834:left-[-8rem] 1024:left-[0rem] 1200:left-[-13rem] 1280:left-[-13rem] 1366:left-[-14rem] 1440:left-[-15rem] 1536:left-[-14rem] 1728:left-[-14rem] 1920:left-[-14rem] top-1/2  w-[10rem] text-right border-r border-gray-400 dark:border-gray-600 pr-5 768:py-5 834:py-6 1024:py-8 1200:py-10 1728:py-16">
                         <p className="text-[0.55rem] 360:text-[0.55rem] 393:text-[0.58rem] 430:text-[0.6rem] 768:text-[0.65rem] 834:text-[0.7rem] 1024:text-[0.75rem] 1200:text-[0.8rem] 1280:text-[0.85rem] 1366:text-[0.9rem] 1440:text-[0.95rem] 1536:text-[1rem] 1728:text-[1.1rem] 1920:text-[1.2rem] text-gray-300 dark:text-gray-500 leading-snug text-balance">
-                            lorem ipsum dolor sit amet, consectetur sicut erat pernoc autem
+                            Gulfstream empezó en una nave existente y hoy opera en 52,200 m² construidos a medida
                         </p>
                     </div>
                 </div>

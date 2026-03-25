@@ -34,12 +34,11 @@ export function Teta() {
             <div
                 className="360:translate-x-0 393:translate-x-0 430:translate-x-0 768:translate-x-3 834:translate-x-3 1024:translate-x-[1.5rem] 1200:translate-x-[1rem] 1280:translate-x-[3rem] 1366:translate-x-[3rem] 1440:translate-x-[3.5rem] 1536:translate-x-12 1728:translate-x-12 1920:translate-x-17 mt-10 md:mt-0 834:-translate-y-[1rem] 1024:-translate-y-[3rem] 1200:-translate-y-[5rem] 1280:-translate-y-[7rem] 1366:-translate-y-[5rem]">
               <h2 className="360:w-full 393:w-full 430:w-full 768:w-[13rem] 834:w-[15rem] 1024:w-[19rem] 1200:w-[19rem] 1280:w-[20rem] 1366:w-[20rem] 1440:w-[20rem] 1536:w-[23rem] 1728:w-[24rem] 1920:w-[26rem] text-[2.6rem] 360:text-[2.6rem] 393:text-[2.7rem] 430:text-[2.8rem] 768:text-[2rem] 834:text-[2.1rem] 1024:text-[2.3rem] 1200:text-[2.5rem] 1280:text-[2.6rem] 1366:text-[2.6rem] 1440:text-[2.9rem] 1536:text-[3.3rem] 1728:text-[3.1rem] 1920:text-[3.2rem] font-semibold text-black dark:text-white leading-none">
-                Lorem Ipsum dolor sit amet
+                Acelera tu entrada a Mexicali
               </h2>
 
               <p className="text-pretty 360:w-full 393:w-full 430:w-full 768:w-[15rem] 834:w-[15rem] 1024:w-[16rem] 1200:w-[22rem] 1280:w-[23rem] 1366:w-[23rem] 1440:w-[25rem] 1536:w-[26rem] 1728:w-[28rem] 1920:w-[31rem] text-[1.3rem] 360:text-[1.5rem] 393:text-[1.85rem] 430:text-[1.9rem] 768:text-[1.15rem] 834:text-[1.20rem] 1024:text-[1.4rem] 1200:text-[1.5rem] 1280:text-[1.3rem] 1366:text-[1.3rem] 1440:text-[1.4rem] 1536:text-[1.5rem] 1728:text-[1.6rem] 1920:text-[1.8rem] text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
-                Lorem ipsum magnifique influentia potentis aspectus quibus habitamus temporis auxiliare modificare quomodo
-                sentimus possumus meliorare productivitas concentratio requietem.
+                Llave en mano elimina 12 a 24 meses de construcción. Visita, verifica, firma contrato y arranca operaciones en semanas. Contratos de 10 a 15 años. 80% de clientes regresan.
               </p>
             </div>
           </div>
