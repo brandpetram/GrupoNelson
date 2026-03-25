@@ -15,7 +15,7 @@ export function Epsilon() {
       {/* Letras ABC gigantes de fondo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <h1 className="text-[40rem] font-black text-white opacity-5 tracking-tighter leading-none">
-          ABC
+          BTS
         </h1>
       </div>
 
@@ -23,30 +23,24 @@ export function Epsilon() {
       <div className="relative z-10 grid grid-cols-2 gap-0 max-w-sm ">
         {/* Columna 1 */}
         <ul className="space-y-5">
-          <li className="text-white text-xl">Lorem Ipsum</li>
-          <li className="text-white text-xl">Dolor Sit</li>
-          <li className="text-white text-xl">Amet Consectetur</li>
-          <li className="text-white text-xl">Adipiscing Elit</li>
-          <li className="text-white text-xl">Sed Do</li>
-          <li className="text-white text-xl">Eiusmod Tempor</li>
-          <li className="text-white text-xl">Incididunt Ut</li>
-          <li className="text-white text-xl">Labore Et</li>
-          <li className="text-white text-xl">Dolore Magna</li>
-          <li className="text-white text-xl">Aliqua Ut</li>
+          <li className="text-white text-xl">Aeroespacial</li>
+          <li className="text-white text-xl">Dispositivos Médicos</li>
+          <li className="text-white text-xl">Electrónica</li>
+          <li className="text-white text-xl">HVAC</li>
+          <li className="text-white text-xl">Logística</li>
+          <li className="text-white text-xl">Manufactura Pesada</li>
+          <li className="text-white text-xl">Papel</li>
         </ul>
 
         {/* Columna 2 */}
         <ul className="space-y-5">
-          <li className="text-white text-xl">Enim Ad</li>
-          <li className="text-white text-xl">Minim Veniam</li>
-          <li className="text-white text-xl">Quis Nostrud</li>
-          <li className="text-white text-xl">Exercitation Ullamco</li>
-          <li className="text-white text-xl">Laboris Nisi</li>
-          <li className="text-white text-xl">Ut Aliquip</li>
-          <li className="text-white text-xl">Ex Ea</li>
-          <li className="text-white text-xl">Commodo Consequat</li>
-          <li className="text-white text-xl">Duis Aute</li>
-          <li className="text-white text-xl">Irure Dolor</li>
+          <li className="text-white text-xl">Gulfstream</li>
+          <li className="text-white text-xl">Honeywell</li>
+          <li className="text-white text-xl">Skyworks</li>
+          <li className="text-white text-xl">DHL</li>
+          <li className="text-white text-xl">Vertiv</li>
+          <li className="text-white text-xl">Rheem</li>
+          <li className="text-white text-xl">Deacero</li>
         </ul>
       </div>
     </div>

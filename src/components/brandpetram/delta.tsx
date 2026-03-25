@@ -27,7 +27,7 @@ export function Delta() {
       {/* Div derecho: Texto muy grande (una palabra) */}
       <div className="flex-1 flex items-center justify-center">
         <h2 className="text-9xl font-black text-foreground leading-none tracking-tighter">
-          Lorem
+          Build-to-Suit
         </h2>
       </div>
     </div>

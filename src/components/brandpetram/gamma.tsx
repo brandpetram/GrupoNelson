@@ -14,8 +14,8 @@ export function Gamma() {
   return (
       <div>
           <h2 className="1200:-translate-y-10 -mt-24 translate-x-7 1200:translate-x-40 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[3.4rem] 1280:text-[4rem] 1366:text-[4.2rem] 1440:text-[4.5rem] 1536:text-[5rem] 1728:text-[5rem] 1920:text-[6rem] font-extrabold text-foreground leading-none tracking-tighter">
-              Expertis ipsum <br/>
-              voluptatum.
+              De brief <br/>
+              a entrega.
           </h2>
           <div className="flex justify-center">
 
@@ -39,9 +39,7 @@ export function Gamma() {
                   </div>
                   <div
                       className="md:absolute md:hidden 1200:block  md:bottom-0 md:right-0 md:translate-x-1/2 md:translate-y-[9rem] 1366:translate-y-[2rem] 1280:w-90 1366:w-105  h-auto aspect-1/1 md:aspect-[1.7/1] 1728:aspect-[16/9 bg-orange-500 to-red-500 bg-linear-to-b text-white rounded-xs shadow-xl z-10 overflow-hidden">
-                      <h2 className={'p-10 1366:text-[1.2rem] 1728:text-[1.2rem]'}>Lorem ipsum dolor sit amet,
-                          consectetur adipisicing elit. Dicta dolorum et expedita facilis in neque quia, quo totam.
-                          Architecto distinctio ea eveniet id itaque nulla perferendis sed totam vitae voluptate.</h2>
+                      <h2 className={'p-10 1366:text-[1.2rem] 1728:text-[1.2rem]'}>10 disciplinas constructivas con equipo propio. Un solo contrato cubre diseño, permisos, construcción y entrega. Ruta crítica con 18 hitos. Reuniones semanales con 16+ asistentes.</h2>
                   </div>
                   <Image
                       src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-13.jpeg"

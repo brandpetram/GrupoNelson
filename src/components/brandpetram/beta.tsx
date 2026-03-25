@@ -18,10 +18,10 @@ export function Beta() {
         {/* Sección de textos */}
         <div className="space-y-4 md:w-10/12 1200:w-8/12 md:translate-x-10 1024:translate-x-16 1200:translate-x-0 1366:translate-x-20 -mt-50 md:mt-0 md:-translate-y-50 1200:-translate-y-30 1280:-translate-y-30 1366:-translate-y-30 1440:-translate-y-35 1536:-translate-y-40 1728:-translate-y-40 1920:-translate-y-40">
           <h2 className="text-4xl 1024:text-[3.4rem] 1200:text-[3rem] 1280:text-[3rem] 1536:text-[3.5rem] 1728:text-[3.7rem] 1920:text-[3.5rem] font-bold text-foreground leading-none tracking-tight">
-            Lorem <span className="text-orange-600">ipsum dolor</span> sit amet consectetur
+            Nave a <span className="text-orange-600">la medida</span> vs. nave especulativa
           </h2>
           <p className="text-lg 834:text-xl 1024:text-2xl 1200:text-lg 1280:text-[.7rem] 1366:text-[.8rem] 1440:text-[1rem] 1536:text-[1.1rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed 1280:w-10/12 1536:w-full">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor <strong>incididunt</strong> ut labore et dolore magna aliqua <strong>consectetur</strong> adipiscing elit sed eiusmod tempor incididunt labore dolore magna aliqua ut enim ad minim veniam.
+            Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. Build-to-suit elimina ese compromiso: <strong>Gulfstream</strong> necesitó 52,200 m² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Baumex los diseñó y construyó a la medida.
           </p>
         </div>
 
