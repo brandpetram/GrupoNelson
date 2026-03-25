@@ -2,15 +2,15 @@ import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
 import { ParkMap } from '@/components/brandpetram/park-map'
-import { getParkBySlug } from '@/data/parks/parks-data'
+import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
   title: 'Parque Industrial Nelson II | Grupo Nelson',
   description: 'Especificaciones técnicas del Parque Industrial Nelson II en Mexicali. 26.6 hectáreas, 3 naves industriales con tecnología de punta.',
 }
 
-export default function NelsonIIPage() {
-  const park = getParkBySlug('nelson-ii')!
+export default async function NelsonIIPage() {
+  const park = (await getParkBySlug('nelson-ii'))!
 
   return (
     <div className="min-h-screen bg-background">

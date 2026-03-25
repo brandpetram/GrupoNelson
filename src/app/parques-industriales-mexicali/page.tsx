@@ -1,14 +1,15 @@
 import Header from '@/components/Header'
 import Link from 'next/link'
 import { Building2 } from 'lucide-react'
-import { industrialParks } from '@/data/parks/parks-data'
+import { getIndustrialParks } from '@/data/parks/parks-sanity'
 
 export const metadata = {
   title: 'Parques Industriales en Mexicali | Grupo Nelson',
   description: 'Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali.',
 }
 
-export default function ParquesIndustrialesMexicaliPage() {
+export default async function ParquesIndustrialesMexicaliPage() {
+  const industrialParks = await getIndustrialParks()
   return (
     <div className="min-h-screen bg-background">
       <Header />

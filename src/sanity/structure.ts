@@ -31,6 +31,7 @@ export const structure: StructureResolver = (S) =>
             .title('Inventario')
             .items([
               S.documentTypeListItem('terreno').title('Terrenos'),
+              S.documentTypeListItem('industrialPark').title('Parques Industriales'),
             ])
         ),
       S.divider(),

@@ -1,15 +1,15 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
-import { getParkBySlug } from '@/data/parks/parks-data'
+import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
   title: 'Parque Industrial El Vigía I | Grupo Nelson',
   description: 'Especificaciones técnicas del Parque Industrial El Vigía I en Mexicali. 14 hectáreas, 11 empresas establecidas, desde 1967.',
 }
 
-export default function VigiaIPage() {
-  const park = getParkBySlug('vigia-i')!
+export default async function VigiaIPage() {
+  const park = (await getParkBySlug('vigia-i'))!
 
   return (
     <div className="min-h-screen bg-background">

@@ -1,15 +1,15 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
-import { getParkBySlug } from '@/data/parks/parks-data'
+import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
   title: 'Parque Industrial Nelson I | Grupo Nelson',
   description: 'Parque Industrial Nelson I en Mexicali. 27 hectáreas, 9 empresas establecidas, centro industrial establecido desde 1987.',
 }
 
-export default function NelsonIPage() {
-  const park = getParkBySlug('nelson-i')!
+export default async function NelsonIPage() {
+  const park = (await getParkBySlug('nelson-i'))!
 
   return (
     <div className="min-h-screen bg-background">
