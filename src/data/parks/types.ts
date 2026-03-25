@@ -28,8 +28,8 @@ export interface ConstructionSubAreas {
 }
 
 export interface GeneralData {
-  landArea: AreaMeasure
-  totalConstructionArea: AreaMeasure
+  landArea?: AreaMeasure
+  totalConstructionArea?: AreaMeasure
   subAreas?: ConstructionSubAreas
   specificAddress?: string
 }
