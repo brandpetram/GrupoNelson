@@ -103,7 +103,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                     scope="col"
                     className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Clear Height (m / ft)
+                    Altura libre (m / ft)
                   </th>
                   <th
                     scope="col"

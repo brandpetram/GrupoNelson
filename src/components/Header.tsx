@@ -407,8 +407,8 @@ export default function Header({
                 {/* Button - derecha */}
                 <div className="flex items-center gap-2 justify-end pt-3">
                   <ThemeToggle variant={activeVariant} />
-                  <Button asChild size="sm">
-                    <Link href="/contact">
+                  <Button asChild size="sm" className="uppercase">
+                    <Link href="/contacto">
                       <span>Contacto</span>
                     </Link>
                   </Button>
@@ -461,8 +461,8 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
         <div className="border-t px-4 py-4 space-y-3">
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button asChild size="lg" className="flex-1">
-              <Link href="/contact" onClick={closeMenu}>
+            <Button asChild size="lg" className="flex-1 uppercase">
+              <Link href="/contacto" onClick={closeMenu}>
                 <span>Contacto</span>
               </Link>
             </Button>

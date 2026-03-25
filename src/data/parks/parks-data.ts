@@ -615,8 +615,8 @@ const vigiaIBuildings: Building[] = [
 
 const vigiaIIBuildings: Building[] = [
   {
-    id: 'vigia-ii-nave-1',
-    name: 'Nave 1',
+    id: 'vigia-ii-v2-01',
+    name: 'V2_01',
     generalData: {
       landArea: { m2: 11844.02 },
       totalConstructionArea: { m2: 6074.79, sqft: 65388.50 },
@@ -731,200 +731,85 @@ const vigiaIIBuildings: Building[] = [
   },
 ]
 
-// === NAVES: Nelson II (3 naves) ===
+// === NAVES: Nelson II (6 naves — datos actualizados de Susana Osuna, marzo 2026) ===
 
 const nelsonIIBuildings: Building[] = [
   {
-    id: 'nelson-ii-nave-1',
-    name: 'Nave 1',
-    availability: {
-      status: undefined,
-      availableM2: undefined,
-      availableFrom: undefined,
-    },
+    id: 'nelson-ii-n2-01',
+    name: 'N2_01',
+    tenant: 'DHL',
+    availability: { status: 'occupied' },
     generalData: {
-      landArea: { m2: 25308.47, sqft: 272431 },
-      totalConstructionArea: { m2: 6002.42, sqft: 64609.52 },
-      subAreas: {
-        warehouse: { m2: 5452.20, sqft: 58687 },
-        offices: { m2: 262.43, sqft: 2824.77 },
-        mezzanine: { m2: 287.79, sqft: 3097.75 },
-      },
-    },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 10.78, ft: 35.37 },
-      minHeight: { m: 8.53, ft: 28 },
-    },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 3,500 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        warehouseLighting: '30 ft/candle en área de producción (básico)',
-      },
-      bathrooms: {
-        description: 'Actualmente solo en área de oficinas. Baños en área de almacén por construir.',
-      },
+      totalConstructionArea: { m2: 12214.22, sqft: 131477.05 },
     },
     loadingArea: {
-      totalDocks: 6,
-      description: '1 por cada 10,000 sq ft',
-    },
-    exteriorArea: {
-      parkingSpaces: 66,
-      maneuveringYard: '1,800 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: false,
-      sprinklers: false,
-      waterTank: false,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema centralizado de protección contra incendios bajo estándares NFPA y FM. Cumple con códigos locales.',
+      totalDocks: 16,
+      description: '15 a nivel de piso y 1 ascendente',
     },
   },
   {
-    id: 'nelson-ii-nave-2',
-    name: 'Nave 2',
-    availability: {
-      status: undefined,
-      availableM2: undefined,
-      availableFrom: undefined,
-    },
+    id: 'nelson-ii-n2-02',
+    name: 'N2_02',
+    tenant: 'Direct Pack',
+    availability: { status: 'occupied' },
     generalData: {
-      landArea: { m2: 12014.81 },
-      totalConstructionArea: { m2: 6002.42, sqft: 65651 },
-      subAreas: {
-        warehouse: { m2: 5487.31, sqft: 60106.35 },
-        offices: { m2: 515.11, sqft: 5544.60 },
-      },
-    },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 10.78, ft: 35.37 },
-      minHeight: { m: 8.53, ft: 28 },
-    },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 3,500 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        substation: '1/225 KVA',
-        warehouseLighting: '30 ft/candle en área de producción (básico)',
-      },
-      bathrooms: {
-        description: 'Actualmente solo en área de oficinas. Baños en área de almacén por construir.',
-      },
+      totalConstructionArea: { m2: 19206.42, sqft: 206743 },
     },
     loadingArea: {
-      totalDocks: 6,
-      docksWithLevelers: 6,
-      floorLevelDoors: 1,
-      description: '1 por cada 10,000 sq ft. Incluyen niveladores de andén. 1 andén a nivel de piso.',
-    },
-    exteriorArea: {
-      maneuveringYard: '1,800 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: false,
-      sprinklers: false,
-      waterTank: false,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema centralizado de protección contra incendios bajo estándares NFPA y FM. Cumple con códigos locales.',
+      totalDocks: 9,
+      description: '8 a nivel de piso + 1 ascendente',
     },
   },
   {
-    id: 'nelson-ii-nave-3',
-    name: 'Nave 3',
-    availability: {
-      status: undefined,
-      availableM2: undefined,
-      availableFrom: undefined,
-    },
+    id: 'nelson-ii-n2-03',
+    name: 'N2_03',
+    tenant: 'SDS de Mexico (Envista)',
+    availability: { status: 'occupied' },
     generalData: {
-      landArea: { m2: 12014.81 },
-      totalConstructionArea: { m2: 5652.40, sqft: 60841.92 },
-      subAreas: {
-        warehouse: { m2: 5378, sqft: 57888.31 },
-        offices: { m2: 274.40, sqft: 2953.61 },
-      },
+      totalConstructionArea: { m2: 8945.71, sqft: 96294 },
     },
-    structure: {
-      type: 'Marco rígido metálico',
-      complianceCode: 'IBC',
-      maxHeight: { m: 10.78, ft: 35.37 },
-      clearHeight: { m: 8.53, ft: 27.98 },
+    loadingArea: {
+      totalDocks: 2,
+      description: '1 es ascendente',
     },
-    constructionSpecs: {
-      floor: {
-        description: 'Losa de concreto de 6" con resistencia de 3,500 PSI',
-        joints: 'Juntas de control y construcción selladas',
-        finish: 'Acabado endurecedor de piso',
-      },
-      roof: {
-        material: 'KR-18 SSR',
-        gauge: 24,
-        insulation: 'Fibra de vidrio R-19',
-        rainwaterSystem: true,
-      },
-      walls: {
-        material: 'Panel Ternium',
-        dimensions: '2" R-11 calibre 26/26',
-        windows: 'Ventanas para iluminación natural',
-      },
-      lighting: {
-        substation: '1/112.5 KVA',
-        warehouseLighting: '30 ft/candle en área de producción (básico)',
-      },
-      bathrooms: { description: 'En área de oficinas.' },
+  },
+  {
+    id: 'nelson-ii-n2-04',
+    name: 'N2_04',
+    tenant: 'Rheem',
+    availability: { status: 'occupied' },
+    generalData: {
+      totalConstructionArea: { m2: 15123.55, sqft: 162793.91 },
+    },
+    loadingArea: {
+      totalDocks: 20,
+      description: '18 a nivel de piso y 2 ascendentes',
+    },
+  },
+  {
+    id: 'nelson-ii-n2-05',
+    name: 'N2_05',
+    tenant: 'Jonathan MFG',
+    availability: { status: 'occupied' },
+    generalData: {
+      totalConstructionArea: { m2: 24435.02, sqft: 263025 },
+    },
+    loadingArea: {
+      totalDocks: 5,
+      description: '2 son a nivel de piso',
+    },
+  },
+  {
+    id: 'nelson-ii-n2-06',
+    name: 'N2_06',
+    tenant: 'Gulfstream',
+    availability: { status: 'occupied' },
+    generalData: {
+      totalConstructionArea: { m2: 5652.22, sqft: 60842 },
     },
     loadingArea: {
       totalDocks: 6,
-      docksWithLevelers: 6,
-      floorLevelDoors: 1,
-      description: '1 por cada 10,000 sq ft. Incluyen niveladores de andén. 1 andén a nivel de piso.',
-    },
-    exteriorArea: {
-      parkingSpaces: 45,
-      maneuveringYard: '1,800 m² (concreto)',
-    },
-    fireProtection: {
-      cabinets: false,
-      sprinklers: false,
-      waterTank: false,
-      complianceStandards: ['NFPA', 'FM'],
-      description: 'Sistema centralizado de protección contra incendios bajo estándares NFPA y FM. Cumple con códigos locales.',
-    },
-    hvac: {
-      description: 'Área de oficinas contará con HVAC. Extractores en baños.',
+      description: '1 es ascendente',
     },
   },
 ]
@@ -942,12 +827,12 @@ export const industrialParks: IndustrialPark[] = [
     location: 'Corredor Industrial, Blvd. Venustiano Carranza, entre Av. Piñon y Manzanilla',
     address: 'Venustiano Carranza #350, Mexicali B.C. CP. 21383',
     landSizeHectares: 26.6,
-    availableBuildings: undefined,
-    availableAreaM2: undefined,
-    availableLandM2: undefined,
-    immediateAvailability: undefined,
+    availableBuildings: 0,
+    availableAreaM2: 0,
+    availableLandM2: 72264.37,
+    immediateAvailability: false,
     establishedCompanies: 6,
-    availableInfo: 'pending',
+    totalBuildings: 6,
     tenants: [
       { name: 'Gulfstream',   logo: '/logos-clientes/logo-gulfstream.svg' },
       { name: 'DHL',          logo: '/logos-clientes/logo-dhl.svg' },
@@ -1049,6 +934,10 @@ export const industrialParks: IndustrialPark[] = [
     since: 1987,
     location: 'Carretera a San Luis R.C. Km 14',
     landSizeHectares: 27,
+    availableBuildings: 0,
+    availableAreaM2: 0,
+    availableLandM2: 17169.3,
+    immediateAvailability: false,
     establishedCompanies: 9,
     infrastructure: [
       'Seguridad 24/7',
@@ -1097,10 +986,15 @@ export const industrialParks: IndustrialPark[] = [
     description: 'Instalaciones modernas con tecnología de punta',
     heroImage: '/parque-industrial-el-vigia-2-en-mexicali.jpeg',
 
-    since: 1987,
+    since: 1997,
     location: 'Carretera a San Luis Km. 12.5',
     address: 'Carretera a San Luis R.C. KM 12, Mexicali B.C.',
     landSizeHectares: 7.5,
+    availableBuildings: 1,
+    availableAreaM2: 6074.79,
+    availableLandM2: 0,
+    immediateAvailability: true,
+    immediateAvailabilityNote: 'Avisar con 1 mes de anticipación',
     establishedCompanies: 2,
     totalBuildings: 2,
     infrastructure: [

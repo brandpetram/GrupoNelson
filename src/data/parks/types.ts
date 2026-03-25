@@ -139,11 +139,11 @@ export interface Building {
   name: string
   availability?: BuildingAvailability
   generalData: GeneralData
-  structure: StructureData
-  constructionSpecs: ConstructionSpecs
-  loadingArea: LoadingArea
+  structure?: StructureData
+  constructionSpecs?: ConstructionSpecs
+  loadingArea?: LoadingArea
   exteriorArea?: ExteriorArea
-  fireProtection: FireProtection
+  fireProtection?: FireProtection
   hvac?: HvacSpec
   /** Empresa inquilina (si se conoce) */
   tenant?: string
@@ -174,6 +174,7 @@ export interface IndustrialPark {
   availableAreaM2?: number
   availableLandM2?: number
   immediateAvailability?: boolean
+  immediateAvailabilityNote?: string
   establishedCompanies: number
   totalBuildings?: number
   /** Empresas establecidas en el parque (independiente de las naves) */

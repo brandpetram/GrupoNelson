@@ -67,18 +67,18 @@ function buildNaveSummary(building: Building) {
     building.generalData.totalConstructionArea.m2,
     building.generalData.totalConstructionArea.sqft
   )
-  const maxH = building.structure.maxHeight
+  const maxH = building.structure?.maxHeight
     ? formatHeight(building.structure.maxHeight.m, building.structure.maxHeight.ft)
     : null
-  const clearH = building.structure.clearHeight
+  const clearH = building.structure?.clearHeight
     ? formatHeight(building.structure.clearHeight.m, building.structure.clearHeight.ft)
     : null
-  const docks = building.loadingArea.description ?? (
-    building.loadingArea.totalDocks
+  const docks = building.loadingArea?.description ?? (
+    building.loadingArea?.totalDocks
       ? `${building.loadingArea.totalDocks} andenes`
       : "N/A"
   )
-  return { area, maxH, clearH, docks, structure: building.structure.type }
+  return { area, maxH, clearH, docks, structure: building.structure?.type ?? null }
 }
 
 // === Galería ===
@@ -289,11 +289,12 @@ function NavCell({ label, value }: { label: string; value: string }) {
 
 function NaveDetalle({ building }: { building: Building }) {
   const summary = buildNaveSummary(building)
-  const sub = building.generalData.subAreas
+  const sub = building.generalData?.subAreas
   const ext = building.exteriorArea
-  const luz = building.constructionSpecs.lighting
-  const iluminacion = [luz.substation, luz.warehouseLighting].filter(Boolean).join(" · ")
+  const luz = building.constructionSpecs?.lighting
+  const iluminacion = luz ? [luz.substation, luz.warehouseLighting].filter(Boolean).join(" · ") : null
   const avail = building.availability
+  const specs = building.constructionSpecs
 
   return (
     <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
@@ -306,14 +307,21 @@ function NaveDetalle({ building }: { building: Building }) {
               label="Estado"
               value={avail.status === 'available' ? "Disponible" : avail.status === 'occupied' ? "Ocupada" : avail.status === 'partial' ? "Disponibilidad parcial" : "Consultar"}
             />
-            <NavCell
-              label="M² disponibles"
-              value={avail.availableM2 !== undefined ? `${avail.availableM2.toLocaleString("es-MX")} m²` : "Consultar"}
-            />
-            <NavCell
-              label="Disponible desde"
-              value={avail.availableFrom ?? "Consultar"}
-            />
+            {building.tenant && (
+              <NavCell label="Ocupada por" value={building.tenant} />
+            )}
+            {avail.status !== 'occupied' && avail.availableM2 !== undefined && (
+              <NavCell
+                label="M² disponibles"
+                value={`${avail.availableM2.toLocaleString("es-MX")} m²`}
+              />
+            )}
+            {avail.availableFrom && (
+              <NavCell
+                label="Disponible desde"
+                value={avail.availableFrom}
+              />
+            )}
           </>
         )}
 
@@ -343,18 +351,20 @@ function NaveDetalle({ building }: { building: Building }) {
         )}
 
         {/* Construcción */}
-        <NavCell label="Estructura" value={summary.structure} />
-        <NavCell label="Piso" value={building.constructionSpecs.floor.description} />
-        <NavCell label="Techo" value={building.constructionSpecs.roof.material} />
-        <NavCell label="Muros" value={building.constructionSpecs.walls.material} />
+        {summary.structure && <NavCell label="Estructura" value={summary.structure} />}
+        {specs?.floor && <NavCell label="Piso" value={specs.floor.description} />}
+        {specs?.roof && <NavCell label="Techo" value={specs.roof.material} />}
+        {specs?.walls && <NavCell label="Muros" value={specs.walls.material} />}
 
         {/* Instalaciones */}
         {iluminacion && <NavCell label="Iluminación" value={iluminacion} />}
-        <NavCell label="Baños" value={building.constructionSpecs.bathrooms.description} />
+        {specs?.bathrooms && <NavCell label="Baños" value={specs.bathrooms.description} />}
         {building.hvac && <NavCell label="HVAC" value={building.hvac.description} />}
 
         {/* Seguridad */}
-        <NavCell label="Protección contra incendio" value={building.fireProtection.description ?? "Incluida"} />
+        {building.fireProtection && (
+          <NavCell label="Protección contra incendio" value={building.fireProtection.description ?? "Incluida"} />
+        )}
       </div>
     </div>
   )
