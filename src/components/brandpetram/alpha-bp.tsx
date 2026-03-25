@@ -15,7 +15,13 @@
 import Image from "next/image"
 import TickerOverflow from "@/components/motion-plus/ticker-overflow"
 
-export function AlphaBP() {
+interface AlphaBPProps {
+  descripcion?: string
+}
+
+export function AlphaBP({
+  descripcion = "Diseñamos y construimos parques industriales y naves a medida en Mexicali desde hace más de 60 años.",
+}: AlphaBPProps) {
   return (
     <div className="relative space-y-12 360:space-y-14 393:space-y-16 430:space-y-18 768:space-y-20 834:space-y-22 1024:space-y-24 1200:space-y-20 1280:space-y-20 1366:space-y-20 1440:space-y-22 1536:space-y-24 1728:space-y-26 1920:space-y-28">
       {/* Patrón de dots - Lado izquierdo pegado al viewport */}
@@ -122,7 +128,7 @@ export function AlphaBP() {
 
         {/* Descripción */}
         <p className="text-base 360:text-base 393:text-lg 430:text-lg 768:text-2xl 834:text-2xl 1024:text-3xl 1200:text-[1.65rem] 1280:text-[1.75rem] 1366:text-[1.9rem] 1440:text-[2.05rem] 1536:text-[2.25rem] 1728:text-[2.5rem] 1920:text-[3rem] text-white/90 text-pretty leading-relaxed font-medium">
-          {"Build-to-suit no es personalizar una nave estándar. Es diseñar y construir una instalación que no existía — desde los cálculos de mecánica de suelos hasta el último acabado interior — exactamente como tu operación la necesita."}
+          {descripcion}
         </p>
       </div>
     </div>

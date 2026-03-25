@@ -324,7 +324,7 @@ export default function Header({
               'ring-1 ring-transparent shadow-md shadow-transparent',
               'transition-all duration-500 ease-in-out',
               // Estado scroll - SE ENCOGE y aparece fondo
-              'in-data-scrolled:max-w-5xl',
+              'in-data-scrolled:max-w-6xl',
               'in-data-scrolled:bg-background/80',
               'in-data-scrolled:backdrop-blur-md',
               'in-data-scrolled:ring-foreground/5',
@@ -390,7 +390,7 @@ export default function Header({
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
                   <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                    <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-150 in-data-scrolled:scale-90 in-data-scrolled:md:scale-[1.2] transition-transform duration-500" />
+                    <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-150 1200:scale-[1.2] 1280:scale-[1.2] 1366:scale-150 in-data-scrolled:scale-90 in-data-scrolled:md:scale-[1.2] in-data-scrolled:1200:scale-[0.96] in-data-scrolled:1280:scale-[0.96] in-data-scrolled:1366:scale-[1.2] transition-transform duration-500" />
                   </Link>
                 </div>
 
@@ -405,7 +405,7 @@ export default function Header({
                 </div>
 
                 {/* Button - derecha */}
-                <div className="flex items-center gap-2 justify-end in-data-scrolled:justify-center in-data-scrolled:-translate-x-10 pt-3">
+                <div className="flex items-center gap-2 justify-end pt-3">
                   <ThemeToggle variant={activeVariant} />
                   <Button asChild size="sm">
                     <Link href="/contact">

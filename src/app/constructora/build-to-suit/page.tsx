@@ -58,7 +58,7 @@ export default function BuiltToSuitPage() {
 
       {/* Componente AlphaBP */}
       <div className="container mx-auto 1200:px-4 py-16">
-        <AlphaBP />
+        <AlphaBP descripcion="Build-to-suit no es personalizar una nave estándar. Es diseñar y construir una instalación que no existía — desde los cálculos de mecánica de suelos hasta el último acabado interior — exactamente como tu operación la necesita." />
       </div>
 
       {/* Componente Beta */}
