@@ -82,8 +82,15 @@ export function QaMap({ features, selectedId }: QaMapProps) {
 
     layersRef.current = newLayers
 
-    // Fit a todos
-    if (features.length > 0) {
+    // Si hay un terreno seleccionado, zoom a ese; si no, fit a todos
+    const initialLayer = selectedId ? newLayers.get(selectedId) : null
+    if (initialLayer) {
+      if ('getBounds' in initialLayer && typeof initialLayer.getBounds === 'function') {
+        map.fitBounds(initialLayer.getBounds(), { padding: [80, 80], maxZoom: 17 })
+      } else if ('getLatLng' in initialLayer && typeof initialLayer.getLatLng === 'function') {
+        map.setView((initialLayer as L.CircleMarker).getLatLng(), 16)
+      }
+    } else if (features.length > 0) {
       const allLayer = L.geoJSON(
         { type: 'FeatureCollection', features } as GeoJSON.FeatureCollection
       )
