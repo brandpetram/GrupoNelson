@@ -48,6 +48,15 @@ interface ImagenRectanguloProps {
   blendMode?: BlendMode
 
   /**
+   * Posición del objeto dentro del contenedor (CSS object-position)
+   * @default "center"
+   * @example "center 20%" para mostrar más la parte superior
+   * @example "center 80%" para mostrar más la parte inferior
+   * @example "left center" para alinear a la izquierda
+   */
+  objectPosition?: string
+
+  /**
    * Configuración opcional del grid overlay sobre la imagen
    * Si se omite, no se muestra el grid
    */
@@ -61,6 +70,7 @@ export function ImagenRectangulo({
   overlayOpacity,
   colorOverlay,
   blendMode = 'normal',
+  objectPosition = 'center',
   gridConfig,
 }: ImagenRectanguloProps) {
   const needsRelative = gridConfig || overlayOpacity !== undefined || colorOverlay
@@ -73,6 +83,7 @@ export function ImagenRectangulo({
         width={1200}
         height={675}
         className="size-full object-cover"
+        style={{ objectPosition }}
       />
 
       {/* Overlay oscuro opcional */}

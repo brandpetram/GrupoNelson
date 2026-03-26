@@ -1,170 +1,148 @@
-import type { Metadata } from 'next'
-import Header from '@/components/Header'
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import { ImagenRectangulo } from "@/components/ui/brandpetram/imagen-rectangulo";
+import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
+import { GunLikeConProps } from "@/components/brandpetram/con-props/gun-like-con-props";
+import { FeatureSection5InvertedBPConProps } from "@/components/brandpetram/con-props/feature-section-5-inverted-bp-con-props";
+import { SplitWithImageBPConProps } from "@/components/brandpetram/con-props/split-with-image-bp-con-props";
+import { Shield, BookOpen, Globe, Search } from "lucide-react";
+import {
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  CheckBadgeIcon,
+} from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
-  title: 'Estándares Internacionales de Construcción | Grupo Nelson Mexicali',
-  description: 'Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Baumex: 75+ proyectos, auditorías de Gulfstream y Honeywell.',
-}
+  title: "Estándares Internacionales de Construcción | Grupo Nelson Mexicali",
+  description:
+    "Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Baumex: 75+ proyectos, auditorías de Gulfstream y Honeywell.",
+};
 
 export default function EstandaresInternacionalesPage() {
   return (
-    <div className="min-h-[200vh]">
+    <div className="overflow-hidden">
       <Header />
 
       <main>
-        {/* ══════════════════════════════════════════════════════════
-            COPY COMERCIAL — Estándares Internacionales
-            Ángulo: Qué códigos y normativas aplican en la construcción
-            de tu nave y cómo Baumex los cumple verificablemente.
-            Fuente: docs/fase-2-desempaquetado-comercial-baumex.md (Temas C, D, E)
-            Fuente: docs/4-los-10-temas-comerciales-de-grupo-nelson.md (#10 Global Standards)
-            Reglas: /Proyectos/copywriting-b2b/reglas-de-copywriting-b2b.md
-            Status: BORRADOR — pendiente de aprobación
-            ══════════════════════════════════════════════════════════ */}
-        <div className="px-8 md:px-12 pt-20 pb-32">
-
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Construye tu nave industrial en Mexicali con los estándares que Gulfstream y Honeywell ya exigieron
-          </h1>
-
-          <p className="text-xl leading-relaxed mb-12">
-            FM Global, NFPA, LEED, ISN, IBC, NOM. Cada acrónimo representa un código o normativa
-            que define cómo se diseña, construye e inspecciona una nave industrial de clase mundial.
-            Baumex ha construido 75+ proyectos cumpliendo estos estándares en 28 años — verificados
-            por auditorías corporativas de 30 corporaciones internacionales, incluyendo 4 Fortune 500.
-          </p>
-
-          <div className="flex flex-wrap gap-12 mb-24">
-            <div><p className="text-4xl font-bold leading-none">FM Global</p><p className="text-muted-foreground">muros, cubierta, estructura, contraincendio</p></div>
-            <div><p className="text-4xl font-bold leading-none">NFPA</p><p className="text-muted-foreground">sistemas contraincendio</p></div>
-            <div><p className="text-4xl font-bold leading-none">LEED Gold</p><p className="text-muted-foreground">sustentabilidad verificada</p></div>
-            <div><p className="text-4xl font-bold leading-none">ISN</p><p className="text-muted-foreground">&quot;Recomendado&quot; por Honeywell</p></div>
+        {/* Hero imagen */}
+        <div className="mt-25 md:mt-35 1200:mt-30 max-w-screen-3xl mx-auto lg:px-20">
+          <div className="relative">
+            <ImagenRectangulo
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-106.jpg"
+              alt="Estándares internacionales de construcción industrial en Mexicali"
+              className="aspect-[1/1.3] md:aspect-[21/9] lg:aspect-[16/7] rounded-xs"
+              objectPosition="center 40%"
+              overlayOpacity={0.3}
+              colorOverlay="bg-stone-900/10"
+              blendMode="multiply" // opciones: normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, luminosity
+              gridConfig={{
+                strokeColor: "stroke-white/15",
+                highlightColor: "fill-white/5",
+                showHighlights: true,
+                gridSize: 100,
+                fadePosition: "center",
+                fadeRadius: "24rem",
+              }}
+            />
+            {/* Título sobre la imagen */}
+            <div className="absolute bottom-0 left-0  bg-blue-600/80 p-4 md:p-6 lg:p-8 rounded-xs">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-none tracking-tighter">
+                Estándares
+                <br />
+                Internacionales
+                <br />
+                de Construcción
+              </h1>
+              <p className="text-xs md:text-sm lg:text-base text-white/70 mt-2 tracking-wide">
+                Cumple las normas y certificaciones más exigentes del sector
+                industrial
+              </p>
+            </div>
+            {/* Cuadritos decorativos */}
+            <div className="absolute top-full left-[80%] z-10 pointer-events-none transform scale-50 md:scale-75 lg:scale-100 origin-top-left">
+              <CuadritosLluviaDos />
+            </div>
           </div>
-
-          <hr className="border-border my-16" />
-
-          {/* ── FM Global ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Certificación FM Global en naves industriales de Mexicali: muros, cubierta, estructura y contraincendio
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Factory Mutual es la certificadora internacional de riesgo más reconocida del sector
-            industrial. Certifica que los materiales y sistemas constructivos cumplen estándares
-            de resistencia al fuego, integridad estructural y protección de activos. La nave
-            Gulfstream 550K (52,200 m²) cuenta con certificación FM Global en toda la envolvente:
-            muros, cubierta TPO, estructura metálica y sistema contraincendio.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Reduce la prima de seguro de tu nave industrial en Mexicali. Las aseguradoras
-            reconocen FM Global como estándar de referencia — una nave certificada paga
-            significativamente menos que una nave sin certificación.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── NFPA ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Sistemas contraincendio NFPA para naves industriales en Mexicali: rociadores, tanques y bombas
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            La National Fire Protection Association (NFPA) establece los estándares de protección
-            contra incendio que las empresas multinacionales exigen en sus instalaciones.
-            Baumex diseña y construye sistemas contraincendio conforme a NFPA: rociadores
-            automáticos, tanques de almacenamiento, bombas y sistemas de detección.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Nelson II cuenta con sistema contraincendio central con tanque de 360,000 galones
-            y línea eléctrica dedicada — infraestructura que ahorra al inquilino el 60% del costo
-            frente a sistemas individuales. Gulfstream, DHL y Vertiv operan con esta infraestructura.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── ISN ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Calificación ISN &quot;Recomendado&quot; por Honeywell: estándar de seguridad para construcción de naves industriales
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            ISNetworld es la plataforma global que empresas Fortune 500 usan para evaluar
-            a contratistas y proveedores. Baumex tiene certificación ISN activa con calificación
-            &quot;Recomendado&quot; por Honeywell International — para Aero-Mexicali y Honeywell Mexico-Corporate.
-            Solo se obtiene después de demostrar cumplimiento sostenido en seguridad, documentación
-            y calidad.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Accede a la cadena de proveedores de empresas Fortune 500 con una constructora
-            que ya pasó su filtro. 1,092,745 horas hombre trabajadas con cero accidentes fatales.
-            Manual HSE de 18 capítulos. Permisos de trabajo diarios con matriz de riesgo cuantitativa.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── NOM ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Normativas NOM para construcción de naves industriales en Mexicali: alturas, soldadura y capacitación
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Las Normas Oficiales Mexicanas (NOM) son regulaciones técnicas obligatorias
-            que aplican en la construcción de naves industriales. Baumex cumple y documenta:
-          </p>
-
-          <ul className="list-disc pl-6 text-lg leading-relaxed mb-6 space-y-2">
-            <li><strong>NOM-009-STPS-2011:</strong> Trabajo en alturas — control de presión arterial antes de subir, checklist de caída, firmas escalonadas</li>
-            <li><strong>NOM-027-STPS-2008:</strong> Trabajo con fuego — extintores, retiro de combustibles a 10 m, &quot;Vigía Vigilante de Incendios&quot; asignado</li>
-            <li><strong>DC-3:</strong> Certificación de capacitación laboral para todo el personal en campo</li>
-            <li><strong>IMSS/SUA:</strong> Seguro social y autodeterminación para cada trabajador registrado</li>
-          </ul>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Asegura compliance laboral y de seguridad documentado en tu nave industrial de Mexicali.
-            Baumex limita la jornada máxima a 12 horas y requiere permisos de trabajo diarios
-            con matriz de riesgo (Impacto × Probabilidad) antes de cada turno.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── IBC y códigos internacionales ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Diseño conforme a IBC y códigos internacionales de construcción para naves industriales en Mexicali
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Baumex diseña conforme al International Building Code (IBC) y códigos de construcción
-            de Estados Unidos cuando el cliente lo requiere. Gulfstream 550K se diseñó con sistemas
-            antisísmicos BRB (Buckling-Restrained Braces) — tecnología de Japón y Ciudad de México,
-            primera implementación en Mexicali. 20 MW de capacidad eléctrica instalada.
-            Cubierta TPO con garantía de 20 años.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Laboratorios externos independientes como EPGC (Especialistas en Geotecnia y Concretos)
-            verifican compactación y calidad de cimentaciones en cada proyecto. Validación por terceros,
-            no autodeclaración.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── CTA ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Construye tu nave industrial en Mexicali con los estándares que tu corporativo exige
-          </h2>
-
-          <p className="text-lg leading-relaxed">
-            FM Global, NFPA, LEED Gold, ISN, IBC, NOM. 75+ proyectos construidos con estos
-            estándares en 28 años. 30 corporaciones internacionales ya los validaron.
-            Solicita una consulta para tu proyecto.
-          </p>
-
         </div>
-        {/* FIN COPY COMERCIAL */}
+
+        {/* Intro */}
+        <div className="mt-10 md:mt-16">
+          <GunLikeConProps
+            poligonoText="Estándares Internacionales"
+            titulo="Trae tu certificación más exigente"
+            parrafo="28 años aprendiendo, implementando y cumpliendo estándares internacionales en naves industriales de Mexicali."
+          />
+        </div>
+
+        {/* Capacidad abierta */}
+        <div className="container mx-auto w-10/12 mt-20">
+          <FeatureSection5InvertedBPConProps
+            tagline="Estándares Internacionales"
+            titulo="FM Global, NFPA, LEED, ISN, IBC, NOM"
+            descripcion="Implementados en decenas de proyectos industriales en Mexicali. Sabemos qué exigen, quién los audita y cómo se documentan."
+            imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
+            imagenAlt="Implementación de estándares internacionales en Mexicali"
+            feature1Icon={<Shield className="h-5 w-5" />}
+            feature1IconColor="text-orange-600"
+            feature1Titulo="Desde el proyecto ejecutivo"
+            feature1Descripcion="No certificamos al final. Diseñamos para cumplir desde el primer trazo — eso elimina retrabajo."
+            feature2Icon={<Globe className="h-5 w-5" />}
+            feature2IconColor="text-blue-600"
+            feature2Titulo="Implementados en México"
+            feature2Descripcion="Proveedores locales, tramitología federal, tiempos de CFE, laboratorios de verificación — lo navegamos en cada proyecto."
+            feature3Icon={<BookOpen className="h-5 w-5" />}
+            feature3IconColor="text-green-600"
+            feature3Titulo="75+ proyectos documentados"
+            feature3Descripcion="Cada auditoría pasada, cada certificación obtenida, queda documentada con ensayos y validación de terceros."
+            feature4Icon={<Search className="h-5 w-5" />}
+            feature4IconColor="text-purple-600"
+            feature4Titulo="¿Tu corporativo exige algo más?"
+            feature4Descripcion="Dinos qué estándar necesitas. Lo integramos en tu proyecto."
+          />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20">
+          <SplitWithImageBPConProps
+            imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
+            imagenAlt="Consulta de estándares internacionales"
+            tagline="Tu Proyecto, Tus Estándares"
+            titulo="Dinos qué necesitas cumplir"
+            parrafo1="Si ya sabes qué certificaciones exige tu corporativo, dinos cuáles. Si todavía no lo tienes claro, podemos ayudarte a definirlo."
+            parrafo2="28 años implementando estándares internacionales en naves industriales de Mexicali. Cada certificación que hoy dominamos la aprendimos porque un cliente la necesitó — y la entregamos."
+            feature1Icon={
+              <CloudArrowUpIcon
+                aria-hidden="true"
+                className="mt-1 size-5 flex-none"
+              />
+            }
+            feature1IconColor="text-orange-600 dark:text-orange-500"
+            feature1Titulo="Estándares que ya dominamos."
+            feature1Descripcion="FM Global, NFPA, LEED, ISN, IBC, NOM — integrados desde el proyecto ejecutivo."
+            feature2Icon={
+              <LockClosedIcon
+                aria-hidden="true"
+                className="mt-1 size-5 flex-none"
+              />
+            }
+            feature2IconColor="text-blue-600 dark:text-blue-500"
+            feature2Titulo="México tiene sus propias reglas."
+            feature2Descripcion="Proveedores, tramitología, tiempos de CFE, laboratorios de verificación — lo navegamos en cada proyecto."
+            feature3Icon={
+              <CheckBadgeIcon
+                aria-hidden="true"
+                className="mt-1 size-5 flex-none"
+              />
+            }
+            feature3IconColor="text-green-600 dark:text-green-500"
+            feature3Titulo="28 años haciendo esto."
+            feature3Descripcion="Cada certificación que hoy dominamos la aprendimos porque un cliente la necesitó."
+            parrafo3="Dinos qué necesita tu operación. Te mostramos cómo se implementa en tu proyecto."
+            subtitulo="Consulta sin costo"
+            parrafo4="para tu próximo proyecto industrial en Mexicali."
+          />
+        </div>
       </main>
     </div>
-  )
+  );
 }

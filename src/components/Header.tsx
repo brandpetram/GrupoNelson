@@ -407,7 +407,7 @@ export default function Header({
                 {/* Button - derecha */}
                 <div className="flex items-center gap-2 justify-end pt-3">
                   <ThemeToggle variant={activeVariant} />
-                  <Button asChild size="sm" className="uppercase">
+                  <Button asChild size="default" className="uppercase bg-blue-600 hover:bg-blue-700 font-extrabold">
                     <Link href="/contacto">
                       <span>Contacto</span>
                     </Link>

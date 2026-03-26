@@ -40,7 +40,7 @@ export function GunLikeConProps({
 
         {/* PoligonoTexto1 expandido - Rectángulo con gradiente (SIN clip-path) */}
         <div className="relative aspect-[1/1] size-[13rem] lg:size-[20rem] xl:size-auto">
-          <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-r from-orange-600 to-red-600 rounded-none 1200:max-w-[18rem] 1280:max-w-full">
+          <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 rounded-none 1200:max-w-[18rem] 1280:max-w-full">
             <p className="p-6 text-2xl md:text-xl lg:text-4xl font-bold tracking-tighter leading-none w-full text-white text-center break-words">
               {poligonoText}
             </p>
