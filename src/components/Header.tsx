@@ -338,11 +338,14 @@ export default function Header({
               'max-1200:in-data-[state=active]:h-full'
             )}
           >
-            <div className="relative 1200:py-4">
+            <div className={cn(
+              "relative 1200:py-4",
+              isMobileMenuOpen && "max-1200:flex max-1200:flex-col max-1200:h-full"
+            )}>
               {/* Mobile layout */}
               <div
                 className={cn(
-                  'flex justify-between items-center gap-4 h-14 md:h-20 w-full 1200:hidden px-2 768:px-8',
+                  'flex justify-between items-center gap-4 h-14 md:h-20 w-full 1200:hidden px-2 768:px-8 shrink-0',
                   isMobileMenuOpen && 'border-b'
                 )}
               >
@@ -435,7 +438,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
     : null;
 
   return (
-    <nav role="navigation" className="fixed inset-x-0 top-[4.5rem] md:top-[7rem] 1200:top-14 bottom-0 z-40 flex bg-background">
+    <nav role="navigation" className="flex-1 min-h-0 flex bg-background">
       {/* Main Menu */}
       <div
         className={cn(
@@ -478,7 +481,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
       {/* Submenu */}
       <div
         className={cn(
-          'absolute inset-0 flex flex-col bg-background transition-transform duration-300 ease-in-out',
+          'absolute inset-0 min-h-0 flex flex-col bg-background transition-transform duration-300 ease-in-out',
           activeSubmenu ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -495,7 +498,7 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
         </div>
 
         {/* Submenu Content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain">
+        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
           {activeSection?.categories.map((category, catIndex) => (
             <div key={catIndex} className="border-b border-muted last:border-b-0">
               <div className="sticky top-0 bg-muted/50 backdrop-blur-sm px-4 py-2">

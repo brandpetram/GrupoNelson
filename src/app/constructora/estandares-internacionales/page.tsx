@@ -46,7 +46,7 @@ export default function EstandaresInternacionalesPage() {
             />
             {/* Título sobre la imagen */}
             <div className="absolute bottom-0 left-0  bg-blue-600/80 p-4 md:p-6 lg:p-8 rounded-xs">
-              <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-none tracking-tighter">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-none tracking-tighter">
                 Estándares
                 <br />
                 Internacionales

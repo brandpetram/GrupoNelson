@@ -113,7 +113,7 @@ export function AlphaBP({
       {/* Layout existente de imagen + div color */}
       <div className="-mt-48 mb-56 md:mt-0 md:mb-0 relative flex items-center translate-x-10 360:translate-x-8 393:translate-x-10 430:translate-x-16 768:translate-x-8 834:translate-x-10 1024:translate-x-10 1200:translate-x-24 1280:translate-x-28 1366:translate-x-30 1440:translate-x-30 1536:translate-x-30 1728:translate-x-30 1920:translate-x-30">
       {/* Imagen */}
-      <div className="w-full 360:w-full  768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-8/12 1280:w-8/12 1366:w-8/12 1440:w-8/12 1536:w-8/12 1728:w-8/12 1920:w-8/12 aspect-[4/3] 360:aspect-4/3 393:aspect-[4/3] 430:aspect-[4/3] 768:aspect-[2.8/3] 834:aspect-[3/3] 1024:aspect-[3/3] 1200:aspect-[4.5/3] 1280:aspect-[4.5/3] 1366:aspect-[4.5/3] 1440:aspect-[4.5/3] 1536:aspect-[4.5/3] 1728:aspect-[4.5/3] 1920:aspect-[4.5/3] relative rounded-xs overflow-hidden">
+      <div className="w-full 360:w-full  768:w-9/12 834:w-9/12 1024:w-8/12 1200:w-8/12 1280:w-8/12 1366:w-8/12 1440:w-8/12 1536:w-8/12 1728:w-8/12 1920:w-8/12 aspect-[3/3.5] 360:aspect-[3/3.5] 393:aspect-[3/3.5] 430:aspect-[3/3.5] 768:aspect-[2.8/3] 834:aspect-[3/3] 1024:aspect-[3/3] 1200:aspect-[4.5/3] 1280:aspect-[4.5/3] 1366:aspect-[4.5/3] 1440:aspect-[4.5/3] 1536:aspect-[4.5/3] 1728:aspect-[4.5/3] 1920:aspect-[4.5/3] relative rounded-xs overflow-hidden">
         <Image
           src="/parque-industrial-nelson-2-en-mexicali-2.jpeg"
           alt="Conveyors para Industria Alimenticia"
