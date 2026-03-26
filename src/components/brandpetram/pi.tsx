@@ -24,8 +24,8 @@ export default function Pi() {
             Arquitectura Industrial
           </h3>
           {/* Texto grande — empujado hacia abajo pero no pegado al fondo */}
-          <h2 className="mt-auto text-foreground text-xl 768:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.3rem] 1280:text-[1.4rem] 1366:text-[1.5rem] 1440:text-[1.5rem] 1536:text-[2.3rem] 1728:text-[2.8rem] 1920:text-[3.2rem] font-extrabold leading-tight tracking-tight text-balance">
-            Fachadas, oficinas y áreas de producción diseñadas para funcionar y para verse bien.
+          <h2 className="mt-auto text-foreground text-xl 768:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.3rem] 1280:text-[1.4rem] 1366:text-[1.5rem] 1440:text-[1.5rem] 1536:text-[2.3rem] 1728:text-[2.8rem] 1920:text-[3.2rem] font-extrabold leading-none tracking-tight">
+            Funciona y se Ve Bien.
           </h2>
         </div>
         <img

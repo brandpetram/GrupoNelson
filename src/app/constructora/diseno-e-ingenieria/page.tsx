@@ -20,24 +20,26 @@ import {SplitWithImageBPConProps} from '@/components/brandpetram/con-props/split
 import { Compass, Zap, Shield, Ruler, ClipboardCheck, FileSearch, Settings } from 'lucide-react'
 import { CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 
-const PROBLEMAS = [
-  'Sísmicos',
-  'Eléctricos',
-  'Estructurales',
-  'Térmicos',
-  'de Suelo',
-  'de Fuego',
-  'Ambientales',
-  'Hidráulicos',
+const TIPOS = [
+  'Sísmica',
+  'Eléctrica',
+  'Estructural',
+  'Térmica',
+  'Civil',
+  'Mecánica',
+  'Hidráulica',
+  'Sustentable',
+  'HVAC',
+  'Especializada',
 ]
 
-function TypewriterProblema() {
+function TypewriterTipo() {
   const [index, setIndex] = useState(0)
   const [displayed, setDisplayed] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    const word = PROBLEMAS[index]
+    const word = TIPOS[index]
     const speed = isDeleting ? 40 : 80
     const pause = !isDeleting && displayed === word ? 2000 : isDeleting && displayed === '' ? 300 : speed
 
@@ -46,7 +48,7 @@ function TypewriterProblema() {
         setIsDeleting(true)
       } else if (isDeleting && displayed === '') {
         setIsDeleting(false)
-        setIndex((i) => (i + 1) % PROBLEMAS.length)
+        setIndex((i) => (i + 1) % TIPOS.length)
       } else if (isDeleting) {
         setDisplayed(word.slice(0, displayed.length - 1))
       } else {
@@ -119,7 +121,7 @@ export default function DisenoEIngenieriaPage() {
             <ImagenConEtiquetaConProps
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
               alt="Diseño e ingeniería industrial Mexicali"
-              etiqueta={<>Resolvemos Problemas<br /><span className="block h-[1em]"><TypewriterProblema /></span></>}
+              etiqueta={<>Resolvemos Ingeniería<br /><span className="block h-[1em]"><TypewriterTipo /></span></>}
             />
             <GridOverlay
               fadeRadius="16rem"
