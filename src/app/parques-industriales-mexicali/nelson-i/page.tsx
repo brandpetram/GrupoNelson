@@ -32,13 +32,13 @@ export default async function NelsonIPage() {
         /></div>
       <div className="w-11/12 1200:w-10/12 mx-auto mb-32">
         <FichaTecnicaParque park={park} />
-        <VirtualTourBP
-          tourId="hY5fjENu2"
-          sceneId="GUu4QABnR"
-          title="Tour Virtual 360° — Nelson I"
-          subtitle="Explora el Parque Industrial Nelson I como si estuvieras aquí."
-        />
       </div>
+      <VirtualTourBP
+        tourId="hY5fjENu2"
+        sceneId="GUu4QABnR"
+        title="Tour Virtual 360° — Nelson I"
+        subtitle="Explora el Parque Industrial Nelson I como si estuvieras aquí."
+      />
     </div>
   )
 }
