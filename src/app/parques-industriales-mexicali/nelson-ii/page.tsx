@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
 import { ParkMap } from '@/components/brandpetram/park-map'
+import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
@@ -32,6 +33,12 @@ export default async function NelsonIIPage() {
         /></div>
         <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}>
             <FichaTecnicaParque park={park} />
+            <VirtualTourBP
+              tourId="hY5fjENu2"
+              sceneId="TYW_If4PeV"
+              title="Tour Virtual 360° — Nelson II"
+              subtitle="Explora el Parque Industrial Nelson II como si estuvieras aquí."
+            />
             {park.coordinates && (
                 <ParkMap
                     parkName={park.name}

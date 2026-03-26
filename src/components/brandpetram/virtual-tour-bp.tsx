@@ -9,12 +9,14 @@
 
 interface VirtualTourBPProps {
   tourId: string
+  sceneId?: string
   title?: string
   subtitle?: string
 }
 
 export function VirtualTourBP({
   tourId,
+  sceneId,
   title = 'Tour Virtual 360°',
   subtitle = 'Explora nuestras instalaciones como si estuvieras aquí.',
 }: VirtualTourBPProps) {
@@ -32,7 +34,7 @@ export function VirtualTourBP({
       </div>
       <div className="rounded-xs overflow-hidden">
         <iframe
-          src={`https://app.cloudpano.com/tours/${tourId}`}
+          src={`https://app.cloudpano.com/tours/${tourId}?disable=logo,sound,ribbon,request,leadgen,floorplan,watermark${sceneId ? `&sceneId=${sceneId}` : ''}`}
           width="100%"
           className="aspect-video"
           allow="fullscreen; gyroscope; accelerometer"

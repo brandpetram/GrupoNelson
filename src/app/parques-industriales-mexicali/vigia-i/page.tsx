@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
+import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
@@ -31,6 +32,11 @@ export default async function VigiaIPage() {
         /></div>
       <div className="w-11/12 1200:w-10/12 mx-auto mb-32">
         <FichaTecnicaParque park={park} />
+        <VirtualTourBP
+          tourId="hY5fjENu2"
+          title="Tour Virtual 360° — El Vigía I"
+          subtitle="Explora el Parque Industrial El Vigía I como si estuvieras aquí."
+        />
       </div>
     </div>
   )
