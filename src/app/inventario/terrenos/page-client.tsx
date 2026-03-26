@@ -4,6 +4,8 @@ import { useState, useMemo } from 'react'
 import Header from '@/components/Header'
 import type { Terreno } from '@/data/terrenos'
 import { MapPinIcon, Square3Stack3DIcon, BoltIcon, BuildingOffice2Icon } from '@heroicons/react/24/outline'
+import { TerrenoMiniMapDynamic } from '@/components/terreno-mini-map-dynamic'
+import { getGeoFeatureById } from '@/data/terrenos-geo-lookup'
 
 // === Helpers ===
 
@@ -99,6 +101,8 @@ function TerrenoCard({ terreno, onClick }: { terreno: Terreno; onClick: () => vo
 // === Drawer ===
 
 function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => void }) {
+  const geoFeature = getGeoFeatureById(terreno.id)
+
   return (
     <div className="fixed inset-0 z-50 flex justify-end">
       {/* Backdrop */}
@@ -139,6 +143,13 @@ function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => 
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tighter leading-none text-gray-900 dark:text-white">{terreno.nombre}</h3>
             <p className="text-sm font-light tracking-wider text-gray-500 dark:text-gray-400 mt-2">{terreno.ciudad}</p>
           </div>
+
+          {/* Mapa */}
+          {geoFeature && (
+            <div className="rounded-xs overflow-hidden border border-gray-200 dark:border-zinc-700">
+              <TerrenoMiniMapDynamic feature={geoFeature} nombre={terreno.nombre} />
+            </div>
+          )}
 
           {/* Superficie */}
           <div className="bg-gray-50 dark:bg-zinc-800 rounded-xs p-4">
@@ -206,6 +217,7 @@ export default function TerrenosClient({ terrenos }: { terrenos: Terreno[] }) {
   const [soloConServicios, setSoloConServicios] = useState(false)
   const [soloConEdificio, setSoloConEdificio] = useState(false)
   const [soloDentroParque, setSoloDentroParque] = useState(false)
+  const [soloConMapa, setSoloConMapa] = useState(false)
   const [selectedTerreno, setSelectedTerreno] = useState<Terreno | null>(null)
 
   const filtered = useMemo(() => {
@@ -222,9 +234,10 @@ export default function TerrenosClient({ terrenos }: { terrenos: Terreno[] }) {
       if (soloConServicios && t.servicios.toLowerCase() === 'lote baldío') return false
       if (soloConEdificio && !t.superficieSqftEdificio) return false
       if (soloDentroParque && !t.dentroDeParque) return false
+      if (soloConMapa && !getGeoFeatureById(t.id)) return false
       return true
     })
-  }, [search, ciudadFiltro, soloConServicios, soloConEdificio, soloDentroParque])
+  }, [search, ciudadFiltro, soloConServicios, soloConEdificio, soloDentroParque, soloConMapa])
 
   // Terrenos dentro de parques primero, luego por superficie descendente
   const sorted = useMemo(() => {
@@ -338,6 +351,15 @@ export default function TerrenosClient({ terrenos }: { terrenos: Terreno[] }) {
                     className="rounded border-gray-300 dark:border-zinc-600 text-primary focus:ring-primary"
                   />
                   Con edificio existente
+                </label>
+                <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={soloConMapa}
+                    onChange={e => setSoloConMapa(e.target.checked)}
+                    className="rounded border-gray-300 dark:border-zinc-600 text-primary focus:ring-primary"
+                  />
+                  Con polígono geográfico
                 </label>
               </div>
             </div>
