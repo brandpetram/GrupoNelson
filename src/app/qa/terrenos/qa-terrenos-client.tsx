@@ -8,7 +8,9 @@ import { QaMapDynamic } from '@/components/qa-map-dynamic'
 const features = terrenosGeo.features as TerrenoGeoFeature[]
 
 export default function QaTerrenosClient() {
-  const [selectedId, setSelectedId] = useState<string | null>(null)
+  const [selectedId, setSelectedId] = useState<string | null>(
+    (features[0]?.properties?.id as string) ?? null
+  )
 
   return (
     <div className="h-screen flex flex-col">
