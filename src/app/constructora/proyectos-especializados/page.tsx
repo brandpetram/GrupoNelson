@@ -1,355 +1,225 @@
-'use client'
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
+import { GridOverlay } from "@/components/ui/brandpetram/grid";
+import { FeatureSection6BPConProps } from "@/components/brandpetram/con-props/feature-section-6-bp-con-props";
+import { FeatureSection3BPConProps } from "@/components/brandpetram/con-props/feature-section-3-bp-con-props";
+import { SplitWithImageBPConProps } from "@/components/brandpetram/con-props/split-with-image-bp-con-props";
+import { Construction, Plane, Wind, Factory } from "lucide-react";
+import {
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  CheckBadgeIcon,
+} from "@heroicons/react/20/solid";
 
-import Header from '@/components/Header'
-import { CuadriculaSection1 } from '@/components/brandpetram/cuadricula-section-1'
-import {LineaL} from "@/components/ui/brandpetram/linea-l";
-import {PoligonoTexto1} from "@/components/ui/brandpetram/poligono-texto-1";
-import {Titulo} from "@/components/ui/brandpetram/titulo";
-import {Parrafo} from "@/components/ui/brandpetram/parrafo";
-import {GridOverlay} from "@/components/ui/brandpetram/grid";
-import {BigNumber} from "@/components/brandpetram/big-number";
-import {ImagenConEtiqueta1} from "@/components/brandpetram/imagen-con-etiqueta-1";
-import {HeroSection1} from "@/components/pro-blocks/hero-section-1/hero-section-1";
-import {CuadroCirculoConEscuadra} from "@/components/brandpetram/cuadro-circulo-con-escuadra";
-import {Mosaico2} from "@/components/brandpetram/mosaico-2";
-import {Circulos} from "@/components/brandpetram/circulos";
-import {CuadritosLluviaDos} from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
-import {TresCards} from "@/components/brandpetram/tres-cards";
-import {FeatureSection5InvertedBP} from "@/components/brandpetram/feature-section-5-inverted-bp";
-import {FeatureSection3BP} from "@/components/brandpetram/feature-section-3-bp";
-import FaqSectionsThreeColumnsBP from "@/components/brandpetram/faq-sections-three-columns-bp";
+export const metadata: Metadata = {
+  title: "Proyectos Especializados | Baumex Constructora | Grupo Nelson",
+  description:
+    "Proyectos industriales especializados en Mexicali: puente de 95 m sin columnas, nave de 52,200 m² con BRB antisísmico, túnel de viento de 3,000 HP, cimentaciones de precisión milimétrica.",
+};
 
-export default function ComponentesDosPage() {
+export default function ProyectosEspecializadosPage() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden mt-32">
-      <Header />
+    <div className="overflow-hidden">
+      <Header variant="dark" />
 
-      <main className="">
+      <main>
+        {/* Hero — mismo estilo que /constructora/baumex (Mu) */}
+        <div
+          className="relative bg-gray-800 overflow-hidden pb-72 xl:pb-96"
+          style={{
+            backgroundImage:
+              'url("/contructora-mexicali/puente-skyworks.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          <div className="absolute inset-0 bg-gray-900/70" />
+          <GridOverlay
+            strokeColor="stroke-white/15"
+            gridSize={100}
+            showHighlights={true}
+            highlightColor="fill-white/5"
+            fadePosition="center"
+            fadeRadius="24rem"
+          />
 
-        {/* ══════════════════════════════════════════════════════════
-            COPY COMERCIAL — Proyectos Especializados (Tema G)
-            Fuente: docs/fase-2-desempaquetado-comercial-baumex.md
-            Vocabulario: docs/5-vocabulario-estrategico-...md
-            Reglas: docs/research-copywriting-b2b-industrial.md
-            Status: BORRADOR — pendiente de aprobación
-            ══════════════════════════════════════════════════════════ */}
-        <div className="px-8 md:px-12 pt-20 pb-32">
-
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Construye tu nave industrial en Mexicali con ingeniería especializada — 28 años de proyectos únicos demostrados
-          </h1>
-
-          <p className="text-xl leading-relaxed mb-12">
-            Muchas operaciones industriales requieren algo más que una nave rectangular con piso de concreto.
-            Un túnel de viento para pruebas aeroespaciales dentro de la planta. Un puente vehicular que conecte
-            dos edificios sobre una vialidad pública. Sistemas antisísmicos que no existían en la región.
-            Cimentaciones de precisión milimétrica para equipos de proceso pesado.
-            Cuando tu nave industrial incluye un proyecto especial, Baumex tiene 28 años
-            de experiencia resolviendo exactamente eso.
-          </p>
-
-          <div className="flex flex-wrap gap-12 mb-24">
-            <div><p className="text-4xl font-bold leading-none">95 m</p><p className="text-muted-foreground">claro libre sin columnas</p></div>
-            <div><p className="text-4xl font-bold leading-none">55,500 m²</p><p className="text-muted-foreground">nave más grande de Mexicali</p></div>
-            <div><p className="text-4xl font-bold leading-none">3,000 HP</p><p className="text-muted-foreground">blower aeroespacial</p></div>
-            <div><p className="text-4xl font-bold leading-none">15 m</p><p className="text-muted-foreground">cimentación profunda</p></div>
-          </div>
-
-          <hr className="border-border my-16" />
-
-          {/* ── PROYECTO 1: Puente vehicular Skyworks ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Construcción de puente vehicular de 95 metros sin columnas para nave industrial de semiconductores
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Evalúa lo que implica este proyecto. Skyworks necesitaba conectar dos plantas separadas por un boulevard y un dren federal de CNA.
-            La función: transportar microchips en carritos de golf con temperatura controlada entre la planta
-            de producción y la planta de pruebas. La solución: un puente de 95 metros de claro libre
-            sin columnas intermedias, estructura metálica con diseño europeo de arco, elevadores especiales
-            en ambos extremos.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Cimentación profunda con pilas de concreto armado a 18 metros — suelo arenoso colapsable
-            en zona sísmica 4. Colado del puente completo en un solo día con dos bombas de concreto,
-            sin juntas de construcción. Una sola pieza. Diseño calculado para minimizar vibraciones,
-            verificado con un automóvil compacto cruzando a velocidad.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Gestión de permisos con tres niveles de gobierno: CNA (federal), gobierno del estado (vialidades)
-            y municipio. Dos meses de coordinación logística. Solo cerraron la vialidad un domingo.
-            Montaje de la estructura metálica en dos etapas — dos domingos consecutivos.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── PROYECTO 2: Gulfstream 550K ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Nave industrial de 55,500 m² en Mexicali: Gulfstream 550K con sistemas antisísmicos BRB y 10 MW solares
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            La nave industrial más grande construida en Mexicali. 5.5 hectáreas bajo techo.
-            13,500 m² de oficinas — 1.3 hectáreas, sin precedente en la localidad para una nave industrial.
-            Altura libre de 28 pies (8.53 m). Todo diseñado y ejecutado por Baumex.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Contexto: el terremoto de magnitud 7.2 en 2010 dañó la planta existente de Gulfstream (35,000 m²)
-            y causó dos semanas de paro de producción. Baumex propuso sistemas antisísmicos BRB
-            (Buckling-Restrained Braces) — disipadores de energía en puntos estratégicos de la estructura.
-            Primera implementación de esta tecnología en Mexicali. Gulfstream aceptó.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Cubierta TPO con garantía de impermeabilización de 20 años. 10 MW de paneles solares distribuidos
-            en 50,000 m²: 20,000 m² en cubierta y 30,000 m² en carports del estacionamiento.
-            3,200 toneladas de aire acondicionado de mínimo consumo (42 manejadoras) con recuperación
-            del 90% del agua de condensación reutilizada en torres de enfriamiento.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            20 MW de capacidad eléctrica instalada — 50% será energía solar limpia.
-            Certificación Factory Mutual (FM Global) en muros, cubierta TPO, estructura metálica
-            y sistema contraincendio. Reduce significativamente la prima de seguro.
-            Apuntando a certificación LEED Gold.
-          </p>
-
-          <ul className="list-disc pl-6 text-lg leading-relaxed mb-16 space-y-2">
-            <li>55,500 m² bajo techo (5.5 hectáreas)</li>
-            <li>13,500 m² de oficinas</li>
-            <li>Sistemas antisísmicos BRB — primera vez en Mexicali</li>
-            <li>10 MW de paneles solares en cubierta y carports</li>
-            <li>3,200 toneladas de A/C con recuperación del 90% de agua</li>
-            <li>20 MW de capacidad eléctrica instalada</li>
-            <li>Certificación FM Global en toda la envolvente</li>
-            <li>Cubierta TPO con garantía de 20 años</li>
-          </ul>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Accede a este nivel de ingeniería para tu próxima nave industrial en Mexicali.
-            Cada sistema — antisísmico, solar, HVAC, contraincendio — fue diseñado y ejecutado por Baumex.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── PROYECTO 3: Túnel de viento Honeywell ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Construcción de túnel de viento aeroespacial en Mexicali: blower de 3,000 HP con ductos de placa estructural
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Considera lo que este proyecto exige de una constructora. Honeywell necesitaba simular condiciones
-            de vuelo — velocidad y volumen de aire reales — para pruebas de componentes aeroespaciales.
-            Baumex diseñó y construyó el edificio de 20 metros de altura que aloja el sistema completo.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            El blower opera a 3,000 HP (los compresores típicos industriales son de 200-250 HP),
-            alimentado con alta tensión de 4.16 KV. Los ductos de 2.5 × 2.5 metros están fabricados
-            con placa estructural soldada — no lámina — porque la fuerza del aire exige ese nivel
-            de resistencia. Puertas blindadas antisonido. Cimentación y estructura calculadas
-            para soportar vibraciones extremas de operación continua.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Proyecto colaborativo: ingenieros de Honeywell e ingenieros de Baumex elaboraron
-            el proyecto ejecutivo conjuntamente. 8 meses de construcción, seguidos de meses adicionales
-            de pruebas por parte de Honeywell.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── PROYECTO 4: Planta recicladora Deacero ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Construcción de planta industrial de acero en Mexicali: 50,000 m² con cimentaciones a 15 metros y precisión milimétrica
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Deacero requería 5 hectáreas de patios industriales — terracerías, pisos y cimentaciones —
-            para instalar dos grúas industriales de gran escala, bandas transportadoras y líneas de proceso.
-            El reto principal: cientos de bases y anclas embebidas en el concreto con precisión topográfica
-            milimétrica.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Cimentaciones profundas a 15 metros con pilas de concreto armado para soportar las grúas.
-            Baumex entregó la obra terminada y Deacero instaló equipos que debían calzar milimétricamente
-            en cada ancla. Almacenes y estructuras de soporte para equipos de proceso completaron el proyecto.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Si tu operación depende de que cada ancla esté exactamente donde el plano indica — sin tolerancia
-            para ajustes en campo — necesitas una constructora con la topografía y la ejecución de cimentaciones
-            que este nivel de precisión exige.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── CTA ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Construye tu nave industrial en Mexicali con la ingeniería que Gulfstream y Honeywell ya validaron
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Puentes sin columnas, túneles de viento, sistemas antisísmicos BRB, cimentaciones de precisión
-            milimétrica. Si tu operación necesita una nave industrial con ingeniería que va más allá
-            de lo estándar, hablemos.
-          </p>
-
-          <p className="text-lg leading-relaxed">
-            Baumex lleva 28 años ejecutando proyectos especializados para corporaciones internacionales.
-            Solicita una consulta para tu proyecto.
-          </p>
-
-        </div>
-        {/* FIN COPY COMERCIAL */}
-
-        <CuadriculaSection1 />
-
-        <div className="container mx-auto grid grid-cols-1 lg:mt-32 px-4 md:px-0">
-            <div className="flex flex-col items-center md:ml-20 lg:ml-34 gap-0 lg:gap-12 xl:gap-6 md:items-end md:grid  768:grid-cols-[5rem_15rem_1fr] 834:grid-cols-[8rem_15rem_1fr] 1024:grid-cols-[4rem_20rem_1fr] 1200:grid-cols-[14rem_20rem_1fr] 1280:grid-cols-[10rem_20rem_1fr] 1366:grid-cols-[16rem_20rem_1fr] 1728:grid-cols-[1.4fr_20rem_4fr]  xl:gap-x-16 md:gap-y-8">
-                {/* LineaL solo en desktop */}
-                <LineaL
-                    orientacion="center-left"
-                    anchoHorizontal="md:w-8/12 lg:w-full "
-                    altoVertical="768:h-[18rem] 834:h-[20rem] lg:h-[23rem] 1024:h-[22rem] 1200:h-[20rem] 1366:h-[24rem]"
-                    className="hidden md:block translate-y-[15%] z-50 "
-                />
-                <div className="relative aspect-[1/1] size-[13rem] lg:size-[20rem] xl:size-auto  ">
-                    <PoligonoTexto1
-                        text="Parques Industriales en Mexicali"
-                        backgroundColor="bg-gradient-to-r from-blue-600 to-blue-700"
-                        textColor="text-white"
-                        fontSize="text-2xl md:text-xl lg:text-4xl"
-                        fontWeight="font-bold"
-                        padding="p-6"
-                        textWidth="w-full"
-                        className="rounded-none 1200:max-w-[18rem] 1280:max-w-full"
-                    />
-                </div>
-                {/* Columna 3: Título + Párrafo */}
-                <div className="mt-20 md:mt-0 flex flex-col gap-6 text-center md:text-left  w-full 1728:w-auto 1728:max-w-160 1728:justify-self-start">
-                    <Titulo
-                        as="h2"
-                        fontSize="text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
-                        lineHeight="leading-none"
-                        width="md:max-w-xs lg:max-w-sm xl:max-w-md"
-                    >
-                        Construcción de Naves Industriales en Mexicali
-                    </Titulo>
-                    <Parrafo
-                        fontSize="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                        lineHeight="leading-relaxed lg:leading-loose"
-                        fontWeight="font-light"
-                        maxWidth="md:max-w-[16rem] lg:max-w-[22rem] 1200:max-w-[22rem] 1280:max-w-[27rem]"
-                    >
-                        Accede a infraestructura de clase mundial con 58 años de trayectoria en el desarrollo de parques industriales
-                    </Parrafo>
-                </div>
-            </div>
-        </div>
-        {/* Ejemplo ImagenConEtiqueta */}
-        <div className="container mx-auto mt-16 md:mt-32 w-11/12 ">
-
-
-            <div className="relative h-60 md:h-[35vh] lg:h-[40vh] 1200:h-[60vh] xl:h-[70vh] ">
-                <ImagenConEtiqueta1
-                    src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
-                    alt="Lorem ipsum"
-                    etiqueta="Naves Industriales Mexicali"
-                    posicion="bottom-left"
-                    offsetYClasses="translate-y-5 md:translate-y-[120px]"
-                    offsetXClasses="translate-x-0"
-                    etiquetaRounded="rounded-none"
-                    etiquetaRoundedTL="rounded-tr-none"
-                    etiquetaRoundedTR="rounded-tr-3xl"
-                    etiquetaFontSize="text-4xl 393:text-[2.5rem] md:text-[5rem] 1024:text-[7rem] 1200:text-[8rem] 1440:text-[8.5rem]"
-                    etiquetaFontWeight="font-black"
-                    etiquetaLineHeight="leading-[2rem] 393:leading-[2.4rem] md:leading-[4.5rem] 1024:leading-[6rem] 1200:leading-[7rem]"
-                    etiquetaLetterSpacing="tracking-tight"
-                    etiquetaBg="bg-background"
-                    etiquetaColor="text-foreground"  // ← Agregá esto
-                    etiquetaOpacity="opacity-100"
-                    etiquetaWidth="w-[14rem] 393:w-[16rem] md:w-[30rem] 1024:w-[39rem] 1200:w-[46rem] 1280:w-[44rem] 1366:w-7/12 1536:w-[47rem] 1728:w-[49rem]"
-                    className="rounded-none overflow-visible"
-                    poligono={true}
-                    poligonoWidth="md:w-25 834:w-32 1024:w-35"
-                    poligonoAspect="aspect-[1/1]"
-                    poligonoBg=" bg-background"
-                    poligonoOpacity="opacity-100"
-                    poligonoClassName="rounded-none"
-                />
-                {/* Grid principal */}
-                <GridOverlay
-                    fadeRadius="16rem"
-                    fadePosition="center"
-                    strokeColor="stroke-white/20"
-                    gridSize={50}
-                    showHighlights={true}
-                    highlightColor="fill-blue-600/40"
-                />
-            </div>
-        </div>
-
-        {/* Línea decorativa top-right */}
-        <div className="w-1/2 1728:w-7/12 md:ml-auto relative mt-0 h-20 md:h-20 1200:h-40 1366:h-40 1728:h-64 mt-20 z-30 md:pr-4">
-            <LineaL
-                orientacion="top-right"
-                anchoHorizontal="md:w-7/12"
-                altoVertical="h-full"
-                color="bg-foreground/20"
-            />
-        </div>
-
-        <div className={'w-11/12 mx-auto 1200:-translate-y-16 1366:-translate-y-16 1728:-translate-y-24'}><HeroSection1/></div>
-        {/* Sección Text + Image */}
-
-        <BigNumber
-          imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-272.jpg"
-          imageAlt="Lorem ipsum"
-          number="+4.5"
-          title={<>Millones de <br /> Pies² Desarrollados</>}
-          subtitle={<>Construidos en naves <br className={'hidden md:block'}/> industriales en Mexicali desde 1965</>}
-        />
-
-        <CuadroCirculoConEscuadra />
-
-          <div className={'w-11/12 mx-auto -mt-20 md:-mt-64 1024:-mt-40 relative'}>
-            <Mosaico2/>
-
-            {/* Cuadritos decorativos pegados debajo del mosaico */}
-            <div className="absolute top-full right-20 md:right-40 z-10 pointer-events-none transform scale-50 md:scale-75 lg:scale-100 origin-top-right">
-              <CuadritosLluviaDos />
-            </div>
-          </div>
-
-        <div className="flex flex-col gap-4">
-            <div className="container mx-auto w-10/12 1200:w-8/12 1366:w-8/12 1536:w-9/12  lg:max-w-6xl my-10 md:mt-20">
-            <Parrafo
-                fontSize="text-base text-3xl 768:text-3xl md:text-4xl 1024:text-5xl 1200:text-4xl 1536:text-5xl "
-                textColor="text-muted-foreground"
+          {/* Patrón de puntos */}
+          <div
+            className="hidden sm:block sm:absolute sm:inset-0"
+            aria-hidden="true"
+          >
+            <svg
+              className="absolute bottom-[10rem] right-0 translate-x-1/2 text-foreground/10 xl:translate-x-0"
+              width={364}
+              height={384}
+              viewBox="0 0 364 384"
+              fill="none"
             >
-               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor.
+              <defs>
+                <pattern
+                  id="pe-dot-pattern"
+                  x={0}
+                  y={0}
+                  width={20}
+                  height={20}
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    fill="currentColor"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                width={364}
+                height={384}
+                fill="url(#pe-dot-pattern)"
+              />
+            </svg>
+          </div>
 
-            </Parrafo>
+          <div className="relative pt-6 pb-16 sm:pb-24">
+            <main className="mt-32 sm:mt-40 1200:mt-48">
+              <div className="mx-auto md:max-w-5xl 1024:max-w-3xl 1200:max-w-5xl 1280:max-w-6xl 1536:max-w-7xl 1728:max-w-400 1920:max-w-440">
+                <div className="1200:grid 1200:grid-cols-12 1200:gap-8">
+                  <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto 1200:col-span-6 1200:text-left 1200:flex 1200:items-center">
+                    <div>
+                      <span className="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2">
+                        <span className="px-3 py-0.5 text-white text-xs md:text-sm font-semibold leading-5 uppercase tracking-wide bg-linear-to-br from-blue-600 to-blue-700 rounded-full">
+                          Proyectos Especializados
+                        </span>
+                        <span className="ml-4 text-xs md:text-sm">
+                          Ingeniería sin precedente
+                        </span>
+                      </span>
+                      <h1 className="mt-4 text-3xl 360:text-[2.5rem] 393:text-[3rem] 430:text-[3.5rem] 768:text-[4rem] 834:text-[4.5rem] 1024:text-[5rem] 1200:text-[3.5rem] 1280:text-[4rem] 1366:text-[4.5rem] 1440:text-[5rem] 1536:text-[5.5rem] 1728:text-[6rem] 1920:text-[7rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none 1200:mt-6">
+                        Construcciones especializadas
+                      </h1>
+                      <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
+                        Puentes sin columnas, túneles de viento, sistemas
+                        antisísmicos, cimentaciones de precisión milimétrica —
+                        28 años ejecutando lo que no tenía solución estándar.
+                        Lo resolvemos.
+                      </p>
+                      <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
+                        <div className="rounded-xs shadow">
+                          <a
+                            href="/contacto"
+                            className="cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-white bg-linear-to-br from-blue-600 to-blue-700 hover:opacity-90 md:py-4 md:text-lg md:px-10"
+                          >
+                            Contactar
+                          </a>
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <a
+                            href="/constructora/portafolio"
+                            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
+                          >
+                            Ver portafolio
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6" />
+                </div>
+              </div>
+            </main>
+          </div>
 
-            </div>
+          {/* Cuadritos decorativos */}
+          <div className="absolute bottom-8 right-8 md:bottom-16 md:right-16 z-10 pointer-events-none transform scale-50 md:scale-75 lg:scale-100 origin-bottom-right">
+            <CuadritosLluviaDos />
+          </div>
         </div>
 
-        <div className="container mx-auto w-11/12">
-            <FeatureSection5InvertedBP/>
-            <FeatureSection3BP/>
+        {/* Puente Skyworks + Gulfstream 550K */}
+        <div className="w-11/12 mx-auto mt-16 md:mt-24">
+          <FeatureSection6BPConProps
+            badge="Lo que ya hemos resuelto"
+            title="Cuatro proyectos que no existían en ningún directorio"
+            description="Cada uno empezó con un problema que no tenía solución estándar. Lo investigamos, lo diseñamos y lo construimos."
+            feature1Title="Puente de 95 m sin columnas"
+            feature1Description="Conecta dos plantas de semiconductores sobre un boulevard y un dren federal. Colado en un solo día, sin juntas. Permisos con 3 niveles de gobierno."
+            feature1Icon={<Construction className="h-5 w-5" />}
+            feature1IconColor="text-orange-600"
+            feature2Title="Nave de 52,200 m² con BRB antisísmico"
+            feature2Description="La nave más grande de Mexicali. Primera implementación de sistemas antisísmicos BRB en la región. 20 MW eléctricos, 10 MW solares."
+            feature2Icon={<Plane className="h-5 w-5" />}
+            feature2IconColor="text-blue-600"
+            button1Text="Contactar"
+            button2Text="Ver portafolio"
+            imageSrc="/contructora-mexicali/puente-skyworks-2.jpg"
+            imageAlt="Puente Skyworks 95 metros sin columnas"
+          />
+        </div>
+
+        {/* Túnel de viento + Deacero */}
+        <div className="container mx-auto w-10/12 mt-20">
+          <FeatureSection3BPConProps
+            tagline="Y eso no es todo"
+            titulo="Más proyectos que no existían en ningún directorio"
+            descripcion="Cada uno empezó con un requerimiento que no tenía precedente en la región. Lo investigamos, lo diseñamos y lo construimos."
+            imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
+            imagenAlt="Túnel de viento y proyectos de precisión Baumex"
+            feature1Icon={<Wind className="h-5 w-5" />}
+            feature1IconColor="text-green-600"
+            feature1Titulo="Túnel de viento de 3,000 HP"
+            feature1Descripcion="Edificio de 20 m de altura para pruebas aeroespaciales. Ductos de placa estructural soldada. Cimentación calculada para vibraciones extremas de operación continua."
+            feature2Icon={<Factory className="h-5 w-5" />}
+            feature2IconColor="text-purple-600"
+            feature2Titulo="50,000 m² de precisión milimétrica"
+            feature2Descripcion="Cientos de anclas embebidas con tolerancia milimétrica para grúas industriales de gran escala. Cimentaciones profundas a 15 m con pilas de concreto armado."
+          />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20">
+          <SplitWithImageBPConProps
+            imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
+            imagenAlt="Consulta de proyectos especializados"
+            tagline="Tu Proyecto Especial"
+            titulo="¿Tu operación necesita algo diferente?"
+            parrafo1="Estos son cuatro ejemplos. Pero cada proyecto empieza con un problema nuevo — y lo resolvemos."
+            parrafo2="28 años diseñando y construyendo lo que no existía. Dinos qué necesita tu operación."
+            feature1Icon={
+              <CloudArrowUpIcon
+                aria-hidden="true"
+                className="mt-1 size-5 flex-none"
+              />
+            }
+            feature1IconColor="text-orange-600 dark:text-orange-500"
+            feature1Titulo="Del problema a la entrega."
+            feature1Descripcion="Investigación, diseño, permisos, construcción — un solo equipo."
+            feature2Icon={
+              <LockClosedIcon
+                aria-hidden="true"
+                className="mt-1 size-5 flex-none"
+              />
+            }
+            feature2IconColor="text-blue-600 dark:text-blue-500"
+            feature2Titulo="Sin límite de complejidad."
+            feature2Descripcion="Si tiene solución de ingeniería, la encontramos."
+            feature3Icon={
+              <CheckBadgeIcon
+                aria-hidden="true"
+                className="mt-1 size-5 flex-none"
+              />
+            }
+            feature3IconColor="text-green-600 dark:text-green-500"
+            feature3Titulo="Experiencia verificable."
+            feature3Descripcion="75+ proyectos completados para 30+ corporaciones internacionales."
+            parrafo3="Dinis qué necesita tu operación. Te mostramos cómo se resuelve."
+            subtitulo="Consulta sin costo"
+            parrafo4="para tu próximo proyecto industrial especializado en Mexicali."
+          />
         </div>
       </main>
-
-        <div className={'px-4 md:ml-10 1200:ml-32 mt-32 md:px-0'}><Circulos/></div>
-
-        <FaqSectionsThreeColumnsBP />
-
-        <div className={'mt-20 1366:ml-16' }><TresCards/></div>
     </div>
-  )
+  );
 }

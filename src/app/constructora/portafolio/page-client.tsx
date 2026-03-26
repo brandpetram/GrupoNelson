@@ -17,7 +17,7 @@ export default function PortafolioBaumexClient() {
     <div className="bg-background min-h-screen">
       <Header />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 mt-20">
+      <main className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 mt-20">
         {/* Hero Section */}
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-7xl font-light tracking-tighter leading-none text-gray-900 dark:text-white">
