@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import { MosaicoLiderazgo } from '@/components/brandpetram/mosaico-liderazgo'
 
 export const metadata: Metadata = {
   title: 'Liderazgo | Grupo Nelson',
@@ -160,6 +161,8 @@ export default function LiderazgoPage() {
 
         </div>
         {/* FIN COPY COMERCIAL */}
+
+        <MosaicoLiderazgo />
       </main>
     </div>
   )
