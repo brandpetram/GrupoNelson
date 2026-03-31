@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
 import { HeroMarketing1 } from '@/components/brandpetram/hero-marketing-1'
 import { SidebarSticky1 } from '@/components/brandpetram/sidebar-sticky-1'
 import { CarruselLeed } from '@/components/brandpetram/carrusel-leed'
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
 export default function CertificacionLeedPage() {
   return (
     <div className="overflow-x-clip">
-      <Header />
       {/* Copy integrado en los componentes HeroMarketing1 y SidebarSticky1 */}
       <div className={'pt-20 lg:pt-30 lg:px-20'}>
         <div className="768:mt-10 834:mt-10 1024:mt-10 1200:mt-0">

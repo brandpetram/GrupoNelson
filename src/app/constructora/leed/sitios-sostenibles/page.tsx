@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function SitiosSosteniblesPage() {
   return (
     <LeedPageLayout
+      eyebrow="Agua y sitios sostenibles"
       titulo="Reduce el consumo de agua un 40% en tu nave industrial LEED en Mexicali — región con estrés hídrico crítico"
       intro="Mexicali está en una de las regiones con mayor estrés hídrico de Norteamérica. Nelson II opera con tanque contraincendio de 360,000 galones y sistema centralizado que ahorra 60% del costo al cliente. Gulfstream 550K recupera el 90% del agua de condensación de sus 42 manejadoras. Cada litro cuenta — y cada litro recuperable se recupera."
       imageSrc="/leed/leed4-mexicali-nave-industrial-sitios-sostenibles-1.jpeg"

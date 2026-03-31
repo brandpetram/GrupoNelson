@@ -45,7 +45,7 @@ export interface LeedPageLayoutProps {
 }
 
 export function LeedPageLayout({
-  eyebrow = 'Certificación LEED · Grupo Nelson',
+  eyebrow,
   titulo,
   intro,
   imageSrc,
@@ -68,7 +68,7 @@ export function LeedPageLayout({
   },
 }: LeedPageLayoutProps) {
   return (
-    <div data-component="LeedPageLayout" data-component-file="src/components/brandpetram/leed-page-layout.tsx" data-component-props="true" className={cn('relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0', className)}>
+    <div data-component="LeedPageLayout" data-component-file="src/components/brandpetram/leed-page-layout.tsx" data-component-props="true" className={cn('relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 xl:overflow-visible xl:px-0', className)}>
       {/* Grid decorativo de fondo */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
@@ -97,23 +97,18 @@ export function LeedPageLayout({
         </svg>
       </div>
 
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 xl:mx-0 xl:max-w-none xl:grid-cols-2 xl:items-start xl:gap-y-10">
 
         {/* Encabezado — col 1, row 1 */}
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4">
-            <div className="lg:max-w-lg">
-              {/* Breadcrumb */}
-              <nav className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
-                <Link href="/constructora/leed" className="hover:text-foreground transition-colors">
-                  Certificación LEED
-                </Link>
-                <span>/</span>
-                <span className="text-foreground font-medium">{titulo}</span>
-              </nav>
-
+        <div className="xl:col-span-2 xl:col-start-1 xl:row-start-1 xl:mx-auto xl:grid xl:w-full xl:max-w-7xl xl:grid-cols-2 xl:gap-x-8 xl:px-8">
+          <div className="xl:pr-4">
+            <div className="xl:max-w-lg">
               <p className="text-base/7 font-semibold text-emerald-600 dark:text-emerald-400">
-                {eyebrow}
+                <Link href="/constructora/leed" className="hover:underline">
+                  <span className="768:hidden">LEED</span>
+                  <span className="hidden 768:inline">Certificación LEED</span>
+                </Link>
+                {eyebrow && <> | {eyebrow}</>}
               </p>
               <h1 className="mt-2 text-4xl font-extrabold tracking-tighter text-pretty text-foreground sm:text-5xl">
                 {titulo}
@@ -126,7 +121,7 @@ export function LeedPageLayout({
         </div>
 
         {/* Imagen sticky — col 2, rows 1-2 */}
-        <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="-mt-12 -ml-12 p-12 xl:sticky xl:top-4 xl:col-start-2 xl:row-span-2 xl:row-start-1 xl:overflow-hidden">
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl ring-1 ring-black/10 dark:ring-white/10">
             <Image
               src={imageSrc}
@@ -158,9 +153,9 @@ export function LeedPageLayout({
         </div>
 
         {/* Contenido principal — col 1, row 2 */}
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4">
-            <div className="max-w-xl text-base/7 text-muted-foreground lg:max-w-lg space-y-6">
+        <div className="xl:col-span-2 xl:col-start-1 xl:row-start-2 xl:mx-auto xl:grid xl:w-full xl:max-w-7xl xl:grid-cols-2 xl:gap-x-8 xl:px-8">
+          <div className="xl:pr-4">
+            <div className="max-w-xl text-base/7 text-muted-foreground xl:max-w-lg space-y-6">
               {parrafos.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}

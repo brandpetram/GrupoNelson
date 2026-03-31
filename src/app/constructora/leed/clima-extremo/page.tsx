@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ClimaExtremoPage() {
   return (
     <LeedPageLayout
+      eyebrow="Ingeniería para +45°C"
       titulo="Construye tu nave industrial LEED en Mexicali a +45°C — 28 años de ingeniería en clima extremo"
       intro="Mexicali supera los 48°C en verano con radiación solar de 2,400 kWh/m² anuales. Baumex ha construido 75+ naves industriales en estas condiciones en 28 años. La envolvente térmica de cada nave se calibra específicamente para el desierto sonorense con datos de desempeño recopilados en la misma zona climática."
       imageSrc="/leed/leed1-mexicali-nave-industrial-clima-extremo-2.jpeg"

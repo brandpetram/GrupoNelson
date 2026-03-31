@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: {
@@ -9,5 +10,10 @@ export const metadata: Metadata = {
 }
 
 export default function LeedLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <div className="overflow-x-clip">
+      <Header />
+      {children}
+    </div>
+  )
 }

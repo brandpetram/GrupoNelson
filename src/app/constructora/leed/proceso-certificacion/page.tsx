@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ProcesoCertificacionPage() {
   return (
     <LeedPageLayout
+      eyebrow="Del diseño al certificado GBCI"
       titulo="Certifica tu nave industrial LEED en Mexicali — del predesign al certificado GBCI sin detener la obra"
       intro="Gulfstream 550K (52,200 m²) está en proceso de certificación LEED Gold — actualmente en 53-55 puntos (Silver), apuntando a Gold con 10 MW de paneles solares. Baumex gestiona el proceso completo: registro, Design Review, gestión de evidencias en construcción y Construction Review con trazabilidad en LEED Online."
       imageSrc="/leed/leed2-mexicali-nave-industrial-certificacion-bdc-3.jpeg"

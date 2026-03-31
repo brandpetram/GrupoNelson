@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function SistemasOperativosPage() {
   return (
     <LeedPageLayout
+      eyebrow="Monitoreo y submedición BMS"
       titulo="Monitorea cada sistema de tu nave industrial en Mexicali con BMS y submedición LEED por circuito"
       intro="Gulfstream 550K opera con 42 manejadoras de A/C, 10 MW de paneles solares y 20 MW de capacidad eléctrica. Sin monitoreo inteligente por circuito, detectar una desviación de consumo toma meses. Con BMS y submedición, toma horas. Baumex integra estos sistemas desde la construcción de la nave — no como retrofit."
       imageSrc="/leed/leed3-mexicali-nave-industrial-sistemas-bms-2.jpeg"

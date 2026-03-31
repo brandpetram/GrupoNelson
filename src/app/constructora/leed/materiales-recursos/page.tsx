@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function MaterialesRecursosPage() {
   return (
     <LeedPageLayout
+      eyebrow="Materiales verificados y reciclables"
       titulo="Construye tu nave industrial LEED en Mexicali con materiales documentados por EPD y contenido reciclado verificable"
       intro="El acero estructural de tu nave puede tener 90% de contenido reciclado o 15% — la diferencia está en la Declaración Ambiental de Producto (EPD). Baumex especifica cada material con EPD verificada por tercero: acero con contenido reciclado documentado, concreto con adiciones que reducen cemento Portland, y acabados con HPD que verifican ausencia de sustancias de preocupación."
       imageSrc="/leed/leed6-mexicali-nave-industrial-materiales-recursos-1.jpeg"

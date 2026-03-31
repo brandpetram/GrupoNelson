@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function CalidadAmbientalPage() {
   return (
     <LeedPageLayout
+      eyebrow="Aire, luz y confort interior"
       titulo="Construye tu nave industrial en Mexicali con calidad ambiental interior certificada LEED"
       intro="Pinturas con COV por debajo de 50 g/L. Ventilación diseñada para clima desértico con filtración ASHRAE 62.1. Confort térmico controlado para operación industrial continua. Estos son los estándares de calidad ambiental interior que Grupo Nelson integra en la construcción de naves industriales en Mexicali — y los que permiten obtener créditos LEED en la categoría de ambiente interior."
       imageSrc="/leed/leed5-mexicali-nave-industrial-calidad-ambiental-1.jpeg"

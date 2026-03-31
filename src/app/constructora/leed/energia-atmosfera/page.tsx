@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function EnergiaAtmosferaPage() {
   return (
     <LeedPageLayout
+      eyebrow="Eficiencia energética y solar"
       titulo="Reduce el gasto energético de tu nave industrial en Mexicali un 35-50% con diseño LEED y 10 MW de paneles solares"
       intro="Gulfstream 550K en Mexicali: 10 MW de paneles solares en 50,000 m² (cubierta + carports), 20 MW de capacidad eléctrica instalada, 50% energía solar limpia. 3,200 toneladas de A/C de mínimo consumo. Estos son los resultados reales de la categoría de Energía y Atmósfera de LEED ejecutada por Baumex en la nave industrial más grande de la ciudad."
       imageSrc="/leed/leed7-mexicali-nave-industrial-energia-atmosfera-1.jpeg"
