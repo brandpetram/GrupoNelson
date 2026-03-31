@@ -15,22 +15,23 @@ const topLogos = [
   {
     src: "/logos-clientes/logo-utc-aerospace-systems.svg",
     alt: "UTC Aerospace Systems",
+    darkMode: 'brightness' as const,
   },
-  { src: "/logos-clientes/logo-general-dynamics.svg", alt: "General Dynamics" },
+  { src: "/logos-clientes/logo-general-dynamics.svg", alt: "General Dynamics", darkMode: 'brightness' as const },
 ];
 
 const logos = [
-  { src: "/logos-clientes/logo-gulfstream.svg", alt: "Gulfstream" },
+  { src: "/logos-clientes/logo-gulfstream.svg", alt: "Gulfstream", darkMode: 'brightness' as const },
   { src: "/logos-clientes/logo-honeywell.svg", alt: "Honeywell" },
   { src: "/logos-clientes/logo-dhl.svg", alt: "DHL" },
   { src: "/logos-clientes/logo-baxter.svg", alt: "Baxter" },
   { src: "/logos-clientes/logo-rheem.svg", alt: "Rheem" },
-  { src: "/logos-clientes/logo-vertiv.svg", alt: "Vertiv" },
-  { src: "/logos-clientes/logo-celestica.svg", alt: "Celestica" },
-  { src: "/logos-clientes/logo-intuitive.svg", alt: "Intuitive Surgical" },
-  { src: "/logos-clientes/logo-goodrich.svg", alt: "Goodrich" },
+  { src: "/logos-clientes/logo-vertiv.svg", alt: "Vertiv", darkMode: 'brightness' as const },
+  { src: "/logos-clientes/logo-celestica.svg", alt: "Celestica", darkMode: 'brightness' as const },
+  { src: "/logos-clientes/logo-intuitive.svg", alt: "Intuitive Surgical", darkMode: 'invert' as const },
+  { src: "/logos-clientes/logo-goodrich.svg", alt: "Goodrich", darkMode: 'brightness' as const },
   { src: "/logos-clientes/logo-air-liquide.svg", alt: "Air Liquide" },
-  { src: "/logos-clientes/logo-garret.svg", alt: "Garrett" },
+  { src: "/logos-clientes/logo-garret.svg", alt: "Garrett", darkMode: 'brightness' as const },
   { src: "/logos-clientes/logo-accuride.svg", alt: "Accuride" },
 ];
 
@@ -88,7 +89,7 @@ export function LogosGridBP2({
                     src={logo.src}
                     alt={logo.alt}
                     fill
-                    className="object-contain"
+                    className={`object-contain${logo.darkMode === 'brightness' ? ' dark:brightness-[3]' : logo.darkMode === 'invert' ? ' dark:invert' : ''}`}
                   />
                 </div>
               </div>
@@ -106,7 +107,7 @@ export function LogosGridBP2({
                     src={logo.src}
                     alt={logo.alt}
                     fill
-                    className="object-contain"
+                    className={`object-contain${logo.darkMode === 'brightness' ? ' dark:brightness-[3]' : logo.darkMode === 'invert' ? ' dark:invert' : ''}`}
                   />
                 </div>
               </div>

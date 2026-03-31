@@ -2,12 +2,37 @@
 
 import { motion } from "motion/react"
 
+const darkBrightnessLogos = new Set([
+    "logo-general-dynamics-2.svg",
+    "logo-gulfstream-2.svg",
+    "logo-vertiv-2.svg",
+    "logo-celestica-3.svg",
+    "logo-garret-2.svg",
+    "logo-aqua-lung-2.svg",
+    "logo-gameloft-2.svg",
+    "logo-sds-sybron-dental-specialities-2.svg",
+    "logo-mohawk-2.svg",
+    "logo-dentsply-2.svg",
+    "logo-goodrich-2.svg",
+    "logo-jonathan-2.svg",
+    "logo-liebert-3.svg",
+    "logo-utc-aerospace-systems-3.svg",
+    "logo-baxter-2.svg",
+    "logo-ivemsa-2.svg",
+])
+
+const darkInvertLogos = new Set([
+    "logo-intuitive-2.svg",
+    "logo-cornell-dubilier-2.svg",
+])
+
 function LogoCliente({ src, isBig = false }: { src: string; isBig?: boolean }) {
     const sizeClass = isBig ? "h-32 w-32" : "h-20 object-contain w-full max-w-[250px]"
+    const darkClass = darkBrightnessLogos.has(src) ? ' dark:brightness-[3]' : darkInvertLogos.has(src) ? ' dark:invert' : ''
 
     return (
         <motion.img
-            className={`${sizeClass} object-contain bg-transparent`}
+            className={`${sizeClass} object-contain bg-transparent${darkClass}`}
             src={`/logos-clientes/${src}`}
             alt={"Logo cliente"}
             initial={{ opacity: 0 }}
@@ -31,7 +56,8 @@ export default function LogoCloud() {
         "logo-goodrich-2.svg",
         "logo-dentsply-2.svg",
         "logo-rheem-2.svg",
-        "logo-intuitive-2.svg",
+        // "logo-intuitive-2.svg", // usa invertSet
+
         "logo-liebert-3.svg",
         "logo-sds-sybron-dental-specialities-2.svg",
         "logo-gameloft-2.svg",
