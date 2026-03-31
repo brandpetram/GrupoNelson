@@ -3,7 +3,7 @@
 
 export default function Chi() {
   return (
-    <div className="bg-linear-to-br from-blue-600 to-blue-700">
+    <div data-component="Chi" data-component-file="src/components/brandpetram/chi.tsx" data-component-props="false" className="bg-linear-to-br from-blue-600 to-blue-700">
       <div className="max-w-5xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <h2 className="text-balance text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] font-extrabold text-white">
         404 días sin accidentes. 1,092,745 horas hombre. Cero accidentes.

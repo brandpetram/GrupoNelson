@@ -33,7 +33,7 @@ export function CuadroCirculoConEscuadraConProps({
   itemsCirculo = ["Equipo", "Ingeniería", "Instalación", "Mantenimiento", "Refacciones"]
 }: CuadroCirculoConEscuadraConPropsProps) {
   return (
-    <div className={'flex relative'}>
+    <div data-component="CuadroCirculoConEscuadraConProps" data-component-file="src/components/brandpetram/con-props/cuadro-circulo-con-escuadra-con-props.tsx" data-component-props="true" className={'flex relative'}>
       {/* Sección Transporte de Grado Alimenticio */}
       <motion.div
         className="relative translate-y-10 md:-translate-y-20 md:w-5/12 1200:w-5/12 1366:w-4/12 md:ml-10 1200:ml-20 1280:ml-20 1366:ml-48 bg-gray-100/80 dark:bg-gray-900/80 p-8 md:p-12 lg:p-16 max-h-140"

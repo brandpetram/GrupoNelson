@@ -8,7 +8,7 @@ import { Tagline } from "./tagline";
 
 export function FeatureSection8() {
   return (
-    <section className="bg-background section-padding-y">
+    <section data-component="FeatureSection8" data-component-file="src/components/pro-blocks/feature-section-8/feature-section-8.tsx" data-component-props="false" className="bg-background section-padding-y">
       <div className="container-padding-x container mx-auto flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
         <div className="flex flex-1 flex-col gap-8">
           <div className="section-title-gap-lg flex flex-col">

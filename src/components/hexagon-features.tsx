@@ -45,7 +45,7 @@ export function HexagonFeatures() {
   ]
 
   return (
-    <section className="w-full bg-background">
+    <section data-component="HexagonFeatures" data-component-file="src/components/hexagon-features.tsx" data-component-props="false" className="w-full bg-background">
       <div className="container mx-auto px-0 1280:px-32 w-full h-auto md:h-screen md:flex md:items-center py-8 md:py-16">
         {/* Desktop Grid: 2x3 */}
         <div className="hidden md:grid md:grid-cols-3 md:gap-0">

@@ -16,7 +16,7 @@ import { CuadritosLluvia } from "../ui/brandpetram/cuadritos-lluvia";
 
 export function FeatureSection3BP() {
   return (
-    <section className="bg-background section-padding-y">
+    <section data-component="FeatureSection3BP" data-component-file="src/components/brandpetram/feature-section-3-bp.tsx" data-component-props="false" className="bg-background section-padding-y">
       <div className="container-padding-x container mx-auto flex flex-col items-center gap-12 md:gap-16 lg:flex-row">
         <div className="flex flex-1 flex-col gap-8 md:gap-12">
           <div className="section-title-gap-lg flex flex-col">

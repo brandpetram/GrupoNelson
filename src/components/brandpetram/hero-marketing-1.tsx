@@ -42,7 +42,7 @@ export function HeroMarketing1() {
   }
 
   return (
-    <div>
+    <div data-component="HeroMarketing1" data-component-file="src/components/brandpetram/hero-marketing-1.tsx" data-component-props="false">
       {/* Imagen de fondo con overlay y grid */}
       <div className="max-w-screen-3xl mx-auto">
         <ImagenRectangulo

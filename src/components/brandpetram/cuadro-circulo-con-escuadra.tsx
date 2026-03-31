@@ -4,7 +4,7 @@ import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia'
 
 export function CuadroCirculoConEscuadra() {
   return (
-    <div className={'flex '}>
+    <div data-component="CuadroCirculoConEscuadra" data-component-file="src/components/brandpetram/cuadro-circulo-con-escuadra.tsx" data-component-props="false" className={'flex '}>
       {/* Sección Transporte de Grado Alimenticio */}
       <div className="relative translate-y-10 md:-translate-y-20 md:w-5/12 1200:w-5/12 1366:w-4/12 md:ml-10 1200:ml-20 1280:ml-20 1366:ml-48 bg-gray-100/80 dark:bg-gray-900/80 p-8 md:p-12 lg:p-16 max-h-140">
         <div className="max-w-2xl">

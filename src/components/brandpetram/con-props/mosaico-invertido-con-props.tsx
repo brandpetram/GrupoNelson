@@ -69,7 +69,7 @@ export function MosaicoInvertidoConProps({
   imagenIzquierdaAlt = "Imagen destacada"
 }: MosaicoInvertidoConPropsProps) {
   return (
-    <div className="flex flex-col 1024:flex-row gap-0">
+    <div data-component="MosaicoInvertidoConProps" data-component-file="src/components/brandpetram/con-props/mosaico-invertido-con-props.tsx" data-component-props="true" className="flex flex-col 1024:flex-row gap-0">
       {/* Lado izquierdo: Imagen grande con motion */}
       <div className="w-full 1024:w-1/2">
         <motion.div

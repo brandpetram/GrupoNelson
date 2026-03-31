@@ -378,7 +378,7 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
   const especificaciones = buildEspecificaciones(park)
 
   return (
-    <section className="py-12">
+    <section data-component="FichaTecnicaParque" data-component-file="src/components/brandpetram/ficha-tecnica-parque.tsx" data-component-props="true" className="py-12">
 
       {/* Encabezado */}
       <h2 className="text-sm font-bold uppercase tracking-widest mb-6" style={{ color: "var(--primary)" }}>

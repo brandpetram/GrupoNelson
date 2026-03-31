@@ -2,7 +2,7 @@ import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia'
 
 export function StatsGridBPBeta() {
   return (
-    <section className="relative py-16 sm:py-24">
+    <section data-component="StatsGridBPBeta" data-component-file="src/components/brandpetram/stats-grid-bp-beta.tsx" data-component-props="false" className="relative py-16 sm:py-24">
       {/* Dot pattern — lado izquierdo */}
       <svg
         aria-hidden="true"

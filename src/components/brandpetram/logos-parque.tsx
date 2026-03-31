@@ -15,7 +15,7 @@ export function LogosParque({ park }: { park: IndustrialPark }) {
   const doubled = [...tenants, ...tenants]
 
   return (
-    <div className="mb-6">
+    <div data-component="LogosParque" data-component-file="src/components/brandpetram/logos-parque.tsx" data-component-props="true" className="mb-6">
       <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">
         Empresas establecidas
       </p>

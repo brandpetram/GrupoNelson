@@ -23,7 +23,7 @@ export function HeroSection({
   breadcrumbs = []
 }: HeroSectionProps) {
   return (
-    <section className="relative bg-gradient-to-b from-muted/50 to-background">
+    <section data-component="HeroSection" data-component-file="src/components/sdi/internal-pages/hero-section.tsx" data-component-props="true" className="relative bg-gradient-to-b from-muted/50 to-background">
       <div className="mx-auto max-w-7xl px-4 py-8">
         {breadcrumbs.length > 0 && (
           <div className="mb-6">

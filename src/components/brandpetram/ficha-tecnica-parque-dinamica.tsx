@@ -70,7 +70,7 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
   const especificaciones = buildEspecificaciones(park)
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+    <div data-component="FichaTecnicaParqueDinamica" data-component-file="src/components/brandpetram/ficha-tecnica-parque-dinamica.tsx" data-component-props="true" className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
 
       {/* Lightbox */}
       {lightboxAbierto && (

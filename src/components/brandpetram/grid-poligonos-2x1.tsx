@@ -17,7 +17,7 @@ import { EmblemaGrupoNelson } from '@/components/ui/brandpetram/emblema-nelson'
  */
 export function GridPoligonos2x1() {
   return (
-    <div className="container mx-auto">
+    <div data-component="GridPoligonos2x1" data-component-file="src/components/brandpetram/grid-poligonos-2x1.tsx" data-component-props="false" className="container mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 max-w-5xl mx-auto">
         {/* Grid principal - ocupa 2 columnas en desktop */}
         <div className="md:col-span-2 grid grid-cols-2 gap-2.5">

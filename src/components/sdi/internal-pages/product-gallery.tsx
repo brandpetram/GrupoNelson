@@ -35,7 +35,7 @@ export function ProductGallery({
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section data-component="ProductGallery" data-component-file="src/components/sdi/internal-pages/product-gallery.tsx" data-component-props="true" className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4">
         {/* Header */}
         <div className="mb-12 text-center space-y-4">

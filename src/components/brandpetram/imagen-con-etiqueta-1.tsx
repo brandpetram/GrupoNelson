@@ -291,7 +291,7 @@ export function ImagenConEtiqueta1({
   }
 
   return (
-    <div className={cn('relative w-full h-full', className)}>
+    <div data-component="ImagenConEtiqueta1" data-component-file="src/components/brandpetram/imagen-con-etiqueta-1.tsx" data-component-props="true" className={cn('relative w-full h-full', className)}>
       <Image
         src={src}
         alt={alt}

@@ -73,7 +73,7 @@ export function FeatureSection5InvertedBPConProps({
   feature4Descripcion = "Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.",
 }: FeatureSection5InvertedBPConPropsProps) {
   return (
-    <section className="bg-background section-padding-y">
+    <section data-component="FeatureSection5InvertedBPConProps" data-component-file="src/components/brandpetram/con-props/feature-section-5-inverted-bp-con-props.tsx" data-component-props="true" className="bg-background section-padding-y">
       <div className="container-padding-x container mx-auto flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
         {/* Imagen primero - aparece a la izquierda en desktop */}
         <div className="w-full 360:w-full 393:w-full 430:w-full 768:w-full 834:w-full 1024:flex-1 1200:flex-1 1280:flex-1 1366:flex-1 1440:flex-1 1536:flex-1 1728:flex-1 1920:flex-1 relative">

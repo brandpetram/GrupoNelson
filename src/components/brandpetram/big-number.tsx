@@ -42,7 +42,7 @@ export function BigNumber({
   }
 
   return (
-    <div className="w-full mt-0 overflow-hidden">
+    <div data-component="BigNumber" data-component-file="src/components/brandpetram/big-number.tsx" data-component-props="true" className="w-full mt-0 overflow-hidden">
       <div className="relative">
         {/* Imagen full width */}
         <img

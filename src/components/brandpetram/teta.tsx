@@ -1,6 +1,6 @@
 export function Teta() {
   return (
-      <div className={'overflow-hidden -mt-50 pt-50'}>
+      <div data-component="Teta" data-component-file="src/components/brandpetram/teta.tsx" data-component-props="false" className={'overflow-hidden -mt-50 pt-50'}>
         <div
             className="w-10/12 md:w-full mx-auto md:translate-x-16 1200:translate-x-20 flex flex-col md:flex-row items-start gap-8">
           {/* Columna izquierda: 65% */}

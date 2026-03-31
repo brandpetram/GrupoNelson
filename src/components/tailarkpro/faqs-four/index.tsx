@@ -124,7 +124,7 @@ export default function FAQs() {
     }, [activeGroup])
 
     return (
-        <section className="bg-muted py-16 md:py-24">
+        <section data-component="FAQs" data-component-file="src/components/tailarkpro/faqs-four/index.tsx" data-component-props="false" className="bg-muted py-16 md:py-24">
             <div className="mx-auto max-w-5xl px-1 md:px-6">
                 <div className="max-w-lg max-md:px-6">
                     <h2 className="text-foreground text-6xl font-black">FAQs</h2>

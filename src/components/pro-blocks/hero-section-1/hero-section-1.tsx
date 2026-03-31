@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function HeroSection1() {
   return (
-    <section
+    <section data-component="HeroSection1" data-component-file="src/components/pro-blocks/hero-section-1/hero-section-1.tsx" data-component-props="false"
       className="bg-background section-padding-y"
       aria-labelledby="hero-heading"
     >

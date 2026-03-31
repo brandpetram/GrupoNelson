@@ -10,6 +10,7 @@
 'use client'
 
 import Image from 'next/image'
+import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia'
 
 const pClass = "text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1rem] 834:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide"
 
@@ -20,9 +21,20 @@ interface SplitSimpleBPProps {
     imageSrc: string
     imageAlt: string
     imagePosition?: 'left' | 'right'
+    showCuadritos?: boolean
+    cuadritosPosition?: 'left' | 'center-left' | 'center' | 'center-right' | 'right'
+    cuadritosInvert?: boolean
 }
 
 export { pClass as splitParagraphClass }
+
+const cuadritosPositionMap = {
+    'left': 'left-[20%] 768:left-[10%]',
+    'center-left': 'left-[25%] 768:left-[30%]',
+    'center': 'left-[50%] -translate-x-1/2',
+    'center-right': 'right-[25%] 768:right-[30%]',
+    'right': 'right-[25%] 768:right-[20%] 1024:right-[10%]',
+}
 
 export function SplitSimpleBP({
     tagline,
@@ -31,6 +43,9 @@ export function SplitSimpleBP({
     imageSrc,
     imageAlt,
     imagePosition = 'right',
+    showCuadritos = false,
+    cuadritosPosition = 'center',
+    cuadritosInvert = false,
 }: SplitSimpleBPProps) {
     const textBlock = (
         <div className="flex flex-1 flex-col justify-center px-[1.5rem] 768:px-[2rem] 1024:px-[2.5rem] 1200:px-[3rem] 1280:px-[3.5rem] 1366:px-[4rem] 1440:px-[4.5rem] 1536:px-[5rem] 1728:px-[5.5rem] 1920:px-[6rem] py-[3rem] 768:py-[4rem] 1024:py-[5rem] 1200:py-[5.5rem] 1920:py-[6rem]">
@@ -56,11 +71,19 @@ export function SplitSimpleBP({
                 fill
                 className="object-cover rounded-xs"
             />
+            {showCuadritos && (
+                <div
+                    className={`absolute bottom-0 translate-y-full ${cuadritosPositionMap[cuadritosPosition]} z-10 scale-50 768:scale-75 1200:scale-100 origin-top`}
+                    style={cuadritosInvert ? { transform: 'translateY(100%) scaleX(-1)' } : undefined}
+                >
+                    <CuadritosLluvia />
+                </div>
+            )}
         </div>
     )
 
     return (
-        <section className="w-11/12 mx-auto flex flex-col lg:flex-row gap-[2rem] 1024:gap-[0rem]">
+        <section data-component="SplitSimpleBP" data-component-file="src/components/brandpetram/split-simple-bp.tsx" data-component-props="true" className="w-11/12 mx-auto flex flex-col lg:flex-row gap-[2rem] 1024:gap-[0rem]">
             {imagePosition === 'left' ? (
                 <>
                     {imageBlock}

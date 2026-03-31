@@ -116,7 +116,7 @@ const circleWidth = "64vw";
 
 export function HalfCircleMobile() {
   return (
-    <div
+    <div data-component="HalfCircleMobile" data-component-file="src/components/brandpetram/half-circle-mobile.tsx" data-component-props="false"
       style={{
         height: "800px",
         width: "100vw",

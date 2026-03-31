@@ -17,7 +17,7 @@ interface ItemConveyorProps {
 
 export function ItemConveyor({ image, textTop, textBottom, alt, isSelected }: ItemConveyorProps) {
   return (
-    <div className="flex items-start gap-4 cursor-pointer group/item">
+    <div data-component="ItemConveyor" data-component-file="src/components/brandpetram/item-conveyor.tsx" data-component-props="true" className="flex items-start gap-4 cursor-pointer group/item">
       <div className={`relative flex-shrink-0  w-32 1536:w-42 aspect-square ${isSelected ? 'ring-2 ring-orange-500' : 'ring-0 ring-transparent'} transition-all duration-200`}>
         <img
           src={image}

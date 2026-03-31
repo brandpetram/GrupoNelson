@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 
 export function TresCards() {
   return (
-    <div className="w-full px-6 810:px-12 1024:px-16 relative z-0">
+    <div data-component="TresCards" data-component-file="src/components/brandpetram/tres-cards.tsx" data-component-props="false" className="w-full px-6 810:px-12 1024:px-16 relative z-0">
       <motion.div
         className="flex flex-col md:flex-row gap-6 lg:gap-8 max-w-280"
         initial={{ y: 600, opacity: 0 }}

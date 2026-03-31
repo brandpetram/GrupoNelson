@@ -1,6 +1,6 @@
 export default function Example() {
     return (
-        <div className="relative isolate overflow-hidden bg-gray-900">
+        <div data-component="Example" data-component-file="src/components/tailwind-ui/cta-sections/simple-centered-with-gradient.tsx" data-component-props="false" className="relative isolate overflow-hidden bg-gray-900">
             <div className="px-6 py-24 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">

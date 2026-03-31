@@ -14,7 +14,7 @@ import { motion } from 'motion/react'
 export function Masonry1() {
 
   return (
-    <div className="container mx-auto px-4 w-11/12 ">
+    <div data-component="Masonry1" data-component-file="src/components/brandpetram/masonry-1.tsx" data-component-props="false" className="container mx-auto px-4 w-11/12 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
 
         {/* COLUMNA 1 */}

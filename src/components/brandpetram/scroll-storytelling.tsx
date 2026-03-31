@@ -335,7 +335,7 @@ export function ScrollStorytelling({
   }, [])
 
   return (
-    <section className={cn('relative md:w-10/12 xl:w-10/12 2xl:w-11/12 mx-auto min-h-screen bg-background', className)}>
+    <section data-component="ScrollStorytelling" data-component-file="src/components/brandpetram/scroll-storytelling.tsx" data-component-props="true" className={cn('relative md:w-10/12 xl:w-10/12 2xl:w-11/12 mx-auto min-h-screen bg-background', className)}>
       {/* Scrollbar progress indicator - estilo JetBrains */}
       <div className="hidden 1200:block absolute left-0 top-0 bottom-0 w-1 z-20">
         {/* Track (fondo de la barra) */}

@@ -48,7 +48,7 @@ const communicationFeatures = [
 
 export default function Sigma() {
   return (
-    <div id="sigma" className="py-16 bg-background overflow-hidden lg:py-24">
+    <div data-component="Sigma" data-component-file="src/components/brandpetram/sigma.tsx" data-component-props="false" id="sigma" className="py-16 bg-background overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         {/* Patrón de puntos izquierdo */}
         <svg

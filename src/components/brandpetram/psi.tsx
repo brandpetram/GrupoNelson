@@ -60,7 +60,7 @@ const faqs = [
 
 export default function Psi() {
   return (
-    <section id="faqs" aria-labelledby="faq-heading" className="bg-background">
+    <section data-component="Psi" data-component-file="src/components/brandpetram/psi.tsx" data-component-props="false" id="faqs" aria-labelledby="faq-heading" className="bg-background">
       <div className="max-w-[1600px] mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="max-w-xl">
           <h2

@@ -5,7 +5,7 @@
 
 export default function Rho() {
   return (
-    <div
+    <div data-component="Rho" data-component-file="src/components/brandpetram/rho.tsx" data-component-props="false"
       id="rho"
       className="mt-32 overflow-hidden relative z-10 [clip-path:polygon(0_0%,100%_3%,100%_100%,0_100%)] md:[clip-path:polygon(0_0%,100%_10%,100%_100%,0_100%)]"
     >

@@ -59,7 +59,7 @@ function ImageCarousel({ className }: { className?: string }) {
 
 export function EditorialCascadaBP() {
   return (
-    <section className="w-10/12 mx-auto pt-10 sm:pt-14 pb-16 sm:pb-24">
+    <section data-component="EditorialCascadaBP" data-component-file="src/components/brandpetram/editorial-cascada-bp.tsx" data-component-props="false" className="w-10/12 mx-auto pt-10 sm:pt-14 pb-16 sm:pb-24">
       {/* Título — ancho completo */}
       <h2 className="w-9/12 768:w-full text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.5rem] 1024:text-[4rem] 1200:text-[3rem] 1366:text-[3.5rem] 1536:text-[4rem] 1728:text-[4.5rem] 1920:text-[5rem] font-extrabold tracking-tighter leading-none text-foreground text-balance">
         De la primera maquiladora de Mexicali a la nave más grande de la ciudad.

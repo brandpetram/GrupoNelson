@@ -35,7 +35,7 @@ export function DiagonalDivider({
     : `M0,0 L1440,${offset} L1440,${height + 10} L0,${height + 10} Z`
 
   return (
-    <div
+    <div data-component="DiagonalDivider" data-component-file="src/components/diagonal-divider.tsx" data-component-props="true"
       className="w-full relative leading-none overflow-hidden"
       style={{
         height: `${height}px`,

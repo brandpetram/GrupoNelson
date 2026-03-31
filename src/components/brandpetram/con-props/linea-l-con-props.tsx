@@ -82,7 +82,7 @@ export function LineaLConProps({
     // Contenedor usa h-full para estirarse a la altura de la celda del grid
     // La línea horizontal se centra con top-1/2, la vertical baja desde ahí
     return (
-      <div
+      <div data-component="LineaLConProps" data-component-file="src/components/brandpetram/con-props/linea-l-con-props.tsx" data-component-props="true"
         className={cn('relative h-full', anchoHorizontal, className)}
         aria-hidden="true"
       >

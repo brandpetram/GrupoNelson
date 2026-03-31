@@ -66,7 +66,7 @@ const faqs = [
 
 export default function FaqSectionsThreeColumnsBP() {
     return (
-        <div className="bg-foreground/5 bg-muted/20 relative">
+        <div data-component="FaqSectionsThreeColumnsBP" data-component-file="src/components/brandpetram/faq-sections-three-columns-bp.tsx" data-component-props="false" className="bg-foreground/5 bg-muted/20 relative">
             <div className="mx-auto w-full 360:w-full 393:w-11/12 430:w-11/12 768:w-10/12 834:w-10/12 1024:w-9/12 1200:w-8/12 1280:max-w-7xl 1366:max-w-7xl 1440:max-w-7xl 1536:max-w-7xl 1728:max-w-7xl 1920:max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
                 <div className="mx-auto w-full 360:w-full 393:w-full 430:w-full 768:max-w-2xl 834:max-w-2xl 1024:max-w-2xl 1200:max-w-2xl 1280:max-w-2xl 1366:max-w-2xl 1440:max-w-2xl 1536:max-w-2xl 1728:max-w-2xl 1920:max-w-2xl text-center">
                     <h2 className="text-2xl 360:text-2xl 393:text-2xl 430:text-3xl 768:text-3xl 834:text-4xl 1024:text-4xl 1200:text-5xl 1280:text-5xl 1366:text-6xl 1440:text-6xl 1536:text-6xl 1728:text-7xl 1920:text-7xl leading-none tracking-tighter font-extrabold text-foreground">

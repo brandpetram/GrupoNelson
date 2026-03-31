@@ -7,7 +7,7 @@ import { TypewriterClients } from '@/components/motion-plus/typewriter-clients'
 
 export default function Mu() {
   return (
-    <div
+    <div data-component="Mu" data-component-file="src/components/brandpetram/mu.tsx" data-component-props="false"
       id="mu"
       className="relative bg-gray-800 overflow-hidden pb-72 xl:pb-96"
       style={{

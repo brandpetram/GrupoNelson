@@ -16,7 +16,7 @@ export function ParkSpecsSidebar({
   onSelectBuilding,
 }: ParkSpecsSidebarProps) {
   return (
-    <div
+    <div data-component="ParkSpecsSidebar" data-component-file="src/components/brandpetram/park-specs-sidebar.tsx" data-component-props="true"
       className="sticky self-start hidden lg:block lg:col-span-3"
       style={{ top: '100px' }}
     >

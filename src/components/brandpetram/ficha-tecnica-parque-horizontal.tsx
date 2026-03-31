@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function FichaTecnicaParqueHorizontal() {
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-6">
+    <div data-component="FichaTecnicaParqueHorizontal" data-component-file="src/components/brandpetram/ficha-tecnica-parque-horizontal.tsx" data-component-props="false" className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-6">
       <div className="w-full max-w-3xl bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800 overflow-hidden">
         <div className="flex flex-col sm:flex-row">
 

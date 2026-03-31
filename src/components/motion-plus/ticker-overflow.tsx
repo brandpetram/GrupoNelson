@@ -58,7 +58,7 @@ export default function TickerOverflow() {
     const logosSecondHalf = todosLosLogos.slice(15)
 
     return (
-        <article>
+        <article data-component="TickerOverflow" data-component-file="src/components/motion-plus/ticker-overflow.tsx" data-component-props="false">
 
             <div className={'ml-40 1920:ml-60 mb-28'}><h2
                 className="768:mt-5 834:mt-5 1024:mt-6 1200:mt-5 1280:mt-5 1366:mt-5 1440:mt-6 1536:mt-6 1728:mt-6 1920:mt-6 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[3rem] 1280:text-[3.3rem] 1366:text-[3.5rem] 1440:text-[3.5rem] 1536:text-[5.3rem] 1728:text-[6rem] 1920:text-[5rem] font-medium text-foreground leading-none tracking-tighter text-balance w-10/12">

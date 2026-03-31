@@ -21,7 +21,7 @@ const pills = [
 
 export default function Upsilon() {
   return (
-    <div className="mt-0 w-11/12 mx-auto">
+    <div data-component="Upsilon" data-component-file="src/components/brandpetram/upsilon.tsx" data-component-props="false" className="mt-0 w-11/12 mx-auto">
       <div className="mb-10">
         {/* Título con pills */}
         <div className="-mt-1 flex flex-wrap items-center gap-3 my-10">

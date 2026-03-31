@@ -23,7 +23,7 @@ export function AlphaBP({
   descripcion = "Diseñamos y construimos parques industriales y naves a medida en Mexicali desde hace más de 60 años.",
 }: AlphaBPProps) {
   return (
-    <div className="relative space-y-12 360:space-y-14 393:space-y-16 430:space-y-18 768:space-y-20 834:space-y-22 1024:space-y-24 1200:space-y-20 1280:space-y-20 1366:space-y-20 1440:space-y-22 1536:space-y-24 1728:space-y-26 1920:space-y-28">
+    <div data-component="AlphaBP" data-component-file="src/components/brandpetram/alpha-bp.tsx" data-component-props="true" className="relative space-y-12 360:space-y-14 393:space-y-16 430:space-y-18 768:space-y-20 834:space-y-22 1024:space-y-24 1200:space-y-20 1280:space-y-20 1366:space-y-20 1440:space-y-22 1536:space-y-24 1728:space-y-26 1920:space-y-28">
       {/* Patrón de dots - Lado izquierdo pegado al viewport */}
       <svg
         aria-hidden="true"

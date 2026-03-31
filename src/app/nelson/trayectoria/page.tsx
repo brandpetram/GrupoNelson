@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TrayectoriaPage() {
   return (
-    <div className="min-h-[200vh] overflow-x-hidden">
+    <div className="min-h-[200vh] overflow-x-clip">
       <Header />
 
       <main>

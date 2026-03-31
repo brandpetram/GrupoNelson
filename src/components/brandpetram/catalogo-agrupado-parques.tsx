@@ -88,7 +88,7 @@ function ParqueCard({ parque }: { parque: IndustrialPark }) {
 
 export function CatalogoAgrupadoParques() {
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 px-6 py-10">
+    <div data-component="CatalogoAgrupadoParques" data-component-file="src/components/brandpetram/catalogo-agrupado-parques.tsx" data-component-props="false" className="min-h-screen bg-zinc-50 dark:bg-zinc-950 px-6 py-10">
       <div className="max-w-5xl mx-auto space-y-12">
 
         {/* Encabezado */}

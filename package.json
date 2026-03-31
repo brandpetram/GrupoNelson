@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/add-dev-labels.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/remove-dev-labels.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

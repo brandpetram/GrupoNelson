@@ -13,7 +13,7 @@ import Image from "next/image"
 
 export function Delta() {
   return (
-    <div className="flex items-center gap-0">
+    <div data-component="Delta" data-component-file="src/components/brandpetram/delta.tsx" data-component-props="false" className="flex items-center gap-0">
       {/* Div izquierdo: Imagen */}
       <div className="w-[50rem] aspect-[3.3/3] relative rounded-t-xs overflow-hidden">
         <Image

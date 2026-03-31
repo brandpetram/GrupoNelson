@@ -5,7 +5,7 @@
 
 export default function Tau() {
   return (
-    <div className="px-10 md:px-0  md:my-20 md:w-11/12 mx-auto overflow-hidden">
+    <div data-component="Tau" data-component-file="src/components/brandpetram/tau.tsx" data-component-props="false" className="px-10 md:px-0  md:my-20 md:w-11/12 mx-auto overflow-hidden">
       {/* Fila 1 */}
       <div className="flex flex-col lg:flex-row">
         {/* Bloque izquierdo: imagen grande + 2 pequeñas */}

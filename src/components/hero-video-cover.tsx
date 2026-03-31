@@ -160,7 +160,7 @@ export function HeroVideoCover({
   const centerOpacity = Math.round(overlayOpacity * 0.3 * 100)
 
   return (
-    <section className={`relative w-full pb-32 1280:pb-0 md:h-screen overflow-hidden ${className}`} aria-label="Hero section">
+    <section data-component="HeroVideoCover" data-component-file="src/components/hero-video-cover.tsx" data-component-props="true" className={`relative w-full pb-32 1280:pb-0 md:h-screen overflow-hidden ${className}`} aria-label="Hero section">
       {/* Contenedor de aspecto fijo para prevenir CLS */}
       <div className="absolute inset-0">
         {/* Imagen estática - fetchPriority="high" permite que el preload scanner del browser la descubra temprano (mejora LCP) */}

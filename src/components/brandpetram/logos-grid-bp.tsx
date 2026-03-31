@@ -38,7 +38,7 @@ export function LogosGridBP({
     paragraph = <>Desde <strong>Gulfstream</strong> hasta <strong>DHL</strong>, las empresas más exigentes del mundo operan en parques de Grupo Nelson. Cada una pasó por su propio proceso de due diligence. Cada una firmó.</>,
 }: LogosGridBPProps) {
     return (
-        <section className="w-11/12 mx-auto py-[3rem] 768:py-[4rem] 1024:py-[5rem] 1200:py-[5.5rem] 1920:py-[6rem]">
+        <section data-component="LogosGridBP" data-component-file="src/components/brandpetram/logos-grid-bp.tsx" data-component-props="true" className="w-11/12 mx-auto py-[3rem] 768:py-[4rem] 1024:py-[5rem] 1200:py-[5.5rem] 1920:py-[6rem]">
             <div className="flex flex-col lg:flex-row gap-[2rem] 1024:gap-[3rem] 1200:gap-[4rem]">
                 {/* Texto — 40% */}
                 <div className="flex flex-col justify-center lg:w-[40%] px-[1rem] 768:px-[1.5rem] 1200:px-[2rem]">

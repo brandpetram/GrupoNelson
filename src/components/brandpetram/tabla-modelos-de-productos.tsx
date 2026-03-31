@@ -63,7 +63,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
   }, [selectedId])
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div data-component="TablaModelosDeProductos" data-component-file="src/components/brandpetram/tabla-modelos-de-productos.tsx" data-component-props="true" className="px-4 sm:px-6 lg:px-8">
 
       {/* Contenedor con scroll horizontal */}
       <div className="flow-root">

@@ -40,7 +40,7 @@ export function LanguageFlags({ className, size = 'md', showLabels = false }: La
   ];
 
   return (
-    <div className={cn('flex items-center gap-2', className)}>
+    <div data-component="LanguageFlags" data-component-file="src/components/language-flags.tsx" data-component-props="true" className={cn('flex items-center gap-2 shrink-0', className)}>
       {languages.map((lang) => (
         <Link
           key={lang.code}
@@ -57,7 +57,7 @@ export function LanguageFlags({ className, size = 'md', showLabels = false }: La
           <img
             src={lang.flag}
             alt={lang.label}
-            className={cn(sizeClasses[size], 'object-cover')}
+            className={cn(sizeClasses[size], 'object-cover shrink-0')}
           />
           {showLabels && (
             <span className="sr-only md:not-sr-only text-xs ml-1">{lang.label}</span>

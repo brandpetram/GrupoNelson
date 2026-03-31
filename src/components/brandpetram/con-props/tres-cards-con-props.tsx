@@ -53,7 +53,7 @@ export function TresCardsConProps({
   card3ImagenAlt = "Servicio y Refacciones para Conveyors",
 }: TresCardsConPropsProps) {
   return (
-    <div className="w-full px-6 810:px-12 1024:px-16 relative z-0">
+    <div data-component="TresCardsConProps" data-component-file="src/components/brandpetram/con-props/tres-cards-con-props.tsx" data-component-props="true" className="w-full px-6 810:px-12 1024:px-16 relative z-0">
       <motion.div
         className="flex flex-col md:flex-row gap-6 lg:gap-8 max-w-280"
         initial={{ y: 600, opacity: 0 }}

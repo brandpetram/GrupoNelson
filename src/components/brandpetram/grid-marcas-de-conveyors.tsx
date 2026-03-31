@@ -63,7 +63,7 @@ const marcas = [
 
 export function LogosMarcas() {
   return (
-    <section className="container pt-12 ">
+    <section data-component="LogosMarcas" data-component-file="src/components/brandpetram/grid-marcas-de-conveyors.tsx" data-component-props="false" className="container pt-12 ">
       {/* Título - editar aquí */}
       <p className="text-muted-foreground text-2xl 1024:text-3xl text-balance mb-6">
         Lorem y Ipsum de Dolor Consectetur:

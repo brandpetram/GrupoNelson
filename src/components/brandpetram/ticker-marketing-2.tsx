@@ -30,7 +30,7 @@ export function TickerMarketing2() {
   ))
 
   return (
-    <div
+    <div data-component="TickerMarketing2" data-component-file="src/components/brandpetram/ticker-marketing-2.tsx" data-component-props="false"
       className="relative overflow-hidden bg-black flex items-center lg:rounded-xs w-full md:w-11/12 1200:w-10/12 mx-auto"
 
     >

@@ -2,7 +2,7 @@ import { ImageIllustration } from "./image-illustration"
 
 export default function HeroSecondaryFour() {
     return (
-        <section>
+        <section data-component="HeroSecondaryFour" data-component-file="src/components/tailarkpro/secondary-hero-four/index.tsx" data-component-props="false">
             <div className="py-24 md:pt-32 lg:pt-44">
                 <div className="mx-auto mb-12 max-w-5xl px-6">
                     <ImageIllustration />

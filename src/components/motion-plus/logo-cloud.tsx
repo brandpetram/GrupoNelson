@@ -52,7 +52,7 @@ export default function LogoCloud() {
     ]
 
     return (
-        <section className="w-full mt-48 py-20 px-4">
+        <section data-component="LogoCloud" data-component-file="src/components/motion-plus/logo-cloud.tsx" data-component-props="false" className="w-full mt-48 py-20 px-4">
             <div className="mx-auto">
                 <h2 className="360:text-[2rem] 393:text-[2rem] 430:text-[2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem]  font-medium tracking-tighter leading-tight text-center mb-12 px-4 text-balance">
                     Clientes y Proveedores que confían en <span className="font-black bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el

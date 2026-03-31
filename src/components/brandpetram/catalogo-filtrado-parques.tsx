@@ -106,7 +106,7 @@ function ParqueCard({ parque }: { parque: IndustrialPark }) {
 
 export function CatalogoFiltradoParques() {
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 px-6 py-10">
+    <div data-component="CatalogoFiltradoParques" data-component-file="src/components/brandpetram/catalogo-filtrado-parques.tsx" data-component-props="false" className="min-h-screen bg-zinc-50 dark:bg-zinc-950 px-6 py-10">
       <div className="max-w-4xl mx-auto space-y-8">
 
         {/* Encabezado */}

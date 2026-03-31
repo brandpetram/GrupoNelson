@@ -69,7 +69,7 @@ export function SplitWithImageBPConProps({
   parrafo4 = "Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
 }: SplitWithImageBPConPropsProps) {
   return (
-    <div className="relative bg-background dark:bg-background transition-colors">
+    <div data-component="SplitWithImageBPConProps" data-component-file="src/components/brandpetram/con-props/split-with-image-bp-con-props.tsx" data-component-props="true" className="relative bg-background dark:bg-background transition-colors">
       <div className="mx-auto max-w-full 360:max-w-full 393:max-w-full 430:max-w-full 768:max-w-full 834:max-w-full 1024:max-w-6xl 1200:max-w-7xl 1280:max-w-7xl 1366:max-w-7xl 1440:max-w-7xl 1536:max-w-7xl 1728:max-w-7xl 1920:max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end">
         <div className="lg:flex lg:w-1/2 360:lg:w-full 393:lg:w-full 430:lg:w-full 768:lg:w-full 834:lg:w-full 1024:lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
           <div className="relative h-60 360:h-60 393:h-64 430:h-80 768:h-80 834:h-96 1024:h-auto 1200:h-auto 1280:h-auto 1366:h-auto 1440:h-auto 1536:h-auto 1728:h-auto 1920:h-auto lg:-ml-8 lg:h-auto lg:w-full lg:grow xl:ml-0">

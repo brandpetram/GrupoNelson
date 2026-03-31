@@ -16,7 +16,7 @@ import { motion } from "motion/react";
 
 export function FeatureSection6BP() {
   return (
-    <section className="bg-background py-16 lg:py-24 relative z-0">
+    <section data-component="FeatureSection6BP" data-component-file="src/components/brandpetram/feature-section-6-bp.tsx" data-component-props="false" className="bg-background py-16 lg:py-24 relative z-0">
       <motion.div
         className="container mx-auto flex flex-col items-center gap-12 px-6 lg:flex-row lg:gap-16"
         initial={{ y: 600, opacity: 0 }}

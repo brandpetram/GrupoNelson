@@ -1,6 +1,6 @@
 export function Iota() {
   return (
-    <div className="flex flex-row ">
+    <div data-component="Iota" data-component-file="src/components/brandpetram/iota.tsx" data-component-props="false" className="flex flex-row ">
       {/* Columna izquierda: 50% */}
       <div className="w-1/2 p-6 md:p-20 1200:p-40">
         {/* Bloque de texto con padding-left generoso */}

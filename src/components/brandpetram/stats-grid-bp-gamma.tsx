@@ -17,7 +17,7 @@ export function StatsGridBPGamma() {
   }, [])
 
   return (
-    <section className="relative py-16 sm:py-24">
+    <section data-component="StatsGridBPGamma" data-component-file="src/components/brandpetram/stats-grid-bp-gamma.tsx" data-component-props="false" className="relative py-16 sm:py-24">
       {/* Dot pattern — lado izquierdo */}
       <svg
         aria-hidden="true"

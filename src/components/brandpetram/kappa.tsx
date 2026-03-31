@@ -1,6 +1,6 @@
 export function Kappa() {
   return (
-    <section className="mx-auto items-center py-16">
+    <section data-component="Kappa" data-component-file="src/components/brandpetram/kappa.tsx" data-component-props="false" className="mx-auto items-center py-16">
       {/* Texto superior centrado */}
         <div className={'bg-background max-h-[70rem]'}>
             <div className={'translate-y-[10rem]'}>

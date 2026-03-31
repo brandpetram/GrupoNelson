@@ -59,7 +59,7 @@ export function ParkSpecsDescriptionList({ building }: ParkSpecsDescriptionListP
   const { generalData, structure, constructionSpecs, loadingArea, exteriorArea, fireProtection, hvac } = building
 
   return (
-    <article className="space-y-8">
+    <article data-component="ParkSpecsDescriptionList" data-component-file="src/components/brandpetram/park-specs-description-list.tsx" data-component-props="true" className="space-y-8">
       {/* Header de la nave */}
       <div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground">{building.name}</h2>

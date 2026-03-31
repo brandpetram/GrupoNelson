@@ -36,7 +36,7 @@ export function ParkHero({
   gridConfig,
 }: ParkHeroProps) {
   return (
-    <section className="relative">
+    <section data-component="ParkHero" data-component-file="src/components/brandpetram/park-hero.tsx" data-component-props="true" className="relative">
       <div className="aspect-[1/1.4] md:aspect-[1/.7] 1280:aspect-[16/7] overflow-hidden">
         <img
           src={park.heroImage}

@@ -21,7 +21,7 @@ export function GunLikeConProps({
   parrafo = "La experiencia, confiabilidad e infraestructura que necesitas en un equipo especializado en conveyors industriales ambaflex",
 }: GunLikeConPropsProps) {
   return (
-    <div className="container mx-auto lg:mt-32 px-4 md:px-0">
+    <div data-component="GunLikeConProps" data-component-file="src/components/brandpetram/con-props/gun-like-con-props.tsx" data-component-props="true" className="container mx-auto lg:mt-32 px-4 md:px-0">
       <div className="flex flex-col items-center md:ml-20 lg:ml-34 gap-0 lg:gap-12 xl:gap-6 md:items-end md:grid  768:grid-cols-[5rem_15rem_1fr] 834:grid-cols-[8rem_15rem_1fr] 1024:grid-cols-[4rem_20rem_1fr] 1200:grid-cols-[14rem_20rem_1fr] 1280:grid-cols-[10rem_20rem_1fr] 1366:grid-cols-[16rem_20rem_1fr] 1728:grid-cols-[1.4fr_20rem_4fr]  xl:gap-x-16 md:gap-y-8">
 
         {/* LineaL expandido - Línea decorativa en forma de L (center-left) */}

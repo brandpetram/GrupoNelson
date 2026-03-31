@@ -8,7 +8,7 @@ interface ImagePlaceholderProps {
  */
 export function ImagePlaceholder({ text, className = '' }: ImagePlaceholderProps) {
   return (
-    <div
+    <div data-component="ImagePlaceholder" data-component-file="src/components/sdi/internal-pages/image-placeholder.tsx" data-component-props="true"
       className={`flex items-center justify-center bg-muted text-muted-foreground ${className}`}
     >
       {text && (

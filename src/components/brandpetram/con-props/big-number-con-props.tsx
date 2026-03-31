@@ -19,7 +19,7 @@ export function BigNumberConProps({
   subtitle
 }: BigNumberConProps) {
   return (
-    <div className="w-full mt-0 overflow-hidden relative z-0">
+    <div data-component="BigNumberConProps" data-component-file="src/components/brandpetram/con-props/big-number-con-props.tsx" data-component-props="true" className="w-full mt-0 overflow-hidden relative z-0">
       <div className="relative">
         {/* Imagen full width */}
         <img

@@ -5,7 +5,7 @@
 
 export default function Nu() {
   return (
-    <div id="nu">
+    <div data-component="Nu" data-component-file="src/components/brandpetram/nu.tsx" data-component-props="false" id="nu">
       <div className="my-24 bg-background overflow-hidden">
         <div className="relative max-w-screen-2xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           {/* Patrón de puntos */}

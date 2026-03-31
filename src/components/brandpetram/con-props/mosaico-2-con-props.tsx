@@ -69,7 +69,7 @@ export function Mosaico2ConProps({
   imagenDerechaAlt = "Imagen destacada"
 }: Mosaico2ConPropsProps) {
   return (
-    <div className="flex flex-col 1024:flex-row gap-0">
+    <div data-component="Mosaico2ConProps" data-component-file="src/components/brandpetram/con-props/mosaico-2-con-props.tsx" data-component-props="true" className="flex flex-col 1024:flex-row gap-0">
       {/* Lado izquierdo: Grid 2x2 */}
       <div className="w-full 1024:w-1/2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">

@@ -79,7 +79,7 @@ export function CincoCardsConProps({
   mostrarCard5 = true,
 }: CincoCardsConPropsProps) {
   return (
-    <div className="w-full px-6 md:px-6 1200:px-6 relative z-0 md:overflow-x-auto 1200:overflow-x-visible">
+    <div data-component="CincoCardsConProps" data-component-file="src/components/brandpetram/con-props/cinco-cards-con-props.tsx" data-component-props="true" className="w-full px-6 md:px-6 1200:px-6 relative z-0 md:overflow-x-auto 1200:overflow-x-visible">
       <motion.div
         className="flex flex-col md:flex-row gap-4 md:gap-4 1024:gap-6 1200:gap-6 lg:gap-8"
         initial={{ y: 300, opacity: 0 }}

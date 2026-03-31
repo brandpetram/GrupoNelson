@@ -20,7 +20,7 @@ export function ParkSpecsLayout({ park, allParks }: ParkSpecsLayoutProps) {
   // Parque sin specs (ej: Nelson I)
   if (!park.hasSpecs || (park.buildings?.length ?? 0) === 0) {
     return (
-      <section className="container mx-auto md:w-10/12 px-4 py-16 lg:py-24">
+      <section data-component="ParkSpecsLayout" data-component-file="src/components/brandpetram/park-specs-layout.tsx" data-component-props="true" className="container mx-auto md:w-10/12 px-4 py-16 lg:py-24">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           <ParkSpecsSidebar
             currentPark={park}

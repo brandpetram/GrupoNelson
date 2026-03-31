@@ -11,7 +11,7 @@
 
 export function Epsilon() {
   return (
-    <div className="relative bg-gradient-to-br from-orange-600 to-red-700 py-32 px-16 overflow-hidden">
+    <div data-component="Epsilon" data-component-file="src/components/brandpetram/epsilon.tsx" data-component-props="false" className="relative bg-gradient-to-br from-orange-600 to-red-700 py-32 px-16 overflow-hidden">
       {/* Letras ABC gigantes de fondo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <h1 className="text-[40rem] font-black text-white opacity-5 tracking-tighter leading-none">

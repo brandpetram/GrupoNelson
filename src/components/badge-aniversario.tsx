@@ -22,7 +22,7 @@ export function BadgeAniversario({
   curvedTextRadius = 58,
 }: BadgeAniversarioProps) {
   return (
-    <div className={`relative flex items-center justify-center ${className}`}>
+    <div data-component="BadgeAniversario" data-component-file="src/components/badge-aniversario.tsx" data-component-props="true" className={`relative flex items-center justify-center ${className}`}>
 
       {/* SVG único que maneja todo — viewBox 0-100 para unidades relativas */}
       <svg

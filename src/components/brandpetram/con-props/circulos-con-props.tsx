@@ -39,7 +39,7 @@ export function CirculosConProps({
   circulo3Descripcion = "Integramos conveyors, automatización y cómputo industrial en tu operación diaria. Te brindamos mantenimiento preventivo y correctivo especializado de calidad. Nuestra experiencia con Fortune 500 respalda cada proyecto.",
 }: CirculosConPropsProps) {
   return (
-    <div className="space-y-5 lg:space-y-2 md:w-11/12">
+    <div data-component="CirculosConProps" data-component-file="src/components/brandpetram/con-props/circulos-con-props.tsx" data-component-props="true" className="space-y-5 lg:space-y-2 md:w-11/12">
 
       {/* Item 1: Soporte - Slate 900 */}
       <motion.div

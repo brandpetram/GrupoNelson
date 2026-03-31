@@ -1,6 +1,6 @@
 export default function Example() {
     return (
-        <div className="relative bg-gray-900">
+        <div data-component="Example" data-component-file="src/components/tailwind-ui/heroes/split-with-image.tsx" data-component-props="false" className="relative bg-gray-900">
             <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
                 <div className="px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-40 lg:pb-48 xl:col-span-6">
                     <div className="mx-auto max-w-lg lg:mx-0">

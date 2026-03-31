@@ -15,7 +15,7 @@ import {GridPoligonos1x2TextoLargo} from "@/components/brandpetram/grid-poligono
 
 export function SidebarSticky1() {
   return (
-    <section className="container mx-auto md:w-9/12 px-4 pb-16 lg:pb-24 ">
+    <section data-component="SidebarSticky1" data-component-file="src/components/brandpetram/sidebar-sticky-1.tsx" data-component-props="false" className="container mx-auto md:w-9/12 px-4 pb-16 lg:pb-24 ">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         {/* Sidebar - sticky */}
         <div

@@ -12,7 +12,7 @@ import Image from "next/image"
 
 export function Beta() {
   return (
-    <div className="relative flex flex-col md:flex-row gap-12 1200:translate-x-10 1280:translate-x-16 1366:translate-x-0  ">
+    <div data-component="Beta" data-component-file="src/components/brandpetram/beta.tsx" data-component-props="false" className="relative flex flex-col md:flex-row gap-12 1200:translate-x-10 1280:translate-x-16 1366:translate-x-0  ">
       {/* Columna 1: Textos arriba + Imagen abajo */}
       <div className="flex flex-col gap-8 md:w-5/12">
         {/* Sección de textos */}

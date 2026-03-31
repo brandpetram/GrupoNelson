@@ -7,7 +7,7 @@
 
 export default function Phi() {
   return (
-    <div className="relative z-10 mt-[10rem]">
+    <div data-component="Phi" data-component-file="src/components/brandpetram/phi.tsx" data-component-props="false" className="relative z-10 mt-[10rem]">
       {/* Imagen circular — anclada a la derecha, puede sangrar fuera del viewport.
           Tamaño del círculo: cambiar w-[600px]. Sangrado: cambiar translate-x-[20%]. */}
       <div className="mx-10 1200:mx-0 1200:absolute right-0 top-0 z-50  1200:-translate-y-[8rem] 1200:translate-x-[44%] 1280:translate-x-[30%] 1728:translate-x-[40%] 1920:translate-x-[27%] 1200:w-[38rem] 1280:w-[42rem]  1366:w-[47rem] 1440:w-[52rem] 1536:w-[52rem] 1728:w-[60rem] 1920:w-[63rem] aspect-square rounded-full overflow-hidden">

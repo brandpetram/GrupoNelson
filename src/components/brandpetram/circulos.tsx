@@ -12,7 +12,7 @@ import { TextoGradiente } from '../ui/brandpetram/texto-gradiente'
 
 export function Circulos() {
   return (
-    <div className="space-y-2">
+    <div data-component="Circulos" data-component-file="src/components/brandpetram/circulos.tsx" data-component-props="false" className="space-y-2">
 
       {/* Item 1: Soporte - Slate 900 */}
       <motion.div

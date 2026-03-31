@@ -28,7 +28,7 @@ export function BadgeSello({
   const textRadius = 85
 
   return (
-    <div
+    <div data-component="BadgeSello" data-component-file="src/components/badge-sello.tsx" data-component-props="true"
       className="relative flex items-center justify-center"
       style={{
         width: `${size}px`,

@@ -44,7 +44,7 @@ const links = [
 
 export default function FooterSection() {
     return (
-        <footer
+        <footer data-component="FooterSection" data-component-file="src/components/footer.tsx" data-component-props="false"
             role="contentinfo"
             className="py-8 sm:py-20 lg:pt-32">
             <div className="mx-auto max-w-6xl space-y-16 px-6 lg:px-12">

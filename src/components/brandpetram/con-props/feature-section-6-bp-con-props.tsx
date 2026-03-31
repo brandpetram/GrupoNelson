@@ -51,7 +51,7 @@ export function FeatureSection6BPConProps({
   imageAlt = "Hero image",
 }: FeatureSection6BPConPropsProps) {
   return (
-    <section className="bg-background py-16 lg:py-24 relative z-0">
+    <section data-component="FeatureSection6BPConProps" data-component-file="src/components/brandpetram/con-props/feature-section-6-bp-con-props.tsx" data-component-props="true" className="bg-background py-16 lg:py-24 relative z-0">
       <motion.div
         className="container mx-auto flex flex-col items-center gap-12 px-6 lg:flex-row lg:gap-16"
         initial={{ y: 350, opacity: 0 }}

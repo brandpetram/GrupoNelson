@@ -229,7 +229,7 @@ export default function Blog() {
     }, [])
 
     return (
-        <section className="bg-background">
+        <section data-component="Blog" data-component-file="src/components/blog-7.tsx" data-component-props="false" className="bg-background">
             <div className="bg-foreground/9 @container relative">
                 <div className="z-1 relative grid-cols-[1fr_auto_1fr] lg:grid">
                     <Decorator className="max-lg:hidden" />

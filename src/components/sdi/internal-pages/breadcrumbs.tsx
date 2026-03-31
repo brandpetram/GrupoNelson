@@ -14,7 +14,7 @@ interface BreadcrumbsProps {
  */
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+    <nav data-component="Breadcrumbs" data-component-file="src/components/sdi/internal-pages/breadcrumbs.tsx" data-component-props="true" className="flex items-center gap-2 text-sm text-muted-foreground">
       <Link href="/" className="hover:text-foreground transition-colors">
         Inicio
       </Link>

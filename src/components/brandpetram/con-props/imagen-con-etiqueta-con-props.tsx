@@ -24,7 +24,7 @@ export function ImagenConEtiquetaConProps({
   etiqueta
 }: ImagenConEtiquetaConProps) {
   return (
-    <div className="relative w-full h-full rounded-none overflow-visible">
+    <div data-component="ImagenConEtiquetaConProps" data-component-file="src/components/brandpetram/con-props/imagen-con-etiqueta-con-props.tsx" data-component-props="true" className="relative w-full h-full rounded-none overflow-visible">
       <Image
         src={src}
         alt={alt}

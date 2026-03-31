@@ -18,7 +18,7 @@ interface ParkMapProps {
 
 export function ParkMap({ parkName, address, lat, lng, zoom = 15, mapsUrl, mobileHeight = '400px', desktopHeight = '560px' }: ParkMapProps) {
   return (
-    <section className="bg-background">
+    <section data-component="ParkMap" data-component-file="src/components/brandpetram/park-map.tsx" data-component-props="true" className="bg-background">
       <div className="grid grid-cols-1 md:grid-cols-2">
 
         {/* Columna izquierda — info centrada verticalmente */}

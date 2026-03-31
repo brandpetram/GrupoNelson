@@ -49,7 +49,7 @@ const labels = [
 
 export function HalfCircle() {
   return (
-    <div
+    <div data-component="HalfCircle" data-component-file="src/components/brandpetram/half-circle.tsx" data-component-props="false"
       className="flex items-end justify-center relative"
       style={{
         height: "100vh",

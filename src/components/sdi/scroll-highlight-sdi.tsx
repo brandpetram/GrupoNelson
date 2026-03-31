@@ -70,7 +70,7 @@ export function ScrollHighlightSDI() {
   const [activeWord, setActiveWord] = useState<number | null>(null)
 
   return (
-    <div className="sdi-scroll-container">
+    <div data-component="ScrollHighlightSDI" data-component-file="src/components/sdi/scroll-highlight-sdi.tsx" data-component-props="false" className="sdi-scroll-container">
       <h1 className="sdi-scroll-title">GRUPO NELSON</h1>
       <ul className="sdi-scroll-list">
         {sdiWords.map((word, index) => (

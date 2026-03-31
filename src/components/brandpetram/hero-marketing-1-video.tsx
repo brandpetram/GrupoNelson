@@ -48,7 +48,7 @@ export function HeroMarketing1Video() {
   const patternId = useId()
 
   return (
-    <div className="max-w-screen-3xl mx-auto px-4 sm:px-12 lg:px-12">
+    <div data-component="HeroMarketing1Video" data-component-file="src/components/brandpetram/hero-marketing-1-video.tsx" data-component-props="false" className="max-w-screen-3xl mx-auto px-4 sm:px-12 lg:px-12">
       {/* Video de fondo con overlay y grid */}
       <div className="relative bg-background">
         <motion.div

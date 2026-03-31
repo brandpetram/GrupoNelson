@@ -5,7 +5,7 @@
 
 export default function Omicron() {
   return (
-    <div className="pb-32 mt-32 w-10/12 mx-auto text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground overflow-hidden">
+    <div data-component="Omicron" data-component-file="src/components/brandpetram/omicron.tsx" data-component-props="false" className="pb-32 mt-32 w-10/12 mx-auto text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground overflow-hidden">
       {/* Fila 1 */}
       <div className="grid grid-cols-12 gap-5 lg:gap-20 mb-10 md:mb-0">
         <div className="col-span-3 md:col-span-4">

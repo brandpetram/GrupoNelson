@@ -180,7 +180,7 @@ const legalLinks = [
 
 export default function Footer1() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer data-component="Footer1" data-component-file="src/components/brandpetram/footer-1/index.tsx" data-component-props="false" className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-6 xl:gap-8">

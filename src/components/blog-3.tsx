@@ -275,7 +275,7 @@ export default function Blog() {
     const lastArticles = isMobile ? 1 : isMedium ? 2 : 3
 
     return (
-        <section className="bg-background @container py-16 md:py-24">
+        <section data-component="Blog" data-component-file="src/components/blog-3.tsx" data-component-props="false" className="bg-background @container py-16 md:py-24">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="max-w-md">
                     <span className="text-muted-foreground">Blog</span>

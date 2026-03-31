@@ -10,7 +10,7 @@ export function SidebarPortafolioBaumex({
   totalM2,
 }: SidebarPortafolioBaumexProps) {
   return (
-    <div
+    <div data-component="SidebarPortafolioBaumex" data-component-file="src/components/brandpetram/sidebar-portafolio-baumex.tsx" data-component-props="true"
       className="sticky self-start hidden lg:block lg:col-span-3"
       style={{ top: '120px' }}
     >

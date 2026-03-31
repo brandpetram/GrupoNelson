@@ -29,7 +29,7 @@ const conveyorsCarruselItems = [
 
 export function CarruselConveyors() {
   return (
-    <section className="py-16 pl-4 md:pl-[10%]">
+    <section data-component="CarruselConveyors" data-component-file="src/components/brandpetram/carrusel.tsx" data-component-props="false" className="py-16 pl-4 md:pl-[10%]">
       <Titulo
         as="h2"
         fontSize="text-3xl md:text-6xl 1280:text-7xl"

@@ -13,7 +13,7 @@ import {CuadritosLluvia} from "@/components/ui/brandpetram/cuadritos-lluvia"
 
 export function Gamma() {
   return (
-      <div>
+      <div data-component="Gamma" data-component-file="src/components/brandpetram/gamma.tsx" data-component-props="false">
           <h2 className="1200:-translate-y-10 -mt-24 translate-x-7 1200:translate-x-40 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[3.4rem] 1280:text-[4rem] 1366:text-[4.2rem] 1440:text-[4.5rem] 1536:text-[5rem] 1728:text-[5rem] 1920:text-[6rem] font-extrabold text-foreground leading-none tracking-tighter">
               Naves Industriales<br/>
               Fabricadas a la Medida.

@@ -83,7 +83,7 @@ export function FichaTecnicaParqueDetalle() {
   const [naveExpandida, setNaveExpandida] = useState<string | null>(null)
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+    <div data-component="FichaTecnicaParqueDetalle" data-component-file="src/components/brandpetram/ficha-tecnica-parque-detalle.tsx" data-component-props="false" className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
 
       {/* Lightbox */}
       {lightboxAbierto && (

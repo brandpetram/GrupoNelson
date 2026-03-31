@@ -5,7 +5,7 @@
 
 export default function Xi() {
   return (
-    <div id="xi" className="relative bg-background">
+    <div data-component="Xi" data-component-file="src/components/brandpetram/xi.tsx" data-component-props="false" id="xi" className="relative bg-background">
       {/* Imagen — posicionada absolutamente para llenar toda la altura */}
       <div className="md:absolute md:inset-0">
         <div className="md:absolute md:inset-y-0 md:left-0 md:w-1/2">

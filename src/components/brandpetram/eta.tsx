@@ -5,7 +5,7 @@
 
 export function Eta() {
   return (
-     <div className="w-11/12 mx-auto relative">
+     <div data-component="Eta" data-component-file="src/components/brandpetram/eta.tsx" data-component-props="false" className="w-11/12 mx-auto relative">
       {/* Elemento decorativo - esquina superior derecha */}
       <div className="absolute top-0 right-0 w-1/2 md:w-[25%] h-[50%] border-t border-r border-gray-400 dark:border-gray-600"></div>
 

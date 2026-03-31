@@ -68,7 +68,7 @@ export function LeedPageLayout({
   },
 }: LeedPageLayoutProps) {
   return (
-    <div className={cn('relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0', className)}>
+    <div data-component="LeedPageLayout" data-component-file="src/components/brandpetram/leed-page-layout.tsx" data-component-props="true" className={cn('relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0', className)}>
       {/* Grid decorativo de fondo */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
