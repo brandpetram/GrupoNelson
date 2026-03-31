@@ -218,7 +218,7 @@
     --border-illustration: color-mix(in oklab, var(--color-zinc-950) 7.5%, transparent);
     --popover: var(--color-white);
     --popover-foreground: var(--color-zinc-950);
-    --primary: #002c81;
+    --primary: #2563eb;
     --primary-foreground: var(--color-white);
     --secondary: var(--color-zinc-100);
     --secondary-foreground: var(--color-zinc-950);

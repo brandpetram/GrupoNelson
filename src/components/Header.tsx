@@ -311,16 +311,16 @@ export default function Header({
         {/* Contenedor externo fijo */}
         <div
           className={cn(
-            'fixed inset-x-0 top-0 z-50 pt-4 md:pt-6 1200:pt-3',
-            !isLarge && !isMobileMenuOpen && 'h-18 md:h-28 max-1200:overflow-hidden max-1200:px-2',
-            isMobileMenuOpen && 'max-1200:bg-background/75 max-1200:h-screen max-1200:backdrop-blur max-1200:px-2'
+            'fixed inset-x-0 top-0 z-50 pt-0 1200:pt-3',
+            !isLarge && !isMobileMenuOpen && 'h-20 md:h-28 max-1200:overflow-hidden',
+            isMobileMenuOpen && 'max-1200:bg-background/75 max-1200:h-screen max-1200:backdrop-blur'
           )}
         >
           {/* Contenedor interno que se encoge con efecto */}
           <div
             className={cn(
               // Estado inicial
-              'mx-auto w-full max-w-[1280px] rounded-2xl border border-transparent px-4 1200:px-6',
+              'mx-auto w-full max-w-[1280px] rounded-none 1200:rounded-2xl border border-transparent px-4 1200:px-6',
               'ring-1 ring-transparent shadow-md shadow-transparent',
               'transition-all duration-500 ease-in-out',
               // Estado scroll - SE ENCOGE y aparece fondo
@@ -345,12 +345,12 @@ export default function Header({
               {/* Mobile layout */}
               <div
                 className={cn(
-                  'flex justify-between items-center gap-4 h-14 md:h-20 w-full 1200:hidden px-2 768:px-8 shrink-0',
+                  'flex justify-between items-center gap-4 py-5 md:py-0 md:h-20 w-full 1200:hidden px-2 768:px-8 shrink-0',
                   isMobileMenuOpen && 'border-b'
                 )}
               >
                 <Link href="/" aria-label="home" className="flex items-center space-x-2">
-                  <LogoNelson variant={logoVariant} width={140} className="scale-100 768:scale-[1.35] 1024:scale-150" />
+                  <LogoNelson variant={logoVariant} width={140} className="origin-left scale-75 393:scale-90 430:scale-100 768:scale-[1.35] 1024:scale-150" />
                 </Link>
 
                 {/* Banderas en móvil/tablet */}
@@ -438,11 +438,11 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
     : null;
 
   return (
-    <nav role="navigation" className="flex-1 min-h-0 flex bg-background">
+    <nav role="navigation" className="flex-1 min-h-0 flex bg-background overflow-hidden relative">
       {/* Main Menu */}
       <div
         className={cn(
-          'w-full flex flex-col transition-transform duration-300 ease-in-out',
+          'w-full flex flex-col overflow-y-auto transition-transform duration-300 ease-in-out',
           activeSubmenu ? '-translate-x-full' : 'translate-x-0'
         )}
       >
@@ -481,7 +481,8 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
       {/* Submenu */}
       <div
         className={cn(
-          'absolute inset-0 min-h-0 flex flex-col bg-background transition-transform duration-300 ease-in-out',
+          'fixed inset-0 top-20 min-h-0 flex flex-col bg-background transition-transform duration-300 ease-in-out z-50',
+          activeSubmenu ? 'pointer-events-auto' : 'pointer-events-none',
           activeSubmenu ? 'translate-x-0' : 'translate-x-full'
         )}
       >

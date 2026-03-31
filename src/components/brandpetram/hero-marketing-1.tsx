@@ -28,17 +28,17 @@ export function HeroMarketing1() {
 
       emblemaInterior: (
           <PoligonoIcono1
-              icon={<EmblemaGrupoNelson className="w-8 md:w-10 1024:w-16 1200:w-20 h-auto" />}
+              icon={<EmblemaGrupoNelson className="w-full h-full -translate-x-0.5" />}
               backgroundColor="bg-blue-500 to-blue-600 bg-linear-to-br"
               iconColor="text-white"
-              iconSize="size:10 md:size:20 1024s:size-16"
+              iconSize="size-13 md:size-20 1024:size-26"
               hoverEffect="rotate"
-              className="rounded-sm p-7"
+              className="rounded-sm p-4 md:p-6 1024:p-9"
           />
       ),
-      clasesEmblemaInterior: 'bg-gray-300 aspect-square max-h-10 md:max-h-20 1024:max-h-32 bg-transparent',
+      clasesEmblemaInterior: 'bg-transparent',
     clasesTitulo: 'leading-none font-extrabold text-left 1728:text-[4rem] 1920:text-[5rem]',
-    clasesTexto: 'leading-normal tracking-wide 1200:text-[2rem] font-light',
+    clasesTexto: 'leading-normal tracking-wide 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.5rem] 1200:text-[1.625rem] font-light',
   }
 
   return (

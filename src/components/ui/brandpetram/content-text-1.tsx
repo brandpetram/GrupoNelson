@@ -151,7 +151,7 @@ export function ContentText1({
               clasesTexto
             )}>
               {emblemaInterior && (
-                <div className={cn('float-left mr-6 mb-2', clasesEmblemaInterior)}>
+                <div className={cn('float-left mr-6 mb-3 1024:mr-8 1024:mb-5', clasesEmblemaInterior)}>
                   {emblemaInterior}
                 </div>
               )}

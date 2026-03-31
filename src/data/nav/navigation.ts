@@ -5,10 +5,10 @@
 // Columna única: La Empresa
 export const whyNelsonLinks = [
   {
-    href: '/nelson/nuestra-historia',
-    name: 'Nuestra Historia',
-    description: '60 años de experiencia en desarrollo industrial',
-    iconKey: 'history',
+    href: '/nelson/trayectoria',
+    name: 'Acerca de Grupo Nelson',
+    description: 'Empresas Fortune 500 confían en nosotros',
+    iconKey: 'trophy',
   },
   {
     href: '/nelson/diferencia-nelson',
@@ -23,10 +23,10 @@ export const whyNelsonLinks = [
     iconKey: 'users',
   },
   {
-    href: '/nelson/trayectoria',
-    name: 'Trayectoria Comprobada',
-    description: 'Empresas Fortune 500 confían en nosotros',
-    iconKey: 'trophy',
+    href: '/nelson/nuestra-historia',
+    name: 'Nuestra Historia',
+    description: '60 años de experiencia en desarrollo industrial',
+    iconKey: 'history',
   },
 ];
 
@@ -113,7 +113,7 @@ export const solutionsServicesLinks = [
 // Columna 2: Calidad y Estándares
 export const solutionsIndustryLinks = [
   {
-    href: '/constructora/certificacion-leed',
+    href: '/constructora/leed',
     name: 'Certificación LEED',
     description: 'Construcción sustentable certificada',
     iconKey: 'leaf',

@@ -19,6 +19,13 @@ export default function DiferenciaNelsonPage() {
           <FeatureSection8BP />
         </div>
 
+        {/* ── Banner divisor ── */}
+        <div className="px-10 1200:px-0 lg:max-w-5xl xl:max-w-6xl 1728:max-w-[1400px] 1920:max-w-[1600px] mx-auto py-20 md:py-32">
+          <h1 className="text-balance text-foreground px-7 font-light text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] leading-relaxed">
+            Lorem ipsum dolor sit amet, <span className="font-bold text-blue-600 uppercase">consectetur adipiscing</span> elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.
+          </h1>
+        </div>
+
         {/* ── Diferenciador 1: 60 años ── */}
         <SplitSimpleBP
           tagline="60+ años"

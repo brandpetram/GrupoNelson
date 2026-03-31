@@ -108,15 +108,15 @@ export function FeatureSection6BPConProps({
           </div>
         </div>
 
-        <div className="w-full 360:w-full 393:w-full 430:w-full 768:w-full 834:w-full 1024:flex-1 1200:flex-1 1280:flex-1 1366:flex-1 1440:flex-1 1536:flex-1 1728:flex-1 1920:flex-1">
-          <AspectRatio ratio={1}>
+        <div className="w-full 1024:flex-1 overflow-hidden rounded-xl">
+          <div className="relative aspect-square">
             <Image
               src={imageSrc}
               alt={imageAlt}
               fill
-              className="h-full w-full rounded-xl object-cover"
+              className="h-full w-full object-cover"
             />
-          </AspectRatio>
+          </div>
         </div>
       </motion.div>
     </section>

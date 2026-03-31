@@ -52,10 +52,10 @@ export function LogosGridBP2({
                             {tagline}
                         </p>
                     )}
-                    <h2 className="text-[1.5rem] 360:text-[1.5rem] 393:text-[1.5rem] 430:text-[1.75rem] 768:text-[2.75rem] 834:text-[3rem] 1024:text-[3.5rem] 1200:text-[2.75rem] 1280:text-[3rem] 1366:text-[3.25rem] 1440:text-[3.5rem] 1536:text-[3.75rem] 1728:text-[4.25rem] 1920:text-[4.5rem] text-foreground leading-none tracking-tighter font-extrabold text-balance">
+                    <h2 className="text-[2rem] 360:text-[2.25rem] 393:text-[2.5rem] 430:text-[2.75rem] 768:text-[3.5rem] 834:text-[4rem] 1024:text-[3.5rem] 1200:text-[2.75rem] 1280:text-[3rem] 1366:text-[3.25rem] 1440:text-[3.5rem] 1536:text-[3.75rem] 1728:text-[4.25rem] 1920:text-[4.5rem] text-foreground leading-none tracking-tighter font-extrabold text-balance">
                         {title}
                     </h2>
-                    <p className="mt-[1rem] 768:mt-[1.5rem] 1200:mt-[2rem] text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1rem] 834:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide">
+                    <p className="mt-[1rem] 768:mt-[1.5rem] 1200:mt-[2rem] text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide">
                         {paragraph}
                     </p>
                 </div>

@@ -41,16 +41,19 @@ export function TarjetaHeroOriginal({
 
       {/* Botones CTA */}
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button size="lg" className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto">
-          {"Conocer más"}
+        <Button asChild size="lg" className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto">
+          <a href="/nelson/diferencia-nelson">Conocer más</a>
         </Button>
         <Button
+          asChild
           size="lg"
           variant="ghost"
           className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto text-white border border-white/20 hover:bg-white/10 hover:text-white"
         >
-          <span>{"Contactar"}</span>
-          <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 1024:h-6 1024:w-6 1200:h-5 1200:w-5 1280:h-5 1280:w-5 1366:h-5 1366:w-5 1440:h-6 1440:w-6 1536:h-6 1536:w-6 1728:h-6 1728:w-6 1920:h-7 1920:w-7" />
+          <a href="/contacto">
+            <span>Contactar</span>
+            <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 1024:h-6 1024:w-6 1200:h-5 1200:w-5 1280:h-5 1280:w-5 1366:h-5 1366:w-5 1440:h-6 1440:w-6 1536:h-6 1536:w-6 1728:h-6 1728:w-6 1920:h-7 1920:w-7" />
+          </a>
         </Button>
       </div>
     </div>
