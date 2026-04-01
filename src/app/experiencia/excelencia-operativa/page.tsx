@@ -1,132 +1,145 @@
-import type { Metadata } from 'next'
-import Header from '@/components/Header'
+import type { Metadata } from "next";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Header from "@/components/Header";
+import { Container, Separator } from "@/components/container";
+import { ProductIllustration } from "@/app/(marketing)/product/sections/product-illustration";
+import LogoCloudClientes from "./sections/logo-cloud-clientes";
+import { FeatureCardsResultados } from "./sections/feature-cards-resultados";
+import ComoTrabajamos from "./sections/como-trabajamos";
+import { CapacidadesInhouse } from "./sections/capacidades-inhouse";
+import { CallToAction as CtaExcelencia } from "./sections/cta";
 
 export const metadata: Metadata = {
-  title: 'Excelencia Operativa | Grupo Nelson',
-}
+  title: "Excelencia Operativa | Grupo Nelson",
+  description:
+    "75 proyectos completados en 28 años. 1,092,745 horas hombre sin fatalidades. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.",
+};
 
 export default function ExcelenciaOperativaPage() {
   return (
-    <div className="min-h-[200vh]">
-      <Header />
+    <div className="overflow-x-clip ">
+      <div className="pb-32 bg-zinc-300/10 dark:bg-zinc-950/10">
+        <Header />
+      </div>
 
-      <main>
-        {/* ══════════════════════════════════════════════════════════
-            COPY COMERCIAL — Excelencia Operativa
-            Ángulo: RESULTADOS (lo que ya logramos)
-            vs. Constructora que presenta lo mismo como SERVICIOS
-            Fuente: docs/fase-2-desempaquetado-comercial-baumex.md
-            Reglas: /Proyectos/copywriting-b2b/reglas-de-copywriting-b2b.md
-            Status: BORRADOR — pendiente de aprobación
-            ══════════════════════════════════════════════════════════ */}
-        <div className="px-8 md:px-12 pt-20 pb-32">
+      <main className="bg-blue-950/10 dark:bg-blue-500/20">
+        {/* Hero + Tabla de Control de Obra */}
+        <section id="home" className="overflow-hidden  ">
+          <div className="relative">
+            <Container className="@4xl:px-12 px-6 py-3 text-center">
+              <span className="text-muted-foreground font-mono text-sm uppercase">
+                Excelencia Operativa
+              </span>
+            </Container>
+            <Container asGrid>
+              <div className="grid grid-cols-10 gap-px">
+                <div aria-hidden className="max-sm:hidden">
+                  <div data-grid-content />
+                </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            4.5 millones de pies cuadrados construidos en Mexicali con cero accidentes fatales
-          </h1>
+                <div className="col-span-full sm:col-span-8">
+                  <div data-grid-content className="pb-16 pt-12 text-center">
+                    <div className="relative mx-auto max-w-3xl text-center">
+                      <h1 className="text-foreground text-balance text-5xl font-semibold tracking-tight lg:text-6xl">
+                        Control de obra. Avance medible. Reportes semanales.
+                      </h1>
+                      <p className="text-muted-foreground mx-auto mb-8 mt-6 text-balance text-lg">
+                        75 proyectos completados en 28 años. 1,092,745 horas
+                        hombre trabajadas sin una sola fatalidad. Así se ve la
+                        excelencia operativa cuando se mide semana a semana.
+                      </p>
 
-          <p className="text-xl leading-relaxed mb-12">
-            La excelencia operativa no es un eslogan — es un resultado medible. 75 proyectos
-            completados en 28 años. 1,092,745 horas hombre trabajadas sin una sola muerte.
-            404 días consecutivos sin accidentes en el proyecto más grande de Mexicali.
-            33 corporaciones internacionales que regresaron después del primer proyecto.
-            Estos son los resultados de Baumex, la constructora in-house de Grupo Nelson.
-          </p>
+                      <Button
+                        asChild
+                        size="lg"
+                        className="border-transparent px-4 text-sm shadow-xl shadow-blue-900/40"
+                      >
+                        <Link href="/contacto">Solicita una consulta</Link>
+                      </Button>
+                      <span className="text-muted-foreground mt-3 block text-center text-sm">
+                        Constructora Baumex · Grupo Nelson
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
-          <div className="flex flex-wrap gap-12 mb-24">
-            <div><p className="text-4xl font-bold leading-none">4.5M ft²</p><p className="text-muted-foreground">construidos</p></div>
-            <div><p className="text-4xl font-bold leading-none">0</p><p className="text-muted-foreground">accidentes fatales</p></div>
-            <div><p className="text-4xl font-bold leading-none">404</p><p className="text-muted-foreground">días sin accidentes</p></div>
-            <div><p className="text-4xl font-bold leading-none">80%</p><p className="text-muted-foreground">clientes que repiten</p></div>
+                <div aria-hidden className="max-sm:hidden">
+                  <div data-grid-content />
+                </div>
+              </div>
+            </Container>
+            <div className="relative">
+              <div className="absolute inset-0 grid grid-rows-[auto_1fr]">
+                <Container asGrid decorators={6}>
+                  <div
+                    aria-hidden
+                    className="col-span-full grid grid-cols-10 gap-px"
+                  >
+                    {Array.from({ length: 6 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="odd:aspect-2/1 last:aspect-2/1 aspect-square last:col-span-2 odd:col-span-2"
+                      >
+                        <div data-grid-content />
+                      </div>
+                    ))}
+                  </div>
+                  <div
+                    aria-hidden
+                    className="col-span-full grid grid-cols-10 gap-px"
+                  >
+                    {Array.from({ length: 7 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="even:aspect-2/1 aspect-square odd:rounded odd:bg-blue-200 even:col-span-2"
+                      >
+                        <div data-grid-content />
+                      </div>
+                    ))}
+                  </div>
+                  <div
+                    aria-hidden
+                    className="col-span-full grid grid-cols-10 gap-px"
+                  >
+                    {Array.from({ length: 6 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="odd:aspect-2/1 last:aspect-2/1 aspect-square last:col-span-2 odd:col-span-2"
+                      >
+                        <div data-grid-content />
+                      </div>
+                    ))}
+                  </div>
+                </Container>
+
+                <Container aria-hidden decorators={6}>
+                  <></>
+                </Container>
+              </div>
+              <div className="-translate-y-6">
+                <ProductIllustration />
+              </div>
+            </div>
           </div>
+          <LogoCloudClientes />
+        </section>
+        <Separator className="h-24" />
 
-          <hr className="border-border my-16" />
+        {/* Cards de resultados: Seguridad + Track Record */}
+        <FeatureCardsResultados />
+        <Separator className="h-24" />
 
-          {/* ── Seguridad como resultado ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            1,092,745 horas hombre trabajadas en construcción de naves industriales en Mexicali — el scorecard completo
-          </h2>
+        {/* Cómo trabajamos: 3 pasos */}
+        <ComoTrabajamos />
+        <Separator className="h-24" />
 
-          <p className="text-lg leading-relaxed mb-6">
-            En el proyecto Gulfstream 550K (52,200 m²), Baumex gestionó simultáneamente
-            45 empresas subcontratistas y 450 trabajadores en campo. El resultado:
-          </p>
+        {/* Capacidades in-house + Certificaciones */}
+        <CapacidadesInhouse />
 
-          <ul className="list-disc pl-6 text-lg leading-relaxed mb-6 space-y-2">
-            <li>1,092,745 horas hombre trabajadas</li>
-            <li>Cero muertes</li>
-            <li>404 días consecutivos sin accidentes</li>
-            <li>1 caso con días perdidos, 4 con restricción, 5 otros registrables</li>
-            <li>Scorecard de seguridad disponible para revisión</li>
-          </ul>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Evalúa estos números. Baumex no oculta incidentes menores — los registra
-            transparentemente. El scorecard completo está disponible porque la seguridad
-            se demuestra con datos, no con declaraciones.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── Track record como resultado ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            75 proyectos de naves industriales completados en 28 años — desde 5,000 m² hasta 52,200 m²
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            El rango de proyectos completados por Baumex refleja versatilidad de ejecución:
-            desde naves de 5,000 m² hasta la nave industrial más grande de Mexicali
-            (Gulfstream 550K, 52,200 m²). 7 sectores industriales: aeroespacial,
-            dispositivos médicos, electrónica, HVAC, logística, manufactura pesada y papel.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Presencia geográfica documentada: Mexicali, Hermosillo, San Luis Potosí,
-            Tecate, El Salto (Jalisco) y Los Cabos. Cada proyecto con evidencia fotográfica
-            de cada fase de construcción.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            Accede a 28 años de resultados verificables proyecto por proyecto.
-            Gulfstream lleva 35 años construyendo con Baumex. Honeywell, 30.
-            DHL y Vertiv regresaron después del primer proyecto.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── Gestión de proyecto como resultado ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Gestión de 45 subcontratistas simultáneos y 450 trabajadores en una sola nave industrial en Mexicali
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            La complejidad del proyecto Gulfstream 550K: coordinar 45 empresas subcontratistas,
-            450 trabajadores en campo, 18 hitos de ruta crítica interdependientes,
-            equipos con meses de tiempo de entrega (transformadores, chillers, bombas),
-            y permisos con CFE en contexto de rezago de infraestructura eléctrica en Mexicali.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-16">
-            El resultado: nave entregada. 55,500 m² bajo techo. 13,500 m² de oficinas.
-            20 MW de capacidad eléctrica instalada. Certificación FM Global.
-            Apuntando a LEED Gold. Sin retrasos en ruta crítica.
-          </p>
-
-          <hr className="border-border my-16" />
-
-          {/* ── CTA ── */}
-          <h2 className="text-3xl font-bold leading-snug mb-6">
-            Opera tu nave industrial en Mexicali con la constructora que ya demostró estos resultados
-          </h2>
-
-          <p className="text-lg leading-relaxed">
-            4.5 millones de pies cuadrados. 75 proyectos. Cero muertes.
-            Solicita una consulta para tu proyecto.
-          </p>
-
-        </div>
-        {/* FIN COPY COMERCIAL */}
+        {/* CTA */}
+        <CtaExcelencia />
       </main>
     </div>
-  )
+  );
 }
