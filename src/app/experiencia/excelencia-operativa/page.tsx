@@ -9,6 +9,9 @@ import { FeatureCardsResultados } from "./sections/feature-cards-resultados";
 import ComoTrabajamos from "./sections/como-trabajamos";
 import { CapacidadesInhouse } from "./sections/capacidades-inhouse";
 import { CallToAction as CtaExcelencia } from "./sections/cta";
+import { TestimonialSection } from "@/app/(marketing)/product/sections/testimonial";
+import { NotesFeatures } from "@/app/(marketing)/product/sections/notes-features";
+import { TestimonialsSection } from "@/app/(marketing)/product/sections/testimonials-section";
 
 export const metadata: Metadata = {
   title: "Excelencia Operativa | Grupo Nelson",
@@ -134,8 +137,18 @@ export default function ExcelenciaOperativaPage() {
         <ComoTrabajamos />
         <Separator className="h-24" />
 
+        {/* Testimonial (Tailark original) */}
+        <TestimonialSection />
+        <Separator className="h-24" />
+
         {/* Capacidades in-house + Certificaciones */}
         <CapacidadesInhouse />
+
+        {/* Notes Features (Tailark original) */}
+        <NotesFeatures />
+
+        {/* Testimonials múltiples (Tailark original) */}
+        <TestimonialsSection />
 
         {/* CTA */}
         <CtaExcelencia />
