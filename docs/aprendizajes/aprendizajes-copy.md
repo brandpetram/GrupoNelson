@@ -58,7 +58,7 @@ Documento vivo. Se actualiza cada vez que encontramos un error, un patrón a evi
 5. **Nombres propios > categorías** — "Gulfstream" no "empresa aeroespacial Fortune 500"
 6. **Narrativa de hechos, no de opiniones**
 7. **Test del competidor** — si Yamsa puede decir lo mismo, reescribir
-8. **Cero clichés** — lista prohibida en `docs/research-copywriting-b2b-industrial.md`
+8. **Cero clichés** — lista prohibida en `docs/research/research-copywriting-b2b-industrial.md`
 9. **Keywords integrados en frases imperativas naturales**
 10. **Respuesta directa en los primeros 40-60 palabras** (para GEO)
 11. **Lenguaje positivo en headings** — nunca invocar lo negativo

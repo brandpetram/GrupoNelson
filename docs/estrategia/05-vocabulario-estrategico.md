@@ -5,7 +5,7 @@
 
 ## Propósito de este documento
 
-El propósito de definir y usar consistentemente este vocabulario estratégico es **posicionar a Grupo Nelson** con los keywords definidos en [3-keywords-con-los-que-queremos-posicionar-a-grupo-nelson.md](./3-keywords-con-los-que-queremos-posicionar-a-grupo-nelson.md).
+El propósito de definir y usar consistentemente este vocabulario estratégico es **posicionar a Grupo Nelson** con los keywords definidos en [03-keywords-posicionamiento.md](./03-keywords-posicionamiento.md).
 
 **Keyword principal:** Naves Industriales Mexicali
 

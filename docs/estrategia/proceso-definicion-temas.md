@@ -64,8 +64,8 @@ En `/proyecto/contenidos` definimos que la página `/nelson/diferencia-nelson` t
 
 Para alimentar el tema de Baumex Constructora, creamos dos documentos:
 
-- **`docs/plan-para-recabar-info-de-constructora-baumex-y-posteriormente-crear-contenido-comercial.md`** — Define la estrategia de recolección en dos fases.
-- **`docs/temario-sobre-baumex-constructora.md`** — El archivo donde se vació todo el material crudo.
+- **`docs/planes/plan-para-recabar-info-de-constructora-baumex-y-posteriormente-crear-contenido-comercial.md`** — Define la estrategia de recolección en dos fases.
+- **`docs/copy/constructora/temario-baumex.md`** — El archivo donde se vació todo el material crudo.
 
 Recibimos capturas de pantalla de presentaciones internas y reportes semanales de obra (Weekly Reports). De ahí extrajimos 31 bloques de información cruda (`id-info-1` a `id-info-31`) que incluyen:
 
@@ -84,7 +84,7 @@ Todo esto fue anotado fielmente, sin darle ángulo comercial.
 
 ### Lo que hicimos en el Paso 3 (Desempaquetar) ✅
 
-El desempaquetado se completó en `docs/fase-2-desempaquetado-comercial-baumex.md`. Los 31 bloques de material crudo se clasificaron en 6 temas comerciales:
+El desempaquetado se completó en `docs/copy/constructora/desempaquetado-comercial-baumex.md`. Los 31 bloques de material crudo se clasificaron en 6 temas comerciales:
 
 - **Tema A:** Capacidad In-House y Ventaja Estructural
 - **Tema B:** Track Record — Portafolio y Escala de Operación

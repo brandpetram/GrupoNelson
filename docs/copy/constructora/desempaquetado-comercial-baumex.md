@@ -2,11 +2,11 @@
 
 ## Contexto
 
-Este documento toma los 31 bloques de material crudo recolectados en la Fase 1 (`docs/temario-sobre-baumex-constructora.md`) y los transforma en agrupaciones temáticas con ángulo comercial, listos para alimentar el contenido de la página `/constructora/baumex`.
+Este documento toma los 31 bloques de material crudo recolectados en la Fase 1 (`docs/copy/constructora/temario-baumex.md`) y los transforma en agrupaciones temáticas con ángulo comercial, listos para alimentar el contenido de la página `/constructora/baumex`.
 
 **Documentos de alineación consultados:**
-- `docs/4-los-10-temas-comerciales-de-grupo-nelson.md` (los 10 territorios conceptuales)
-- `docs/5-vocabulario-estrategico-...md` (cómo decirlo)
+- `docs/estrategia/04-temas-comerciales.md` (los 10 territorios conceptuales)
+- `docs/estrategia/05-vocabulario-estrategico.md` (cómo decirlo)
 
 **Keyword de posicionamiento:** Naves Industriales Mexicali
 

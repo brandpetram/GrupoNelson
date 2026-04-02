@@ -2,7 +2,7 @@
 
 ## Propósito de este documento
 
-El propósito de desarrollar comercialmente estos 10 temas es que sean un **vehículo para posicionar a Grupo Nelson** con los keywords definidos en [3-keywords-con-los-que-queremos-posicionar-a-grupo-nelson.md](./3-keywords-con-los-que-queremos-posicionar-a-grupo-nelson.md).
+El propósito de desarrollar comercialmente estos 10 temas es que sean un **vehículo para posicionar a Grupo Nelson** con los keywords definidos en [03-keywords-posicionamiento.md](./03-keywords-posicionamiento.md).
 
 **Keyword principal:** Naves Industriales Mexicali
 
@@ -15,7 +15,7 @@ Al desarrollar estos temas, **no debemos olvidar que ese es el objetivo**. Aunqu
 
 ---
 
-## ¿Qué es este documento?
+## ¿Qué es este documento?``
 
 Este documento define **los temas** que Grupo Nelson comunicará en su sitio web y **cómo desarrollarlos**. Los temas son las grandes ideas, los territorios conceptuales donde Grupo Nelson tiene autoridad y diferenciación.
 

@@ -6,9 +6,9 @@ Este documento organiza el material crudo del temario de la desarrolladora, las 
 
 **Documentos fuente consultados:**
 - `docs/copy/temario-desarrolladora-grupo-nelson.md` — Temas A-G
-- `docs/2-resumen-de-charlas-con-dueños-de-grupo-nelson.md` — 6 reuniones
+- `docs/estrategia/02-resumen-charlas-con-duenos.md` — 6 reuniones
 - `docs/copy/brief-de-cliente-grupo-nelson.md` — Brief del cliente
-- `docs/4-los-10-temas-comerciales-de-grupo-nelson.md` — 10 temas comerciales
+- `docs/estrategia/04-temas-comerciales.md` — 10 temas comerciales
 
 ---
 

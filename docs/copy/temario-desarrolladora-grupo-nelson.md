@@ -9,9 +9,9 @@ Este documento toma la información de las reuniones con el equipo de Grupo Nels
 - `docs/copy/buyer-persona-para-grupo-nelson.md` — A quién le hablamos
 - `docs/copy/reglas-de-copywriting-b2b.md` — Las 16 reglas de escritura
 - `docs/copy/ideas-de-copy.md` — Frases e ideas creativas capturadas
-- `docs/4-los-10-temas-comerciales-de-grupo-nelson.md` — Los 10 territorios conceptuales
-- `docs/5-vocabulario-estrategico-...md` — Vocabulario aprobado y prohibido
-- `docs/2-resumen-de-charlas-con-dueños-de-grupo-nelson.md` — 4 reuniones con el equipo directivo
+- `docs/estrategia/04-temas-comerciales.md` — Los 10 territorios conceptuales
+- `docs/estrategia/05-vocabulario-estrategico.md` — Vocabulario aprobado y prohibido
+- `docs/estrategia/02-resumen-charlas-con-duenos.md` — 4 reuniones con el equipo directivo
 
 **Keyword de posicionamiento:** Naves Industriales Mexicali / Parques Industriales en Mexicali
 
