@@ -1,0 +1,132 @@
+---
+title: Plantilla de Temario
+description: Estructura estandar para definir los temas comerciales del cliente y desarrollar cada uno
+---
+
+Esta plantilla define la estructura estándar para el temario de cualquier cliente B2B de Brandpetram. El temario responde a la pregunta: **¿De qué vamos a hablar?**
+
+**Nombre del archivo:** `temario-{empresa}.md` o `temario-{vertical}-{empresa}.md`
+**Ubicación:** `{proyecto}/docs/copy/`
+
+**Requisitos previos:** El brief y el buyer persona deben estar creados antes de escribir el temario. El temario se construye sobre lo que ya sabemos del cliente (brief) y de su comprador (buyer persona).
+
+---
+
+## Qué es un temario
+
+El temario es la lista de **temas comerciales** del cliente — los territorios sobre los cuales vamos a escribir copy. No es una lista de páginas del sitio (eso es el desempaquetado). Es una lista de temas con su material, ángulo e inventario de datos.
+
+Un tema comercial es un territorio que le importa al comprador y donde la empresa tiene algo que decir. Ejemplo: "Programa de comodato" es un tema comercial. "Página /comodato" es una página del sitio. El tema puede alimentar múltiples páginas, y una página puede nutrirse de múltiples temas.
+
+---
+
+## Estructura del documento
+
+### Encabezado
+
+```markdown
+# Temario — {Empresa} {Vertical si aplica}
+
+## Contexto
+
+Breve descripción de para qué es este temario y qué documentos se consultaron para crearlo.
+
+**Documentos de contexto consultados:**
+- `brief-de-quien-es-{empresa}.md`
+- `buyer-persona-{empresa}.md`
+- (otros documentos relevantes: reuniones, investigaciones, etc.)
+```
+
+### Lista de temas comerciales
+
+Antes de desarrollar cada tema, listar todos los temas con una frase que capture el ángulo. Esta lista es el índice del temario y se usa como referencia rápida.
+
+```markdown
+## Temas comerciales
+
+1. **Nombre del tema** — frase que captura el ángulo
+2. **Nombre del tema** — frase que captura el ángulo
+3. ...
+```
+
+No hay número fijo de temas. Depende del cliente. Grupo Nelson tenía 10. PREMCO tiene 8. Un cliente simple podría tener 4-5.
+
+### Desarrollo de cada tema (5 subsecciones)
+
+Cada tema se desarrolla con estas 5 subsecciones. Todas son obligatorias.
+
+#### Material relevante
+
+De dónde sale la información: reuniones con el cliente, brief, investigaciones, capturas de pantalla, documentos del cliente. Listar los datos crudos, sin interpretar. Este es el inventario de lo que tenemos.
+
+#### Ángulo comercial
+
+La interpretación: **por qué este tema le importa al visitante del sitio.** No es un resumen del material — es la decisión estratégica de cómo usar ese material para comunicar valor.
+
+El ángulo comercial debe conectar con el buyer persona. Si el comprador evalúa confiabilidad de suministro, el ángulo de "inventario propio" no es "tenemos mucho stock" sino "tu línea no para porque nosotros siempre tenemos".
+
+**Escribir el ángulo en un párrafo denso**, no en bullet points. Es prosa porque necesita transmitir la lógica del argumento, no solo los datos.
+
+#### Temas comerciales que alimenta
+
+Referencia cruzada a otros temas de la lista. Un tema puede reforzar otros. Ejemplo: el tema de "Asesoría técnica" alimenta también al tema de "Diferenciación por servicio".
+
+Formato: lista de números con referencia a la lista del índice.
+
+#### Datos duros para el copy
+
+Munición lista para usar: números, nombres propios, fechas, certificaciones, métricas. Solo datos verificables que pueden ir directamente en un headline o bullet point.
+
+Formato: lista con viñetas, un dato por línea, negrita en el número.
+
+#### Huecos de información
+
+Qué nos falta para escribir copy sobre este tema. Ser específico: "falta el número exacto de clientes activos" es útil. "Falta más información" no lo es.
+
+Los huecos se resuelven preguntando al cliente o investigando. Marcar cuáles bloquean el copy y cuáles son deseables pero no bloqueantes.
+
+---
+
+## Al final del documento
+
+### Resumen ejecutivo con mensajes propuestos
+
+Una tabla con un mensaje comercial propuesto por tema. Estos mensajes son candidatos directos para headlines y ángulos de página. No son copy final — son la dirección.
+
+```markdown
+## Resumen ejecutivo
+
+| # | Mensaje propuesto | Tema |
+|---|-------------------|------|
+| 1 | **Frase propuesta** — explicación breve | Tema X |
+| 2 | **Frase propuesta** — explicación breve | Tema Y |
+```
+
+### Mapa de alimentación (opcional)
+
+Si hay muchos temas y se cruzan entre sí, una tabla que muestre qué temas alimentan a cuáles. Útil para clientes con muchos temas (8+). No necesario para clientes simples (4-5 temas).
+
+---
+
+## Qué NO incluir en el temario
+
+- **Copy final** — el temario no es donde se escribe el texto que aparece en el sitio
+- **Estructura de páginas** — eso es el desempaquetado. El temario organiza por tema, no por página
+- **Datos operativos del proyecto** — dominios, servidores, timelines de implementación
+- **Frases creativas sueltas** — esas van en ideas de copy
+
+---
+
+## Diferencia entre temario y desempaquetado
+
+| | Temario | Desempaquetado |
+|--|---------|----------------|
+| Organiza por | **Tema comercial** | **Página del sitio** |
+| Pregunta | ¿De qué vamos a hablar? | ¿Qué munición tenemos para cada página? |
+| Cuándo se crea | Antes del desempaquetado | Después del temario |
+| Quién lo usa | El estratega (para decidir dirección) | El copywriter (para escribir) |
+| Ejemplo | "Programa de comodato" (el tema) | "Página /comodato: hero, beneficios, CTA" (la página) |
+
+---
+
+*Plantilla de temario — Proceso de copywriting comercial B2B — Brandpetram*

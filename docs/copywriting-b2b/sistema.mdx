@@ -1,0 +1,238 @@
+---
+title: Sistema de Copy Comercial B2B
+description: Documentos, estructura de carpetas y flujo de trabajo para producir copy B2B en cualquier proyecto
+---
+
+## 1. El sistema
+
+Para producir copy comercial B2B de calidad consistente, necesitamos **dos tipos de documentos**: los genéricos (que ya existen y se reutilizan tal cual) y los específicos del cliente (que se crean para cada proyecto).
+
+---
+
+## 2. Modelo de carpetas
+
+Los documentos genéricos viven centralizados en `copywriting-b2b/`. NO se copian a cada proyecto — se leen desde ahí. Cada proyecto cliente solo contiene sus documentos específicos dentro de `docs/copy/`.
+
+```
+Proyectos/
+├── copywriting-b2b/                         ← Genéricos, de sector y plantillas (centralizados)
+│   ├── reglas-de-copywriting-b2b.md             # Reglas (17 reglas, aplica a todos)
+│   ├── vocabulario-generico-b2b.md              # Vocabulario genérico B2B
+│   ├── plantilla-brief-de-quien-es.md           # Plantilla estándar para briefs
+│   ├── plantilla-buyer-persona.md               # Plantilla estándar para buyer personas
+│   ├── plantilla-temario.md                     # Plantilla estándar para temarios
+│   ├── plantilla-desempaquetado.md              # Plantilla estándar para desempaquetado
+│   ├── vocabulario-sector-parques-industriales.md
+│   ├── vocabulario-sector-construccion-industrial.md
+│   └── vocabulario-sector-{sector}.md           # Uno por sector, se reutiliza entre clientes
+│
+├── {proyecto-cliente-1}/
+│   └── docs/copy/                           ← Solo documentos específicos del cliente
+│       ├── brief-de-quien-es-{empresa}.md
+│       ├── buyer-persona-{empresa}.md
+│       ├── temario-{empresa}.md                 # Uno por vertical de negocio
+│       ├── desempaquetado-{vertical}-{empresa}.md  # Uno por vertical de negocio
+│       └── ideas-de-copy-{empresa}.md
+│
+├── {proyecto-cliente-2}/
+│   └── docs/copy/
+│       ├── brief-de-quien-es-{empresa}.md
+│       ├── buyer-persona-{empresa}.md
+│       └── ...
+```
+
+**Ejemplo real:**
+
+```
+Proyectos/
+├── copywriting-b2b/
+│   ├── reglas-de-copywriting-b2b.md
+│   ├── vocabulario-generico-b2b.md
+│   ├── plantilla-brief-de-quien-es.md
+│   ├── plantilla-buyer-persona.md
+│   ├── plantilla-temario.md
+│   ├── plantilla-desempaquetado.md
+│   ├── vocabulario-sector-parques-industriales.md
+│   └── vocabulario-sector-construccion-industrial.md
+│
+├── grupo-nelson/
+│   └── docs/copy/
+│       ├── brief-de-quien-es-grupo-nelson.md
+│       ├── buyer-persona-grupo-nelson.md
+│       ├── temario-desarrolladora-grupo-nelson.md
+│       ├── temario-constructora-baumex.md
+│       ├── desempaquetado-baumex.md
+│       ├── desempaquetado-nelson-desarrolladora.md
+│       └── ideas-de-copy-grupo-nelson.md
+│
+├── cintas-industriales-com/
+│   └── docs/copy/
+│       ├── brief-de-quien-es-premco.md
+│       ├── buyer-persona-premco.md
+│       ├── temario-premco.md
+│       ├── desempaquetado-premco.md
+│       └── ideas-de-copy-premco.md
+```
+
+---
+
+## 3. Documentos Genéricos (ya existen, se reutilizan siempre)
+
+Estos documentos aplican a cualquier cliente B2B de Brandpetram. No se modifican por proyecto — son el estándar. Viven en `copywriting-b2b/`.
+
+| # | Documento | Función | Archivo |
+|---|-----------|---------|---------|
+| 1 | **Reglas de copywriting B2B** | 17 reglas obligatorias para escribir copy B2B industrial. Cómo escribir. | `copywriting-b2b/reglas-de-copywriting-b2b.md` |
+| 2 | **Vocabulario genérico B2B** | Verbos, sustantivos, calificadores, frases y palabras prohibidas. Qué palabras usar. | `copywriting-b2b/vocabulario-generico-b2b.md` |
+| 3 | **Plantilla de brief** | Estructura estándar de 8 secciones para el brief de quién es la empresa. Leer antes de crear un brief. | `copywriting-b2b/plantilla-brief-de-quien-es.md` |
+| 4 | **Plantilla de buyer persona** | Estructura estándar de 7 subsecciones por persona. Leer antes de crear un buyer persona. | `copywriting-b2b/plantilla-buyer-persona.md` |
+| 5 | **Plantilla de temario** | Estructura estándar para definir los temas comerciales del cliente y desarrollar cada uno. Leer antes de crear un temario. | `copywriting-b2b/plantilla-temario.md` |
+| 6 | **Plantilla de desempaquetado** | Estructura estándar para organizar el material crudo en bloques listos para escribir copy. Cómo organizar la munición. | `copywriting-b2b/plantilla-desempaquetado.md` |
+
+**Total genéricos: 6 documentos**
+
+---
+
+## 4. Documentos de Sector (se reutilizan entre clientes del mismo sector)
+
+Vocabulario técnico específico de la industria del cliente. Si dos clientes son del mismo sector, comparten el mismo documento de sector. Viven en `copywriting-b2b/`.
+
+| # | Documento | Función | Ejemplo |
+|---|-----------|---------|---------|
+| 4 | **Vocabulario de sector** | Términos técnicos que el decisor usa internamente en su industria. Puede haber más de uno si el cliente tiene más de una vertical de negocio. | Parques industriales, construcción industrial, alimentos, logística, etc. |
+
+**Archivo:** `copywriting-b2b/vocabulario-sector-{sector}.md`
+
+**Total de sector: 1-2 documentos por proyecto** (depende de cuántas verticales tenga el cliente)
+
+---
+
+## 5. Documentos Específicos del Cliente (se crean para cada proyecto)
+
+Estos son los documentos de contexto del cliente. Sin ellos, el copy será genérico o incorrecto. Viven dentro del proyecto: `{proyecto}/docs/copy/`.
+
+| # | Documento | Función | Pregunta que responde |
+|---|-----------|---------|----------------------|
+| 7 | **Brief de quién es \{empresa\}** | Quién es la empresa, qué vende, en qué región opera, datos comprobables, ventajas competitivas, lista de clientes, certificaciones. **Usar plantilla:** `copywriting-b2b/plantilla-brief-de-quien-es.md`. Archivo: `brief-de-quien-es-{empresa}.md` | ¿Quién es esta empresa y qué tiene de especial? |
+| 8 | **Buyer persona** | A quién le vende, cómo es ese comprador, qué problema resuelve, cómo evalúa, por qué elegiría a este cliente. **Usar plantilla:** `copywriting-b2b/plantilla-buyer-persona.md`. Archivo: `buyer-persona-{empresa}.md` | ¿A quién le estamos hablando? |
+| 9 | **Temario** | Lista de temas comerciales a desarrollar. Cada tema tiene: material relevante, ángulo comercial, datos duros para copy, huecos de información. Un temario por vertical de negocio. **Usar plantilla:** `copywriting-b2b/plantilla-temario.md`. Archivo: `temario-{empresa}.md` o `temario-{vertical}-{empresa}.md` | ¿De qué vamos a hablar? |
+| 10 | **Desempaquetado** | Toma el material crudo del temario + reuniones + brief y lo organiza en bloques listos para escribir. Para cada bloque: datos duros, ángulo comercial, temas comerciales que alimenta, huecos. Un desempaquetado por vertical de negocio. **Usar plantilla:** `copywriting-b2b/plantilla-desempaquetado.md`. Archivo: `desempaquetado-{vertical}-{empresa}.md` | ¿Qué munición tenemos lista para cada página? |
+| 11 | **Ideas de copy** | Frases, ángulos creativos, conceptos madre con variaciones. Se capturan durante el proceso y se usan como insumo al escribir. Archivo: `ideas-de-copy-{empresa}.md` | ¿Qué frases potentes hemos capturado? |
+
+**Total específicos: 5-6 documentos por proyecto** (el temario y el desempaquetado pueden ser 1 o más según las verticales del negocio)
+
+---
+
+## 6. Resumen: Total de documentos
+
+| Tipo | Cantidad | Ubicación | Se crea o se reutiliza |
+|------|----------|-----------|----------------------|
+| Genéricos (reglas, vocabulario, plantillas) | 6 | `copywriting-b2b/` | Se reutilizan siempre |
+| De sector | 1-2 | `copywriting-b2b/` | Se reutilizan entre clientes del mismo sector |
+| Específicos del cliente | 5-6 | `{proyecto}/docs/copy/` | Se crean para cada proyecto |
+| **Total por proyecto** | **12-14 documentos** | | |
+
+Nota: las plantillas se leen como guía para crear los documentos específicos. No se copian ni se modifican.
+
+---
+
+## 7. Flujo de trabajo
+
+```
+Paso 1 — LEER GENÉRICOS:
+   Leer desde copywriting-b2b/:
+   ├── Reglas de copywriting B2B (17 reglas)
+   ├── Vocabulario genérico B2B
+   ├── Plantilla de brief
+   ├── Plantilla de buyer persona
+   ├── Plantilla de temario
+   └── Plantilla de desempaquetado
+         ↓
+Paso 2 — VOCABULARIO DE SECTOR:
+   Buscar en copywriting-b2b/ si ya existe un vocabulario del sector del cliente.
+   Si no existe, crear uno.
+         ↓
+Paso 3 — BRIEF:
+   Crear brief-de-quien-es-{empresa}.md en {proyecto}/docs/copy/
+   usando la plantilla como guía (8 secciones obligatorias).
+         ↓
+Paso 4 — BUYER PERSONA:
+   Crear buyer-persona-{empresa}.md en {proyecto}/docs/copy/
+   usando la plantilla como guía (7 subsecciones por persona).
+         ↓
+Paso 5 — TEMARIO:
+   Crear temario-{empresa}.md en {proyecto}/docs/copy/
+   usando la plantilla como guía. Definir los temas comerciales del cliente
+   y desarrollar cada uno con: material relevante, ángulo comercial,
+   datos duros, huecos de información.
+         ↓
+Paso 6 — IDEAS DE COPY:
+   Crear ideas-de-copy-{empresa}.md en {proyecto}/docs/copy/
+   Capturar frases, ángulos creativos, conceptos madre durante todo el proceso.
+   Este documento se alimenta continuamente — no tiene un momento fijo de creación.
+         ↓
+Paso 7 — DESEMPAQUETADO:
+   Crear desempaquetado-{vertical}-{empresa}.md en {proyecto}/docs/copy/
+   usando la plantilla como guía. Tomar el temario + reuniones + brief y
+   organizar en bloques por página. Para cada bloque: datos duros, ángulo
+   comercial, temas comerciales que alimenta, huecos.
+   Este paso es obligatorio. Sin él, el copywriter tiene que buscar datos
+   en múltiples documentos cada vez que escribe un párrafo.
+         ↓
+Paso 8 — ESCRIBIR COPY:
+   Claude escribe con todos los docs como contexto.
+   El desempaquetado es el documento principal de referencia — contiene
+   todo lo que se necesita para escribir, ya organizado por página.
+         ↓
+Paso 9 — QA:
+   Skill QA evalúa el copy contra las reglas y vocabularios.
+         ↓
+Paso 10 — REVISIÓN HUMANA:
+   El usuario revisa el reporte QA y el copy en el navegador.
+         ↓
+Paso 11 — CORRECCIÓN:
+   Claude corrige según el feedback del usuario.
+         ↓
+Paso 12 — SEGUNDA PASADA QA:
+   Debe quedar limpio. Si no, repetir pasos 10-12.
+```
+
+---
+
+## 8. Qué es el desempaquetado
+
+El desempaquetado es el paso intermedio entre el **material crudo** y el **copy final**. Es obligatorio y no se puede saltar.
+
+**Material crudo** = lo que recopilamos: capturas de pantalla, notas de reuniones, datos sueltos, presentaciones del cliente. Es información desorganizada, sin ángulo comercial.
+
+**Desempaquetado** = tomar ese material crudo y organizarlo en bloques que un copywriter pueda usar directamente. Para cada página o sección del sitio:
+- Qué datos duros tenemos (números, nombres, fechas)
+- Cuál es el ángulo comercial (por qué esto le importa al visitante)
+- Qué temas comerciales alimenta (#1-10 o los que tenga el proyecto)
+- Qué huecos hay (qué datos nos faltan para escribir)
+
+**Copy final** = el texto que aparece en la página, escrito con las 17 reglas, imperativos, vocabulario estratégico, etc.
+
+**Sin desempaquetado**, el copywriter tiene que buscar datos en 6 documentos distintos, cruzar reuniones con temarios, deducir qué es relevante. **Con desempaquetado**, todo lo que necesita para escribir una página está en un solo bloque, listo para convertir en copy.
+
+El desempaquetado vive en `{proyecto}/docs/copy/desempaquetado-{vertical}-{empresa}.md` y se usa la plantilla de `copywriting-b2b/plantilla-desempaquetado.md`.
+
+---
+
+## 9. Para un cliente nuevo
+
+1. Leer los 6 genéricos desde `copywriting-b2b/` (reglas, vocabulario, 4 plantillas)
+2. Buscar si ya existe un vocabulario de sector en `copywriting-b2b/` que aplique. Si no, crear uno.
+3. Crear brief siguiendo `plantilla-brief-de-quien-es.md`
+4. Crear buyer persona siguiendo `plantilla-buyer-persona.md`
+5. Crear temario siguiendo `plantilla-temario.md`
+6. Crear ideas de copy (se alimenta continuamente durante todo el proceso)
+7. Hacer el desempaquetado siguiendo `plantilla-desempaquetado.md`
+8. Escribir copy con todos los docs como contexto
+9. Pasar por QA
+10. Revisión humana + correcciones hasta que pase limpio
+
+---
+
+*Proceso de copywriting comercial B2B — Brandpetram*
+*Aplicable a cualquier proyecto*
