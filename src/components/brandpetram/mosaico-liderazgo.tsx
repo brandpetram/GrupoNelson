@@ -153,10 +153,10 @@ export function MosaicoLiderazgo({
   rounding = "rounded-xs",
 }: MosaicoLiderazgoProps) {
   return (
-    <section
-      data-component="MosaicoLiderazgo"
-      data-component-file="src/components/brandpetram/mosaico-liderazgo.tsx"
-      data-component-props="true"
+    <section data-component="MosaicoLiderazgo" data-component-file="src/components/brandpetram/mosaico-liderazgo.tsx" data-component-props="true"
+     
+     
+     
       className="mx-auto max-w-7xl px-4 py-16"
     >
       <div className="columns-2 gap-4 md:columns-3 lg:columns-4">

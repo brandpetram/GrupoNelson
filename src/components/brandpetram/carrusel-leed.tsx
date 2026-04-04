@@ -108,10 +108,10 @@ export function CarruselLeed({
   },
 }: CarruselLeedProps = {}) {
   return (
-    <section
-      data-component="CarruselLeed"
-      data-component-file="src/components/brandpetram/carrusel-leed.tsx"
-      data-component-props="true"
+    <section data-component="CarruselLeed" data-component-file="src/components/brandpetram/carrusel-leed.tsx" data-component-props="true"
+     
+     
+     
       className="py-16 pl-4 md:pl-[10%]"
     >
       <Titulo

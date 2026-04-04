@@ -42,10 +42,10 @@ const features = [
 
 export function OffsetWithFeatureListBP() {
   return (
-    <div
-      data-component="OffsetWithFeatureListBP"
-      data-component-file="src/components/brandpetram/offset-with-feature-list-bp.tsx"
-      data-component-props="false"
+    <div data-component="OffsetWithFeatureListBP" data-component-file="src/components/brandpetram/offset-with-feature-list-bp.tsx" data-component-props="false"
+     
+     
+     
       className="bg-gray-900 py-[3rem] 360:py-[3rem] 393:py-[3.5rem] 430:py-[3.5rem] 768:py-[4rem] 834:py-[4rem] 1024:py-[5rem] 1200:py-[5.5rem] 1280:py-[6rem] 1366:py-[6rem] 1440:py-[6.5rem] 1536:py-[7rem] 1728:py-[7.5rem] 1920:py-[8rem] rounded-xs"
     >
       <div className="mx-auto w-11/12 px-[1.5rem] 768:px-[2rem] 1024:px-[2.5rem] 1200:px-[3rem] 1280:px-[3.5rem] 1366:px-[4rem] 1440:px-[4.5rem] 1536:px-[5rem] 1728:px-[6rem] 1920:px-[7rem]">
