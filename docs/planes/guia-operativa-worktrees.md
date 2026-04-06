@@ -1,4 +1,4 @@
-# Plan para trabajar en worktrees
+# Guía operativa de worktrees
 
 ## Objetivo
 
@@ -13,7 +13,7 @@ Ambas se trabajan en paralelo, cada una en su propio worktree.
 
 ## Contexto
 
-- El [plan de worktrees](worktree.md) define el modelo arquitectónico: 40 secciones listas, 2 casi listas, 2 bloqueadas.
+- El [plan maestro de worktrees](plan-maestro-worktrees.md) define el modelo arquitectónico: 41 secciones listas (+1 con excepción temporal), 2 bloqueadas.
 - El [ownership map](../ownership-map.md) asigna cada archivo a sistema o sección.
 - La [memoria de trabajo 2026-04-04](../copy/memoria-de-trabajo-2026-04-04-rondas-de-copy.md) documenta qué quedó pendiente.
 - El script `workspace-nelson.sh` crea worktrees y abre sesiones tmux con Claude Code.
@@ -54,6 +54,7 @@ Sesión: nelson
 - Cada worktree solo toca archivos asignados a su sección en el ownership map.
 - Archivos de sistema no se editan desde worktrees de sección.
 - Si un worktree necesita un cambio en sistema, se hace desde MAIN en branch `system/{slug}` y se mergea primero.
+- Si un worktree necesita un componente de otra sección, clasificar la decisión como `localizar + reescribir`, `promover + reescribir` o `parametrizar + compartir` (ver CLAUDE.md). No promover por defecto.
 - Cada worktree trabaja de forma independiente — no depende de que el otro termine.
 
 ### Ownership de docs compartidos
@@ -70,75 +71,47 @@ Los archivos en `docs/copy/` no son propiedad de ningún worktree de sección. S
 
 **Flujo práctico:** El worktree de sección hace su trabajo en código. Cuando termina, el usuario cambia a la ventana MAIN de tmux para actualizar el brief, el tracker o la memoria de trabajo.
 
-## Dependencia cross-section: excelencia-operativa y marketing
+## Dependencia cross-section: excelencia-operativa y marketing (resuelta)
 
-### El problema
+### El problema original
 
-Excelencia-operativa importa 4 componentes de `(marketing)/product/sections/`:
+Excelencia-operativa importaba 4 componentes de `(marketing)/product/sections/`:
 - `ProductIllustration`
 - `TestimonialSection`
 - `NotesFeatures`
 - `TestimonialsSection`
 
-Estos componentes tienen copy hardcodeado y pertenecen a la sección marketing según el ownership map. La memoria de trabajo dice "reescribir completamente" 3 de ellos. Eso viola la regla de ownership: un worktree de sección no puede editar archivos de otra sección.
+Estos componentes tenían copy de template Tailark y pertenecían a la sección marketing. La memoria de trabajo pedía "reescribir completamente" 3 de ellos para excelencia-operativa, lo cual violaba la regla de ownership.
 
-### La solución: resolver O1 primero desde MAIN
+### La solución adoptada: `localizar + reescribir`
 
-Antes de abrir el worktree de excelencia-operativa, resolver la dependencia O1 desde MAIN:
+Se resolvió creando versiones locales en `excelencia-operativa/sections/`, no promoviendo a sistema:
 
-1. **Declarar los 4 componentes como sistema** en el ownership map (ya es la recomendación del propio ownership map §3.1).
-2. **Mover su edición a `work-system`** — o en este caso, hacerlo directamente desde MAIN antes de abrir worktrees.
+| Componente original | Solución | Archivo local |
+|---|---|---|
+| TestimonialSection | `localizar + reescribir` | `sections/testimonial.tsx` — Gulfstream 35 años como prueba del método |
+| NotesFeatures | `localizar + reescribir` | `sections/documentacion-auditable.tsx` — sistema de documentación |
+| TestimonialsSection | `localizar + reescribir` | `sections/dimensiones-control.tsx` — 3 dimensiones del control |
+| ProductIllustration | **Excepción temporal** | Sigue importándose desde marketing — pendiente de localizar en ciclo futuro |
 
-**Secuencia concreta:**
-
-```
-Branch system/o1-excelencia-marketing (desde MAIN):
-  1. Actualizar ownership-map.md y worktree.md: 4 componentes de marketing → sistema
-  2. Reescribir copy de testimonial, notes-features, testimonials-section
-  3. Crear brief de certificaciones en docs/copy/angle-briefs/
-  4. Actualizar tracker
-  5. PR → review → merge a main
-
-Después, abrir worktrees:
-  - work-excelencia-operativa: solo edita archivos locales de la sección
-  - work-certificaciones: solo edita page.tsx de certificaciones
-```
-
-### Alternativa: limitar el worktree
-
-Si no se quiere resolver O1 ahora, el worktree de excelencia-operativa puede limitarse a editar **solo archivos locales**:
-
-| Archivo | ¿Se puede editar desde worktree? |
-|---|---|
-| `page.tsx` | Sí (propio de la sección) |
-| `sections/logo-cloud-clientes.tsx` | Sí (local) |
-| `sections/como-trabajamos.tsx` | Sí (local) |
-| `sections/capacidades-inhouse.tsx` | Sí (local) |
-| `sections/cta.tsx` | Sí (local) |
-| `(marketing)/product/sections/testimonial.tsx` | **No** — otra sección |
-| `(marketing)/product/sections/notes-features.tsx` | **No** — otra sección |
-| `(marketing)/product/sections/testimonials-section.tsx` | **No** — otra sección |
-
-Los 3 componentes de marketing se reescriben después desde MAIN o `work-system`.
+Los archivos originales de marketing se restauraron a su versión previa (copy de template Tailark). Marketing Product conserva sus archivos intactos.
 
 ## Trabajo a ejecutar
 
-### Paso 0: Preparación desde MAIN (antes de abrir worktrees)
+### Paso 0: Preparación desde MAIN (completado en working tree, pendiente de commit/merge)
 
-Se ejecuta en branch `system/o1-excelencia-marketing` desde MAIN. Es trabajo transversal y pasa por review antes de mergear a main.
+Se ejecutó en branch `system/o1-excelencia-marketing` desde MAIN.
 
-```bash
-git checkout -b system/o1-excelencia-marketing
-```
-
-| # | Acción | Archivo |
+| # | Acción | Estado |
 |---|---|---|
-| 0.1 | Resolver O1: declarar 4 componentes de marketing como sistema | `docs/ownership-map.md` |
-| 0.2 | Sincronizar worktree.md: Excelencia Operativa y Marketing Product → Listo | `docs/planes/worktree.md` |
-| 0.3 | Reescribir copy de testimonial, notes-features, testimonials-section según brief de excelencia | `src/app/(marketing)/product/sections/*.tsx` |
-| 0.4 | Crear angle brief de certificaciones | `docs/copy/angle-briefs/certificaciones.md` |
-| 0.5 | Actualizar tracker | `docs/copy/tracker-rondas-copy-grupo-nelson.md` |
-| 0.6 | PR → review → merge a main | — |
+| 0.1 | Crear 3 versiones locales en `excelencia-operativa/sections/` con copy del brief | Hecho |
+| 0.2 | Restaurar 3 archivos de marketing a versión original (desde c7f1011) | Hecho |
+| 0.3 | Actualizar imports en `excelencia-operativa/page.tsx` | Hecho |
+| 0.4 | Crear angle brief de certificaciones | Hecho |
+| 0.5 | Actualizar tracker | Hecho |
+| 0.6 | Actualizar ownership-map.md y plan maestro | Hecho |
+
+**ProductIllustration** queda como excepción temporal documentada. Se localiza en ciclo futuro.
 
 ### Worktree 1: excelencia-operativa
 
@@ -153,13 +126,16 @@ git checkout -b system/o1-excelencia-marketing
 | `sections/como-trabajamos.tsx` | Ajustar copy de 3 pasos: artefactos → consecuencia |
 | `sections/capacidades-inhouse.tsx` | Reorientar a puntos de control transversales |
 | `sections/cta.tsx` | Verificar cierre con tesis de excelencia operativa |
+| `sections/testimonial.tsx` | Ya contiene copy de Gulfstream 35 años (creado en Paso 0) |
+| `sections/documentacion-auditable.tsx` | Ya contiene copy de sistema de documentación (creado en Paso 0) |
+| `sections/dimensiones-control.tsx` | Ya contiene copy de 3 dimensiones del control (creado en Paso 0) |
 
-> Los componentes de marketing (testimonial, notes-features, testimonials-section) ya fueron reescritos en el Paso 0 desde MAIN.
+> **Nota:** ProductIllustration sigue importándose desde `(marketing)/product/sections/`. Es una excepción temporal documentada.
 
 ### Worktree 2: certificaciones
 
 **Branch:** `section/certificaciones`
-**Brief:** Creado en Paso 0.4
+**Brief:** `docs/copy/angle-briefs/certificaciones.md` (creado en Paso 0.4)
 **Ángulo base:** "No son trofeos; son filtros de acceso" (de la memoria 2026-04-03)
 
 | Archivo | Cambio |
@@ -170,9 +146,10 @@ git checkout -b system/o1-excelencia-marketing
 
 ## Criterio de salida
 
-- [ ] O1 resuelto: 4 componentes de marketing declarados como sistema
-- [ ] Componentes de marketing reescritos desde MAIN
-- [ ] Brief de certificaciones creado desde MAIN
+- [x] O1 resuelto: 3 componentes localizados en `excelencia-operativa/sections/`
+- [x] Archivos de marketing restaurados a versión original
+- [x] ProductIllustration documentado como excepción temporal
+- [x] Brief de certificaciones creado desde MAIN
 - [ ] Worktree excelencia-operativa: archivos locales implementados según brief
 - [ ] Worktree certificaciones: page.tsx implementado según brief
 - [ ] Ambas branches mergeadas a main sin conflictos
@@ -181,13 +158,7 @@ git checkout -b system/o1-excelencia-marketing
 ## Cómo arrancar
 
 ```bash
-# Paso 0: branch de sistema desde MAIN
 cd ~/Proyectos/grupo-nelson
-git checkout -b system/o1-excelencia-marketing
-# → Resolver O1, reescribir marketing components, crear brief, actualizar tracker
-# → PR, review, merge a main
-
-# Después: abrir worktrees (ya en main con O1 resuelto)
 ./workspace-nelson.sh excelencia-operativa certificaciones
 ```
 

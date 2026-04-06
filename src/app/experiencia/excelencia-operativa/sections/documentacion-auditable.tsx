@@ -1,4 +1,4 @@
-import { Check, ClipboardList, ListChecks, Repeat, Timer } from 'lucide-react'
+import { Check, FileCheck2, Clock, FileSignature, FlaskConical } from 'lucide-react'
 import { Container } from '@/components/container'
 import { FeatureCard, FeatureCardContent } from '@/components/ui/feature-card'
 import { Button } from '@/components/ui/button'
@@ -7,34 +7,34 @@ import Notes3Illustration from "@/components/illustrations/notes-3-illustration"
 
 const subFeatures = [
     {
-        icon: ListChecks,
-        title: 'Smart Checklists',
-        description: 'Create dynamic task lists that update progress automatically as items are completed.',
+        icon: FileCheck2,
+        title: 'Submittals y aprobaciones',
+        description: 'Cada material y equipo se aprueba por el cliente antes de instalarse. Nada entra a obra sin documentación firmada.',
     },
     {
-        icon: Timer,
-        title: 'Due Date Tracking',
-        description: 'Set deadlines and get timely reminders so nothing slips through the cracks.',
+        icon: Clock,
+        title: 'Monitoreo de equipos críticos',
+        description: 'Transformadores, chillers, bombas contra incendio — se monitorean desde el pedido para que no se conviertan en retraso.',
     },
     {
-        icon: Repeat,
-        title: 'Recurring Tasks',
-        description: 'Automate repetitive workflows with tasks that reset on your schedule.',
+        icon: FileSignature,
+        title: 'Minutas firmadas',
+        description: 'Cada reunión semanal produce minuta con acuerdos, responsables y fechas. 16 asistentes con firma autógrafa.',
     },
     {
-        icon: ClipboardList,
-        title: 'Activity Log',
-        description: 'Keep a complete history of task changes and completions for full accountability.',
+        icon: FlaskConical,
+        title: 'Ensayos de laboratorio externo',
+        description: 'Verificación independiente por EPGC. El control de calidad no depende solo de Baumex — un tercero lo valida.',
     },
 ]
 
-export function NotesFeatures() {
+export function DocumentacionAuditable() {
     return (
         <section>
             <Container className="py-16 lg:py-24">
                 <div className="mx-auto max-w-2xl space-y-6 text-center">
-                    <h2 className="text-foreground text-balance text-4xl font-semibold lg:text-5xl">Quick Task Management</h2>
-                    <p className="text-muted-foreground text-balance text-lg">Capture tasks on the fly and track progress effortlessly. Stay organized with lightweight notes and checklists built for speed.</p>
+                    <h2 className="text-foreground text-balance text-4xl font-semibold lg:text-5xl">Documentación auditable en cada proyecto</h2>
+                    <p className="text-muted-foreground text-balance text-lg">Cada proyecto genera documentación que el cliente puede revisar en cualquier momento. No es burocracia — es visibilidad sobre tu inversión.</p>
                 </div>
             </Container>
             <Container asGrid>
@@ -48,12 +48,12 @@ export function NotesFeatures() {
                         <FeatureCard className="@4xl:col-span-2 col-span-full grid-rows-1">
                             <FeatureCardContent className="@4xl:pb-12 flex h-full flex-col space-y-6">
                                 <div className="bg-card ring-foreground/3 flex size-12 rounded-full shadow-xl shadow-black/5 ring-1">
-                                    <ClipboardList className="text-muted-foreground m-auto size-4" />
+                                    <FileCheck2 className="text-muted-foreground m-auto size-4" />
                                 </div>
-                                <h3 className="text-3xl font-semibold">Notes & Tasks</h3>
-                                <p className="text-muted-foreground text-balance">Jot down quick tasks and check them off as you go — a simple, distraction-free way to stay on top of your daily workflow.</p>
+                                <h3 className="text-3xl font-semibold">Sistema de documentación</h3>
+                                <p className="text-muted-foreground text-balance">Cada fase de construcción produce evidencia verificable. Submittals aprobados, fotografías por etapa y trazabilidad completa desde diseño hasta entrega.</p>
                                 <ul className="w-full space-y-2">
-                                    {['Interactive Task Checklists', 'Real-Time Progress Tracking', 'Instant Status Updates'].map((feature, index) => (
+                                    {['Submittals aprobados por el cliente', 'Evidencia fotográfica por fase', 'Trazabilidad diseño → entrega'].map((feature, index) => (
                                         <li
                                             key={index}
                                             className="text-muted-foreground flex items-center gap-2">
@@ -67,7 +67,7 @@ export function NotesFeatures() {
                                     variant="outline"
                                     size="sm"
                                     className="mt-auto w-fit">
-                                    <Link href="#">Learn more</Link>
+                                    <Link href="/contacto">Solicitar documentación de ejemplo</Link>
                                 </Button>
                             </FeatureCardContent>
                         </FeatureCard>

@@ -9,9 +9,9 @@ import { FeatureCardsResultados } from "./sections/feature-cards-resultados";
 import ComoTrabajamos from "./sections/como-trabajamos";
 import { CapacidadesInhouse } from "./sections/capacidades-inhouse";
 import { CallToAction as CtaExcelencia } from "./sections/cta";
-import { TestimonialSection } from "@/app/(marketing)/product/sections/testimonial";
-import { NotesFeatures } from "@/app/(marketing)/product/sections/notes-features";
-import { TestimonialsSection } from "@/app/(marketing)/product/sections/testimonials-section";
+import { TestimonialExcelencia } from "./sections/testimonial";
+import { DocumentacionAuditable } from "./sections/documentacion-auditable";
+import { DimensionesControl } from "./sections/dimensiones-control";
 
 export const metadata: Metadata = {
   title: "Excelencia Operativa | Grupo Nelson",
@@ -137,18 +137,18 @@ export default function ExcelenciaOperativaPage() {
         <ComoTrabajamos />
         <Separator className="h-24" />
 
-        {/* Testimonial (Tailark original) */}
-        <TestimonialSection />
+        {/* Testimonial — Gulfstream como prueba del método */}
+        <TestimonialExcelencia />
         <Separator className="h-24" />
 
         {/* Capacidades in-house + Certificaciones */}
         <CapacidadesInhouse />
 
-        {/* Notes Features (Tailark original) */}
-        <NotesFeatures />
+        {/* Documentación auditable — submittals, minutas, EPGC */}
+        <DocumentacionAuditable />
 
-        {/* Testimonials múltiples (Tailark original) */}
-        <TestimonialsSection />
+        {/* 3 dimensiones del control — tiempo, calidad, seguridad */}
+        <DimensionesControl />
 
         {/* CTA */}
         <CtaExcelencia />

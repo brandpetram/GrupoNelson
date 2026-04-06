@@ -1,6 +1,6 @@
 # Ownership Map — Grupo Nelson
 
-Este documento asigna cada archivo relevante del proyecto a una categoría de ownership: **sistema** o **sección**. Es el entregable principal de la Fase 1 del [plan de worktrees](planes/worktree.md).
+Este documento asigna cada archivo relevante del proyecto a una categoría de ownership: **sistema** o **sección**. Es el entregable principal de la Fase 1 del [plan maestro de worktrees](planes/plan-maestro-worktrees.md).
 
 ## Convenciones
 
@@ -30,7 +30,7 @@ No existe una categoría intermedia "shared". Un componente promovido de secció
 1. Un worktree de sección **solo puede editar** archivos asignados a esa sección en este documento.
 2. Un worktree de sección **no puede editar** archivos de sistema ni archivos de otra sección.
 3. Si un worktree necesita un cambio en un archivo de sistema, ese cambio se hace en `work-system` y se mergea primero.
-4. Si un worktree necesita importar un componente de otra sección, primero debe promoverlo a sistema (ver §6.11 del plan).
+4. Si un worktree necesita un componente de otra sección, primero clasificar la decisión como `localizar + reescribir`, `promover + reescribir` o `parametrizar + compartir` (ver CLAUDE.md). No promover por defecto.
 5. `work-system` es el único worktree que puede editar archivos de sistema.
 6. `work-review` es solo lectura.
 7. `work-scratch` puede tocar cualquier cosa (es desechable).
@@ -113,10 +113,7 @@ Estos componentes reciben todo su contenido por props. Las secciones los consume
 | `src/components/container.tsx` | blog, excelencia-operativa, marketing | Multi-sección |
 | `src/components/ui/breadcrumb.tsx` | blog/[slug], noticias/[slug], noticias/category | Multi-sección |
 | `src/components/scroll-to-top.tsx` | blog/(root)/layout | Estable |
-| `src/app/(marketing)/product/sections/product-illustration.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
-| `src/app/(marketing)/product/sections/testimonial.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
-| `src/app/(marketing)/product/sections/notes-features.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
-| `src/app/(marketing)/product/sections/testimonials-section.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
+| `src/app/(marketing)/product/sections/product-illustration.tsx` | excelencia-operativa, marketing | Dependencia cross-section residual (ver §3.1) |
 
 > **Nota:** `catalogo-agrupado-parques.tsx` y `catalogo-filtrado-parques.tsx` fueron reclasificados como propiedad de la sección Productos (ver §2.36). Solo los consume Productos hoy; si otra sección los necesita, se promueven a sistema por §6.11 del plan.
 
@@ -523,16 +520,19 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 
 ### 2.32 Experiencia — Excelencia Operativa (/experiencia/excelencia-operativa)
 
-**Worktree:** `work-excelencia-operativa` | **Estado:** Listo (O1 resuelto: 4 componentes de marketing promovidos a sistema)
+**Worktree:** `work-excelencia-operativa` | **Estado:** Listo con excepción temporal (3 de 4 componentes localizados; ProductIllustration sigue importándose desde marketing — pendiente de localizar en ciclo futuro)
 
 | Archivo | Tipo | Exclusivo hoy | Dependencias sistema |
 |---|---|---|---|
-| `src/app/experiencia/excelencia-operativa/page.tsx` | Página | Sí | Header, Container (sistema), componentes de (marketing)/product/sections/ |
+| `src/app/experiencia/excelencia-operativa/page.tsx` | Página | Sí | Header, Container (sistema), ProductIllustration (excepción temporal — importado de marketing) |
 | `src/app/experiencia/excelencia-operativa/sections/logo-cloud-clientes.tsx` | Sección local | Sí | Container |
 | `src/app/experiencia/excelencia-operativa/sections/feature-cards-resultados.tsx` | Sección local | Sí | FeatureCard |
 | `src/app/experiencia/excelencia-operativa/sections/como-trabajamos.tsx` | Sección local | Sí | FeatureCard |
 | `src/app/experiencia/excelencia-operativa/sections/capacidades-inhouse.tsx` | Sección local | Sí | motion/react |
 | `src/app/experiencia/excelencia-operativa/sections/cta.tsx` | Sección local | Sí | Button |
+| `src/app/experiencia/excelencia-operativa/sections/testimonial.tsx` | Sección local (localizado) | Sí | Container, next/image |
+| `src/app/experiencia/excelencia-operativa/sections/documentacion-auditable.tsx` | Sección local (localizado) | Sí | Container, FeatureCard, illustrations |
+| `src/app/experiencia/excelencia-operativa/sections/dimensiones-control.tsx` | Sección local (localizado) | Sí | Container, FeatureCard, next/image |
 
 ### 2.33 Contacto (/contacto)
 
@@ -648,7 +648,7 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 
 #### Marketing Product
 
-**Worktree:** `work-marketing-product` | **Estado:** Listo (O1 resuelto: 4 componentes promovidos a sistema)
+**Worktree:** `work-marketing-product` | **Estado:** Listo (O1 resuelto por localización: excelencia-operativa creó versiones locales de 3 componentes; ProductIllustration queda como dependencia residual)
 
 | Archivo | Tipo | Dependencias |
 |---|---|---|
@@ -656,10 +656,10 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 | `src/app/(marketing)/product/page.tsx` | Página | Secciones locales |
 | `src/app/(marketing)/product/sections/expandable-features.tsx` | Sección local | — |
 | `src/app/(marketing)/product/sections/how-it-works.tsx` | Sección local | Illustrations |
-| `src/app/(marketing)/product/sections/notes-features.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
-| `src/app/(marketing)/product/sections/product-illustration.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
-| `src/app/(marketing)/product/sections/testimonial.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
-| `src/app/(marketing)/product/sections/testimonials-section.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
+| `src/app/(marketing)/product/sections/notes-features.tsx` | Sección local | Marketing Product |
+| `src/app/(marketing)/product/sections/product-illustration.tsx` | Sección local (+ dep. cross-section residual con excelencia-operativa) | Marketing Product, Excelencia Operativa |
+| `src/app/(marketing)/product/sections/testimonial.tsx` | Sección local | Marketing Product |
+| `src/app/(marketing)/product/sections/testimonials-section.tsx` | Sección local | Marketing Product |
 
 #### Dev Fotos
 
@@ -673,17 +673,20 @@ No necesitan worktree (páginas de prueba/showcase).
 
 ## 3. Dependencias cross-section y decisiones de ownership
 
-### 3.1 (marketing)/product/sections/ → excelencia-operativa (Resuelto)
+### 3.1 (marketing)/product/sections/ → excelencia-operativa (Resuelto por localización)
 
-**Estado:** Resuelto. 4 componentes promovidos a **sistema**.
+**Estado:** Resuelto para 3 de 4 componentes. 1 dependencia residual.
 
-`experiencia/excelencia-operativa/page.tsx` importa 4 componentes de `(marketing)/product/sections/`:
-- ProductIllustration → **sistema**
-- TestimonialSection → **sistema**
-- NotesFeatures → **sistema**
-- TestimonialsSection → **sistema**
+`experiencia/excelencia-operativa` originalmente importaba 4 componentes de `(marketing)/product/sections/`. Resolución:
 
-**Decisión tomada:** Opción 1 (sistema). Se editan desde `work-system` o MAIN. Ambas secciones (Marketing Product y Excelencia Operativa) pasan a **Listo**.
+| Componente | Método | Estado |
+|---|---|---|
+| TestimonialSection | `localizar + reescribir` | Versión local creada: `sections/testimonial.tsx` |
+| NotesFeatures | `localizar + reescribir` | Versión local creada: `sections/documentacion-auditable.tsx` |
+| TestimonialsSection | `localizar + reescribir` | Versión local creada: `sections/dimensiones-control.tsx` |
+| ProductIllustration | **Pendiente** | Sigue importándose desde marketing. Excepción temporal — pendiente de localizar en ciclo futuro. |
+
+Los archivos originales de marketing se conservan intactos como propiedad de Marketing Product.
 
 ### 3.2 Blog ↔ Noticias — Componentes duplicados
 
@@ -703,7 +706,8 @@ No requiere acción.
 
 | Estado | Cantidad | Secciones |
 |---|---|---|
-| **Listo** | 42 | Nelson (×4), Constructora (×7), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Excelencia Operativa, Proyecto (×6), Productos, QA, Marketing Product |
+| **Listo** | 41 | Nelson (×4), Constructora (×7), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Proyecto (×6), Productos, QA, Marketing Product |
+| **Listo con excepción** | 1 | Excelencia Operativa (ProductIllustration sigue importado desde marketing — excepción temporal) |
 | **Casi listo** | 0 | — |
 | **Bloqueado** | 2 | Home, English |
 

@@ -74,6 +74,21 @@ Actualmente usa `file:../componentes-brandpetram` para desarrollo. Los cambios e
 
 ## Reglas para Claude
 
+### Worktrees, ownership y promoción de componentes
+
+- Regla principal: `local first, shared by promotion`.
+- Un worktree de sección solo puede editar archivos de su propia sección.
+- `docs/copy/*` se edita solo desde `MAIN`.
+- No promover componentes a `sistema/shared` por conveniencia.
+- Solo promover un componente si ya existe reutilización confirmada en más de una página, o si el usuario lo pide explícitamente.
+- Si una sección necesita un bloque de otra sección y no hay reutilización confirmada, crear una versión local dentro de la carpeta de esa sección.
+- Promover resuelve ownership; no resuelve reutilización por sí mismo.
+- Si varias páginas necesitan la misma estructura con copy distinto, parametrizar el componente en lugar de reescribir una sola versión compartida.
+- Antes de editar un componente importado desde otra sección, clasificar explícitamente la decisión como `promover + reescribir`, `localizar + reescribir` o `parametrizar + compartir`.
+- No continuar con la implementación de un componente cross-section hasta explicar esa clasificación y recibir confirmación explícita del usuario.
+- Si un cambio obliga a editar archivos fuera de la sección actual, detenerse y pedir confirmación antes de seguir.
+- Nunca hacer `git add`, `git commit`, `merge`, `push` o PR sin permiso explícito del usuario.
+
 ### Componentes de la librería: Uso directo vs Detachment
 
 **Uso directo** (sin modificaciones de estilo):

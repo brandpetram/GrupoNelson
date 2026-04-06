@@ -38,7 +38,7 @@ Esto no significa que deba haber un worktree activo simultáneamente para cada u
 
 ### ¿Qué tan lejos está?
 
-- **42 secciones** pueden tener worktree propio hoy (contando cada sub-página de LEED, cada parque, cada sub-página de proyecto como sección independiente).
+- **41 secciones (+1 con excepción temporal)** pueden tener worktree propio hoy (contando cada sub-página de LEED, cada parque, cada sub-página de proyecto como sección independiente).
 - **2 secciones** requieren cambios menores (resolver dependencia cross-section O1).
 - **2 secciones** están bloqueadas (Home y English).
 - **1 fase de documentación** (ownership map) + **1 fase de refactor** (Home) desbloquearían ~95% de los worktrees.
@@ -316,11 +316,11 @@ El plan anterior (v1) contenía supuestos que no reflejaban el estado real del c
 | Campo | Detalle |
 |---|---|
 | **Ruta** | `/experiencia/excelencia-operativa` |
-| **Archivos principales** | `page.tsx` (~159 líneas), `sections/` (5 archivos: logo-cloud-clientes, feature-cards-resultados, como-trabajamos, capacidades-inhouse, cta) |
+| **Archivos principales** | `page.tsx` (~159 líneas), `sections/` (8 archivos: logo-cloud-clientes, feature-cards-resultados, como-trabajamos, capacidades-inhouse, cta, testimonial, documentacion-auditable, dimensiones-control) |
 | **Header** | Importado directamente en page.tsx |
-| **Componentes compartidos** | ProductIllustration, TestimonialSection, NotesFeatures, TestimonialsSection — todos importados desde `(marketing)/product/sections/` |
+| **Componentes compartidos** | ProductIllustration (excepción temporal — sigue importado desde marketing). Los otros 3 componentes de marketing ya fueron localizados en `sections/`. |
 | **Copy** | Extenso en page.tsx y sections/ |
-| **Nivel de independencia** | **Medio.** Tiene secciones extraídas (bueno), pero importa componentes de `(marketing)/product/sections/` (cross-section dependency). |
+| **Nivel de independencia** | **Alto.** 8 secciones locales. Única dependencia cross-section residual: ProductIllustration (excepción temporal). |
 
 ### 4.23 Contacto (/contacto)
 
@@ -407,7 +407,7 @@ El plan anterior (v1) contenía supuestos que no reflejaban el estado real del c
 | Inventario — Terrenos | `app/inventario/terrenos/*` | Header (en page-client), Sanity client, `data/terrenos-geo-lookup.ts` | **Bajo** | **Listo** | Header en page-client; datos propios |
 | Experiencia — Casos de Éxito | `app/experiencia/casos-de-exito/page.tsx` | Header | **Muy bajo** | **Listo** | Página HTML pura |
 | Experiencia — Certificaciones | `app/experiencia/certificaciones/page.tsx` | Header | **Muy bajo** | **Listo** | Página HTML pura |
-| Experiencia — Excelencia Op. | `app/experiencia/excelencia-operativa/**` | Header, 4 componentes de `(marketing)/product/sections/` (sistema) | **Bajo** | **Listo** | O1 resuelto: componentes promovidos a sistema |
+| Experiencia — Excelencia Op. | `app/experiencia/excelencia-operativa/**` | Header, ProductIllustration (excepción temporal — importado de marketing) | **Bajo** | **Listo con excepción** | 3 componentes localizados; ProductIllustration pendiente de localizar |
 | Contacto | `app/contacto/*`, `api/submit-form/` | Header | **Muy bajo** | **Listo** | Formulario autocontenido |
 | Gracias | `app/gracias/page.tsx` | Header | **Muy bajo** | **Listo** | Página estática |
 | English | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | **Alto** | **Bloqueado** | Comparte 5 componentes con Home |
@@ -471,12 +471,12 @@ Cada dependencia se clasifica como:
 - **Riesgo real:** **Muy bajo.** Componente estable de renderizado de Portable Text.
 - **Mitigación:** Marcar como zona del sistema.
 
-### 6.8 Componentes de marketing/product/sections/ — Cross-section (Confirmada)
+### 6.8 Componentes de marketing/product/sections/ — Cross-section (Resuelto por localización)
 
 - **Archivos:** `src/app/(marketing)/product/sections/` (product-illustration, testimonial, testimonials-section, notes-features)
-- **Usado por:** Exactamente 2 secciones: `(marketing)/product` (origen) y `experiencia/excelencia-operativa` (importa 4 componentes). Dependencia confirmada.
-- **Riesgo real:** **Medio.** Si alguien edita marketing/product/sections/, puede romper excelencia-operativa.
-- **Mitigación:** Decidir ownership en Fase 1: o bien declararlos como sistema, o bien moverlos a una carpeta compartida.
+- **Estado:** 3 de 4 componentes resueltos por `localizar + reescribir`. Excelencia-operativa creó versiones locales en `sections/` (testimonial.tsx, documentacion-auditable.tsx, dimensiones-control.tsx). Los originales de marketing se conservan intactos.
+- **Dependencia residual:** `ProductIllustration` sigue importándose desde marketing — excepción temporal, pendiente de localizar en ciclo futuro.
+- **Riesgo real:** **Bajo.** Solo queda 1 componente cruzado (ProductIllustration), que es estable.
 
 ### 6.9 Componentes BP de Nelson (Resuelto)
 
@@ -777,18 +777,18 @@ src/
 
 ### Postura operativa: cuándo abrir worktrees
 
-**No abrir worktrees hasta completar Fase 1 (ownership map).** Aunque 42 secciones tienen archivos técnicamente aislados, sin un ownership map formal no hay reglas claras sobre qué puede tocar cada worktree y qué no. Sin esas reglas, dos worktrees podrían editar el mismo componente compartido sin saberlo.
+**No abrir worktrees hasta completar Fase 1 (ownership map).** Aunque 41 secciones (+1 con excepción temporal) tienen archivos técnicamente aislados, sin un ownership map formal no hay reglas claras sobre qué puede tocar cada worktree y qué no. Sin esas reglas, dos worktrees podrían editar el mismo componente compartido sin saberlo.
 
 La Fase 1 es solo documentación (no toca código) y se puede completar en una sesión. Una vez terminada, todas las secciones marcadas como "listo" en la tabla de sección 12 pueden abrir worktrees inmediatamente.
 
 **Secuencia concreta:**
-1. Completar Fase 1 (ownership map + reglas) → abrir worktrees para las 42 secciones "listo".
+1. Completar Fase 1 (ownership map + reglas) → abrir worktrees para las 41 secciones (+1 con excepción temporal) "listo".
 2. Completar Fase 2 (refactor Home) → abrir worktrees para Home y English.
 3. ~~Fase 3~~ — O1 resuelto. Ya no hay secciones "casi listo".
 
 ### Por dónde empezar
 
-1. **Fase 1 (ownership map) es el primer paso obligatorio.** Cero riesgo, una sesión, desbloquea 42 worktrees.
+1. **Fase 1 (ownership map) es el primer paso obligatorio.** Cero riesgo, una sesión, desbloquea 41 worktrees (+1 con excepción).
 2. **Fase 2 (refactor Home) es el único refactor importante.** Todo lo demás son decisiones de ownership, no cambios de código.
 
 ### Qué NO paralelizar todavía
@@ -850,7 +850,7 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 | Inventario — Terrenos | `work-inventario-terrenos` | **Listo** | `app/inventario/terrenos/*`, `data/terrenos-geo-lookup.ts` | Header (en page-client, sistema), Sanity client | Ninguno | Header importado en page-client.tsx, no en page.tsx |
 | Experiencia — Casos de Éxito | `work-casos-exito` | **Listo** | `app/experiencia/casos-de-exito/page.tsx` | Header (sistema) | Ninguno | Página HTML pura |
 | Experiencia — Certificaciones | `work-certificaciones` | **Listo** | `app/experiencia/certificaciones/page.tsx` | Header (sistema) | Ninguno | Página HTML pura |
-| Experiencia — Excelencia Op. | `work-excelencia-operativa` | **Listo** | `app/experiencia/excelencia-operativa/**` | Header, 4 componentes de marketing (sistema) | Ninguno | O1 resuelto |
+| Experiencia — Excelencia Op. | `work-excelencia-operativa` | **Listo con excepción** | `app/experiencia/excelencia-operativa/**` | Header, ProductIllustration (excepción temporal — de marketing) | Localizar ProductIllustration en ciclo futuro | 3 componentes localizados (testimonial, documentacion-auditable, dimensiones-control) |
 | Contacto | `work-contacto` | **Listo** | `app/contacto/*`, `api/submit-form/` | Header (sistema) | Ninguno | |
 | Gracias | `work-gracias` | **Listo** | `app/gracias/page.tsx` | Header (sistema) | Ninguno | Página estática simple |
 | English | `work-english` | **Bloqueado** | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | Refactor Home primero (Fase 2), o declarar componentes compartidos como sistema estable | Si componentes compartidos son "sistema" (no se tocan desde secciones), podría pasar a "casi listo" |
@@ -869,8 +869,9 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 
 | Estado | Cantidad | Ejemplos |
 |---|---|---|
-| **Listo** | 42 | Nelson (×4), Constructora (×7), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Excelencia Operativa, Productos, Proyecto (×6), QA, Marketing Product |
-| **Casi listo** | 0 | — (O1 resuelto, todas las secciones no bloqueadas son Listo) |
+| **Listo** | 41 | Nelson (×4), Constructora (×7), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Productos, Proyecto (×6), QA, Marketing Product |
+| **Listo con excepción** | 1 | Excelencia Operativa (ProductIllustration importado de marketing — excepción temporal) |
+| **Casi listo** | 0 | — |
 | **Bloqueado** | 2 | Home, English |
 
 ---
@@ -893,4 +894,4 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 
 ### Pendientes
 
-1. **Componentes de (marketing)/product/sections/:** Dependencia cross-section confirmada entre exactamente 2 secciones: `(marketing)/product` (origen) y `experiencia/excelencia-operativa` (consumidor). No es incertidumbre factual — es una decisión de ownership pendiente: declararlos como sistema o moverlos a carpeta compartida. Resolver en Fase 1.
+1. **ProductIllustration de (marketing)/product/sections/:** Única dependencia cross-section residual entre marketing y excelencia-operativa. Los otros 3 componentes ya fueron localizados. Pendiente: localizar ProductIllustration en ciclo futuro o dejarlo como excepción documentada.
