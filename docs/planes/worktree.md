@@ -411,7 +411,7 @@ El plan anterior (v1) contenía supuestos que no reflejaban el estado real del c
 | Contacto | `app/contacto/*`, `api/submit-form/` | Header | **Muy bajo** | **Listo** | Formulario autocontenido |
 | Gracias | `app/gracias/page.tsx` | Header | **Muy bajo** | **Listo** | Página estática |
 | English | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | **Alto** | **Bloqueado** | Comparte 5 componentes con Home |
-| Productos | `app/productos/**` | `data/parks/`, componentes ficha-tecnica-parque | **Medio** | **Casi listo** | Comparte datos y componentes con Parques |
+| Productos | `app/productos/**` | `data/parks/` (sistema), `ficha-tecnica-parque*.tsx` (sistema) | **Bajo** | **Casi listo** | Uso cruzado confirmado; ambos declarados sistema (O2) |
 | Proyecto (6 sub-páginas) | `app/proyecto/[sub]/page.tsx` cada una | Header (en algunas) | **Muy bajo** | **Listo** | Cada sub-página es worktree independiente |
 
 ---
@@ -457,11 +457,12 @@ Cada dependencia se clasifica como:
 - **Riesgo real:** **Muy bajo.** Todo el contenido llega por props y children. No tiene copy comercial propio.
 - **Mitigación:** Marcar como zona del sistema. No requiere cambios.
 
-### 6.6 Datos de parques — Compartidos entre Parques y Productos (Confirmada)
+### 6.6 Datos y componentes de parques — Sistema (Confirmada)
 
-- **Archivos:** `src/data/parks/types.ts`, `parks-data.ts`, `parks-sanity.ts`
-- **Riesgo real:** **Bajo-medio.** Si Parques cambia el tipo `IndustrialPark`, Productos necesita saberlo.
-- **Mitigación:** Declarar `data/parks/` como zona del sistema.
+- **Archivos:** `src/data/parks/types.ts`, `parks-data.ts`, `parks-sanity.ts`, `ficha-tecnica-parque.tsx` + 4 variantes (detalle, dinamica, horizontal, vertical)
+- **Usado por:** Parques (páginas individuales) y Productos (catálogos y fichas). Uso cruzado confirmado.
+- **Riesgo real:** **Bajo-medio.** Si se cambia el tipo `IndustrialPark` o la estructura de ficha-tecnica, ambas secciones se ven afectadas.
+- **Mitigación:** Declarar `data/parks/` y `ficha-tecnica-parque*.tsx` como sistema (O2). Se editan solo desde `work-system`.
 
 ### 6.7 content-components.tsx — Compartido entre Blog y Noticias (Confirmada)
 
@@ -494,11 +495,73 @@ Todos los componentes BP usados en secciones de Nelson han sido verificados:
 
 No quedan incertidumbres sobre componentes BP de Nelson.
 
+> **Nota:** "Exclusivo" significa exclusivo *hoy* según el uso actual del repo. Si una sección futura necesita uno de estos componentes, debe pasar por el proceso de promoción descrito en §6.11.
+
 ### 6.10 Componentes compartidos Home ↔ English (Confirmada)
 
 - **Componentes:** HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, DiagonalDivider, BadgeAniversario
 - **Riesgo real:** **Alto para trabajo simultáneo.** Si ambos worktrees necesitan modificar estos componentes, hay conflicto.
 - **Nota:** Estos componentes son estables y configurables por props, así que el riesgo es bajo si solo se cambia contenido. El riesgo es alto si se cambia layout/estructura visual.
+
+---
+
+## 6.11 Modelo conceptual de evolución de componentes
+
+**Principio rector: `local first, shared by promotion`.**
+
+Los componentes no nacen compartidos — se vuelven compartidos cuando el uso real lo justifica. Este modelo define cómo evoluciona una página desde copy inline hasta componentes reutilizables, sin sobre-ingeniería anticipada y sin préstamos informales entre secciones.
+
+### Etapas de evolución
+
+**Etapa 0 — Copy inline en `page.tsx`**
+
+La página tiene todo su contenido y estructura directamente en el archivo. Es válido para páginas nuevas, simples o en construcción. El ownership es completamente de la sección. No requiere componentes compartidos.
+
+**Etapa 1 — Componentización local**
+
+La página se divide en archivos dentro de su propia carpeta (`sections/`, `content.ts`). Los componentes resultantes siguen siendo propiedad de la sección — no se consideran shared. Otros worktrees no deben importarlos.
+
+**Etapa 2 — Promoción a shared/system**
+
+Cuando un bloque demuestra utilidad real en otra sección (no utilidad hipotética), se promueve formalmente:
+
+1. Se extraen props con una API clara y suficiente para instanciarse en distintos contextos.
+2. Se cambia su ownership a **sistema** en el ownership map.
+3. Desde ese momento, solo se edita desde `work-system` — los worktrees de sección pasan contenido por props.
+
+> **Nota sobre "shared" vs "sistema":** No existe una categoría de ownership llamada "shared". Un componente promovido pasa a ser **sistema** — el mismo ownership que tienen Header, con-props/, VirtualTourBP, etc. La carpeta física donde viva (`components/brandpetram/`, `components/ui/`, o una futura `components/shared/`) es detalle de organización, no de ownership. Lo que importa es que se edita desde `work-system` y que las secciones lo consumen por props.
+
+### Reglas
+
+- **No asumir exclusividad eterna.** "Exclusivo" significa exclusivo *hoy*, según el uso actual del repo. Cualquier componente puede ser candidato a promoción si aparece necesidad real.
+- **No promover antes de que exista necesidad real.** La reutilización futura se maneja con el proceso de promoción, no con sobre-generalización anticipada.
+- **No importar componentes de otra sección directamente.** Si un worktree necesita un bloque que hoy pertenece a otra sección, primero debe pasar por promoción formal a shared/system.
+- **Los componentes shared deben tener API por props.** Suficiente para usarse como instancias en distintas páginas sin editar el componente mismo.
+
+### Ejemplo concreto: `experiencia/casos-de-exito`
+
+Hoy esta página está en **Etapa 0**: todo el copy y la estructura viven inline en `page.tsx` (~160 líneas de HTML/JSX puro).
+
+**Evolución sana hacia Etapa 1** (si la complejidad lo justifica):
+
+```
+src/app/experiencia/casos-de-exito/
+├── page.tsx              # Composición: importa sections/
+├── content.ts            # Copy estructurado
+└── sections/
+    ├── hero.tsx
+    ├── stats-strip.tsx
+    ├── case-study.tsx     # Reutilizado 3 veces con props distintos
+    └── closing-cta.tsx
+```
+
+En esta etapa, `case-study.tsx` es propiedad de `experiencia/casos-de-exito`. Otro worktree no debe importarlo.
+
+**Evolución a Etapa 2** (solo si se necesita):
+
+Si mañana `nelson/liderazgo` necesita un bloque de caso de estudio similar, entonces `case-study.tsx` se promueve: se parametriza con props completos, se documenta en el ownership map como **sistema**, y se mueve a una ubicación apropiada en `src/components/` (por ejemplo `brandpetram/con-props/`). Desde ese momento se edita solo desde `work-system`.
+
+No se promueve a sistema solo por anticipación abstracta.
 
 ---
 
@@ -536,7 +599,7 @@ No quedan incertidumbres sobre componentes BP de Nelson.
 | ~~Nelson — Trayectoria~~ | **Promovido a "listo" en v6.** LogosGridBP2, StatsGridBPGamma y EditorialCascadaBP: los 3 exclusivos. |
 | **Constructora — Diseño e Ingeniería** | Usa 13 componentes con-props/. El copy ya está en page.tsx (bueno). Solo necesita que con-props/ se declare zona del sistema. |
 | **Experiencia — Excelencia Operativa** | Importa componentes de `(marketing)/product/sections/`. Necesita decidir: mover componentes compartidos o documentar dependencia. |
-| **Productos** | Comparte `data/parks/` y componentes ficha-tecnica con Parques. Declarar `data/parks/` como sistema y listo. |
+| **Productos** | Comparte `data/parks/` y `ficha-tecnica-parque*.tsx` con Parques. Declarar ambos como sistema (O2). |
 
 ### Secciones bloqueadas (requieren refactor)
 
@@ -573,7 +636,7 @@ No quedan incertidumbres sobre componentes BP de Nelson.
 | # | Descripción | Secciones afectadas | Esfuerzo | Prioridad |
 |---|---|---|---|---|
 | O1 | Decidir si componentes de `(marketing)/product/sections/` son de marketing o de sistema | Excelencia operativa, Marketing | Bajo | **P1** |
-| O2 | Decidir si `data/parks/` es zona del sistema o de parques | Parques, Productos | Bajo | **P1** |
+| O2 | Declarar `data/parks/` y `ficha-tecnica-parque*.tsx` (5 variantes) como sistema — uso cruzado confirmado por Parques y Productos | Parques, Productos | Bajo | **P1** |
 | O3 | Declarar `con-props/` como infraestructura del sistema | Múltiples | Bajo | **P1** |
 
 ### 8.4 Trabajo eliminado (ya resuelto)
@@ -634,7 +697,7 @@ src/
 │   │   ├── park-hero.tsx                # PROPIO: Parques
 │   │   ├── park-map.tsx                 # PROPIO: Parques
 │   │   ├── park-specs-*.tsx             # PROPIO: Parques
-│   │   ├── ficha-tecnica-parque*.tsx    # COMPARTIDO: Parques + Productos
+│   │   ├── ficha-tecnica-parque*.tsx    # SISTEMA (usado por Parques + Productos)
 │   │   ├── leed-page-layout.tsx         # PROPIO: LEED
 │   │   ├── carrusel-leed.tsx            # PROPIO: LEED
 │   │   ├── mu.tsx ... psi.tsx           # PROPIO: Baumex
@@ -791,14 +854,14 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 | Contacto | `work-contacto` | **Listo** | `app/contacto/*`, `api/submit-form/` | Header (sistema) | Ninguno | |
 | Gracias | `work-gracias` | **Listo** | `app/gracias/page.tsx` | Header (sistema) | Ninguno | Página estática simple |
 | English | `work-english` | **Bloqueado** | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | Refactor Home primero (Fase 2), o declarar componentes compartidos como sistema estable | Si componentes compartidos son "sistema" (no se tocan desde secciones), podría pasar a "casi listo" |
-| Productos | `work-productos` | **Casi listo** | `app/productos/**` | `data/parks/`, ficha-tecnica-parque* | Declarar `data/parks/` como sistema (O2) | |
+| Productos | `work-productos` | **Casi listo** | `app/productos/**` | `data/parks/` (sistema), `ficha-tecnica-parque*.tsx` (sistema) | Declarar ambos como sistema (O2) | Uso cruzado confirmado con Parques |
 | Proyecto — Índice | `work-proyecto-indice` | **Listo** | `app/proyecto/page.tsx` | Header (sistema) | Ninguno | |
 | Proyecto — Documentación | `work-proyecto-docs` | **Listo** | `app/proyecto/documentacion/page.tsx` | Header (sistema) | Ninguno | |
 | Proyecto — Fotografías | `work-proyecto-fotos` | **Listo** | `app/proyecto/fotografias/page.tsx` | Header (sistema) | Ninguno | |
 | Proyecto — Contenidos | `work-proyecto-contenidos` | **Listo** | `app/proyecto/contenidos/page.tsx` | Ninguno | Ninguno | Sin Header |
 | Proyecto — Bitácora | `work-proyecto-bitacora` | **Listo** | `app/proyecto/bitacora/page.tsx` | Header (sistema), EditorialCascadaBeta (sistema — compartida con diferencia-nelson) | Ninguno | |
 | Proyecto — Fase 2 Baumex | `work-proyecto-fase2` | **Listo** | `app/proyecto/fase-2-baumex/page.tsx` | Ninguno | Ninguno | Sin Header |
-| Sistema compartido | `work-system` | **Siempre activo** | Header, Footer, layout.tsx, globals.css, `data/nav/`, con-props/, ui/, lib/, VirtualTourBP, HeroVideoCover, content-components.tsx, `data/parks/` | N/A | N/A | Solo worktree que puede tocar archivos del sistema |
+| Sistema compartido | `work-system` | **Siempre activo** | Header, Footer, layout.tsx, globals.css, `data/nav/`, con-props/, ui/, lib/, VirtualTourBP, HeroVideoCover, content-components.tsx, `data/parks/`, ficha-tecnica-parque*.tsx, SplitSimpleBP, EditorialCascadaBeta | N/A | N/A | Solo worktree que puede tocar archivos del sistema |
 | Review | `work-review` | **Siempre activo** | Solo lectura | N/A | N/A | Para Codex o revisión humana |
 | Scratch | `work-scratch` | **Según necesidad** | Cualquiera (desechable) | N/A | N/A | Prototipos y experimentación |
 
