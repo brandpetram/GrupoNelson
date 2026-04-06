@@ -38,8 +38,8 @@ Esto no significa que deba haber un worktree activo simultáneamente para cada u
 
 ### ¿Qué tan lejos está?
 
-- **37 secciones** pueden tener worktree propio hoy (contando cada sub-página de LEED, cada parque, cada sub-página de proyecto como sección independiente).
-- **3 secciones** requieren cambios menores (declarar zonas del sistema).
+- **40 secciones** pueden tener worktree propio hoy (contando cada sub-página de LEED, cada parque, cada sub-página de proyecto como sección independiente).
+- **2 secciones** requieren cambios menores (resolver dependencia cross-section O1).
 - **2 secciones** están bloqueadas (Home y English).
 - **1 fase de documentación** (ownership map) + **1 fase de refactor** (Home) desbloquearían ~95% de los worktrees.
 
@@ -394,7 +394,7 @@ El plan anterior (v1) contenía supuestos que no reflejaban el estado real del c
 | Constructora — Baumex | `app/constructora/baumex/page.tsx`, 12 componentes griegos | Header | **Muy bajo** | **Listo** | Componentes griegos exclusivos confirmados |
 | Constructora — Build to Suit | `app/constructora/build-to-suit/page.tsx`, 4 griegos | Header, HeroVideoCover | **Bajo** | **Listo** | Griegos exclusivos; HeroVideoCover estable (props) |
 | Constructora — Llave en Mano | `app/constructora/llave-en-mano/page.tsx`, 6 griegos | Header | **Muy bajo** | **Listo** | Griegos exclusivos confirmados |
-| Constructora — Diseño e Ingeniería | `app/constructora/diseno-e-ingenieria/page.tsx` | Header, 13 componentes con-props/ | **Medio** | **Casi listo** | Copy en page.tsx (bueno), pero usa muchos con-props compartidos |
+| Constructora — Diseño e Ingeniería | `app/constructora/diseno-e-ingenieria/page.tsx` | Header, 13 componentes con-props/ (sistema) | **Medio** | **Listo** | con-props/ declarados sistema en ownership map |
 | Constructora — Estándares | `app/constructora/estandares-internacionales/page.tsx` | Header, 3 con-props/ | **Bajo** | **Listo** | Copy en page.tsx, pocos componentes compartidos |
 | Constructora — Proyectos Esp. | `app/constructora/proyectos-especializados/page.tsx` | Header, SplitSimpleBP (compartido confirmado con diferencia-nelson → sistema) | **Bajo** | **Listo** | Casi todo HTML puro; SplitSimpleBP estable como sistema |
 | Constructora — Portafolio | `app/constructora/portafolio/page.tsx`, `page-client.tsx` | Header (en page-client), `data/proyectos-baumex.ts` | **Bajo** | **Listo** | Header en page-client; datos propios |
@@ -411,7 +411,7 @@ El plan anterior (v1) contenía supuestos que no reflejaban el estado real del c
 | Contacto | `app/contacto/*`, `api/submit-form/` | Header | **Muy bajo** | **Listo** | Formulario autocontenido |
 | Gracias | `app/gracias/page.tsx` | Header | **Muy bajo** | **Listo** | Página estática |
 | English | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | **Alto** | **Bloqueado** | Comparte 5 componentes con Home |
-| Productos | `app/productos/**` | `data/parks/` (sistema), `ficha-tecnica-parque*.tsx` (sistema) | **Bajo** | **Casi listo** | Uso cruzado confirmado; ambos declarados sistema (O2) |
+| Productos | `app/productos/**` | `data/parks/` (sistema), `ficha-tecnica-parque*.tsx` (sistema) | **Bajo** | **Listo** | Resuelto: ambos declarados sistema en ownership map |
 | Proyecto (6 sub-páginas) | `app/proyecto/[sub]/page.tsx` cada una | Header (en algunas) | **Muy bajo** | **Listo** | Cada sub-página es worktree independiente |
 
 ---
@@ -777,18 +777,18 @@ src/
 
 ### Postura operativa: cuándo abrir worktrees
 
-**No abrir worktrees hasta completar Fase 1 (ownership map).** Aunque 37 secciones tienen archivos técnicamente aislados, sin un ownership map formal no hay reglas claras sobre qué puede tocar cada worktree y qué no. Sin esas reglas, dos worktrees podrían editar el mismo componente compartido sin saberlo.
+**No abrir worktrees hasta completar Fase 1 (ownership map).** Aunque 40 secciones tienen archivos técnicamente aislados, sin un ownership map formal no hay reglas claras sobre qué puede tocar cada worktree y qué no. Sin esas reglas, dos worktrees podrían editar el mismo componente compartido sin saberlo.
 
 La Fase 1 es solo documentación (no toca código) y se puede completar en una sesión. Una vez terminada, todas las secciones marcadas como "listo" en la tabla de sección 12 pueden abrir worktrees inmediatamente.
 
 **Secuencia concreta:**
-1. Completar Fase 1 (ownership map + reglas) → abrir worktrees para las 37 secciones "listo".
+1. Completar Fase 1 (ownership map + reglas) → abrir worktrees para las 40 secciones "listo".
 2. Completar Fase 2 (refactor Home) → abrir worktrees para Home y English.
-3. Completar Fase 3 (resolver cross-section) → abrir worktrees para las 3 secciones "casi listo".
+3. Completar Fase 3 (resolver cross-section O1) → abrir worktrees para las 2 secciones "casi listo".
 
 ### Por dónde empezar
 
-1. **Fase 1 (ownership map) es el primer paso obligatorio.** Cero riesgo, una sesión, desbloquea 37 worktrees.
+1. **Fase 1 (ownership map) es el primer paso obligatorio.** Cero riesgo, una sesión, desbloquea 40 worktrees.
 2. **Fase 2 (refactor Home) es el único refactor importante.** Todo lo demás son decisiones de ownership, no cambios de código.
 
 ### Qué NO paralelizar todavía
@@ -827,7 +827,7 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 | Constructora — Baumex | `work-baumex` | **Listo** | `app/constructora/baumex/page.tsx`, 12 componentes griegos Mu-Psi | Header (sistema) | Ninguno | Griegos exclusivos confirmados |
 | Constructora — Build to Suit | `work-build-to-suit` | **Listo** | `app/constructora/build-to-suit/page.tsx`, Beta, Gamma, Delta, Epsilon | Header, HeroVideoCover (sistema, estable) | Ninguno | Griegos exclusivos confirmados |
 | Constructora — Llave en Mano | `work-llave-en-mano` | **Listo** | `app/constructora/llave-en-mano/page.tsx`, Zeta-Lambda | Header (sistema) | Ninguno | Griegos exclusivos confirmados |
-| Constructora — Diseño e Ingeniería | `work-diseno-ingenieria` | **Casi listo** | `app/constructora/diseno-e-ingenieria/page.tsx` | Header, 13 con-props/ (sistema) | Declarar con-props/ como sistema (O3) | Copy ya en page.tsx; riesgo solo si con-props cambia |
+| Constructora — Diseño e Ingeniería | `work-diseno-ingenieria` | **Listo** | `app/constructora/diseno-e-ingenieria/page.tsx` | Header, 13 con-props/ (sistema) | Ninguno | con-props/ declarados sistema en ownership map |
 | Constructora — Estándares | `work-estandares` | **Listo** | `app/constructora/estandares-internacionales/page.tsx` | Header, 3 con-props/ (sistema) | Ninguno | |
 | Constructora — Proyectos Esp. | `work-proyectos-especializados` | **Listo** | `app/constructora/proyectos-especializados/page.tsx` | Header, SplitSimpleBP (sistema) | Ninguno | Casi todo HTML puro |
 | Constructora — Portafolio | `work-portafolio` | **Listo** | `app/constructora/portafolio/page.tsx`, `page-client.tsx` | Header (en page-client, sistema), `data/proyectos-baumex.ts` (propio) | Ninguno | Header en page-client; datos propios |
@@ -854,7 +854,7 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 | Contacto | `work-contacto` | **Listo** | `app/contacto/*`, `api/submit-form/` | Header (sistema) | Ninguno | |
 | Gracias | `work-gracias` | **Listo** | `app/gracias/page.tsx` | Header (sistema) | Ninguno | Página estática simple |
 | English | `work-english` | **Bloqueado** | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | Refactor Home primero (Fase 2), o declarar componentes compartidos como sistema estable | Si componentes compartidos son "sistema" (no se tocan desde secciones), podría pasar a "casi listo" |
-| Productos | `work-productos` | **Casi listo** | `app/productos/**` | `data/parks/` (sistema), `ficha-tecnica-parque*.tsx` (sistema) | Declarar ambos como sistema (O2) | Uso cruzado confirmado con Parques |
+| Productos | `work-productos` | **Listo** | `app/productos/**` | `data/parks/` (sistema), `ficha-tecnica-parque*.tsx` (sistema) | Ninguno | Resuelto: ambos declarados sistema en ownership map |
 | Proyecto — Índice | `work-proyecto-indice` | **Listo** | `app/proyecto/page.tsx` | Header (sistema) | Ninguno | |
 | Proyecto — Documentación | `work-proyecto-docs` | **Listo** | `app/proyecto/documentacion/page.tsx` | Header (sistema) | Ninguno | |
 | Proyecto — Fotografías | `work-proyecto-fotos` | **Listo** | `app/proyecto/fotografias/page.tsx` | Header (sistema) | Ninguno | |
@@ -869,8 +869,8 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 
 | Estado | Cantidad | Ejemplos |
 |---|---|---|
-| **Listo** | 37 | Baumex, LEED (×8), Blog, Noticias, Inventario (×2), Parques (×5), Contacto, Gracias, Nelson (×4), Build to Suit, Llave en Mano, Estándares, Proyectos Esp., Portafolio, Casos de Éxito, Certificaciones, Proyecto (×6) |
-| **Casi listo** | 3 | Diseño e Ingeniería, Excelencia Operativa, Productos |
+| **Listo** | 40 | Nelson (×4), Constructora (×7 incl. Diseño e Ingeniería), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Productos, Proyecto (×6), QA |
+| **Casi listo** | 2 | Excelencia Operativa, Marketing Product (dep. cross-section O1) |
 | **Bloqueado** | 2 | Home, English |
 
 ---
