@@ -38,7 +38,7 @@ Esto no significa que deba haber un worktree activo simultáneamente para cada u
 
 ### ¿Qué tan lejos está?
 
-- **40 secciones** pueden tener worktree propio hoy (contando cada sub-página de LEED, cada parque, cada sub-página de proyecto como sección independiente).
+- **42 secciones** pueden tener worktree propio hoy (contando cada sub-página de LEED, cada parque, cada sub-página de proyecto como sección independiente).
 - **2 secciones** requieren cambios menores (resolver dependencia cross-section O1).
 - **2 secciones** están bloqueadas (Home y English).
 - **1 fase de documentación** (ownership map) + **1 fase de refactor** (Home) desbloquearían ~95% de los worktrees.
@@ -407,7 +407,7 @@ El plan anterior (v1) contenía supuestos que no reflejaban el estado real del c
 | Inventario — Terrenos | `app/inventario/terrenos/*` | Header (en page-client), Sanity client, `data/terrenos-geo-lookup.ts` | **Bajo** | **Listo** | Header en page-client; datos propios |
 | Experiencia — Casos de Éxito | `app/experiencia/casos-de-exito/page.tsx` | Header | **Muy bajo** | **Listo** | Página HTML pura |
 | Experiencia — Certificaciones | `app/experiencia/certificaciones/page.tsx` | Header | **Muy bajo** | **Listo** | Página HTML pura |
-| Experiencia — Excelencia Op. | `app/experiencia/excelencia-operativa/**` | Header, componentes de `(marketing)/product/sections/` | **Medio** | **Casi listo** | Dependencia cross-section con marketing |
+| Experiencia — Excelencia Op. | `app/experiencia/excelencia-operativa/**` | Header, 4 componentes de `(marketing)/product/sections/` (sistema) | **Bajo** | **Listo** | O1 resuelto: componentes promovidos a sistema |
 | Contacto | `app/contacto/*`, `api/submit-form/` | Header | **Muy bajo** | **Listo** | Formulario autocontenido |
 | Gracias | `app/gracias/page.tsx` | Header | **Muy bajo** | **Listo** | Página estática |
 | English | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | **Alto** | **Bloqueado** | Comparte 5 componentes con Home |
@@ -777,18 +777,18 @@ src/
 
 ### Postura operativa: cuándo abrir worktrees
 
-**No abrir worktrees hasta completar Fase 1 (ownership map).** Aunque 40 secciones tienen archivos técnicamente aislados, sin un ownership map formal no hay reglas claras sobre qué puede tocar cada worktree y qué no. Sin esas reglas, dos worktrees podrían editar el mismo componente compartido sin saberlo.
+**No abrir worktrees hasta completar Fase 1 (ownership map).** Aunque 42 secciones tienen archivos técnicamente aislados, sin un ownership map formal no hay reglas claras sobre qué puede tocar cada worktree y qué no. Sin esas reglas, dos worktrees podrían editar el mismo componente compartido sin saberlo.
 
 La Fase 1 es solo documentación (no toca código) y se puede completar en una sesión. Una vez terminada, todas las secciones marcadas como "listo" en la tabla de sección 12 pueden abrir worktrees inmediatamente.
 
 **Secuencia concreta:**
-1. Completar Fase 1 (ownership map + reglas) → abrir worktrees para las 40 secciones "listo".
+1. Completar Fase 1 (ownership map + reglas) → abrir worktrees para las 42 secciones "listo".
 2. Completar Fase 2 (refactor Home) → abrir worktrees para Home y English.
-3. Completar Fase 3 (resolver cross-section O1) → abrir worktrees para las 2 secciones "casi listo".
+3. ~~Fase 3~~ — O1 resuelto. Ya no hay secciones "casi listo".
 
 ### Por dónde empezar
 
-1. **Fase 1 (ownership map) es el primer paso obligatorio.** Cero riesgo, una sesión, desbloquea 40 worktrees.
+1. **Fase 1 (ownership map) es el primer paso obligatorio.** Cero riesgo, una sesión, desbloquea 42 worktrees.
 2. **Fase 2 (refactor Home) es el único refactor importante.** Todo lo demás son decisiones de ownership, no cambios de código.
 
 ### Qué NO paralelizar todavía
@@ -850,7 +850,7 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 | Inventario — Terrenos | `work-inventario-terrenos` | **Listo** | `app/inventario/terrenos/*`, `data/terrenos-geo-lookup.ts` | Header (en page-client, sistema), Sanity client | Ninguno | Header importado en page-client.tsx, no en page.tsx |
 | Experiencia — Casos de Éxito | `work-casos-exito` | **Listo** | `app/experiencia/casos-de-exito/page.tsx` | Header (sistema) | Ninguno | Página HTML pura |
 | Experiencia — Certificaciones | `work-certificaciones` | **Listo** | `app/experiencia/certificaciones/page.tsx` | Header (sistema) | Ninguno | Página HTML pura |
-| Experiencia — Excelencia Op. | `work-excelencia-operativa` | **Casi listo** | `app/experiencia/excelencia-operativa/**` | Header, componentes de `(marketing)/product/sections/` | Resolver ownership de componentes marketing (O1) | |
+| Experiencia — Excelencia Op. | `work-excelencia-operativa` | **Listo** | `app/experiencia/excelencia-operativa/**` | Header, 4 componentes de marketing (sistema) | Ninguno | O1 resuelto |
 | Contacto | `work-contacto` | **Listo** | `app/contacto/*`, `api/submit-form/` | Header (sistema) | Ninguno | |
 | Gracias | `work-gracias` | **Listo** | `app/gracias/page.tsx` | Header (sistema) | Ninguno | Página estática simple |
 | English | `work-english` | **Bloqueado** | `app/en/*` | Header-en, HeroVideoCover, TarjetaHeroOriginal, HexagonFeatures, BadgeAniversario, DiagonalDivider | Refactor Home primero (Fase 2), o declarar componentes compartidos como sistema estable | Si componentes compartidos son "sistema" (no se tocan desde secciones), podría pasar a "casi listo" |
@@ -869,8 +869,8 @@ Tabla completa de todas las secciones reales del sitio con su worktree objetivo.
 
 | Estado | Cantidad | Ejemplos |
 |---|---|---|
-| **Listo** | 40 | Nelson (×4), Constructora (×7 incl. Diseño e Ingeniería), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Productos, Proyecto (×6), QA |
-| **Casi listo** | 2 | Excelencia Operativa, Marketing Product (dep. cross-section O1) |
+| **Listo** | 42 | Nelson (×4), Constructora (×7), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Excelencia Operativa, Productos, Proyecto (×6), QA, Marketing Product |
+| **Casi listo** | 0 | — (O1 resuelto, todas las secciones no bloqueadas son Listo) |
 | **Bloqueado** | 2 | Home, English |
 
 ---

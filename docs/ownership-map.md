@@ -113,6 +113,10 @@ Estos componentes reciben todo su contenido por props. Las secciones los consume
 | `src/components/container.tsx` | blog, excelencia-operativa, marketing | Multi-sección |
 | `src/components/ui/breadcrumb.tsx` | blog/[slug], noticias/[slug], noticias/category | Multi-sección |
 | `src/components/scroll-to-top.tsx` | blog/(root)/layout | Estable |
+| `src/app/(marketing)/product/sections/product-illustration.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
+| `src/app/(marketing)/product/sections/testimonial.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
+| `src/app/(marketing)/product/sections/notes-features.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
+| `src/app/(marketing)/product/sections/testimonials-section.tsx` | excelencia-operativa, marketing | Promovido a sistema (O1) |
 
 > **Nota:** `catalogo-agrupado-parques.tsx` y `catalogo-filtrado-parques.tsx` fueron reclasificados como propiedad de la sección Productos (ver §2.36). Solo los consume Productos hoy; si otra sección los necesita, se promueven a sistema por §6.11 del plan.
 
@@ -519,7 +523,7 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 
 ### 2.32 Experiencia — Excelencia Operativa (/experiencia/excelencia-operativa)
 
-**Worktree:** `work-excelencia-operativa` | **Estado:** Casi listo (dependencia cross-section con marketing)
+**Worktree:** `work-excelencia-operativa` | **Estado:** Listo (O1 resuelto: 4 componentes de marketing promovidos a sistema)
 
 | Archivo | Tipo | Exclusivo hoy | Dependencias sistema |
 |---|---|---|---|
@@ -644,7 +648,7 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 
 #### Marketing Product
 
-**Worktree:** `work-marketing-product` | **Estado:** Casi listo (4 secciones locales tienen dependencia cross-section pendiente con excelencia-operativa — resolver O1)
+**Worktree:** `work-marketing-product` | **Estado:** Listo (O1 resuelto: 4 componentes promovidos a sistema)
 
 | Archivo | Tipo | Dependencias |
 |---|---|---|
@@ -652,10 +656,10 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 | `src/app/(marketing)/product/page.tsx` | Página | Secciones locales |
 | `src/app/(marketing)/product/sections/expandable-features.tsx` | Sección local | — |
 | `src/app/(marketing)/product/sections/how-it-works.tsx` | Sección local | Illustrations |
-| `src/app/(marketing)/product/sections/notes-features.tsx` | Sección local | — |
-| `src/app/(marketing)/product/sections/product-illustration.tsx` | Sección local | — |
-| `src/app/(marketing)/product/sections/testimonial.tsx` | Sección local | — |
-| `src/app/(marketing)/product/sections/testimonials-section.tsx` | Sección local | — |
+| `src/app/(marketing)/product/sections/notes-features.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
+| `src/app/(marketing)/product/sections/product-illustration.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
+| `src/app/(marketing)/product/sections/testimonial.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
+| `src/app/(marketing)/product/sections/testimonials-section.tsx` | **Sistema** (O1) | Excelencia operativa, Marketing Product |
 
 #### Dev Fotos
 
@@ -669,21 +673,17 @@ No necesitan worktree (páginas de prueba/showcase).
 
 ## 3. Dependencias cross-section y decisiones de ownership
 
-### 3.1 (marketing)/product/sections/ → excelencia-operativa (Decisión pendiente)
+### 3.1 (marketing)/product/sections/ → excelencia-operativa (Resuelto)
 
-**Estado:** Dependencia cross-section confirmada.
+**Estado:** Resuelto. 4 componentes promovidos a **sistema**.
 
 `experiencia/excelencia-operativa/page.tsx` importa 4 componentes de `(marketing)/product/sections/`:
-- ProductIllustration
-- TestimonialSection
-- NotesFeatures
-- TestimonialsSection
+- ProductIllustration → **sistema**
+- TestimonialSection → **sistema**
+- NotesFeatures → **sistema**
+- TestimonialsSection → **sistema**
 
-**Opciones:**
-1. Declarar esos 4 componentes como **sistema** → se editan desde `work-system`.
-2. Duplicarlos en excelencia-operativa como componentes locales → cada sección tiene su copia.
-
-**Recomendación:** Opción 1 (sistema). Son componentes estables y el costo de duplicación no se justifica.
+**Decisión tomada:** Opción 1 (sistema). Se editan desde `work-system` o MAIN. Ambas secciones (Marketing Product y Excelencia Operativa) pasan a **Listo**.
 
 ### 3.2 Blog ↔ Noticias — Componentes duplicados
 
@@ -703,8 +703,8 @@ No requiere acción.
 
 | Estado | Cantidad | Secciones |
 |---|---|---|
-| **Listo** | 40 | Nelson (×4), Constructora (×7 incl. Diseño e Ingeniería), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Proyecto (×6), Productos, QA |
-| **Casi listo** | 2 | Excelencia Operativa (dep. cross-section O1), Marketing Product (dep. cross-section O1) |
+| **Listo** | 42 | Nelson (×4), Constructora (×7), LEED (×8), Parques (×5), Blog, Noticias, Inventario (×2), Contacto, Gracias, Casos de Éxito, Certificaciones, Excelencia Operativa, Proyecto (×6), Productos, QA, Marketing Product |
+| **Casi listo** | 0 | — |
 | **Bloqueado** | 2 | Home, English |
 
 ---

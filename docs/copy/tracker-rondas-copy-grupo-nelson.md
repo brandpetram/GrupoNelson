@@ -9,15 +9,16 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 
 ### Progreso
 
-- `5` angle briefs aprobados
+- `6` angle briefs (5 aprobados + 1 borrador)
 - `4` implementaciones hechas
 - `4` paginas totalmente aprobadas
+- `3` componentes sistema reescritos (testimonial, notes-features, testimonials-section)
 
-### Siguiente
+### Siguiente (paralelo con worktrees)
 
-- `1` implementacion pendiente: `/experiencia/excelencia-operativa` (brief aprobado)
-- `1` brief pendiente: `/experiencia/certificaciones`
-- Cola anterior detenida hasta cerrar estas
+- `1` implementacion pendiente: `/experiencia/excelencia-operativa` (brief aprobado, componentes sistema reescritos)
+- `1` brief en borrador + implementacion: `/experiencia/certificaciones`
+- Ambas avanzan en paralelo via worktrees (2026-04-05)
 
 ---
 
@@ -58,28 +59,29 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 - Prioridad: `2 — siguiente en implementar` (2026-04-04)
 - Estado: `brief aprobado`
 - Angle brief: `aprobado (4 rondas Codex, 2026-04-04)`
-- Implementacion: `no iniciada`
-- Proxima accion: `implementar page.tsx`
+- Implementacion: `no iniciada — worktree section/excelencia-operativa`
+- Proxima accion: `implementar archivos locales (page.tsx + sections/)`
 - Notas:
   Brief en `docs/copy/angle-briefs/excelencia-operativa.md`
-  3 secciones Tailark se CONSERVAN y reescriben (no se eliminan)
-  Logo cloud -> franja tipografica de palabras-artefacto (mismo componente)
-  TestimonialsSection = 3 dimensiones del control (tiempo, calidad, seguridad)
-  Certificaciones subordinadas a metodo
-  Cuidar que TestimonialSection no parezca cita inventada de cliente
+  3 componentes Tailark YA REESCRITOS como sistema (2026-04-05, branch system/o1-excelencia-marketing):
+    testimonial.tsx = Gulfstream 35 años como prueba del método
+    notes-features.tsx = sistema de documentación auditable
+    testimonials-section.tsx = 3 dimensiones del control (tiempo, calidad, seguridad)
+  Pendiente en worktree: page.tsx, logo-cloud-clientes, como-trabajamos, capacidades-inhouse, cta
 
 ### `/experiencia/certificaciones`
 
-- Territorio: pendiente de definir en angle brief
-- Prioridad: `3 — despues de excelencia-operativa`
-- Estado: `no iniciado`
-- Angle brief: `pendiente`
-- Implementacion: `no iniciada`
-- Proxima accion: `crear angle brief`
+- Territorio: certificaciones como filtros de acceso corporativo
+- Prioridad: `3 — en paralelo con excelencia-operativa via worktree`
+- Estado: `brief borrador`
+- Angle brief: `borrador creado (2026-04-05) — pendiente review`
+- Implementacion: `no iniciada — worktree section/certificaciones`
+- Proxima accion: `review del brief, luego implementar`
 - Notas:
-  Necesita trabajo fuerte de Angle Architect
-  No debe ser lista de credenciales
-  Angulo base de memoria 2026-04-03: "no son trofeos; son filtros de acceso"
+  Brief en `docs/copy/angle-briefs/certificaciones.md`
+  Angulo: "no son trofeos; son filtros de acceso"
+  Copy actual ya tiene buen ángulo — ajustes menores de refuerzo
+  No invadir /constructora/leed (LEED es uno de varios filtros aquí, no protagonista)
 
 ---
 
