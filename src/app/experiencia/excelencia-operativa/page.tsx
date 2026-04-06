@@ -16,7 +16,7 @@ import { DimensionesControl } from "./sections/dimensiones-control";
 export const metadata: Metadata = {
   title: "Excelencia Operativa | Grupo Nelson",
   description:
-    "75 proyectos completados en 28 años. 1,092,745 horas hombre sin fatalidades. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.",
+    "75 proyectos completados en 28 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.",
 };
 
 export default function ExcelenciaOperativaPage() {
@@ -49,8 +49,9 @@ export default function ExcelenciaOperativaPage() {
                       </h1>
                       <p className="text-muted-foreground mx-auto mb-8 mt-6 text-balance text-lg">
                         75 proyectos completados en 28 años. 1,092,745 horas
-                        hombre trabajadas sin una sola fatalidad. Así se ve la
-                        excelencia operativa cuando se mide semana a semana.
+                        hombre trabajadas sin un solo accidente grave. La diferencia
+                        entre prometer disciplina y mostrar los documentos que
+                        la demuestran.
                       </p>
 
                       <Button
