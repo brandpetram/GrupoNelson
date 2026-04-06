@@ -30,19 +30,19 @@ export default function DiferenciaNelsonPage() {
         {/* ── Banner divisor ── */}
         <div className="px-10 1200:px-0 lg:max-w-5xl xl:max-w-6xl 1728:max-w-[1400px] 1920:max-w-[1600px] mx-auto pb-20 md:pb-32">
           <h1 className="text-balance text-foreground px-7 font-light text-2xl 360:text-[1.75rem] 393:text-[1.9rem] 430:text-[2rem] 768:text-4xl 834:text-[2.75rem] 1024:text-5xl 1200:text-[2.5rem] 1280:text-[2.75rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] leading-relaxed">
-            Lorem ipsum dolor sit amet,{" "}
+            Permanencia real, acceso directo a los dueños y{" "}
             <span className="font-bold text-blue-600 uppercase">
-              consectetur adipiscing
+              constructora propia
             </span>{" "}
-            elit sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua ut enim ad minim veniam.
+            — tres cosas que tu proyecto necesita y que muy pocos en Mexicali
+            pueden ofrecer juntas.
           </h1>
         </div>
 
-        {/* ── Diferenciador 1: 60 años ── */}
+        {/* ── Diferenciador 1: Permanencia ── */}
         <SplitSimpleBP
           tagline="60+ años"
-          title="Desde la primera maquiladora de Mexicali hasta hoy"
+          title="Instalaron la primera maquiladora de Mexicali — y siguen aquí"
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
           imageAlt="Parque industrial Nelson en Mexicali — 60 años de historia"
@@ -51,27 +51,25 @@ export default function DiferenciaNelsonPage() {
         >
           <p className={splitParagraphClass}>
             En <strong>1965</strong>, Rodolfo Nelson Sr. instaló la primera
-            maquiladora de <strong>Mexicali</strong>. No existía la palabra
-            &quot;nearshoring&quot;. No existían los parques industriales
-            modernos de la región. No existía el ecosistema manufacturero que
-            hoy alberga a <strong>30 corporaciones internacionales</strong>.
-            Todo eso se construyó sobre lo que Grupo Nelson empezó.
+            maquiladora de <strong>Mexicali</strong>. No existían los parques
+            industriales modernos de la región. No existía el ecosistema
+            manufacturero que hoy alberga a{" "}
+            <strong>30 corporaciones internacionales</strong>. Grupo Nelson
+            estaba antes de que todo eso existiera — y sigue aquí.
           </p>
           <p className={splitParagraphClass}>
-            Tres generaciones después, la familia sigue operando.{" "}
-            <strong>4 millones de pies cuadrados</strong> desarrollados. 5
-            parques industriales. Presencia en{" "}
-            <strong>Mexicali, Hermosillo y San Luis Potosí</strong>. No llegaron
-            al nearshoring cuando se puso de moda — lo practicaban 50 años antes
-            de que existiera el término.
+            <strong>Gulfstream</strong> lleva{" "}
+            <strong>35 años</strong> trabajando con la familia.{" "}
+            <strong>Honeywell</strong>, 30. No van a desaparecer a la mitad de
+            tu contrato de 15 años.
           </p>
         </SplitSimpleBP>
 
         <div className="h-20 768:h-24 1200:h-32" />
 
-        {/* ── Diferenciador 2: Owner-operated ── */}
+        {/* ── Diferenciador 2: Ownership directo ── */}
         <SplitSimpleBP
-          tagline="Trato directo"
+          tagline="Ownership directo"
           title="Habla con los dueños, no con gerentes regionales"
           imagePosition="right"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg"
@@ -81,33 +79,26 @@ export default function DiferenciaNelsonPage() {
           cuadritosInvert
         >
           <p className={splitParagraphClass}>
-            <strong>Humberto Juárez Nelson</strong> atiende a los clientes
-            directamente. <strong>Rodolfo Nelson L.</strong> supervisa la
-            construcción. <strong>Juan Carlos Nelson L.</strong> dirige la
-            administración. <strong>Alfredo Martínez Nelson</strong> gestiona
-            los servicios del parque. Cuatro miembros de la familia en roles
-            operativos activos. Estructura plana.
+            La familia fundadora de Grupo Nelson no está en un consejo
+            honorario — está en roles operativos activos. Cuando necesitas
+            cambiar una cláusula del contrato, hablas con quien puede decidir
+            en ese momento. No con un gerente regional que rota cada dos años.
           </p>
           <p className={splitParagraphClass}>
-            En otros desarrolladores industriales de Mexicali necesitas tres
-            niveles de aprobación para cambiar una cláusula del contrato. En
-            Grupo Nelson necesitas una llamada. <strong>Gulfstream</strong> no
-            licitó su quinta expansión — después de <strong>35 años</strong> de
-            relación con la familia, asignó directamente.
-          </p>
-          <p className={splitParagraphClass}>
-            Reduce la complejidad de tu instalación en Mexicali. Contratos de{" "}
-            <strong>10 a 15 años</strong> negociados con quienes toman las
-            decisiones, no con gerentes regionales que rotan cada dos años.
+            Eso se traduce en <strong>velocidad de decisión</strong>,{" "}
+            <strong>accountability personal</strong> y{" "}
+            <strong>continuidad</strong>. Contratos de{" "}
+            <strong>10 a 15 años</strong> negociados directamente con quienes
+            toman las decisiones.
           </p>
         </SplitSimpleBP>
 
         <div className="h-16 768:h-20 1200:h-24" />
 
-        {/* ── Diferenciador 3: Baumex ── */}
+        {/* ── Diferenciador 3: Constructora in-house ── */}
         <SplitSimpleBP
           tagline="Constructora in-house"
-          title="Baumex: 28 años y 75 proyectos"
+          title="Baumex: un contrato, un responsable, de terreno a llave en mano"
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
           imageAlt="Baumex constructora — naves industriales en Mexicali"
@@ -116,26 +107,40 @@ export default function DiferenciaNelsonPage() {
             Si necesitas una nave que no existe en inventario,{" "}
             <strong>Baumex</strong> la diseña y construye. Es la constructora
             propia de Grupo Nelson — no un tercero subcontratado. Un solo
-            contrato cubre diseño, permisos, construcción y entrega.{" "}
-            <strong>10 disciplinas constructivas</strong> ejecutadas con equipo
-            propio, desde terracerías hasta acabados.
+            contrato cubre diseño, permisos, construcción y entrega.
           </p>
           <p className={splitParagraphClass}>
-            <strong>Gulfstream 550K: 52,200 m²</strong> con certificación LEED
-            Gold, sistemas antisísmicos BRB y 10 MW de paneles solares. La nave
-            industrial más grande de Mexicali, diseñada y construida por Baumex.{" "}
-            <strong>1,092,745 horas hombre</strong> trabajadas con cero
-            accidentes fatales.
-          </p>
-          <p className={splitParagraphClass}>
-            Escala tu operación con un solo proveedor. Nave disponible hoy o
-            construida a tu medida — el mismo grupo que administra el parque es
-            el que construye la nave.
+            <strong>28 años</strong> de operación.{" "}
+            <strong>75 proyectos</strong> completados. El mismo grupo que
+            administra el parque donde vas a operar es el que construye tu nave.
           </p>
         </SplitSimpleBP>
 
-        {/* ── Infraestructura ── */}
+        {/* ── Bloque de validación ── */}
         <OffsetWithFeatureListBP />
+
+        {/* ── Cierre + CTA ── */}
+        <div className="px-10 1200:px-0 lg:max-w-5xl xl:max-w-6xl 1728:max-w-[1400px] 1920:max-w-[1600px] mx-auto py-20 md:py-28 text-center">
+          <p className="text-balance text-muted-foreground text-[1rem] 768:text-[1.125rem] 1024:text-[1.25rem] 1200:text-[1.25rem] 1366:text-[1.375rem] 1536:text-[1.5rem] 1728:text-[1.625rem] 1920:text-[1.75rem] leading-relaxed tracking-wide max-w-4xl mx-auto">
+            Menos riesgo. Menos fricción. Más velocidad. Eso es lo que
+            significan 60 años de permanencia, dueños operando y constructora
+            propia — trabajando juntos para tu proyecto.
+          </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <a
+              href="/contacto"
+              className="inline-flex items-center justify-center rounded-xs bg-blue-600 px-8 py-3.5 text-[0.9375rem] 1200:text-[1rem] 1536:text-[1.0625rem] font-semibold text-white shadow hover:bg-blue-700 transition-colors"
+            >
+              Solicita una consulta
+            </a>
+            <a
+              href="/nelson/trayectoria"
+              className="inline-flex items-center justify-center gap-2 rounded-xs px-8 py-3.5 text-[0.9375rem] 1200:text-[1rem] 1536:text-[1.0625rem] font-semibold text-foreground hover:bg-accent transition-colors"
+            >
+              Conoce nuestra trayectoria
+            </a>
+          </div>
+        </div>
 
         {/* FIN COPY COMERCIAL */}
       </main>

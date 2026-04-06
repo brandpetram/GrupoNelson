@@ -93,14 +93,14 @@ export function EditorialCascadaBeta() {
 
       {/* Título — ancho completo, z-10 para estar sobre los dots */}
       <h2 className="relative z-10 w-9/12 768:w-full text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.5rem] 1024:text-[4rem] 1200:text-[3rem] 1366:text-[3.5rem] 1536:text-[4rem] 1728:text-[4.5rem] 1920:text-[5rem] font-extrabold tracking-tighter leading-none text-foreground text-balance">
-        La Diferencia Nelson: familia fundadora, trato directo y constructora propia desde 1965.
+        La Diferencia Nelson: pioneros de la manufactura fronteriza desde 1965, operación directa por la familia fundadora y constructora propia.
       </h2>
 
       {/* Párrafo + Stats (izquierda) | Carrusel (derecha) */}
       <div className="mt-8 768:mt-12 1200:mt-16 flex flex-col 1200:flex-row gap-10 1200:gap-16">
         <div className="1200:w-[55%]">
           <p className="text-[1rem] 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.5rem] 1200:text-[1.375rem] 1366:text-[1.5rem] 1536:text-[1.625rem] 1728:text-[1.75rem] 1920:text-[1.875rem] font-normal tracking-wider leading-relaxed text-muted-foreground">
-            Grupo Nelson no es un fondo de inversión que administra parques industriales desde otra ciudad. Es la familia que creó la industria maquiladora de Mexicali en 1965 y sigue operando personalmente cada parque, cada contrato y cada proyecto de construcción. Tres hechos verificables que ningún competidor en Mexicali puede replicar simultáneamente: 60 años de trayectoria, operación directa por la familia fundadora, y constructora in-house con 28 años y 75 proyectos completados.
+            Grupo Nelson instaló la primera maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando cada parque, cada contrato y cada proyecto de construcción. Muy pocos desarrolladores industriales en esta ciudad combinan 60 años de permanencia, dueños involucrados operativamente y constructora propia con 28 años de experiencia. Eso se traduce en menos riesgo, menos fricción y más velocidad para tu proyecto.
           </p>
 
           {/* Carrusel — mobile y tablet (debajo del párrafo) */}
@@ -111,37 +111,32 @@ export function EditorialCascadaBeta() {
             <div className="grid grid-cols-2 gap-[1.5rem] 768:gap-[2rem] 1200:gap-[2rem] 1920:gap-[2.5rem]">
               <div className="flex flex-col gap-[0.375rem]">
                 <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Trato directo con dueños
+                  Pioneros desde 1965
                 </h3>
                 <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  La familia fundadora opera y negocia personalmente
+                  Instalaron la primera maquiladora de Mexicali
                 </p>
               </div>
               <div className="flex flex-col gap-[0.375rem]">
                 <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Constructora propia in-house
+                  Dueños operando
                 </h3>
                 <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  Baumex diseña y construye con equipo propio
+                  Negocian, deciden y responden personalmente
                 </p>
               </div>
               <div className="flex flex-col gap-[0.375rem]">
                 <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Ingeniería de alta complejidad
+                  Constructora propia
                 </h3>
                 <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  Sistemas antisísmicos, LEED Gold, proyectos únicos
-                </p>
-              </div>
-              <div className="flex flex-col gap-[0.375rem]">
-                <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Creadores del ecosistema industrial
-                </h3>
-                <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  Fundaron la industria maquiladora de Mexicali en 1965
+                  Baumex: 28 años y 75 proyectos con equipo propio
                 </p>
               </div>
             </div>
+            <p className="mt-6 768:mt-8 text-[0.8125rem] 768:text-[0.875rem] 1024:text-[0.9375rem] 1200:text-[1rem] 1536:text-[1.0625rem] 1728:text-[1.0625rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
+              <strong className="text-foreground">80% repeat business</strong> — la mayoría de los clientes regresa, expande o inicia nuevos proyectos.
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contacto"

@@ -12,31 +12,34 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 const features = [
   {
-    name: "Nelson II: 27 hectáreas",
-    description: "Subestación eléctrica dedicada para el parque.",
-  },
-  {
-    name: "Sistema contraincendio central",
+    name: "Empresas Fortune 500 operando aquí",
     description:
-      "Tanque de 360,000 galones — ahorro de 60% al cliente frente a un sistema individual.",
+      "Pasaron por due diligence exhaustivo antes de firmar. Si ellas aprobaron, tu evaluación puede pasar también.",
   },
   {
-    name: "Certificaciones internacionales",
-    description: "LEED Gold, FM Global, NFPA, ISN, sistemas antisísmicos BRB.",
-  },
-  {
-    name: "Seguridad 24/7",
+    name: "La nave industrial más grande de Mexicali",
     description:
-      "Control de acceso y vigilancia permanente en todos los parques.",
+      "52,200 m² para Gulfstream — construida por el mismo grupo que va a atender tu proyecto.",
   },
   {
-    name: 'Calificación "Recomendado"',
-    description: "Por Honeywell en plataforma ISN.",
-  },
-  {
-    name: "4 empresas Fortune 500",
+    name: "80% repeat business",
     description:
-      "Ya validaron esta infraestructura con su propio due diligence.",
+      "La mayoría de los clientes regresa, expande o inicia nuevos proyectos.",
+  },
+  {
+    name: "Interiores Aéreos: de 5,000 a 550,000 ft²",
+    description:
+      "El mismo proveedor desde una nave pequeña hasta un complejo 110 veces más grande.",
+  },
+  {
+    name: "Nelson II: infraestructura validada",
+    description:
+      "Subestación eléctrica dedicada y sistema contraincendio central — 60% de ahorro frente a un sistema individual.",
+  },
+  {
+    name: "30 corporaciones internacionales",
+    description:
+      "Operando hoy en parques de Grupo Nelson.",
   },
 ];
 
@@ -52,17 +55,15 @@ export function OffsetWithFeatureListBP() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
             <h2 className="text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[0.875rem] 768:text-[0.875rem] 834:text-[0.875rem] 1024:text-[0.9375rem] 1200:text-[0.9375rem] 1280:text-[1rem] 1366:text-[1rem] 1440:text-[1rem] 1536:text-[1.0625rem] 1728:text-[1.0625rem] 1920:text-[1.0625rem] font-semibold text-blue-400">
-              Infraestructura auditada
+              Resultados que lo confirman
             </h2>
             <p className="mt-2 text-[1.5rem] 360:text-[1.5rem] 393:text-[1.5rem] 430:text-[1.75rem] 768:text-[2rem] 834:text-[2.25rem] 1024:text-[2.5rem] 1200:text-[2.75rem] 1280:text-[3rem] 1366:text-[3.25rem] 1440:text-[3.5rem] 1536:text-[3.75rem] 1728:text-[4.25rem] 1920:text-[4.5rem] font-extrabold tracking-tighter leading-none text-pretty text-white">
-              Experiencia Trabajando con Empresas Fortune 500
+              Los más exigentes ya evaluaron y firmaron
             </p>
             <p className="mt-6 text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1rem] 834:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-gray-300 leading-relaxed tracking-wide text-balance">
-              <strong>30 corporaciones internacionales</strong> operan en
-              parques de Grupo Nelson. Cada una pasó por un proceso de{" "}
-              <strong>due diligence</strong> antes de firmar. Cada una evaluó
-              infraestructura eléctrica, sistemas contraincendio, seguridad y
-              compliance ambiental. Y cada una firmó.
+              Corporativos globales y empresas Fortune 500 ya evaluaron a
+              Grupo Nelson — infraestructura, seguridad, compliance, capacidad
+              constructiva — y cada una firmó.
             </p>
           </div>
           <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-[1.5rem] 768:gap-y-[2rem] 1024:gap-y-[2.5rem] 1200:gap-y-[2.5rem] 1920:gap-y-[3rem] sm:grid-cols-2">

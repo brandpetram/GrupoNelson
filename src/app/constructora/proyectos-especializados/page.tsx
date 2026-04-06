@@ -2,15 +2,10 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
 import { GridOverlay } from "@/components/ui/brandpetram/grid";
-import { FeatureSection6BPConProps } from "@/components/brandpetram/con-props/feature-section-6-bp-con-props";
-import { FeatureSection3BPConProps } from "@/components/brandpetram/con-props/feature-section-3-bp-con-props";
-import { SplitWithImageBPConProps } from "@/components/brandpetram/con-props/split-with-image-bp-con-props";
-import { Construction, Plane, Wind, Factory } from "lucide-react";
 import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  CheckBadgeIcon,
-} from "@heroicons/react/20/solid";
+  SplitSimpleBP,
+  splitParagraphClass,
+} from "@/components/brandpetram/split-simple-bp";
 
 export const metadata: Metadata = {
   title: "Proyectos Especializados | Baumex Constructora | Grupo Nelson",
@@ -24,7 +19,7 @@ export default function ProyectosEspecializadosPage() {
       <Header variant="dark" />
 
       <main>
-        {/* Hero — mismo estilo que /constructora/baumex (Mu) */}
+        {/* ── Hero ── */}
         <div
           className="relative bg-gray-800 overflow-hidden pb-72 xl:pb-96"
           style={{
@@ -84,7 +79,7 @@ export default function ProyectosEspecializadosPage() {
           </div>
 
           <div className="relative pt-6 pb-16 sm:pb-24">
-            <main className="mt-32 sm:mt-40 1200:mt-48">
+            <div className="mt-32 sm:mt-40 1200:mt-48">
               <div className="mx-auto md:max-w-5xl 1024:max-w-3xl 1200:max-w-5xl 1280:max-w-6xl 1536:max-w-7xl 1728:max-w-400 1920:max-w-440">
                 <div className="1200:grid 1200:grid-cols-12 1200:gap-8">
                   <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto 1200:col-span-6 1200:text-left 1200:flex 1200:items-center">
@@ -94,17 +89,16 @@ export default function ProyectosEspecializadosPage() {
                           Proyectos Especializados
                         </span>
                         <span className="ml-4 text-xs md:text-sm">
-                          Ingeniería sin precedente
+                          Problemas resueltos
                         </span>
                       </span>
                       <h1 className="mt-4 text-3xl 360:text-[2.5rem] 393:text-[3rem] 430:text-[3.5rem] 768:text-[4rem] 834:text-[4.5rem] 1024:text-[5rem] 1200:text-[3.5rem] 1280:text-[4rem] 1366:text-[4.5rem] 1440:text-[5rem] 1536:text-[5.5rem] 1728:text-[6rem] 1920:text-[7rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none 1200:mt-6">
-                        Construcciones especializadas
+                        Cuatro problemas que no tenían solución estándar
                       </h1>
                       <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
-                        Puentes sin columnas, túneles de viento, sistemas
-                        antisísmicos, cimentaciones de precisión milimétrica —
-                        28 años ejecutando lo que no tenía solución estándar.
-                        Lo resolvemos.
+                        Cada uno empezó con un requerimiento que no existía en
+                        ningún catálogo. Se investigó, se diseñó y se construyó.
+                        Hoy los cuatro operan.
                       </p>
                       <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
                         <div className="rounded-xs shadow">
@@ -129,7 +123,7 @@ export default function ProyectosEspecializadosPage() {
                   <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6" />
                 </div>
               </div>
-            </main>
+            </div>
           </div>
 
           {/* Cuadritos decorativos */}
@@ -138,86 +132,169 @@ export default function ProyectosEspecializadosPage() {
           </div>
         </div>
 
-        {/* Puente Skyworks + Gulfstream 550K */}
-        <div className="w-11/12 mx-auto mt-16 md:mt-24">
-          <FeatureSection6BPConProps
-            badge="Lo que ya hemos resuelto"
-            title="Cuatro proyectos que no existían en ningún directorio"
-            description="Cada uno empezó con un problema que no tenía solución estándar. Lo investigamos, lo diseñamos y lo construimos."
-            feature1Title="Puente de 95 m sin columnas"
-            feature1Description="Conecta dos plantas de semiconductores sobre un boulevard y un dren federal. Colado en un solo día, sin juntas. Permisos con 3 niveles de gobierno."
-            feature1Icon={<Construction className="h-5 w-5" />}
-            feature1IconColor="text-orange-600"
-            feature2Title="Nave de 52,200 m² con BRB antisísmico"
-            feature2Description="La nave más grande de Mexicali. Primera implementación de sistemas antisísmicos BRB en la región. 20 MW eléctricos, 10 MW solares."
-            feature2Icon={<Plane className="h-5 w-5" />}
-            feature2IconColor="text-blue-600"
-            button1Text="Contactar"
-            button2Text="Ver portafolio"
-            imageSrc="/contructora-mexicali/puente-skyworks-2.jpg"
-            imageAlt="Puente Skyworks 95 metros sin columnas"
-          />
-        </div>
+        {/* ── Caso 1: Puente Skyworks ── */}
+        <div className="pt-16 md:pt-24" />
+        <SplitSimpleBP
+          tagline="Semiconductores"
+          title="Un puente de 95 m sin columnas para transportar microchips"
+          imagePosition="left"
+          imageSrc="/contructora-mexicali/puente-skyworks-2.jpg"
+          imageAlt="Puente Skyworks — 95 metros sin columnas intermedias"
+          showCuadritos
+          cuadritosPosition="right"
+        >
+          <p className={splitParagraphClass}>
+            <strong>Skyworks</strong> necesitaba mover microchips entre dos
+            plantas de semiconductores separadas por un boulevard y un dren
+            federal de la CNA. Los chips viajan en carritos de golf con{" "}
+            <strong>temperatura controlada</strong> — la conexión tenía que ser
+            un puente cerrado, sin columnas intermedias, sobre una vialidad
+            activa.
+          </p>
+          <p className={splitParagraphClass}>
+            El puente se coló <strong>en un solo día</strong>, con dos bombas de
+            concreto, sin juntas de construcción — una sola pieza de 95 metros.
+            La cimentación baja a <strong>18 metros</strong> de profundidad en
+            suelo arenoso colapsable, zona sísmica 4. Los permisos involucraron{" "}
+            <strong>tres niveles de gobierno</strong>: CNA (federal), gobierno
+            del estado y municipio. La vialidad solo se cerró un domingo. El
+            montaje de la estructura tomó dos domingos consecutivos, con dos
+            meses de coordinación logística previos.
+          </p>
+          <p className={splitParagraphClass}>
+            Hoy los microchips cruzan el boulevard en carritos de golf con
+            temperatura controlada. El puente opera.
+          </p>
+        </SplitSimpleBP>
 
-        {/* Túnel de viento + Deacero */}
-        <div className="container mx-auto w-10/12 mt-20">
-          <FeatureSection3BPConProps
-            tagline="Y eso no es todo"
-            titulo="Más proyectos que no existían en ningún directorio"
-            descripcion="Cada uno empezó con un requerimiento que no tenía precedente en la región. Lo investigamos, lo diseñamos y lo construimos."
-            imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
-            imagenAlt="Túnel de viento y proyectos de precisión Baumex"
-            feature1Icon={<Wind className="h-5 w-5" />}
-            feature1IconColor="text-green-600"
-            feature1Titulo="Túnel de viento de 3,000 HP"
-            feature1Descripcion="Edificio de 20 m de altura para pruebas aeroespaciales. Ductos de placa estructural soldada. Cimentación calculada para vibraciones extremas de operación continua."
-            feature2Icon={<Factory className="h-5 w-5" />}
-            feature2IconColor="text-purple-600"
-            feature2Titulo="50,000 m² de precisión milimétrica"
-            feature2Descripcion="Cientos de anclas embebidas con tolerancia milimétrica para grúas industriales de gran escala. Cimentaciones profundas a 15 m con pilas de concreto armado."
-          />
-        </div>
+        <div className="h-20 768:h-24 1200:h-32" />
 
-        {/* CTA */}
-        <div className="mt-20">
-          <SplitWithImageBPConProps
-            imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
-            imagenAlt="Consulta de proyectos especializados"
-            tagline="Tu Proyecto Especial"
-            titulo="¿Tu operación necesita algo diferente?"
-            parrafo1="Estos son cuatro ejemplos. Pero cada proyecto empieza con un problema nuevo — y lo resolvemos."
-            parrafo2="28 años diseñando y construyendo lo que no existía. Dinos qué necesita tu operación."
-            feature1Icon={
-              <CloudArrowUpIcon
-                aria-hidden="true"
-                className="mt-1 size-5 flex-none"
-              />
-            }
-            feature1IconColor="text-orange-600 dark:text-orange-500"
-            feature1Titulo="Del problema a la entrega."
-            feature1Descripcion="Investigación, diseño, permisos, construcción — un solo equipo."
-            feature2Icon={
-              <LockClosedIcon
-                aria-hidden="true"
-                className="mt-1 size-5 flex-none"
-              />
-            }
-            feature2IconColor="text-blue-600 dark:text-blue-500"
-            feature2Titulo="Sin límite de complejidad."
-            feature2Descripcion="Si tiene solución de ingeniería, la encontramos."
-            feature3Icon={
-              <CheckBadgeIcon
-                aria-hidden="true"
-                className="mt-1 size-5 flex-none"
-              />
-            }
-            feature3IconColor="text-green-600 dark:text-green-500"
-            feature3Titulo="Experiencia verificable."
-            feature3Descripcion="75+ proyectos completados para 30+ corporaciones internacionales."
-            parrafo3="Dinis qué necesita tu operación. Te mostramos cómo se resuelve."
-            subtitulo="Consulta sin costo"
-            parrafo4="para tu próximo proyecto industrial especializado en Mexicali."
-          />
+        {/* ── Caso 2: Gulfstream ── */}
+        <SplitSimpleBP
+          tagline="Aeroespacial"
+          title="Un terremoto de 7.2 definió cómo se construyó la nave más grande de Mexicali"
+          imagePosition="right"
+          imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
+          imageAlt="Nave Gulfstream — 52,200 m², la más grande de Mexicali"
+          showCuadritos
+          cuadritosPosition="right"
+          cuadritosInvert
+        >
+          <p className={splitParagraphClass}>
+            En <strong>2010</strong>, un terremoto de{" "}
+            <strong>magnitud 7.2</strong> dañó la planta existente de{" "}
+            <strong>Gulfstream</strong> en Mexicali y causó dos semanas de paro
+            de producción. Cuando Gulfstream decidió construir su nueva nave de{" "}
+            <strong>52,200 m²</strong>, el requerimiento era claro: que un
+            sismo no volviera a parar la operación.
+          </p>
+          <p className={splitParagraphClass}>
+            Baumex propuso sistemas antisísmicos{" "}
+            <strong>BRB (Buckling-Restrained Braces)</strong> — disipadores de
+            energía en puntos estratégicos de la estructura. Era la primera vez
+            que Baumex los implementaba. Tecnología usada en Ciudad de México y
+            Japón, aplicada por primera vez a esta escala en un proyecto de
+            Baumex. La propuesta vino de Baumex, no del cliente.
+          </p>
+          <p className={splitParagraphClass}>
+            Hoy es <strong>la nave industrial más grande de Mexicali</strong>,
+            con <strong>13,500 m² de oficinas</strong> — sin precedente para una
+            nave industrial en la localidad. Opera.
+          </p>
+        </SplitSimpleBP>
+
+        <div className="h-20 768:h-24 1200:h-32" />
+
+        {/* ── Caso 3: Túnel de viento Honeywell ── */}
+        <SplitSimpleBP
+          tagline="Aeroespacial"
+          title="Un túnel de viento con puertas antisonido de $30,000 USD"
+          imagePosition="left"
+          imageSrc="/fotos-dron/CONSTRUCTORA BAUMEX/HONEYWELL/nave-industrial-honeywell-1.JPG"
+          imageAlt="Nave Honeywell — túnel de viento aeroespacial"
+          showCuadritos
+          cuadritosPosition="right"
+        >
+          <p className={splitParagraphClass}>
+            <strong>Honeywell</strong> necesitaba simular condiciones de vuelo —
+            velocidad y volumen de aire — para pruebas de componentes
+            aeroespaciales. El requerimiento no tenía precedente en los
+            proyectos de Baumex.
+          </p>
+          <p className={splitParagraphClass}>
+            El edificio mide <strong>20 metros de altura</strong> y aloja un
+            blower de <strong>3,000 HP</strong> alimentado con alta tensión de
+            4.16 KV. Los ductos de{" "}
+            <strong>2.5 × 2.5 metros</strong> están fabricados con placa
+            estructural soldada — no lámina, porque la fuerza del aire la
+            destruiría. Las puertas blindadas antisonido cuestan{" "}
+            <strong>~$30,000 USD el par</strong>. La cimentación y la estructura
+            se calcularon para soportar vibraciones extremas de operación
+            continua.
+          </p>
+          <p className={splitParagraphClass}>
+            El proyecto ejecutivo se elaboró en conjunto entre ingenieros de{" "}
+            <strong>Honeywell</strong> e ingenieros de{" "}
+            <strong>Baumex</strong>. Tomó 8 meses de construcción más meses
+            adicionales de pruebas por parte de Honeywell. Hoy el túnel opera y
+            los componentes aeroespaciales se prueban en condiciones simuladas
+            de vuelo.
+          </p>
+        </SplitSimpleBP>
+
+        <div className="h-20 768:h-24 1200:h-32" />
+
+        {/* ── Caso 4: Deacero ── */}
+        <SplitSimpleBP
+          tagline="Acero"
+          title="50,000 m² donde un centímetro de error arruina millones en equipos"
+          imagePosition="right"
+          imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
+          imageAlt="Planta Deacero — cimentaciones de precisión milimétrica"
+          showCuadritos
+          cuadritosPosition="right"
+          cuadritosInvert
+        >
+          <p className={splitParagraphClass}>
+            <strong>Deacero</strong> necesitaba una planta recicladora de acero
+            con grúas industriales de gran escala. El reto: cientos de bases y
+            anclas embebidas con{" "}
+            <strong>tolerancia milimétrica</strong> para el montaje de equipos
+            importados. Si las anclas no calzan exactamente, el proyecto falla.
+          </p>
+          <p className={splitParagraphClass}>
+            <strong>5 hectáreas de patios</strong> (50,000 m²) con
+            cimentaciones profundas a <strong>15 metros</strong> usando pilas de
+            concreto armado. Control topográfico de precisión en cada punto de
+            anclaje. La entrega de obra terminada debía calzar milimétricamente
+            con los equipos que Deacero instaló después — grúas, bandas
+            transportadoras, líneas de proceso.
+          </p>
+          <p className={splitParagraphClass}>
+            Equipos instalados. Planta operando.
+          </p>
+        </SplitSimpleBP>
+
+        {/* ── Cierre + CTA ── */}
+        <div className="px-10 1200:px-0 lg:max-w-5xl xl:max-w-6xl 1728:max-w-[1400px] 1920:max-w-[1600px] mx-auto py-20 md:py-28 text-center">
+          <p className="text-balance text-muted-foreground text-[1rem] 768:text-[1.125rem] 1024:text-[1.25rem] 1200:text-[1.25rem] 1366:text-[1.375rem] 1536:text-[1.5rem] 1728:text-[1.625rem] 1920:text-[1.75rem] leading-relaxed tracking-wide max-w-4xl mx-auto">
+            Cada uno de estos proyectos empezó con un problema nuevo. Se
+            investigó, se diseñó y se construyó. ¿Cuál es el tuyo?
+          </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <a
+              href="/contacto"
+              className="inline-flex items-center justify-center rounded-xs bg-blue-600 px-8 py-3.5 text-[0.9375rem] 1200:text-[1rem] 1536:text-[1.0625rem] font-semibold text-white shadow hover:bg-blue-700 transition-colors"
+            >
+              Dinos qué necesita tu operación
+            </a>
+            <a
+              href="/constructora/portafolio"
+              className="inline-flex items-center justify-center gap-2 rounded-xs px-8 py-3.5 text-[0.9375rem] 1200:text-[1rem] 1536:text-[1.0625rem] font-semibold text-foreground hover:bg-accent transition-colors"
+            >
+              Ver portafolio completo
+            </a>
+          </div>
         </div>
       </main>
     </div>
