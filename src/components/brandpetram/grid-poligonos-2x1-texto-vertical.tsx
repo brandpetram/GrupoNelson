@@ -23,9 +23,9 @@ export function GridPoligonos2x1TextoVertical() {
           <div className="relative aspect-square">
             <PoligonoImagen1
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
-              alt="Lorem ipsum"
+              alt="Nave industrial LEED en Mexicali — Grupo Nelson"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-              text="Parque El Vigía I"
+              text="28 años en clima extremo"
               textColor="text-white"
               className="rounded-none"
             />
@@ -47,9 +47,9 @@ export function GridPoligonos2x1TextoVertical() {
           <div className="relative col-span-2 aspect-[2/1]">
             <PoligonoImagen1
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg"
-              alt="Soluciones industriales"
+              alt="Naves industriales certificadas LEED en Mexicali"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-              text="Parque El Vigía I"
+              text="75+ proyectos en Mexicali"
               textColor="text-white"
               className="rounded-none"
             />
@@ -61,8 +61,8 @@ export function GridPoligonos2x1TextoVertical() {
           <div className="relative w-full h-full overflow-hidden rounded-none bg-gradient-to-r from-gray-800 to-gray-900  flex items-center justify-center">
             <div className="p-8 text-center">
               <p className="text-white font-light text-lg md:text-2xl leading-loose tracking-wide text-balance">
-                Marcando el camino hacia lorem{' '}
-                <span className="font-black">sostenible</span> ipsum dolor sit.
+                Datos reales de desempeño térmico a{' '}
+                <span className="font-black">48°C</span> — no modelos teóricos.
               </p>
             </div>
           </div>

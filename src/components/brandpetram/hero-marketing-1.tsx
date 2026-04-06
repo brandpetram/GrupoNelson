@@ -22,7 +22,7 @@ export function HeroMarketing1() {
   // Configuración del contenido de texto
   const propsContenido = {
     className: 'rounded-2xl bg-background/80 px-[2rem] mx-[1rem] md:px-[3rem] md:mx-[5rem]  1728:px-[6rem] 1728:mx-[12rem] 1920:px-[6rem] 1920:mx-[15rem]',
-    titulo: 'Tu Nave Industrial con Certificación LEED en Mexicali',
+    titulo: 'Certifica LEED tu nave industrial en Mexicali — donde el clima es el examen más difícil',
     clasesLinea: 'bg-gray-300 w-full h-1',
       mostrarLinea: true,
 
@@ -73,7 +73,7 @@ export function HeroMarketing1() {
         <div className="">
           <ContentText1 {...propsContenido}>
             <p>
-                Gulfstream 550K: 52,200 m² con 10 MW de paneles solares, sistemas antisísmicos BRB y certificación FM Global — en proceso de certificación LEED Gold. Baumex, la constructora in-house de Grupo Nelson, gestiona los 7 pilares del proceso en una de las zonas climáticas más demandantes de Norteamérica.
+                Cada vez más corporativos globales exigen o prefieren LEED para aprobar nuevas instalaciones. Certificar a 48°C con un equipo que no conoce el desierto es una apuesta cara. Baumex lleva 28 años construyendo en Mexicali, con datos de desempeño térmico reales — no teóricos. Gulfstream ya está certificando LEED Gold su nave de 52,200 m² aquí.
             </p>
           </ContentText1>
 

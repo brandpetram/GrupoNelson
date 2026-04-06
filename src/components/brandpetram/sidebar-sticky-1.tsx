@@ -74,11 +74,9 @@ export function SidebarSticky1() {
               </h3>
               <ul className="space-y-2">
                 <li className="leading-snug text-foreground font-medium">52,200 m² — nave más grande de Mexicali</li>
-                <li className="leading-snug">10 MW paneles solares</li>
-                <li className="leading-snug">LEED Gold (objetivo)</li>
-                <li className="leading-snug">FM Global certificada</li>
-                <li className="leading-snug">28 años de experiencia</li>
-                <li className="leading-snug">75+ proyectos</li>
+                <li className="leading-snug">LEED Gold (en proceso)</li>
+                <li className="leading-snug">28 años en clima extremo</li>
+                <li className="leading-snug">75+ proyectos en Mexicali</li>
               </ul>
             </div>
 
@@ -113,37 +111,37 @@ export function SidebarSticky1() {
           <article className="space-y-7">
             <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-                Clima Extremo y Energía: construir LEED a +45°C en Mexicali
+                La decisión de negocio: por qué LEED
               </h2>
               <p className="text-muted-foreground">
-                Mexicali supera los 48°C en verano con radiación solar de 2,400 kWh/m² anuales. Un diseño LEED genérico colapsa operativamente aquí. Baumex calibra la envolvente térmica específicamente para el desierto sonorense: R-19 en muros, R-30 en cubierta, cubiertas reflectivas SRI mayor a 78 y sellado al 100% en muelles de carga.
+                Los corporativos globales que evalúan instalaciones en México están elevando sus estándares ambientales. En el contexto de nearshoring, donde empresas reubican operaciones de Asia a la frontera norte, una nave con certificación LEED reduce fricción en la aprobación corporativa y facilita el cumplimiento de reportes ESG.
               </p>
               <p className="text-muted-foreground">
-                Gulfstream 550K opera con 3,200 toneladas de A/C de mínimo consumo distribuidas en 42 manejadoras, con recuperación del 90% del agua de condensación. 10 MW de paneles solares en 50,000 m² (cubierta + carports). 20 MW de capacidad eléctrica instalada, 50% energía solar limpia. Ahorro documentado del 35-50% frente a nave convencional.
+                Gulfstream — Fortune 500, aeroespacial — ya está certificando LEED Gold su nave de 52,200 m² en Mexicali. No es un plan futuro. Es un proyecto en proceso, con Baumex ejecutando. Para el CFO o el VP de Real Estate que necesita justificar la inversión: una nave LEED no solo cumple requisitos corporativos — tiende a reducir costos operativos de energía y agua, y posiciona el activo en un mercado que cada vez valora más la sustentabilidad.
               </p>
               <GridPoligonos2x1TextoVertical />
             </section>
             <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-                Agua, Materiales y Calidad Ambiental: los créditos que definen la certificación
+                El moat de clima extremo: por qué con Baumex en Mexicali
               </h2>
               <p className="mb-4 text-muted-foreground">
-                Mexicali está en una de las regiones con mayor estrés hídrico de Norteamérica. Nelson II opera con tanque contraincendio de 360,000 galones centralizado que ahorra al inquilino el 60% del costo. Captación pluvial, fixtures de ultra-bajo flujo y recuperación de condensación reducen el consumo total de agua un 40%.
+                Cualquier constructora puede leer el manual de LEED. Pero certificar a 48°C no es lo mismo que certificar a 25°C. Un error de cálculo en la envolvente térmica a esta temperatura dispara significativamente el consumo de climatización sobre el diseño original.
               </p>
               <p className="mb-4 text-muted-foreground">
-                Cada material estructural llega con Declaración Ambiental de Producto (EPD) verificada por tercero. Acero con contenido reciclado documentado. Abastecimiento regional dentro de 160 km. Gestión de residuos con desvío mínimo del 50% de vertedero. Pinturas con COV por debajo de 50 g/L, ventilación ASHRAE 62.1 con filtración para polvo del desierto, y confort térmico controlado para operación industrial continua.
+                Baumex tiene 28 años de datos de desempeño térmico en naves construidas en Mexicali — 75+ proyectos en la misma zona climática. No son modelos teóricos: son datos reales de operación en el desierto sonorense. La nave Gulfstream 550K opera hoy con envolvente calibrada para las condiciones reales del sitio — 48°C de temperatura exterior y 2,400 kWh/m² de radiación solar anual.
               </p>
               <GridPoligonos1x2TextoLargo />
             </section>
             <section className="space-y-7 text-xl leading-relaxed">
               <h2 className="text-2xl font-bold text-foreground">
-                Sistemas Inteligentes y Proceso de Certificación LEED en Mexicali
+                Un solo equipo que diseña, construye y gestiona la certificación
               </h2>
               <p className="mb-4 text-muted-foreground">
-                Building Management System con submedición independiente por circuito: HVAC, iluminación, bombas, fotovoltaicos y consumo hídrico monitoreados en tiempo real. Detección de ineficiencias en horas, no en meses. Dashboards que alimentan reportes ESG sin esfuerzo manual — lo que empresas Fortune 500 como Gulfstream y Honeywell exigen en sus instalaciones.
+                Baumex gestiona el proceso integrativo LEED v4 BD+C desde el predesign: registro, Design Review, gestión de evidencias en construcción y Construction Review con trazabilidad completa. No es un consultor externo que solo prepara documentos — es la misma constructora que diseña y ejecuta la obra.
               </p>
               <p className="mb-4 text-muted-foreground">
-                Baumex gestiona el proceso integrativo LEED v4 BD+C desde el predesign: registro, Design Review, gestión de evidencias en construcción y Construction Review con trazabilidad completa en LEED Online. Gulfstream 550K en 53-55 puntos (Silver), apuntando a Gold con los 10 MW solares. 28 años de experiencia. 75+ proyectos. Un solo equipo que diseña, construye y certifica.
+                Si tu corporativo exige o está evaluando LEED para tu próxima instalación en Mexicali, habla con un equipo que lleva 28 años construyendo en esta zona climática. Cada pilar LEED tiene su propia página con datos técnicos reales — explora los detalles en las secciones de abajo.
               </p>
             </section>
 

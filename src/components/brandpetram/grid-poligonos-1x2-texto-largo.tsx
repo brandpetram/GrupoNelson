@@ -21,7 +21,7 @@ export function GridPoligonos1x2TextoLargo() {
         <div className="relative">
           <PoligonoImagen1
             src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
-            alt="Lorem ipsum"
+            alt="Parque Nelson II — infraestructura LEED en Mexicali"
             overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
             text="Parque Nelson II"
             textColor="text-white"
@@ -48,7 +48,7 @@ export function GridPoligonos1x2TextoLargo() {
           <div className="relative aspect-square">
             <PoligonoImagen1
                 src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
-                alt="Lorem ipsum"
+                alt="Nave industrial en Parque Nelson II — Mexicali"
                 overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
                 text="Parque Nelson II"
                 textColor="text-white"
@@ -60,7 +60,7 @@ export function GridPoligonos1x2TextoLargo() {
           <div className="relative col-span-2 aspect-square md:aspect-[2/1]">
             <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900 rounded-none">
               <p className="p-6 w-9/12 md:w-10/12 1728:w-9/12 text-white font-light tracking-wide lg:leading-loose transition-transform duration-300 group-hover:scale-110 text-base 393:text-base 430:text-lg 768:text-sm 834:text-sm 1024:text-sm 1200:text-md 1280:text-md 1366:text-lg 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <span className="font-black">hasta un 40%</span> nonummy.
+                Gulfstream ya certifica LEED Gold en Mexicali con Baumex. Un equipo que diseña, construye y gestiona la certificación <span className="font-black">en la misma zona climática</span> desde hace 28 años.
               </p>
             </div>
           </div>

@@ -355,14 +355,14 @@ const sections: SectionDefinition[] = [
         notes: 'Tema comercial #2 Turnkey Solutions. Complementa Build-to-Suit (#3).',
       },
       {
-        id: 'certificacion-leed',
+        id: 'leed',
         name: 'Certificación LEED',
-        url: '/constructora/certificacion-leed',
+        url: '/constructora/leed',
         status: 'con-contenido',
         summary:
-          'Tiene Hero + Sidebar + Carrusel LEED + BigNumber. Conecta con el hub LEED de 7 sub-páginas.',
+          'Tiene Hero + Sidebar + Carrusel LEED + BigNumber. Copy reescrito con angle brief: argumento de negocio + moat de clima extremo. Conecta con 7 sub-páginas LEED.',
         topics: [],
-        notes: 'Contenido existente. Las 7 sub-páginas LEED también tienen contenido completo.',
+        notes: 'Ruta legacy /constructora/certificacion-leed eliminada. Las 7 sub-páginas LEED tienen contenido completo.',
       },
       {
         id: 'estandares-internacionales',
@@ -606,7 +606,7 @@ const sections: SectionDefinition[] = [
         name: 'LEED y Sustentabilidad',
         url: '/experiencia/leed-y-sustentabilidad',
         status: 'fuera-del-proceso',
-        summary: 'ELIMINADA → Redirige a /constructora/certificacion-leed. Era espejo de Certificación LEED (que tiene 7 sub-páginas completas).',
+        summary: 'ELIMINADA → Redirige a /constructora/leed. Era espejo de Certificación LEED (que tiene 7 sub-páginas completas).',
       },
       {
         id: 'cumplimiento-global-eliminado',
