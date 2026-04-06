@@ -3,6 +3,8 @@ import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: 'Certificaciones | Grupo Nelson',
+  description:
+    'Baumex ha construido bajo ISN, FM Global, BRB antisísmico, NOM y NFPA en proyectos reales, con certificación LEED Gold en proceso. Experiencia documentada en normas, certificaciones y requisitos corporativos para naves industriales en Mexicali.',
 }
 
 export default function CertificacionesPage() {
@@ -12,25 +14,25 @@ export default function CertificacionesPage() {
 
       <main>
         {/* ══════════════════════════════════════════════════════════
-            COPY COMERCIAL — Certificaciones Obtenidas
-            Ángulo: RESULTADOS (qué hemos certificado y qué significa para el cliente)
-            vs. Constructora que presenta certificaciones como CAPACIDAD
-            Fuente: docs/fase-2-desempaquetado-comercial-baumex.md (Temas E, G)
-            Reglas: /Proyectos/copywriting-b2b/reglas-de-copywriting-b2b.md
-            Status: BORRADOR — pendiente de aprobación
+            COPY COMERCIAL — Certificaciones y Estándares
+            Ángulo: capacidad demostrada bajo normas, certificaciones y requisitos
+            corporativos distintos.
+            Brief: docs/copy/angle-briefs/certificaciones.md (v2, aprobado 2026-04-06)
             ══════════════════════════════════════════════════════════ */}
         <div className="px-8 md:px-12 pt-20 pb-32">
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Certificaciones que abren puertas: ISN, LEED Gold, FM Global y normativas internacionales en naves industriales de Mexicali
+            Normas, certificaciones y estándares cumplidos en naves industriales reales
           </h1>
 
           <p className="text-xl leading-relaxed mb-12">
-            Las certificaciones no son trofeos — son filtros de acceso. Sin ISN, no entras
-            a la cadena de proveedores de Honeywell. Sin FM Global, la prima de seguro
-            de tu nave se multiplica. Sin LEED, tu corporativo no puede reportar cumplimiento
-            ESG. Grupo Nelson y Baumex han obtenido estas certificaciones en proyectos reales
-            para clientes reales. Aquí están los resultados.
+            Cada proyecto industrial llega con sus propias exigencias: requisitos corporativos,
+            certificaciones ambientales, estándares de aseguramiento, normativa de seguridad.
+            Baumex ha construido bajo estándares distintos exigidos por clientes, industrias
+            y proyectos diferentes — ISN para cadenas Fortune 500, LEED Gold para cumplimiento
+            ambiental, FM Global para aseguradoras, ingeniería antisísmica BRB para continuidad
+            operativa, y normativa NOM/NFPA para operación legal. Todo documentado, todo
+            en proyectos reales.
           </p>
 
           <div className="flex flex-wrap gap-12 mb-24">
@@ -44,89 +46,83 @@ export default function CertificacionesPage() {
 
           {/* ── ISN ── */}
           <h2 className="text-3xl font-bold leading-snug mb-6">
-            ISN (ISNetworld): calificación &quot;Recomendado&quot; por Honeywell para construcción de naves industriales
+            ISN: calificación &quot;Recomendado&quot; por Honeywell
           </h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            ISNetworld es la plataforma global que empresas Fortune 500 usan para evaluar
-            y calificar a sus contratistas y proveedores. Baumex tiene certificación ISN activa
-            con calificación &quot;Recomendado&quot; por Honeywell International para Aero-Mexicali
-            y Honeywell Mexico-Corporate.
+            Para que tu corporativo apruebe a Baumex como contratista, necesitas una validación
+            que ya exista. Baumex tiene calificación &quot;Recomendado&quot; en ISNetworld
+            — la plataforma que empresas Fortune 500 usan para evaluar proveedores — activa
+            para Honeywell Aero-Mexicali y Honeywell Mexico-Corporate.
           </p>
 
           <p className="text-lg leading-relaxed mb-16">
-            Esta calificación solo se obtiene después de demostrar cumplimiento sostenido
-            en seguridad, documentación y calidad. Para tu operación significa: si Honeywell
-            ya validó a Baumex como contratista confiable en ISN, el proceso de due diligence
-            de tu corporativo tiene un punto de referencia verificable.
+            La calificación se obtiene después de demostrar cumplimiento sostenido en seguridad,
+            documentación y calidad. Si Honeywell ya validó a Baumex, el due diligence de tu
+            corporativo tiene un precedente verificable.
           </p>
 
           <hr className="border-border my-16" />
 
           {/* ── LEED ── */}
           <h2 className="text-3xl font-bold leading-snug mb-6">
-            LEED Gold: certificación en la nave industrial más grande de Mexicali — Gulfstream 550K
+            LEED Gold: certificación ambiental — Gulfstream 550K
           </h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            La nave Gulfstream 550K (52,200 m²) se está certificando como LEED Gold.
-            Actualmente en 53-55 puntos (Silver), apuntando a Gold con los 10 MW
-            de paneles solares en cubierta y carports.
+            La nave Gulfstream 550K (52,200 m²) está en proceso de certificación LEED Gold
+            — cumplimiento ambiental verificable que simplifica el reporte ESG de tu corporativo.
+            No es una declaración de intenciones: es un estándar que ya se está ejecutando
+            con diseño, construcción y documentación alineados al objetivo.
           </p>
 
-          <ul className="list-disc pl-6 text-lg leading-relaxed mb-6 space-y-2">
-            <li>10 MW de paneles solares: 20,000 m² en cubierta + 30,000 m² en carports</li>
-            <li>3,200 toneladas de aire acondicionado de mínimo consumo (42 manejadoras)</li>
-            <li>Recuperación del 90% del agua de condensación reutilizada en torres de enfriamiento</li>
-            <li>50% de la energía será solar limpia</li>
-          </ul>
-
           <p className="text-lg leading-relaxed mb-16">
-            Simplifica el reporte ESG de tu corporativo. Una nave con certificación LEED Gold
-            en Mexicali demuestra cumplimiento ambiental verificable — no una declaración
-            de intenciones.
+            El proceso de certificación, incluyendo energía solar, eficiencia de climatización
+            y recuperación de agua, se detalla en{' '}
+            <a href="/constructora/leed" className="underline underline-offset-4 hover:text-primary">
+              la sección dedicada a LEED
+            </a>.
           </p>
 
           <hr className="border-border my-16" />
 
           {/* ── FM Global ── */}
           <h2 className="text-3xl font-bold leading-snug mb-6">
-            FM Global (Factory Mutual): certificación en muros, cubierta, estructura y sistema contraincendio
+            FM Global: certificación de aseguramiento — Gulfstream 550K
           </h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            Factory Mutual es la certificadora internacional de riesgo más reconocida
-            del sector industrial. La nave Gulfstream 550K cuenta con certificación FM Global
-            en toda la envolvente: muros, cubierta TPO, estructura metálica
-            y sistema contraincendio.
+            Si tu aseguradora exige certificación de envolvente y protección contra incendio,
+            Baumex ya ha pasado por ese proceso. La nave Gulfstream 550K tiene certificación
+            FM Global en muros, cubierta TPO, estructura metálica y sistema contraincendio.
           </p>
 
           <p className="text-lg leading-relaxed mb-16">
-            Reduce la prima de seguro de tu nave industrial en Mexicali. La certificación
-            FM Global demuestra ante aseguradoras que la construcción cumple estándares
-            internacionales de resistencia al fuego, integridad estructural y protección
-            de activos.
+            FM Global es la certificadora de riesgo industrial más reconocida a nivel
+            internacional. Tener esta certificación reduce objeciones de aseguradoras
+            y puede disminuir la prima de seguro de tu nave.
           </p>
 
           <hr className="border-border my-16" />
 
           {/* ── BRB ── */}
           <h2 className="text-3xl font-bold leading-snug mb-6">
-            Sistemas antisísmicos BRB: primera implementación en naves industriales de Mexicali
+            Ingeniería antisísmica BRB: primera implementación en naves industriales de Mexicali
           </h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            Buckling-Restrained Braces (BRB) son disipadores de energía antisísmica
-            instalados en puntos estratégicos de la estructura. Tecnología usada
-            en Ciudad de México y Japón, implementada por primera vez en Mexicali
-            por Baumex en la nave Gulfstream 550K.
+            Si tu nave está en zona sísmica y necesitas garantizar continuidad operativa,
+            este sistema ya se implementó en Mexicali. Los Buckling-Restrained Braces (BRB) son
+            disipadores de energía antisísmica — tecnología probada en Ciudad de México y Japón,
+            implementada por primera vez en naves industriales de Mexicali por Baumex
+            en la nave Gulfstream 550K.
           </p>
 
           <p className="text-lg leading-relaxed mb-16">
-            Contexto: el terremoto de magnitud 7.2 en 2010 dañó la planta existente
-            de Gulfstream (35,000 m²) y causó dos semanas de paro de producción.
-            Baumex propuso los sistemas BRB. Gulfstream aceptó. Asegura continuidad
-            operativa en zona sísmica 4 con tecnología probada.
+            El terremoto de 2010 (magnitud 7.2) dañó la planta existente de Gulfstream
+            y causó dos semanas de paro. Baumex propuso los BRB como solución de ingeniería
+            estructural. Gulfstream aceptó. No es una certificación — es un sistema de ingeniería
+            validado en proyecto real para proteger continuidad operativa en zona sísmica.
           </p>
 
           <hr className="border-border my-16" />
@@ -157,12 +153,13 @@ export default function CertificacionesPage() {
 
           {/* ── CTA ── */}
           <h2 className="text-3xl font-bold leading-snug mb-6">
-            Construye tu nave industrial en Mexicali con las certificaciones que tu corporativo exige
+            Construye con los estándares que tu proyecto necesita
           </h2>
 
           <p className="text-lg leading-relaxed">
-            ISN, LEED Gold, FM Global, BRB, NFPA, NOM. Cada certificación obtenida
-            en proyectos reales para clientes reales. Solicita una consulta.
+            ISN, LEED Gold, FM Global, ingeniería antisísmica, NOM, NFPA. Cada estándar
+            cumplido en proyectos reales. Si tu operación tiene requisitos normativos
+            o corporativos específicos, hay precedente. Solicita una consulta.
           </p>
 
         </div>
