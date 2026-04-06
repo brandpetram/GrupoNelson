@@ -76,6 +76,7 @@ Actualmente usa `file:../componentes-brandpetram` para desarrollo. Los cambios e
 
 ### Worktrees, ownership y promoción de componentes
 
+- Explicación humana y ejemplos del proyecto: `docs/estrategia/guia-humana-worktrees-y-componentes.md`.
 - Regla principal: `local first, shared by promotion`.
 - Un worktree de sección solo puede editar archivos de su propia sección.
 - `docs/copy/*` se edita solo desde `MAIN`.
@@ -145,6 +146,17 @@ Los estilos de la librería ya están importados en `globals.css`:
 ```
 
 No duplicar variables CSS ni clases de la librería.
+
+## Documentación del proyecto
+
+| Carpeta | Contenido | Ejemplos |
+|---|---|---|
+| `docs/planes/` | Planes maestros, runbooks, guías operativas y planes locales del proyecto | `plan-maestro-worktrees.md`, `guia-operativa-worktrees.md` |
+| `docs/continuidad/` | Memorias de trabajo, bitácoras, handoff notes, documentación de continuidad entre sesiones | `memoria-de-trabajo-2026-04-05-paralelo-experiencia.md` |
+| `docs/estrategia/` | Guías conceptuales y decisiones estratégicas del proyecto | `guia-humana-worktrees-y-componentes.md` |
+| `docs/copy/` | Angle briefs, tracker de rondas, memorias de copywriting. Se edita solo desde MAIN. | `angle-briefs/*.md`, `tracker-rondas-copy-grupo-nelson.md` |
+
+Usar estas carpetas por defecto cuando la documentación sea específica de Grupo Nelson. No mover archivos viejos solo por ordenar — aplicar la convención para documentos nuevos.
 
 ## Stack
 

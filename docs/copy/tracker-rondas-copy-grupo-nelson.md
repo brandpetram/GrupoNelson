@@ -59,15 +59,17 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 - Prioridad: `2 — siguiente en implementar` (2026-04-04)
 - Estado: `brief aprobado`
 - Angle brief: `aprobado (4 rondas Codex, 2026-04-04)`
-- Implementacion: `no iniciada — worktree section/excelencia-operativa`
-- Proxima accion: `implementar archivos locales (page.tsx + sections/)`
+- Implementacion: `parcial — 3 componentes localizados, 5 archivos pendientes`
+- Proxima accion: `implementar copy del brief en page.tsx + 5 sections locales restantes`
 - Notas:
   Brief en `docs/copy/angle-briefs/excelencia-operativa.md`
-  3 componentes Tailark YA REESCRITOS como sistema (2026-04-05, branch system/o1-excelencia-marketing):
-    testimonial.tsx = Gulfstream 35 años como prueba del método
-    notes-features.tsx = sistema de documentación auditable
-    testimonials-section.tsx = 3 dimensiones del control (tiempo, calidad, seguridad)
-  Pendiente en worktree: page.tsx, logo-cloud-clientes, como-trabajamos, capacidades-inhouse, cta
+  3 componentes LOCALIZADOS (localizar + reescribir, 2026-04-05):
+    sections/testimonial.tsx = Gulfstream 35 años como prueba del método
+    sections/documentacion-auditable.tsx = sistema de documentación auditable
+    sections/dimensiones-control.tsx = 3 dimensiones del control (tiempo, calidad, seguridad)
+  Archivos originales de marketing restaurados (no se promovieron a sistema)
+  ProductIllustration = excepcion temporal (sigue importado de marketing)
+  Pendiente: page.tsx, logo-cloud-clientes, como-trabajamos, capacidades-inhouse, cta
 
 ### `/experiencia/certificaciones`
 
