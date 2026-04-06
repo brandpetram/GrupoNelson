@@ -12,13 +12,13 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 - `6` angle briefs (5 aprobados + 1 borrador)
 - `4` implementaciones hechas
 - `4` paginas totalmente aprobadas
-- `3` componentes sistema reescritos (testimonial, notes-features, testimonials-section)
+- `3` componentes localizados en excelencia-operativa (localizar + reescribir, 2026-04-05): testimonial, documentacion-auditable, dimensiones-control
 
 ### Siguiente (paralelo con worktrees)
 
-- `1` implementacion pendiente: `/experiencia/excelencia-operativa` (brief aprobado, componentes sistema reescritos)
+- `1` implementacion pendiente: `/experiencia/excelencia-operativa` (brief aprobado, 3 componentes localizados, 4 archivos pendientes de copy + 1 solo verificacion)
 - `1` brief en borrador + implementacion: `/experiencia/certificaciones`
-- Ambas avanzan en paralelo via worktrees (2026-04-05)
+- Ambas avanzan en paralelo via worktrees (2026-04-06)
 
 ---
 
@@ -59,8 +59,8 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 - Prioridad: `2 — siguiente en implementar` (2026-04-04)
 - Estado: `brief aprobado`
 - Angle brief: `aprobado (4 rondas Codex, 2026-04-04)`
-- Implementacion: `parcial — 3 componentes localizados, 5 archivos pendientes`
-- Proxima accion: `implementar copy del brief en page.tsx + 5 sections locales restantes`
+- Implementacion: `parcial — 3 componentes localizados, 4 archivos pendientes de copy + 1 solo verificacion`
+- Proxima accion: `implementar copy del brief en page.tsx + 4 sections (logo-cloud-clientes, como-trabajamos, capacidades-inhouse, cta). feature-cards-resultados solo verificar coherencia (brief dice que funcionan bien)`
 - Notas:
   Brief en `docs/copy/angle-briefs/excelencia-operativa.md`
   3 componentes LOCALIZADOS (localizar + reescribir, 2026-04-05):

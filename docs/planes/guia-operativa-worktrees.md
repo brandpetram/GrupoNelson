@@ -34,9 +34,9 @@ grupo-nelson/                    # Repo principal (main)
 
 ```
 Sesión: nelson
-├── MAIN                  # Repo principal — coordinación, system, docs compartidos
-├── EXCELENCIA_OPERATIVA  # Worktree — Claude implementando brief
-└── CERTIFICACIONES       # Worktree — Claude creando brief + implementando
+├── MAIN_ORQUESTADOR      # Repo principal — coordina, documenta, actualiza docs/copy/*
+├── EXCELENCIA_OPERATIVA  # Worktree — implementando brief aprobado
+└── CERTIFICACIONES       # Worktree — implementando brief (requiere aprobación previa desde MAIN)
 ```
 
 ### Flujo de trabajo por worktree
@@ -135,14 +135,15 @@ Se ejecutó en branch `system/o1-excelencia-marketing` desde MAIN.
 ### Worktree 2: certificaciones
 
 **Branch:** `section/certificaciones`
-**Brief:** `docs/copy/angle-briefs/certificaciones.md` (creado en Paso 0.4)
+**Brief:** `docs/copy/angle-briefs/certificaciones.md` (borrador creado en Paso 0.4)
 **Ángulo base:** "No son trofeos; son filtros de acceso" (de la memoria 2026-04-03)
+**Requisito:** Brief aprobado por el usuario desde MAIN_ORQUESTADOR antes de implementar.
 
 | Archivo | Cambio |
 |---|---|
-| `src/app/experiencia/certificaciones/page.tsx` | Implementar copy según brief |
+| `src/app/experiencia/certificaciones/page.tsx` | Implementar copy según brief aprobado |
 
-> El brief y el tracker se actualizan desde MAIN, no desde este worktree.
+> El brief y el tracker se actualizan desde MAIN_ORQUESTADOR, no desde este worktree.
 
 ## Criterio de salida
 

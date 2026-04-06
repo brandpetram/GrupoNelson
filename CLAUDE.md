@@ -78,6 +78,8 @@ Actualmente usa `file:../componentes-brandpetram` para desarrollo. Los cambios e
 
 - Explicación humana y ejemplos del proyecto: `docs/estrategia/guia-humana-worktrees-y-componentes.md`.
 - Regla principal: `local first, shared by promotion`.
+- **MAIN = orquestador.** MAIN coordina, documenta y actualiza `docs/copy/*`, `docs/planes/*`, `docs/continuidad/*`. No ejecuta trabajo de sección.
+- **Worktrees = ejecutores.** Cada worktree ejecuta trabajo solo en archivos de su sección. No edita documentación de coordinación.
 - Un worktree de sección solo puede editar archivos de su propia sección.
 - `docs/copy/*` se edita solo desde `MAIN`.
 - No promover componentes a `sistema/shared` por conveniencia.

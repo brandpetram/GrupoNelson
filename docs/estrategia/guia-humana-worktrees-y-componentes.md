@@ -70,16 +70,19 @@ Su función es decidir la arquitectura del bloque, no solo dónde se abre el tra
 
 ## Qué es cada cosa
 
-### `MAIN`
+### `MAIN` — orquestador
 
-Es el repo principal. Se usa para:
+Es el repo principal. Su rol es **orquestador**: coordina, documenta y decide. No ejecuta trabajo de sección.
 
-- coordinación
-- docs compartidos
-- cambios transversales
-- revisión e integración
+Se usa para:
 
-En este proyecto, `docs/copy/*` se actualiza desde `MAIN`.
+- coordinación entre worktrees
+- documentación de coordinación: `docs/copy/*`, `docs/planes/*`, `docs/continuidad/*`
+- cambios transversales y revisión
+- actualizar tracker, briefs y memorias de trabajo
+- decidir si una branch está lista para merge
+
+**Regla:** MAIN nunca edita archivos que pertenecen a una sección (páginas y componentes locales dentro de `src/app/`). Los worktrees nunca editan documentación de coordinación (`docs/copy/*`, `docs/planes/*`, `docs/continuidad/*`).
 
 ### Worktree de sección
 

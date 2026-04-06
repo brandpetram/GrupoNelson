@@ -6,8 +6,12 @@
 #   ./workspace-nelson.sh all            — Abrir todos los worktrees definidos
 #   ./workspace-nelson.sh excelencia certificaciones  — Abrir solo esos dos
 #
+# Modelo operativo:
+#   MAIN_ORQUESTADOR — coordina, documenta, actualiza docs/copy/*
+#   Worktrees        — ejecutan trabajo por sección (solo archivos de su sección)
+#
 # Cada worktree se abre en su propia ventana de tmux con Claude Code.
-# La sesión principal (main) siempre tiene su propia ventana.
+# La ventana principal (MAIN_ORQUESTADOR) siempre tiene su propia ventana.
 
 PROJECT_DIR="$HOME/Proyectos/grupo-nelson"
 SESSION="nelson"
@@ -161,8 +165,8 @@ fi
 tmux new-session -d -s "$SESSION"
 WIN=0
 
-# Ventana 0: main (repo principal)
-tmux rename-window -t "$SESSION:0" "MAIN"
+# Ventana 0: MAIN como orquestador (repo principal)
+tmux rename-window -t "$SESSION:0" "MAIN_ORQUESTADOR"
 tmux send-keys -t "$SESSION:0" "cd $PROJECT_DIR && claude" Enter
 WIN=1
 
