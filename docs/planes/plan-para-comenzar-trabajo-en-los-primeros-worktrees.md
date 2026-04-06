@@ -81,7 +81,7 @@ Esta separación no es implícita — es convención operativa del proyecto. MAI
 | 0.2 | Formalizar MAIN=orquestador en `CLAUDE.md` y `guia-humana-worktrees-y-componentes.md` | Hecho (2026-04-06) |
 | 0.3 | Actualizar `workspace-nelson.sh`: renombrar ventana a `MAIN_ORQUESTADOR` | Hecho (2026-04-06) |
 | 0.4 | Reescribir este plan (quitar casos-de-exito, corregir archivos pendientes) | Hecho (2026-04-06) |
-| 0.5 | Review del brief de certificaciones — decidir si se aprueba o se piden cambios | Pendiente (usuario) |
+| 0.5 | Review del brief de certificaciones — decidir si se aprueba o se piden cambios | Hecho — aprobado (2026-04-06, reescritura completa v2) |
 | 0.6 | Commit de Fase 0 + verificar que main queda limpio | Pendiente |
 
 **Crítico:** No abrir worktrees hasta que 0.6 esté completo. Los worktrees se crean desde main y heredan su estado.
@@ -145,10 +145,16 @@ Resultado: sesión tmux `nelson` con 3 ventanas:
 
 | Bloqueo | Afecta a | Se resuelve con |
 |---|---|---|
-| Brief de certificaciones en borrador | Worktree certificaciones | Review del usuario desde MAIN (Fase 0.5) |
+| ~~Brief de certificaciones en borrador~~ | ~~Worktree certificaciones~~ | ~~Resuelto — brief aprobado (2026-04-06)~~ |
 | Fase 0 sin commit | Ambos worktrees | Commit + verificar main limpio (Fase 0.6) |
 
 **No hay bloqueos entre worktrees.** Las 2 secciones son completamente independientes.
+
+### Follow-up priorizado (no bloquea worktrees, pero resolver antes de merge)
+
+| Follow-up | Afecta a | Prioridad |
+|---|---|---|
+| Alinear estatus de LEED en `docs/copy/angle-briefs/leed.md` y `src/app/constructora/leed/page.tsx` | Coherencia cross-page: certificaciones dice LEED Gold logrado, LEED dice "en proceso" | Alta — resolver desde MAIN antes de que ambas páginas convivan en producción |
 
 ---
 
@@ -157,7 +163,8 @@ Resultado: sesión tmux `nelson` con 3 ventanas:
 ### MAIN / ORQUESTADOR
 
 - `docs/copy/tracker-rondas-copy-grupo-nelson.md` — corrección (hecha) + actualización final
-- `docs/copy/angle-briefs/certificaciones.md` — solo si el brief necesita cambios
+- `docs/copy/angle-briefs/certificaciones.md` — aprobado (2026-04-06)
+- `docs/copy/angle-briefs/leed.md` — follow-up: alinear estatus LEED (alta prioridad, antes de merge)
 - `docs/continuidad/memoria-de-trabajo-2026-04-06-*.md` — al cerrar
 - `CLAUDE.md` — formalización de MAIN=orquestador (hecha)
 - `docs/estrategia/guia-humana-worktrees-y-componentes.md` — formalización de MAIN=orquestador (hecha)

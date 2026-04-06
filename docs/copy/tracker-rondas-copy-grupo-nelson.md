@@ -9,7 +9,7 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 
 ### Progreso
 
-- `6` angle briefs (5 aprobados + 1 borrador)
+- `6` angle briefs (6 aprobados)
 - `4` implementaciones hechas
 - `4` paginas totalmente aprobadas
 - `3` componentes localizados en excelencia-operativa (localizar + reescribir, 2026-04-05): testimonial, documentacion-auditable, dimensiones-control
@@ -17,7 +17,7 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 ### Siguiente (paralelo con worktrees)
 
 - `1` implementacion pendiente: `/experiencia/excelencia-operativa` (brief aprobado, 3 componentes localizados, 4 archivos pendientes de copy + 1 solo verificacion)
-- `1` brief en borrador + implementacion: `/experiencia/certificaciones`
+- `1` brief aprobado + implementacion pendiente: `/experiencia/certificaciones`
 - Ambas avanzan en paralelo via worktrees (2026-04-06)
 
 ---
@@ -73,17 +73,17 @@ Fuente: `docs/copy/auditorias/2026-04-03-plan-de-correccion-sitio-grupo-nelson-v
 
 ### `/experiencia/certificaciones`
 
-- Territorio: certificaciones como filtros de acceso corporativo
+- Territorio: experiencia real bajo normas, certificaciones y estándares exigentes
 - Prioridad: `3 — en paralelo con excelencia-operativa via worktree`
-- Estado: `brief borrador`
-- Angle brief: `borrador creado (2026-04-05) — pendiente review`
+- Estado: `brief aprobado`
+- Angle brief: `aprobado (2026-04-06, reescritura completa v2)`
 - Implementacion: `no iniciada — worktree section/certificaciones`
-- Proxima accion: `review del brief, luego implementar`
+- Proxima accion: `implementar copy segun brief aprobado`
 - Notas:
   Brief en `docs/copy/angle-briefs/certificaciones.md`
-  Angulo: "no son trofeos; son filtros de acceso"
-  Copy actual ya tiene buen ángulo — ajustes menores de refuerzo
-  No invadir /constructora/leed (LEED es uno de varios filtros aquí, no protagonista)
+  Angulo: capacidad demostrada bajo estándares diversos (ISN, LEED Gold, FM Global, BRB, NOM/NFPA)
+  LEED subordinado (mención breve + link a /constructora/leed, sin specs)
+  Follow-up obligatorio: alinear estatus de LEED en leed.md y page.tsx de /constructora/leed
 
 ---
 
