@@ -136,8 +136,8 @@ export function SplitStickyCasos() {
             </div>
           </div>
 
-          {/* ═══ DHL + Cierre (subordinado) ═══ */}
-          <div className="space-y-6 border-t border-border pt-12">
+          {/* ═══ DHL + Contexto subordinado ═══ */}
+          <div className="border-t border-border pt-12">
             <p className="text-lg leading-relaxed text-muted-foreground">
               No es solo aeroespacial.{" "}
               <strong className="text-foreground">DHL</strong> eligió Grupo
@@ -149,20 +149,20 @@ export function SplitStickyCasos() {
               operan hoy en parques de Grupo Nelson. La mayoría regresa,
               expande o inicia nuevos proyectos.
             </p>
+          </div>
 
-            {/* CTA de cierre */}
-            <div className="space-y-3">
-              <h2 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-                Si Gulfstream no necesitó buscar alternativas en 35 años, y
-                Honeywell le dio a Baumex la calificación más alta posible —
-                el nivel ya está demostrado.
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Lo que los estándares de estos clientes exigen dice más sobre
-                Grupo Nelson que cualquier cosa que Nelson pueda decir sobre
-                sí mismo.
-              </p>
-            </div>
+          {/* ═══ Cierre argumentativo ═══ */}
+          <div className="space-y-3">
+            <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
+              Si Gulfstream no necesitó buscar alternativas en 35 años, y
+              Honeywell le dio a Baumex la calificación más alta posible —
+              el nivel ya está demostrado.
+            </h3>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Lo que los estándares de estos clientes exigen dice más sobre
+              Grupo Nelson que cualquier cosa que Nelson pueda decir sobre
+              sí mismo.
+            </p>
           </div>
         </div>
 
