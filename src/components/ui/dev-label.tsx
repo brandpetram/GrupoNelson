@@ -14,7 +14,9 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
-const PROJECT_ROOT = '/Users/lmuzquiz/Proyectos/GrupoNelson'
+const PROJECT_ROOT =
+  process.env.NEXT_PUBLIC_DEV_PROJECT_ROOT ||
+  '/Users/lmuzquiz/Proyectos/grupo-nelson'
 
 interface LabelInfo {
   name: string
