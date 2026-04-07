@@ -5,8 +5,9 @@
   "scripts": {
     "predev": "node scripts/add-dev-labels.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/remove-dev-labels.mjs",
     "build": "next build",
+    "overlay:add": "node scripts/add-dev-labels.mjs",
+    "overlay:remove": "node scripts/remove-dev-labels.mjs",
     "start": "next start",
     "lint": "next lint",
     "generate-image": "tsx --env-file=.env.local scripts/generate-image.ts",

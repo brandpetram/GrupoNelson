@@ -421,6 +421,39 @@ y primero optar por:
 - `src/components/brandpetram/` = sistema compartido real
 - `localizar + reescribir` = opción por defecto cuando todavía no hay reutilización confirmada
 
+## DevOverlay y limpieza de worktrees
+
+### Qué es DevOverlay
+
+DevOverlay agrega atributos `data-component`, `data-component-file` y `data-component-props` a los componentes para inspección visual en desarrollo. Esos atributos se agregan automáticamente al correr `pnpm dev` (via `predev`).
+
+### Cómo correr dev
+
+Usar siempre:
+
+```bash
+pnpm dev -- --port <puerto>
+```
+
+No usar `pnpm exec next dev -p <puerto>` porque eso salta el hook `predev` y DevOverlay no se activa.
+
+### Reglas de limpieza
+
+- **No ejecutar `pnpm run overlay:remove` durante trabajo normal.** El script edita archivos fuente en `src/components/` y produce cambios masivos en git que no tienen nada que ver con tu trabajo.
+- **`overlay:remove` solo en contexto excepcional** y nunca dentro de un worktree de sección.
+- **`pnpm build` no muta archivos fuente.** El `prebuild` automático fue eliminado para evitar cambios masivos accidentales.
+- Los atributos `data-component` en producción no afectan funcionalidad ni rendimiento — son atributos HTML inertes.
+
+### Si aparecen cambios masivos en `src/components/`
+
+Si por alguna razón aparecen cambios de DevOverlay en `git status`, limpiar con:
+
+```bash
+git restore --worktree --staged src/components
+```
+
+Eso revierte los archivos sin perder trabajo real.
+
 ## Relación con otros documentos
 
 - Documento maestro: `docs/planes/plan-maestro-worktrees.md`
