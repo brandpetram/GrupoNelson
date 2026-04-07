@@ -21,10 +21,10 @@ export function SplitStickyCasos() {
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-20 px-4 md:px-12 lg:px-0 xl:px-8">
         {/* ── Columna izquierda: texto scrolleable ── */}
         <div className="flex-1 lg:max-w-[55%] space-y-20">
-          {/* ═══ Caso 1: Gulfstream (dominante) ═══ */}
+          {/* ═══ Caso 1: Gulfstream Aerospace (dominante) ═══ */}
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-              Caso de Éxito — Gulfstream
+              Caso de Éxito — Gulfstream Aerospace
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
               Cuando la confianza de 35 años elimina la licitación
@@ -36,39 +36,21 @@ export function SplitStickyCasos() {
               descalifican automáticamente a la mayoría de los proveedores.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Llevan <strong className="text-foreground">35 años</strong>{" "}
-              trabajando con Grupo Nelson en Mexicali. 5 naves construidas por
-              Baumex. Después del terremoto de 7.2 en 2010, confiaron en Baumex
-              para construir la nave más grande de la ciudad — 52,200 m².
+              Después del terremoto de 7.2 en 2010 que dañó su planta
+              existente, Gulfstream confió en Baumex para construir la nave
+              más grande de la ciudad. No buscaron alternativas. No abrieron
+              licitación. Asignaron directamente.
             </p>
 
-            {/* Datos ancla como bullets con label bold */}
+            {/* Datos ancla — cada fact aparece UNA sola vez */}
             <div className="space-y-4 border-l-2 border-blue-600/30 pl-6">
-              <div>
-                <p className="font-semibold text-foreground">
-                  35 años de relación continua
-                </p>
-                <p className="text-muted-foreground">
-                  Desde finales de los 80, Gulfstream ha confiado en Grupo
-                  Nelson para cada expansión de su operación en Mexicali.
-                </p>
-              </div>
               <div>
                 <p className="font-semibold text-foreground">
                   5 naves construidas por Baumex
                 </p>
                 <p className="text-muted-foreground">
-                  Incluyendo la nave de 52,200 m² — la más grande de la ciudad —
-                  construida después del terremoto de 2010.
-                </p>
-              </div>
-              <div>
-                <p className="font-semibold text-foreground">
-                  Asignación directa sin licitación
-                </p>
-                <p className="text-muted-foreground">
-                  Para la quinta expansión, Gulfstream no abrió licitación. 35
-                  años de relación eliminan el proceso de selección.
+                  Incluyendo la nave de 52,200 m² — la más grande de
+                  Mexicali — construida después del terremoto de 2010.
                 </p>
               </div>
               <div>
@@ -76,44 +58,82 @@ export function SplitStickyCasos() {
                   De 5,000 a 550,000 pies cuadrados
                 </p>
                 <p className="text-muted-foreground">
-                  Gulfstream empezó con una operación pequeña en El Vigía y hoy
-                  ocupa la nave más grande de Mexicali. Múltiples expansiones a
-                  lo largo de diferentes generaciones de parques de Grupo Nelson.
+                  Gulfstream empezó con una operación pequeña en El Vigía y
+                  hoy ocupa la nave más grande de la ciudad. Múltiples
+                  expansiones a lo largo de diferentes generaciones de parques
+                  de Grupo Nelson.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">
+                  Asignación directa sin licitación
+                </p>
+                <p className="text-muted-foreground">
+                  Para su expansión más reciente, Gulfstream no abrió
+                  licitación. Cuando llevas 35 años con el mismo proveedor,
+                  el proceso de selección ya no es necesario.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* ═══ Caso 2: Honeywell (soporte) ═══ */}
+          {/* ── Transición Gulfstream → Honeywell ── */}
+          <p className="text-lg leading-relaxed text-muted-foreground italic">
+            35 años con el mismo cliente es una prueba difícil de ignorar.
+            Pero existe otra: los filtros que un constructor debe superar
+            antes de siquiera pisar la obra.
+          </p>
+
+          {/* ═══ Caso 2: Honeywell Aerospace (soporte fuerte) ═══ */}
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
               Caso de Éxito — Honeywell Aerospace
             </p>
-            <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
               El filtro más exigente ya calificó a Baumex como
               &quot;Recomendado&quot;
-            </h3>
+            </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Honeywell Aerospace es un corporativo global con estándares de
-              selección de contratistas que pasan por la plataforma ISN — un
-              filtro de seguridad, documentación y calidad que la mayoría de
-              constructoras locales no supera.
+              Honeywell Aerospace es un corporativo global cuyos estándares de
+              selección de contratistas pasan por la plataforma ISN — un filtro
+              de seguridad, documentación y calidad que la mayoría de
+              constructoras locales no supera. Para siquiera trabajar en sus
+              instalaciones, necesitas calificación ISN activa.
             </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Baumex no solo tiene la calificación — tiene la calificación{" "}
-              <strong className="text-foreground">
-                &quot;Recomendado&quot;
-              </strong>{" "}
-              por Honeywell en la plataforma ISN. La más alta que el sistema
-              permite. Más de{" "}
-              <strong className="text-foreground">30 años</strong> de relación.
-              Múltiples expansiones: Mission 1, 2 y 3.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Cuando Honeywell necesitó un túnel de viento aeroespacial, el
-              proyecto ejecutivo se elaboró conjuntamente entre ingenieros de
-              Honeywell e ingenieros de Baumex. Colaboración técnica directa.
-            </p>
+
+            {/* Datos ancla Honeywell */}
+            <div className="space-y-4 border-l-2 border-blue-600/30 pl-6">
+              <div>
+                <p className="font-semibold text-foreground">
+                  30+ años de relación
+                </p>
+                <p className="text-muted-foreground">
+                  Múltiples expansiones — Mission 1, 2 y 3 — construidas por
+                  Baumex a lo largo de tres décadas de relación continua.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">
+                  Calificación ISN &quot;Recomendado&quot;
+                </p>
+                <p className="text-muted-foreground">
+                  La calificación más alta que la plataforma permite. No es
+                  solo que Baumex cumpla los estándares de Honeywell — tiene
+                  la calificación máxima del sistema que los mide.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">
+                  Colaboración técnica directa
+                </p>
+                <p className="text-muted-foreground">
+                  Cuando Honeywell necesitó un túnel de viento aeroespacial,
+                  el proyecto ejecutivo se elaboró conjuntamente entre
+                  ingenieros de Honeywell e ingenieros de Baumex. Eso solo
+                  pasa cuando el nivel de confianza es alto.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* ═══ DHL + Cierre (subordinado) ═══ */}
@@ -121,23 +141,26 @@ export function SplitStickyCasos() {
             <p className="text-lg leading-relaxed text-muted-foreground">
               No es solo aeroespacial.{" "}
               <strong className="text-foreground">DHL</strong> eligió Grupo
-              Nelson para su operación logística en Mexicali — y regresó después
-              del primer proyecto.{" "}
+              Nelson para su operación logística en Mexicali — y regresó
+              después del primer proyecto.{" "}
               <strong className="text-foreground">
                 30 corporaciones internacionales
               </strong>{" "}
-              operan hoy en parques de Grupo Nelson. La mayoría regresa, expande
-              o inicia nuevos proyectos.
+              operan hoy en parques de Grupo Nelson. La mayoría regresa,
+              expande o inicia nuevos proyectos.
             </p>
 
             {/* CTA de cierre */}
             <div className="space-y-3">
               <h2 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-                El próximo caso puede ser el tuyo
+                Si Gulfstream no necesitó buscar alternativas en 35 años, y
+                Honeywell le dio a Baumex la calificación más alta posible —
+                el nivel ya está demostrado.
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Si las empresas más exigentes se quedaron, tu proyecto también
-                tiene donde crecer.
+                Lo que los estándares de estos clientes exigen dice más sobre
+                Grupo Nelson que cualquier cosa que Nelson pueda decir sobre
+                sí mismo.
               </p>
             </div>
           </div>

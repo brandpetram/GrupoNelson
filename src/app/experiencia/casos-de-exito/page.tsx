@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { HeroMarketing1Beta } from "./sections/hero-marketing-1-beta";
 import { SplitStickyCasos } from "./sections/split-sticky-casos";
-import { MosaicoLiderazgo } from "@/components/brandpetram/mosaico-liderazgo";
+import { MosaicoCasos } from "./sections/mosaico-casos";
 
 export const metadata: Metadata = {
   title: "Casos de Éxito | Grupo Nelson",
@@ -30,8 +30,8 @@ export default function CasosDeExitoPage() {
         {/* Bloque 2: Split sticky — texto scrolleable + imagen fija */}
         <SplitStickyCasos />
 
-        {/* Bloque 3: Mosaico — importado directo de brandpetram */}
-        <MosaicoLiderazgo />
+        {/* Bloque 3: Mosaico — versión local para territorio casos-de-exito */}
+        <MosaicoCasos />
 
         {/* FIN COPY COMERCIAL */}
       </main>
