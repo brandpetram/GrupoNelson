@@ -202,7 +202,7 @@ export default function HeroMotionPlus({
                     text-align: center;
                     gap: 24px;
                     padding: 40px 24px;
-                    max-width: 500px;
+                    max-width: 700px;
                 }
                 .hero-mp-badge {
                     display: inline-flex;
@@ -232,7 +232,7 @@ export default function HeroMotionPlus({
                     margin: 0;
                 }
                 .hero-mp-headline-accent {
-                    background: linear-gradient(135deg, #0cdcf7, #8df0cc);
+                    background: linear-gradient(135deg, #ea580c, #dc2626);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }

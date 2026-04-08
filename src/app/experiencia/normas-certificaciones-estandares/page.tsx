@@ -1,5 +1,12 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import HeroMotionPlus from '@/components/brandpetram/hero-motionplus'
+import {
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  BoltIcon,
+  FireIcon,
+} from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
   title: 'Normas, Certificaciones y Estándares | Grupo Nelson',
@@ -7,78 +14,74 @@ export const metadata: Metadata = {
     'Baumex opera bajo tres capas de cumplimiento: certificaciones corporativas (ISN Recomendado por Honeywell), estándares de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y normativa documentada (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
 }
 
+const engineeringStandards = [
+  {
+    name: 'International Building Code',
+    description:
+      'Las naves de Grupo Nelson se diseñan bajo IBC — no bajo el reglamento de construcción de Baja California. Para un comprador americano: tu nave en Mexicali se diseña bajo las mismas normas de construcción que al otro lado de la frontera.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'FM Global: envolvente certificada',
+    description:
+      'La nave Gulfstream de 550,000 ft² tiene certificación FM Global en muros, cubierta TPO, estructura metálica y sistema contraincendio — el estándar de protección de activos más exigente del mundo. Resultado: primas de seguro significativamente menores para el inquilino.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Ingeniería antisísmica BRB',
+    description:
+      'Baumex implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica 4 en la nave Gulfstream de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
+    icon: BoltIcon,
+  },
+  {
+    name: 'NFPA: protección contra incendio',
+    description:
+      'El Parque Industrial Nelson II opera con sistema centralizado bajo estándares NFPA y FM — tanque de 360,000 galones, rociadores, bombas y detección. La protección no depende solo de tu nave: es infraestructura del parque.',
+    icon: FireIcon,
+  },
+]
+
 export default function NormasCertificacionesEstandaresPage() {
   return (
     <div className="min-h-[200vh]">
       <Header />
 
       <main>
-        <div className="px-8 md:px-12 pt-20 pb-32 max-w-4xl">
+        {/* ══════════════════════════════════════════════════════════
+            COPY COMERCIAL — Normas, Certificaciones y Estándares
+            Ángulo: tres capas de cumplimiento — corporativo, ingeniería,
+            regulatorio — cada una demostrada en proyecto real.
+            Brief: docs/copy/roles/angle-architect/angle-brief-normas-certificaciones-estandares-v0.md
+            ══════════════════════════════════════════════════════════ */}
 
-          {/* ══════════════════════════════════════════════════════════
-              COPY COMERCIAL — Normas, Certificaciones y Estándares
-              Ángulo: tres capas de cumplimiento — corporativo, ingeniería,
-              regulatorio — cada una demostrada en proyecto real.
-              Brief: docs/copy/roles/angle-architect/angle-brief-normas-certificaciones-estandares-v0.md
-              ══════════════════════════════════════════════════════════ */}
+        {/* ── HERO ── */}
+        <div className="pt-30">
+        <HeroMotionPlus
+          badge="Normas · Certificaciones · Estándares"
+          headlineTop="Tres capas de cumplimiento."
+          headlineAccent="Cada una demostrada en proyecto real."
+          subtitle="Tu proyecto exige cumplimiento corporativo, estándares de ingeniería y normativa regulatoria. Baumex ha demostrado las tres capas — en naves industriales reales en Mexicali."
+          primaryButtonText="Solicita una consulta"
+          primaryButtonHref="/contacto"
+          secondaryButtonText="Conoce los estándares"
+          secondaryButtonHref="#certificaciones-corporativas"
+          metrics={[
+            { value: 'ISN', label: 'Recomendado' },
+            { value: 'LEED', label: 'Ambiental' },
+            { value: 'FM Global', label: 'Aseguramiento' },
+            { value: 'IBC', label: 'Internacional' },
+            { value: 'NFPA', label: 'Contra incendio' },
+          ]}
+        />
+        </div>
 
-          {/* ── HERO ── */}
-          <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-4">
-            Experiencia
-          </p>
-
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Tres capas de cumplimiento.{' '}
-            <span className="text-muted-foreground">
-              Cada una demostrada en proyecto real.
-            </span>
-          </h1>
-
-          <p className="text-xl leading-relaxed mb-12">
-            Tu proyecto llega con exigencias de tres frentes distintos: lo que tu
-            corporativo exige para aprobar al contratista, lo que tu industria o tu
-            aseguradora exigen para el edificio, y lo que la regulación exige para
-            operar. Baumex ha cumplido las tres — en naves industriales construidas
-            en Mexicali.
-          </p>
-
-          <div className="flex flex-wrap gap-x-12 gap-y-6 mb-24">
-            <div>
-              <p className="text-3xl md:text-4xl font-bold leading-none">ISN</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                &quot;Recomendado&quot; por Honeywell
-              </p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold leading-none">LEED</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                certificación ambiental
-              </p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold leading-none">FM Global</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                envolvente certificada
-              </p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold leading-none">IBC</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                códigos internacionales
-              </p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold leading-none">NFPA</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                protección contra incendio
-              </p>
-            </div>
-          </div>
+        {/* ── CAPA 1 ── */}
+        <div className="mx-auto px-8 md:px-12 pt-16 pb-16 max-w-4xl">
 
           {/* ═══════════════════════════════════════════════════════
               CAPA 1 — Certificaciones corporativas
               ═══════════════════════════════════════════════════════ */}
-          <div className="mb-24">
+          <div className="mb-8">
             <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
               Capa 1
             </p>
@@ -132,90 +135,54 @@ export default function NormasCertificacionesEstandaresPage() {
               </p>
             </div>
           </div>
+        </div>
 
-          {/* ═══════════════════════════════════════════════════════
-              CAPA 2 — Estándares de construcción e ingeniería
-              ═══════════════════════════════════════════════════════ */}
-          <div className="mb-24">
-            <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
-              Capa 2
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold leading-snug mb-4">
-              Lo que tu industria y tu aseguradora exigen para el edificio
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              Más allá del mínimo legal, los clientes más exigentes demandan
-              estándares de construcción, aseguramiento y protección que
-              garanticen la integridad del edificio y la continuidad de la
-              operación. Ninguno de estos es obligatorio por ley mexicana — son
-              estándares superiores que Baumex ya cumple.
-            </p>
-
-            {/* IBC */}
-            <div className="mb-12">
-              <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                International Building Code: diseño bajo códigos internacionales,
-                no locales
-              </h3>
-              <p className="text-lg leading-relaxed">
-                Las naves de Grupo Nelson se diseñan bajo International Building
-                Code — no bajo el reglamento de construcción de Baja California.
-                Para un comprador americano, eso significa que tu nave en Mexicali
-                se diseña bajo las mismas normas de construcción que al otro lado
-                de la frontera.
+        {/* ═══════════════════════════════════════════════════════
+            CAPA 2 — Estándares de construcción e ingeniería
+            Componente: centered-2x2-grid (Tailwind UI)
+            ═══════════════════════════════════════════════════════ */}
+        <div className="bg-gray-900 py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <h2 className="text-base/7 font-semibold text-indigo-400">
+                Capa 2
+              </h2>
+              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
+                Lo que tu industria y tu aseguradora exigen para el edificio
+              </p>
+              <p className="mt-6 text-lg/8 text-gray-300">
+                Más allá del mínimo legal, los clientes más exigentes demandan
+                estándares de construcción, aseguramiento y protección que
+                garanticen la integridad del edificio y la continuidad de la
+                operación. Ninguno de estos es obligatorio por ley mexicana — son
+                estándares superiores que Baumex ya cumple.
               </p>
             </div>
-
-            {/* FM Global */}
-            <div className="mb-12">
-              <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                FM Global: envolvente certificada en la nave Gulfstream de
-                550,000 ft²
-              </h3>
-              <p className="text-lg leading-relaxed mb-4">
-                Si tu aseguradora exige certificación de envolvente y protección
-                contra incendio, Baumex ya ha construido bajo ese estándar. La
-                nave Gulfstream de 550,000 ft² tiene certificación FM Global en
-                muros, cubierta TPO, estructura metálica y sistema
-                contraincendio.
-              </p>
-              <p className="text-lg leading-relaxed">
-                FM Global es el estándar de protección de activos más exigente del
-                mundo. Resultado directo: primas de seguro significativamente
-                menores para el inquilino.
-              </p>
-            </div>
-
-            {/* BRB */}
-            <div className="mb-12">
-              <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                Ingeniería antisísmica BRB: primera implementación en Mexicali
-              </h3>
-              <p className="text-lg leading-relaxed">
-                Si tu nave está en zona sísmica y necesitas garantizar continuidad
-                operativa después de un sismo, este sistema ya se validó aquí.
-                Baumex implementó Buckling-Restrained Braces por primera vez en
-                naves industriales de Mexicali — tecnología probada en Ciudad de
-                México y Japón, aplicada en zona sísmica 4 en la nave Gulfstream
-                de 550,000 ft². No es una certificación: es un sistema de
-                ingeniería estructural que protege la continuidad de tu operación.
-              </p>
-            </div>
-
-            {/* NFPA */}
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                NFPA: protección contra incendio a nivel de parque
-              </h3>
-              <p className="text-lg leading-relaxed">
-                El Parque Industrial Nelson II opera con sistema centralizado de
-                protección contra incendios bajo estándares NFPA y FM — incluyendo
-                tanque de 360,000 galones, rociadores, bombas y detección. La
-                protección no depende solo de tu nave individual: es
-                infraestructura del parque.
-              </p>
+            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                {engineeringStandards.map((feature) => (
+                  <div key={feature.name} className="relative pl-16">
+                    <dt className="text-base/7 font-semibold text-white">
+                      <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-500">
+                        <feature.icon
+                          aria-hidden="true"
+                          className="size-6 text-white"
+                        />
+                      </div>
+                      {feature.name}
+                    </dt>
+                    <dd className="mt-2 text-base/7 text-gray-400">
+                      {feature.description}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
+        </div>
+
+        {/* ── CAPA 3 + CTA ── */}
+        <div className="mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl">
 
           {/* ═══════════════════════════════════════════════════════
               CAPA 3 — Cumplimiento normativo documentado
