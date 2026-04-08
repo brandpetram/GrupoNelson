@@ -26,10 +26,10 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "60 años desarrollando naves industriales en Mexicali",
+    title: "La familia fundadora sigue operando",
     description:
-      "Desde 1965, Grupo Nelson opera parques industriales donde 30 corporaciones internacionales fabrican.",
-    href: "/contacto",
+      "Desde 1965, los dueños de Grupo Nelson atienden cada proyecto personalmente. Sin capas corporativas.",
+    href: "/nelson/liderazgo",
     bg: "bg-blue-700",
   },
   {
@@ -60,8 +60,8 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "80% de clientes regresan",
     description:
-      "Gulfstream lleva 35 años. Honeywell lleva 30. La permanencia dice más que cualquier brochure.",
-    href: "/contacto",
+      "Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. La relación directa con los dueños produce lealtad.",
+    href: "/nelson/liderazgo",
     bg: "bg-indigo-600",
   },
   {
@@ -84,10 +84,10 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "Tres generaciones, un mismo compromiso",
+    title: "Tres generaciones, cuatro dueños operando",
     description:
-      "La familia Nelson opera directamente. Sin capas corporativas entre tu proyecto y quien lo aprueba.",
-    href: "/contacto",
+      "Humberto, Rodolfo, Juan Carlos y Alfredo. La persona que negocia tu contrato es la misma que lo firma.",
+    href: "/nelson/liderazgo",
     bg: "bg-sky-700",
   },
   {
@@ -110,10 +110,10 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "De 5,000 a 550,000 ft²",
+    title: "30 años dirigiendo la construcción",
     description:
-      "Interiores Aéreos creció 110x sin cambiar de proveedor. Escala tu operación con quien crece contigo.",
-    href: "/contacto",
+      "Armando Wilhelmy co-fundó la constructora en 1997. La continuidad no se limita a la familia.",
+    href: "/nelson/liderazgo",
     bg: "bg-blue-900",
   },
   {
