@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: 'Normas, Certificaciones y Estándares | Grupo Nelson',
   description:
-    'Baumex opera bajo tres capas de cumplimiento: certificaciones corporativas (ISN Recomendado por Honeywell), estándares de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y normativa documentada (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
+    'Baumex responde a tres tipos de exigencia: corporativas (ISN Recomendado por Honeywell), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
 }
 
 const engineeringStandards = [
@@ -49,18 +49,18 @@ export default function NormasCertificacionesEstandaresPage() {
       <main>
         {/* ══════════════════════════════════════════════════════════
             COPY COMERCIAL — Normas, Certificaciones y Estándares
-            Ángulo: tres capas de cumplimiento — corporativo, ingeniería,
-            regulatorio — cada una demostrada en proyecto real.
+            Ángulo: tres tipos de exigencia — corporativa, de ingeniería,
+            regulatoria — cada una demostrada en proyecto real.
             Brief: docs/copy/roles/angle-architect/angle-brief-normas-certificaciones-estandares-v0.md
             ══════════════════════════════════════════════════════════ */}
 
         {/* ── HERO ── */}
-        <div className="pt-30">
+        <div className="pt-20 md:pt-30">
         <HeroMotionPlus
           badge="Normas · Certificaciones · Estándares"
-          headlineTop="Tres capas de cumplimiento."
+          headlineTop="Tres tipos de exigencia."
           headlineAccent="Cada una demostrada en proyecto real."
-          subtitle="Tu proyecto exige cumplimiento corporativo, estándares de ingeniería y normativa regulatoria. Baumex ha demostrado las tres capas — en naves industriales reales en Mexicali."
+          subtitle="Tu proyecto llega con tres tipos de exigencia: las de tu corporativo, las de tu industria y aseguradora, y las de la regulación. Baumex ha cumplido las tres — en naves industriales reales en Mexicali."
           primaryButtonText="Solicita una consulta"
           primaryButtonHref="/contacto"
           secondaryButtonText="Conoce los estándares"
@@ -83,7 +83,7 @@ export default function NormasCertificacionesEstandaresPage() {
               ═══════════════════════════════════════════════════════ */}
           <div className="mb-8">
             <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
-              Capa 1
+              Exigencias corporativas
             </p>
             <h2 className="text-2xl md:text-3xl font-bold leading-snug mb-4">
               Lo que tu corporativo exige para aprobar al contratista
@@ -145,7 +145,7 @@ export default function NormasCertificacionesEstandaresPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base/7 font-semibold text-indigo-400">
-                Capa 2
+                Estándares de ingeniería
               </h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
                 Lo que tu industria y tu aseguradora exigen para el edificio
@@ -189,7 +189,7 @@ export default function NormasCertificacionesEstandaresPage() {
               ═══════════════════════════════════════════════════════ */}
           <div className="mb-24">
             <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-3">
-              Capa 3
+              Cumplimiento regulatorio
             </p>
             <h2 className="text-2xl md:text-3xl font-bold leading-snug mb-4">
               Lo que la regulación exige — documentado con rigor verificable

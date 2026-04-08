@@ -169,6 +169,7 @@ export default function HeroMotionPlus({
                     height: 100%;
                     min-height: 460px;
                     background-color: #0a1628;
+                    overflow: hidden;
                 }
                 .hero-mp-glow {
                     position: absolute;
@@ -272,9 +273,18 @@ export default function HeroMotionPlus({
                     border: 1px solid #1d2628;
                 }
                 .hero-mp-metrics {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
                     gap: 24px;
                     padding-top: 8px;
+                    width: 100%;
+                }
+                @media (min-width: 640px) {
+                    .hero-mp-metrics {
+                        display: flex;
+                        justify-content: center;
+                        width: auto;
+                    }
                 }
                 .hero-mp-metric {
                     display: flex;
