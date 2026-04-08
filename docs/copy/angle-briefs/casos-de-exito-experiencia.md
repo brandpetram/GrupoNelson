@@ -51,7 +51,7 @@ Porque invierte la dirección de la prueba. En vez de que Nelson diga "somos bue
 
 - Gulfstream es Fortune 500, aeroespacial, con estándares de manufactura entre los más altos del mundo. Si llevan 35 años con Nelson y no licitaron la quinta expansión, eso habla del nivel de confianza.
 - Honeywell Aerospace exige calificación "Recomendado" en ISN para que un constructor siquiera pueda trabajar en sus instalaciones. Baumex la tiene.
-- Interiores Aéreos pasó de 5,000 a 550,000 ft² sin cambiar de proveedor. No es que no tengan opciones — es que no necesitan buscar.
+- Gulfstream escaló su operación en Mexicali a lo largo de décadas — múltiples expansiones, siempre con el mismo proveedor. No es que no tengan opciones — es que no necesitan buscar.
 
 El comprador que lee esto no piensa "Nelson se está luciendo". Piensa "si estas empresas se quedaron, probablemente yo también puedo confiar".
 
@@ -82,27 +82,29 @@ Si encuentra los 3 diferenciadores otra vez → siente: "esto ya lo leí en dife
 
 Porque todo es verificable:
 
-- Gulfstream 35 años, Fortune 500 — documentado en charlas con dueños y desempaquetado
+- Gulfstream 35 años, Fortune 500, múltiples expansiones, asignación directa — documentado en charlas con dueños y desempaquetado
 - Honeywell 30+ años, ISN "Recomendado" — documentado en ISN y desempaquetado
-- Interiores Aéreos 5K → 550K ft² — documentado en charlas con dueños (Susana propuso este caso)
 - 80% repeat business — dato de los dueños, usado consistentemente en el sitio
 - DHL — documentado en planeación de proyecto de Baumex
+- **Nota (2026-04-06):** "Interiores Aéreos" es la razón social mexicana de Gulfstream — no es cliente separado. Los datos de 5K → 550K ft² / 110x no están confirmados como claim de Gulfstream. Ver `docs/copy/aclaraciones-canonicas.md`.
 
 ---
 
 ## Casos que se quedan
 
-### Caso 1 — Gulfstream (permanencia + confianza extrema)
+### Caso 1 — Gulfstream Aerospace (permanencia + escalabilidad)
 
 **Quién es:** Fortune 500, manufactura aeroespacial. Una de las empresas con estándares de producción más exigentes del mundo.
 
 **Qué exigencia tenía:** Estándares corporativos de seguridad, calidad y compliance que descalifican automáticamente a la mayoría de los proveedores. Después del terremoto de 2010, necesitaba garantía de resiliencia sísmica.
 
-**Por qué confió en Nelson:** 35 años de relación. 5 naves construidas por Baumex. Para la quinta expansión, no abrió licitación — asignó directamente.
+**Por qué confió en Nelson:** 35 años de relación. Empezó con una operación de 5,000 ft² y hoy ocupa 550,000 ft² — múltiples expansiones construidas por Baumex a lo largo de diferentes generaciones de parques de Grupo Nelson. Para su expansión más reciente (la nave más nueva de 550K sqft en Mexicali), no abrió licitación — asignó directamente.
 
-**Qué demuestra sobre Nelson:** Que la confianza de 35 años con una Fortune 500 aeroespacial elimina el proceso de selección. Si Gulfstream no necesita buscar alternativas después de 35 años, el nivel se demuestra solo.
+**Qué demuestra sobre Nelson:** Que la confianza de 35 años con una Fortune 500 aeroespacial elimina el proceso de selección. Y que la relación escala: de 5,000 a 550,000 ft² con el mismo proveedor — no es un proveedor para el primer contrato que se queda corto.
 
-**Dato ancla:** 35 años, 5 naves, asignación directa sin licitación.
+**Dato ancla:** 35 años, de 5K a 550K ft², asignación directa sin licitación.
+
+**Nota editorial (2026-04-06):** "Interiores Aéreos, S.A. de C.V." es la razón social mexicana de Gulfstream — no es un cliente separado. El dato de 5K → 550K ft² se puede usar como narrativa de crecimiento. No usar "110x" como claim principal. Si el cliente corrige el 5K, se ajusta. Ver `docs/copy/aclaraciones-canonicas.md`.
 
 ---
 
@@ -120,25 +122,11 @@ Porque todo es verificable:
 
 ---
 
-### Caso 3 — Interiores Aéreos (escalabilidad con el mismo proveedor)
-
-**Quién es:** Empresa de manufactura aeroespacial que empezó como operación pequeña en Mexicali.
-
-**Qué exigencia tenía:** Crecer sin tener que buscar nuevo proveedor cada vez que la operación se expandía. Pasar de una nave pequeña en el parque más antiguo a un complejo industrial de medio millón de pies cuadrados.
-
-**Por qué confió en Nelson:** Empezó con 5,000 ft² en El Vigía (el parque más económico). Hoy ocupa 550,000 ft². Creció 110 veces a través de las diferentes generaciones de parques de Grupo Nelson sin cambiar de proveedor.
-
-**Qué demuestra sobre Nelson:** Que la relación escala. No es un proveedor para el primer contrato que luego se queda corto. Es un proveedor que crece contigo — de una nave pequeña a un complejo 110 veces más grande.
-
-**Dato ancla:** 5K → 550K ft² (110x), mismo proveedor, de El Vigía a Nelson II.
-
----
-
 ### Caso menor — DHL (contexto de diversidad)
 
 **No es un cuarto pilar.** Es un dato de contexto que demuestra que la confianza no es solo aeroespacial.
 
-DHL eligió Grupo Nelson para su operación logística en Mexicali y regresó después del primer proyecto. El caso no tiene la profundidad de relación de los tres principales (no hay 30 años de historia ni crecimiento 110x), pero aporta diversidad de industria.
+DHL eligió Grupo Nelson para su operación logística en Mexicali y regresó después del primer proyecto. El caso no tiene la profundidad de relación de los dos principales (no hay 30+ años de historia), pero aporta diversidad de industria — la confianza no es solo aeroespacial.
 
 **En la implementación:** peso visual menor que los 3 casos principales — bloque breve o mención dentro del cierre, no sección de igual tamaño.
 
@@ -180,17 +168,16 @@ El riesgo más obvio. Una lista sin profundidad no transfiere confianza. Cada ca
 
 ## Tesis final de la página
 
-"Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson — Gulfstream lleva 35 años, Honeywell 30, e Interiores Aéreos creció 110 veces sin cambiar de proveedor. Lo que sus estándares exigen dice más sobre Nelson que cualquier cosa que Nelson pueda decir sobre sí mismo."
+"Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson — Gulfstream lleva 35 años y asignó su última expansión sin licitación, Honeywell lleva 30+ con la calificación ISN más alta posible. Lo que sus estándares exigen dice más sobre Nelson que cualquier cosa que Nelson pueda decir sobre sí mismo."
 
 ---
 
 ## Secuencia de página
 
-1. **Apertura + tesis** — los estándares de los clientes validan a Nelson. Stats bar: 35 años Gulfstream, 30+ Honeywell, 110x Interiores Aéreos. Sin 80% repeat business aquí — ese dato va al cierre como validación subordinada.
-2. **Caso 1: Gulfstream** — quién es → por qué importa → 35 años, 5 naves, asignación directa → qué demuestra.
-3. **Caso 2: Honeywell** — quién es → ISN como filtro → "Recomendado" + colaboración técnica → qué demuestra.
-4. **Caso 3: Interiores Aéreos** — quién es → 5K → 550K ft² → escalabilidad con el mismo proveedor → qué demuestra.
-5. **DHL + cierre** — mención breve de DHL como diversidad de industria (no sección completa). 80% repeat business como dato de cierre. CTA.
+1. **Apertura + tesis** — los estándares de los clientes validan a Nelson. Stats bar: 35 años Gulfstream, 30+ Honeywell, 80% repeat business. Las tres stats principales de la página.
+2. **Caso 1: Gulfstream Aerospace** — quién es → por qué importa → 35 años, múltiples expansiones, asignación directa, relación que escaló → qué demuestra.
+3. **Caso 2: Honeywell Aerospace** — quién es → ISN como filtro → "Recomendado" + colaboración técnica → qué demuestra.
+4. **DHL + cierre** — mención breve de DHL como diversidad de industria (no sección completa). 30 corporaciones internacionales como dato colectivo de validación. CTA. (80% repeat business ya está en la stats bar — no repetir).
 
 **Regla de narración:** Cada caso se cuenta desde la exigencia del cliente, no desde la capacidad de Nelson. El lector debe sentir primero quién es la empresa y por qué sus estándares son altos, antes de saber que eligieron a Nelson.
 

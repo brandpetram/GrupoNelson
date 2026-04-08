@@ -25,6 +25,7 @@ WORKTREES=(
   "diferencia-nelson|section/diferencia-nelson|Página diferencia Nelson"
   "leed|section/leed|Sección LEED completa"
   "baumex|section/baumex|Página Baumex constructora"
+  "liderazgo|section/liderazgo|Página liderazgo Nelson"
   "home|section/home|Home page (requiere refactor previo)"
   "system|system/shared|Componentes del sistema compartido"
 )

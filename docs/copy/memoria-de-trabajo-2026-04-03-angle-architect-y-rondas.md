@@ -3,6 +3,9 @@
 Fecha: 2026-04-03  
 Propósito: dejar contexto claro para retomar mañana sin perder el hilo
 
+> Nota: esta memoria conserva el origen histórico del concepto.
+> La definición operativa vigente del rol ahora vive en [docs/copy/roles/angle-architect/angle-architect.md](/Users/lmuzquiz/Proyectos/grupo-nelson/docs/copy/roles/angle-architect/angle-architect.md).
+
 ---
 
 ## 1. Qué descubrimos hoy
