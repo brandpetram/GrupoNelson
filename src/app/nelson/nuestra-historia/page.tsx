@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import StandardsPoster from '@/components/brandpetram/standards-poster'
 import CursorTrailGrupoNelson from '@/components/brandpetram/cursor-trail-grupo-nelson'
 
 export const metadata: Metadata = {
@@ -108,10 +109,11 @@ export default function NuestraHistoriaPage() {
                         </p>
                     </div>
                 </div>
+            </div>
 
-
-
-        </div>
+            <div className={'px-6 1200:px-10 mt-10'}>
+                <StandardsPoster />
+            </div>
       </div>
 
       </div>
