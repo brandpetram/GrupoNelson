@@ -55,7 +55,7 @@ const SECTIONS = [
   { value: 'constructora/estandares', label: 'Estándares Internacionales' },
   { value: 'constructora/proyectos-especializados', label: 'Proyectos Especializados' },
   { value: 'experiencia/casos-de-exito', label: 'Casos de Éxito' },
-  { value: 'experiencia/certificaciones', label: 'Certificaciones' },
+  { value: 'experiencia/normas-certificaciones-estandares', label: 'Normas, Certificaciones y Estándares' },
   { value: 'experiencia/excelencia-operativa', label: 'Excelencia Operativa' },
   { value: 'inventario/naves', label: 'Naves Disponibles' },
   { value: 'inventario/terrenos', label: 'Terrenos' },

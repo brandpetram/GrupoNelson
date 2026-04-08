@@ -158,9 +158,9 @@ export const expertiseCapabilitiesLinks = [
     iconKey: 'award',
   },
   {
-    href: '/experiencia/certificaciones',
-    name: 'Certificaciones Obtenidas',
-    description: 'Logros verificables: LEED, FM Global',
+    href: '/experiencia/normas-certificaciones-estandares',
+    name: 'Normas, Certificaciones y Estándares',
+    description: 'ISN, LEED, FM Global, NFPA, NOM, IBC',
     iconKey: 'award',
   },
 ];

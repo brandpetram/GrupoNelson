@@ -552,8 +552,8 @@ const sections: SectionDefinition[] = [
       },
       {
         id: 'certificaciones',
-        name: 'Certificaciones Obtenidas',
-        url: '/experiencia/certificaciones',
+        name: 'Normas, Certificaciones y Estándares',
+        url: '/experiencia/normas-certificaciones-estandares',
         status: 'no-existe',
         summary:
           'No existe. Lista de logros verificables — no "qué estándares seguimos" (eso está en Constructora/Estándares) sino "qué hemos ganado".',
