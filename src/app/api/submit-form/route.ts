@@ -58,6 +58,7 @@ export async function POST(request: Request) {
       { label: 'Email', value: body.email },
       { label: 'Teléfono', value: body.phone_number },
       { label: 'Empresa', value: body.company },
+      { label: 'País', value: body.country },
       { label: 'Tipo', value: body.role },
       { label: 'Parque industrial', value: body.park },
       { label: 'Interés', value: body.interest },
