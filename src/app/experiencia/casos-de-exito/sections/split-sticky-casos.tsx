@@ -24,10 +24,10 @@ export function SplitStickyCasos() {
           {/* ═══ Caso 1: Gulfstream Aerospace (dominante) ═══ */}
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-              Caso de Éxito — Gulfstream Aerospace
+              Caso de Éxito 1
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
-              Cuando la confianza de 35 años elimina la licitación
+              Gulfstream Aerospace: 35 Años Confiando en Nelson
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Gulfstream es Fortune 500. Manufactura aeroespacial. Una de las
@@ -87,11 +87,11 @@ export function SplitStickyCasos() {
           {/* ═══ Caso 2: Honeywell Aerospace (soporte fuerte) ═══ */}
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-              Caso de Éxito — Honeywell Aerospace
+              Caso de Éxito 2
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
-              El filtro más exigente ya calificó a Baumex como
-              &quot;Recomendado&quot;
+              Honeywell Aerospace: Corporación Global que Confía en los
+              Expertos en Parques Industriales
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Honeywell Aerospace es un corporativo global cuyos estándares de
