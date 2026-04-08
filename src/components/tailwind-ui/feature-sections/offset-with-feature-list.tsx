@@ -19,7 +19,7 @@ const features = [
 
 export default function Example() {
     return (
-        <div data-component="Example" data-component-file="src/components/tailwind-ui/feature-sections/offset-with-feature-list.tsx" data-component-props="false" className="bg-gray-900 py-24 sm:py-32">
+        <div className="bg-gray-900 py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     <div className="col-span-2">
