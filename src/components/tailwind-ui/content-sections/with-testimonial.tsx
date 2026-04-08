@@ -2,7 +2,7 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
 
 export default function Example() {
     return (
-        <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <div data-component="Example" data-component-file="src/components/tailwind-ui/content-sections/with-testimonial.tsx" data-component-props="false" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
             <div
                 aria-hidden="true"
                 className="absolute -top-80 left-[max(6rem,33%)] -z-10 transform-gpu blur-3xl sm:left-1/2 md:top-20 lg:ml-20 xl:top-3 xl:ml-56"
