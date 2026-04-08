@@ -158,10 +158,10 @@ El orden de lectura obligatorio se define en cada task (ver `task-{seccion}-v{ve
 
 1. Constitución del sistema de copy
 2. Guía de fuentes del negocio y límites de lectura
-3. Aclaraciones canónicas
-4. Este documento (definición del rol)
-5. Reporte de Context Curator
-6. Reporte de Value Finder
+3. Este documento (definición del rol)
+4. Reporte de Context Curator
+5. Reporte de Value Finder
+6. Aclaraciones canónicas (se lee después de los reportes para que cierre cualquier conflicto con la última palabra)
 7. La task de la sección
 8. Paquete mínimo obligatorio de fuentes primarias (definido en la task)
 9. Spot-check selectivo si hace falta
