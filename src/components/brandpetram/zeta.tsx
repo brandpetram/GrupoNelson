@@ -90,8 +90,8 @@ export function Zeta() {
                             className="w-full h-full"
                         >
                             <PoligonoImagen1
-                                src="/parque-industrial-nelson-1-en-mexicali.jpeg"
-                                alt="Placeholder de tempus"
+                                src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-8.jpeg"
+                                alt="Nave industrial en parque de Grupo Nelson, Mexicali"
                             />
                         </motion.div>
 
