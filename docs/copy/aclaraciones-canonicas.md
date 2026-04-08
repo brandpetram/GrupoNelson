@@ -489,6 +489,49 @@ El punto comercial autorizado es este:
 
 ---
 
+## 14. NOM-009, NOM-027, IBC y DC-3 como capacidades de cumplimiento normativo de Baumex
+
+### Decision canonica
+
+Queda autorizado afirmar comercialmente que Baumex opera bajo las siguientes normas y certificaciones de cumplimiento:
+
+- **NOM-009-STPS-2011** — trabajo en alturas: control de presion arterial, checklist de caida, firmas escalonadas
+- **NOM-027-STPS-2008** — trabajo con fuego: soldadura, oxicorte, vigia vigilante de incendios
+- **IBC** — International Building Code: codigos de construccion internacionales
+- **DC-3** — certificacion mexicana de capacitacion laboral para todo el personal
+
+### Motivo
+
+Estos estandares estan documentados en fuente primaria del negocio (temario de Baumex, desempaquetado comercial, especificaciones de Nelson II). Son parte del sistema de seguridad y compliance real de Baumex.
+
+### Usar
+
+- `Baumex opera bajo NOM-009-STPS-2011 para trabajo en alturas`
+- `Baumex opera bajo NOM-027-STPS-2008 para trabajo con fuego`
+- `Construccion conforme a codigos IBC`
+- `Todo el personal con certificacion DC-3`
+
+### Usar asi
+
+- presentar NOM-009 y NOM-027 como permisos especializados de seguridad que Baumex documenta en cada proyecto
+- presentar IBC como estandar de construccion internacional que las naves de Grupo Nelson cumplen
+- presentar DC-3 como certificacion laboral obligatoria que todo el personal de Baumex tiene
+- usar como parte del argumento de compliance, seguridad y exigencia operativa
+
+### No usar
+
+- presentar estas normas como logros extraordinarios — son cumplimiento obligatorio documentado
+- inflar NOM-009 o NOM-027 como si fueran certificaciones de prestigio externo (como ISN o FM); son normas mexicanas de seguridad laboral
+- confundir IBC (codigo de construccion) con certificaciones de terceros (como FM o LEED)
+
+### Aclaracion importante
+
+- `NOM-009` y `NOM-027` son normas de la STPS (Secretaria del Trabajo). Son obligatorias. El valor comercial no es que Baumex las cumpla (todos deberian), sino que las documenta con permisos diarios, matrices de riesgo y registros verificables.
+- `IBC` es un codigo de construccion, no una certificacion. Se usa como referencia de diseno, no como badge.
+- `DC-3` es la constancia de habilidades laborales. El valor es que todo el personal la tiene, no que exista la certificacion.
+
+---
+
 ## Regla final para roles futuros
 
 Cuando un rol futuro encuentre un documento viejo que contradiga este archivo, no debe reabrir la duda dentro del copy.
