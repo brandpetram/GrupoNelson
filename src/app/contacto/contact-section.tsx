@@ -12,30 +12,46 @@ import { Textarea } from '@/components/ui/textarea'
 import Header from '@/components/Header'
 
 const countries = [
+    // México y EE.UU. primero (principales mercados)
     { flag: '🇲🇽', name: 'México' },
     { flag: '🇺🇸', name: 'Estados Unidos' },
-    { flag: '🇨🇦', name: 'Canadá' },
+    // Resto alfabéticamente
     { flag: '🇩🇪', name: 'Alemania' },
+    { flag: '🇦🇷', name: 'Argentina' },
     { flag: '🇦🇺', name: 'Australia' },
     { flag: '🇦🇹', name: 'Austria' },
     { flag: '🇧🇪', name: 'Bélgica' },
+    { flag: '🇧🇷', name: 'Brasil' },
+    { flag: '🇨🇦', name: 'Canadá' },
+    { flag: '🇨🇱', name: 'Chile' },
     { flag: '🇨🇳', name: 'China' },
+    { flag: '🇨🇴', name: 'Colombia' },
     { flag: '🇰🇷', name: 'Corea del Sur' },
     { flag: '🇩🇰', name: 'Dinamarca' },
-    { flag: '🇪🇸', name: 'España' },
+    { flag: '🇪🇦', name: 'España' },
     { flag: '🇫🇮', name: 'Finlandia' },
     { flag: '🇫🇷', name: 'Francia' },
+    { flag: '🇭🇰', name: 'Hong Kong' },
+    { flag: '🇮🇳', name: 'India' },
+    { flag: '🇮🇩', name: 'Indonesia' },
     { flag: '🇮🇪', name: 'Irlanda' },
     { flag: '🇮🇱', name: 'Israel' },
     { flag: '🇮🇹', name: 'Italia' },
     { flag: '🇯🇵', name: 'Japón' },
+    { flag: '🇲🇾', name: 'Malasia' },
     { flag: '🇳🇴', name: 'Noruega' },
+    { flag: '🇳🇿', name: 'Nueva Zelanda' },
     { flag: '🇳🇱', name: 'Países Bajos' },
+    { flag: '🇵🇪', name: 'Perú' },
+    { flag: '🇵🇱', name: 'Polonia' },
     { flag: '🇬🇧', name: 'Reino Unido' },
     { flag: '🇸🇬', name: 'Singapur' },
     { flag: '🇸🇪', name: 'Suecia' },
     { flag: '🇨🇭', name: 'Suiza' },
     { flag: '🇹🇼', name: 'Taiwán' },
+    { flag: '🇹🇭', name: 'Tailandia' },
+    { flag: '🇹🇷', name: 'Turquía' },
+    { flag: '🇻🇳', name: 'Vietnam' },
 ]
 
 const benefits = [
