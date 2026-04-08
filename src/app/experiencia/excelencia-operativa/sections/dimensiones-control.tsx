@@ -113,7 +113,7 @@ export function DimensionesControl() {
                         <FeatureCardContent className="bg-background!">
                             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">Control de seguridad</p>
                             <p className="text-lg lg:text-xl">
-                                Permisos diarios de trabajo con matriz de riesgo cuantitativa antes de cada turno. Permisos especializados para alturas (NOM-009) y soldadura (NOM-027). Scorecard transparente que registra cada incidente, incluyendo los menores. 1,092,745 HHT con cero fatalidades como resultado del sistema.
+                                Permisos diarios de trabajo con matriz de riesgo cuantitativa antes de cada turno. Permisos especializados para alturas (NOM-009) y soldadura (NOM-027). Scorecard transparente que registra cada incidente, incluyendo los menores. 1,092,745 HHT con cero incidentes graves como resultado del sistema.
                             </p>
                         </FeatureCardContent>
 

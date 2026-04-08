@@ -20,13 +20,13 @@ export function FeatureCardsResultados() {
                                 Scorecard de Seguridad
                             </FeatureCardTitle>
                             <FeatureCardDescription>
-                                <span className="text-foreground">1,092,745 horas hombre trabajadas.</span> Cero fatalidades. 404 días consecutivos sin accidentes en el proyecto más grande de Mexicali.
+                                <span className="text-foreground">1,092,745 horas hombre trabajadas.</span> Cero accidentes graves. 404 días consecutivos de operación segura en el proyecto más grande de Mexicali.
                             </FeatureCardDescription>
                         </FeatureCardContent>
                         <FeatureCardCIllustration>
                             <div className="flex flex-col items-center gap-2 py-6">
                                 <span className="text-foreground text-6xl font-bold">0</span>
-                                <span className="text-muted-foreground text-lg font-medium">fatalidades</span>
+                                <span className="text-muted-foreground text-lg font-medium">accidentes graves</span>
                                 <span className="text-muted-foreground text-sm">1,092,745 HHT</span>
                             </div>
                         </FeatureCardCIllustration>

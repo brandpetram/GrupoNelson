@@ -26,7 +26,7 @@ export function CallToAction() {
                     <div className="mx-auto max-w-xl text-center">
                         <div className="relative">
                             <h2 className="text-foreground text-balance text-4xl font-semibold lg:text-5xl">Tu siguiente nave industrial en Mexicali</h2>
-                            <p className="text-foreground mb-6 mt-4 text-balance text-lg">75 proyectos. 4.5 millones de pies cuadrados. Cero fatalidades. La constructora que ya demostró estos resultados.</p>
+                            <p className="text-foreground mb-6 mt-4 text-balance text-lg">Planeación documentada, reportes semanales, minutas firmadas y scorecard de seguridad. 75 proyectos gestionados con este método en 28 años.</p>
 
                             <Button
                                 asChild
