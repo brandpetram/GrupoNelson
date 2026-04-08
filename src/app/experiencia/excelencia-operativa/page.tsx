@@ -75,7 +75,7 @@ export default function ExcelenciaOperativaPage() {
             </Container>
             <div className="relative">
               <div className="absolute inset-0 grid grid-rows-[auto_1fr]">
-                <Container asGrid decorators={6}>
+                <Container asGrid >
                   <div
                     aria-hidden
                     className="col-span-full grid grid-cols-10 gap-px"
@@ -117,7 +117,7 @@ export default function ExcelenciaOperativaPage() {
                   </div>
                 </Container>
 
-                <Container aria-hidden decorators={6}>
+                <Container aria-hidden >
                   <></>
                 </Container>
               </div>

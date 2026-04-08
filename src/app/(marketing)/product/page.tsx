@@ -61,8 +61,7 @@ export default function Home() {
                     <div className="relative">
                         <div className="absolute inset-0 grid grid-rows-[auto_1fr]">
                             <Container
-                                asGrid
-                                decorators={6}>
+                                asGrid>
                                 <div
                                     aria-hidden
                                     className="col-span-full grid grid-cols-10 gap-px">
@@ -99,8 +98,7 @@ export default function Home() {
                             </Container>
 
                             <Container
-                                aria-hidden
-                                decorators={6}>
+                                aria-hidden>
                                 <></>
                             </Container>
                         </div>
