@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import CursorTrailGrupoNelson from '@/components/brandpetram/cursor-trail-grupo-nelson'
 
 export const metadata: Metadata = {
   title: 'Nuestra Historia | Grupo Nelson',
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 
 export default function NuestraHistoriaPage() {
   return (
+    <>
     <div className="flex flex-col min-h-[200vh] my-32 1200:px-10 ">
       <Header />
 
@@ -48,7 +50,7 @@ export default function NuestraHistoriaPage() {
       </div>
 
         {/* Columna 2 — borde izquierdo y derecho para separar las 3 columnas */}
-        <div className="border-x border-border">
+        <div className="border-x border-border dark:border-white/20">
             <div className={'px-6 1200:px-10'}>
                 <figure className="w-3/3 mx-auto mt-8">
                     <div className="aspect-video">
@@ -114,5 +116,8 @@ export default function NuestraHistoriaPage() {
 
       </div>
     </div>
+
+    <CursorTrailGrupoNelson />
+    </>
   )
 }

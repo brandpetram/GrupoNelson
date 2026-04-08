@@ -1,0 +1,299 @@
+"use client"
+
+import { motion, type Transition, type Variants } from "motion/react"
+
+interface HeroMotionPlusProps {
+    staggerInterval?: number
+    itemOffsetY?: number
+    itemTransition?: Transition
+    badge?: string
+    headlineTop?: string
+    headlineAccent?: string
+    subtitle?: string
+    primaryButtonText?: string
+    primaryButtonHref?: string
+    secondaryButtonText?: string
+    secondaryButtonHref?: string
+    metrics?: { value: string; label: string }[]
+}
+
+const defaultItemTransition: Transition = {
+    type: "spring",
+    stiffness: 120,
+    damping: 20,
+}
+
+const defaultMetrics = [
+    { value: "60+", label: "Años" },
+    { value: "75+", label: "Proyectos" },
+    { value: "33", label: "Corporaciones" },
+]
+
+export default function HeroMotionPlus({
+    staggerInterval = 0.1,
+    itemOffsetY = 40,
+    itemTransition = defaultItemTransition,
+    badge = "Desde 1965 en Mexicali",
+    headlineTop = "Parques industriales",
+    headlineAccent = "de clase mundial",
+    subtitle = "Desarrollo, construcción y administración de naves industriales en Mexicali. La familia fundadora opera directamente cada proyecto.",
+    primaryButtonText = "Solicita una consulta",
+    primaryButtonHref = "/contacto",
+    secondaryButtonText = "Conoce los parques",
+    secondaryButtonHref = "/parques",
+    metrics = defaultMetrics,
+}: HeroMotionPlusProps) {
+    const containerVariants: Variants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: staggerInterval,
+            },
+        },
+    }
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: itemOffsetY, filter: "blur(4px)" },
+        visible: {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: itemTransition,
+        },
+    }
+
+    return (
+        <div className="hero-mp-wrapper">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                    opacity: 1,
+                    x: [0, 60, -40, 20, 0],
+                    y: [0, -30, 50, -20, 0],
+                }}
+                transition={{
+                    opacity: { duration: 1.2, ease: "easeOut" },
+                    x: { duration: 23, repeat: Infinity, ease: "easeInOut" },
+                    y: { duration: 19, repeat: Infinity, ease: "easeInOut" },
+                }}
+                className="hero-mp-glow hero-mp-glow-teal"
+            />
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                    opacity: 1,
+                    x: [0, -50, 30, -60, 0],
+                    y: [0, 40, -30, 50, 0],
+                }}
+                transition={{
+                    opacity: { duration: 1.4, ease: "easeOut", delay: 0.2 },
+                    x: { duration: 17, repeat: Infinity, ease: "easeInOut" },
+                    y: { duration: 29, repeat: Infinity, ease: "easeInOut" },
+                }}
+                className="hero-mp-glow hero-mp-glow-green"
+            />
+
+            <motion.div
+                className="hero-mp-container"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.div variants={itemVariants} className="hero-mp-badge">
+                    <motion.span
+                        className="hero-mp-badge-dot"
+                        animate={{ opacity: [1, 0.4, 1] }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }}
+                    />
+                    {badge}
+                </motion.div>
+
+                <motion.h1 variants={itemVariants} className="hero-mp-headline">
+                    {headlineTop}
+                    <br />
+                    <span className="hero-mp-headline-accent">{headlineAccent}</span>
+                </motion.h1>
+
+                <motion.p variants={itemVariants} className="hero-mp-subtitle">
+                    {subtitle}
+                </motion.p>
+
+                <motion.div variants={itemVariants} className="hero-mp-button-row">
+                    <motion.a
+                        href={primaryButtonHref}
+                        className="hero-mp-btn-primary"
+                        whileHover={{
+                            y: -1,
+                            boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
+                        }}
+                    >
+                        {primaryButtonText}
+                    </motion.a>
+                    <motion.a
+                        href={secondaryButtonHref}
+                        className="hero-mp-btn-secondary"
+                        whileHover={{
+                            y: -1,
+                            backgroundColor: "rgba(255, 255, 255, 0.05)",
+                        }}
+                    >
+                        {secondaryButtonText}
+                    </motion.a>
+                </motion.div>
+
+                <motion.div variants={itemVariants} className="hero-mp-metrics">
+                    {metrics.map((metric) => (
+                        <div key={metric.label} className="hero-mp-metric">
+                            <span className="hero-mp-metric-value">
+                                {metric.value}
+                            </span>
+                            <span className="hero-mp-metric-label">
+                                {metric.label}
+                            </span>
+                        </div>
+                    ))}
+                </motion.div>
+            </motion.div>
+
+            <style>{`
+                .hero-mp-wrapper {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    min-height: 460px;
+                    background-color: #0a1628;
+                }
+                .hero-mp-glow {
+                    position: absolute;
+                    border-radius: 50%;
+                    filter: blur(10px);
+                    mix-blend-mode: screen;
+                    pointer-events: none;
+                    z-index: 1;
+                }
+                .hero-mp-glow-teal {
+                    top: 35%;
+                    left: 45%;
+                    width: 500px;
+                    height: 300px;
+                    transform: translate(-50%, -50%);
+                    background: radial-gradient(ellipse at center, rgba(12, 220, 247, 0.15) 0%, transparent 70%);
+                }
+                .hero-mp-glow-green {
+                    top: 20%;
+                    left: 30%;
+                    width: 400px;
+                    height: 250px;
+                    transform: translate(-50%, -50%);
+                    background: radial-gradient(ellipse at center, rgba(0, 200, 120, 0.12) 0%, transparent 70%);
+                }
+                .hero-mp-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 24px;
+                    padding: 40px 24px;
+                    max-width: 500px;
+                }
+                .hero-mp-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 6px 14px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #0cdcf7;
+                    background-color: rgba(12, 220, 247, 0.03);
+                    border: 1px solid rgba(12, 220, 247, 0.15);
+                    border-radius: 100px;
+                }
+                .hero-mp-badge-dot {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: #0cdcf7;
+                    display: block;
+                }
+                .hero-mp-headline {
+                    font-size: clamp(32px, 8vw, 48px);
+                    font-weight: 700;
+                    line-height: 0.95;
+                    letter-spacing: -0.03em;
+                    color: #f5f5f5;
+                    margin: 0;
+                }
+                .hero-mp-headline-accent {
+                    background: linear-gradient(135deg, #0cdcf7, #8df0cc);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                .hero-mp-subtitle {
+                    font-size: clamp(14px, 3.5vw, 16px);
+                    line-height: 1.6;
+                    color: rgba(245, 245, 245, 0.6);
+                    margin: 0;
+                    max-width: 380px;
+                }
+                .hero-mp-button-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 12px;
+                }
+                .hero-mp-btn-primary,
+                .hero-mp-btn-secondary {
+                    padding: 12px 28px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: inherit;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                }
+                .hero-mp-btn-primary {
+                    color: #0f1115;
+                    background-color: #f5f5f5;
+                    border: none;
+                }
+                .hero-mp-btn-secondary {
+                    color: #f5f5f5;
+                    background-color: transparent;
+                    border: 1px solid #1d2628;
+                }
+                .hero-mp-metrics {
+                    display: flex;
+                    gap: 24px;
+                    padding-top: 8px;
+                }
+                .hero-mp-metric {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 4px;
+                }
+                .hero-mp-metric-value {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #f5f5f5;
+                }
+                .hero-mp-metric-label {
+                    font-size: 12px;
+                    color: rgba(245, 245, 245, 0.6);
+                    text-transform: uppercase;
+                    letter-spacing: 0.06em;
+                }
+            `}</style>
+        </div>
+    )
+}
