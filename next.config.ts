@@ -40,7 +40,38 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
   },
   async redirects() {
-    return []
+    return [
+      {
+        source: '/web',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/web/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/wp-content/uploads/2019/07/Specs-Building-Nelson-II-7Sept18.pdf',
+        destination: '/parques-industriales-mexicali/nelson-ii',
+        permanent: true,
+      },
+      {
+        source: '/wp-content/uploads/2024/06/Specs-Nave-1-Vigia-II.pdf',
+        destination: '/parques-industriales-mexicali/vigia-ii',
+        permanent: true,
+      },
+      {
+        source: '/wp-content/uploads/2019/02/Terreno-Lit-On.pdf',
+        destination: '/inventario/terrenos',
+        permanent: true,
+      },
+      {
+        source: '/wp-content/uploads/:path*',
+        destination: '/',
+        permanent: true,
+      },
+    ]
   },
   async headers() {
     const cacheHeaders = [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }]
