@@ -122,32 +122,36 @@ Registrar un componente React que renderice el bloque `dataTable` en el serializ
 const components = {
   types: {
     dataTable: ({ value }) => (
-      <figure className="my-8">
+      <figure className="my-8 not-prose">
         {value.title && <figcaption className="text-sm font-semibold mb-2">{value.title}</figcaption>}
-        <table className="w-full text-sm border-collapse">
-          <thead>
-            <tr>
-              {value.columns.map((col, i) => (
-                <th key={i} className="border-b px-4 py-2 text-left font-medium">{col}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {value.rows.map((row, i) => (
-              <tr key={i} className="border-b last:border-0">
-                {row.cells.map((cell, j) => (
-                  <td key={j} className="px-4 py-2">{cell}</td>
+        <div className="overflow-x-auto rounded-lg border">
+          <table className="min-w-[480px] w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-muted/50">
+                {value.columns.map((col, i) => (
+                  <th key={i} className="border-b px-4 py-2.5 text-left font-medium whitespace-nowrap">{col}</th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-        {value.source && <span className="text-xs text-muted-foreground mt-1 block">Fuente: {value.source}</span>}
+            </thead>
+            <tbody>
+              {value.rows.map((row, i) => (
+                <tr key={i} className="border-b last:border-0">
+                  {row.cells.map((cell, j) => (
+                    <td key={j} className="px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {value.source && <span className="text-xs text-muted-foreground mt-2 block">Fuente: {value.source}</span>}
       </figure>
     ),
   },
 }
 ```
+
+**Notas de responsive:** `not-prose` saca la tabla del estilo prose del contenedor. `overflow-x-auto` permite scroll horizontal en móvil. `min-w-[480px]` evita que las columnas se aplasten. El `div` wrapper con `rounded-lg border` contiene el overflow visualmente.
 
 ## El agente
 
@@ -199,7 +203,10 @@ Ejemplo de mutación para insertar después del tercer bloque del locale españo
 ### Estrategia de idiomas
 
 - **Español (es):** El agente siempre inserta la tabla en el locale `es`, que es el idioma principal y el que tienen todos los posts.
-- **Inglés (en):** Si el post tiene locale `en`, el agente genera una versión traducida de la misma tabla y la inserta en `body[_key == "en"].value` en la misma posición relativa.
+- **Inglés (en):** Si el post tiene locale `en`, el agente genera una versión traducida de la tabla. **No se usa la misma posición por índice** porque la traducción puede tener diferente número de bloques. En su lugar, el agente busca el punto de inserción por contenido semántico en cada locale:
+  1. Buscar el primer H2 después de la introducción y colocar la tabla antes de ese heading.
+  2. Si no hay H2 claro, hacer append antes del último bloque (antes de la conclusión).
+  3. Si la estructura es ambigua, hacer append al final del `value` array.
 - **Detección:** Antes de insertar, el agente verifica qué locales existen en el body del post (`body[]._key`) y solo escribe en los que están presentes.
 - **Si solo existe `es`:** Se inserta solo en español. Cuando eventualmente se traduzca el post, la tabla se traduce junto con el contenido.
 
@@ -217,10 +224,39 @@ Posts que no tengan un bloque `dataTable` en su body simplemente no muestran nad
 6. **Agente** — Crear el agente que automatiza el flujo completo
 7. **Lote** — Correr el agente sobre los 30 posts existentes
 
+## Idempotencia y control operativo
+
+### Identificación de tablas del agente
+
+Todas las tablas generadas por el agente llevan un `_key` con prefijo `agent-table-`. Ejemplo: `agent-table-costos-mx-cn`. Esto permite distinguirlas de tablas insertadas manualmente desde el studio (que tendrán keys aleatorios generados por Sanity).
+
+### Detección de duplicados
+
+Antes de insertar, el agente:
+1. Lee el `value` array del locale objetivo
+2. Filtra bloques donde `_type == "dataTable"` y `_key` empiece con `agent-table-`
+3. Si ya existe una tabla del agente, **no inserta otra** (skip con log)
+4. Si se quiere reemplazar una tabla existente, se debe pasar un flag explícito `--replace`
+
+### Dry-run y reporte
+
+El lote tiene dos modos:
+
+- **`--dry-run`** (default para la primera corrida): Lee cada post, genera la tabla propuesta, y produce un reporte JSON/markdown con: post ID, título, tabla propuesta (título, columnas, filas, fuente), posición de inserción, y locales que se tocarían. **No muta nada en Sanity.**
+- **`--apply`**: Ejecuta las mutaciones reales. Solo se corre después de revisar el reporte del dry-run.
+
+### Reintentos
+
+Si una mutación falla (timeout, 429, etc.), el agente reintenta hasta 3 veces con backoff. Si sigue fallando, lo registra en el reporte como `failed` y continúa con el siguiente post. No hay estado corrupto posible porque cada mutación es atómica por post.
+
+## Prerequisito pendiente: limpieza de `zh`
+
+El repo todavía trae `zh` (chino) en `sanity.config.ts` y `post.ts`. Esa limpieza es un paso aparte que debe hacerse antes o en paralelo, pero no bloquea este plan.
+
 ## Notas
 
 - Cada tabla debe citar su fuente. Datos sin fuente no se insertan.
 - El agente no modifica el texto del post, solo inserta bloques adicionales.
-- Si un post ya tiene una tabla, el agente no inserta otra (a menos que se pida).
 - Las tablas se pueden editar después desde el studio de Sanity como cualquier otro contenido.
 - La inserción siempre apunta a `body[_key == "LOCALE"].value[N]`, nunca a `body[N]` directamente.
+- Keys de tablas del agente siempre empiezan con `agent-table-` para trazabilidad.
