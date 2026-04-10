@@ -21,7 +21,7 @@ export default function StandardsPoster({
   standards?: StandardItem[]
 }) {
   return (
-    <div className="relative">
+    <div data-component="StandardsPoster" data-component-file="src/components/brandpetram/standards-poster.tsx" data-component-props="true" className="relative">
       <div className="absolute right-1/4 top-0 bottom-0 w-px bg-border" />
       <div className="divide-y divide-border">
         {standards.map((item) => (

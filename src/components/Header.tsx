@@ -597,11 +597,17 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
                       ))}
                     </ul>
                   </div>
-                  {/* Visual content placeholder */}
-                  <div className="flex items-center justify-center rounded-lg bg-blue-600 p-4">
-                    <div className="text-center">
-                      <p className="text-white text-sm font-medium">Visual content</p>
-                    </div>
+                  <div className="overflow-hidden rounded-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      poster="/fundador-grupo-nelson-mexicali.jpg"
+                      className="h-full w-full object-cover"
+                    >
+                      <source src="/fundador-animado-v4.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
               </div>
@@ -732,11 +738,17 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
                       ))}
                     </ul>
                   </div>
-                  {/* Visual content placeholder */}
-                  <div className="flex items-center justify-center rounded-lg bg-blue-600 p-4">
-                    <div className="text-center">
-                      <p className="text-white text-sm font-medium">Visual content</p>
-                    </div>
+                  <div className="overflow-hidden rounded-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      poster="/timelapse-jonathan-construccion-poster.jpg"
+                      className="h-full w-full object-cover"
+                    >
+                      <source src="/timelapse-jonathan-construccion.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
               </div>

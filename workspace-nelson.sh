@@ -2,8 +2,9 @@
 # workspace-nelson.sh — Worktrees de Grupo Nelson en tmux
 #
 # Uso:
-#   ./workspace-nelson.sh                — Menú interactivo
-#   ./workspace-nelson.sh all            — Abrir todos los worktrees definidos
+#   ./workspace-nelson.sh                — Menú interactivo (grupo A)
+#   ./workspace-nelson.sh b              — Abrir worktrees del grupo B (terminar sitio)
+#   ./workspace-nelson.sh all            — Abrir todos los worktrees del grupo activo
 #   ./workspace-nelson.sh excelencia certificaciones  — Abrir solo esos dos
 #
 # Modelo operativo:
@@ -16,19 +17,28 @@
 PROJECT_DIR="$HOME/Proyectos/grupo-nelson"
 SESSION="nelson"
 
-# Definir worktrees: SLUG|BRANCH|DESCRIPCION
-# El directorio del worktree será: $PROJECT_DIR/.worktrees/$SLUG
-WORKTREES=(
+# --- Grupos de worktrees ---
+
+# Grupo A: Secciones (fase anterior)
+WORKTREES_A=(
   "excelencia-operativa|section/excelencia-operativa|Implementar brief de excelencia operativa"
   "certificaciones|section/certificaciones|Brief + implementación de certificaciones"
   "casos-de-exito|section/casos-de-exito|Página casos de éxito"
-  "diferencia-nelson|section/diferencia-nelson|Página diferencia Nelson"
-  "leed|section/leed|Sección LEED completa"
-  "baumex|section/baumex|Página Baumex constructora"
   "liderazgo|section/liderazgo|Página liderazgo Nelson"
-  "home|section/home|Home page (requiere refactor previo)"
-  "system|system/shared|Componentes del sistema compartido"
+  "contacto|section/contacto|Página de contacto"
+  "recursos|section/recursos|Página de recursos"
 )
+
+# Grupo B: Terminar sitio (fase actual)
+WORKTREES_B=(
+  "index|wt/index|ScrollStorytelling — copy y assets de la página principal"
+  "liderazgo-v2|wt/liderazgo|Ajustes visuales página de liderazgo"
+  "nuestra-historia|wt/nuestra-historia|Componentes estilo orben-tech para nuestra historia"
+  "blog|wt/blog|Revisar y mejorar página del blog"
+)
+
+# Por defecto usar grupo A
+WORKTREES=("${WORKTREES_A[@]}")
 
 # --- Funciones ---
 
@@ -104,6 +114,20 @@ SELECTED=()
 
 if [[ $# -eq 0 ]]; then
   show_menu
+elif [[ "$1" == "b" ]]; then
+  WORKTREES=("${WORKTREES_B[@]}")
+  if [[ "$2" == "all" ]]; then
+    SELECTED=("${!WORKTREES[@]}")
+  else
+    show_menu
+  fi
+elif [[ "$1" == "a" ]]; then
+  WORKTREES=("${WORKTREES_A[@]}")
+  if [[ "$2" == "all" ]]; then
+    SELECTED=("${!WORKTREES[@]}")
+  else
+    show_menu
+  fi
 elif [[ "$1" == "all" ]]; then
   SELECTED=("${!WORKTREES[@]}")
 else

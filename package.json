@@ -49,7 +49,7 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.555.0",
     "motion": "^12.23.25",
-    "motion-plus": "https://api.motion.dev/registry?package=motion-plus&version=2.0.2&token=5a54096caaedfdb408d4651454cd550ab4dc69d6da94491bdebd61495b578bdd",
+    "motion-plus": "https://api.motion.dev/registry?package=motion-plus&version=2.0.2&token=1ab634f7848bec71e8d67cf152b59ef2d33f018cd1c622cb2597bfd96f5a5682",
     "next": "^16.1.4",
     "next-sanity": "^12.1.0",
     "next-themes": "^0.4.6",

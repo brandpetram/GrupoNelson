@@ -63,7 +63,7 @@ export default function HeroMotionPlus({
     }
 
     return (
-        <div className="hero-mp-wrapper">
+        <div data-component="HeroMotionPlus" data-component-file="src/components/brandpetram/hero-motionplus.tsx" data-component-props="true" className="hero-mp-wrapper">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
