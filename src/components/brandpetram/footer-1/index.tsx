@@ -52,62 +52,58 @@ interface FooterColumn {
 
 const footerData: FooterColumn[] = [
   {
-    heading: 'Productos',
+    heading: 'Parques Industriales',
     sections: [
       {
-        title: 'Plataforma',
+        title: 'Mexicali',
         links: [
-          { label: 'Lorem Ipsum', href: '#' },
-          { label: 'Dolor Sit Amet', href: '#' },
-          { label: 'Consectetur', href: '#' },
-          { label: 'Adipiscing Elit', href: '#' },
+          { label: 'Parque Nelson II', href: '/parques-industriales-mexicali/nelson-ii' },
+          { label: 'Parque Nelson I', href: '/parques-industriales-mexicali/nelson-i' },
+          { label: 'Parque El Vigía I', href: '/parques-industriales-mexicali/vigia-i' },
+          { label: 'Parque El Vigía II', href: '/parques-industriales-mexicali/vigia-ii' },
         ],
       },
       {
-        title: 'Soluciones',
+        title: 'Inventario',
         links: [
-          { label: 'Sed Do Eiusmod', href: '#' },
-          { label: 'Tempor Incididunt', href: '#' },
-          { label: 'Ut Labore', href: '#' },
+          { label: 'Naves Disponibles', href: '/inventario/naves-disponibles' },
+          { label: 'Terrenos Disponibles', href: '/inventario/terrenos' },
         ],
       },
     ],
   },
   {
-    heading: 'Servicios',
+    heading: 'Construcción',
     sections: [
       {
-        title: 'Consultoría',
+        title: 'Servicios',
         links: [
-          { label: 'Magna Aliqua', href: '#' },
-          { label: 'Enim Ad Minim', href: '#' },
-          { label: 'Veniam Quis', href: '#' },
-          { label: 'Nostrud Exercitation', href: '#' },
-          { label: 'Ullamco Laboris', href: '#' },
+          { label: 'Baumex Constructora', href: '/constructora/baumex' },
+          { label: 'Built-to-Suit', href: '/constructora/build-to-suit' },
+          { label: 'Llave en Mano', href: '/constructora/llave-en-mano' },
+          { label: 'Ingeniería y Diseño', href: '/constructora/diseno-e-ingenieria' },
+          { label: 'Proyectos Especializados', href: '/constructora/proyectos-especializados' },
         ],
       },
       {
-        title: 'Soporte',
+        title: 'Calidad',
         links: [
-          { label: 'Nisi Ut Aliquip', href: '#' },
-          { label: 'Ex Ea Commodo', href: '#' },
-          { label: 'Consequat Duis', href: '#' },
+          { label: 'Certificación LEED', href: '/constructora/leed' },
+          { label: 'Estándares Internacionales', href: '/constructora/estandares-internacionales' },
+          { label: 'Portafolio', href: '/constructora/portafolio' },
         ],
       },
     ],
   },
   {
-    heading: 'Industrias',
+    heading: 'Experiencia',
     sections: [
       {
-        title: 'Sectores',
+        title: 'Resultados',
         links: [
-          { label: 'Aute Irure Dolor', href: '#' },
-          { label: 'In Reprehenderit', href: '#' },
-          { label: 'Voluptate Velit', href: '#' },
-          { label: 'Esse Cillum', href: '#' },
-          { label: 'Dolore Eu Fugiat', href: '#' },
-          { label: 'Nulla Pariatur', href: '#' },
+          { label: 'Excelencia Operativa', href: '/experiencia/excelencia-operativa' },
+          { label: 'Casos de Éxito', href: '/experiencia/casos-de-exito' },
+          { label: 'Normas y Certificaciones', href: '/experiencia/normas-certificaciones-estandares' },
         ],
       },
     ],
@@ -116,47 +112,31 @@ const footerData: FooterColumn[] = [
     heading: 'Recursos',
     sections: [
       {
-        title: 'Aprendizaje',
+        title: 'Contenido',
         links: [
-          { label: 'Excepteur Sint', href: '#' },
-          { label: 'Occaecat Cupidatat', href: '#' },
-          { label: 'Non Proident', href: '#' },
-          { label: 'Sunt In Culpa', href: '#' },
-        ],
-      },
-      {
-        title: 'Comunidad',
-        links: [
-          { label: 'Qui Officia', href: '#' },
-          { label: 'Deserunt Mollit', href: '#' },
-          { label: 'Anim Id Est', href: '#' },
+          { label: 'Blog', href: '/blog' },
+          { label: 'Noticias', href: '/noticias' },
+          { label: 'Recursos', href: '/recursos' },
         ],
       },
     ],
   },
   {
-    heading: 'Empresa',
+    heading: 'Nosotros',
     sections: [
       {
-        title: 'Nosotros',
+        title: 'La Empresa',
         links: [
-          { label: 'Laborum Lorem', href: '#' },
-          { label: 'Ipsum Dolor', href: '#' },
-          { label: 'Sit Amet', href: '#' },
+          { label: 'Trayectoria', href: '/nelson/trayectoria' },
+          { label: 'La Diferencia Nelson', href: '/nelson/diferencia-nelson' },
+          { label: 'Liderazgo', href: '/nelson/liderazgo' },
+          { label: 'Nuestra Historia', href: '/nelson/nuestra-historia' },
         ],
       },
       {
-        title: 'Carreras',
+        title: 'Contacto',
         links: [
-          { label: 'Consectetur Elit', href: '#' },
-          { label: 'Sed Eiusmod', href: '#' },
-        ],
-      },
-      {
-        title: 'Legal',
-        links: [
-          { label: 'Tempor Magna', href: '#' },
-          { label: 'Aliqua Enim', href: '#' },
+          { label: 'Contáctanos', href: '/contacto' },
         ],
       },
     ],
@@ -164,11 +144,7 @@ const footerData: FooterColumn[] = [
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: '#', icon: LinkedInIcon },
-  { name: 'Facebook', href: '#', icon: FacebookIcon },
-  { name: 'Twitter', href: '#', icon: TwitterIcon },
-  { name: 'YouTube', href: '#', icon: YouTubeIcon },
-  { name: 'Instagram', href: '#', icon: InstagramIcon },
+  { name: 'YouTube', href: 'https://www.youtube.com/@GrupoNelsonMexicali', icon: YouTubeIcon },
 ];
 
 const legalLinks = [
@@ -264,10 +240,10 @@ export default function Footer1() {
 
               {/* Address */}
               <div className="text-sm text-gray-400">
-                <p>Lorem Ipsum Inc.</p>
-                <p>123 Dolor Street, Suite 456</p>
-                <p>Consectetur, CA 12345</p>
-                <p>1-800-123-4567</p>
+                <p>Grupo Nelson</p>
+                <p>Blvd. Lázaro Cárdenas 9850</p>
+                <p>Mexicali, B.C., México</p>
+                <p>(686) 561-3535</p>
               </div>
             </div>
 
@@ -287,12 +263,12 @@ export default function Footer1() {
                 ))}
               </div>
 
-              {/* Careers Link */}
+              {/* Contact Link */}
               <Link
-                href="#"
+                href="/contacto"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors"
               >
-                Ver Carreras
+                Contáctanos
                 <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -306,8 +282,7 @@ export default function Footer1() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
             <p className="text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} Lorem Ipsum. Todos los derechos reservados.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              &copy; {new Date().getFullYear()} Grupo Nelson. Todos los derechos reservados.
             </p>
 
             {/* Legal Links */}
