@@ -5,11 +5,12 @@ import { useState } from 'react'
 
 export const Notes3Illustration = () => {
     const [tasks, setTasks] = useState([
-        { id: 1, text: 'Review pull requests', completed: true },
-        { id: 2, text: 'Update documentation', completed: true },
-        { id: 3, text: 'Deploy to staging', completed: true },
-        { id: 4, text: 'Write unit tests', completed: false },
-        { id: 5, text: 'Send weekly report', completed: false },
+        { id: 1, text: 'Elección de Sitio', completed: true },
+        { id: 2, text: 'Diseño e Ingeniería', completed: true },
+        { id: 3, text: 'Built-to-Suit', completed: true },
+        { id: 4, text: 'Seguridad del Parque', completed: true },
+        { id: 5, text: 'Crecimiento y Expansión', completed: true },
+        { id: 6, text: 'Construcciones Especiales', completed: true },
     ])
 
     const toggleTask = (id: number) => {
@@ -27,7 +28,7 @@ export const Notes3Illustration = () => {
                 <div className="bg-linear-to-br absolute -bottom-1 left-0.5 right-0.5 h-full -rotate-1 rounded-sm from-amber-100 to-yellow-200 shadow-sm dark:from-amber-200 dark:to-yellow-300" />
                 <div className="bg-linear-to-br relative rounded-sm from-amber-100 to-yellow-200 p-5 pb-12 shadow-lg shadow-amber-900/15 dark:from-amber-300 dark:to-yellow-300">
                     <div className="mb-4 flex items-center justify-between pt-2">
-                        <span className="text-sm font-semibold text-amber-950">Quick Tasks</span>
+                        <span className="text-sm font-semibold text-amber-950">Todo lo que necesitas:</span>
                         <span className="text-xs text-amber-700">
                             {completedCount}/{tasks.length}
                         </span>

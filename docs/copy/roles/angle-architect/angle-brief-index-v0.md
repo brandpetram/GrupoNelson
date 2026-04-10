@@ -206,68 +206,80 @@ La homepage puede caer en mostrar muchos datos impresionantes pero no decirle al
 
 ## 10. Tesis final
 
-"Grupo Nelson lleva 60 años desarrollando infraestructura industrial en Mexicali. 33 corporaciones internacionales — incluyendo Gulfstream, Honeywell, General Dynamics y DHL — ya operan en sus 4 parques. 80% de los clientes regresan. Si necesitas una nave disponible o una construida a tu medida, estás en el lugar correcto. Sigue explorando."
+"Grupo Nelson lleva 60 años desarrollando infraestructura industrial en Mexicali. 33 corporaciones internacionales — incluyendo Gulfstream, Honeywell, General Dynamics y DHL — ya operan en sus 4 parques. 80% de los clientes regresan. La familia fundadora sigue operando personalmente. Si necesitas una nave disponible, tenemos 4 parques. Si necesitas algo a medida, Baumex — nuestra constructora con 30 años y 75+ proyectos — lo diseña y construye bajo un solo contrato. Construimos bajo estándares ISN, LEED, FM Global e IBC, con más de un millón de horas hombre sin accidentes fatales. Sigue explorando."
 
-La tesis de la homepage no es un argumento. Es una declaración de identidad comprimida que el comprador debería poder reconstruir sin haber leído un solo párrafo — solo escaneando los primeros bloques.
+La tesis de la homepage es el resumen del sitio en un solo párrafo. El comprador que solo lee esa tesis debería poder decir: "ya entiendo quiénes son, qué hacen, para quién, cómo, y por qué importa." Y luego debería querer saber más de al menos una de esas cosas.
 
 ---
 
 ## 11. Secuencia de página
 
-La secuencia no prescribe componentes ni layout. Define el orden conceptual de las señales.
+La secuencia no prescribe componentes ni layout. Define el orden conceptual de los bloques de resumen. Cada bloque representa una sección del sitio con su argumento comprimido.
 
 1. **Hero — identidad + escala + acción** — El comprador debe saber en 5 segundos: qué es esto (parques industriales en Mexicali), qué tan grande es (60 años, 4 parques, 33 corporaciones), y qué puede hacer (explorar parques / contactar). El video aéreo actual funciona como soporte visual. La tarjeta hero debe cargar con datos duros, no con copy genérico. CTA visible desde el primer momento.
 
-2. **Barra de logos o nombres** — Los nombres que ya operan aquí. Gulfstream, Honeywell, General Dynamics, DHL, Baxter, Vertiv, Intuitive, Celestica. Sin argumentar nada — solo presencia. El comprador que reconoce un logo de su industria ya cambió de actitud. En mobile, puede ser un ticker o logo cloud (el componente LogoCloud ya existe). En desktop, puede ser más prominente.
+2. **Logos — resumen de trayectoria/casos de éxito** — Los nombres que ya operan aquí. Gulfstream, Honeywell, General Dynamics, DHL, Baxter, Vertiv, Intuitive, Celestica. El comprador que reconoce un logo de su industria ya cambió de actitud. En mobile: ticker o logo cloud (componente LogoCloud ya existe). En desktop: puede ser más prominente. Esto es la versión comprimida de trayectoria y casos de éxito.
 
-3. **Señales de credibilidad en bloque comprimido** — Los datos que posicionan sin argumentar. Formato de stats strip, números grandes o equivalente visual:
-   - `60+ años`
+3. **Stats / datos de credibilidad — resumen de diferencia-nelson** — Los datos que posicionan a Grupo Nelson. Este bloque comprime el argumento de diferenciación:
+   - `60+ años | pioneros del nearshoring en Mexicali`
    - `4 parques industriales`
    - `33 corporaciones internacionales`
    - `80% de clientes recurrentes`
    - `Gulfstream: 35+ años | Honeywell: 30+ años`
 
-   Cada dato puede linkearse a la página que lo desarrolla. No necesitan párrafo explicativo. Los números hablan solos.
+   Link a diferencia-nelson para el argumento completo de por qué esa combinación importa.
 
-4. **Dos caminos — renta o construcción** — El comprador que llega a la homepage necesita orientación rápida: ¿puedo rentar algo que ya existe, o necesito algo construido a mi medida? Dos bloques visuales claros:
-   - **Naves disponibles** → navega a inventario o parques
-   - **Build-to-suit** → navega a Baumex / construcción a medida
+4. **Quiénes somos / liderazgo — resumen de liderazgo** — Argumento comprimido: "La familia que fundó la industria maquiladora de Mexicali en 1965 sigue operando personalmente. Los dueños atienden tu proyecto — no un gerente que rota cada dos años." Incluir "3 generaciones" y el dato de nearshoring si no se usó en el hero. Link a liderazgo.
 
-   Sin argumentar el modelo. Solo orientar. "¿Necesitas una nave ya? Tenemos naves disponibles en 4 parques. ¿Necesitas algo a medida? Baumex, nuestra constructora, tiene 30 años y 75+ proyectos." Dos frases. Dos links.
+5. **Dos caminos — resumen de oferta (renta + Baumex)** — El comprador necesita orientación: ¿puedo rentar algo que ya existe, o necesito algo construido a mi medida?
+   - **Naves disponibles** → "4 parques, naves listas para operar" → navega a parques/inventario
+   - **Build-to-suit** → "Baumex, nuestra constructora in-house: 30 años, 75+ proyectos. Un solo contrato." → navega a Baumex
 
-5. **Los parques — orientación visual** — Cards o bloques con los 4 parques y un vistazo de cada uno: nombre, ubicación, una línea de identidad. El comprador necesita saber que hay opciones y cuál explorar. No es el catálogo completo — es el mapa de entrada. Cada card lleva a la ficha del parque.
+   Este bloque resume la oferta completa y es la puerta de entrada a las páginas de producto.
 
-6. **Señal de origen** — Una línea o bloque breve que establece: "La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente." No es la historia completa. Es la señal de permanencia que hace que los 60 años se sientan reales, no decorativos. Puede combinarse con un dato de nearshoring si el contexto lo permite. Link a nuestra-historia o liderazgo si hay página disponible.
+6. **Los parques — resumen del portafolio** — Los 4 parques con identidad visual: nombre, una línea de identidad, un dato diferenciador. Nelson II como insignia (subestación dedicada, tanque 360K galones). Cada card lleva a la ficha del parque. Esto es el índice visual del producto.
 
-7. **FAQs** — Preguntas orientativas para el comprador que acaba de llegar: qué tipos de naves, dónde están los parques, ofrecen build-to-suit, qué servicios incluyen, cuánto tiempo llevan. Las FAQs actuales están razonablemente bien orientadas pero necesitan actualización con datos canónicos (4 parques, no 3; 33 corporaciones, no genérico).
+7. **Excelencia operativa — resumen del método** — Argumento comprimido: "Más de un millón de horas hombre con cero accidentes fatales. Ruta crítica, reportes semanales, minutas firmadas — el método que lo respalda." Link a excelencia operativa. Este bloque le dice al comprador: "no solo construimos, lo hacemos con rigor institucional".
 
-8. **Tour virtual** — Si existe (y existe el componente VirtualTourBP), es una señal de transparencia: "ven a ver con tus propios ojos". En la homepage funciona como invitación, no como contenido principal.
+8. **Certificaciones — resumen de estándares** — Argumento comprimido: los badges más fuertes (ISN "Recomendado", LEED, FM Global, IBC, NFPA, BRB) con una línea: "Construimos bajo los estándares que los clientes más exigentes demandan — demostrados en proyecto real." Link a certificaciones/normas y estándares.
 
-9. **CTA final** — Contacto. El comprador que llegó hasta aquí ya vio señales suficientes. Necesita un camino claro para hablar con alguien.
+9. **Proyectos especializados — resumen de capacidad técnica** (opcional) — Si hay espacio: un dato impactante. "Un puente de 95 m sin columnas. Un túnel de viento para pruebas aeroespaciales. Cuando tu proyecto necesita algo que no existe en ningún catálogo, ya lo hemos resuelto." Link a proyectos especializados. Este bloque puede combinarse con el de Baumex si hay presión de espacio.
 
-**Regla de la secuencia:** Cada bloque debe pasar dos tests:
-- **Test de señal:** ¿Comunica algo útil en menos de 3 segundos de escaneo?
-- **Test de puerta:** ¿Tiene un destino claro (link, CTA, navegación) para el comprador que quiere profundizar?
+10. **FAQs** — Preguntas orientativas para el comprador que acaba de llegar. Las FAQs actuales están razonablemente bien orientadas pero necesitan actualización con datos canónicos (4 parques, no 3; 33 corporaciones, no genérico; Baumex con 30 años, no 28).
 
-Si un bloque no pasa ambos tests, no pertenece en la homepage.
+11. **Tour virtual** — Señal de transparencia: "ven a ver con tus propios ojos". En la homepage funciona como invitación.
+
+12. **CTA final** — Contacto. El comprador que llegó hasta aquí ya vio el resumen completo. Necesita un camino claro para hablar con alguien.
+
+**Regla de la secuencia:** Cada bloque debe pasar tres tests:
+- **Test de resumen:** ¿Representa fielmente la tesis de la página interior que resume?
+- **Test de compresión:** ¿Está lo suficientemente comprimido para que el comprador quiera visitar la página completa?
+- **Test de puerta:** ¿Tiene un destino claro (link, CTA, navegación) para profundizar?
+
+Si un bloque no pasa los tres tests, hay que ajustarlo.
 
 ---
 
-## 12. Límites: qué no debe intentar decir esta página
+## 12. Límites: qué no debe hacer esta página
 
-- No debe argumentar los 3 diferenciadores como estructura (→ diferencia-nelson)
-- No debe contar casos de éxito con narrativa de cliente (→ casos-de-éxito)
-- No debe mostrar el método de ejecución de obra (→ excelencia-operativa)
-- No debe listar certificaciones y estándares con detalle (→ certificaciones)
-- No debe presentar a las personas con nombre y función (→ liderazgo)
-- No debe desplegar el proceso LEED ni specs técnicas (→ /constructora/leed)
-- No debe narrar la historia completa desde 1965 (→ nuestra-historia)
-- No debe listar los 33 logos como catálogo completo (→ trayectoria)
-- No debe convertirse en resumen ejecutivo del sitio — es puerta de entrada, no síntesis
-- No debe tener párrafos largos en los primeros bloques — el comprador escanea, no lee
+### Límites de profundidad (la homepage resume, no reemplaza)
+
+- No debe desarrollar el argumento completo de los 3 diferenciadores con todas sus pruebas (→ diferencia-nelson)
+- No debe contar casos de éxito con narrativa completa de cada cliente (→ casos-de-éxito)
+- No debe explicar el método de ejecución en detalle (→ excelencia-operativa)
+- No debe desplegar la taxonomía de 3 capas de cumplimiento normativo (→ certificaciones)
+- No debe presentar a los 4 miembros de la familia con nombre, rol y consecuencia (→ liderazgo)
+- No debe explicar el proceso de certificación LEED con specs técnicas (→ /constructora/leed)
+- No debe narrar la historia cronológica completa (→ nuestra-historia)
+- No debe mostrar specs técnicas de cada parque (→ fichas de parques)
+
+### Límites de ejecución
+
+- No debe tener párrafos largos en los primeros bloques — el comprador escanea antes de leer
 - No debe usar copy genérico que un competidor podría apropiarse sin cambios
 - No debe dejar lorem ipsum ni placeholders visibles — un placeholder en la homepage destruye toda credibilidad
 - No debe sonar impresionada de sí misma — debe sonar segura (Axioma 10 de la constitución)
+- No debe ser un collage de bloques inconexos — la progresión debe sentirse natural: identidad → pruebas → oferta → acción
 
 ---
 
@@ -307,10 +319,13 @@ Ninguno. El paquete mínimo cubrió todos los facts necesarios para la homepage.
 
 ## Nota sobre la naturaleza particular de este territorio
 
-Este brief es diferente de los otros 8 porque la homepage es la única página del sitio que NO tiene un argumento propio que defender. Las otras páginas tienen tesis: diferencia-nelson argumenta los 3 diferenciadores, casos-de-éxito demuestra calibre, excelencia-operativa muestra método, etc.
+Este brief es diferente de los otros 8 porque la homepage es la única página del sitio que resume todas las demás. Las otras páginas tienen un solo argumento que defender con profundidad. La homepage tiene múltiples argumentos comprimidos — uno por cada sección del sitio.
 
-La homepage no tiene tesis. Tiene función: convertir visitantes en exploradores.
+Eso significa que el Narrative Copywriter que implemente este brief tiene un trabajo doble:
 
-Eso significa que el Narrative Copywriter que implemente este brief no va a escribir copy persuasivo en el sentido tradicional. Va a distribuir señales. Su trabajo es asegurar que cada bloque de la homepage cargue con un dato verificable, un nombre real, un número duro o una orientación clara — y que ningún bloque sea genérico, decorativo o apropiable por un competidor.
+1. **Comprimir:** Tomar la tesis de cada página interior y reducirla a su expresión más fuerte en 1-3 líneas + dato killer.
+2. **Conectar:** Asegurar que los bloques progresen con hilo conductor (identidad → pruebas → oferta → acción), no como collage de secciones pegadas.
 
-El éxito de la homepage no se mide por si el comprador quedó convencido. Se mide por si el comprador decidió hacer clic en una página interior.
+El éxito de la homepage se mide con dos criterios:
+- **¿El comprador obtuvo una imagen completa del negocio sin visitar otra página?** Si sí, la homepage cumplió su función como resumen.
+- **¿El comprador quiere profundizar en al menos una sección?** Si sí, la homepage cumplió su función como puerta de entrada.
