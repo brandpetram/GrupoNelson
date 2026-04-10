@@ -84,9 +84,9 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "Tres generaciones, cuatro dueños operando",
+    title: "Cuatro generaciones, una familia operando",
     description:
-      "Humberto, Rodolfo, Juan Carlos y Alfredo. La persona que negocia tu contrato es la misma que lo firma.",
+      "La persona que negocia tu contrato es la misma que lo firma. Sin capas corporativas, sin rotación de ejecutivos.",
     href: "/nelson/liderazgo",
     bg: "bg-sky-700",
   },
@@ -112,7 +112,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "30 años dirigiendo la construcción",
     description:
-      "Armando Wilhelmy co-fundó la constructora en 1997. La continuidad no se limita a la familia.",
+      "Baumex fue fundada en 1997 y lleva casi 30 años bajo la misma dirección. La continuidad no se limita a la familia.",
     href: "/nelson/liderazgo",
     bg: "bg-blue-900",
   },

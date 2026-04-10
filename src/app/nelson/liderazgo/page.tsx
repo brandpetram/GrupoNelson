@@ -9,22 +9,22 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: 'Humberto Juárez Nelson',
-    role: 'Dirección Comercial',
+    name: 'Dirección Comercial',
+    role: 'Desarrollo de negocios y relación con clientes',
     description:
-      'Es quien recibe tu proyecto, negocia las condiciones y da seguimiento comercial durante toda la relación. No es un ejecutivo de cuenta — es el dueño del brazo comercial del grupo. Cuando necesites renegociar algo, la decisión no sube tres niveles: se resuelve con él.',
+      'Quien recibe tu proyecto, negocia las condiciones y da seguimiento comercial durante toda la relación. No es un ejecutivo de cuenta — es un miembro de la familia fundadora. Cuando necesites renegociar algo, la decisión no sube tres niveles: se resuelve directamente.',
   },
   {
-    name: 'Rodolfo Nelson L.',
-    role: 'Dirección de Constructora',
+    name: 'Dirección de Constructora',
+    role: 'Baumex — construcción build-to-suit',
     description:
-      'Dirige Baumex, la constructora in-house de Grupo Nelson. Si tu proyecto requiere construcción a la medida, Rodolfo supervisa la ejecución personalmente. El responsable de tu obra no es un gerente de proyecto asignado — es el dueño de la constructora.',
+      'Quien dirige Baumex, la constructora in-house de Grupo Nelson. Si tu proyecto requiere construcción a la medida, la ejecución se supervisa personalmente. El responsable de tu obra no es un gerente de proyecto asignado — es el dueño de la constructora.',
   },
   {
-    name: 'Juan Carlos Nelson L.',
-    role: 'Dirección Administrativa',
+    name: 'Dirección Administrativa',
+    role: 'Operación financiera y contractual',
     description:
-      'Administra la operación financiera y contractual del grupo. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por alguien que tiene autoridad de cierre y lleva décadas en el mismo puesto.',
+      'Quien administra la operación financiera y contractual del grupo. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por alguien que tiene autoridad de cierre y lleva décadas en el mismo puesto.',
   },
 ]
 
@@ -182,17 +182,17 @@ export default function LiderazgoPage() {
             </p>
 
             <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight max-w-4xl mb-12">
-              Armando Wilhelmy co-fundó la constructora en 1997 y lleva casi 30 años como director de construcción. La persona que va a dirigir tu obra conoce cada metro cuadrado que se ha construido aquí.
+              Nuestra constructora fue fundada en 1997 y lleva casi 30 años bajo la misma dirección. La persona que va a dirigir tu obra conoce cada metro cuadrado que se ha construido aquí.
             </blockquote>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
               <p className="text-base leading-relaxed text-muted-foreground/80">
-                La continuidad del liderazgo no se limita a la familia. Armando Wilhelmy co-fundó
-                Baumex junto con Rodolfo Nelson Sr. — no es un contratista rotativo ni un gerente
+                La continuidad del liderazgo no se limita a la familia. Baumex fue co-fundada
+                junto con la segunda generación — no es un contratista rotativo ni un gerente
                 recién asignado.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground/80">
-                Y la continuidad mira hacia adelante: la tercera generación ya trabaja para el grupo.
+                Y la continuidad mira hacia adelante: la cuarta generación ya trabaja para el grupo.
                 Cuando firmas un contrato de 15 años, del otro lado hay personas que van a estar ahí
                 cuando termine — y cuando se renueve.
               </p>
