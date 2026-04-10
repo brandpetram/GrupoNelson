@@ -60,7 +60,7 @@ export default function NuestraHistoriaPage() {
                 <figure className="w-3/3 mx-auto mt-8">
                     <div className="aspect-video">
                         <img
-                            src="/placeholder.svg"
+                            src="/parques-industriales-mexicali/nelson2/nave-industrial-en-parque-industrial-nelson2-8.jpeg"
                             alt="Evolución de los parques industriales de Grupo Nelson en Mexicali"
                             className="w-full h-auto object-cover aspect-4/3"
                         />
