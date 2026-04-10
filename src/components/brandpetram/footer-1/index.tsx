@@ -148,10 +148,9 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Aviso de Privacidad', href: '#' },
-  { label: 'Términos de Uso', href: '#' },
-  { label: 'Política de Cookies', href: '#' },
-  { label: 'Configuración de Privacidad', href: '#' },
+  { label: 'Aviso de Privacidad', href: '/aviso-de-privacidad' },
+  { label: 'Términos de Uso', href: '/terminos' },
+  { label: 'Política de Cookies', href: '/politica-de-cookies' },
 ];
 
 export default function Footer1() {
