@@ -35,6 +35,8 @@ WORKTREES_B=(
   "liderazgo-v2|wt/liderazgo|Ajustes visuales página de liderazgo"
   "nuestra-historia|wt/nuestra-historia|Componentes estilo orben-tech para nuestra historia"
   "blog|wt/blog|Revisar y mejorar página del blog"
+  "ingles|wt/ingles|Traducción del sitio al inglés"
+  "instrucciones|wt/instrucciones|Sección protegida con guías para editar Sanity"
 )
 
 # Por defecto usar grupo A
