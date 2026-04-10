@@ -37,9 +37,8 @@ const team = [
 
 const stats = [
   { value: '60+', label: 'años de la familia operando' },
-  { value: '4', label: 'dueños en roles operativos' },
+  { value: '4.5M+', label: 'pies² desarrollados' },
   { value: '4', label: 'generaciones activas' },
-  { value: '80%', label: 'de clientes regresan' },
 ]
 
 const results = [
