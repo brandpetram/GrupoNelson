@@ -26,12 +26,6 @@ const team = [
     description:
       'Administra la operación financiera y contractual del grupo. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por alguien que tiene autoridad de cierre y lleva décadas en el mismo puesto.',
   },
-  {
-    name: 'Alfredo Martínez Nelson',
-    role: 'Servicios y Mantenimiento del Parque',
-    description:
-      'Mantiene la infraestructura del parque funcionando: servicios, mantenimiento, proyectos de mejora. Cuando reportes un problema en tu nave, lo atiende alguien de la familia — no un departamento de tickets.',
-  },
 ]
 
 const stats = [

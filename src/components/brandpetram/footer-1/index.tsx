@@ -239,9 +239,9 @@ export default function Footer1() {
 
               {/* Address */}
               <div className="text-sm text-gray-400">
-                <p>Grupo Nelson</p>
-                <p>Blvd. Lázaro Cárdenas 9850</p>
-                <p>Mexicali, B.C., México</p>
+                <p>Grupo Nelson — Oficinas</p>
+                <p>Ave. Reforma #1699, Col. Nueva</p>
+                <p>Mexicali, BC, México 21100</p>
                 <p>(686) 561-3535</p>
               </div>
             </div>
