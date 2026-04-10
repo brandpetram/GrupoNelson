@@ -207,7 +207,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">4</span><div>Entrega Turnkey <br/> Llave en Mano</div></div>,
     description:
       'Usted recibe una instalación lista para operar. Entra, conecta sus equipos y arranca producción. Sin intermediarios, sin retrasos, sin sorpresas.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
     tag: {
       icon: <CheckCircle className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Entrega',
@@ -225,7 +225,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">5</span><div> Infraestructura y <br/> Seguridad del Parque</div></div>,
     description:
       'Perímetro controlado, caseta de acceso, calles amplias, infraestructura compartida y vigilancia permanente. Su operación funciona dentro de un entorno industrial profesional las 24 horas del día, los 365 días del año.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/scroll-storytelling/seguridad-del-parque.mp4',
     tag: {
       icon: <Shield className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Seguridad 24/7',
@@ -243,7 +243,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">6</span><div>Mantenimiento y<br/>Servicios Primarios</div></div>,
     description:
       'Nuestro equipo de servicios atiende mejoras, reparaciones y actualizaciones de forma permanente. Proyectos menores con personal interno; proyectos de ingeniería avanzada con nuestra constructora. Usted se enfoca en producir.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/scroll-storytelling/mantenimiento.mp4',
     tag: {
       icon: <Wrench className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Mantenimiento',
@@ -261,7 +261,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">7</span><div>Crecimiento y<br/>Expansión</div></div>,
     description:
       'Cuando su operación crece, nosotros crecemos con usted. Clientes que iniciaron en 5,000 pies cuadrados hoy operan en más de 400,000 — sin cambiar de socio. Más de seis décadas construyendo relaciones que se miden en décadas, no en contratos.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/scroll-storytelling/crecimiento.mp4',
     tag: {
       icon: <TrendingUp className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Crecimiento',
