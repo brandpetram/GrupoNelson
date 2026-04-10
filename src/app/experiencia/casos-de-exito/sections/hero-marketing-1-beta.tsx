@@ -87,7 +87,7 @@ export function HeroMarketing1Beta() {
           <div className="flex-shrink-0">
             <PoligonoIcono1
               icon={
-                <EmblemaGrupoNelson className="w-full h-full -translate-x-0.5" />
+                <EmblemaGrupoNelson className="w-full h-full" />
               }
               backgroundColor="bg-blue-500 to-blue-600 bg-linear-to-br"
               iconColor="text-white"

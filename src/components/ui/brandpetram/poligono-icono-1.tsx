@@ -56,7 +56,7 @@ export function PoligonoIcono1({
   return (
     <div
       className={cn(
-        'relative flex items-center justify-center w-full h-full overflow-hidden',
+        'relative flex items-center justify-center w-full h-full',
         !isCustomColor && backgroundColor,
         padding,
         className
