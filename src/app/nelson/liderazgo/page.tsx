@@ -38,7 +38,7 @@ const team = [
 const stats = [
   { value: '60+', label: 'años de la familia operando' },
   { value: '4', label: 'dueños en roles operativos' },
-  { value: '3', label: 'generaciones activas' },
+  { value: '4', label: 'generaciones activas' },
   { value: '80%', label: 'de clientes regresan' },
 ]
 
@@ -69,6 +69,7 @@ export default function LiderazgoPage() {
       <Header />
 
       <main>
+        <div className="lg:w-10/12 lg:mx-auto">
         {/* ══════════════════════════════════════════════════════════
             COPY COMERCIAL — Liderazgo
             Angle brief: docs/copy/roles/angle-architect/angle-brief-liderazgo-v0.md
@@ -77,7 +78,39 @@ export default function LiderazgoPage() {
             ══════════════════════════════════════════════════════════ */}
 
         {/* ── BLOQUE 1: HERO ── */}
-        <section className="relative px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-24 md:pb-32">
+        <section className="relative isolate overflow-hidden px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-24 md:pb-32">
+          {/* Cuadrícula SVG de fondo */}
+          <svg
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 h-full w-full stroke-muted-foreground/10"
+          >
+            <defs>
+              <pattern
+                id="liderazgo-grid-pattern"
+                width={200}
+                height={200}
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M0.5 0V200M200 0.5L0 0.499983" />
+              </pattern>
+            </defs>
+            <rect fill="url(#liderazgo-grid-pattern)" width="100%" height="100%" strokeWidth={0} />
+          </svg>
+
+          {/* Nube de color decorativa */}
+          <div
+            aria-hidden="true"
+            className="absolute -top-40 right-0 -z-10 transform-gpu blur-3xl sm:right-1/4 sm:top-10"
+          >
+            <div
+              style={{
+                clipPath:
+                  'polygon(63.1% 29.6%, 100% 17.2%, 76.7% 3.1%, 48.4% 0.1%, 44.6% 4.8%, 54.5% 25.4%, 59.8% 49.1%, 55.3% 57.9%, 44.5% 57.3%, 27.8% 48%, 35.1% 81.6%, 0% 97.8%, 39.3% 100%, 35.3% 81.5%, 97.2% 52.8%, 63.1% 29.6%)',
+              }}
+              className="aspect-801/1036 w-200.25 bg-linear-to-tr from-[#80b5ff] to-[#8989fc] opacity-10"
+            />
+          </div>
+
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground/70 mb-8">
             Liderazgo
           </p>
@@ -240,6 +273,8 @@ export default function LiderazgoPage() {
             </a>
           </div>
         </section>
+
+        </div>
 
         <MosaicoLiderazgo />
       </main>
