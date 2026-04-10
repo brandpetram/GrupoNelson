@@ -1,16 +1,13 @@
-import { BlogListWithPagination } from '@/app/blog/blog-list-with-pagination'
-import { loadMorePosts, getInitialPosts, getTotalPostsCount } from '@/lib/actions'
-
-const PAGE_SIZE = 12
+import { BlogListing } from '@/app/blog/blog-listing'
+import { getAllPosts, getAllCategories } from '@/lib/actions'
 
 export default async function BlogPage() {
-    const [posts, totalCount] = await Promise.all([getInitialPosts(PAGE_SIZE), getTotalPostsCount()])
+    const [posts, categories] = await Promise.all([getAllPosts(), getAllCategories()])
 
     return (
-        <BlogListWithPagination
-            initialPosts={posts}
-            totalCount={totalCount}
-            loadMoreAction={loadMorePosts}
+        <BlogListing
+            posts={posts}
+            categories={categories}
         />
     )
 }
