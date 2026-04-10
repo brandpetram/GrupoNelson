@@ -8,9 +8,64 @@ export const metadata: Metadata = {
     'Conoce al equipo directivo de Grupo Nelson. La familia fundadora opera directamente cada proyecto en Mexicali — sin capas corporativas, sin rotación de gerentes.',
 }
 
+const team = [
+  {
+    name: 'Humberto Juárez Nelson',
+    role: 'Dirección Comercial',
+    description:
+      'Es quien recibe tu proyecto, negocia las condiciones y da seguimiento comercial durante toda la relación. No es un ejecutivo de cuenta — es el dueño del brazo comercial del grupo. Cuando necesites renegociar algo, la decisión no sube tres niveles: se resuelve con él.',
+  },
+  {
+    name: 'Rodolfo Nelson L.',
+    role: 'Dirección de Constructora',
+    description:
+      'Dirige Baumex, la constructora in-house de Grupo Nelson. Si tu proyecto requiere construcción a la medida, Rodolfo supervisa la ejecución personalmente. El responsable de tu obra no es un gerente de proyecto asignado — es el dueño de la constructora.',
+  },
+  {
+    name: 'Juan Carlos Nelson L.',
+    role: 'Dirección Administrativa',
+    description:
+      'Administra la operación financiera y contractual del grupo. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por alguien que tiene autoridad de cierre y lleva décadas en el mismo puesto.',
+  },
+  {
+    name: 'Alfredo Martínez Nelson',
+    role: 'Servicios y Mantenimiento del Parque',
+    description:
+      'Mantiene la infraestructura del parque funcionando: servicios, mantenimiento, proyectos de mejora. Cuando reportes un problema en tu nave, lo atiende alguien de la familia — no un departamento de tickets.',
+  },
+]
+
+const stats = [
+  { value: '60+', label: 'años de la familia operando' },
+  { value: '4', label: 'dueños en roles operativos' },
+  { value: '3', label: 'generaciones activas' },
+  { value: '80%', label: 'de clientes regresan' },
+]
+
+const results = [
+  {
+    value: '35+',
+    label: 'años con Gulfstream',
+    detail:
+      'Fortune 500 aeroespacial. Asignación directa sin licitación para la quinta expansión. La confianza con los dueños eliminó el proceso formal.',
+  },
+  {
+    value: '3+',
+    label: 'décadas con Honeywell',
+    detail:
+      'Honeywell Aerospace opera con Grupo Nelson desde hace más de 3 décadas. Múltiples expansiones con el mismo equipo directivo del otro lado.',
+  },
+  {
+    value: '80%',
+    label: 'repeat business',
+    detail:
+      '8 de cada 10 clientes regresan. No por inercia — porque la relación directa con los dueños produce un nivel de servicio que justifica quedarse.',
+  },
+]
+
 export default function LiderazgoPage() {
   return (
-    <div className="min-h-[200vh]">
+    <div className="min-h-screen">
       <Header />
 
       <main>
@@ -21,208 +76,170 @@ export default function LiderazgoPage() {
             Status: v0 — implementación desde angle brief
             ══════════════════════════════════════════════════════════ */}
 
-        {/* ── BLOQUE 1: HERO + TESIS ── */}
-        <div className="px-8 md:px-12 pt-20 pb-16">
-
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-4">
+        {/* ── BLOQUE 1: HERO ── */}
+        <section className="relative px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-24 md:pb-32">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground/70 mb-8">
             Liderazgo
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Quien negocia tu contrato es quien decide, quien supervisa y quien va a seguir ahí en 15 años
+          <h1 className="text-[clamp(2.25rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight max-w-5xl mb-12">
+            Quien negocia tu contrato es quien decide, quien supervisa y quien va a seguir ahí en 15&nbsp;años
           </h1>
 
-          <p className="text-xl leading-relaxed mb-12 max-w-3xl">
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl">
             La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando
             directamente — 60 años después. No hay capas corporativas entre tu proyecto
-            y la persona con autoridad para aprobarlo. Eso cambia la velocidad, la accountability
-            y la continuidad de la relación durante toda la vida de tu contrato.
+            y la persona con autoridad para aprobarlo.
           </p>
+        </section>
 
-          <div className="flex flex-wrap gap-12 mb-16">
-            <div>
-              <p className="text-4xl font-bold leading-none">60+</p>
-              <p className="text-muted-foreground">años de la familia operando</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold leading-none">4</p>
-              <p className="text-muted-foreground">dueños en roles operativos</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold leading-none">3</p>
-              <p className="text-muted-foreground">generaciones activas</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold leading-none">80%</p>
-              <p className="text-muted-foreground">de clientes regresan</p>
-            </div>
+        {/* ── STATS BAR ── */}
+        <section className="border-t border-border/50">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                className={`px-6 md:px-12 lg:px-20 py-10 md:py-14 ${i < 3 ? 'border-r border-border/50 max-md:[&:nth-child(2)]:border-r-0 max-md:[&:nth-child(1)]:border-b max-md:[&:nth-child(2)]:border-b max-md:border-border/50' : ''}`}
+              >
+                <p className="text-5xl md:text-6xl font-bold tracking-tight leading-none mb-3">
+                  {stat.value}
+                </p>
+                <p className="text-sm text-muted-foreground/70">{stat.label}</p>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
 
-        <hr className="border-border mx-8 md:mx-12" />
-
-        {/* ── BLOQUE 2: QUIÉNES SON ── */}
-        <div className="px-8 md:px-12 py-16">
-
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-4">
-            Equipo directivo
-          </p>
-
-          <h2 className="text-3xl font-bold leading-snug mb-4">
-            Las personas que van a atender tu proyecto — con nombre, rol y autoridad
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-10 max-w-3xl">
-            En un contrato de 10 a 15 años, la persona al otro lado de la mesa no es un dato
-            menor. Con Grupo Nelson, esa persona es el dueño.
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-2 mb-6">
-
-            <div className="rounded-lg border border-border p-6">
-              <h3 className="text-xl font-bold mb-2">Humberto Juárez Nelson</h3>
-              <p className="text-sm font-medium text-muted-foreground mb-3">Dirección Comercial</p>
-              <p className="text-base leading-relaxed">
-                Es quien recibe tu proyecto, negocia las condiciones y da seguimiento comercial
-                durante toda la relación. No es un ejecutivo de cuenta — es el dueño del brazo
-                comercial del grupo. Cuando necesites renegociar algo, la decisión no sube
-                tres niveles: se resuelve con él.
+        {/* ── BLOQUE 2: EQUIPO DIRECTIVO ── */}
+        <section className="border-t border-border/50 px-6 md:px-12 lg:px-20 py-24 md:py-32">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20 mb-16 md:mb-24">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground/70 mb-4">
+                Equipo directivo
               </p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                Con nombre, rol y autoridad
+              </h2>
             </div>
-
-            <div className="rounded-lg border border-border p-6">
-              <h3 className="text-xl font-bold mb-2">Rodolfo Nelson L.</h3>
-              <p className="text-sm font-medium text-muted-foreground mb-3">Dirección de Constructora</p>
-              <p className="text-base leading-relaxed">
-                Dirige Baumex, la constructora in-house de Grupo Nelson. Si tu proyecto requiere
-                construcción a la medida, Rodolfo supervisa la ejecución personalmente.
-                El responsable de tu obra no es un gerente de proyecto asignado — es el dueño
-                de la constructora.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-border p-6">
-              <h3 className="text-xl font-bold mb-2">Juan Carlos Nelson L.</h3>
-              <p className="text-sm font-medium text-muted-foreground mb-3">Dirección Administrativa</p>
-              <p className="text-base leading-relaxed">
-                Administra la operación financiera y contractual del grupo. Las cláusulas de tu
-                contrato, los términos, los ajustes operativos — pasan por alguien que tiene
-                autoridad de cierre y lleva décadas en el mismo puesto.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-border p-6">
-              <h3 className="text-xl font-bold mb-2">Alfredo Martínez Nelson</h3>
-              <p className="text-sm font-medium text-muted-foreground mb-3">Servicios y Mantenimiento del Parque</p>
-              <p className="text-base leading-relaxed">
-                Mantiene la infraestructura del parque funcionando: servicios, mantenimiento,
-                proyectos de mejora. Cuando reportes un problema en tu nave, lo atiende
-                alguien de la familia — no un departamento de tickets.
+            <div className="flex items-end">
+              <p className="text-lg leading-relaxed text-muted-foreground max-w-xl">
+                En un contrato de 10 a 15 años, la persona al otro lado de la mesa no es un dato
+                menor. Con Grupo Nelson, esa persona es el dueño.
               </p>
             </div>
           </div>
-        </div>
 
-        <hr className="border-border mx-8 md:mx-12" />
+          <div className="space-y-0">
+            {team.map((member, i) => (
+              <div
+                key={i}
+                className="group grid md:grid-cols-[1fr_2fr] gap-4 md:gap-20 py-10 md:py-12 border-t border-border/30 first:border-t-border/50"
+              >
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-medium text-primary/80">{member.role}</p>
+                </div>
+                <p className="text-base leading-relaxed text-muted-foreground/80 max-w-xl">
+                  {member.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        {/* ── BLOQUE 3: LA CONTINUIDAD QUE NO SE ROTA ── */}
-        <div className="px-8 md:px-12 py-16">
+        {/* ── BLOQUE 3: CONTINUIDAD ── */}
+        <section className="relative border-t border-border/50 bg-muted/20">
+          <div className="px-6 md:px-12 lg:px-20 py-24 md:py-32">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground/70 mb-12">
+              Continuidad
+            </p>
 
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-4">
-            Continuidad
-          </p>
+            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight max-w-4xl mb-12">
+              Armando Wilhelmy co-fundó la constructora en 1997 y lleva casi 30 años como director de construcción. La persona que va a dirigir tu obra conoce cada metro cuadrado que se ha construido aquí.
+            </blockquote>
 
-          <h2 className="text-3xl font-bold leading-snug mb-4">
-            Armando Wilhelmy: 30 años dirigiendo la construcción del grupo
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-6 max-w-3xl">
-            La continuidad del liderazgo en Grupo Nelson no se limita a la familia. Armando
-            Wilhelmy co-fundó Baumex en 1997 junto con Rodolfo Nelson Sr. y lleva casi
-            30 años como director de construcción del grupo. La persona que va a dirigir
-            tu obra conoce cada metro cuadrado que se ha construido aquí — no es un
-            contratista rotativo ni un gerente recién asignado.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-6 max-w-3xl">
-            Y la continuidad mira hacia adelante: la tercera generación de la familia
-            ya trabaja para el grupo. Cuando firmas un contrato de 15 años, del otro lado
-            hay personas que van a estar ahí cuando termine — y cuando se renueve.
-          </p>
-        </div>
-
-        <hr className="border-border mx-8 md:mx-12" />
-
-        {/* ── BLOQUE 4: LO QUE PRODUCE ESTE MODELO ── */}
-        <div className="px-8 md:px-12 py-16">
-
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-4">
-            Resultado
-          </p>
-
-          <h2 className="text-3xl font-bold leading-snug mb-4">
-            Gulfstream lleva más de 35 años con los mismos dueños — y dejó de licitar
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Para su quinta expansión, Gulfstream no abrió proceso de selección. Asignó
-            directamente a Grupo Nelson. Después de más de 35 años trabajando con las mismas
-            personas, el proceso de selección dejó de ser necesario. Eso no pasa
-            con un gerente regional que rota cada dos años.
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-3 mb-8">
-            <div className="rounded-lg border border-border p-6">
-              <p className="text-3xl font-bold leading-none mb-2">35+</p>
-              <p className="text-sm font-medium text-muted-foreground mb-3">años con Gulfstream</p>
-              <p className="text-base leading-relaxed">
-                Fortune 500 aeroespacial. Asignación directa sin licitación para la quinta
-                expansión. La confianza con los dueños eliminó el proceso formal.
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
+              <p className="text-base leading-relaxed text-muted-foreground/80">
+                La continuidad del liderazgo no se limita a la familia. Armando Wilhelmy co-fundó
+                Baumex junto con Rodolfo Nelson Sr. — no es un contratista rotativo ni un gerente
+                recién asignado.
               </p>
-            </div>
-
-            <div className="rounded-lg border border-border p-6">
-              <p className="text-3xl font-bold leading-none mb-2">3+</p>
-              <p className="text-sm font-medium text-muted-foreground mb-3">décadas con Honeywell</p>
-              <p className="text-base leading-relaxed">
-                Honeywell Aerospace opera con Grupo Nelson desde hace más de 3 décadas.
-                Múltiples expansiones con el mismo equipo directivo del otro lado.
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-border p-6">
-              <p className="text-3xl font-bold leading-none mb-2">80%</p>
-              <p className="text-sm font-medium text-muted-foreground mb-3">repeat business</p>
-              <p className="text-base leading-relaxed">
-                8 de cada 10 clientes regresan. No por inercia — porque la relación directa
-                con los dueños produce un nivel de servicio que justifica quedarse.
+              <p className="text-base leading-relaxed text-muted-foreground/80">
+                Y la continuidad mira hacia adelante: la tercera generación ya trabaja para el grupo.
+                Cuando firmas un contrato de 15 años, del otro lado hay personas que van a estar ahí
+                cuando termine — y cuando se renueve.
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <hr className="border-border mx-8 md:mx-12" />
+        {/* ── BLOQUE 4: RESULTADOS ── */}
+        <section className="border-t border-border/50 px-6 md:px-12 lg:px-20 py-24 md:py-32">
+          <div className="max-w-3xl mb-16 md:mb-20">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground/70 mb-8">
+              Resultado
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-6">
+              Gulfstream lleva más de 35 años con los mismos dueños — y dejó de licitar
+            </h2>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Para su quinta expansión, Gulfstream no abrió proceso de selección. Asignó directamente
+              a Grupo Nelson. Después de más de 35 años con las mismas personas, el proceso dejó de ser necesario.
+            </p>
+          </div>
 
-        {/* ── BLOQUE 5: CIERRE + CTA ── */}
-        <div className="px-8 md:px-12 py-16 pb-32">
+          <div className="grid md:grid-cols-3 gap-0">
+            {results.map((result, i) => (
+              <div
+                key={i}
+                className={`py-10 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0 ${i < 2 ? 'border-b md:border-b-0 md:border-r border-border/30' : ''}`}
+              >
+                <p className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-2">
+                  {result.value}
+                </p>
+                <p className="text-sm font-medium text-primary/80 mb-4">{result.label}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground/70">
+                  {result.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-          <h2 className="text-3xl font-bold leading-snug mb-4">
-            Conoce al equipo que va a atender tu proyecto
-          </h2>
+        {/* ── BLOQUE 5: CTA ── */}
+        <section className="border-t border-border/50 bg-muted/20">
+          <div className="px-6 md:px-12 lg:px-20 py-24 md:py-32 text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-6 max-w-3xl mx-auto">
+              Conoce al equipo que va a atender tu proyecto
+            </h2>
 
-          <p className="text-lg leading-relaxed mb-8 max-w-3xl">
-            Sin capas corporativas. Sin rotación de gerentes. Sin comités remotos.
-            La persona que negocia tu contrato es la misma que lo firma, la misma que
-            supervisa tu construcción y la misma que va a contestar tu llamada en 10 años.
-          </p>
+            <p className="text-lg leading-relaxed text-muted-foreground max-w-xl mx-auto mb-10">
+              Sin capas corporativas. Sin rotación de gerentes. La persona que negocia tu contrato
+              es la misma que lo firma y la misma que va a contestar tu llamada en 10 años.
+            </p>
 
-          <a
-            href="/contacto"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Solicita una consulta
-          </a>
-        </div>
+            <a
+              href="/contacto"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-base font-medium transition-all duration-300 hover:bg-primary/90 hover:gap-4"
+            >
+              Solicita una consulta
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
 
         <MosaicoLiderazgo />
       </main>
