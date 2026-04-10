@@ -153,7 +153,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">1</span><div>Elección de Sitio en <br/>Méxicalí y Consultoría</div></div>,
     description:
       'Analizamos sus requerimientos operativos — capacidad eléctrica, altura de nave, superficie, especificaciones técnicas — y le presentamos la ubicación exacta que su operación necesita en Mexicali.',
-    video: '/video-1-720p.mp4',
+    image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-3.jpg',
     tag: {
       icon: <Compass className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Consultoría',
@@ -171,7 +171,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">2</span><div>Diseño y Desarrollo <br/>de la Ingeniería</div></div>,
     description:
       'Nuestro equipo de arquitectos e ingenieros traduce sus especificaciones en un proyecto ejecutivo completo: estructural, eléctrico, mecánico y civil. Cada metro cuadrado se diseña alrededor de su proceso productivo.',
-    video: '/video-2-720p.mp4',
+    image: '/tunel-honeywell.jpg',
     tag: {
       icon: <Ruler className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Diseño Ejecutivo',
@@ -189,7 +189,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">3</span><div>Construcción<br/>Build-to-Suit</div></div>,
     description:
       'Nuestra constructora interna ejecuta su proyecto de principio a fin — desde movimiento de tierras y cimentación hasta instalaciones electromecánicas — con los estándares de calidad que exigen empresas como Gulfstream, DHL y Honeywell.',
-    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
     tag: {
       icon: <Hammer className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Construcción',
@@ -207,7 +207,7 @@ const defaultItems: ContentItem[] = [
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">4</span><div>Entrega Turnkey <br/> Llave en Mano</div></div>,
     description:
       'Usted recibe una instalación lista para operar. Entra, conecta sus equipos y arranca producción. Sin intermediarios, sin retrasos, sin sorpresas.',
-    video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
+    video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
     tag: {
       icon: <CheckCircle className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Entrega',
