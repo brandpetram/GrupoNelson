@@ -67,7 +67,7 @@ export async function POST(request: Request) {
 
     const resend = getResend()
     const { error } = await resend.emails.send({
-      from: 'Grupo Nelson <leads@brandpetram.marketing>',
+      from: 'Grupo Nelson <leads@nelson.com.mx>',
       to: RECIPIENTS,
       bcc: ['notifications@brandpetram.com'],
       replyTo: body.email,
