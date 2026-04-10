@@ -3,9 +3,8 @@ import Header from '@/components/Header'
 import { MosaicoLiderazgo } from '@/components/brandpetram/mosaico-liderazgo'
 
 export const metadata: Metadata = {
-  title: 'Liderazgo | Grupo Nelson',
-  description:
-    'Conoce al equipo directivo de Grupo Nelson. La familia fundadora opera directamente cada proyecto en Mexicali — sin capas corporativas, sin rotación de gerentes.',
+  title: 'Liderazgo',
+  description: 'Cuatro generaciones liderando el desarrollo de parques industriales y naves industriales built-to-suit en Mexicali. La familia fundadora opera directamente cada proyecto.',
 }
 
 const team = [

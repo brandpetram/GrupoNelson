@@ -6,8 +6,8 @@ import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
-  title: 'Parque Industrial Nelson II | Grupo Nelson',
-  description: 'Especificaciones técnicas del Parque Industrial Nelson II en Mexicali. 26.6 hectáreas, 3 naves industriales con tecnología de punta.',
+  title: 'Parque Industrial Nelson II',
+  description: 'Parque Industrial Nelson II en Mexicali: 26.6 hectáreas, naves industriales built-to-suit con tecnología de punta. Gulfstream, Honeywell y más empresas Fortune 500.',
 }
 
 export default async function NelsonIIPage() {

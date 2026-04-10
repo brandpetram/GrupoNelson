@@ -4,7 +4,7 @@ import { SidebarSticky1 } from '@/components/brandpetram/sidebar-sticky-1'
 import { CarruselLeed } from '@/components/brandpetram/carrusel-leed'
 
 export const metadata: Metadata = {
-  title: 'Certificación LEED en Mexicali | Grupo Nelson',
+  title: 'Certificación LEED en Mexicali',
   description: 'Certifica LEED tu nave industrial en Mexicali con Baumex: 28 años de experiencia en clima extremo, datos de desempeño térmico reales y Gulfstream en proceso de LEED Gold.',
   alternates: { canonical: 'https://gruponelson.mx/constructora/leed' },
 }

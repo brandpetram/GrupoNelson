@@ -13,7 +13,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
-  title: "Estándares Internacionales de Construcción | Grupo Nelson Mexicali",
+  title: "Estándares Internacionales de Construcción",
   description:
     "Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Baumex: 75+ proyectos, auditorías de Gulfstream y Honeywell.",
 };

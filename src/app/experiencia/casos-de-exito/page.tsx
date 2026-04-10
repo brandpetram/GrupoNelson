@@ -5,7 +5,7 @@ import { SplitStickyCasos } from "./sections/split-sticky-casos";
 import { MosaicoCasos } from "./sections/mosaico-casos";
 
 export const metadata: Metadata = {
-  title: "Casos de Éxito | Grupo Nelson",
+  title: "Casos de Éxito",
   description:
     "Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson. Gulfstream 35 años, Honeywell 30+, 80% repeat business.",
 };

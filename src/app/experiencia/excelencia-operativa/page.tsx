@@ -14,7 +14,7 @@ import { DocumentacionAuditable } from "./sections/documentacion-auditable";
 import { DimensionesControl } from "./sections/dimensiones-control";
 
 export const metadata: Metadata = {
-  title: "Excelencia Operativa | Grupo Nelson",
+  title: "Excelencia Operativa",
   description:
     "75 proyectos completados en 28 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.",
 };

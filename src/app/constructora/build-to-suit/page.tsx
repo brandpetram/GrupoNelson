@@ -8,7 +8,8 @@ import { Delta } from '@/components/brandpetram/delta'
 import { Epsilon } from '@/components/brandpetram/epsilon'
 
 export const metadata: Metadata = {
-  title: 'Built to Suit | Grupo Nelson',
+  title: 'Construcción Built-to-Suit',
+  description: 'Naves industriales built-to-suit en Mexicali diseñadas y construidas a la medida. Grupo Nelson entrega desde terreno hasta nave operando en sus parques industriales.',
 }
 
 export default function BuiltToSuitPage() {

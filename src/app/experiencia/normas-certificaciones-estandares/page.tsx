@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'Normas, Certificaciones y Estándares | Grupo Nelson',
+  title: 'Normas, Certificaciones y Estándares',
   description:
     'Baumex responde a tres tipos de exigencia: corporativas (ISN Recomendado por Honeywell), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
 }

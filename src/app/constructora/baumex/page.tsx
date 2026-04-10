@@ -14,7 +14,8 @@ import Chi from '@/components/brandpetram/chi'
 import Psi from '@/components/brandpetram/psi'
 
 export const metadata: Metadata = {
-  title: 'Baumex Constructora | Grupo Nelson',
+  title: 'Baumex Constructora',
+  description: 'Constructora in-house de Grupo Nelson con más de 25 años construyendo naves industriales built-to-suit en Mexicali. 75+ proyectos entregados para empresas Fortune 500.',
 }
 
 export default function BaumexPage() {

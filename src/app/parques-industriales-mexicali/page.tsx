@@ -4,8 +4,8 @@ import { Building2 } from 'lucide-react'
 import { getIndustrialParks } from '@/data/parks/parks-sanity'
 
 export const metadata = {
-  title: 'Parques Industriales en Mexicali | Grupo Nelson',
-  description: 'Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali.',
+  title: 'Parques Industriales en Mexicali',
+  description: '4 parques industriales en Mexicali con más de 4.5 millones de pies². Naves industriales built-to-suit, terrenos disponibles y más de 60 años de experiencia.',
 }
 
 export default async function ParquesIndustrialesMexicaliPage() {

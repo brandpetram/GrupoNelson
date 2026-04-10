@@ -8,7 +8,8 @@ import { Kappa } from '@/components/brandpetram/kappa'
 import { Lamda } from '@/components/brandpetram/lamda'
 
 export const metadata: Metadata = {
-  title: 'Llave en Mano | Grupo Nelson',
+  title: 'Soluciones Llave en Mano',
+  description: 'Naves industriales llave en mano en Mexicali: listas para operar desde el primer día. Parques industriales de Grupo Nelson con infraestructura completa.',
 }
 
 export default function LlaveEnManoPage() {

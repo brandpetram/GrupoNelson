@@ -8,7 +8,7 @@ import {
 } from "@/components/brandpetram/split-simple-bp";
 
 export const metadata: Metadata = {
-  title: "Proyectos Especializados | Baumex Constructora | Grupo Nelson",
+  title: "Proyectos Especializados",
   description:
     "Proyectos industriales especializados en Mexicali: puente de 95 m sin columnas, nave de 52,200 m² con BRB antisísmico, túnel de viento de 3,000 HP, cimentaciones de precisión milimétrica.",
 };

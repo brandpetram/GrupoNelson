@@ -8,7 +8,8 @@ import {
 import { EditorialCascadaBeta } from "@/components/brandpetram/editorial-cascada-beta";
 
 export const metadata: Metadata = {
-  title: "La Diferencia Nelson | Grupo Nelson",
+  title: "La Diferencia Nelson",
+  description: "Lo que distingue a Grupo Nelson: operación directa por la familia fundadora, construcción built-to-suit de naves industriales y parques industriales de primer nivel en Mexicali.",
 };
 
 export default function DiferenciaNelsonPage() {

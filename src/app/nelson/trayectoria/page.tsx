@@ -5,7 +5,8 @@ import { StatsGridBPGamma } from '@/components/brandpetram/stats-grid-bp-gamma'
 import { EditorialCascadaBP } from '@/components/brandpetram/editorial-cascada-bp'
 
 export const metadata: Metadata = {
-  title: 'Trayectoria | Grupo Nelson',
+  title: 'Trayectoria',
+  description: 'Más de 60 años desarrollando parques industriales y naves industriales built-to-suit en Mexicali. Empresas Fortune 500 confían en Grupo Nelson.',
 }
 
 export default function TrayectoriaPage() {

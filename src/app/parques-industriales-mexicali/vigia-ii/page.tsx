@@ -5,8 +5,8 @@ import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
-  title: 'Parque Industrial El Vigía II | Grupo Nelson',
-  description: 'Especificaciones técnicas del Parque Industrial El Vigía II en Mexicali. 7.5 hectáreas, instalaciones modernas desde 1987.',
+  title: 'Parque Industrial El Vigía II',
+  description: 'Parque Industrial El Vigía II en Mexicali: 7.5 hectáreas, naves industriales built-to-suit e instalaciones modernas desde 1987.',
 }
 
 export default async function VigiaIIPage() {

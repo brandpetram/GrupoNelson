@@ -4,7 +4,8 @@ import StandardsPoster from '@/components/brandpetram/standards-poster'
 import CursorTrailGrupoNelson from '@/components/brandpetram/cursor-trail-grupo-nelson'
 
 export const metadata: Metadata = {
-  title: 'Nuestra Historia | Grupo Nelson',
+  title: 'Nuestra Historia',
+  description: 'La historia de Grupo Nelson: de una empresa familiar en 1962 a operar 4 parques industriales con más de 4.5 millones de pies² en Mexicali. Naves industriales built-to-suit para empresas globales.',
 }
 
 export default function NuestraHistoriaPage() {

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 
 export const metadata: Metadata = {
-  title: 'Recursos | Grupo Nelson',
+  title: 'Recursos',
   description:
     'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y Baumex implementan en sus desarrollos industriales.',
   alternates: { canonical: 'https://gruponelson.mx/recursos' },

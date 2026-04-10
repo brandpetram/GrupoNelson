@@ -5,8 +5,8 @@ import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
 
 export const metadata = {
-  title: 'Parque Industrial Nelson I | Grupo Nelson',
-  description: 'Parque Industrial Nelson I en Mexicali. 27 hectáreas, 9 empresas establecidas, centro industrial establecido desde 1987.',
+  title: 'Parque Industrial Nelson I',
+  description: 'Parque Industrial Nelson I en Mexicali: 27 hectáreas, 9 empresas establecidas y naves industriales built-to-suit desde 1987.',
 }
 
 export default async function NelsonIPage() {
