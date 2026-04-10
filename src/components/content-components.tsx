@@ -16,6 +16,32 @@ export const portableTextComponents: PortableTextComponents = {
                 />
             </div>
         ),
+        dataTable: ({ value }: { value: { title?: string; source?: string; columns: string[]; rows: { cells: string[] }[] } }) => (
+            <figure className="my-8 not-prose">
+                {value.title && <figcaption className="text-foreground mb-2 text-sm font-semibold">{value.title}</figcaption>}
+                <div className="overflow-x-auto rounded-lg border">
+                    <table className="min-w-[480px] w-full text-sm border-collapse">
+                        <thead>
+                            <tr className="bg-muted/50">
+                                {value.columns.map((col, i) => (
+                                    <th key={i} className="text-foreground border-b px-4 py-2.5 text-left font-medium whitespace-nowrap">{col}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {value.rows.map((row, i) => (
+                                <tr key={i} className="border-b last:border-0">
+                                    {row.cells.map((cell, j) => (
+                                        <td key={j} className="text-muted-foreground px-4 py-2">{cell}</td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                {value.source && <span className="text-muted-foreground mt-2 block text-xs">Fuente: {value.source}</span>}
+            </figure>
+        ),
     },
     block: {
         h1: ({ children, value }) => {

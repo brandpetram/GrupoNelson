@@ -8,7 +8,8 @@ import {noticiaType} from './noticiaType'
 import {terrenoType} from './terrenoType'
 import {parkSchemaTypes} from './industrialParkType'
 import {naveIndustrialType} from './naveIndustrialType'
+import {dataTableType} from './dataTableType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blockContentType, categoryType, postType, authorType, noticiaType, terrenoType, ...parkSchemaTypes, naveIndustrialType],
+  types: [blockContentType, categoryType, postType, authorType, noticiaType, terrenoType, ...parkSchemaTypes, naveIndustrialType, dataTableType],
 }
