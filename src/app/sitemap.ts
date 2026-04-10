@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
+import { client } from '@/sanity/lib/client'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.nelson.com.mx'
 
   // Páginas estáticas del sitio
@@ -41,10 +42,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contacto',
   ]
 
-  return staticPages.map((path) => ({
+  const staticEntries: MetadataRoute.Sitemap = staticPages.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: path === '' ? 'weekly' : 'monthly',
     priority: path === '' ? 1 : path.includes('/parques-industriales') ? 0.9 : 0.7,
   }))
+
+  // Rutas dinámicas desde Sanity
+  const [posts, noticias] = await Promise.all([
+    client.fetch<{ slug: string; updatedAt: string }[]>(
+      `*[_type == "post" && defined(slug.current)]|order(publishedAt desc){"slug": slug.current, "updatedAt": _updatedAt}`
+    ),
+    client.fetch<{ slug: string; updatedAt: string }[]>(
+      `*[_type == "noticia" && defined(slug.current)]|order(publishedAt desc){"slug": slug.current, "updatedAt": _updatedAt}`
+    ),
+  ])
+
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
+
+  const noticiasEntries: MetadataRoute.Sitemap = noticias.map((noticia) => ({
+    url: `${baseUrl}/noticias/${noticia.slug}`,
+    lastModified: new Date(noticia.updatedAt),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
+
+  return [...staticEntries, ...blogEntries, ...noticiasEntries]
 }
