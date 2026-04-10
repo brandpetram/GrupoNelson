@@ -37,7 +37,7 @@ export default function Home() {
         <HeroVideoCover
           videoSrc="/parques-industriales-mexicali-nelson-3-optimizado.mp4"
           posterSrc="/hero-poster-0.jpg"
-          alt="Parque Industrial Gulfstream - Vista aérea de instalaciones modernas"
+          alt="Parque Industrial Nelson II en Mexicali — Vista aérea de naves industriales"
           overlayOpacity={0.30}
           videoBrightness={0.8}
           videoContrast={1.3}
@@ -63,7 +63,12 @@ export default function Home() {
             fadeRadius: '20rem',
           }}
         >
-          <TarjetaHeroOriginal />
+          <TarjetaHeroOriginal
+            badge1="4 Parques Industriales"
+            badge2="33 Corporaciones Internacionales"
+            titulo={<>Parques Industriales y Naves <span className="whitespace-nowrap">Built‑to‑Suit</span> en Todo Mexicali</>}
+            descripcion="60 años desarrollando infraestructura industrial en la frontera con California. Gulfstream, Honeywell, General Dynamics y DHL ya operan aquí."
+          />
         </HeroVideoCover>
 
         {/* Cuadritos de lluvia decorativos - Lado derecho del hero */}
@@ -97,50 +102,52 @@ export default function Home() {
 
 
 
-      {/* Componente Alpha - Fase 3: Brandpetramizado (CON 13 BREAKPOINTS) */}
+      {/* Componente Alpha - Resumen de identidad y oferta */}
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
-        <AlphaBP />
+        <AlphaBP
+          descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. 4 parques, 33 corporaciones internacionales y el 80% de los clientes regresan."
+        />
       </div>
 
       {/* Sección sobre nosotros con números animados */}
       <RadiantHeader />
 
-      {/* CON PROPS (propeado) */}
+      {/* Dos caminos: renta + build-to-suit */}
       <div className={'w-full p-10 mx-auto mt-32 relative'}>
               <Mosaico2ConProps
-                  bloque1Titulo="Soluciones Industriales"
-                  bloque1Descripcion="Infraestructura de calidad con soluciones a medida"
-                  bloque1LinkTexto="Explorar"
-                  bloque1LinkHref="#"
+                  bloque1Titulo="Naves Disponibles"
+                  bloque1Descripcion="4 parques en Mexicali con naves listas para operar — desde El Vigía hasta Nelson II"
+                  bloque1LinkTexto="Ver parques"
+                  bloque1LinkHref="/parques-industriales-mexicali"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
-                  bloque2ImagenAlt="Lorem ipsum"
+                  bloque2ImagenAlt="Nave industrial disponible en parque industrial de Mexicali"
                   bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
-                  bloque3ImagenAlt="Lorem ipsum"
-                  bloque4Titulo="¿Necesitas información?"
-                  bloque4Descripcion="Contáctanos para conocer nuestras soluciones"
+                  bloque3ImagenAlt="Interior de nave industrial en Mexicali"
+                  bloque4Titulo="¿Buscas espacio industrial?"
+                  bloque4Descripcion="Consulta disponibilidad en nuestros 4 parques"
                   bloque4LinkTexto="Contactar"
-                  bloque4LinkHref="#"
+                  bloque4LinkHref="/contacto"
                   imagenDerechaSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-5.jpeg"
-                  imagenDerechaAlt="Lorem ipsum"
+                  imagenDerechaAlt="Parque Industrial Nelson II en Mexicali"
               />
 
-              {/* VERSIÓN INVERTIDA (propeado) */}
+              {/* Build-to-suit con Baumex */}
               <div className="-mt-1">
                   <MosaicoInvertidoConProps
-                      bloque1Titulo="Soluciones Industriales"
-                      bloque1Descripcion="Infraestructura de calidad con soluciones a medida"
-                      bloque1LinkTexto="Explorar"
-                      bloque1LinkHref="#"
+                      bloque1Titulo="Construcción a tu Medida"
+                      bloque1Descripcion="Baumex, nuestra constructora in-house: 30 años, 75+ proyectos. Diseño, permisos y construcción bajo un solo contrato — sin intermediarios"
+                      bloque1LinkTexto="Conocer Baumex"
+                      bloque1LinkHref="/constructora/baumex"
                       bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg"
-                      bloque2ImagenAlt="Lorem ipsum"
+                      bloque2ImagenAlt="Construcción build-to-suit de nave industrial en Mexicali"
                       bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
-                      bloque3ImagenAlt="Lorem ipsum"
-                      bloque4Titulo="¿Necesitas información?"
-                      bloque4Descripcion="Contáctanos para conocer nuestras soluciones"
-                      bloque4LinkTexto="Contactar"
-                      bloque4LinkHref="#"
+                      bloque3ImagenAlt="Construcción de nave industrial a medida por Baumex"
+                      bloque4Titulo="¿Necesitas algo a medida?"
+                      bloque4Descripcion="De 5,000 a 550,000 ft² bajo un solo contrato"
+                      bloque4LinkTexto="Solicitar proyecto"
+                      bloque4LinkHref="/contacto"
                       imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
-                      imagenIzquierdaAlt="Lorem ipsum"
+                      imagenIzquierdaAlt="Nave industrial build-to-suit construida por Baumex en Mexicali"
                   />
               </div>
           </div>
@@ -152,11 +159,11 @@ export default function Home() {
         <ScrollStorytelling mediaAspectRatio="aspect-[16/9]" />
       </div>
 
-      {/* Imagen grande */}
+      {/* Imagen grande — Parque Industrial Nelson II */}
       <div className="relative h-full mt-32 aspect-square lg:aspect-auto lg:h-[70vh]">
         <Image
           src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-336.jpg"
-          alt="Parques industriales Grupo Nelson en Mexicali"
+          alt="Parque Industrial Nelson II en Mexicali — 27 hectáreas de infraestructura industrial"
           fill
           loading="lazy"
           className="object-cover object-center"
@@ -164,18 +171,18 @@ export default function Home() {
         />
       </div>
 
-      {/* Círculos */}
+      {/* Círculos — 3 pilares comprimidos */}
       <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
         <CirculosConProps
-          circulo1Letra="G"
-          circulo1Titulo="Grupo"
-          circulo1Descripcion="Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali. Somos el socio estratégico que su empresa necesita para establecerse con éxito en México."
-          circulo2Letra="N"
-          circulo2Titulo="Nelson"
-          circulo2Descripcion="Familia empresarial con raíces profundas en Mexicali. Nuestro compromiso generacional con la región nos permite ofrecer soluciones industriales personalizadas, desde la renta de naves hasta la construcción build-to-suit."
-          circulo3Letra="I"
-          circulo3Titulo="Parques Industriales"
-          circulo3Descripcion="Cuatro parques industriales estratégicamente ubicados en los corredores industriales más importantes de Mexicali. Infraestructura de primer nivel con seguridad 24/7, servicios completos y tecnología de punta."
+          circulo1Letra="60"
+          circulo1Titulo="Años"
+          circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
+          circulo2Letra="33"
+          circulo2Titulo="Corporaciones"
+          circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. General Dynamics, DHL, Baxter e Intuitive ya eligieron operar aquí. 80% de los clientes regresan."
+          circulo3Letra="75"
+          circulo3Titulo="Proyectos"
+          circulo3Descripcion="Baumex, nuestra constructora in-house, lleva 30 años y 75+ proyectos. Un solo contrato de diseño a entrega. Construimos bajo estándares ISN, LEED, FM Global e IBC — con más de un millón de horas hombre sin accidentes fatales."
         />
       </div>
 
@@ -190,32 +197,32 @@ export default function Home() {
             {
               id: 1,
               question: "¿Qué tipos de naves industriales ofrecen?",
-              answer: "Contamos con naves industriales en renta y construcción build-to-suit en nuestros cuatro parques en Mexicali. Desde espacios de 500 m² hasta proyectos a medida de más de 25,000 m².",
+              answer: "Naves en renta y construcción build-to-suit en nuestros 4 parques industriales de Mexicali. Desde espacios renovados en El Vigía hasta naves de clase mundial en Nelson II, con alturas libres de hasta 28 ft y cumplimiento de códigos IBC.",
             },
             {
               id: 2,
-              question: "¿Cuál es la ubicación de sus parques industriales?",
-              answer: "Nuestros parques están ubicados en los corredores industriales estratégicos de Mexicali, B.C.: Nelson I, Nelson II, El Vigía I y El Vigía II, con acceso directo a carreteras principales y frontera con EUA.",
+              question: "¿Dónde están sus parques industriales?",
+              answer: "Operamos 4 parques en Mexicali, B.C., en la frontera con California: El Vigía I, El Vigía II, Nelson I y Nelson II. Nelson II es el más moderno: 27 hectáreas con subestación eléctrica dedicada y sistema contraincendio centralizado con tanque de 360,000 galones bajo estándares NFPA y FM.",
             },
             {
               id: 3,
               question: "¿Ofrecen construcción build-to-suit?",
-              answer: "Sí. Diseñamos y construimos naves industriales completamente a la medida de sus requerimientos operativos: capacidad eléctrica, altura de nave, andenes, oficinas, y especificaciones técnicas particulares.",
+              answer: "Sí. Baumex, nuestra constructora in-house con 30 años y más de 75 proyectos completados, diseña y construye naves a la medida exacta de sus requerimientos bajo un solo contrato — sin intermediarios. Hemos construido desde 5,000 ft² hasta 550,000 ft².",
             },
             {
               id: 4,
-              question: "¿Qué servicios de infraestructura incluyen?",
-              answer: "Todos nuestros parques cuentan con seguridad 24/7, agua potable, drenaje, electricidad, gas natural, acceso pavimentado, telecomunicaciones y sistema centralizado de protección contra incendios bajo estándares NFPA y FM.",
+              question: "¿Qué empresas operan en sus parques?",
+              answer: "33 corporaciones internacionales, incluyendo Gulfstream (más de 35 años), Honeywell (más de 3 décadas), General Dynamics, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. El 80% de nuestros clientes son recurrentes.",
             },
             {
               id: 5,
-              question: "¿Cuánto tiempo lleva Grupo Nelson en la industria?",
-              answer: "Grupo Nelson tiene más de 60 años de experiencia desarrollando infraestructura industrial en Mexicali. Somos una empresa familiar con profundo conocimiento de la región fronteriza y sus necesidades industriales.",
+              question: "¿Qué certificaciones y estándares cumplen?",
+              answer: "Construimos bajo International Building Code (IBC), con capacidad demostrada en certificación LEED, FM Global, sistemas antisísmicos BRB y estándares NFPA. Baumex tiene calificación ISN 'Recomendado' por Honeywell.",
             },
             {
               id: 6,
-              question: "¿Cómo puedo obtener información sobre disponibilidad?",
-              answer: "Contáctenos directamente por correo o teléfono. Nuestro equipo le atenderá para presentarle las opciones disponibles según sus requerimientos específicos de espacio, ubicación y especificaciones técnicas.",
+              question: "¿Cuánto tiempo lleva Grupo Nelson en la industria?",
+              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
             },
           ]}
         />

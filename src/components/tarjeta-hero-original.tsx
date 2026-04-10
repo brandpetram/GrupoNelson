@@ -6,20 +6,20 @@ import { Button } from "@/components/ui/button"
 interface TarjetaHeroOriginalProps {
   badge1?: string
   badge2?: string
-  titulo?: string
+  titulo?: React.ReactNode
   descripcion?: string
 }
 
 export function TarjetaHeroOriginal({
   badge1 = "Built to Suit",
   badge2 = "Sustainable Design",
-  titulo = "Los Expertos en Parques Industriales en Mexicali",
+  titulo = "Parques Industriales y Naves Built‑to‑Suit en Mexicali",
   descripcion = "60 años creando soluciones llave en mano para empresas globales en parques y espacios industriales en Mexicali",
 }: TarjetaHeroOriginalProps) {
   return (
-    <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-md mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
+    <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-md 1200:max-w-2xl mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
       {/* Sección de badges */}
-      <div className="hidden 360:flex items-center gap-3 mb-3">
+      <div className="hidden md:flex items-center gap-3 mb-3">
         <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
           <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg font-medium text-white">{badge1}</span>
         </div>

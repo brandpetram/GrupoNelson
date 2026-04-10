@@ -6,23 +6,23 @@ export function Header() {
   return (
     <Container className="mx-10 mt-16 lg:mt-16">
       <h1 className={' w-full text-balance text-[2rem] 430:text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >
-        Grupo Nelson es la empresa que fundó la industria maquiladora de México.
+        Los pioneros de la industria maquiladora de Mexicali desde 1965.
       </h1>
       <Lead className="mt-6 max-w-3xl">
-        Desde 1965, desarrollamos los parques industriales donde las empresas globales más exigentes del mundo eligen operar.
+        Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — y el 80% de los clientes regresan.
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
-          <h2 className="text-2xl font-medium tracking-tight">Nuestra misión</h2>
+          <h2 className="text-2xl font-medium tracking-tight">Dos caminos, un solo proveedor</h2>
           <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
-            Crear espacios industriales modernos y sustentables que impulsen el crecimiento de las empresas
-            en la región de Mexicali, proporcionando infraestructura de primer nivel con ubicación estratégica
-            y servicios integrales llave en mano.
+            Si necesitas una nave lista para operar, tenemos 4 parques industriales en Mexicali con naves
+            disponibles — desde El Vigía hasta Nelson II, el parque más moderno con subestación eléctrica dedicada
+            y sistema contraincendio centralizado.
           </p>
           <p className="mt-8 text-lg/8 text-gray-600 dark:text-gray-400">
-            Con seis décadas de experiencia, nos especializamos en diseñar y construir parques industriales
-            a medida, adaptándonos a las necesidades específicas de manufactura avanzada y operaciones logísticas
-            de empresas nacionales e internacionales.
+            Si necesitas algo a medida, Baumex — nuestra constructora in-house con 30 años y más de 75 proyectos
+            completados — lo diseña y construye bajo un solo contrato. La nave más grande que hemos construido:
+            550,000 ft² para Gulfstream, con certificación LEED, FM Global y sistemas antisísmicos BRB.
           </p>
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -62,27 +62,27 @@ export function Header() {
           <hr className="mt-6 border-t border-gray-200" />
           <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
             <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt className="text-sm/6 text-gray-600">Empresas Alojadas</dt>
+              <dt className="text-sm/6 text-gray-600">Corporaciones Internacionales</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                +<AnimatedNumber start={80} end={100} />
+                <AnimatedNumber start={20} end={33} />
               </dd>
             </div>
             <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
               <dt className="text-sm/6 text-gray-600">Años de Experiencia</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                <AnimatedNumber start={50} end={60} />
+                +<AnimatedNumber start={50} end={60} />
               </dd>
             </div>
             <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-              <dt className="text-sm/6 text-gray-600">Hectáreas Desarrolladas</dt>
+              <dt className="text-sm/6 text-gray-600">Parques Industriales</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                +<AnimatedNumber start={120} end={150} />
+                <AnimatedNumber start={2} end={4} />
               </dd>
             </div>
             <div className="flex flex-col gap-y-2">
-              <dt className="text-sm leading-none text-gray-600">Metros Cuadrados<br/>Construidos</dt>
+              <dt className="text-sm leading-none text-gray-600">Pies Cuadrados<br/>Desarrollados</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
-                <AnimatedNumber start={400} end={500} />K
+                <AnimatedNumber start={2} end={4} />M
               </dd>
             </div>
           </dl>
