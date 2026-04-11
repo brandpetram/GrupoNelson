@@ -253,7 +253,7 @@ Este plan es el entregable de la Fase 1. La clasificación en Tier 1/2/3 está a
 
 **Objetivo:** Sección `/instrucciones` protegida por contraseña con guías para que Susana edite contenido en Sanity.
 
-**Desde:** Worktree `wt/instrucciones` (ya existe)
+**Desde:** MAIN (proxy.ts + .env.local) → luego wt/instrucciones (route group y guías)
 
 **Fuente:** `docs/planes/plan-para-seccion-instrucciones.md` — diseño completo.
 
