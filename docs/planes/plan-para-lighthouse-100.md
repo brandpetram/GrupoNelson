@@ -1,94 +1,133 @@
 # Plan para Lighthouse 100/100/100/100
 
 > **Fecha:** 2026-04-10  
-> **Página auditada:** Homepage (`localhost:3002`)  
-> **Herramienta:** Lighthouse 13.1.0 via CLI (mobile emulation)
+> **Página auditada:** Homepage  
+> **Herramientas:** Lighthouse 13.1.0 CLI (localhost) + PageSpeed Insights API v5 (producción)  
+> **API Key:** PageSpeed Insights en brandpetram-assets (ver `~/.secrets/tokens.md`)
 
 ---
 
 ## Scores actuales
 
+### Producción (nelson.com.mx — PageSpeed Insights API, mobile)
+
+**Request reproducible:**
+```
+GET https://www.googleapis.com/pagespeedonline/v5/runPagespeed
+  ?url=https://www.nelson.com.mx
+  &strategy=mobile
+  &category=performance
+  &category=accessibility
+  &category=best-practices
+  &category=seo
+  &key=<PSI_KEY de ~/.secrets/tokens.md>
+```
+
 | Métrica | Score | Estado |
 |---|---|---|
-| **Performance** | 38 | Crítico |
+| **Performance** | 71 | Mejorable |
+| **Accessibility** | 100 | Perfecto |
+| **Best Practices** | 100 | Perfecto |
+| **SEO** | 100 | Perfecto |
+
+### Localhost (Lighthouse CLI, mobile)
+
+| Métrica | Score | Estado |
+|---|---|---|
+| **Performance** | 38 | Crítico (no representativo — sin CDN ni compresión) |
 | **Accessibility** | 97 | Casi perfecto |
 | **Best Practices** | 100 | Perfecto |
 | **SEO** | 100 | Perfecto |
 
 ---
 
-## Performance (38 → 100)
+## Performance (71 → 90+)
 
-### Métricas individuales
+### Métricas de producción (PageSpeed Insights API, mobile)
 
 | Métrica | Valor actual | Target | Score |
 |---|---|---|---|
-| First Contentful Paint | 1.1s | < 1.8s | 100 |
-| Largest Contentful Paint | **12.0s** | < 2.5s | 0 |
-| Total Blocking Time | **5,400ms** | < 200ms | 0 |
+| First Contentful Paint | ~1.5s | < 1.8s | 95 |
+| Largest Contentful Paint | **5.3s** | < 2.5s | 22 |
+| Total Blocking Time | 20ms | < 200ms | 100 |
 | Cumulative Layout Shift | 0 | < 0.1 | 100 |
-| Speed Index | 7.4s | < 3.4s | 28 |
+| Speed Index | 5.1s | < 3.4s | 62 |
+| Time to Interactive | 5.5s | < 3.8s | 70 |
 
-**Los dos problemas principales son LCP (12s) y TBT (5.4s).** FCP y CLS ya son perfectos.
+**FCP, TBT y CLS ya son perfectos en producción.** El único problema real es **LCP de 5.3 segundos**.
 
-### Causa raíz: LCP (12 segundos)
+### Causa raíz identificada: LCP
 
-El LCP es probablemente un video o imagen hero grande que tarda en cargar. En la homepage, el hero usa un video de fondo y/o imágenes pesadas.
+**Elemento LCP:** El `<h1>` del hero — `"Parques Industriales y Naves Built‑to‑Suit en Todo Mexicali"`  
+**Selector:** `div.container > div > div.max-w-md > h1.text-3xl`
 
-**Fixes:**
-1. **Identificar el elemento LCP** — Correr Lighthouse con `--output html` para ver exactamente qué elemento es el LCP
-2. **Si es un video:** Agregar `poster` con imagen ligera, usar `preload="none"`, y asegurar que el video no bloquee el LCP
-3. **Si es una imagen:** Usar `<Image priority>` de Next.js en la imagen hero, verificar que use formatos modernos (avif/webp — ya configurados en next.config)
-4. **Optimizar tamaño de imágenes:** Las imágenes del homepage deben estar en resolución adecuada para el viewport, no originales de 4K
-5. **Preconnect** a CDNs externos si se usan
+**Breakdown del LCP:**
+- Time to first byte: **0.6s** (excelente)
+- Element render delay: **2,469ms** (el problema)
 
-### Causa raíz: TBT (5,400ms)
+**Causa raíz real: la animación del hero mueve el H1 fuera de pantalla al inicio.**
 
-5.4 segundos de bloqueo del main thread es extremo. Causas probables:
-- `motion/react` (framer-motion) inicializando muchas animaciones al cargar
-- Componentes `'use client'` con `useEffect` pesados
-- ScrollStorytelling con 8 items y videos/observers
-- Múltiples IntersectionObservers y event listeners
+En `src/components/hero-video-cover.tsx` (línea 76-87), `leftVariants` define:
+```
+hidden: { x: '-100vw' }    ← el contenido arranca fuera del viewport
+visible: { x: 0, transition: { duration: 0.8, delay: 0.8 } }
+```
 
-**Fixes:**
-1. **Lazy load de componentes below-the-fold:** El ScrollStorytelling, FAQs, CirculosConProps, etc. no necesitan cargarse al inicio. Usar `dynamic(() => import(...), { ssr: false })` o `React.lazy`
-2. **Reducir JS del bundle:**
-   - Lighthouse reporta 296 KiB de JS sin usar — revisar qué se importa pero no se renderiza
-   - Lighthouse reporta 232 KiB de JS sin minificar — verificar que el build de producción minifica correctamente
-3. **Diferir motion/react:** Las animaciones de scroll no necesitan ejecutarse hasta que el usuario llegue a esa sección
-4. **Audit de imports:** Verificar si hay imports pesados que se cargan en el client bundle innecesariamente (ej: toda la librería de iconos cuando solo se usan 8)
-5. **Revisar `TickerOverflow` (motion-plus):** Si es una animación continua, puede estar consumiendo CPU
+Y en `src/app/(site)/page.tsx` (línea 51): `enableAnimations={true}`.
 
-### Oportunidades reportadas por Lighthouse
+El flujo real es:
+1. TTFB llega en 0.6s
+2. React hydration ejecuta
+3. motion/react inicializa y posiciona el H1 en `x: -100vw` (fuera de pantalla)
+4. Después de 0.8s de delay, comienza la animación de 0.8s
+5. El H1 se vuelve visible en su posición final ~2.2s después de hydration
 
-| Oportunidad | Ahorro estimado |
-|---|---|
-| Minify JavaScript | 232 KiB / 1,250ms |
-| Reduce unused JavaScript | 296 KiB / 1,920ms |
+**El H1 técnicamente existe en el DOM desde el SSR, pero motion/react lo mueve fuera del viewport antes de que el usuario lo vea.** Lighthouse mide cuándo el elemento es visualmente pintado en el viewport, no cuándo existe en el DOM.
 
-### Diagnósticos adicionales
+**LCP Request Discovery = score 0:** El browser no puede determinar que el H1 será el LCP element porque su posición visual depende de JavaScript.
 
-| Diagnóstico | Estado |
-|---|---|
-| Forced reflow | Fallido — hay reflows forzados |
-| Image delivery | Fallido — imágenes no optimizadas |
-| Legacy JavaScript | Fallido — JS legacy en el bundle |
-| Render blocking requests | Fallido — recursos bloquean el render |
+### Problemas secundarios encontrados
+
+| Problema | Impacto | Detalle |
+|---|---|---|
+| **Imagen hero no en formato óptimo** | 1,420 KiB ahorrable | `parque-industrial-mexicali...` debería servirse en avif/webp más agresivo |
+| **Imagen de bandera `/eua.jpg`** | Menor | No usa Next Image, no está optimizada |
+| **Video de 40 MB en network** | Network payload | `nelson-3-optimizado.mp4` se referencia en el homepage |
+| **Render blocking CSS** | 740ms | 2 chunks CSS bloquean el render inicial |
+| **Unused JS** | 47 KiB | JS cargado pero no usado |
+| **Legacy JavaScript** | 15 KiB | Polyfills innecesarios en el bundle |
+
+### Fixes ordenados por impacto
+
+**Fix 1 (CRÍTICO): Eliminar o reducir la animación de entrada del hero**
+
+La animación `leftVariants` con `x: '-100vw'` y `delay: 0.8` es la causa directa del LCP de 5.3s. El H1 está en el DOM pero fuera del viewport hasta que la animación termina.
+
+Opciones (de menor a mayor intervención):
+- A) **Cambiar `enableAnimations={false}`** en `page.tsx` línea 51. Impacto inmediato, cero riesgo. El hero aparece sin animación. Verificar con PSI si el LCP baja a ~1.5s.
+- B) **Cambiar la animación para que no mueva el contenido fuera del viewport.** En vez de `x: '-100vw'`, usar `opacity: 0` → `opacity: 1`. El elemento ocupa su posición desde el inicio y Lighthouse lo detecta como visible. La animación visual se mantiene pero como fade en vez de slide.
+- C) **Reducir el delay.** Cambiar `delay: 0.8` → `delay: 0` y `duration: 0.8` → `duration: 0.3`. El contenido aparece más rápido sin eliminar la animación.
+- D) **Usar CSS animation en vez de motion/react.** El CSS `@keyframes` se aplica desde el HTML inicial sin esperar JS. Más complejo pero más correcto.
+
+**Recomendación:** Probar A primero (5 segundos de cambio). Si el LCP baja a <2.5s, el problema está resuelto y se decide después si se quiere una animación alternativa (B, C o D).
+
+**Fix 2 (ALTO): Optimizar imagen hero**
+
+La imagen del hero pierde 1,420 KiB por no estar en formato óptimo. Next.js ya tiene `formats: ['image/avif', 'image/webp']` configurado — verificar que la imagen del hero usa `<Image>` de Next.js con `priority`.
+
+**Fix 3 (MEDIO): Lazy load del video**
+
+El video `nelson-3-optimizado.mp4` (40 MB) se referencia en el ScrollStorytelling que está below-the-fold. Con `preload="none"` (que ya tiene) no debería afectar el LCP, pero sí el network payload total. Verificar que no se descarga hasta que el usuario scrollea.
+
+**Fix 4 (BAJO): CSS render blocking**
+
+740ms de bloqueo por CSS. Next.js maneja esto automáticamente — verificar si hay imports CSS globales innecesarios o si se puede inline el CSS crítico.
 
 ---
 
-## Accessibility (97 → 100)
+## Accessibility (100 en producción)
 
-### Único problema: contraste de color
-
-**Elementos afectados:** Textos con clase `text-gray-500` y `text-gray-600` sobre fondo blanco. Específicamente en el componente RadiantHeader (stats).
-
-**Fix:**
-- Cambiar `text-gray-500` → `text-gray-600` o `text-gray-700` en los elementos afectados
-- Cambiar `text-gray-600` → `text-gray-700` donde el contraste no cumple WCAG AA (4.5:1)
-- Los elementos reportados son `<h2>`, `<dt>` con clases de Tailwind que usan grises claros
-
-**Estimación:** 1 commit, ~5 archivos.
+Ya perfecto en producción. En localhost hay un issue menor de contraste (`text-gray-500`/`text-gray-600`) que Vercel/producción no reporta — posiblemente porque la versión deployeada tiene dark mode/theme distinto. Monitorear pero no bloquea.
 
 ---
 
@@ -106,37 +145,40 @@ Nada que hacer.
 
 ## Orden de ejecución
 
-### Fase A: Accesibilidad (97 → 100) — Rápido
+### Fase A: Accesibilidad — Ya 100 en producción
 
-1. Buscar todos los `text-gray-500` y `text-gray-600` en componentes del homepage
-2. Subir el contraste donde no cumple WCAG AA
-3. Verificar con Lighthouse que sube a 100
+No requiere acción. Monitorear en futuros deploys.
 
-**Estimación:** 30 minutos. Un commit.
+### Fase B: Performance — LCP (5.3s → <2.5s)
 
-### Fase B: Performance — LCP (12s → <2.5s)
+**Causa raíz confirmada:** Animación `leftVariants` en hero-video-cover.tsx.
 
-1. Identificar el elemento LCP exacto
-2. Si es imagen: agregar `priority`, optimizar tamaño, preload
-3. Si es video: agregar poster ligero, `preload="none"`
-4. Verificar que LCP baja a <2.5s
+1. Probar Fix 1A: cambiar `enableAnimations={false}` en `page.tsx`
+2. Deploy a preview de Vercel
+3. Correr PSI contra el preview URL
+4. Si LCP < 2.5s → decidir si se quiere animación alternativa (Fix 1B/C/D) o se deja sin animación
+5. Si LCP sigue alto → investigar si hay otra causa (imagen hero, CSS blocking)
 
-**Estimación:** 1-2 horas. Depende de qué elemento es el LCP.
+**Estimación:** 15 minutos para el test. La decisión sobre la animación puede tomar más.
 
-### Fase C: Performance — TBT (5.4s → <200ms)
+### Fase C: Performance — Optimizaciones secundarias
 
-1. Lazy load de componentes below-the-fold con `dynamic()`
-2. Audit de bundle size — identificar qué pesa más
-3. Diferir carga de motion/react para animaciones de scroll
-4. Reducir unused JS
+Solo si Fase B no lleva el score a 90+:
 
-**Estimación:** 2-4 horas. Es el más complejo — requiere profiling del bundle.
+1. Optimizar imagen hero (1,420 KiB ahorrable en delivery)
+2. Verificar que video `nelson-3-optimizado.mp4` no se pre-descarga
+3. Reducir unused JS (47 KiB)
+4. Evaluar CSS render blocking (740ms)
 
-### Fase D: Performance — Verificación final
+**Nota:** TBT ya es 20ms en producción (score 100). No requiere trabajo.
 
-1. Correr Lighthouse en modo CI (3 corridas, promediar)
-2. Verificar en mobile y desktop
-3. Probar en las páginas más pesadas (Homepage, Baumex, Parques)
+### Fase D: Verificación
+
+1. Correr PSI contra producción (mobile + desktop) — **3 corridas, tomar la mediana**
+2. Verificar en las páginas más pesadas (Homepage, Baumex, Parques)
+3. Documentar scores finales
+
+**Regla de verificación para PSI:** Los scores de PSI varían entre corridas. Para cualquier medición baseline o post-fix, correr la API **3 veces** y tomar la **mediana** del score de Performance. No tomar decisiones basadas en una sola corrida.
 
 ---
 
@@ -144,23 +186,22 @@ Nada que hacer.
 
 | Riesgo | Mitigación |
 |---|---|
-| Lazy load rompe la experiencia visual (flash de contenido) | Usar skeletons o min-height para evitar CLS |
-| Quitar animaciones reduce la calidad visual | No quitar — solo diferir la carga del JS hasta que se necesite |
+| Quitar animación del hero reduce calidad visual | Probar primero sin animación (Fix 1A), luego considerar fade (Fix 1B) como alternativa |
+| Variabilidad de PSI da falsos positivos/negativos | Regla de 3 corridas + mediana para cualquier decisión |
 | Optimizar imágenes degrada calidad | Usar avif/webp con quality 80+ (ya configurado en next.config) |
-| Lighthouse en localhost ≠ producción | Correr también contra el deploy de Vercel |
-| 100 en performance es difícil de mantener | Es un target — 90+ sostenido es más realista en producción |
+| 100 en Performance es difícil de mantener | Target realista: 90+ sostenido. 100 requiere cero animaciones JS en above-the-fold |
 
 ---
 
 ## Nota importante
 
-**100 en Performance es extremadamente difícil** para un sitio con videos, animaciones motion/react y muchas imágenes. El target realista es:
+Tres de cuatro métricas ya están en 100 en producción. El único trabajo real es bajar el LCP de 5.3s a <2.5s, y la causa raíz ya está identificada (animación del hero).
 
-| Métrica | Target realista | Target ideal |
-|---|---|---|
-| Performance | 90+ | 100 |
-| Accessibility | 100 | 100 |
-| Best Practices | 100 | 100 |
-| SEO | 100 | 100 |
+| Métrica | Actual (prod) | Target | Trabajo necesario |
+|---|---|---|---|
+| Performance | 71 | 90+ | Fix de animación hero (LCP) |
+| Accessibility | 100 | 100 | Ninguno |
+| Best Practices | 100 | 100 | Ninguno |
+| SEO | 100 | 100 | Ninguno |
 
-Llegar a 100 en Performance requiere compromisos agresivos en la experiencia visual (quitar videos, reducir animaciones). 90+ es alcanzable sin sacrificar diseño.
+100 en Performance requiere que no haya animaciones JS en el above-the-fold. 90+ es alcanzable con una animación de fade (opacity) en vez del slide actual (translateX).
