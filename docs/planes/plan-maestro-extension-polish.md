@@ -99,9 +99,9 @@ El switcher funciona para las ~33 rutas en route-map pero falla en edge cases:
 
 ---
 
-## ~~Fase 11: Language switcher con route-map~~ → Absorbida en Fase 10
+## ~~Fase 11: Language switcher con route-map~~ → ✅ COMPLETADA (absorbida en Fase 10)
 
-`language-flags.tsx` ya fue actualizado con route-map en esta sesión (2026-04-11). Pendiente de commit.
+`language-flags.tsx` conectado con `toSpanish`/`toEnglish` del route-map (commit 6d499ca, 2026-04-11). Los edge cases pendientes (blog/noticias sin traducción, `/es/contactanos` sin mapeo) se resuelven en Fase 10.
 
 ---
 
