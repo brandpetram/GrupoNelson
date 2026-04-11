@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { toSpanish, toEnglish } from '@/glossary/route-map';
 
 interface LanguageFlagsProps {
   className?: string;
@@ -13,14 +14,18 @@ interface LanguageFlagsProps {
 export function LanguageFlags({ className, size = 'md', showLabels = false }: LanguageFlagsProps) {
   const pathname = usePathname();
 
-  // Estructura actual: español en / , inglés en /en/
-  // En Fase 6 se invertirá: inglés en / , español en /es/
-  // Cuando eso pase, importar toSpanish/toEnglish de @/glossary/route-map
-  const currentLang = pathname?.startsWith('/en') ? 'en' : 'es';
+  // Inglés en / (sin prefijo), español en /es/
+  const currentLang = pathname?.startsWith('/es') ? 'es' : 'en';
 
   const getLanguageUrl = (targetLang: string) => {
-    if (targetLang === 'es') return '/';
-    if (targetLang === 'en') return '/en';
+    if (targetLang === 'es') {
+      if (pathname?.startsWith('/es')) return pathname;
+      return toSpanish(pathname ?? '/');
+    }
+    if (targetLang === 'en') {
+      if (!pathname?.startsWith('/es')) return pathname ?? '/';
+      return toEnglish(pathname);
+    }
     return '/';
   };
 

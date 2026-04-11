@@ -114,19 +114,22 @@ El propeado (fase 4) y la limpieza (fase 2) se pueden fusionar — en la prácti
 ### Orden final propuesto
 
 ```
-Fase 1:   Selección y clasificación de componentes reutilizables ← YA HECHO (este plan)
-Fase 2:   Limpieza + propeado de Tier 1 (reutilizables)
+Fase 1:   Selección y clasificación de componentes reutilizables ✅ COMPLETADA
+Fase 2:   Limpieza + propeado de Tier 1 (reutilizables)          ✅ COMPLETADA
           ↳ incluye fix de CTAs de componentes Tier 1 (ej: scroll-storytelling)
-Fase 3:   Corrección de CTAs y links rotos (resto del sitio)
-Fase 3.5: Refactor de layout — sacar Footer del root (prerequisito compartido)
-Fase 4:   Sección de instrucciones protegida
-Fase 5:   Propeado de Tier 2 (bilingüe) + infraestructura de traducción
-Fase 6:   Traducción página por página
-          ↳ 6a: reorganización de rutas + redirects (deploy atómico)
-          ↳ 6b: crear páginas inglés (por prioridad de negocio)
-          ↳ 6c: localización de componentes Tier 3 (copias locales con texto inglés)
-Fase 7:   SEO bilingüe y verificación final
+Fase 3:   Corrección de CTAs y links rotos (resto del sitio)     ✅ COMPLETADA
+Fase 3.5: Refactor de layout — sacar Footer del root             ✅ COMPLETADA
+Fase 4:   Sección de instrucciones protegida                     ✅ COMPLETADA
+Fase 5:   Propeado de Tier 2 (bilingüe) + infra de traducción   ✅ COMPLETADA
+Fase 6:   Traducción página por página                           ✅ COMPLETADA
+          ↳ 6a: reorganización de rutas + redirects              ✅ COMPLETADA (2026-04-11)
+          ↳ 6b: crear páginas inglés (~36 páginas)               ✅ COMPLETADA (2026-04-11)
+          ↳ 6c: localización de componentes Tier 3 (Baumex)      ✅ COMPLETADA (2026-04-11)
+Fase 7:   SEO bilingüe y verificación final                      ✅ COMPLETADA (2026-04-11)
 ```
+
+**Plan maestro completado el 2026-04-11.**
+Extensión de polish en `docs/planes/plan-maestro-extension-polish.md` (Fases 8-12).
 
 ### Diagrama de dependencias
 
