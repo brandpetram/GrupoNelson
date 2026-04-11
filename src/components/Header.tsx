@@ -54,17 +54,25 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
 
 // === Data imports ===
-import {
-  whyNelsonLinks as whyNelsonLinksData,
-  parksMexicaliLinks as parksMexicaliLinksData,
-  parksInventoryLinks as parksInventoryLinksData,
-  solutionsServicesLinks as solutionsServicesLinksData,
-  solutionsIndustryLinks as solutionsIndustryLinksData,
-  expertiseCapabilitiesLinks as expertiseCapabilitiesLinksData,
-  expertiseStandardsLinks as expertiseStandardsLinksData,
-  insightsLearnLinks as insightsLearnLinksData,
-  insightsConnectLinks as insightsConnectLinksData,
-} from '@/data/nav/navigation';
+import * as navEs from '@/data/nav/navigation';
+import * as navEn from '@/data/nav/navigation-en';
+
+type Lang = 'es' | 'en'
+
+function getNavData(lang: Lang) {
+  const nav = lang === 'en' ? navEn : navEs
+  return {
+    whyNelsonLinksData: nav.whyNelsonLinks,
+    parksMexicaliLinksData: nav.parksMexicaliLinks,
+    parksInventoryLinksData: nav.parksInventoryLinks,
+    solutionsServicesLinksData: nav.solutionsServicesLinks,
+    solutionsIndustryLinksData: nav.solutionsIndustryLinks,
+    expertiseCapabilitiesLinksData: nav.expertiseCapabilitiesLinks,
+    expertiseStandardsLinksData: nav.expertiseStandardsLinks,
+    insightsLearnLinksData: nav.insightsLearnLinks,
+    insightsConnectLinksData: nav.insightsConnectLinks,
+  }
+}
 
 // === Interfaces ===
 interface FeatureLink {
@@ -123,69 +131,67 @@ const insightsIconMap: Record<string, React.ReactElement> = {
   calendar: <Calendar className="size-5 fill-gray-400 stroke-gray-500" />,
 };
 
-// === Processed Data ===
-const whyNelsonLinks: FeatureLink[] = whyNelsonLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: whyNelsonIconMap[item.iconKey] ?? <Star className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
+// === Processed Data (por idioma) ===
+function buildNavLinks(lang: Lang) {
+  const data = getNavData(lang)
+  return {
+    whyNelsonLinks: data.whyNelsonLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: whyNelsonIconMap[item.iconKey] ?? <Star className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    parksMexicaliLinks: data.parksMexicaliLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: parksIconMap[item.iconKey] ?? <Building2 className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    parksInventoryLinks: data.parksInventoryLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: parksIconMap[item.iconKey] ?? <Warehouse className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    solutionsServicesLinks: data.solutionsServicesLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: solutionsIconMap[item.iconKey] ?? <Hammer className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    solutionsIndustryLinks: data.solutionsIndustryLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: solutionsIconMap[item.iconKey] ?? <Factory className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
 
-const parksMexicaliLinks: FeatureLink[] = parksMexicaliLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: parksIconMap[item.iconKey] ?? <Building2 className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const parksInventoryLinks: FeatureLink[] = parksInventoryLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: parksIconMap[item.iconKey] ?? <Warehouse className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const solutionsServicesLinks: FeatureLink[] = solutionsServicesLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: solutionsIconMap[item.iconKey] ?? <Hammer className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const solutionsIndustryLinks: FeatureLink[] = solutionsIndustryLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: solutionsIconMap[item.iconKey] ?? <Factory className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const expertiseCapabilitiesLinks: FeatureLink[] = expertiseCapabilitiesLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: expertiseIconMap[item.iconKey] ?? <HardHat className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const expertiseStandardsLinks: FeatureLink[] = expertiseStandardsLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: expertiseIconMap[item.iconKey] ?? <Award className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const insightsLearnLinks: FeatureLink[] = insightsLearnLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: insightsIconMap[item.iconKey] ?? <Newspaper className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
-
-const insightsConnectLinks: FeatureLink[] = insightsConnectLinksData.map((item) => ({
-  href: item.href,
-  name: item.name,
-  description: item.description,
-  icon: insightsIconMap[item.iconKey] ?? <Calendar className="size-5 fill-gray-400 stroke-gray-500" />,
-}));
+    expertiseCapabilitiesLinks: data.expertiseCapabilitiesLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: expertiseIconMap[item.iconKey] ?? <HardHat className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    expertiseStandardsLinks: data.expertiseStandardsLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: expertiseIconMap[item.iconKey] ?? <Award className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    insightsLearnLinks: data.insightsLearnLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: insightsIconMap[item.iconKey] ?? <Newspaper className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+    insightsConnectLinks: data.insightsConnectLinksData.map((item) => ({
+      href: item.href,
+      name: item.name,
+      description: item.description,
+      icon: insightsIconMap[item.iconKey] ?? <Calendar className="size-5 fill-gray-400 stroke-gray-500" />,
+    })) as FeatureLink[],
+  }
+}
 
 // === Mobile Menu Data ===
 interface MobileMenuCategory {
@@ -198,39 +204,19 @@ interface MobileMenuSection {
   categories: MobileMenuCategory[];
 }
 
-const mobileMenuData: MobileMenuSection[] = [
-  {
-    name: 'Nosotros',
-    categories: [{ title: 'La Empresa', links: whyNelsonLinks }],
-  },
-  {
-    name: 'Parques y Naves',
-    categories: [
-      { title: 'Mexicali', links: parksMexicaliLinks },
-      { title: 'Inventario', links: parksInventoryLinks },
-    ],
-  },
-  {
-    name: 'Constructora',
-    categories: [
-      { title: 'Servicios de Construcción', links: solutionsServicesLinks },
-      { title: 'Calidad y Estándares', links: solutionsIndustryLinks },
-    ],
-  },
-  {
-    name: 'Experiencia',
-    categories: [
-      { title: 'Resultados', links: expertiseCapabilitiesLinks },
-    ],
-  },
-  {
-    name: 'Recursos',
-    categories: [
-      { title: 'Aprender', links: insightsLearnLinks },
-      { title: 'Conectar', links: insightsConnectLinks },
-    ],
-  },
-];
+function buildMobileMenuData(lang: Lang): MobileMenuSection[] {
+  const links = buildNavLinks(lang)
+  const labels = lang === 'en'
+    ? { nosotros: 'About', parques: 'Parks & Buildings', constructora: 'Construction', experiencia: 'Experience', recursos: 'Resources', empresa: 'The Company', mexicali: 'Mexicali', inventario: 'Inventory', servicios: 'Construction Services', calidad: 'Quality & Standards', resultados: 'Results', aprender: 'Learn', conectar: 'Connect' }
+    : { nosotros: 'Nosotros', parques: 'Parques y Naves', constructora: 'Constructora', experiencia: 'Experiencia', recursos: 'Recursos', empresa: 'La Empresa', mexicali: 'Mexicali', inventario: 'Inventario', servicios: 'Servicios de Construcción', calidad: 'Calidad y Estándares', resultados: 'Resultados', aprender: 'Aprender', conectar: 'Conectar' }
+  return [
+    { name: labels.nosotros, categories: [{ title: labels.empresa, links: links.whyNelsonLinks }] },
+    { name: labels.parques, categories: [{ title: labels.mexicali, links: links.parksMexicaliLinks }, { title: labels.inventario, links: links.parksInventoryLinks }] },
+    { name: labels.constructora, categories: [{ title: labels.servicios, links: links.solutionsServicesLinks }, { title: labels.calidad, links: links.solutionsIndustryLinks }] },
+    { name: labels.experiencia, categories: [{ title: labels.resultados, links: links.expertiseCapabilitiesLinks }] },
+    { name: labels.recursos, categories: [{ title: labels.aprender, links: links.insightsLearnLinks }, { title: labels.conectar, links: links.insightsConnectLinks }] },
+  ]
+}
 
 // === List Item Component ===
 interface ListItemProps {
@@ -266,10 +252,11 @@ interface HeaderProps {
   mobileVariant?: 'dark' | 'light';
 }
 
-export default function Header({ 
+export default function Header({
   variant = 'light',
-  mobileVariant 
-}: HeaderProps) {
+  mobileVariant,
+  lang = 'es',
+}: HeaderProps & { lang?: Lang }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const isLarge = useMedia('(min-width: 75rem)');
@@ -349,7 +336,7 @@ export default function Header({
                   isMobileMenuOpen && 'border-b'
                 )}
               >
-                <Link href="/" aria-label="home" className="flex items-center space-x-2">
+                <Link href={lang === 'en' ? '/en' : '/'} aria-label="home" className="flex items-center space-x-2">
                   <LogoNelson variant={logoVariant} width={140} className="origin-left scale-75 393:scale-90 430:scale-100 768:scale-[1.35] 1024:scale-150" />
                 </Link>
 
@@ -392,14 +379,14 @@ export default function Header({
               <div className="hidden 1200:grid 1200:grid-cols-[auto_1fr_auto] 1280:grid-cols-[auto_1fr_auto_auto] 1200:items-center 1200:gap-x-6 1024:gap-x-8">
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
-                  <Link href="/" aria-label="home" className="flex items-center space-x-2">
+                  <Link href={lang === 'en' ? '/en' : '/'} aria-label="home" className="flex items-center space-x-2">
                     <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-150 1200:scale-[1.2] 1280:scale-[1.2] 1366:scale-150 in-data-scrolled:scale-90 in-data-scrolled:md:scale-[1.2] in-data-scrolled:1200:scale-[0.96] in-data-scrolled:1280:scale-[0.96] in-data-scrolled:1366:scale-[1.2] transition-transform duration-500" />
                   </Link>
                 </div>
 
                 {/* Menu - centro */}
                 <div className="flex justify-center pt-3">
-                  <NavMenu variant={activeVariant} />
+                  <NavMenu variant={activeVariant} lang={lang} />
                 </div>
 
                 {/* Banderas - antes del botón (ocultas en 1024) */}
@@ -419,7 +406,7 @@ export default function Header({
               </div>
 
               {!isLarge && isMobileMenuOpen && (
-                <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} />
+                <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} lang={lang} />
               )}
             </div>
           </div>
@@ -430,7 +417,8 @@ export default function Header({
 }
 
 // === Mobile Menu with Drill-Down Navigation ===
-const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
+const MobileMenu = ({ closeMenu, lang = 'es' }: { closeMenu: () => void; lang?: Lang }) => {
+  const mobileMenuData = buildMobileMenuData(lang);
   const [activeSubmenu, setActiveSubmenu] = React.useState<string | null>(null);
 
   const activeSection = activeSubmenu
@@ -542,8 +530,18 @@ const MobileMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 };
 
 // === Desktop Navigation Menu ===
-const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
+const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light'; lang?: Lang }) => {
   const isDarkVariant = variant === 'dark';
+  const {
+    whyNelsonLinks, parksMexicaliLinks, parksInventoryLinks,
+    solutionsServicesLinks, solutionsIndustryLinks,
+    expertiseCapabilitiesLinks, expertiseStandardsLinks,
+    insightsLearnLinks, insightsConnectLinks,
+  } = buildNavLinks(lang);
+
+  const navLabels = lang === 'en'
+    ? { nosotros: 'About', parques: 'Parks', constructora: 'Construction', experiencia: 'Experience', recursos: 'Resources', empresa: 'The Company', mexicali: 'Mexicali', inventario: 'Inventory', servicios: 'Construction Services', calidad: 'Quality & Standards', resultados: 'Results', aprender: 'Learn', conectar: 'Connect', contacto: 'Contact' }
+    : { nosotros: 'Nosotros', parques: 'Parques', constructora: 'Constructora', experiencia: 'Experiencia', recursos: 'Recursos', empresa: 'La Empresa', mexicali: 'Mexicali', inventario: 'Inventario', servicios: 'Servicios de Construcción', calidad: 'Calidad y Estándares', resultados: 'Resultados', aprender: 'Aprender', conectar: 'Conectar', contacto: 'Contacto' };
 
   return (
     <NavigationMenu
@@ -574,7 +572,7 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
       <NavigationMenuList className="gap-1">
         {/* NOSOTROS - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{navLabels.nosotros}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -617,7 +615,7 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
 
         {/* PARQUES - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Parques</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{navLabels.parques}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -666,7 +664,7 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
 
         {/* CONSTRUCTORA - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Constructora</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{navLabels.constructora}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -715,7 +713,7 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
 
         {/* EXPERIENCIA - links + visual */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Experiencia</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{navLabels.experiencia}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -738,18 +736,38 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
                       ))}
                     </ul>
                   </div>
-                  <div className="overflow-hidden rounded-lg">
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      poster="/timelapse-jonathan-construccion-poster.jpg"
-                      className="h-full w-full object-cover"
-                    >
-                      <source src="/timelapse-jonathan-construccion.mp4" type="video/mp4" />
-                    </video>
-                  </div>
+                  {expertiseStandardsLinks.length > 0 ? (
+                    <div className="pl-6">
+                      <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
+                        Standards
+                      </span>
+                      <ul className="mt-3 space-y-1">
+                        {expertiseStandardsLinks.map((item, index) => (
+                          <ListItem
+                            key={index}
+                            href={item.href}
+                            title={item.name}
+                            description={item.description}
+                          >
+                            {item.icon}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <div className="overflow-hidden rounded-lg">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/timelapse-jonathan-construccion-poster.jpg"
+                        className="h-full w-full object-cover"
+                      >
+                        <source src="/timelapse-jonathan-construccion.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -758,7 +776,7 @@ const NavMenu = ({ variant = 'light' }: { variant?: 'dark' | 'light' }) => {
 
         {/* RECURSOS - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Recursos</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{navLabels.recursos}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
