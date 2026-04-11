@@ -61,7 +61,7 @@ export function HeroMarketing1Beta() {
                 <Link href="/contacto">Comienza aquí</Link>
               </Button>
               <Link
-                href="/experiencia"
+                href="/experiencia/excelencia-operativa"
                 className="inline-flex items-center gap-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors py-6"
               >
                 Conocer más

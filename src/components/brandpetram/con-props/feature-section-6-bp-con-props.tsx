@@ -28,7 +28,9 @@ interface FeatureSection6BPConPropsProps {
   feature2Icon?: ReactNode;
   feature2IconColor?: string;
   button1Text?: string;
+  button1Href?: string;
   button2Text?: string;
+  button2Href?: string;
   imageSrc?: string;
   imageAlt?: string;
 }
@@ -45,8 +47,10 @@ export function FeatureSection6BPConProps({
   feature2Description = "Shortly describe how this feature solves a specific user problem. Focus on benefits not on technical details.",
   feature2Icon = <Rocket className="h-5 w-5" />,
   feature2IconColor = "text-primary",
-  button1Text = "Get access",
-  button2Text = "Learn more",
+  button1Text = "Contacto",
+  button1Href = "/contacto",
+  button2Text = "Conocer más",
+  button2Href = "/constructora/build-to-suit",
   imageSrc = "https://ui.shadcn.com/placeholder.svg",
   imageAlt = "Hero image",
 }: FeatureSection6BPConPropsProps) {
@@ -100,10 +104,12 @@ export function FeatureSection6BPConProps({
             </div>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button>{button1Text}</Button>
-            <Button variant="ghost">
-              {button2Text}
-              <ArrowRight />
+            <Button asChild><a href={button1Href}>{button1Text}</a></Button>
+            <Button asChild variant="ghost">
+              <a href={button2Href}>
+                {button2Text}
+                <ArrowRight />
+              </a>
             </Button>
           </div>
         </div>

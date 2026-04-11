@@ -192,7 +192,7 @@ export function SplitStickyCasos() {
                 size="lg"
                 className="w-full text-base py-6 font-semibold"
               >
-                <Link href="/experiencia">Ver experiencia completa</Link>
+                <Link href="/experiencia/excelencia-operativa">Ver experiencia completa</Link>
               </Button>
             </div>
           </div>

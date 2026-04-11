@@ -241,7 +241,7 @@ export default function Contact() {
                                     <p className="text-muted-foreground text-base">
                                         Al enviar este formulario, aceptas nuestra{' '}
                                         <Link
-                                            href="/privacidad"
+                                            href="/aviso-de-privacidad"
                                             className="text-primary underline">
                                             Política de Privacidad
                                         </Link>

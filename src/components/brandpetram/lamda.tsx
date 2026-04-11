@@ -24,12 +24,12 @@ export function Lamda() {
 
             {/* Botones */}
             <div className="flex gap-4 mb-10">
-              <button className="px-8 py-4 bg-blue-600 text-white font-medium transition-all hover:bg-blue-700">
+              <a href="/contacto" className="px-8 py-4 bg-blue-600 text-white font-medium transition-all hover:bg-blue-700 inline-block">
                 Contáctanos
-              </button>
-              <button className="px-8 py-4 border border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transition-colors">
+              </a>
+              <a href="/inventario/naves-disponibles" className="px-8 py-4 border border-blue-600 text-blue-600 font-medium hover:bg-blue-50 transition-colors inline-block">
                 Ver más
-              </button>
+              </a>
             </div>
 
             <img
@@ -54,12 +54,12 @@ export function Lamda() {
 
           {/* Botones Inferiores */}
           <div className="flex gap-4 mt-4">
-            <button className="px-8 py-4 bg-blue-600 text-white font-medium transition-all hover:bg-blue-700">
+            <a href="/contacto" className="px-8 py-4 bg-blue-600 text-white font-medium transition-all hover:bg-blue-700 inline-block">
               Contáctanos
-            </button>
-            <button className="px-8 py-4 border border-blue-600 text-white font-medium hover:border-blue-700 transition-colors">
+            </a>
+            <a href="/inventario/naves-disponibles" className="px-8 py-4 border border-blue-600 text-white font-medium hover:border-blue-700 transition-colors inline-block">
               Ver más
-            </button>
+            </a>
           </div>
 
 

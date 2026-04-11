@@ -3,6 +3,8 @@
 //   heroicons v1, headlessui. Navegación eliminada (es sección, no header).
 //   style jsx → inline style. Imagen local GrupoNelson.
 
+'use client'
+
 import { TypewriterClients } from '@/components/motion-plus/typewriter-clients'
 
 export default function Mu() {
@@ -67,7 +69,7 @@ export default function Mu() {
               <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto 1200:col-span-6 1200:text-left 1200:flex 1200:items-center ">
                 <div>
                   <a
-                    href="#"
+                    href="/constructora/baumex"
                     className="hidden md:inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base 1200:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span className="px-3 py-0.5 text-white text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-semibold leading-5 uppercase tracking-wide bg-linear-to-br from-blue-600 to-blue-700 rounded-full">
@@ -86,16 +88,22 @@ export default function Mu() {
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
                     <div className="rounded-xs shadow">
-                      <a
-                        href="#"
+                      <button
+                        onClick={() => {
+                          const el = document.getElementById('nu')
+                          if (el) {
+                            const y = el.getBoundingClientRect().top + window.scrollY - 100
+                            window.scrollTo({ top: y, behavior: 'smooth' })
+                          }
+                        }}
                         className="cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-white bg-linear-to-br from-blue-600 to-blue-700 hover:opacity-90 md:py-4 md:text-lg md:px-10"
                       >
                         Conocer más
-                      </a>
+                      </button>
                     </div>
                     <div className="mt-3 sm:mt-0 sm:ml-3">
                       <a
-                        href="#"
+                        href="/contacto"
                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
                       >
                         Contacto

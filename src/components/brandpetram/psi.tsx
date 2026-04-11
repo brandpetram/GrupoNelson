@@ -71,8 +71,8 @@ export default function Psi() {
           </h2>
           <p className="mt-4 text-sm 360:text-sm 393:text-[0.9rem] 430:text-[0.95rem] 768:text-base 834:text-base 1024:text-lg 1200:text-[0.95rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground">
             Si no encuentras tu pregunta aquí,{" "}
-            <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
-              Contáctanos
+            <a href="mailto:contacto@nelson.com.mx" className="font-medium text-blue-600 hover:text-blue-500">
+              contáctanos
             </a>{" "}
             para más información.
           </p>

@@ -58,7 +58,7 @@ export default function Nu() {
                 </p>
                 <div className="mt-12">
                   <div className="cursor-pointer mt-4">
-                    <a href="#" className="text-blue-700 font-medium hover:text-blue-900">
+                    <a href="/contacto" className="text-blue-700 font-medium hover:text-blue-900">
                       Contáctanos →
                     </a>
                   </div>

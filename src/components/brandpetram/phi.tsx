@@ -59,7 +59,7 @@ export default function Phi() {
                     Nave diseñada y construida a la medida exacta de tu operación. Precio cerrado desde proyecto ejecutivo.
                   </span>
                   <div className="flex-none">
-                    <a href="#">
+                    <a href="/constructora/build-to-suit">
                       <button className="w-28  bg-blue-600  hover:opacity-90 p-3 text-white text-lg rounded-xs">
                         Ver más
                       </button>
@@ -78,7 +78,7 @@ export default function Phi() {
                     Ampliación de instalaciones existentes sin detener tu operación. Coordinación directa con tu equipo de planta.
                   </span>
                   <div className="flex-none">
-                    <a href="#">
+                    <a href="/contacto">
                       <button className="w-28  bg-blue-600  hover:opacity-90 p-3 text-white text-lg rounded-xs">
                         Ver más
                       </button>
@@ -97,7 +97,7 @@ export default function Phi() {
                     Adecuación de nave existente a los requerimientos específicos de tu operación industrial.
                   </span>
                   <div className="flex-none">
-                    <a href="#">
+                    <a href="/contacto">
                       <button className="w-28  bg-blue-600  hover:opacity-90 p-3 text-white text-lg rounded-xs">
                         Ver más
                       </button>
