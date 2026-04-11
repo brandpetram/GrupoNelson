@@ -13,9 +13,9 @@ export function Iota() {
                   Subestación eléctrica dedicada, sistema contraincendio central de 360,000 galones con línea eléctrica dedicada, seguridad 24/7, barda perimetral y vialidades pavimentadas. El contraincendio central ahorra 60% vs. sistemas individuales.
               </p>
 
-              <button className="w-fit px-4 1200:px-9 py-5 mt-5 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-gray-100 font-medium hover:border-gray-500 dark:hover:border-gray-400 transition-colors">
+              <a href="/contacto" className="w-fit px-4 1200:px-9 py-5 mt-5 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-gray-100 font-medium hover:border-gray-500 dark:hover:border-gray-400 transition-colors inline-block">
                   Contáctanos
-              </button>
+              </a>
           </div>
       </div>
 

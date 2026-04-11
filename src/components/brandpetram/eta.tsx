@@ -33,9 +33,9 @@ export function Eta() {
                 El Vigía — rentas más económicas del portafolio, Interiores Aéreos creció de 5,000 ft² a 550,000 aquí. Nelson I — desde 1984. Vigía II — Honeywell Aerospace opera aquí desde hace más de 30 años. Nelson II — 27 hectáreas, subestación eléctrica dedicada, contraincendio central de 360,000 galones, Gulfstream, DHL y Vertiv operan aquí.
               </p>
 
-              <button className="w-fit px-4 1200:px-9 py-5 mt-5 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-gray-100 font-medium hover:border-gray-500 dark:hover:border-gray-400 transition-colors">
+              <a href="/contacto" className="w-fit px-4 1200:px-9 py-5 mt-5 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-gray-100 font-medium hover:border-gray-500 dark:hover:border-gray-400 transition-colors inline-block">
                 Contáctanos
-              </button>
+              </a>
             </div>
           </div>
         </div>

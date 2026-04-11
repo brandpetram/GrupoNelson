@@ -50,7 +50,7 @@ export default function Xi() {
                 Si tu operación necesita una nave industrial con estándares internacionales en el noroeste de México, hablemos.
               </p>
               <div className="pb-12">
-                <a href="#">
+                <a href="/contacto">
                   <button className="bg-linear-to-br rounded-xs from-blue-600 to-blue-700 hover:opacity-90 py-4 px-6 text-white">
                     Contáctanos
                   </button>

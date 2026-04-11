@@ -12,7 +12,7 @@ export default function Chi() {
           Si tu operación necesita una constructora con estándares internacionales en el noroeste de México, hablemos.
         </p>
         <a
-          href="#"
+          href="/contacto"
           className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-xs text-blue-600 bg-white hover:bg-blue-50 sm:w-auto"
         >
           Contáctanos
