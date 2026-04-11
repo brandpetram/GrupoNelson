@@ -14,7 +14,7 @@ export default function EnLayout({
   return (
     <>
       {children}
-      <Footer1 />
+      <Footer1 lang="en" />
     </>
   );
 }

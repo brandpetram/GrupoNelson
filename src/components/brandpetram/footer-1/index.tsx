@@ -50,7 +50,9 @@ interface FooterColumn {
   sections: FooterSection[];
 }
 
-const footerData: FooterColumn[] = [
+type Lang = 'es' | 'en'
+
+const footerDataEs: FooterColumn[] = [
   {
     heading: 'Parques Industriales',
     sections: [
@@ -143,25 +145,134 @@ const footerData: FooterColumn[] = [
   },
 ];
 
-const socialLinks = [
-  { name: 'YouTube', href: 'https://www.youtube.com/@GrupoNelsonMexicali', icon: YouTubeIcon },
+// TODO: Actualizar hrefs cuando se creen las páginas inglés (Fase 6)
+// Por ahora apuntan a las rutas españolas existentes
+const footerDataEn: FooterColumn[] = [
+  {
+    heading: 'Industrial Parks',
+    sections: [
+      {
+        title: 'Mexicali',
+        links: [
+          { label: 'Nelson II Park', href: '/parques-industriales-mexicali/nelson-ii' },
+          { label: 'Nelson I Park', href: '/parques-industriales-mexicali/nelson-i' },
+          { label: 'El Vigía I Park', href: '/parques-industriales-mexicali/vigia-i' },
+          { label: 'El Vigía II Park', href: '/parques-industriales-mexicali/vigia-ii' },
+        ],
+      },
+      {
+        title: 'Inventory',
+        links: [
+          { label: 'Available Buildings', href: '/inventario/naves-disponibles' },
+          { label: 'Available Land', href: '/inventario/terrenos' },
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'Construction',
+    sections: [
+      {
+        title: 'Services',
+        links: [
+          { label: 'Baumex Construction', href: '/constructora/baumex' },
+          { label: 'Build-to-Suit', href: '/constructora/build-to-suit' },
+          { label: 'Turnkey Solutions', href: '/constructora/llave-en-mano' },
+          { label: 'Engineering & Design', href: '/constructora/diseno-e-ingenieria' },
+          { label: 'Specialized Projects', href: '/constructora/proyectos-especializados' },
+        ],
+      },
+      {
+        title: 'Quality',
+        links: [
+          { label: 'LEED Certification', href: '/constructora/leed' },
+          { label: 'International Standards', href: '/constructora/estandares-internacionales' },
+          { label: 'Portfolio', href: '/constructora/portafolio' },
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'Experience',
+    sections: [
+      {
+        title: 'Results',
+        links: [
+          { label: 'Operational Excellence', href: '/experiencia/excelencia-operativa' },
+          { label: 'Success Stories', href: '/experiencia/casos-de-exito' },
+          { label: 'Standards & Certifications', href: '/experiencia/normas-certificaciones-estandares' },
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'Resources',
+    sections: [
+      {
+        title: 'Content',
+        links: [
+          { label: 'Blog', href: '/blog' },
+          { label: 'News', href: '/noticias' },
+          { label: 'Resources', href: '/recursos' },
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'About',
+    sections: [
+      {
+        title: 'The Company',
+        links: [
+          { label: 'Track Record', href: '/nelson/trayectoria' },
+          { label: 'The Nelson Difference', href: '/nelson/diferencia-nelson' },
+          { label: 'Leadership', href: '/nelson/liderazgo' },
+          { label: 'Our Story', href: '/nelson/nuestra-historia' },
+        ],
+      },
+      {
+        title: 'Contact',
+        links: [
+          { label: 'Contact Us', href: '/contacto' },
+        ],
+      },
+    ],
+  },
 ];
 
-const legalLinks = [
+const legalLinksEs = [
   { label: 'Aviso de Privacidad', href: '/aviso-de-privacidad' },
   { label: 'Términos de Uso', href: '/terminos' },
   { label: 'Política de Cookies', href: '/politica-de-cookies' },
 ];
 
-export default function Footer1() {
+// TODO: Actualizar hrefs cuando se creen las páginas legales en inglés (Fase 6)
+const legalLinksEn = [
+  { label: 'Privacy Policy', href: '/aviso-de-privacidad' },
+  { label: 'Terms of Use', href: '/terminos' },
+  { label: 'Cookie Policy', href: '/politica-de-cookies' },
+];
+
+const socialLinks = [
+  { name: 'YouTube', href: 'https://www.youtube.com/@GrupoNelsonMexicali', icon: YouTubeIcon },
+];
+
+export default function Footer1({ lang = 'es' }: { lang?: Lang }) {
+  const footerData = lang === 'en' ? footerDataEn : footerDataEs
+  const legalLinks = lang === 'en' ? legalLinksEn : legalLinksEs
+  const homeHref = lang === 'en' ? '/en' : '/'
+  const contactHref = '/contacto' // TODO: cambiar a '/en/contact' cuando exista la ruta inglés
+  const contactLabel = lang === 'en' ? 'Contact Us' : 'Contáctanos'
+  const copyrightText = lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'
+  const addressLabel = lang === 'en' ? 'Grupo Nelson — Offices' : 'Grupo Nelson — Oficinas'
   return (
-    <footer data-component="Footer1" data-component-file="src/components/brandpetram/footer-1/index.tsx" data-component-props="false" className="bg-gray-900 text-white">
+    <footer data-component="Footer1" data-component-file="src/components/brandpetram/footer-1/index.tsx" data-component-props="true" className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-6 xl:gap-8">
           {/* Logo Column */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
+            <Link href={homeHref} className="inline-block">
               <LogoNelson variant="white" width={160} />
             </Link>
           </div>
@@ -233,13 +344,13 @@ export default function Footer1() {
             {/* Company Info */}
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
               {/* Logo */}
-              <Link href="/" className="inline-block">
+              <Link href={homeHref} className="inline-block">
                 <LogoNelson variant="white" width={120} />
               </Link>
 
               {/* Address */}
               <div className="text-sm text-gray-400">
-                <p>Grupo Nelson — Oficinas</p>
+                <p>{addressLabel}</p>
                 <p>Ave. Reforma #1699, Col. Nueva</p>
                 <p>Mexicali, BC, México 21100</p>
                 <p>(686) 561-3535</p>
@@ -264,10 +375,10 @@ export default function Footer1() {
 
               {/* Contact Link */}
               <Link
-                href="/contacto"
+                href={contactHref}
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors"
               >
-                Contáctanos
+                {contactLabel}
                 <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -281,7 +392,7 @@ export default function Footer1() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
             <p className="text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} Grupo Nelson. Todos los derechos reservados.
+              &copy; {new Date().getFullYear()} Grupo Nelson. {copyrightText}
             </p>
 
             {/* Legal Links */}
