@@ -26,9 +26,19 @@ Componentes compartidos que se usan en páginas inglés pero tienen texto hardco
 
 **Clasificación:** `parametrizar + compartir` — estos componentes ya son compartidos entre ES e EN, lo correcto es agregar prop `lang`, no crear copias locales.
 
-**Ownership:** `FichaTecnicaParque`, `ParkMap`, `LeedPageLayout` y `CarruselLeed` son archivos de sistema/compartidos. Se ejecuta desde MAIN.
+**Ownership por componente:**
 
-**Estimación:** 4 componentes.
+| Componente | Ubicación | Owner |
+|---|---|---|
+| `FichaTecnicaParque` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
+| `ParkMap` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
+| `LeedPageLayout` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
+| `CarruselLeed` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
+| Páginas EN que pasan `lang="en"` | `src/app/(en)/industrial-parks/*`, `src/app/(en)/construction/leed/*` | Pueden editarse desde MAIN porque el cambio es solo agregar prop `lang="en"` a imports existentes |
+
+**Secuencia:** Propear los 4 componentes primero (MAIN), luego actualizar las páginas EN para pasar `lang="en"` (mismo commit o commit separado).
+
+**Estimación:** 4 componentes + ~11 páginas que los consumen.
 
 ---
 
@@ -45,16 +55,31 @@ El helper `src/lib/create-metadata.ts` ya existe pero tiene problemas que impide
    - `openGraph.images` en blog/noticias
    - `twitter` card config en algunas páginas
    
-   **Fix:** Cambiar la firma para hacer spread con metadata adicional:
+   **Fix:** Usar deep merge (no spread superficial) para combinar metadata generada con metadata adicional. Un spread `{ ...generated, ...extra }` pierde propiedades anidadas — si `extra` tiene `openGraph.images` y `generated` tiene `openGraph.locale`, el spread borra `locale`. Usar una utilidad de deep merge o construir el objeto manualmente por campo:
    ```typescript
    export function createMetadata(opts: {
      lang: 'en' | 'es'
      path: string
      title: string
      description: string
-     extra?: Partial<Metadata>  // robots, twitter, openGraph.images, etc.
-   }): Metadata
+     extra?: Partial<Metadata>
+   }): Metadata {
+     const base = { /* title, description, alternates, openGraph.locale */ }
+     return {
+       ...base,
+       ...extra,
+       openGraph: {
+         ...base.openGraph,
+         ...extra?.openGraph,
+       },
+       alternates: {
+         ...base.alternates,
+         ...extra?.alternates,
+       },
+     }
+   }
    ```
+   Cada campo anidado (`openGraph`, `alternates`, `robots`) se mergea por separado. Campos planos (`title`, `description`) se sobreescriben normalmente.
 
 3. **Hreflang falso en páginas solo-español:** `toEnglish('/es/blog/mi-post')` devuelve `/` (fallback), generando un hreflang que dice "la versión inglés de este post es la home". Esto es peor que no tener hreflang.
    
@@ -62,12 +87,28 @@ El helper `src/lib/create-metadata.ts` ya existe pero tiene problemas que impide
 
 ### Trabajo (después de los fixes)
 
-1. Arreglar `createMetadata()` con los 3 fixes
-2. Adoptar en páginas bilingües (las que tienen equivalente en route-map) — ~33 ES + ~33 EN
-3. **NO adoptar** en páginas solo-español (blog/[slug], noticias/[slug], noticias/category/*)
-4. **NO adoptar** en páginas de dev, instrucciones, studio
+1. Arreglar `createMetadata()` con los 3 fixes (URL base, deep merge, hasTranslation)
+2. Adoptar en páginas bilingües que tienen equivalente en route-map
 
-**No es un cambio mecánico** — cada página necesita verificar qué metadata extra tiene antes de migrar.
+### Alcance exacto
+
+**Adoptar (páginas con equivalente en route-map):**
+- 33 páginas en `(en)/` — Home, About (4), Industrial Parks (5), Construction (7 + Baumex), LEED (8), Experience (3), Inventory (2), Contact, Resources, Legal (3), Thank-you
+- 33 páginas equivalentes en `es/` — las mismas secciones
+
+**Total: 66 páginas.**
+
+**NO adoptar:**
+- `es/blog/` — index, [slug], category/[category] (3 rutas, contenido de Sanity, sin equivalente EN)
+- `es/noticias/` — index, [slug], category/[category] (3 rutas, contenido de Sanity, sin equivalente EN)
+- `es/contactanos/` — redirect legacy a contacto, no necesita metadata propia
+- `es/gracias/` — tiene `robots: { index: false }`, no necesita hreflang
+- `(en)/thank-you/` — tiene `robots: { index: false }`, no necesita hreflang
+- `(dev)/*` — páginas internas (componentes, qa, proyecto, productos, dev)
+- `(instrucciones)/*` — sección interna protegida
+- `studio/*` — Sanity Studio
+
+**No es un cambio mecánico** — cada página necesita verificar qué metadata extra tiene (robots, OG images, twitter) antes de migrar. Las ~66 páginas bilingües son el universo, pero cada una puede tener particularidades.
 
 ---
 
