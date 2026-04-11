@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react'
 import { Button } from '@/components/ui/button'
 import { Post } from '@/types/post'
-import { BlogPostGrid } from '@/app/(site)/noticias/blog-post-grid'
+import { BlogPostGrid } from '@/app/es/noticias/blog-post-grid'
 
 interface CategoryBlogListWithPaginationProps {
     initialPosts: Post[]

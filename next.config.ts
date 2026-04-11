@@ -41,36 +41,34 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/web',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/web/:path*',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/wp-content/uploads/2019/07/Specs-Building-Nelson-II-7Sept18.pdf',
-        destination: '/parques-industriales-mexicali/nelson-ii',
-        permanent: true,
-      },
-      {
-        source: '/wp-content/uploads/2024/06/Specs-Nave-1-Vigia-II.pdf',
-        destination: '/parques-industriales-mexicali/vigia-ii',
-        permanent: true,
-      },
-      {
-        source: '/wp-content/uploads/2019/02/Terreno-Lit-On.pdf',
-        destination: '/inventario/terrenos',
-        permanent: true,
-      },
-      {
-        source: '/wp-content/uploads/:path*',
-        destination: '/',
-        permanent: true,
-      },
+      // Temporal: raíz y /en redirigen a español hasta que existan páginas inglés
+      { source: '/', destination: '/es', permanent: false },
+      { source: '/en', destination: '/es', permanent: false },
+      { source: '/en/:path*', destination: '/es', permanent: false },
+
+      // Redirects de WordPress legacy → /es
+      { source: '/web', destination: '/es', permanent: true },
+      { source: '/web/:path*', destination: '/es', permanent: true },
+      { source: '/wp-content/uploads/2019/07/Specs-Building-Nelson-II-7Sept18.pdf', destination: '/es/parques-industriales-mexicali/nelson-ii', permanent: true },
+      { source: '/wp-content/uploads/2024/06/Specs-Nave-1-Vigia-II.pdf', destination: '/es/parques-industriales-mexicali/vigia-ii', permanent: true },
+      { source: '/wp-content/uploads/2019/02/Terreno-Lit-On.pdf', destination: '/es/inventario/terrenos', permanent: true },
+      { source: '/wp-content/uploads/:path*', destination: '/es', permanent: true },
+
+      // Redirects 301: rutas españolas viejas → /es/*
+      { source: '/nelson/:path*', destination: '/es/nelson/:path*', permanent: true },
+      { source: '/parques-industriales-mexicali/:path*', destination: '/es/parques-industriales-mexicali/:path*', permanent: true },
+      { source: '/constructora/:path*', destination: '/es/constructora/:path*', permanent: true },
+      { source: '/experiencia/:path*', destination: '/es/experiencia/:path*', permanent: true },
+      { source: '/inventario/:path*', destination: '/es/inventario/:path*', permanent: true },
+      { source: '/blog/:path*', destination: '/es/blog/:path*', permanent: true },
+      { source: '/noticias/:path*', destination: '/es/noticias/:path*', permanent: true },
+      { source: '/contacto', destination: '/es/contacto', permanent: true },
+      { source: '/contactanos', destination: '/es/contactanos', permanent: true },
+      { source: '/gracias', destination: '/es/gracias', permanent: true },
+      { source: '/recursos', destination: '/es/recursos', permanent: true },
+      { source: '/aviso-de-privacidad', destination: '/es/aviso-de-privacidad', permanent: true },
+      { source: '/terminos', destination: '/es/terminos', permanent: true },
+      { source: '/politica-de-cookies', destination: '/es/politica-de-cookies', permanent: true },
     ]
   },
   async headers() {

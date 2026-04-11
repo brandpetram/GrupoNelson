@@ -3,15 +3,15 @@
 import { useState, useTransition } from 'react'
 import { Button } from '@/components/ui/button'
 import { Post } from '@/types/post'
-import { BlogPostGrid } from '@/app/(site)/noticias/blog-post-grid'
+import { BlogPostGrid } from '@/app/es/blog/blog-post-grid'
 
-interface BlogListWithPaginationProps {
+interface CategoryBlogListWithPaginationProps {
     initialPosts: Post[]
     totalCount: number
     loadMoreAction: (offset: number) => Promise<Post[]>
 }
 
-export function BlogListWithPagination({ initialPosts, totalCount, loadMoreAction }: BlogListWithPaginationProps) {
+export function CategoryBlogListWithPagination({ initialPosts, totalCount, loadMoreAction }: CategoryBlogListWithPaginationProps) {
     const [posts, setPosts] = useState<Post[]>(initialPosts)
     const [isPending, startTransition] = useTransition()
     const hasMore = posts.length < totalCount
@@ -33,7 +33,7 @@ export function BlogListWithPagination({ initialPosts, totalCount, loadMoreActio
                         disabled={isPending}
                         variant="outline"
                         size="lg">
-                        {isPending ? 'Cargando...' : 'Cargar más'}
+                        {isPending ? 'Loading...' : 'Load More'}
                     </Button>
                 </div>
             )}

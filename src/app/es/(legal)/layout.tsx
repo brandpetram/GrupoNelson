@@ -1,5 +1,4 @@
 import Header from '@/components/Header'
-import Footer1 from '@/components/brandpetram/footer-1'
 import Link from 'next/link'
 
 export default function LegalLayout({ children }: { children: React.ReactNode }) {
@@ -21,17 +20,17 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
                 <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground mb-6">Legal</p>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/aviso-de-privacidad" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <Link href="/es/aviso-de-privacidad" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                       Aviso de Privacidad
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terminos" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <Link href="/es/terminos" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                       Términos de Uso
                     </Link>
                   </li>
                   <li>
-                    <Link href="/politica-de-cookies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <Link href="/es/politica-de-cookies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                       Política de Cookies
                     </Link>
                   </li>
@@ -51,7 +50,6 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
           <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         </div>
       </main>
-      <Footer1 />
     </div>
   )
 }

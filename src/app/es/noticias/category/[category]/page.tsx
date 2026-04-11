@@ -1,7 +1,7 @@
-import { BlogFilter, Category } from '@/app/(site)/noticias/category-filter'
+import { BlogFilter, Category } from '@/app/es/noticias/category-filter'
 import { notFound } from 'next/navigation'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
-import { CategoryBlogListWithPagination } from '@/app/(site)/noticias/category-blog-list-with-pagination'
+import { CategoryBlogListWithPagination } from '@/app/es/noticias/category-blog-list-with-pagination'
 import { loadMoreCategoryNoticias, getCategoryNoticias, getCategoryNoticiasCount, getAllNoticias, getAllCategories } from '@/lib/actions'
 
 const PAGE_SIZE = 9

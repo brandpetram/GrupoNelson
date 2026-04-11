@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { CategoryBlogListWithPagination } from '@/app/(site)/blog/category-blog-list-with-pagination'
+import { CategoryBlogListWithPagination } from '@/app/es/blog/category-blog-list-with-pagination'
 import { loadMoreCategoryPosts, getCategoryPosts, getCategoryPostsCount, getAllCategories } from '@/lib/actions'
 
 const PAGE_SIZE = 12

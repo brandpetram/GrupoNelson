@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react'
 import { Button } from '@/components/ui/button'
 import { Post } from '@/types/post'
-import { BlogPostGrid } from '@/app/(site)/blog/blog-post-grid'
+import { BlogPostGrid } from '@/app/es/blog/blog-post-grid'
 import { Container } from '@/components/container'
 
 interface BlogListWithPaginationProps {

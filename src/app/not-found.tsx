@@ -13,7 +13,7 @@ export default function NotFound() {
           La página que buscas no existe o fue movida.
         </p>
         <Link
-          href="/"
+          href="/es"
           className="mt-8 rounded-xs bg-blue-600 px-6 py-3 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
         >
           Volver al inicio

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { BlogFilter, Category } from '@/app/(site)/noticias/category-filter'
+import { BlogFilter, Category } from '@/app/es/noticias/category-filter'
 
 export const metadata: Metadata = {
   title: 'Noticias',
   description: 'Últimas noticias de Grupo Nelson: nuevos proyectos, expansiones en parques industriales y naves industriales built-to-suit en Mexicali.',
 }
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList } from '@/components/ui/breadcrumb'
-import { BlogListWithPagination } from '@/app/(site)/noticias/blog-list-with-pagination'
+import { BlogListWithPagination } from '@/app/es/noticias/blog-list-with-pagination'
 import { loadMoreNoticias, getInitialNoticias, getTotalNoticiasCount } from '@/lib/actions'
 
 const PAGE_SIZE = 12

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { Container, Separator } from "@/components/container";
-import { ProductIllustration } from "@/app/(marketing)/product/sections/product-illustration";
+import { ProductIllustration } from "@/app/(dev)/product/sections/product-illustration";
 import LogoCloudClientes from "./sections/logo-cloud-clientes";
 import { FeatureCardsResultados } from "./sections/feature-cards-resultados";
 import ComoTrabajamos from "./sections/como-trabajamos";

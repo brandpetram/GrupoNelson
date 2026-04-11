@@ -1,4 +1,4 @@
-import { BlogListing } from '@/app/(site)/blog/blog-listing'
+import { BlogListing } from '@/app/es/blog/blog-listing'
 import { getAllPosts, getAllCategories } from '@/lib/actions'
 
 export default async function BlogPage() {
