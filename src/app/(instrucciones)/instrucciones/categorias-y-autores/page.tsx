@@ -48,7 +48,7 @@ export default function CategoriasYAutoresPage() {
       <Steps
         title="Crear una categoría"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code></>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code></>,
           'En la barra lateral, haz clic en "Category"',
           'Haz clic en "+" (crear)',
           'Escribe el título',
@@ -78,7 +78,7 @@ export default function CategoriasYAutoresPage() {
       <Steps
         title="Crear un autor"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code></>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code></>,
           'En la barra lateral, haz clic en "Author"',
           'Haz clic en "+" (crear)',
           'Escribe el nombre',

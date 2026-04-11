@@ -17,7 +17,7 @@ export default function BlogPage() {
         description="Crea y edita artículos del blog de Grupo Nelson. El blog es multilingüe: español, inglés y chino."
       />
 
-      <SiteLink url="gruponelson.mx/blog" />
+      <SiteLink url="nelson.com.mx/blog" />
 
       <Permissions
         can={[
@@ -85,7 +85,7 @@ export default function BlogPage() {
       <Steps
         title="Crear un artículo nuevo"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code></>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code></>,
           'En la barra lateral, haz clic en "Post"',
           'Haz clic en "+" (crear)',
           'Escribe el título en español',

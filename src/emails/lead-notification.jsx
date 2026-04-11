@@ -12,8 +12,8 @@ import {
 } from "@react-email/components";
 
 export default function LeadNotification({
-  siteName = "gruponelson.mx",
-  siteUrl = "https://gruponelson.mx",
+  siteName = "nelson.com.mx",
+  siteUrl = "https://nelson.com.mx",
   fields = [],
 }) {
   return (
@@ -55,8 +55,8 @@ export default function LeadNotification({
 }
 
 LeadNotification.PreviewProps = {
-  siteName: "gruponelson.mx",
-  siteUrl: "https://gruponelson.mx",
+  siteName: "nelson.com.mx",
+  siteUrl: "https://nelson.com.mx",
   fields: [
     { label: "Nombre", value: "Juan P\u00e9rez" },
     { label: "Email", value: "juan@empresa.com" },

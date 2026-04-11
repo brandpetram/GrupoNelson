@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer1 from "@/components/brandpetram/footer-1";
 
 export const metadata: Metadata = {
   title: "Grupo Nelson - Industrial Parks in Mexicali",
@@ -10,5 +11,10 @@ export default function EnLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      {children}
+      <Footer1 />
+    </>
+  );
 }

@@ -24,10 +24,10 @@ export default function ParquesIndustrialesPage() {
         </p>
         <div className="grid gap-1.5">
           {[
-            'gruponelson.mx/parques-industriales-mexicali/nelson-i',
-            'gruponelson.mx/parques-industriales-mexicali/nelson-ii',
-            'gruponelson.mx/parques-industriales-mexicali/vigia-i',
-            'gruponelson.mx/parques-industriales-mexicali/vigia-ii',
+            'nelson.com.mx/parques-industriales-mexicali/nelson-i',
+            'nelson.com.mx/parques-industriales-mexicali/nelson-ii',
+            'nelson.com.mx/parques-industriales-mexicali/vigia-i',
+            'nelson.com.mx/parques-industriales-mexicali/vigia-ii',
           ].map((url) => (
             <code key={url} className="block rounded bg-muted/60 px-2.5 py-1.5 text-[11px] font-mono text-muted-foreground">
               {url}
@@ -37,7 +37,7 @@ export default function ParquesIndustrialesPage() {
         <p className="text-sm text-muted-foreground mt-3">
           El índice general está en{' '}
           <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">
-            gruponelson.mx/parques-industriales-mexicali
+            nelson.com.mx/parques-industriales-mexicali
           </code>
         </p>
       </section>
@@ -151,7 +151,7 @@ export default function ParquesIndustrialesPage() {
       <Steps
         title="Actualizar disponibilidad del parque"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code></>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code></>,
           'En la barra lateral, haz clic en "Parque Industrial"',
           'Selecciona el parque',
           'Modifica: "Naves disponibles", "Área disponible (m²)" o "Disponibilidad inmediata"',

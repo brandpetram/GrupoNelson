@@ -17,7 +17,7 @@ export default function NavesIndustrialesPage() {
         description="Administra el inventario de naves industriales disponibles para renta o venta."
       />
 
-      <SiteLink url="gruponelson.mx/inventario/naves-disponibles" />
+      <SiteLink url="nelson.com.mx/inventario/naves-disponibles" />
 
       <Permissions
         can={[
@@ -76,7 +76,7 @@ export default function NavesIndustrialesPage() {
       <Steps
         title="Cambiar estatus de una nave"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code> e inicia sesión</>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code> e inicia sesión</>,
           'En la barra lateral izquierda, haz clic en "Nave Industrial"',
           'Busca la nave en la lista (puedes usar el buscador)',
           'Haz clic en la nave para abrirla',
@@ -94,7 +94,7 @@ export default function NavesIndustrialesPage() {
           'Llena los campos obligatorios: ID interno, Nombre, Parque y Estatus',
           'Llena los demás campos con las especificaciones',
           'Haz clic en "Publish"',
-          <>La nave aparecerá en <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/inventario/naves-disponibles</code></>,
+          <>La nave aparecerá en <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/inventario/naves-disponibles</code></>,
         ]}
       />
 

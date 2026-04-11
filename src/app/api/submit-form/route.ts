@@ -35,7 +35,7 @@ function buildEmailHtml(fields: { label: string; value: string }[]) {
   <div style="max-width:560px;margin:0 auto;padding:20px 24px 48px">
     <h1 style="font-size:28px;font-weight:bold;color:#333;margin:40px 0 0">Nuevo lead</h1>
     <p style="font-size:16px;color:#666;margin:8px 0 24px">
-      Desde <a href="https://gruponelson.mx" target="_blank" style="color:#2754C5;text-decoration:underline">gruponelson.mx</a>
+      Desde <a href="https://nelson.com.mx" target="_blank" style="color:#2754C5;text-decoration:underline">nelson.com.mx</a>
     </p>
     <hr style="border:none;border-top:1px solid #eee;margin:24px 0">
     <table style="width:100%">${rows}</table>
@@ -71,7 +71,7 @@ export async function POST(request: Request) {
       to: RECIPIENTS,
       bcc: ['notifications@brandpetram.com'],
       replyTo: body.email,
-      subject: `Nuevo lead desde gruponelson.mx — ${body.full_name}`,
+      subject: `Nuevo lead desde nelson.com.mx — ${body.full_name}`,
       html: buildEmailHtml(fields),
     })
 

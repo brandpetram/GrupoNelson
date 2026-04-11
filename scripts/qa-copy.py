@@ -297,9 +297,9 @@ def main():
     if sys.argv[1] == '--all':
         # Buscar todas las pages en constructora, experiencia, nelson
         patterns = [
-            'src/app/constructora/*/page.tsx',
-            'src/app/experiencia/*/page.tsx',
-            'src/app/nelson/*/page.tsx',
+            'src/app/(site)/constructora/*/page.tsx',
+            'src/app/(site)/experiencia/*/page.tsx',
+            'src/app/(site)/nelson/*/page.tsx',
         ]
         files = []
         for pattern in patterns:

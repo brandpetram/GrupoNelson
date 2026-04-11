@@ -34,7 +34,7 @@ export default function AccesoSanityPage() {
         <h2 className="text-base font-semibold tracking-tight">Cómo acceder</h2>
         <ol className="space-y-3">
           {[
-            <>Abre tu navegador y ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code></>,
+            <>Abre tu navegador y ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code></>,
             'Inicia sesión con tu cuenta de Google o con el email que te proporcionó Luis.',
             'Una vez dentro, verás el panel principal con todas las secciones de contenido en la barra lateral izquierda.',
           ].map((step, i) => (
@@ -46,6 +46,14 @@ export default function AccesoSanityPage() {
             </li>
           ))}
         </ol>
+
+        <div className="rounded-lg border border-amber-200/50 bg-amber-50/50 p-4 dark:border-amber-900/30 dark:bg-amber-950/20">
+          <p className="text-sm text-amber-900 dark:text-amber-200">
+            <strong>¿No tienes cuenta?</strong> Si es tu primera vez accediendo a Sanity Studio,
+            contacta a <a href="mailto:luis@brandpetram.com" className="underline underline-offset-2">luis@brandpetram.com</a> para
+            que te cree una cuenta con los permisos necesarios.
+          </p>
+        </div>
       </section>
 
       {/* Navegación */}

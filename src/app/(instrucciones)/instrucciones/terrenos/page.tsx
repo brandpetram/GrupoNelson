@@ -17,7 +17,7 @@ export default function TerrenosPage() {
         description="Administra el inventario de terrenos disponibles para desarrollo industrial."
       />
 
-      <SiteLink url="gruponelson.mx/inventario/terrenos" />
+      <SiteLink url="nelson.com.mx/inventario/terrenos" />
 
       <Permissions
         can={[
@@ -72,7 +72,7 @@ export default function TerrenosPage() {
       <Steps
         title="Agregar un terreno"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code> e inicia sesión</>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code> e inicia sesión</>,
           'En la barra lateral, haz clic en "Terreno"',
           'Haz clic en el botón "+" (crear)',
           'Llena los campos obligatorios: ID, nombre, empresa, ubicación corta, superficie, ubicación legal, servicios y ciudad',

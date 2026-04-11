@@ -17,7 +17,7 @@ export default function NoticiasPage() {
         description="Publica noticias sobre nuevos proyectos, expansiones y eventos de Grupo Nelson."
       />
 
-      <SiteLink url="gruponelson.mx/noticias" />
+      <SiteLink url="nelson.com.mx/noticias" />
 
       <Info>
         <p>
@@ -61,7 +61,7 @@ export default function NoticiasPage() {
       <Steps
         title="Publicar una noticia"
         steps={[
-          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">gruponelson.mx/studio</code></>,
+          <>Ve a <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-mono text-foreground">nelson.com.mx/studio</code></>,
           'En la barra lateral, haz clic en "Noticia" (no en "Post")',
           'Haz clic en "+" (crear)',
           'Escribe el título en español',

@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import Footer1 from '@/components/brandpetram/footer-1'
 import Link from 'next/link'
 
 export default function LegalLayout({ children }: { children: React.ReactNode }) {
@@ -50,6 +51,7 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
           <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         </div>
       </main>
+      <Footer1 />
     </div>
   )
 }
