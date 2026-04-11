@@ -64,7 +64,39 @@ function ImageCarousel({ className }: { className?: string }) {
   )
 }
 
-export function EditorialCascadaBeta() {
+interface EditorialCascadaBetaProps {
+  /** Título principal */
+  titulo?: string
+  /** Párrafo descriptivo */
+  parrafo?: string
+  /** Stats grid — array de { titulo, descripcion } */
+  stats?: Array<{ titulo: string; descripcion: string }>
+  /** Texto destacado debajo de stats */
+  destacado?: string
+  /** Texto del botón primario */
+  ctaPrimarioTexto?: string
+  /** href del botón primario */
+  ctaPrimarioHref?: string
+  /** Texto del botón secundario */
+  ctaSecundarioTexto?: string
+  /** href del botón secundario */
+  ctaSecundarioHref?: string
+}
+
+export function EditorialCascadaBeta({
+  titulo = 'La Diferencia Nelson: pioneros de la manufactura fronteriza desde 1965, operación directa por la familia fundadora y constructora propia.',
+  parrafo = 'Grupo Nelson instaló la primera maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando cada parque, cada contrato y cada proyecto de construcción. Muy pocos desarrolladores industriales en esta ciudad combinan 60 años de permanencia, dueños involucrados operativamente y constructora propia con 28 años de experiencia. Eso se traduce en menos riesgo, menos fricción y más velocidad para tu proyecto.',
+  stats = [
+    { titulo: 'Pioneros desde 1965', descripcion: 'Instalaron la primera maquiladora de Mexicali' },
+    { titulo: 'Dueños operando', descripcion: 'Negocian, deciden y responden personalmente' },
+    { titulo: 'Constructora propia', descripcion: 'Baumex: 28 años y 75 proyectos con equipo propio' },
+  ],
+  destacado = 'Relaciones de largo plazo — la mayoría de los clientes expande o inicia nuevos proyectos década tras década.',
+  ctaPrimarioTexto = 'Solicita una consulta',
+  ctaPrimarioHref = '/contacto',
+  ctaSecundarioTexto = 'Conoce nuestra trayectoria',
+  ctaSecundarioHref = '/nelson/trayectoria',
+}: EditorialCascadaBetaProps) {
   return (
     <section data-component="EditorialCascadaBeta" data-component-file="src/components/brandpetram/editorial-cascada-beta.tsx" data-component-props="false" className="relative w-10/12 mx-auto pt-10 sm:pt-14 pb-16 sm:pb-24">
       {/* Dot pattern — top right */}
@@ -93,14 +125,14 @@ export function EditorialCascadaBeta() {
 
       {/* Título — ancho completo, z-10 para estar sobre los dots */}
       <h2 className="relative z-10 w-9/12 768:w-full text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.5rem] 1024:text-[4rem] 1200:text-[3rem] 1366:text-[3.5rem] 1536:text-[4rem] 1728:text-[4.5rem] 1920:text-[5rem] font-extrabold tracking-tighter leading-none text-foreground text-balance">
-        La Diferencia Nelson: pioneros de la manufactura fronteriza desde 1965, operación directa por la familia fundadora y constructora propia.
+        {titulo}
       </h2>
 
       {/* Párrafo + Stats (izquierda) | Carrusel (derecha) */}
       <div className="mt-8 768:mt-12 1200:mt-16 flex flex-col 1200:flex-row gap-10 1200:gap-16">
         <div className="1200:w-[55%]">
           <p className="text-[1rem] 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.5rem] 1200:text-[1.375rem] 1366:text-[1.5rem] 1536:text-[1.625rem] 1728:text-[1.75rem] 1920:text-[1.875rem] font-normal tracking-wider leading-relaxed text-muted-foreground">
-            Grupo Nelson instaló la primera maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando cada parque, cada contrato y cada proyecto de construcción. Muy pocos desarrolladores industriales en esta ciudad combinan 60 años de permanencia, dueños involucrados operativamente y constructora propia con 28 años de experiencia. Eso se traduce en menos riesgo, menos fricción y más velocidad para tu proyecto.
+            {parrafo}
           </p>
 
           {/* Carrusel — mobile y tablet (debajo del párrafo) */}
@@ -109,46 +141,32 @@ export function EditorialCascadaBeta() {
           {/* Stats grid — reemplaza el CTA del original */}
           <div className="mt-12 768:mt-16 border-t border-border pt-10 768:pt-12">
             <div className="grid grid-cols-2 gap-[1.5rem] 768:gap-[2rem] 1200:gap-[2rem] 1920:gap-[2.5rem]">
-              <div className="flex flex-col gap-[0.375rem]">
-                <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Pioneros desde 1965
-                </h3>
-                <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  Instalaron la primera maquiladora de Mexicali
-                </p>
-              </div>
-              <div className="flex flex-col gap-[0.375rem]">
-                <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Dueños operando
-                </h3>
-                <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  Negocian, deciden y responden personalmente
-                </p>
-              </div>
-              <div className="flex flex-col gap-[0.375rem]">
-                <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
-                  Constructora propia
-                </h3>
-                <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-                  Baumex: 28 años y 75 proyectos con equipo propio
-                </p>
-              </div>
+              {stats.map((stat, i) => (
+                <div key={i} className="flex flex-col gap-[0.375rem]">
+                  <h3 className="text-[0.9375rem] 430:text-[1rem] 768:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1366:text-[1.25rem] 1536:text-[1.375rem] 1728:text-[1.5rem] 1920:text-[1.5rem] text-foreground font-bold leading-tight tracking-tight">
+                    {stat.titulo}
+                  </h3>
+                  <p className="text-[0.75rem] 430:text-[0.8125rem] 768:text-[0.875rem] 1024:text-[1rem] 1200:text-[1rem] 1366:text-[1.0625rem] 1536:text-[1.125rem] 1728:text-[1.125rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
+                    {stat.descripcion}
+                  </p>
+                </div>
+              ))}
             </div>
             <p className="mt-6 768:mt-8 text-[0.8125rem] 768:text-[0.875rem] 1024:text-[0.9375rem] 1200:text-[1rem] 1536:text-[1.0625rem] 1728:text-[1.0625rem] 1920:text-[1.125rem] text-muted-foreground tracking-wide leading-relaxed">
-              <strong className="text-foreground">80% repeat business</strong> — la mayoría de los clientes regresa, expande o inicia nuevos proyectos.
+              {destacado}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/contacto"
+                href={ctaPrimarioHref}
                 className="inline-flex items-center justify-center rounded-xs bg-blue-600 px-6 py-3 text-[0.875rem] 1200:text-[0.9375rem] 1536:text-[1rem] font-semibold text-white shadow hover:bg-blue-700 transition-colors"
               >
-                Solicita una consulta
+                {ctaPrimarioTexto}
               </Link>
               <Link
-                href="/nelson/trayectoria"
+                href={ctaSecundarioHref}
                 className="inline-flex items-center justify-center gap-2 rounded-xs px-6 py-3 text-[0.875rem] 1200:text-[0.9375rem] 1536:text-[1rem] font-semibold text-foreground hover:bg-accent transition-colors"
               >
-                Conoce nuestra trayectoria
+                {ctaSecundarioTexto}
                 <ArrowRight className="size-4" />
               </Link>
             </div>

@@ -57,19 +57,50 @@ function ImageCarousel({ className }: { className?: string }) {
   )
 }
 
-export function EditorialCascadaBP() {
+interface EditorialCascadaBPProps {
+  /** Título principal */
+  titulo?: string
+  /** Párrafo descriptivo */
+  parrafo?: string
+  /** Título del CTA */
+  ctaTitulo?: string
+  /** Subtítulo del CTA */
+  ctaSubtitulo?: string
+  /** Texto del botón primario */
+  ctaPrimarioTexto?: string
+  /** href del botón primario */
+  ctaPrimarioHref?: string
+  /** Texto del botón secundario */
+  ctaSecundarioTexto?: string
+  /** href del botón secundario */
+  ctaSecundarioHref?: string
+  /** Imágenes del carrusel */
+  carouselImages?: string[]
+}
+
+export function EditorialCascadaBP({
+  titulo = 'De la primera maquiladora de Mexicali a la nave más grande de la ciudad.',
+  parrafo = 'En 1965, Rodolfo Nelson Sr. instaló la primera maquiladora de Mexicali. No existían parques industriales — existía una visión. Tres generaciones después, esa visión se convirtió en cinco parques, cuatro millones de pies cuadrados desarrollados y la confianza de treinta corporaciones internacionales que eligieron Mexicali porque Grupo Nelson ya había construido la infraestructura que necesitaban.',
+  ctaTitulo = '¿Buscas Parques Industriales en Mexicali?',
+  ctaSubtitulo = 'Sesenta años de experiencia respaldan cada proyecto.',
+  ctaPrimarioTexto = 'Contáctenos',
+  ctaPrimarioHref = '/contacto',
+  ctaSecundarioTexto = 'Conozca Grupo Nelson',
+  ctaSecundarioHref = '/nelson/diferencia-nelson',
+  carouselImages,
+}: EditorialCascadaBPProps) {
   return (
     <section data-component="EditorialCascadaBP" data-component-file="src/components/brandpetram/editorial-cascada-bp.tsx" data-component-props="false" className="w-10/12 mx-auto pt-10 sm:pt-14 pb-16 sm:pb-24">
       {/* Título — ancho completo */}
       <h2 className="w-9/12 768:w-full text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.5rem] 1024:text-[4rem] 1200:text-[3rem] 1366:text-[3.5rem] 1536:text-[4rem] 1728:text-[4.5rem] 1920:text-[5rem] font-extrabold tracking-tighter leading-none text-foreground text-balance">
-        De la primera maquiladora de Mexicali a la nave más grande de la ciudad.
+        {titulo}
       </h2>
 
       {/* Párrafo + CTA (izquierda) | Carrusel (derecha) */}
       <div className="mt-8 768:mt-12 1200:mt-16 flex flex-col 1200:flex-row gap-10 1200:gap-16">
         <div className="1200:w-[55%]">
           <p className="text-[1rem] 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.5rem] 1200:text-[1.375rem] 1366:text-[1.5rem] 1536:text-[1.625rem] 1728:text-[1.75rem] 1920:text-[1.875rem] font-normal tracking-wider leading-relaxed text-muted-foreground">
-            En 1965, Rodolfo Nelson Sr. instaló la primera maquiladora de Mexicali. No existían parques industriales — existía una visión. Tres generaciones después, esa visión se convirtió en cinco parques, cuatro millones de pies cuadrados desarrollados y la confianza de treinta corporaciones internacionales que eligieron Mexicali porque Grupo Nelson ya había construido la infraestructura que necesitaban.
+            {parrafo}
           </p>
 
           {/* Carrusel — mobile y tablet (debajo del párrafo) */}
@@ -78,23 +109,23 @@ export function EditorialCascadaBP() {
           {/* CTA — debajo del párrafo (y del carrusel en mobile) */}
           <div className="mt-12 768:mt-16 border-t border-border pt-10 768:pt-12">
             <p className="max-w-lg 1200:max-w-2xl text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[2.5rem] 1024:text-[2.75rem] 1200:text-[3rem] 1366:text-[3.25rem] 1536:text-[3.5rem] 1920:text-[4rem] font-bold tracking-tighter leading-none text-foreground text-balance">
-              ¿Buscas Parques Industriales en Mexicali?
+              {ctaTitulo}
             </p>
             <p className="mt-3 text-[1rem] 768:text-[1.125rem] 1200:text-[1.25rem] text-muted-foreground">
-              Sesenta años de experiencia respaldan cada proyecto.
+              {ctaSubtitulo}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href="/contacto"
+                href={ctaPrimarioHref}
                 className="px-8 py-4 rounded-xs bg-blue-600 text-white font-medium text-center transition-all duration-200 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] shadow-md border-[0.5px] border-white/25 shadow-black/20"
               >
-                Contáctenos
+                {ctaPrimarioTexto}
               </a>
               <a
-                href="/nelson/diferencia-nelson"
+                href={ctaSecundarioHref}
                 className="px-8 py-4 rounded-xs border border-border text-foreground font-medium text-center transition-all duration-200 hover:bg-muted hover:ring-1 hover:ring-foreground/20 hover:scale-[1.02] active:scale-[0.98] shadow-sm shadow-black/15"
               >
-                Conozca Grupo Nelson
+                {ctaSecundarioTexto}
               </a>
             </div>
           </div>
