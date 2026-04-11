@@ -12,25 +12,25 @@ const team = [
     name: 'Dirección Comercial',
     role: 'Desarrollo de negocios y relación con clientes',
     description:
-      'Esta área recibe tu proyecto, negocia las condiciones y da seguimiento comercial durante toda la relación. No es una cuenta asignada a un ejecutivo rotativo — la dirección comercial tiene autoridad de decisión directa. Cuando necesites renegociar algo, no sube tres niveles: se resuelve en una llamada.',
+      'Recibe tu proyecto, negocia las condiciones y da seguimiento comercial. Las decisiones clave se toman en consejo ejecutivo con los demás directores — no por un ejecutivo de cuenta sin autoridad.',
   },
   {
     name: 'Dirección de Constructora',
     role: 'Baumex — construcción build-to-suit',
     description:
-      'Baumex, la constructora in-house de Grupo Nelson, ejecuta cada proyecto de principio a fin. La dirección de construcción supervisa personalmente cada obra — no se delega a gerentes de proyecto externos ni a contratistas rotativos.',
+      'Baumex, la constructora in-house, ejecuta cada proyecto de principio a fin. Las decisiones de ingeniería y presupuesto se validan en consejo ejecutivo — tu obra no depende de un solo gerente de proyecto.',
   },
   {
     name: 'Dirección Administrativa',
     role: 'Operación financiera y contractual',
     description:
-      'La operación financiera y contractual del grupo se maneja con autoridad de cierre desde la dirección. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por una dirección con décadas de continuidad en el puesto.',
+      'Administra la operación financiera y contractual del grupo. Los términos de tu contrato y ajustes operativos se resuelven en consejo ejecutivo — con autoridad de cierre y décadas de continuidad.',
   },
   {
     name: 'Dirección de Servicio al Cliente',
     role: 'Infraestructura, servicios y mantenimiento del parque',
     description:
-      'Esta área mantiene la infraestructura del parque funcionando: servicios, mantenimiento, proyectos de mejora. Cuando reportes un problema en tu nave, la respuesta viene directo de la dirección del parque — no de un departamento de tickets.',
+      'Mantiene la infraestructura del parque funcionando: servicios, mantenimiento, proyectos de mejora. Los temas operativos se escalan al consejo ejecutivo cuando es necesario — no a un departamento de tickets.',
   },
 ]
 
