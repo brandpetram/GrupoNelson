@@ -11,6 +11,7 @@ interface ContentItem {
   title: React.ReactNode
   description: string
   image?: string
+  mobileImage?: string // Imagen estática para mobile (reemplaza video en mobile)
   video?: string | string[] // Puede ser un video o array de videos
   videoPoster?: string // Imagen poster para el video (opcional, se genera automáticamente)
   tag?: {
@@ -190,6 +191,7 @@ const defaultItems: ContentItem[] = [
     description:
       'Nuestra constructora interna ejecuta su proyecto de principio a fin — desde movimiento de tierras y cimentación hasta instalaciones electromecánicas — con los estándares de calidad que exigen empresas como Gulfstream, DHL y Honeywell.',
     video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
+    mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
     tag: {
       icon: <Hammer className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Construcción',
@@ -208,6 +210,7 @@ const defaultItems: ContentItem[] = [
     description:
       'Usted recibe una instalación lista para operar. Entra, conecta sus equipos y arranca producción. Sin intermediarios, sin retrasos, sin sorpresas.',
     video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
+    mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg',
     tag: {
       icon: <CheckCircle className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Entrega',
@@ -226,6 +229,7 @@ const defaultItems: ContentItem[] = [
     description:
       'Perímetro controlado, caseta de acceso, calles amplias, infraestructura compartida y vigilancia permanente. Su operación funciona dentro de un entorno industrial profesional las 24 horas del día, los 365 días del año.',
     video: '/scroll-storytelling/seguridad-del-parque.mp4',
+    mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-382.jpg',
     tag: {
       icon: <Shield className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Seguridad 24/7',
@@ -244,6 +248,7 @@ const defaultItems: ContentItem[] = [
     description:
       'Nuestro equipo de servicios atiende mejoras, reparaciones y actualizaciones de forma permanente. Proyectos menores con personal interno; proyectos de ingeniería avanzada con nuestra constructora. Usted se enfoca en producir.',
     video: '/scroll-storytelling/mantenimiento.mp4',
+    mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-407.jpg',
     tag: {
       icon: <Wrench className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Mantenimiento',
@@ -262,6 +267,7 @@ const defaultItems: ContentItem[] = [
     description:
       'Cuando su operación crece, nosotros crecemos con usted. Clientes que iniciaron en 5,000 pies cuadrados hoy operan en más de 400,000 — sin cambiar de socio. Más de seis décadas construyendo relaciones que se miden en décadas, no en contratos.',
     video: '/scroll-storytelling/crecimiento.mp4',
+    mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
     tag: {
       icon: <TrendingUp className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Crecimiento',
@@ -378,6 +384,21 @@ export function ScrollStorytelling({
               <p className="text-1200 2xl:text-xl leading-relaxed mb-6 text-muted-foreground">
                 {item.description}
               </p>
+              {/* Imagen para móvil — antes de los botones, sin video (ver malas-practicas-frontend.mdx) */}
+              {(item.image || item.mobileImage) && (
+                <div className="1200:hidden mb-6 relative">
+                  <div className={cn("relative w-full rounded-xs overflow-hidden", mediaAspectRatio)}>
+                    <Image
+                      src={item.image || item.mobileImage!}
+                      alt={`Imagen de ${item.title}`}
+                      fill
+                      className="object-cover"
+                      sizes="100vw"
+                    />
+                  </div>
+                </div>
+              )}
+
               {item.buttons && (
                 <div className="flex flex-col sm:flex-row gap-4 ">
                   {item.buttons.map((button, buttonIndex) => (
@@ -394,60 +415,6 @@ export function ScrollStorytelling({
                       {button.text}
                     </a>
                   ))}
-                </div>
-              )}
-
-              {/* Thumbnail con play para móvil */}
-              {(item.video || item.image) && (
-                <div className="1200:hidden mt-6 relative">
-                  <div className={cn("relative w-full rounded-xs overflow-hidden", mediaAspectRatio)}>
-                    {playingMobileVideo === index && item.video ? (
-                      // Mostrar VideoPlayer cuando se hace clic en play
-                      <VideoPlayer
-                        videos={item.video}
-                        poster={item.videoPoster}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <>
-                        {/* Thumbnail cuando no está reproduciendo */}
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt={`Imagen de ${item.title}`}
-                            fill
-                            className="object-cover"
-                            sizes="100vw"
-                          />
-                        ) : item.videoPoster ? (
-                          <Image
-                            src={item.videoPoster}
-                            alt={`Video de ${item.title}`}
-                            fill
-                            className="object-cover"
-                            sizes="100vw"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-muted" />
-                        )}
-                        {/* Overlay oscuro y botón play solo si hay video */}
-                        {item.video && (
-                          <>
-                            <div className="absolute inset-0 bg-black/30" />
-                            <button
-                              onClick={() => setPlayingMobileVideo(index)}
-                              className="absolute inset-0 flex items-center justify-center group"
-                              aria-label="Reproducir video"
-                            >
-                              <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-1200 group-hover:scale-110 transition-transform">
-                                <Play className="w-7 h-7 text-foreground ml-1" fill="currentColor" />
-                              </div>
-                            </button>
-                          </>
-                        )}
-                      </>
-                    )}
-                  </div>
                 </div>
               )}
             </div>
