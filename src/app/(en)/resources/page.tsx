@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/resources',
   title: 'Resources',
-  description:
-    'Official documentation on standards, certifications and codes that Grupo Nelson and Baumex implement in their industrial developments.',
-  alternates: { canonical: 'https://nelson.com.mx/resources' },
-}
+  description: 'Official documentation on standards, certifications and codes that Grupo Nelson and Baumex implement in their industrial developments.',
+})
 
 const categories = [
   {

@@ -1,12 +1,14 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import StandardsPoster from '@/components/brandpetram/standards-poster'
 import CursorTrailGrupoNelson from '@/components/brandpetram/cursor-trail-grupo-nelson'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/about/our-story',
   title: 'Our Story',
   description: 'The story of Grupo Nelson: from a family business in 1962 to operating 4 industrial parks with over 4.5 million sq ft in Mexicali. Built-to-suit industrial buildings for global companies.',
-}
+})
 
 export default function OurStoryPage() {
   return (

@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/materiales-recursos',
   title: 'Materiales y Recursos LEED | Grupo Nelson Mexicali',
   description: 'Naves industriales LEED en Mexicali con acero reciclado documentado por EPD, abastecimiento regional <160 km y desvío de residuos >50%. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/materiales-recursos' },
-}
+})
 
 export default function MaterialesRecursosPage() {
   return (

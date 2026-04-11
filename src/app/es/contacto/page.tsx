@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import Contact from './contact-section'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/contacto',
   title: 'Contacto',
   description: 'Contáctanos para renta de naves industriales, terrenos disponibles y servicios de construcción build-to-suit en Mexicali.',
-  alternates: { canonical: 'https://nelson.com.mx/contacto' },
-}
+})
 
 export default function ContactoPage() {
   return <Contact />

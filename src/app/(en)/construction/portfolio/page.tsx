@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import PortfolioClient from './page-client'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/portfolio',
   title: 'Project Portfolio',
   description: 'Complete track record of 75+ industrial and commercial projects delivered by Baumex Constructora since 1997.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/portfolio' },
-}
+})
 
 export default function PortfolioPage() {
   return <PortfolioClient />

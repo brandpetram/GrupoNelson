@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { HeroMarketing1Beta } from "./sections/hero-marketing-1-beta";
 import { SplitStickyCasos } from "./sections/split-sticky-casos";
 import { MosaicoCasos } from "./sections/mosaico-casos";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "Casos de Éxito",
-  description:
-    "Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson. Gulfstream 35 años, Honeywell 30+. Relaciones de largo plazo que se miden en décadas.",
-};
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/experiencia/casos-de-exito',
+  title: 'Casos de Éxito',
+  description: 'Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson. Gulfstream 35 años, Honeywell 30+. Relaciones de largo plazo que se miden en décadas.',
+})
 
 export default function CasosDeExitoPage() {
   return (

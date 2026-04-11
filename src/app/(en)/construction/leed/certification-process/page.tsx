@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/certification-process',
   title: 'LEED Certification Process | Grupo Nelson Mexicali',
   description: 'LEED v4 BD+C certification for industrial buildings in Mexicali. From predesign to GBCI certificate with full traceability. Gulfstream 550K targeting LEED Gold. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/certification-process' },
-}
+})
 
 export default function CertificationProcessPage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="From design to GBCI certificate"
       titulo="LEED-certify your industrial building in Mexicali — from predesign to GBCI certificate without stopping construction"
       intro="Gulfstream 550K (52,200 m²) is currently pursuing LEED Gold certification — at 53-55 points (Silver), targeting Gold with 10 MW of solar panels. Baumex manages the entire process: registration, Design Review, construction evidence management, and Construction Review with full traceability in LEED Online."

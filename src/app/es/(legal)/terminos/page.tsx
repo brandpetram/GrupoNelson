@@ -1,10 +1,12 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/terminos',
   title: 'Términos y Condiciones',
   description: 'Términos y condiciones de uso del sitio web de Grupo Nelson.',
-}
+})
 
 export default function TerminosPage() {
   return (

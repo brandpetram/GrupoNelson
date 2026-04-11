@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Mu from '@/components/brandpetram/mu'
 import Nu from '@/components/brandpetram/nu'
@@ -12,11 +11,14 @@ import Upsilon from '@/components/brandpetram/upsilon'
 import Phi from '@/components/brandpetram/phi'
 import Chi from '@/components/brandpetram/chi'
 import Psi from '@/components/brandpetram/psi'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/baumex',
   title: 'Baumex Constructora',
   description: 'Constructora in-house de Grupo Nelson con más de 25 años construyendo naves industriales built-to-suit en Mexicali. 75+ proyectos entregados para empresas Fortune 500.',
-}
+})
 
 export default function BaumexPage() {
   return (

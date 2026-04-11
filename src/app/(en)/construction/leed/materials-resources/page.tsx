@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/materials-resources',
   title: 'Materials & Resources LEED | Grupo Nelson Mexicali',
   description: 'LEED industrial buildings in Mexicali with EPD-documented recycled steel, regional sourcing within 160 km, and waste diversion >50%. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/materials-resources' },
-}
+})
 
 export default function MaterialsResourcesPage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="Verified and recyclable materials"
       titulo="Build your LEED industrial building in Mexicali with EPD-documented materials and verifiable recycled content"
       intro="The structural steel in your building may have 90% recycled content or 15% — the difference lies in the Environmental Product Declaration (EPD). Baumex specifies every material with third-party verified EPD: steel with documented recycled content, concrete with additions that reduce Portland cement, and finishes with HPD that verify the absence of substances of concern."

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { OffsetWithFeatureListBP } from "@/components/brandpetram/offset-with-feature-list-bp";
 import {
@@ -6,11 +5,14 @@ import {
   splitParagraphClass,
 } from "@/components/brandpetram/split-simple-bp";
 import { EditorialCascadaBeta } from "@/components/brandpetram/editorial-cascada-beta";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "The Nelson Difference",
-  description: "What sets Grupo Nelson apart: direct operation by the founding family, built-to-suit industrial construction, and first-class industrial parks in Mexicali.",
-};
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/about/difference',
+  title: 'The Nelson Difference',
+  description: 'What sets Grupo Nelson apart: direct operation by the founding family, built-to-suit industrial construction, and first-class industrial parks in Mexicali.',
+})
 
 export default function DifferencePage() {
   return (

@@ -2,11 +2,14 @@ import Header from '@/components/Header'
 import Link from 'next/link'
 import { Building2 } from 'lucide-react'
 import { getIndustrialParks } from '@/data/parks/parks-sanity'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/industrial-parks',
   title: 'Industrial Parks in Mexicali',
   description: '4 industrial parks in Mexicali with over 4.5 million sq ft. Built-to-suit industrial buildings, available land, and more than 60 years of experience.',
-}
+})
 
 export default async function IndustrialParksPage() {
   const industrialParks = await getIndustrialParks()

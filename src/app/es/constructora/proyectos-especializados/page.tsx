@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
 import { GridOverlay } from "@/components/ui/brandpetram/grid";
@@ -6,12 +5,14 @@ import {
   SplitSimpleBP,
   splitParagraphClass,
 } from "@/components/brandpetram/split-simple-bp";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "Proyectos Especializados",
-  description:
-    "Proyectos industriales especializados en Mexicali: puente de 95 m sin columnas, nave de 52,200 m² con BRB antisísmico, túnel de viento de 3,000 HP, cimentaciones de precisión milimétrica.",
-};
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/proyectos-especializados',
+  title: 'Proyectos Especializados',
+  description: 'Proyectos industriales especializados en Mexicali: puente de 95 m sin columnas, nave de 52,200 m² con BRB antisísmico, túnel de viento de 3,000 HP, cimentaciones de precisión milimétrica.',
+})
 
 export default function ProyectosEspecializadosPage() {
   return (

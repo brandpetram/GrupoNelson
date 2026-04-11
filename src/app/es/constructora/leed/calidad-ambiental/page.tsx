@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/calidad-ambiental',
   title: 'Calidad Ambiental Interior | LEED | Grupo Nelson',
   description: 'Materiales de bajo COV, ventilación ASHRAE 62.1 y confort térmico para naves industriales LEED en Mexicali. Protege la salud y productividad de tu equipo. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/calidad-ambiental' },
-}
+})
 
 export default function CalidadAmbientalPage() {
   return (

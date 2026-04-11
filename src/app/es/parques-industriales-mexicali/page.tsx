@@ -2,11 +2,14 @@ import Header from '@/components/Header'
 import Link from 'next/link'
 import { Building2 } from 'lucide-react'
 import { getIndustrialParks } from '@/data/parks/parks-sanity'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/parques-industriales-mexicali',
   title: 'Parques Industriales en Mexicali',
   description: '4 parques industriales en Mexicali con más de 4.5 millones de pies². Naves industriales built-to-suit, terrenos disponibles y más de 60 años de experiencia.',
-}
+})
 
 export default async function ParquesIndustrialesMexicaliPage() {
   const industrialParks = await getIndustrialParks()

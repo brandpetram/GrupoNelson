@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/energy-atmosphere',
   title: 'Energy & Atmosphere LEED | Grupo Nelson Mexicali',
   description: 'LEED industrial buildings in Mexicali with 10 MW solar panels, 35-50% energy savings vs conventional buildings. Energy modeling from conceptual phase. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/energy-atmosphere' },
-}
+})
 
 export default function EnergyAtmospherePage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="Energy efficiency and solar"
       titulo="Reduce energy costs at your Mexicali industrial building by 35-50% with LEED design and 10 MW of solar panels"
       intro="Gulfstream 550K in Mexicali: 10 MW of solar panels across 50,000 m² (rooftop + carports), 20 MW installed electrical capacity, 50% clean solar energy. 3,200 tons of minimum-consumption A/C. These are the real results of the LEED Energy & Atmosphere category executed by Baumex on the largest industrial building in the city."

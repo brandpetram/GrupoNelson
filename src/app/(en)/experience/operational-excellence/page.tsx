@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -12,12 +11,14 @@ import { CallToAction as CtaExcellence } from "./sections/cta";
 import { TestimonialExcellence } from "./sections/testimonial";
 import { AuditableDocumentation } from "./sections/auditable-documentation";
 import { ControlDimensions } from "./sections/control-dimensions";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "Operational Excellence",
-  description:
-    "75 projects completed in 28 years. 1,092,745 man-hours worked with a documented safety record. Weekly site control with documented reports. Baumex, Grupo Nelson's in-house general contractor.",
-};
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/experience/operational-excellence',
+  title: 'Operational Excellence',
+  description: "75 projects completed in 28 years. 1,092,745 man-hours worked with a documented safety record. Weekly site control with documented reports. Baumex, Grupo Nelson's in-house general contractor.",
+})
 
 export default function OperationalExcellencePage() {
   return (

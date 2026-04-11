@@ -145,8 +145,6 @@ const footerDataEs: FooterColumn[] = [
   },
 ];
 
-// TODO: Actualizar hrefs cuando se creen las páginas inglés (Fase 6)
-// Por ahora apuntan a las rutas españolas existentes
 const footerDataEn: FooterColumn[] = [
   {
     heading: 'Industrial Parks',
@@ -154,17 +152,17 @@ const footerDataEn: FooterColumn[] = [
       {
         title: 'Mexicali',
         links: [
-          { label: 'Nelson II Park', href: '/parques-industriales-mexicali/nelson-ii' },
-          { label: 'Nelson I Park', href: '/parques-industriales-mexicali/nelson-i' },
-          { label: 'El Vigía I Park', href: '/parques-industriales-mexicali/vigia-i' },
-          { label: 'El Vigía II Park', href: '/parques-industriales-mexicali/vigia-ii' },
+          { label: 'Nelson II Park', href: '/industrial-parks/nelson-ii' },
+          { label: 'Nelson I Park', href: '/industrial-parks/nelson-i' },
+          { label: 'El Vigía I Park', href: '/industrial-parks/vigia-i' },
+          { label: 'El Vigía II Park', href: '/industrial-parks/vigia-ii' },
         ],
       },
       {
         title: 'Inventory',
         links: [
-          { label: 'Available Buildings', href: '/inventario/naves-disponibles' },
-          { label: 'Available Land', href: '/inventario/terrenos' },
+          { label: 'Available Buildings', href: '/inventory/available-buildings' },
+          { label: 'Available Land', href: '/inventory/land' },
         ],
       },
     ],
@@ -175,19 +173,19 @@ const footerDataEn: FooterColumn[] = [
       {
         title: 'Services',
         links: [
-          { label: 'Baumex Construction', href: '/constructora/baumex' },
-          { label: 'Build-to-Suit', href: '/constructora/build-to-suit' },
-          { label: 'Turnkey Solutions', href: '/constructora/llave-en-mano' },
-          { label: 'Engineering & Design', href: '/constructora/diseno-e-ingenieria' },
-          { label: 'Specialized Projects', href: '/constructora/proyectos-especializados' },
+          { label: 'Baumex Construction', href: '/construction/baumex' },
+          { label: 'Build-to-Suit', href: '/construction/build-to-suit' },
+          { label: 'Turnkey Solutions', href: '/construction/turnkey' },
+          { label: 'Engineering & Design', href: '/construction/engineering-design' },
+          { label: 'Specialized Projects', href: '/construction/specialized-projects' },
         ],
       },
       {
         title: 'Quality',
         links: [
-          { label: 'LEED Certification', href: '/constructora/leed' },
-          { label: 'International Standards', href: '/constructora/estandares-internacionales' },
-          { label: 'Portfolio', href: '/constructora/portafolio' },
+          { label: 'LEED Certification', href: '/construction/leed' },
+          { label: 'International Standards', href: '/construction/international-standards' },
+          { label: 'Portfolio', href: '/construction/portfolio' },
         ],
       },
     ],
@@ -198,9 +196,9 @@ const footerDataEn: FooterColumn[] = [
       {
         title: 'Results',
         links: [
-          { label: 'Operational Excellence', href: '/experiencia/excelencia-operativa' },
-          { label: 'Success Stories', href: '/experiencia/casos-de-exito' },
-          { label: 'Standards & Certifications', href: '/experiencia/normas-certificaciones-estandares' },
+          { label: 'Operational Excellence', href: '/experience/operational-excellence' },
+          { label: 'Success Stories', href: '/experience/success-stories' },
+          { label: 'Standards & Certifications', href: '/experience/standards-certifications' },
         ],
       },
     ],
@@ -211,9 +209,9 @@ const footerDataEn: FooterColumn[] = [
       {
         title: 'Content',
         links: [
-          { label: 'Blog', href: '/blog' },
-          { label: 'News', href: '/noticias' },
-          { label: 'Resources', href: '/recursos' },
+          { label: 'Blog', href: '/es/blog' },
+          { label: 'News', href: '/es/noticias' },
+          { label: 'Resources', href: '/resources' },
         ],
       },
     ],
@@ -224,16 +222,16 @@ const footerDataEn: FooterColumn[] = [
       {
         title: 'The Company',
         links: [
-          { label: 'Track Record', href: '/nelson/trayectoria' },
-          { label: 'The Nelson Difference', href: '/nelson/diferencia-nelson' },
-          { label: 'Leadership', href: '/nelson/liderazgo' },
-          { label: 'Our Story', href: '/nelson/nuestra-historia' },
+          { label: 'Track Record', href: '/about/track-record' },
+          { label: 'The Nelson Difference', href: '/about/difference' },
+          { label: 'Leadership', href: '/about/leadership' },
+          { label: 'Our Story', href: '/about/our-story' },
         ],
       },
       {
         title: 'Contact',
         links: [
-          { label: 'Contact Us', href: '/contacto' },
+          { label: 'Contact Us', href: '/contact' },
         ],
       },
     ],
@@ -246,11 +244,10 @@ const legalLinksEs = [
   { label: 'Política de Cookies', href: '/politica-de-cookies' },
 ];
 
-// TODO: Actualizar hrefs cuando se creen las páginas legales en inglés (Fase 6)
 const legalLinksEn = [
-  { label: 'Privacy Policy', href: '/aviso-de-privacidad' },
-  { label: 'Terms of Use', href: '/terminos' },
-  { label: 'Cookie Policy', href: '/politica-de-cookies' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of Use', href: '/terms' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
 ];
 
 const socialLinks = [
@@ -261,7 +258,7 @@ export default function Footer1({ lang = 'es' }: { lang?: Lang }) {
   const footerData = lang === 'en' ? footerDataEn : footerDataEs
   const legalLinks = lang === 'en' ? legalLinksEn : legalLinksEs
   const homeHref = lang === 'en' ? '/en' : '/'
-  const contactHref = '/contacto' // TODO: cambiar a '/en/contact' cuando exista la ruta inglés
+  const contactHref = lang === 'en' ? '/contact' : '/contacto'
   const contactLabel = lang === 'en' ? 'Contact Us' : 'Contáctanos'
   const copyrightText = lang === 'en' ? 'All rights reserved.' : 'Todos los derechos reservados.'
   const addressLabel = lang === 'en' ? 'Grupo Nelson — Offices' : 'Grupo Nelson — Oficinas'

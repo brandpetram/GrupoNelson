@@ -1,13 +1,27 @@
 # Plan Maestro: Extensión — Polish Bilingüe
 
-> **Estado:** Pendiente  
+> **Estado:** En progreso — Fases 8-11 completadas, Fases 12-14 pendientes  
 > **Fecha:** 2026-04-11  
 > **Prerequisito:** Plan maestro original (Fases 1-7) completado  
-> **Objetivo:** Cerrar los cabos sueltos que quedaron después de la traducción masiva. Nada aquí es bloqueante — el sitio bilingüe ya funciona.
+> **Objetivo:** Cerrar los cabos sueltos que quedaron después de la traducción masiva.
 
 ---
 
-## Fase 8: Propear componentes con labels internos en español
+## Resumen de estado
+
+| Fase | Descripción | Estado |
+|---|---|---|
+| 8 | Propear FichaTecnicaParque, ParkMap, LeedPageLayout, CarruselLeed | ✅ COMPLETADA |
+| 9 | Arreglar y adoptar createMetadata en 72 páginas | ✅ COMPLETADA |
+| 10 | Navegación bilingüe (Footer, Header-en cleanup) | ✅ COMPLETADA |
+| 11 | Language switcher con route-map | ✅ COMPLETADA |
+| 12 | Auditoría de texto español residual + imágenes rotas | ✅ INVENTARIO HECHO — pendiente ejecutar fixes |
+| 13 | Propear 100% de componentes usados en páginas EN | ⏸ DECISIÓN PENDIENTE (¿antes o después de terminar?) |
+| 14 | QA visual bilingüe | ❌ PENDIENTE |
+
+---
+
+## Fase 8: Propear componentes con labels internos en español — ✅ COMPLETADA
 
 Componentes compartidos que se usan en páginas inglés pero tienen texto hardcodeado en español. Necesitan prop `lang` para seleccionar labels.
 
@@ -59,7 +73,7 @@ Después de este paso, las páginas españolas siguen funcionando (default `'es'
 
 ---
 
-## Fase 9: Arreglar y adoptar `createMetadata()`
+## Fase 9: Arreglar y adoptar `createMetadata()` — ✅ COMPLETADA
 
 El helper `src/lib/create-metadata.ts` ya existe pero tiene problemas que impiden adopción directa.
 
@@ -139,7 +153,7 @@ El helper `src/lib/create-metadata.ts` ya existe pero tiene problemas que impide
 
 ---
 
-## Fase 10: Navegación bilingüe completa
+## Fase 10: Navegación bilingüe completa — ✅ COMPLETADA
 
 Actualizar **todos** los puntos de navegación que todavía usan rutas hardcodeadas del esquema viejo.
 
@@ -173,11 +187,112 @@ El switcher funciona para las 36 pares de rutas en route-map pero falla en edge 
 
 ---
 
-## Fase 12: QA visual bilingüe
+## Fase 12: Auditoría de texto español residual en páginas EN — ✅ INVENTARIO HECHO
+
+### Causa raíz
+
+Dos tipos de error distintos:
+
+**Tipo A — Componentes sin propear:** El componente tiene texto español hardcodeado y no acepta props para cambiarlo. Los agentes de Fase 6b los importaron "as-is" pensando que eran puramente visuales.
+
+**Tipo B — Componentes propeados pero mal usados:** El componente SÍ acepta props o `lang`, pero la página EN no los usa correctamente — pasa rutas españolas, no traduce el botón, etc. Error de los agentes al crear las páginas.
+
+### Inventario (auditoría 2026-04-11)
+
+#### Tipo A — Necesitan propear
+
+| Componente | Archivo | Texto español | Páginas EN afectadas | Fix |
+|---|---|---|---|---|
+| `LogoCloud` | `src/components/motion-plus/logo-cloud.tsx` | "Clientes y Proveedores que confían en Grupo Nelson..." | Home | Agregar prop `title` |
+| `BadgeAniversario` | `src/components/badge-aniversario.tsx` | "CELEBRANDO" (SVG), default `textoInferior='años'` | Home | Agregar prop para texto SVG curvo. `textoInferior` ya acepta prop pero la home EN no lo pasa |
+
+#### Tipo B — Props mal usados o faltantes
+
+| Problema | Archivo | Detalle | Fix |
+|---|---|---|---|
+| Header CTA dice "Contacto" | `src/components/Header.tsx` | El botón de contacto no usa `lang` para su texto | Usar `lang` para seleccionar "Contact" vs "Contacto" |
+| ScrollStorytelling rutas españolas | `src/app/(en)/page.tsx` (home) | Items pasan `/contacto`, `/constructora/*`, `/experiencia/*` | Cambiar a `/contact`, `/construction/*`, `/experience/*` |
+| MosaicoInvertidoConProps rutas | `src/app/(en)/page.tsx` (home) | Segundo mosaico usa `/construccion/*` | Cambiar a `/construction/*` |
+| BadgeAniversario "años" | `src/app/(en)/page.tsx` (home) | No pasa `textoInferior="years"` | Agregar prop |
+
+#### Imágenes rotas en producción
+
+| Página | Síntoma | Diagnóstico |
+|---|---|---|
+| `/about/difference` | Solo primera imagen carga, otras 3 no | Las imágenes existen en `/public/` y funcionan en localhost. Probable issue de deploy/cache en Vercel — no de código |
+
+**Nota:** Las imágenes usan rutas absolutas (`/parques-industriales-mexicali/...`) y existen en `public/`. En localhost funcionan. El problema es exclusivo de producción → investigar deploy de Vercel.
+
+### Trabajo
+
+1. **Tipo A (propear):** Agregar props a LogoCloud y BadgeAniversario. Owner: MAIN (componentes compartidos). Prerequisito: reclasificar en ownership-map si es necesario.
+
+2. **Tipo B (fix de uso):** Corregir la página home EN y el Header. La home es archivo de sección `(en)/`. El Header es archivo compartido (MAIN).
+
+3. **Imágenes:** Investigar deploy de Vercel — no es problema de código. Posible re-deploy o invalidación de cache.
+
+### Secuencia
+
+```
+1. Header CTA (MAIN — 1 archivo, 1 línea)
+2. LogoCloud prop (MAIN — 1 componente)
+3. BadgeAniversario prop SVG (MAIN — 1 componente)
+4. Home EN fixes (sección — rutas + props)
+5. Scan de otras páginas EN por hallazgos adicionales
+6. Investigar imágenes en producción
+```
+
+**Ownership:** Header, LogoCloud, BadgeAniversario son MAIN. Home EN fixes son sección `(en)/`.
+
+**Prerequisito:** Completar Fases 8-10 primero para no duplicar trabajo en componentes que ya se propearon.
+
+---
+
+## Fase 13: Propear el 100% de componentes usados en páginas EN — ⏸ DECISIÓN PENDIENTE
+
+### Cambio de estrategia
+
+El plan maestro original clasificó ~60 componentes como Tier 3 ("no propear, hacer copias locales"). Esa estrategia generó confusión: algunos componentes están propeados y otros no, lo que hace impredecible qué texto sale en cada idioma. Copias locales (`mu-en.tsx`, `nu-en.tsx`, etc.) duplican código y divergen del original con el tiempo.
+
+**Nueva directriz:** Todo componente que se usa en páginas EN debe aceptar prop `lang` para sus textos visibles. Sin excepciones. Sin copias locales.
+
+### Alcance
+
+Todos los componentes importados por páginas EN que tengan texto visible hardcodeado y no acepten props para ese texto. Incluye:
+
+- Componentes de la auditoría de Fase 12 (LogoCloud, BadgeAniversario, Header CTA)
+- Componentes griegos de Baumex (Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi) — actualmente son copias locales (`*-en.tsx`), hay que propear los originales y eliminar las copias
+- Cualquier otro componente descubierto en el QA visual
+
+### Decisión pendiente: ¿cuándo propear?
+
+**Opción A — Propear antes de terminar el sitio:**
+- Ventaja: cada página nueva que se cree ya funciona bilingüe sin trabajo extra
+- Desventaja: más trabajo upfront, retrasa el "terminado" del sitio
+- Riesgo: propear componentes que quizá cambien de contenido antes de entregar
+
+**Opción B — Propear después de terminar el sitio:**
+- Ventaja: el contenido ya está estabilizado, se propea una sola vez
+- Desventaja: mientras tanto, las páginas EN muestran mezcla de idiomas
+- Riesgo: deuda técnica se acumula y las copias locales divergen más
+
+**¿Cuál preferimos?** ← Decisión del usuario antes de ejecutar.
+
+### Trabajo (una vez decidido el cuándo)
+
+1. Inventariar todos los componentes con texto hardcodeado usados en páginas EN
+2. Propear cada uno con `lang?: 'en' | 'es'` (default `'es'`)
+3. Actualizar las páginas EN para pasar `lang="en"`
+4. Eliminar copias locales (`*-en.tsx`) que ya no se necesiten
+5. Verificar que páginas ES siguen funcionando (defaults)
+
+---
+
+## Fase 14: QA visual bilingüe — ❌ PENDIENTE
 
 Recorrer las páginas inglés en el navegador y verificar:
 
-1. **Texto sin traducir** — componentes que muestran español en página inglés
+1. **Texto sin traducir** — componentes que muestran español en página inglés (los que Fase 12 no atrapó)
 2. **Links rotos** — CTAs que apuntan a páginas inexistentes o que redirigen al idioma equivocado
 3. **Layout roto** — texto inglés más largo/corto que rompe el diseño
 4. **Imágenes** — alt text en español en páginas inglés
@@ -196,18 +311,20 @@ Recorrer las páginas inglés en el navegador y verificar:
 ## Orden de ejecución recomendado
 
 ```
-Fase 10 (Navegación bilingüe) ──── Footer, Header, cleanup Header-en
+Fase 10 (Navegación bilingüe) ──── Footer, Header, cleanup Header-en       ✅ COMPLETADA
     │
-Fase 8 (Propear componentes) ──── FichaTecnicaParque, ParkMap, LeedPageLayout, CarruselLeed
+Fase 8 (Propear componentes Fase 1) ── FichaTecnicaParque, ParkMap,         ✅ COMPLETADA
+    │                                   LeedPageLayout, CarruselLeed
     │
-Fase 9 (createMetadata) ──── arreglar helper + adoptar en 72 páginas (36 pares bilingües)
+Fase 9 (createMetadata) ──── arreglar helper + adoptar en 72 páginas        ✅ COMPLETADA
     │
-Fase 12 (QA visual) ──── manual, después de todo lo demás
+Fase 12 (Auditoría texto español) ── inventariar hallazgos                  ✅ INVENTARIO HECHO
+    │
+Fase 13 (Propear 100%) ──── propear todos los componentes restantes         ⏸ DECISIÓN PENDIENTE
+    │                        + eliminar copias locales *-en.tsx
+    │
+Fase 14 (QA visual) ──── manual, después de todo lo demás
 ```
-
-Fase 10 y 8 son independientes y pueden hacerse en paralelo.
-Fase 9 depende de que el helper esté arreglado (los 3 fixes).
-Fase 12 va al final.
 
 ---
 
@@ -216,4 +333,3 @@ Fase 12 va al final.
 - Traducción de contenido de Sanity (blog, noticias, fichas de parques)
 - Detección automática de idioma del navegador
 - Tercer idioma
-- Propear componentes Tier 3 individualmente (ya se hicieron copias locales en Fase 6c)

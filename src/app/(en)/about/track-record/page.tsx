@@ -1,13 +1,15 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { LogosGridBP2 } from '@/components/brandpetram/logos-grid-bp-2'
 import { StatsGridBPGamma } from '@/components/brandpetram/stats-grid-bp-gamma'
 import { EditorialCascadaBP } from '@/components/brandpetram/editorial-cascada-bp'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/about/track-record',
   title: 'Track Record',
   description: 'Over 60 years developing industrial parks and built-to-suit industrial buildings in Mexicali. Fortune 500 companies trust Grupo Nelson.',
-}
+})
 
 export default function TrackRecordPage() {
   return (

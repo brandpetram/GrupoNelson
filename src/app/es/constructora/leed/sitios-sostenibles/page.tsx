@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/sitios-sostenibles',
   title: 'Sitios Sostenibles y Eficiencia Hídrica LEED | Grupo Nelson Mexicali',
   description: 'Naves industriales LEED en Mexicali con cubiertas SRI >78, captación pluvial y reducción del 40% en consumo de agua. Nelson II: tanque contraincendio de 360,000 galones. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/sitios-sostenibles' },
-}
+})
 
 export default function SitiosSosteniblesPage() {
   return (

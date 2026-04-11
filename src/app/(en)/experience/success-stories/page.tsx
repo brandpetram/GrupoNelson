@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { HeroMarketing1Beta } from "./sections/hero-marketing-1-beta";
 import { SplitStickyCases } from "./sections/split-sticky-cases";
 import { MosaicCases } from "./sections/mosaic-cases";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "Success Stories",
-  description:
-    "The most demanding companies operating in Mexicali already chose Grupo Nelson. Gulfstream 35 years, Honeywell 30+. Long-term relationships measured in decades.",
-};
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/experience/success-stories',
+  title: 'Success Stories',
+  description: 'The most demanding companies operating in Mexicali already chose Grupo Nelson. Gulfstream 35 years, Honeywell 30+. Long-term relationships measured in decades.',
+})
 
 export default function SuccessStoriesPage() {
   return (

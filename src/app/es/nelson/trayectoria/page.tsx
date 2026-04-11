@@ -1,13 +1,15 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { LogosGridBP2 } from '@/components/brandpetram/logos-grid-bp-2'
 import { StatsGridBPGamma } from '@/components/brandpetram/stats-grid-bp-gamma'
 import { EditorialCascadaBP } from '@/components/brandpetram/editorial-cascada-bp'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/nelson/trayectoria',
   title: 'Trayectoria',
   description: 'Más de 60 años desarrollando parques industriales y naves industriales built-to-suit en Mexicali. Empresas Fortune 500 confían en Grupo Nelson.',
-}
+})
 
 export default function TrayectoriaPage() {
   return (

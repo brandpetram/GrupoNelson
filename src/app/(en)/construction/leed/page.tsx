@@ -1,13 +1,14 @@
-import type { Metadata } from 'next'
 import { HeroMarketing1 } from '@/components/brandpetram/hero-marketing-1'
 import { SidebarSticky1 } from '@/components/brandpetram/sidebar-sticky-1'
 import { CarruselLeed } from '@/components/brandpetram/carrusel-leed'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed',
   title: 'LEED Certification in Mexicali',
   description: 'LEED-certify your industrial building in Mexicali with Baumex: 28 years of experience in extreme climate, real thermal performance data, and Gulfstream pursuing LEED Gold.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed' },
-}
+})
 
 export default function LeedPage() {
   return (

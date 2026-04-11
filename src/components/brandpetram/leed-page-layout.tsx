@@ -12,6 +12,29 @@ export interface LeedFeature {
   description: string
 }
 
+// === Datos bilingües ===
+
+const leedLayoutLabels = {
+  es: {
+    leedShort: 'LEED',
+    certificacionLeed: 'Certificación LEED',
+    cotizaTuNaveLeed: 'Cotiza tu nave LEED',
+    verTodosLosTemasLeed: '← Ver todos los temas LEED',
+    fuentes: 'Fuentes: ',
+    leedHubHref: '/constructora/leed',
+    contactoHref: '/contacto',
+  },
+  en: {
+    leedShort: 'LEED',
+    certificacionLeed: 'LEED Certification',
+    cotizaTuNaveLeed: 'Quote your LEED building',
+    verTodosLosTemasLeed: '← View all LEED topics',
+    fuentes: 'Sources: ',
+    leedHubHref: '/construction/leed',
+    contactoHref: '/contact',
+  },
+} as const
+
 export interface LeedPageLayoutProps {
   /** Etiqueta pequeña sobre el título (ej. "Certificación LEED") */
   eyebrow?: string
@@ -42,6 +65,8 @@ export interface LeedPageLayoutProps {
   blendMode?: BlendMode
   /** Configuración del grid overlay sobre la imagen */
   gridConfig?: Omit<GridProps, 'mode' | 'children' | 'height'>
+  /** Idioma (default: "es") */
+  lang?: 'en' | 'es'
 }
 
 export function LeedPageLayout({
@@ -66,7 +91,9 @@ export function LeedPageLayout({
     fadePosition: 'center' as const,
     fadeRadius: '18rem',
   },
+  lang = 'es',
 }: LeedPageLayoutProps) {
+  const t = leedLayoutLabels[lang]
   return (
     <div data-component="LeedPageLayout" data-component-file="src/components/brandpetram/leed-page-layout.tsx" data-component-props="true" className={cn('relative isolate overflow-hidden bg-background px-6 py-24 sm:py-32 xl:overflow-visible xl:px-0', className)}>
       {/* Grid decorativo de fondo */}
@@ -104,9 +131,9 @@ export function LeedPageLayout({
           <div className="xl:pr-4">
             <div className="xl:max-w-lg">
               <p className="text-base/7 font-semibold text-emerald-600 dark:text-emerald-400">
-                <Link href="/constructora/leed" className="hover:underline">
-                  <span className="768:hidden">LEED</span>
-                  <span className="hidden 768:inline">Certificación LEED</span>
+                <Link href={t.leedHubHref} className="hover:underline">
+                  <span className="768:hidden">{t.leedShort}</span>
+                  <span className="hidden 768:inline">{t.certificacionLeed}</span>
                 </Link>
                 {eyebrow && <> | {eyebrow}</>}
               </p>
@@ -191,7 +218,7 @@ export function LeedPageLayout({
               {fuentes && (
                 <div className="mt-12 border-t border-border pt-6">
                   <p className="text-xs text-muted-foreground/70 leading-relaxed">
-                    <strong className="font-semibold text-muted-foreground">Fuentes: </strong>
+                    <strong className="font-semibold text-muted-foreground">{t.fuentes}</strong>
                     {fuentes}
                   </p>
                 </div>
@@ -200,16 +227,16 @@ export function LeedPageLayout({
               {/* CTA */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/contacto"
+                  href={t.contactoHref}
                   className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow hover:bg-primary/90 transition-colors"
                 >
-                  Cotiza tu nave LEED
+                  {t.cotizaTuNaveLeed}
                 </Link>
                 <Link
-                  href="/constructora/leed"
+                  href={t.leedHubHref}
                   className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
                 >
-                  ← Ver todos los temas LEED
+                  {t.verTodosLosTemasLeed}
                 </Link>
               </div>
             </div>
@@ -218,7 +245,7 @@ export function LeedPageLayout({
       </div>
       {/* Carrusel de todos los temas LEED */}
       <div className="mt-8">
-        <CarruselLeed />
+        <CarruselLeed lang={lang} />
       </div>
     </div>
   )

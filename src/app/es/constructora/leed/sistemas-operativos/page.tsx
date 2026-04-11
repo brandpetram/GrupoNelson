@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/sistemas-operativos',
   title: 'Sistemas Operativos Inteligentes LEED | Grupo Nelson Mexicali',
   description: 'BMS con submedición por circuito para naves industriales LEED en Mexicali. Monitoreo en tiempo real de HVAC, energía solar y agua. Dashboards ESG. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/sistemas-operativos' },
-}
+})
 
 export default function SistemasOperativosPage() {
   return (

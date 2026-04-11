@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/indoor-environmental-quality',
   title: 'Indoor Environmental Quality | LEED | Grupo Nelson',
   description: 'Low-VOC materials, ASHRAE 62.1 ventilation, and thermal comfort for LEED industrial buildings in Mexicali. Protect your team\'s health and productivity. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/indoor-environmental-quality' },
-}
+})
 
 export default function IndoorEnvironmentalQualityPage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="Air, light, and indoor comfort"
       titulo="Build your Mexicali industrial building with LEED-certified indoor environmental quality"
       intro="Paints with VOC levels below 50 g/L. Ventilation designed for desert climate with ASHRAE 62.1 filtration. Thermal comfort controlled for continuous industrial operation. These are the indoor environmental quality standards that Grupo Nelson integrates into industrial building construction in Mexicali — and the ones that earn LEED credits in the indoor environment category."

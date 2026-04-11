@@ -1,11 +1,13 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/cookie-policy',
   title: 'Cookie Policy',
   description: 'Cookie policy for the Grupo Nelson website.',
-}
+})
 
 export default function CookiePolicyPage() {
   return (

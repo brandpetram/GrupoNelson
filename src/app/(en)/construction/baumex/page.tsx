@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import MuEn from './components/mu-en'
 import NuEn from './components/nu-en'
@@ -12,11 +11,14 @@ import UpsilonEn from './components/upsilon-en'
 import PhiEn from './components/phi-en'
 import ChiEn from './components/chi-en'
 import PsiEn from './components/psi-en'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/baumex',
   title: 'Baumex Construction',
   description: 'Grupo Nelson\'s in-house construction firm with over 25 years building industrial facilities in Mexicali. 75+ projects delivered for Fortune 500 companies. 4.5 million square feet built since 1997.',
-}
+})
 
 export default function BaumexPage() {
   return (

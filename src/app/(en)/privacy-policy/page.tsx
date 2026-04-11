@@ -1,11 +1,13 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/privacy-policy',
   title: 'Privacy Policy',
   description: 'Grupo Nelson privacy policy. Personal data protection in compliance with applicable Mexican data protection laws.',
-}
+})
 
 export default function PrivacyPolicyPage() {
   return (

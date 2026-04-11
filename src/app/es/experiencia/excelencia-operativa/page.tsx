@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -12,12 +11,14 @@ import { CallToAction as CtaExcelencia } from "./sections/cta";
 import { TestimonialExcelencia } from "./sections/testimonial";
 import { DocumentacionAuditable } from "./sections/documentacion-auditable";
 import { DimensionesControl } from "./sections/dimensiones-control";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "Excelencia Operativa",
-  description:
-    "75 proyectos completados en 28 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.",
-};
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/experiencia/excelencia-operativa',
+  title: 'Excelencia Operativa',
+  description: '75 proyectos completados en 28 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.',
+})
 
 export default function ExcelenciaOperativaPage() {
   return (

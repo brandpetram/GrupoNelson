@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { HeroVideoCover } from '@/components/hero-video-cover'
 import { TarjetaHeroOriginalBeta } from '@/components/tarjeta-hero-original-beta'
@@ -6,11 +5,14 @@ import { Beta } from '@/components/brandpetram/beta'
 import { Gamma } from '@/components/brandpetram/gamma'
 import { Delta } from '@/components/brandpetram/delta'
 import { Epsilon } from '@/components/brandpetram/epsilon'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/build-to-suit',
   title: 'Build-to-Suit Construction',
   description: 'Build-to-suit industrial buildings in Mexicali designed and constructed to your exact specifications. Grupo Nelson delivers from raw land to fully operational facilities within its industrial parks.',
-}
+})
 
 export default function BuildToSuitPage() {
   return (

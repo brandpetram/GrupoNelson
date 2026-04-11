@@ -3,11 +3,14 @@ import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/industrial-parks/vigia-ii',
   title: 'El Vigía II Industrial Park',
   description: 'El Vigía II Industrial Park in Mexicali: 7.5 hectares, built-to-suit industrial buildings and modern facilities since 1987.',
-}
+})
 
 export default async function VigiaIIPage() {
   const park = (await getParkBySlug('vigia-ii'))!
@@ -30,7 +33,7 @@ export default async function VigiaIIPage() {
             }}
         /></div>
       <div className="w-11/12 1200:w-10/12 mx-auto mb-32">
-        <FichaTecnicaParque park={park} />
+        <FichaTecnicaParque park={park} lang="en" />
       </div>
       <VirtualTourBP
         tourId="hY5fjENu2"

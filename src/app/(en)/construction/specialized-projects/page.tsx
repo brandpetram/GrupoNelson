@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
 import { GridOverlay } from "@/components/ui/brandpetram/grid";
@@ -6,12 +5,14 @@ import {
   SplitSimpleBP,
   splitParagraphClass,
 } from "@/components/brandpetram/split-simple-bp";
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
-  title: "Specialized Projects",
-  description:
-    "Specialized industrial projects in Mexicali: 95 m column-free bridge, 52,200 m² facility with BRB seismic systems, 3,000 HP wind tunnel, millimeter-precision foundations.",
-};
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/specialized-projects',
+  title: 'Specialized Projects',
+  description: 'Specialized industrial projects in Mexicali: 95 m column-free bridge, 52,200 m² facility with BRB seismic systems, 3,000 HP wind tunnel, millimeter-precision foundations.',
+})
 
 export default function SpecializedProjectsPage() {
   return (

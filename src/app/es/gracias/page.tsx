@@ -1,11 +1,14 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/gracias',
   title: 'Gracias | Grupo Nelson',
-  robots: { index: false },
-}
+  description: 'Gracias por contactar a Grupo Nelson.',
+  extra: { robots: { index: false } },
+})
 
 export default function GraciasPage() {
   return (

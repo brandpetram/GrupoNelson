@@ -1,12 +1,14 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { MosaicoLiderazgo } from '@/components/brandpetram/mosaico-liderazgo'
 import type { MosaicoItem } from '@/components/brandpetram/mosaico-liderazgo'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/about/leadership',
   title: 'Leadership',
   description: 'Four generations leading the development of industrial parks and built-to-suit industrial buildings in Mexicali. The founding family operates every project directly.',
-}
+})
 
 const team = [
   {

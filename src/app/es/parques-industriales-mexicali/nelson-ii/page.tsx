@@ -4,11 +4,14 @@ import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parqu
 import { ParkMap } from '@/components/brandpetram/park-map'
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/parques-industriales-mexicali/nelson-ii',
   title: 'Parque Industrial Nelson II',
   description: 'Parque Industrial Nelson II en Mexicali: 26.6 hectáreas, naves industriales built-to-suit con tecnología de punta. Gulfstream, Honeywell y más empresas Fortune 500.',
-}
+})
 
 export default async function NelsonIIPage() {
   const park = (await getParkBySlug('nelson-ii'))!

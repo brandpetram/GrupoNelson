@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/clima-extremo',
   title: 'Naves Industriales LEED en Clima Extremo | Grupo Nelson Mexicali',
   description: 'Construcción de naves industriales LEED en Mexicali con +45°C. Envolvente térmica R-19/R-30, cubiertas SRI >78, delta de 24°C controlado. 28 años de experiencia en clima extremo.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/clima-extremo' },
-}
+})
 
 export default function ClimaExtremoPage() {
   return (

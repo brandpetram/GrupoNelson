@@ -4,11 +4,14 @@ import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parqu
 import { ParkMap } from '@/components/brandpetram/park-map'
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/industrial-parks/nelson-ii',
   title: 'Nelson II Industrial Park',
   description: 'Nelson II Industrial Park in Mexicali: 26.6 hectares, built-to-suit industrial buildings with cutting-edge technology. Gulfstream, Honeywell, and other Fortune 500 companies.',
-}
+})
 
 export default async function NelsonIIPage() {
   const park = (await getParkBySlug('nelson-ii'))!
@@ -31,9 +34,9 @@ export default async function NelsonIIPage() {
             }}
         /></div>
         <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}>
-            <FichaTecnicaParque park={park} />
+            <FichaTecnicaParque park={park} lang="en" />
             {park.coordinates && (
-                <ParkMap
+                <ParkMap lang="en"
                     parkName={park.name}
                     address={park.address ?? park.location}
                     lat={park.coordinates.lat}

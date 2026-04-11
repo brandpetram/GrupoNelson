@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { Zeta } from '@/components/brandpetram/zeta'
 import { Eta } from '@/components/brandpetram/eta'
@@ -6,11 +5,14 @@ import { Teta } from '@/components/brandpetram/teta'
 import { Iota } from '@/components/brandpetram/iota'
 import { Kappa } from '@/components/brandpetram/kappa'
 import { Lamda } from '@/components/brandpetram/lamda'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/llave-en-mano',
   title: 'Soluciones Llave en Mano',
   description: 'Naves industriales llave en mano en Mexicali: listas para operar desde el primer día. Parques industriales de Grupo Nelson con infraestructura completa.',
-}
+})
 
 export default function LlaveEnManoPage() {
   return (

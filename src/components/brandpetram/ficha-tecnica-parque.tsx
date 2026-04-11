@@ -22,41 +22,143 @@ function formatHeight(m: number, ft?: number) {
   return `${m} m`
 }
 
-const CONSULTAR = "Consultar"
+// === Datos bilingües ===
 
-function buildEspecificaciones(park: IndustrialPark) {
+const labels = {
+  es: {
+    consultar: "Consultar",
+    especificacionesDelParque: "Especificaciones del parque",
+    datosGenerales: "Datos generales",
+    parque: "Parque",
+    añoDeOperacion: "Año de operación",
+    superficieTotal: "Superficie total",
+    hectareas: "hectáreas",
+    navesDisponibles: "Naves disponibles",
+    m2DisponiblesEnNave: "M² disponibles en nave",
+    terrenoDisponible: "Terreno disponible",
+    disponibilidadInmediata: "Disponibilidad inmediata",
+    si: "Sí",
+    no: "No",
+    ubicacion: "Ubicación",
+    direccion: "Dirección",
+    navesIndustriales: "Naves industriales",
+    disponible: "Disponible",
+    ocupada: "Ocupada",
+    disponibilidadParcial: "Disponibilidad parcial",
+    estado: "Estado",
+    ocupadaPor: "Ocupada por",
+    m2Disponibles: "M² disponibles",
+    disponibleDesde: "Disponible desde",
+    areaTotal: "Área total",
+    almacen: "Almacén",
+    oficinas: "Oficinas",
+    mezzanine: "Mezzanine",
+    alturaMaxima: "Altura máxima",
+    alturaLibre: "Altura libre",
+    andenes: "Andenes",
+    patioDeManiobras: "Patio de maniobras",
+    estacionamiento: "Estacionamiento",
+    espacios: "espacios",
+    estructura: "Estructura",
+    piso: "Piso",
+    techo: "Techo",
+    muros: "Muros",
+    iluminacion: "Iluminación",
+    baños: "Baños",
+    hvac: "HVAC",
+    proteccionContraIncendio: "Protección contra incendio",
+    incluida: "Incluida",
+    galeria: "Galería",
+    infraestructura: "Infraestructura",
+    sinNavesDisponibles: "Este parque no tiene naves disponibles actualmente. Contáctenos para explorar opciones build-to-suit.",
+    fichasNoDisponibles: "Las fichas técnicas de naves para este parque aún no están disponibles.",
+  },
+  en: {
+    consultar: "Contact us",
+    especificacionesDelParque: "Park specifications",
+    datosGenerales: "General data",
+    parque: "Park",
+    añoDeOperacion: "Year of operation",
+    superficieTotal: "Total area",
+    hectareas: "hectares",
+    navesDisponibles: "Available buildings",
+    m2DisponiblesEnNave: "Available m² in building",
+    terrenoDisponible: "Available land",
+    disponibilidadInmediata: "Immediate availability",
+    si: "Yes",
+    no: "No",
+    ubicacion: "Location",
+    direccion: "Address",
+    navesIndustriales: "Industrial buildings",
+    disponible: "Available",
+    ocupada: "Occupied",
+    disponibilidadParcial: "Partial availability",
+    estado: "Status",
+    ocupadaPor: "Occupied by",
+    m2Disponibles: "Available m²",
+    disponibleDesde: "Available from",
+    areaTotal: "Total area",
+    almacen: "Warehouse",
+    oficinas: "Offices",
+    mezzanine: "Mezzanine",
+    alturaMaxima: "Maximum height",
+    alturaLibre: "Clear height",
+    andenes: "Docks",
+    patioDeManiobras: "Maneuvering yard",
+    estacionamiento: "Parking",
+    espacios: "spaces",
+    estructura: "Structure",
+    piso: "Floor",
+    techo: "Roof",
+    muros: "Walls",
+    iluminacion: "Lighting",
+    baños: "Bathrooms",
+    hvac: "HVAC",
+    proteccionContraIncendio: "Fire protection",
+    incluida: "Included",
+    galeria: "Gallery",
+    infraestructura: "Infrastructure",
+    sinNavesDisponibles: "This park has no buildings available at this time. Contact us to explore build-to-suit options.",
+    fichasNoDisponibles: "Building spec sheets for this park are not yet available.",
+  },
+} as const
+
+type Lang = 'en' | 'es'
+type Labels = (typeof labels)[Lang]
+
+function buildEspecificaciones(park: IndustrialPark, t: Labels) {
   return [
     {
-      grupo: "Datos generales",
+      grupo: t.datosGenerales,
       filas: [
-        { label: "Parque", valor: park.name },
-        { label: "Año de operación", valor: String(park.since) },
-        { label: "Superficie total", valor: `${park.landSizeHectares} hectáreas` },
+        { label: t.parque, valor: park.name },
+        { label: t.añoDeOperacion, valor: String(park.since) },
+        { label: t.superficieTotal, valor: `${park.landSizeHectares} ${t.hectareas}` },
         {
-          label: "Naves disponibles",
-          valor: park.availableBuildings != null ? String(park.availableBuildings) : CONSULTAR,
+          label: t.navesDisponibles,
+          valor: park.availableBuildings != null ? String(park.availableBuildings) : t.consultar,
           highlight: park.availableBuildings != null && park.availableBuildings > 0,
         },
         {
-          label: "M² disponibles en nave",
+          label: t.m2DisponiblesEnNave,
           valor: park.availableAreaM2 != null
             ? `${park.availableAreaM2.toLocaleString("es-MX")} m²`
-            : CONSULTAR,
+            : t.consultar,
         },
         {
-          label: "Terreno disponible",
+          label: t.terrenoDisponible,
           valor: park.availableLandM2 != null
             ? `${park.availableLandM2.toLocaleString("es-MX")} m²`
-            : CONSULTAR,
+            : t.consultar,
         },
         {
-          label: "Disponibilidad inmediata",
+          label: t.disponibilidadInmediata,
           valor: park.immediateAvailability != null
-            ? (park.immediateAvailability ? "Sí" : "No")
-            : CONSULTAR,
+            ? (park.immediateAvailability ? t.si : t.no)
+            : t.consultar,
         },
-        { label: "Ubicación", valor: park.location },
-        ...(park.address ? [{ label: "Dirección", valor: park.address }] : []),
+        { label: t.ubicacion, valor: park.location },
+        ...(park.address ? [{ label: t.direccion, valor: park.address }] : []),
       ],
     },
   ]
@@ -83,7 +185,7 @@ function buildNaveSummary(building: Building) {
 
 // === Galería ===
 
-function ParkGallery({ park }: { park: IndustrialPark }) {
+function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
   const gallery: GalleryGroup[] = park.gallery ?? [
     { label: "Parque", images: [park.heroImage] },
   ]
@@ -229,7 +331,7 @@ function ParkGallery({ park }: { park: IndustrialPark }) {
         {gallery.length > 1 && (
           <div className="pt-1">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">Galería</span>
+              <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">{t.galeria}</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {gallery.map((group, gi) => {
@@ -258,7 +360,7 @@ function ParkGallery({ park }: { park: IndustrialPark }) {
         {/* Infraestructura */}
         <div className="pt-1">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">Infraestructura</span>
+            <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">{t.infraestructura}</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {(park.infrastructure ?? []).map((item) => (
@@ -287,7 +389,7 @@ function NavCell({ label, value }: { label: string; value: string }) {
   )
 }
 
-function NaveDetalle({ building }: { building: Building }) {
+function NaveDetalle({ building, t }: { building: Building; t: Labels }) {
   const summary = buildNaveSummary(building)
   const sub = building.generalData?.subAreas
   const ext = building.exteriorArea
@@ -304,21 +406,21 @@ function NaveDetalle({ building }: { building: Building }) {
         {avail && (
           <>
             <NavCell
-              label="Estado"
-              value={avail.status === 'available' ? "Disponible" : avail.status === 'occupied' ? "Ocupada" : avail.status === 'partial' ? "Disponibilidad parcial" : "Consultar"}
+              label={t.estado}
+              value={avail.status === 'available' ? t.disponible : avail.status === 'occupied' ? t.ocupada : avail.status === 'partial' ? t.disponibilidadParcial : t.consultar}
             />
             {building.tenant && (
-              <NavCell label="Ocupada por" value={building.tenant} />
+              <NavCell label={t.ocupadaPor} value={building.tenant} />
             )}
             {avail.status !== 'occupied' && avail.availableM2 != null && (
               <NavCell
-                label="M² disponibles"
+                label={t.m2Disponibles}
                 value={`${avail.availableM2.toLocaleString("es-MX")} m²`}
               />
             )}
             {avail.availableFrom && (
               <NavCell
-                label="Disponible desde"
+                label={t.disponibleDesde}
                 value={avail.availableFrom}
               />
             )}
@@ -326,44 +428,44 @@ function NaveDetalle({ building }: { building: Building }) {
         )}
 
         {/* Áreas */}
-        <NavCell label="Área total" value={summary.area} />
+        <NavCell label={t.areaTotal} value={summary.area} />
         {sub?.warehouse && (
-          <NavCell label="Almacén" value={formatArea(sub.warehouse.m2, sub.warehouse.sqft)} />
+          <NavCell label={t.almacen} value={formatArea(sub.warehouse.m2, sub.warehouse.sqft)} />
         )}
         {sub?.offices && (
-          <NavCell label="Oficinas" value={formatArea(sub.offices.m2, sub.offices.sqft)} />
+          <NavCell label={t.oficinas} value={formatArea(sub.offices.m2, sub.offices.sqft)} />
         )}
         {sub?.mezzanine && (
-          <NavCell label="Mezzanine" value={formatArea(sub.mezzanine.m2, sub.mezzanine.sqft)} />
+          <NavCell label={t.mezzanine} value={formatArea(sub.mezzanine.m2, sub.mezzanine.sqft)} />
         )}
 
         {/* Alturas */}
-        {summary.maxH && <NavCell label="Altura máxima" value={summary.maxH} />}
-        {summary.clearH && <NavCell label="Altura libre" value={summary.clearH} />}
+        {summary.maxH && <NavCell label={t.alturaMaxima} value={summary.maxH} />}
+        {summary.clearH && <NavCell label={t.alturaLibre} value={summary.clearH} />}
 
         {/* Carga y maniobras */}
-        <NavCell label="Andenes" value={summary.docks} />
+        <NavCell label={t.andenes} value={summary.docks} />
         {ext?.maneuveringYard && (
-          <NavCell label="Patio de maniobras" value={ext.maneuveringYard} />
+          <NavCell label={t.patioDeManiobras} value={ext.maneuveringYard} />
         )}
         {ext?.parkingSpaces && (
-          <NavCell label="Estacionamiento" value={`${ext.parkingSpaces} espacios`} />
+          <NavCell label={t.estacionamiento} value={`${ext.parkingSpaces} ${t.espacios}`} />
         )}
 
         {/* Construcción */}
-        {summary.structure && <NavCell label="Estructura" value={summary.structure} />}
-        {specs?.floor && <NavCell label="Piso" value={specs.floor.description} />}
-        {specs?.roof && <NavCell label="Techo" value={specs.roof.material} />}
-        {specs?.walls && <NavCell label="Muros" value={specs.walls.material} />}
+        {summary.structure && <NavCell label={t.estructura} value={summary.structure} />}
+        {specs?.floor && <NavCell label={t.piso} value={specs.floor.description} />}
+        {specs?.roof && <NavCell label={t.techo} value={specs.roof.material} />}
+        {specs?.walls && <NavCell label={t.muros} value={specs.walls.material} />}
 
         {/* Instalaciones */}
-        {iluminacion && <NavCell label="Iluminación" value={iluminacion} />}
-        {specs?.bathrooms && <NavCell label="Baños" value={specs.bathrooms.description} />}
-        {building.hvac && <NavCell label="HVAC" value={building.hvac.description} />}
+        {iluminacion && <NavCell label={t.iluminacion} value={iluminacion} />}
+        {specs?.bathrooms && <NavCell label={t.baños} value={specs.bathrooms.description} />}
+        {building.hvac && <NavCell label={t.hvac} value={building.hvac.description} />}
 
         {/* Seguridad */}
         {building.fireProtection && (
-          <NavCell label="Protección contra incendio" value={building.fireProtection.description ?? "Incluida"} />
+          <NavCell label={t.proteccionContraIncendio} value={building.fireProtection.description ?? t.incluida} />
         )}
       </div>
     </div>
@@ -372,17 +474,18 @@ function NaveDetalle({ building }: { building: Building }) {
 
 // === Componente principal ===
 
-export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
+export function FichaTecnicaParque({ park, lang = 'es' }: { park: IndustrialPark; lang?: Lang }) {
   const [naveExpandida, setNaveExpandida] = useState<string | null>(null)
+  const t = labels[lang]
 
-  const especificaciones = buildEspecificaciones(park)
+  const especificaciones = buildEspecificaciones(park, t)
 
   return (
     <section data-component="FichaTecnicaParque" data-component-file="src/components/brandpetram/ficha-tecnica-parque.tsx" data-component-props="true" className="py-12">
 
       {/* Encabezado */}
       <h2 className="text-sm font-bold uppercase tracking-widest mb-6" style={{ color: "var(--primary)" }}>
-        Especificaciones del parque
+        {t.especificacionesDelParque}
       </h2>
 
       {/* Layout 2 columnas: galería + specs */}
@@ -390,7 +493,7 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
 
         {/* Columna izquierda — galería */}
         <div className="w-full lg:w-80 shrink-0">
-          <ParkGallery park={park} />
+          <ParkGallery park={park} t={t} />
         </div>
 
         {/* Columna derecha — especificaciones */}
@@ -427,7 +530,7 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
             <div>
               <div className="px-4 py-2.5 rounded-sm" style={{ backgroundColor: "var(--primary)" }}>
                 <span className="text-sm font-semibold text-white">
-                  Naves industriales ({(park.buildings?.length ?? 0)})
+                  {t.navesIndustriales} ({(park.buildings?.length ?? 0)})
                 </span>
               </div>
               {(park.buildings ?? []).map((building, ni) => {
@@ -440,10 +543,10 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
                   status === 'partial'   ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400" :
                   "bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
                 const badgeLabel =
-                  status === 'available' ? "Disponible" :
-                  status === 'occupied'  ? "Ocupada" :
-                  status === 'partial'   ? "Disponibilidad parcial" :
-                  "Consultar"
+                  status === 'available' ? t.disponible :
+                  status === 'occupied'  ? t.ocupada :
+                  status === 'partial'   ? t.disponibilidadParcial :
+                  t.consultar
                 return (
                   <div key={building.id}>
                     <button
@@ -469,7 +572,7 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
                       </div>
                     </button>
                     {naveExpandida === building.id && (
-                      <NaveDetalle building={building} />
+                      <NaveDetalle building={building} t={t} />
                     )}
                   </div>
                 )
@@ -480,14 +583,14 @@ export function FichaTecnicaParque({ park }: { park: IndustrialPark }) {
           {/* Sin naves disponibles */}
           {park.availableBuildings === 0 && (
             <div className="mt-4 px-4 py-5 text-sm text-zinc-600 dark:text-zinc-400 border border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg">
-              Este parque no tiene naves disponibles actualmente. Contáctenos para explorar opciones build-to-suit.
+              {t.sinNavesDisponibles}
             </div>
           )}
 
           {/* Parque sin fichas */}
           {(park.buildings?.length ?? 0) === 0 && !park.hasSpecs && (
             <div className="px-4 py-8 text-center text-sm text-zinc-400 dark:text-zinc-500 border border-dashed border-zinc-200 dark:border-zinc-800 rounded-lg">
-              Las fichas técnicas de naves para este parque aún no están disponibles.
+              {t.fichasNoDisponibles}
             </div>
           )}
 

@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/operating-systems',
   title: 'Intelligent Operating Systems LEED | Grupo Nelson Mexicali',
   description: 'BMS with circuit-level submetering for LEED industrial buildings in Mexicali. Real-time monitoring of HVAC, solar energy, and water. ESG dashboards. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/operating-systems' },
-}
+})
 
 export default function OperatingSystemsPage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="BMS monitoring and submetering"
       titulo="Monitor every system in your Mexicali industrial building with BMS and LEED circuit-level submetering"
       intro="Gulfstream 550K operates with 42 A/C air handlers, 10 MW of solar panels, and 20 MW of electrical capacity. Without intelligent circuit-level monitoring, detecting a consumption deviation takes months. With BMS and submetering, it takes hours. Baumex integrates these systems during building construction — not as a retrofit."

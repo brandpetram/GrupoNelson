@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/extreme-climate',
   title: 'LEED Industrial Buildings in Extreme Climate | Grupo Nelson Mexicali',
   description: 'LEED industrial building construction in Mexicali at +45°C. R-19/R-30 thermal envelope, SRI >78 roofing, 24°C delta controlled. 28 years of extreme climate experience.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/extreme-climate' },
-}
+})
 
 export default function ExtremeClimatePage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="Engineering for +45°C"
       titulo="Build your LEED industrial building in Mexicali at +45°C — 28 years of extreme climate engineering"
       intro="Mexicali exceeds 48°C in summer with solar radiation of 2,400 kWh/m² annually. Baumex has built 75+ industrial buildings under these conditions over 28 years. The thermal envelope of each building is calibrated specifically for the Sonoran Desert using performance data collected in the same climate zone."

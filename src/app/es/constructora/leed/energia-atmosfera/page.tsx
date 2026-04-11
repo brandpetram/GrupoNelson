@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/energia-atmosfera',
   title: 'Energía y Atmósfera LEED | Grupo Nelson Mexicali',
   description: 'Naves industriales LEED en Mexicali con 10 MW de paneles solares, ahorro del 35-50% vs nave convencional. Modelado energético desde fase conceptual. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/energia-atmosfera' },
-}
+})
 
 export default function EnergiaAtmosferaPage() {
   return (

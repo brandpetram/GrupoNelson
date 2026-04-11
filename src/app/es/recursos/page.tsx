@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/recursos',
   title: 'Recursos',
-  description:
-    'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y Baumex implementan en sus desarrollos industriales.',
-  alternates: { canonical: 'https://nelson.com.mx/recursos' },
-}
+  description: 'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y Baumex implementan en sus desarrollos industriales.',
+})
 
 const categories = [
   {

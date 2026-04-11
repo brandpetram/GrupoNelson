@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { ImagenRectangulo } from "@/components/ui/brandpetram/imagen-rectangulo";
 import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
@@ -12,11 +11,14 @@ import {
   CheckBadgeIcon,
 } from "@heroicons/react/20/solid";
 
-export const metadata: Metadata = {
-  title: "International Construction Standards",
-  description:
-    "Industrial buildings in Mexicali built to FM Global, NFPA, LEED, ISN, IBC, and NOM standards. Baumex: 75+ projects, audits by Gulfstream and Honeywell.",
-};
+import { createMetadata } from '@/lib/create-metadata'
+
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/international-standards',
+  title: 'International Construction Standards',
+  description: 'Industrial buildings in Mexicali built to FM Global, NFPA, LEED, ISN, IBC, and NOM standards. Baumex: 75+ projects, audits by Gulfstream and Honeywell.',
+})
 
 export default function InternationalStandardsPage() {
   return (

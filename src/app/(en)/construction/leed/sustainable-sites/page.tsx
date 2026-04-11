@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/leed/sustainable-sites',
   title: 'Sustainable Sites & Water Efficiency LEED | Grupo Nelson Mexicali',
   description: 'LEED industrial buildings in Mexicali with SRI >78 roofing, rainwater harvesting, and 40% water consumption reduction. Nelson II: 360,000-gallon fire suppression tank. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/construction/leed/sustainable-sites' },
-}
+})
 
 export default function SustainableSitesPage() {
   return (
-    <LeedPageLayout
+    <LeedPageLayout lang="en"
       eyebrow="Water and sustainable sites"
       titulo="Reduce water consumption by 40% in your LEED industrial building in Mexicali — a region with critical water stress"
       intro="Mexicali is located in one of the most water-stressed regions in North America. Nelson II operates with a 360,000-gallon fire suppression tank and a centralized system that saves tenants 60% of the cost. Gulfstream 550K recovers 90% of condensation water from its 42 air handling units. Every liter counts — and every recoverable liter is recovered."

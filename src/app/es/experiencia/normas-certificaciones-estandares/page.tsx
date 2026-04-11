@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import HeroMotionPlus from '@/components/brandpetram/hero-motionplus'
 import {
@@ -7,12 +6,14 @@ import {
   BoltIcon,
   FireIcon,
 } from '@heroicons/react/24/outline'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/experiencia/normas-certificaciones-estandares',
   title: 'Normas, Certificaciones y Estándares',
-  description:
-    'Baumex responde a tres tipos de exigencia: corporativas (ISN Recomendado por Honeywell), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
-}
+  description: 'Baumex responde a tres tipos de exigencia: corporativas (ISN Recomendado por Honeywell), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
+})
 
 const engineeringStandards = [
   {

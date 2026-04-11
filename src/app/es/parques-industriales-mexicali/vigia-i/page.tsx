@@ -3,11 +3,14 @@ import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/parques-industriales-mexicali/vigia-i',
   title: 'Parque Industrial El Vigía I',
   description: 'Parque Industrial El Vigía I en Mexicali: 14 hectáreas, 11 empresas establecidas y naves industriales built-to-suit desde 1967.',
-}
+})
 
 export default async function VigiaIPage() {
   const park = (await getParkBySlug('vigia-i'))!

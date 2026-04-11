@@ -1,10 +1,12 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/aviso-de-privacidad',
   title: 'Aviso de Privacidad',
   description: 'Aviso de privacidad de Grupo Nelson. Protección de datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.',
-}
+})
 
 export default function AvisoDePrivacidadPage() {
   return (

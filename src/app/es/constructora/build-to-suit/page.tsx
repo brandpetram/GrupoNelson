@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { HeroVideoCover } from '@/components/hero-video-cover'
 import { TarjetaHeroOriginalBeta } from '@/components/tarjeta-hero-original-beta'
@@ -6,11 +5,14 @@ import { Beta } from '@/components/brandpetram/beta'
 import { Gamma } from '@/components/brandpetram/gamma'
 import { Delta } from '@/components/brandpetram/delta'
 import { Epsilon } from '@/components/brandpetram/epsilon'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/build-to-suit',
   title: 'Construcción Built-to-Suit',
   description: 'Naves industriales built-to-suit en Mexicali diseñadas y construidas a la medida. Grupo Nelson entrega desde terreno hasta nave operando en sus parques industriales.',
-}
+})
 
 export default function BuiltToSuitPage() {
   return (

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { ImagenRectangulo } from "@/components/ui/brandpetram/imagen-rectangulo";
 import { CuadritosLluviaDos } from "@/components/ui/brandpetram/cuadritos-lluvia-dos";
@@ -12,11 +11,14 @@ import {
   CheckBadgeIcon,
 } from "@heroicons/react/20/solid";
 
-export const metadata: Metadata = {
-  title: "Estándares Internacionales de Construcción",
-  description:
-    "Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Baumex: 75+ proyectos, auditorías de Gulfstream y Honeywell.",
-};
+import { createMetadata } from '@/lib/create-metadata'
+
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/estandares-internacionales',
+  title: 'Estándares Internacionales de Construcción',
+  description: 'Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Baumex: 75+ proyectos, auditorías de Gulfstream y Honeywell.',
+})
 
 export default function EstandaresInternacionalesPage() {
   return (

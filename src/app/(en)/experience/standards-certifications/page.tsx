@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import HeroMotionPlus from '@/components/brandpetram/hero-motionplus'
 import {
@@ -7,12 +6,14 @@ import {
   BoltIcon,
   FireIcon,
 } from '@heroicons/react/24/outline'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/experience/standards-certifications',
   title: 'Standards & Certifications',
-  description:
-    'Baumex meets three types of requirements: corporate (ISN Recommended by Honeywell), engineering (IBC, FM Global, BRB, NFPA, LEED), and regulatory (NOM-009, NOM-027, DC-3). Each standard demonstrated in real industrial facilities in Mexicali.',
-}
+  description: 'Baumex meets three types of requirements: corporate (ISN Recommended by Honeywell), engineering (IBC, FM Global, BRB, NFPA, LEED), and regulatory (NOM-009, NOM-027, DC-3). Each standard demonstrated in real industrial facilities in Mexicali.',
+})
 
 const engineeringStandards = [
   {

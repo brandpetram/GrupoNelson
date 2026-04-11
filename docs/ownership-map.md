@@ -107,6 +107,9 @@ Estos componentes reciben todo su contenido por props. Las secciones los consume
 | `src/components/brandpetram/editorial-cascada-beta.tsx` | diferencia-nelson, proyecto/bitacora | Multi-sección confirmado |
 | `src/components/content-components.tsx` | blog/[slug], noticias/[slug] | Portable Text renderer |
 | `src/components/tarjeta-hero-original.tsx` | Home, English | Multi-sección |
+| `src/components/brandpetram/park-map.tsx` | nelson-ii (ES + EN) | Reclasificado: era exclusivo Nelson II, ahora multi-idioma |
+| `src/components/brandpetram/leed-page-layout.tsx` | 7 sub-páginas LEED (ES + EN) | Reclasificado: era familia LEED, ahora multi-idioma |
+| `src/components/brandpetram/carrusel-leed.tsx` | leed/page.tsx (ES + EN) | Reclasificado: era familia LEED, ahora multi-idioma |
 | `src/components/hexagon-features.tsx` | Home, English | Multi-sección |
 | `src/components/diagonal-divider.tsx` | Home, English | Multi-sección |
 | `src/components/badge-aniversario.tsx` | Home, English | Multi-sección |
@@ -333,7 +336,7 @@ Estos componentes reciben todo su contenido por props. Las secciones los consume
 
 **Layout compartido:** `src/app/constructora/leed/layout.tsx` (incluye Header)
 
-Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sistema):
+Componentes compartidos dentro de LEED (reclasificados como sistema — consumidos por ES y EN):
 
 | Archivo | Tipo | Consumido por |
 |---|---|---|
@@ -429,7 +432,7 @@ Componentes compartidos dentro de LEED (propiedad de la familia LEED, no del sis
 | Archivo | Tipo | Exclusivo hoy | Dependencias sistema |
 |---|---|---|---|
 | `src/app/parques-industriales-mexicali/nelson-ii/page.tsx` | Página | Sí | Header, park-hero, ficha-tecnica-parque, ParkMap, VirtualTourBP, data/parks/ |
-| `src/components/brandpetram/park-map.tsx` | Componente | Sí | Leaflet |
+| `src/components/brandpetram/park-map.tsx` | Componente | No — multi-sección (ES + EN) | Leaflet |
 
 ### 2.24 Parques — Vigía I
 

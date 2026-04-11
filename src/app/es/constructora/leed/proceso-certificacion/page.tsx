@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import { LeedPageLayout } from '@/components/brandpetram/leed-page-layout'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'es',
+  path: '/es/constructora/leed/proceso-certificacion',
   title: 'Proceso de Certificación LEED | Grupo Nelson Mexicali',
   description: 'Certificación LEED v4 BD+C para naves industriales en Mexicali. Del predesign al certificado GBCI con trazabilidad completa. Gulfstream 550K apuntando a LEED Gold. Grupo Nelson.',
-  alternates: { canonical: 'https://nelson.com.mx/constructora/leed/proceso-certificacion' },
-}
+})
 
 export default function ProcesoCertificacionPage() {
   return (

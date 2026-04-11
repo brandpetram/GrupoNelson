@@ -3,6 +3,19 @@
 import { MapPin } from 'lucide-react'
 import GoogleMapWidget from '@/components/ui/google-map'
 
+// === Datos bilingües ===
+
+const parkMapLabels = {
+  es: {
+    ubicacion: 'Ubicación',
+    abrirEnGoogleMaps: 'Abrir en Google Maps →',
+  },
+  en: {
+    ubicacion: 'Location',
+    abrirEnGoogleMaps: 'Open in Google Maps →',
+  },
+} as const
+
 interface ParkMapProps {
   parkName: string
   address: string
@@ -14,9 +27,13 @@ interface ParkMapProps {
   mobileHeight?: string
   /** Altura del mapa en desktop (default: "560px") */
   desktopHeight?: string
+  /** Idioma (default: "es") */
+  lang?: 'en' | 'es'
 }
 
-export function ParkMap({ parkName, address, lat, lng, zoom = 15, mapsUrl, mobileHeight = '400px', desktopHeight = '560px' }: ParkMapProps) {
+export function ParkMap({ parkName, address, lat, lng, zoom = 15, mapsUrl, mobileHeight = '400px', desktopHeight = '560px', lang = 'es' }: ParkMapProps) {
+  const t = parkMapLabels[lang]
+
   return (
     <section data-component="ParkMap" data-component-file="src/components/brandpetram/park-map.tsx" data-component-props="true" className="bg-background">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -28,7 +45,7 @@ export function ParkMap({ parkName, address, lat, lng, zoom = 15, mapsUrl, mobil
 
 
             <h2 className="text-[3rem] font-bold tracking-tight">
-              Ubicación
+              {t.ubicacion}
             </h2>
             <p className="mt-0 text-[3rem] lg:text-[2.5rem] leading-none font-light ">
               {parkName}
@@ -50,7 +67,7 @@ export function ParkMap({ parkName, address, lat, lng, zoom = 15, mapsUrl, mobil
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 text-md font-medium text-blue-200 hover:underline"
               >
-                Abrir en Google Maps →
+                {t.abrirEnGoogleMaps}
               </a>
             )}
           </div>

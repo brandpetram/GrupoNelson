@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { Zeta } from '@/components/brandpetram/zeta'
 import { Eta } from '@/components/brandpetram/eta'
@@ -6,11 +5,14 @@ import { Teta } from '@/components/brandpetram/teta'
 import { Iota } from '@/components/brandpetram/iota'
 import { Kappa } from '@/components/brandpetram/kappa'
 import { Lamda } from '@/components/brandpetram/lamda'
+import { createMetadata } from '@/lib/create-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+  lang: 'en',
+  path: '/construction/turnkey',
   title: 'Turnkey Solutions',
   description: 'Turnkey industrial buildings in Mexicali: ready to operate from day one. Grupo Nelson industrial parks with complete infrastructure.',
-}
+})
 
 export default function TurnkeyPage() {
   return (
