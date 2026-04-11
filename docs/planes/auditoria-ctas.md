@@ -3,7 +3,15 @@
 **Fecha:** 2026-04-10
 **Worktree:** wt/revisar-ctas
 **Método:** Lectura completa de cada archivo con Read (sin grep). No se levantó la app.
-**Estado:** Inventario documental — requiere decisión de owner antes de ejecutar fixes.
+**Estado:** ✅ Completada — todos los CTAs rotos en páginas públicas fueron corregidos (2026-04-11).
+
+**Fixes aplicados:**
+- ScrollStorytelling: 8 `#contacto` → `/contacto` + destinos específicos por fase (Fase 2, MAIN)
+- Constructora (build-to-suit, llave-en-mano, diseño-e-ingeniería): botones sin href + CTAs rotos (wt/revisar-ctas)
+- Contacto, casos-de-éxito: links a rutas inexistentes (wt/revisar-ctas)
+- Componentes griegos (mu, nu, xi, etc.): CTAs corregidos (wt/revisar-ctas)
+
+**Pendientes no-bloqueantes:** `href="#"` en componentes de catálogo/demo que no se usan en páginas públicas (footer.tsx viejo, mosaico-2.tsx, tailwind-ui/*, (marketing)/product/*).
 
 ---
 
