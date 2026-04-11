@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-type MosaicoItem =
+export type MosaicoItem =
   | {
       type: "image";
       src: string;
@@ -147,10 +147,12 @@ function ArrowIcon() {
 
 interface MosaicoLiderazgoProps {
   rounding?: string;
+  content?: MosaicoItem[];
 }
 
 export function MosaicoLiderazgo({
   rounding = "rounded-xs",
+  content = items,
 }: MosaicoLiderazgoProps) {
   return (
     <section data-component="MosaicoLiderazgo" data-component-file="src/components/brandpetram/mosaico-liderazgo.tsx" data-component-props="true"
@@ -160,7 +162,7 @@ export function MosaicoLiderazgo({
       className="mx-auto max-w-7xl px-4 py-16"
     >
       <div className="columns-2 gap-4 md:columns-3 lg:columns-4">
-        {items.map((item, idx) => {
+        {content.map((item, idx) => {
           if (item.type === "card") {
             return (
               <Link

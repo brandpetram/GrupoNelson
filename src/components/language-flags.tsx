@@ -13,18 +13,15 @@ interface LanguageFlagsProps {
 export function LanguageFlags({ className, size = 'md', showLabels = false }: LanguageFlagsProps) {
   const pathname = usePathname();
 
-  // Determinar idioma actual basado en la ruta
-  const getCurrentLang = () => {
-    if (pathname?.startsWith('/en')) return 'en';
-    return 'es';
-  };
+  // Estructura actual: español en / , inglés en /en/
+  // En Fase 6 se invertirá: inglés en / , español en /es/
+  // Cuando eso pase, importar toSpanish/toEnglish de @/glossary/route-map
+  const currentLang = pathname?.startsWith('/en') ? 'en' : 'es';
 
-  const currentLang = getCurrentLang();
-
-  // Generar URL para cambio de idioma
-  const getLanguageUrl = (lang: string) => {
-    if (lang === 'es') return '/';
-    return `/${lang}`;
+  const getLanguageUrl = (targetLang: string) => {
+    if (targetLang === 'es') return '/';
+    if (targetLang === 'en') return '/en';
+    return '/';
   };
 
   // Tamaños de imagen según prop

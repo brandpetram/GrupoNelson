@@ -3,7 +3,33 @@
 import { useState, useEffect } from 'react'
 import { CuadritosLluvia } from '@/components/ui/brandpetram/cuadritos-lluvia'
 
-export function StatsGridBPGamma() {
+export interface StatsGridStat {
+  value: string
+  label: string
+}
+
+interface StatsGridBPGammaProps {
+  stats?: StatsGridStat[]
+  editorial?: string
+  youtubeLabel?: string
+}
+
+const defaultStats: StatsGridStat[] = [
+  { value: '60+', label: 'años de trayectoria\nen la industria' },
+  { value: '4M ft²', label: 'pies cuadrados\ndesarrollados' },
+  { value: '30', label: 'corporaciones\ninternacionales' },
+  { value: '5', label: 'parques industriales\nen Mexicali' },
+  { value: '3', label: 'generaciones\nde familia Nelson' },
+  { value: '80%', label: 'clientes que\nrenuevan contrato' },
+  { value: '75+', label: 'proyectos construidos\npor Baumex' },
+  { value: '4', label: 'empresas Fortune 500\noperando aquí' },
+]
+
+export function StatsGridBPGamma({
+  stats = defaultStats,
+  editorial = 'Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.',
+  youtubeLabel = 'Ver en YouTube',
+}: StatsGridBPGammaProps = {}) {
   const [showVideo, setShowVideo] = useState(false)
 
   useEffect(() => {
@@ -103,67 +129,20 @@ export function StatsGridBPGamma() {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-12">
             {/* Stats — 2 columnas, lado izquierdo */}
             <dl className="grid grid-cols-2 gap-x-8 gap-y-16 lg:w-[45%]">
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">años de trayectoria<br />en la industria</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  60<span className="text-blue-200">+</span>
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">pies cuadrados<br />desarrollados</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  4M ft²
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">corporaciones<br />internacionales</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  30
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">parques industriales<br />en Mexicali</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  5
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">generaciones<br />de familia Nelson</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  3
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">clientes que<br />renuevan contrato</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  80<span className="text-blue-200">%</span>
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">proyectos construidos<br />por Baumex</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  75<span className="text-blue-200">+</span>
-                </dd>
-              </div>
-
-              <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">empresas Fortune 500<br />operando aquí</dt>
-                <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
-                  4
-                </dd>
-              </div>
+              {stats.map((stat, i) => (
+                <div key={i} className="flex flex-col">
+                  <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">{stat.label.split('\n').map((line, j) => <span key={j}>{j > 0 && <br />}{line}</span>)}</dt>
+                  <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
+                    {stat.value}
+                  </dd>
+                </div>
+              ))}
             </dl>
 
             {/* Columna derecha — texto editorial + video */}
             <div className="flex flex-col gap-10 lg:w-[55%]">
               <p className="text-[1.75rem] 768:text-[2rem] 1024:text-[2.25rem] 1200:text-[2.25rem] 1366:text-[2.5rem] 1536:text-[2.75rem] 1728:text-[3rem] 1920:text-[3.25rem] font-light tracking-wider leading-tight text-white text-balance">
-                Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.
+                {editorial}
               </p>
 
               {/* Video — se carga después que la página */}
@@ -186,7 +165,7 @@ export function StatsGridBPGamma() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-blue-100 hover:text-white transition-colors text-lg font-medium group"
               >
-                Ver en YouTube
+                {youtubeLabel}
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </a>
             </div>
