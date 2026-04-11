@@ -28,14 +28,23 @@ Componentes compartidos que se usan en páginas inglés pero tienen texto hardco
 
 **Ownership — dos pasos separados:**
 
-**Paso 1 — MAIN:** Propear los 4 componentes compartidos (agregar prop `lang` con default `'es'`).
+**Paso 0 — Prerequisito: actualizar ownership canónico.**
 
-| Componente | Ubicación | Owner |
-|---|---|---|
-| `FichaTecnicaParque` | `src/components/brandpetram/` | MAIN — componente compartido |
-| `ParkMap` | `src/components/brandpetram/` | MAIN — componente compartido |
-| `LeedPageLayout` | `src/components/brandpetram/` | MAIN — componente compartido |
-| `CarruselLeed` | `src/components/brandpetram/` | MAIN — componente compartido |
+El mapa de ownership actual clasifica `ParkMap` como exclusivo de Nelson II y `LeedPageLayout`/`CarruselLeed` como propiedad de la familia LEED. Con la versión bilingüe, estos componentes ahora se usan desde dos route groups (`es/` y `(en)/`), lo que los convierte de facto en compartidos. Antes de propearlos desde MAIN, hay que:
+
+1. Actualizar el ownership-map para reclasificar estos componentes como compartidos/sistema
+2. Documentar la razón: son consumidos por páginas en ambos idiomas, propearlos desde una sección rompe el otro consumidor
+
+Si no se quiere reclasificar, el trabajo de propear se hace desde el owner actual de cada componente, no desde MAIN.
+
+**Paso 1 — Owner correspondiente (solo después de paso 0):** Propear los componentes. Si paso 0 los reclasifica como compartidos → MAIN. Si no → el owner actual de cada componente propea el suyo.
+
+| Componente | Ubicación | Owner actual | Owner propuesto |
+|---|---|---|---|
+| `FichaTecnicaParque` | `src/components/brandpetram/` | Compartido (ya es sistema) | Sin cambio |
+| `ParkMap` | `src/components/brandpetram/` | Nelson II (exclusivo) | Compartido — lo usan 4 parks EN + 4 parks ES |
+| `LeedPageLayout` | `src/components/brandpetram/` | Familia LEED | Compartido — lo usan 8 LEED EN + 8 LEED ES |
+| `CarruselLeed` | `src/components/brandpetram/` | Familia LEED | Compartido — renderizado por LeedPageLayout |
 
 Después de este paso, las páginas españolas siguen funcionando (default `'es'`) y las inglés siguen mostrando labels en español (no pasan `lang`). No hay regresión.
 
@@ -146,7 +155,7 @@ Actualizar **todos** los puntos de navegación que todavía usan rutas hardcodea
 
 ### Findings pendientes de language-flags (Codex review 2026-04-11)
 
-El switcher funciona para las ~33 rutas en route-map pero falla en edge cases:
+El switcher funciona para las 36 pares de rutas en route-map pero falla en edge cases:
 
 1. **Blog/noticias:** No están en route-map (no tienen versión inglés). Clicar la bandera USA desde `/es/blog/*` o `/es/noticias/*` lleva a `/` en vez de indicar que no hay traducción. **Fix:** Usar `hasTranslation()` para ocultar o deshabilitar la bandera del otro idioma cuando no hay equivalente.
 
@@ -191,7 +200,7 @@ Fase 10 (Navegación bilingüe) ──── Footer, Header, cleanup Header-en
     │
 Fase 8 (Propear componentes) ──── FichaTecnicaParque, ParkMap, LeedPageLayout, CarruselLeed
     │
-Fase 9 (createMetadata) ──── arreglar helper + adoptar en ~66 páginas bilingües
+Fase 9 (createMetadata) ──── arreglar helper + adoptar en 72 páginas (36 pares bilingües)
     │
 Fase 12 (QA visual) ──── manual, después de todo lo demás
 ```
