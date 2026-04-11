@@ -26,19 +26,27 @@ Componentes compartidos que se usan en páginas inglés pero tienen texto hardco
 
 **Clasificación:** `parametrizar + compartir` — estos componentes ya son compartidos entre ES e EN, lo correcto es agregar prop `lang`, no crear copias locales.
 
-**Ownership por componente:**
+**Ownership — dos pasos separados:**
+
+**Paso 1 — MAIN:** Propear los 4 componentes compartidos (agregar prop `lang` con default `'es'`).
 
 | Componente | Ubicación | Owner |
 |---|---|---|
-| `FichaTecnicaParque` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
-| `ParkMap` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
-| `LeedPageLayout` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
-| `CarruselLeed` | `src/components/brandpetram/` | MAIN — componente compartido de sistema |
-| Páginas EN que pasan `lang="en"` | `src/app/(en)/industrial-parks/*`, `src/app/(en)/construction/leed/*` | Pueden editarse desde MAIN porque el cambio es solo agregar prop `lang="en"` a imports existentes |
+| `FichaTecnicaParque` | `src/components/brandpetram/` | MAIN — componente compartido |
+| `ParkMap` | `src/components/brandpetram/` | MAIN — componente compartido |
+| `LeedPageLayout` | `src/components/brandpetram/` | MAIN — componente compartido |
+| `CarruselLeed` | `src/components/brandpetram/` | MAIN — componente compartido |
 
-**Secuencia:** Propear los 4 componentes primero (MAIN), luego actualizar las páginas EN para pasar `lang="en"` (mismo commit o commit separado).
+Después de este paso, las páginas españolas siguen funcionando (default `'es'`) y las inglés siguen mostrando labels en español (no pasan `lang`). No hay regresión.
 
-**Estimación:** 4 componentes + ~11 páginas que los consumen.
+**Paso 2 — Sección (en):** Actualizar las páginas inglés para pasar `lang="en"` a los componentes propeados. Esto es trabajo de sección — los archivos viven en `src/app/(en)/`. Se ejecuta desde un worktree de sección o como agente con isolation worktree.
+
+| Sección | Páginas afectadas |
+|---|---|
+| `(en)/industrial-parks/*` | 4 páginas (nelson-i, nelson-ii, vigia-i, vigia-ii) |
+| `(en)/construction/leed/*` | 7 subpáginas + page.tsx principal |
+
+**Estimación:** 4 componentes (paso 1) + 12 páginas (paso 2).
 
 ---
 
@@ -90,25 +98,35 @@ El helper `src/lib/create-metadata.ts` ya existe pero tiene problemas que impide
 1. Arreglar `createMetadata()` con los 3 fixes (URL base, deep merge, hasTranslation)
 2. Adoptar en páginas bilingües que tienen equivalente en route-map
 
-### Alcance exacto
+### Alcance (verificado contra el repo 2026-04-11)
 
-**Adoptar (páginas con equivalente en route-map):**
-- 33 páginas en `(en)/` — Home, About (4), Industrial Parks (5), Construction (7 + Baumex), LEED (8), Experience (3), Inventory (2), Contact, Resources, Legal (3), Thank-you
-- 33 páginas equivalentes en `es/` — las mismas secciones
+**Universo de páginas:**
+- 36 páginas en `(en)/` (conteo real de `find src/app/(en) -name page.tsx`)
+- 43 páginas en `es/` (conteo real de `find src/app/es -name page.tsx`)
+- Diferencia: 7 páginas solo-español (sin equivalente EN)
 
-**Total: 66 páginas.**
+**Adoptar createMetadata (páginas bilingües con equivalente en route-map):**
+- 36 páginas EN: Home, About (4), Industrial Parks (5), Construction (7 + Baumex), LEED (8), Experience (3), Inventory (2), Contact, Resources, Legal (3), Thank-you
+- 36 páginas ES equivalentes (las 43 totales menos las 7 solo-español)
+- **Total: 72 páginas**
 
-**NO adoptar:**
-- `es/blog/` — index, [slug], category/[category] (3 rutas, contenido de Sanity, sin equivalente EN)
-- `es/noticias/` — index, [slug], category/[category] (3 rutas, contenido de Sanity, sin equivalente EN)
-- `es/contactanos/` — redirect legacy a contacto, no necesita metadata propia
-- `es/gracias/` — tiene `robots: { index: false }`, no necesita hreflang
-- `(en)/thank-you/` — tiene `robots: { index: false }`, no necesita hreflang
-- `(dev)/*` — páginas internas (componentes, qa, proyecto, productos, dev)
-- `(instrucciones)/*` — sección interna protegida
+**NO adoptar (7 páginas solo-español):**
+- `es/blog/(root)/page.tsx` — index de blog (Sanity, sin equivalente EN)
+- `es/blog/(root)/category/[category]/page.tsx` — categorías de blog
+- `es/blog/[slug]/page.tsx` — posts individuales
+- `es/noticias/page.tsx` — index de noticias
+- `es/noticias/[slug]/page.tsx` — noticias individuales
+- `es/noticias/category/[category]/page.tsx` — categorías de noticias
+- `es/contactanos/page.tsx` — redirect legacy a contacto
+
+**NO adoptar (páginas internas/fuera de alcance):**
+- `(dev)/*` — 7 páginas internas
+- `(instrucciones)/*` — 8 páginas internas protegidas
 - `studio/*` — Sanity Studio
 
-**No es un cambio mecánico** — cada página necesita verificar qué metadata extra tiene (robots, OG images, twitter) antes de migrar. Las ~66 páginas bilingües son el universo, pero cada una puede tener particularidades.
+**Nota sobre thank-you/gracias:** Ambas tienen `robots: { index: false }` pero SÍ tienen equivalente bilingüe y SÍ se benefician de hreflang (para que buscadores no las indexen duplicadas). Se adoptan con `extra: { robots: { index: false } }` en el deep merge.
+
+**No es un cambio mecánico** — cada página necesita verificar qué metadata extra tiene (robots, OG images, twitter) antes de migrar.
 
 ---
 
