@@ -163,8 +163,8 @@ const defaultItems: ContentItem[] = [
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Contactar consultor', href: '#contacto', primary: true },
-      { text: 'Más información', href: '/parques-industriales-mexicali', primary: false },
+      { text: 'Ver parques disponibles', href: '/parques-industriales-mexicali', primary: true },
+      { text: 'Contactar consultor', href: '/contacto', primary: false },
     ],
   },
   {
@@ -176,13 +176,13 @@ const defaultItems: ContentItem[] = [
     tag: {
       icon: <Ruler className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Diseño Ejecutivo',
-      href: '/parques-industriales-mexicali',
+      href: '/constructora/diseno-e-ingenieria',
       gradientFrom: '#2563eb',
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Ver proyectos realizados', href: '/parques-industriales-mexicali', primary: true },
-      { text: 'Solicitar diseño', href: '#contacto', primary: false },
+      { text: 'Ver ingeniería y diseño', href: '/constructora/diseno-e-ingenieria', primary: true },
+      { text: 'Solicitar proyecto', href: '/contacto', primary: false },
     ],
   },
   {
@@ -195,13 +195,13 @@ const defaultItems: ContentItem[] = [
     tag: {
       icon: <Hammer className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Construcción',
-      href: '/parques-industriales-mexicali',
+      href: '/constructora/build-to-suit',
       gradientFrom: '#2563eb',
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Conocer nuestras obras', href: '/parques-industriales-mexicali', primary: true },
-      { text: 'Proyectos en progreso', href: '#contacto', primary: false },
+      { text: 'Conocer build-to-suit', href: '/constructora/build-to-suit', primary: true },
+      { text: 'Ver portafolio', href: '/constructora/portafolio', primary: false },
     ],
   },
   {
@@ -214,13 +214,13 @@ const defaultItems: ContentItem[] = [
     tag: {
       icon: <CheckCircle className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Entrega',
-      href: '/parques-industriales-mexicali',
+      href: '/constructora/llave-en-mano',
       gradientFrom: '#2563eb',
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Proyectos entregados', href: '/parques-industriales-mexicali', primary: true },
-      { text: 'Agendar entrega', href: '#contacto', primary: false },
+      { text: 'Soluciones llave en mano', href: '/constructora/llave-en-mano', primary: true },
+      { text: 'Contactar', href: '/contacto', primary: false },
     ],
   },
   {
@@ -233,13 +233,13 @@ const defaultItems: ContentItem[] = [
     tag: {
       icon: <Shield className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Seguridad 24/7',
-      href: '/parques-industriales-mexicali',
+      href: '/experiencia/excelencia-operativa',
       gradientFrom: '#2563eb',
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Protocolos de seguridad', href: '/parques-industriales-mexicali', primary: true },
-      { text: 'Más detalles', href: '#contacto', primary: false },
+      { text: 'Excelencia operativa', href: '/experiencia/excelencia-operativa', primary: true },
+      { text: 'Ver parques', href: '/parques-industriales-mexicali', primary: false },
     ],
   },
   {
@@ -252,13 +252,13 @@ const defaultItems: ContentItem[] = [
     tag: {
       icon: <Wrench className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Mantenimiento',
-      href: '/parques-industriales-mexicali',
+      href: '/experiencia/excelencia-operativa',
       gradientFrom: '#2563eb',
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Planes de mantenimiento', href: '/parques-industriales-mexicali', primary: true },
-      { text: 'Solicitar servicio', href: '#contacto', primary: false },
+      { text: 'Conocer Baumex', href: '/constructora/baumex', primary: true },
+      { text: 'Contactar', href: '/contacto', primary: false },
     ],
   },
   {
@@ -271,13 +271,13 @@ const defaultItems: ContentItem[] = [
     tag: {
       icon: <TrendingUp className="w-5 h-5 text-gray-400" fill="currentColor" />,
       text: 'Crecimiento',
-      href: '/parques-industriales-mexicali',
+      href: '/experiencia/casos-de-exito',
       gradientFrom: '#2563eb',
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Historias de crecimiento', href: '/parques-industriales-mexicali', primary: true },
-      { text: 'Planifica tu expansión', href: '#contacto', primary: false },
+      { text: 'Casos de éxito', href: '/experiencia/casos-de-exito', primary: true },
+      { text: 'Inventario disponible', href: '/inventario/naves-disponibles', primary: false },
     ],
   },
   {
@@ -295,7 +295,7 @@ const defaultItems: ContentItem[] = [
     },
     buttons: [
       { text: 'Ver proyectos especiales', href: '/constructora/proyectos-especializados', primary: true },
-      { text: 'Contactar', href: '#contacto', primary: false },
+      { text: 'Contactar', href: '/contacto', primary: false },
     ],
   },
 ]
