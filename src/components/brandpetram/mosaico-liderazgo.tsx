@@ -58,9 +58,9 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "80% de clientes regresan",
+    title: "Relaciones de largo plazo",
     description:
-      "Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. La relación directa con los dueños produce lealtad.",
+      "Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. La relación directa con los dueños produce lealtad que se mide en décadas.",
     href: "/nelson/liderazgo",
     bg: "bg-indigo-600",
   },

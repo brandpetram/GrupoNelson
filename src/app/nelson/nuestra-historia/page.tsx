@@ -127,10 +127,10 @@ export default function NuestraHistoriaPage() {
             <div className={'px-6 1200:px-10 mt-10'}>
                 <div className="space-y-8">
                     <div>
-                        <p className="text-4xl 1200:text-5xl font-bold text-foreground">80%</p>
+                        <p className="text-4xl 1200:text-5xl font-bold text-foreground">35+</p>
                         <p className="mt-2 text-lg text-muted-foreground">
-                            de nuestros clientes regresan. Las empresas que llegaron hace 35 años
-                            siguen aquí.
+                            años con nuestros clientes más antiguos. Las empresas que llegaron hace
+                            décadas siguen aquí.
                         </p>
                     </div>
                     <div>

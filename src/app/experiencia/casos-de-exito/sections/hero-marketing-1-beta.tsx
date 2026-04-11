@@ -107,8 +107,8 @@ export function HeroMarketing1Beta() {
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-light">
               Los casos de éxito no son testimoniales editados — son hechos
               verificables con nombres, números y décadas de historia.
-              Gulfstream lleva 35 años. Honeywell lleva 30. El 80% de los
-              clientes regresa, expande o inicia nuevos proyectos.
+              Gulfstream lleva 35 años. Honeywell lleva 30. Relaciones de
+              largo plazo donde los clientes expanden e inician nuevos proyectos.
             </p>
             <div className="pt-4">
               <Button

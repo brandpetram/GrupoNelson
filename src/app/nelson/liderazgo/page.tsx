@@ -12,19 +12,25 @@ const team = [
     name: 'Dirección Comercial',
     role: 'Desarrollo de negocios y relación con clientes',
     description:
-      'Quien recibe tu proyecto, negocia las condiciones y da seguimiento comercial durante toda la relación. No es un ejecutivo de cuenta — es un miembro de la familia fundadora. Cuando necesites renegociar algo, la decisión no sube tres niveles: se resuelve directamente.',
+      'Esta área recibe tu proyecto, negocia las condiciones y da seguimiento comercial durante toda la relación. No es una cuenta asignada a un ejecutivo rotativo — la dirección comercial tiene autoridad de decisión directa. Cuando necesites renegociar algo, no sube tres niveles: se resuelve en una llamada.',
   },
   {
     name: 'Dirección de Constructora',
     role: 'Baumex — construcción build-to-suit',
     description:
-      'Quien dirige Baumex, la constructora in-house de Grupo Nelson. Si tu proyecto requiere construcción a la medida, la ejecución se supervisa personalmente. El responsable de tu obra no es un gerente de proyecto asignado — es el dueño de la constructora.',
+      'Baumex, la constructora in-house de Grupo Nelson, ejecuta cada proyecto de principio a fin. La dirección de construcción supervisa personalmente cada obra — no se delega a gerentes de proyecto externos ni a contratistas rotativos.',
   },
   {
     name: 'Dirección Administrativa',
     role: 'Operación financiera y contractual',
     description:
-      'Quien administra la operación financiera y contractual del grupo. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por alguien que tiene autoridad de cierre y lleva décadas en el mismo puesto.',
+      'La operación financiera y contractual del grupo se maneja con autoridad de cierre desde la dirección. Las cláusulas de tu contrato, los términos, los ajustes operativos — pasan por una dirección con décadas de continuidad en el puesto.',
+  },
+  {
+    name: 'Dirección de Servicio al Cliente',
+    role: 'Infraestructura, servicios y mantenimiento del parque',
+    description:
+      'Esta área mantiene la infraestructura del parque funcionando: servicios, mantenimiento, proyectos de mejora. Cuando reportes un problema en tu nave, la respuesta viene directo de la dirección del parque — no de un departamento de tickets.',
   },
 ]
 
@@ -48,10 +54,10 @@ const results = [
       'Honeywell Aerospace opera con Grupo Nelson desde hace más de 3 décadas. Múltiples expansiones con el mismo equipo directivo del otro lado.',
   },
   {
-    value: '80%',
-    label: 'repeat business',
+    value: '35+',
+    label: 'años con nuestros clientes más antiguos',
     detail:
-      '8 de cada 10 clientes regresan. No por inercia — porque la relación directa con los dueños produce un nivel de servicio que justifica quedarse.',
+      'Relaciones de largo plazo que se miden en décadas, no en contratos. La relación directa con los dueños produce un nivel de servicio que justifica quedarse.',
   },
 ]
 

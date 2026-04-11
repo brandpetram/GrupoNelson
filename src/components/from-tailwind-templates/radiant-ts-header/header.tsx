@@ -9,7 +9,7 @@ export function Header() {
         Los pioneros de la industria maquiladora de Mexicali desde 1965.
       </h1>
       <Lead className="mt-6 max-w-3xl">
-        Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — y el 80% de los clientes regresan.
+        Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — relaciones de largo plazo que se miden en décadas.
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
