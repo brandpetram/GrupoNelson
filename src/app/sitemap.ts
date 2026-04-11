@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next'
 import { client } from '@/sanity/lib/client'
+import { toEnglish } from '@/glossary/route-map'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.nelson.com.mx'
 
-  // Páginas estáticas del sitio
-  const staticPages = [
+  // Páginas estáticas en español (tienen equivalente en inglés via route-map)
+  const spanishPages = [
     '/es',
     '/es/nelson/trayectoria',
     '/es/nelson/diferencia-nelson',
@@ -36,8 +37,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/es/experiencia/excelencia-operativa',
     '/es/experiencia/casos-de-exito',
     '/es/experiencia/normas-certificaciones-estandares',
-    '/es/blog',
-    '/es/noticias',
     '/es/recursos',
     '/es/contacto',
     '/es/aviso-de-privacidad',
@@ -45,11 +44,54 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/es/politica-de-cookies',
   ]
 
-  const staticEntries: MetadataRoute.Sitemap = staticPages.map((path) => ({
+  // Páginas solo en español (sin equivalente en inglés)
+  const spanishOnlyPages = [
+    '/es/blog',
+    '/es/noticias',
+  ]
+
+  // Entradas bilingues con alternates hreflang
+  const bilingualEntries: MetadataRoute.Sitemap = spanishPages.flatMap((esPath) => {
+    const enPath = toEnglish(esPath)
+    const isHome = esPath === '/es'
+    const isParks = esPath.includes('/parques-industriales')
+    const freq = isHome ? 'weekly' as const : 'monthly' as const
+    const prio = isHome ? 1 : isParks ? 0.9 : 0.7
+
+    return [
+      {
+        url: `${baseUrl}${esPath}`,
+        lastModified: new Date(),
+        changeFrequency: freq,
+        priority: prio,
+        alternates: {
+          languages: {
+            es: `${baseUrl}${esPath}`,
+            en: `${baseUrl}${enPath}`,
+          },
+        },
+      },
+      {
+        url: `${baseUrl}${enPath}`,
+        lastModified: new Date(),
+        changeFrequency: freq,
+        priority: prio,
+        alternates: {
+          languages: {
+            es: `${baseUrl}${esPath}`,
+            en: `${baseUrl}${enPath}`,
+          },
+        },
+      },
+    ]
+  })
+
+  // Entradas solo en español (blog, noticias index)
+  const spanishOnlyEntries: MetadataRoute.Sitemap = spanishOnlyPages.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
-    changeFrequency: path === '/es' ? 'weekly' : 'monthly',
-    priority: path === '/es' ? 1 : path.includes('/parques-industriales') ? 0.9 : 0.7,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
   }))
 
   // Rutas dinámicas desde Sanity
@@ -76,5 +118,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
-  return [...staticEntries, ...blogEntries, ...noticiasEntries]
+  return [...bilingualEntries, ...spanishOnlyEntries, ...blogEntries, ...noticiasEntries]
 }
