@@ -88,7 +88,7 @@ export default function Contact() {
             })
 
             if (!res.ok) throw new Error('Error submitting form')
-            router.push('/es/gracias')
+            router.push('/thank-you')
         } catch {
             setError('There was an error submitting the form. Please try again.')
         } finally {
@@ -289,7 +289,7 @@ export default function Contact() {
                                     <p className="text-muted-foreground text-base">
                                         By submitting this form, you agree to our{' '}
                                         <Link
-                                            href="/es/aviso-de-privacidad"
+                                            href="/privacy-policy"
                                             className="text-primary underline">
                                             Privacy Policy
                                         </Link>

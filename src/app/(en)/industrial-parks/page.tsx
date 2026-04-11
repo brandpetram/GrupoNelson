@@ -32,12 +32,10 @@ export default async function IndustrialParksPage() {
       <section className="pb-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industrialParks.map((park) => {
-              const hasEnglishPage = park.slug === 'nelson-ii'
-              return (
+            {industrialParks.map((park) => (
               <Link
                 key={park.slug}
-                href={hasEnglishPage ? `/industrial-parks/${park.slug}` : `/es/parques-industriales-mexicali/${park.slug}`}
+                href={`/industrial-parks/${park.slug}`}
                 className="group relative overflow-hidden rounded-2xl bg-card border hover:border-primary/50 transition-all duration-300 hover:shadow-xl"
               >
                 {/* Image */}
@@ -83,7 +81,7 @@ export default async function IndustrialParksPage() {
                   </svg>
                 </div>
               </Link>
-            )})}
+            ))}
 
           </div>
         </div>
