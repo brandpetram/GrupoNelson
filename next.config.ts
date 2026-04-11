@@ -41,10 +41,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Temporal: raíz y /en redirigen a español hasta que existan páginas inglés
-      { source: '/', destination: '/es', permanent: false },
-      { source: '/en', destination: '/es', permanent: false },
-      { source: '/en/:path*', destination: '/es', permanent: false },
+      // /en redirige a / (inglés ahora vive en la raíz)
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
 
       // Redirects de WordPress legacy → /es
       { source: '/web', destination: '/es', permanent: true },
