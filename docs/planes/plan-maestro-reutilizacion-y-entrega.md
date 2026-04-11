@@ -243,7 +243,7 @@ Este plan es el entregable de la Fase 1. La clasificación en Tier 1/2/3 está a
 **Por qué hacerlo antes de Fase 4 y 5:** Ambas fases necesitan el Footer fuera del root layout. Si cada worktree intenta hacer su versión, habrá conflictos en MAIN. Hacerlo una vez, en MAIN, antes de que los worktrees empiecen, elimina el punto de bloqueo.
 
 **Después de este refactor:**
-- wt/instrucciones puede crear su route group `(instrucciones)/`, crear `proxy.ts` y definir la contraseña — sin tocar layout raíz
+- wt/instrucciones puede crear su route group `(instrucciones)/` sin tocar layout raíz ni archivos de sistema
 - wt/ingles puede crear `(en)/layout.tsx` y `es/layout.tsx` con Footer propio sin conflictos
 - Fase 5 puede empezar sin esperar decisiones de la sección de instrucciones
 
@@ -261,9 +261,9 @@ Este plan es el entregable de la Fase 1. La clasificación en Tier 1/2/3 está a
 
 **Puede ejecutarse en paralelo con Fase 5** porque toca archivos distintos (su propio route group `(instrucciones)/`).
 
-**Prerequisito:** Fase 3.5 completada (layout refactoreado). Después de eso, wt/instrucciones trabaja dentro de `src/app/(instrucciones)/`.
+**Prerequisito:** Fase 3.5 completada (layout refactoreado).
 
-**Esta fase también crea `src/proxy.ts`** con el gate HMAC para `/instrucciones/*` y define `INSTRUCCIONES_PASSWORD` en `.env.local`. Ambos son exclusivos de instrucciones — no los usa ninguna otra fase. Se ejecutan desde MAIN (proxy.ts es archivo de sistema) pero como parte del carril de trabajo de instrucciones, no como prerequisito de otras fases.
+**`src/proxy.ts` y `INSTRUCCIONES_PASSWORD`:** Se crean desde MAIN exclusivamente — `proxy.ts` es archivo de sistema al nivel de `src/`, fuera del alcance de cualquier worktree. MAIN los ejecuta como primer paso de Fase 4, antes de que wt/instrucciones empiece a trabajar. Después de eso, wt/instrucciones trabaja solo dentro de `src/app/(instrucciones)/` sin tocar archivos de sistema.
 
 **Decisiones pendientes (ver plan de instrucciones, sección 8):**
 1. ¿Contraseña? — Definir antes de crear proxy.ts
