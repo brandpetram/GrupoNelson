@@ -1,7 +1,7 @@
 # Plan Maestro: Extensión — Polish Bilingüe
 
-> **Estado:** En progreso — Fases 8-11 completadas, Fases 12-14 pendientes  
-> **Fecha:** 2026-04-11  
+> **Estado:** En progreso — Fases 9 completada, resto con trabajo pendiente  
+> **Fecha:** 2026-04-11 (actualizado con findings de Codex)  
 > **Prerequisito:** Plan maestro original (Fases 1-7) completado  
 > **Objetivo:** Cerrar los cabos sueltos que quedaron después de la traducción masiva.
 
@@ -11,17 +11,24 @@
 
 | Fase | Descripción | Estado |
 |---|---|---|
-| 8 | Propear FichaTecnicaParque, ParkMap, LeedPageLayout, CarruselLeed | ✅ COMPLETADA |
+| **Bloque 1 — Fixes pre-QA** | | |
+| 8 | Propear FichaTecnicaParque, ParkMap, LeedPageLayout, CarruselLeed | ⚠️ PARCIAL — LEED index no pasa `lang="en"` a CarruselLeed |
 | 9 | Arreglar y adoptar createMetadata en 72 páginas | ✅ COMPLETADA |
-| 10 | Navegación bilingüe (Footer, Header-en cleanup) | ✅ COMPLETADA |
-| 11 | Language switcher con route-map | ✅ COMPLETADA |
-| 12 | Auditoría de texto español residual + imágenes rotas | ✅ INVENTARIO HECHO — pendiente ejecutar fixes |
-| 13 | Propear 100% de componentes usados en páginas EN | ⏸ DECISIÓN PENDIENTE (¿antes o después de terminar?) |
-| 14 | QA visual bilingüe | ❌ PENDIENTE |
+| 10 | Navegación bilingüe (Footer, Header) | ⚠️ PARCIAL — Header CTA "Contacto", refs a `/en` |
+| 11 | Language switcher con route-map | ⚠️ PARCIAL — sin `hasTranslation()` para blog/noticias |
+| 12 | Fixes de texto español en páginas EN | ❌ PENDIENTE — LogoCloud, BadgeAniversario, rutas EN en home |
+| **Bloque 2 — QA** | | |
+| 14 | QA visual bilingüe | ❌ PENDIENTE — después de Bloque 1 |
+| **Bloque 3 — Cleanup post-QA** | | |
+| 13 | Propear 100% / eliminar copias `*-en.tsx` | ❌ PENDIENTE — refactor estructural, no fix de bugs |
 
 ---
 
-## Fase 8: Propear componentes con labels internos en español — ✅ COMPLETADA
+## Fase 8: Propear componentes con labels internos en español — ⚠️ PARCIAL
+
+**Hecho:** FichaTecnicaParque, ParkMap, LeedPageLayout, CarruselLeed tienen prop `lang`. Parks y LEED subpages pasan `lang="en"`.
+
+**Pendiente:** El índice LEED en inglés (`src/app/(en)/construction/leed/page.tsx`) monta `CarruselLeed` sin `lang="en"` — el componente cae a default `'es'`.
 
 Componentes compartidos que se usan en páginas inglés pero tienen texto hardcodeado en español. Necesitan prop `lang` para seleccionar labels.
 
@@ -153,7 +160,14 @@ El helper `src/lib/create-metadata.ts` ya existe pero tiene problemas que impide
 
 ---
 
-## Fase 10: Navegación bilingüe completa — ✅ COMPLETADA
+## Fase 10: Navegación bilingüe completa — ⚠️ PARCIAL
+
+**Hecho:** Footer EN hrefs actualizados. Header-en.tsx eliminado. contactHref bilingüe.
+
+**Pendiente:**
+- `Header.tsx` línea ~401: botón CTA dice "Contacto" en vez de "Contact" cuando `lang="en"`
+- `Header.tsx` línea ~339: puede tener referencias a `/en` que ya no existen
+- `footer-1/index.tsx` línea ~260: verificar que no queden hardcodes de `/contacto`
 
 Actualizar **todos** los puntos de navegación que todavía usan rutas hardcodeadas del esquema viejo.
 
@@ -181,9 +195,11 @@ El switcher funciona para las 36 pares de rutas en route-map pero falla en edge 
 
 ---
 
-## ~~Fase 11: Language switcher con route-map~~ → ✅ COMPLETADA (absorbida en Fase 10)
+## ~~Fase 11: Language switcher con route-map~~ → ⚠️ PARCIAL (absorbida en Fase 10)
 
-`language-flags.tsx` conectado con `toSpanish`/`toEnglish` del route-map (commit 6d499ca, 2026-04-11). Los edge cases pendientes (blog/noticias sin traducción, `/es/contactanos` sin mapeo) se resuelven en Fase 10.
+`language-flags.tsx` conectado con `toSpanish`/`toEnglish` del route-map (commit 6d499ca, 2026-04-11).
+
+**Pendiente:** No usa `hasTranslation()` para deshabilitar/ocultar la bandera en páginas sin traducción (blog, noticias, contactanos). Clicar la bandera EN desde esas páginas lleva a `/` en vez de indicar que no hay traducción.
 
 ---
 
@@ -248,42 +264,32 @@ Dos tipos de error distintos:
 
 ---
 
-## Fase 13: Propear el 100% de componentes usados en páginas EN — ⏸ DECISIÓN PENDIENTE
+## Fase 13: Propear 100% / cleanup estructural — ❌ PENDIENTE (después de cierre)
 
-### Cambio de estrategia
+### Contexto
 
-El plan maestro original clasificó ~60 componentes como Tier 3 ("no propear, hacer copias locales"). Esa estrategia generó confusión: algunos componentes están propeados y otros no, lo que hace impredecible qué texto sale en cada idioma. Copias locales (`mu-en.tsx`, `nu-en.tsx`, etc.) duplican código y divergen del original con el tiempo.
+El plan maestro original clasificó ~60 componentes como Tier 3 ("no propear, hacer copias locales"). Esa estrategia generó confusión: algunos componentes están propeados y otros no. Las copias locales (`mu-en.tsx`, `nu-en.tsx`, etc.) duplican código y divergen del original con el tiempo.
 
 **Nueva directriz:** Todo componente que se usa en páginas EN debe aceptar prop `lang` para sus textos visibles. Sin excepciones. Sin copias locales.
 
+**Pero este trabajo es refactor, no fix de bugs.** Hoy Baumex EN funciona con copias locales — no hay bug visible. Convertir `mu-en.tsx` → propear `mu.tsx` con `lang` no cambia lo que el usuario ve, solo mejora la arquitectura.
+
+### Cuándo ejecutar
+
+**Después de que el sitio esté funcionalmente estable.** Primero cerrar Fases 8, 10, 11, 12 (fixes visibles). Después hacer este cleanup como refactor de consistencia.
+
 ### Alcance
 
-Todos los componentes importados por páginas EN que tengan texto visible hardcodeado y no acepten props para ese texto. Incluye:
+- Componentes griegos de Baumex (Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi) — propear originales, eliminar copias `*-en.tsx`
+- Cualquier otro componente con copias locales descubierto en QA
+- Normalización total de `lang` en todos los shared components
 
-- Componentes de la auditoría de Fase 12 (LogoCloud, BadgeAniversario, Header CTA)
-- Componentes griegos de Baumex (Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi) — actualmente son copias locales (`*-en.tsx`), hay que propear los originales y eliminar las copias
-- Cualquier otro componente descubierto en el QA visual
+### Trabajo
 
-### Decisión pendiente: ¿cuándo propear?
-
-**Opción A — Propear antes de terminar el sitio:**
-- Ventaja: cada página nueva que se cree ya funciona bilingüe sin trabajo extra
-- Desventaja: más trabajo upfront, retrasa el "terminado" del sitio
-- Riesgo: propear componentes que quizá cambien de contenido antes de entregar
-
-**Opción B — Propear después de terminar el sitio:**
-- Ventaja: el contenido ya está estabilizado, se propea una sola vez
-- Desventaja: mientras tanto, las páginas EN muestran mezcla de idiomas
-- Riesgo: deuda técnica se acumula y las copias locales divergen más
-
-**¿Cuál preferimos?** ← Decisión del usuario antes de ejecutar.
-
-### Trabajo (una vez decidido el cuándo)
-
-1. Inventariar todos los componentes con texto hardcodeado usados en páginas EN
-2. Propear cada uno con `lang?: 'en' | 'es'` (default `'es'`)
-3. Actualizar las páginas EN para pasar `lang="en"`
-4. Eliminar copias locales (`*-en.tsx`) que ya no se necesiten
+1. Inventariar todos los componentes con copias locales `*-en.tsx`
+2. Propear cada original con `lang?: 'en' | 'es'` (default `'es'`)
+3. Actualizar las páginas EN para importar el original con `lang="en"` en vez de la copia
+4. Eliminar copias locales
 5. Verificar que páginas ES siguen funcionando (defaults)
 
 ---
@@ -308,22 +314,30 @@ Recorrer las páginas inglés en el navegador y verificar:
 
 ---
 
-## Orden de ejecución recomendado
+## Orden de ejecución
+
+### Bloque 1 — Fixes pre-QA (corregir bugs visibles en EN)
 
 ```
-Fase 10 (Navegación bilingüe) ──── Footer, Header, cleanup Header-en       ✅ COMPLETADA
-    │
-Fase 8 (Propear componentes Fase 1) ── FichaTecnicaParque, ParkMap,         ✅ COMPLETADA
-    │                                   LeedPageLayout, CarruselLeed
-    │
-Fase 9 (createMetadata) ──── arreglar helper + adoptar en 72 páginas        ✅ COMPLETADA
-    │
-Fase 12 (Auditoría texto español) ── inventariar hallazgos                  ✅ INVENTARIO HECHO
-    │
-Fase 13 (Propear 100%) ──── propear todos los componentes restantes         ⏸ DECISIÓN PENDIENTE
-    │                        + eliminar copias locales *-en.tsx
-    │
-Fase 14 (QA visual) ──── manual, después de todo lo demás
+1. Cerrar Fase 8 ── CarruselLeed lang="en" en LEED index
+2. Cerrar Fase 10 ── Header CTA "Contact", limpiar /en refs
+3. Cerrar Fase 11 ── hasTranslation() en switcher para blog/noticias
+4. Ejecutar Fase 12 fixes ── LogoCloud, BadgeAniversario, rutas EN en home
+```
+
+Después de este bloque, las páginas EN dejan de mezclar idiomas y rutas.
+
+### Bloque 2 — QA visual
+
+```
+5. Fase 14 ── recorrer páginas EN en browser, listar bugs restantes
+```
+
+### Bloque 3 — Cleanup estructural (después de QA, sitio estable)
+
+```
+6. Fase 13 ── propear originales de Baumex, eliminar *-en.tsx,
+              normalizar lang en shared components
 ```
 
 ---
