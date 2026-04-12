@@ -19,8 +19,9 @@
 | 12 | Fixes de texto español en páginas EN | ❌ PENDIENTE — LogoCloud, BadgeAniversario, rutas EN en home |
 | **Bloque 2 — QA** | | |
 | 14 | QA visual bilingüe | ❌ PENDIENTE — después de Bloque 1 |
-| **Bloque 3 — Cleanup post-QA** | | |
-| 13 | Propear 100% / eliminar copias `*-en.tsx` | ❌ PENDIENTE — refactor estructural, no fix de bugs |
+| **Bloque 3 — Propear restantes** | | |
+| 13a | Propear 12 componentes Baumex / eliminar copias `*-en.tsx` | ⏳ EN PROGRESO — agente corriendo |
+| 13b | Propear 10 componentes restantes con texto español | ❌ PENDIENTE — bug de UX visible en producción |
 
 ---
 
@@ -264,33 +265,71 @@ Dos tipos de error distintos:
 
 ---
 
-## Fase 13: Propear 100% / cleanup estructural — ❌ PENDIENTE (después de cierre)
-
-### Contexto
-
-El plan maestro original clasificó ~60 componentes como Tier 3 ("no propear, hacer copias locales"). Esa estrategia generó confusión: algunos componentes están propeados y otros no. Las copias locales (`mu-en.tsx`, `nu-en.tsx`, etc.) duplican código y divergen del original con el tiempo.
-
-**Nueva directriz:** Todo componente que se usa en páginas EN debe aceptar prop `lang` para sus textos visibles. Sin excepciones. Sin copias locales.
-
-**Pero este trabajo es refactor, no fix de bugs.** Hoy Baumex EN funciona con copias locales — no hay bug visible. Convertir `mu-en.tsx` → propear `mu.tsx` con `lang` no cambia lo que el usuario ve, solo mejora la arquitectura.
-
-### Cuándo ejecutar
-
-**Después de que el sitio esté funcionalmente estable.** Primero cerrar Fases 8, 10, 11, 12 (fixes visibles). Después hacer este cleanup como refactor de consistencia.
+## Fase 13a: Propear Baumex / eliminar copias locales — ⏳ EN PROGRESO
 
 ### Alcance
 
-- Componentes griegos de Baumex (Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi) — propear originales, eliminar copias `*-en.tsx`
-- Cualquier otro componente con copias locales descubierto en QA
-- Normalización total de `lang` en todos los shared components
+12 componentes griegos de Baumex (Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi) — propear originales con `lang`, eliminar copias `*-en.tsx`.
 
 ### Trabajo
 
-1. Inventariar todos los componentes con copias locales `*-en.tsx`
-2. Propear cada original con `lang?: 'en' | 'es'` (default `'es'`)
-3. Actualizar las páginas EN para importar el original con `lang="en"` en vez de la copia
-4. Eliminar copias locales
-5. Verificar que páginas ES siguen funcionando (defaults)
+1. Propear cada original con `lang?: 'en' | 'es'` (default `'es'`)
+2. Actualizar `src/app/(en)/construction/baumex/page.tsx` para importar originales con `lang="en"`
+3. Eliminar copias locales en `src/app/(en)/construction/baumex/components/`
+4. Verificar que páginas ES siguen funcionando (defaults)
+
+**Estado:** Agente corriendo (tercer intento, con protocolo de commits).
+
+---
+
+## Fase 13b: Propear componentes restantes con texto español — ❌ PENDIENTE
+
+### Contexto
+
+Auditoría de 2026-04-11 encontró 10 componentes adicionales que se usan en páginas EN sin propear. Muestran texto español visible en producción — esto es un bug de UX, no solo cleanup.
+
+### Inventario (verificado contra el repo)
+
+| Componente | Archivo | Páginas EN afectadas | Texto español |
+|---|---|---|---|
+| `HeroMarketing1` | `src/components/brandpetram/hero-marketing-1.tsx` | `/construction/leed` | Hero completo (título, párrafo) |
+| `SidebarSticky1` | `src/components/brandpetram/sidebar-sticky-1.tsx` | `/construction/leed` | Sidebar editorial completo (~13 líneas) |
+| `ParkHero` | `src/components/brandpetram/park-hero.tsx` | 4 parks (`/industrial-parks/*`) | Labels del hero |
+| `OffsetWithFeatureListBP` | `src/components/brandpetram/offset-with-feature-list-bp.tsx` | `/about/difference` | Lista de features (~10 líneas) |
+| `EditorialCascadaBP` | `src/components/brandpetram/editorial-cascada-bp.tsx` | `/about/track-record` | Defaults en español (~18 líneas) |
+| `Beta` | `src/components/brandpetram/beta.tsx` | `/construction/build-to-suit` | Sección completa |
+| `Zeta` | `src/components/brandpetram/zeta.tsx` | `/construction/turnkey` | Sección completa |
+| `Eta` | `src/components/brandpetram/eta.tsx` | `/construction/turnkey` | Sección completa |
+| `Teta` | `src/components/brandpetram/teta.tsx` | `/construction/turnkey` | Sección completa |
+| `HeroMotionPlus` | `src/components/brandpetram/hero-motionplus.tsx` | `/experience/standards-certifications` | Hero con texto |
+
+### Componentes que NO necesitan propear (ya reciben props traducidos desde la página)
+
+- `ScrollStorytelling` — recibe `items` array con texto EN desde home-client.tsx
+- `AlphaBP` — recibe `descripcion` prop en EN desde home-client.tsx
+- `VirtualTourBP` — recibe title/subtitle props en EN
+- `TarjetaHeroOriginal` — recibe props de texto (pero verificar que se pasen en EN)
+- `HeroVideoCover` — recibe props de texto
+- `LogosGridBP2` — recibe tagline/title/paragraph props
+- `StatsGridBPGamma` — recibe stats/editorial props
+- `MosaicoLiderazgo` — recibe content prop
+
+### Trabajo
+
+1. Propear los 10 componentes con `lang?: 'en' | 'es'` (default `'es'`)
+2. Actualizar las páginas EN para pasar `lang="en"` o props traducidos
+3. Verificar que páginas ES siguen funcionando
+
+### Ownership
+
+Todos son componentes compartidos en `src/components/brandpetram/`. Propear desde MAIN (paso 1). Actualizar páginas EN desde sección `(en)/` (paso 2).
+
+### Nota sobre Build-to-suit y Turnkey
+
+`/construction/build-to-suit` usa Beta (+ posiblemente Gamma, Delta, Epsilon).
+`/construction/turnkey` usa Zeta, Eta, Teta, Iota, Kappa, Lamda.
+
+Estos son componentes griegos del mismo tipo que Baumex — secciones con texto hardcodeado. El mismo patrón de propear con `lang` aplica.
 
 ---
 
@@ -333,11 +372,12 @@ Después de este bloque, las páginas EN dejan de mezclar idiomas y rutas.
 5. Fase 14 ── recorrer páginas EN en browser, listar bugs restantes
 ```
 
-### Bloque 3 — Cleanup estructural (después de QA, sitio estable)
+### Bloque 3 — Propear componentes restantes
 
 ```
-6. Fase 13 ── propear originales de Baumex, eliminar *-en.tsx,
-              normalizar lang en shared components
+6. Fase 13a ── propear 12 Baumex, eliminar *-en.tsx          ⏳ EN PROGRESO
+7. Fase 13b ── propear 10 componentes más (LEED hero,
+               park-hero, build-to-suit, turnkey, etc.)      ❌ PENDIENTE
 ```
 
 ---
