@@ -5,7 +5,6 @@
 // import { StatsSection1 } from '@brandpetram/componentes-2026/pro-blocks'
 // import { TarjetaHero1 } from '@brandpetram/componentes-2026/marketing'
 import { HeroVideoCover } from '@/components/hero-video-cover'
-import { TarjetaHeroOriginal } from '@/components/tarjeta-hero-original'
 import { HexagonFeatures } from '@/components/hexagon-features'
 import { Header as RadiantHeader } from '@/components/from-tailwind-templates/radiant-ts-header/header'
 import { DiagonalDivider } from '@/components/diagonal-divider'
@@ -25,7 +24,7 @@ import { FaqSectionsThreeColumnsBPConProps } from '@/components/brandpetram/con-
 import { CincoCardsConProps } from '@/components/brandpetram/con-props/cinco-cards-con-props';
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp';
 
-export default function HomeClient() {
+export default function HomeClient({ heroContent }: { heroContent: React.ReactNode }) {
   return (
     <div>
       {/* Header con navegación principal */}
@@ -63,12 +62,7 @@ export default function HomeClient() {
             fadeRadius: '20rem',
           }}
         >
-          <TarjetaHeroOriginal
-            badge1="4 Parques Industriales"
-            badge2="33 Corporaciones Internacionales"
-            titulo={<>Parques Industriales y Naves <span className="whitespace-nowrap">Built‑to‑Suit</span> en Todo Mexicali</>}
-            descripcion="60 años desarrollando infraestructura industrial en la frontera con California. Rheem, Honeywell, Gulfstream y DHL ya operan aquí."
-          />
+          {heroContent}
         </HeroVideoCover>
 
         {/* Cuadritos de lluvia decorativos - Lado derecho del hero */}

@@ -139,7 +139,6 @@ function VideoPlayer({
       src={videoArray[currentVideoIndex]}
       poster={posterImage}
       preload="none"
-      autoPlay
       loop={!hasMultipleVideos}
       muted
       playsInline

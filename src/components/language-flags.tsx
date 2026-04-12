@@ -37,8 +37,8 @@ export function LanguageFlags({ className, size = 'md', showLabels = false }: La
   };
 
   const languages = [
-    { code: 'es', flag: '/mex.jpg', label: 'Español' },
-    { code: 'en', flag: '/eua.jpg', label: 'English' },
+    { code: 'es', flag: '/mex-sm.jpg', label: 'Español' },
+    { code: 'en', flag: '/eua-sm.jpg', label: 'English' },
   ];
 
   // Ocultar switcher en páginas sin traducción (blog, noticias, etc.)

@@ -145,6 +145,9 @@ export function HeroVideoCover({
 
     if (video.readyState >= 2) {
       attemptPlay()
+    } else {
+      // Sin autoPlay, iniciar la descarga manualmente después de la hidratación
+      video.load()
     }
 
     video.addEventListener("canplay", handleCanPlay)
@@ -181,54 +184,24 @@ export function HeroVideoCover({
           />
         </div>
 
-        {/* Video para móvil (con filtros mobile) */}
-        {videoFilterMobile && (
-          <>
-            <video
-              ref={videoRef}
-              className={cn(
-                "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out lg:hidden",
-                isVideoLoaded ? "opacity-100" : "opacity-0"
-              )}
-              style={{
-                filter: videoFilterMobile || `brightness(${videoBrightness}) contrast(${videoContrast})`,
-              }}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="none"
-              poster={posterSrc}
-              aria-label={alt}
-            >
-              <source src={videoSrc} type="video/mp4" />
-              {lang === 'en' ? 'Your browser does not support the video element.' : 'Tu navegador no soporta el elemento video.'}
-            </video>
-            {videoOverlayMobile && (
-              <div
-                className="absolute inset-0 lg:hidden"
-                style={{
-                  backgroundColor: videoOverlayMobile,
-                  mixBlendMode: videoOverlayBlendMode,
-                }}
-                aria-hidden="true"
-              />
-            )}
-          </>
-        )}
-
-        {/* Video para desktop (con filtros desktop o fallback) */}
+        {/* Video único con filtros responsive via CSS custom properties */}
+        <style>{`
+          .hero-video {
+            --hero-filter: ${videoFilterDesktop || `brightness(${videoBrightness}) contrast(${videoContrast})`};
+            filter: var(--hero-filter);
+          }
+          ${videoFilterMobile ? `@media (max-width: 1023px) {
+            .hero-video {
+              --hero-filter: ${videoFilterMobile};
+            }
+          }` : ''}
+        `}</style>
         <video
-          ref={!videoFilterMobile ? videoRef : undefined}
+          ref={videoRef}
           className={cn(
-            "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out",
-            videoFilterMobile && "max-lg:hidden",
+            "hero-video absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out",
             isVideoLoaded ? "opacity-100" : "opacity-0"
           )}
-          style={{
-            filter: videoFilterDesktop || `brightness(${videoBrightness}) contrast(${videoContrast})`,
-          }}
-          autoPlay
           loop
           muted
           playsInline
@@ -240,16 +213,30 @@ export function HeroVideoCover({
           {lang === 'en' ? 'Your browser does not support the video element.' : 'Tu navegador no soporta el elemento video.'}
         </video>
 
-        {/* Overlay de color para desktop */}
-        {videoOverlayDesktop && (
-          <div
-            className={cn("absolute inset-0", videoOverlayMobile && "max-lg:hidden")}
-            style={{
-              backgroundColor: videoOverlayDesktop,
-              mixBlendMode: videoOverlayBlendMode,
-            }}
-            aria-hidden="true"
-          />
+        {/* Overlay de color responsive */}
+        {(videoOverlayDesktop || videoOverlayMobile) && (
+          <>
+            {videoOverlayDesktop && (
+              <div
+                className={cn("absolute inset-0", videoOverlayMobile && "max-lg:hidden")}
+                style={{
+                  backgroundColor: videoOverlayDesktop,
+                  mixBlendMode: videoOverlayBlendMode,
+                }}
+                aria-hidden="true"
+              />
+            )}
+            {videoOverlayMobile && (
+              <div
+                className="absolute inset-0 lg:hidden"
+                style={{
+                  backgroundColor: videoOverlayMobile,
+                  mixBlendMode: videoOverlayBlendMode,
+                }}
+                aria-hidden="true"
+              />
+            )}
+          </>
         )}
 
         {/* Capa de oscurecimiento adicional (opcional) */}

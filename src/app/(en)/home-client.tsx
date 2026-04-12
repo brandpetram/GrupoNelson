@@ -1,7 +1,6 @@
 'use client'
 
 import { HeroVideoCover } from '@/components/hero-video-cover'
-import { TarjetaHeroOriginal } from '@/components/tarjeta-hero-original'
 import { HexagonFeatures } from '@/components/hexagon-features'
 import { Header as RadiantHeader } from '@/components/from-tailwind-templates/radiant-ts-header/header'
 import { DiagonalDivider } from '@/components/diagonal-divider'
@@ -22,7 +21,7 @@ import { CincoCardsConProps } from '@/components/brandpetram/con-props/cinco-car
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp';
 import { Compass, Ruler, Hammer, CheckCircle, Shield, Wrench, TrendingUp, Star } from 'lucide-react'
 
-export default function HomeClient() {
+export default function HomeClient({ heroContent }: { heroContent: React.ReactNode }) {
   return (
     <div>
       {/* Header with main navigation */}
@@ -61,16 +60,7 @@ export default function HomeClient() {
             fadeRadius: '20rem',
           }}
         >
-          <TarjetaHeroOriginal
-            badge1="4 Industrial Parks"
-            badge2="33 International Corporations"
-            titulo={<>Industrial Parks and <span className="whitespace-nowrap">Built‑to‑Suit</span> Buildings Across Mexicali</>}
-            descripcion="60 years developing industrial infrastructure on the California border. Rheem, Honeywell, Gulfstream and DHL already operate here."
-            ctaPrimaryText="Learn More"
-            ctaPrimaryHref="/about/difference"
-            ctaSecondaryText="Contact Us"
-            ctaSecondaryHref="/contact"
-          />
+          {heroContent}
         </HeroVideoCover>
 
         {/* Decorative rain squares - Right side of hero */}
