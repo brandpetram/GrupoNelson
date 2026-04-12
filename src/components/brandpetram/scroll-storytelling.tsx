@@ -32,6 +32,7 @@ interface ScrollStorytellingProps {
   items?: ContentItem[]
   className?: string
   mediaAspectRatio?: string // e.g. 'aspect-video', 'aspect-square', 'aspect-[16/9]', 'aspect-[4/3]'
+  lang?: 'en' | 'es'
 }
 
 // Componente para manejar múltiples videos en secuencia con lazy loading

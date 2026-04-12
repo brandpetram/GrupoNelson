@@ -380,7 +380,7 @@ export default function LeadershipPage() {
 
         </div>
 
-        <MosaicoLiderazgo content={mosaicoContent} />
+        <MosaicoLiderazgo content={mosaicoContent} lang="en" />
       </main>
     </div>
   )

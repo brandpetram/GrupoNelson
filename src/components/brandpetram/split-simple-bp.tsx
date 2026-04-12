@@ -24,6 +24,7 @@ interface SplitSimpleBPProps {
     showCuadritos?: boolean
     cuadritosPosition?: 'left' | 'center-left' | 'center' | 'center-right' | 'right'
     cuadritosInvert?: boolean
+    lang?: 'en' | 'es'
 }
 
 export { pClass as splitParagraphClass }

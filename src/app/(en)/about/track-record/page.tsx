@@ -20,6 +20,7 @@ export default function TrackRecordPage() {
         {/* ── Logos Grid — Page hero ── */}
         <div className="pt-20">
           <LogosGridBP2
+            lang="en"
             tagline="Track Record"
             title="33 international corporations trust Grupo Nelson"
             paragraph={
@@ -33,6 +34,7 @@ export default function TrackRecordPage() {
         </div>
 
         <StatsGridBPGamma
+          lang="en"
           stats={[
             { value: '60+', label: 'years of track record\nin the industry' },
             { value: '4M ft²', label: 'square feet\ndeveloped' },
