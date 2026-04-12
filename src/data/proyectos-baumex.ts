@@ -11,9 +11,9 @@ export type ProyectoBaumex = {
 }
 
 export const proyectosBaumex: ProyectoBaumex[] = [
-  { id: '1', numero: 1, proyecto: 'Gulfstream 550K', cliente: 'Gulfstream', servicio: 'Diseño y Construcción', superficieFt2: 561900, superficieM2: 52200, ubicacion: 'Mexicali, B.C.', anio: 'En curso' },
-  { id: '2', numero: 2, proyecto: 'Gulfstream Rollback Fitout Lázaro Cárdenas', cliente: 'Gulfstream', servicio: 'Diseño y Construcción', superficieFt2: null, superficieM2: null, ubicacion: 'Mexicali, B.C.', anio: 'En curso' },
-  { id: '3', numero: 3, proyecto: 'Gulfstream Rollback Fitout Cuyamaca', cliente: 'Gulfstream', servicio: 'Diseño', superficieFt2: null, superficieM2: null, ubicacion: 'Mexicali, B.C.', anio: 'En curso' },
+  { id: '1', numero: 1, proyecto: 'Gulfstream 550K', cliente: 'Gulfstream', servicio: 'Diseño y Construcción', superficieFt2: 561900, superficieM2: 52200, ubicacion: 'Mexicali, B.C.', anio: '2025' },
+  { id: '2', numero: 2, proyecto: 'Gulfstream Rollback Fitout Lázaro Cárdenas', cliente: 'Gulfstream', servicio: 'Diseño y Construcción', superficieFt2: null, superficieM2: null, ubicacion: 'Mexicali, B.C.', anio: '2025' },
+  { id: '3', numero: 3, proyecto: 'Gulfstream Rollback Fitout Cuyamaca', cliente: 'Gulfstream', servicio: 'Diseño', superficieFt2: null, superficieM2: null, ubicacion: 'Mexicali, B.C.', anio: '2025' },
   { id: '4', numero: 4, proyecto: 'Rehabilitado Blvd. Carranza', cliente: '—', servicio: 'Construcción', superficieFt2: 84100, superficieM2: 7900, ubicacion: 'Mexicali, B.C.', anio: '2025' },
   { id: '5', numero: 5, proyecto: 'Vertiv 52K', cliente: 'Vertiv', servicio: 'Diseño y Construcción', superficieFt2: 53200, superficieM2: 5000, ubicacion: 'Mexicali, B.C.', anio: '2024' },
   { id: '6', numero: 6, proyecto: 'Nave Inventario 53K', cliente: 'Baxter', servicio: 'Diseño y Construcción', superficieFt2: 54500, superficieM2: 5100, ubicacion: 'Mexicali, B.C.', anio: '2024' },
