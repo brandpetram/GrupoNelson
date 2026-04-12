@@ -67,7 +67,7 @@ export default function HomeClient() {
             badge1="4 Parques Industriales"
             badge2="33 Corporaciones Internacionales"
             titulo={<>Parques Industriales y Naves <span className="whitespace-nowrap">Built‑to‑Suit</span> en Todo Mexicali</>}
-            descripcion="60 años desarrollando infraestructura industrial en la frontera con California. Gulfstream, Honeywell, General Dynamics y DHL ya operan aquí."
+            descripcion="60 años desarrollando infraestructura industrial en la frontera con California. Rheem, Honeywell, Gulfstream y DHL ya operan aquí."
           />
         </HeroVideoCover>
 
@@ -179,7 +179,7 @@ export default function HomeClient() {
           circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
           circulo2Letra="33"
           circulo2Titulo="Corporaciones"
-          circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. General Dynamics, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
+          circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
           circulo3Letra="75"
           circulo3Titulo="Proyectos"
           circulo3Descripcion="Baumex, nuestra constructora in-house, lleva 30 años y 75+ proyectos. Un solo contrato de diseño a entrega. Construimos bajo estándares ISN, LEED, FM Global e IBC — con más de un millón de horas hombre sin accidentes fatales."
@@ -212,7 +212,7 @@ export default function HomeClient() {
             {
               id: 4,
               question: "¿Qué empresas operan en sus parques?",
-              answer: "33 corporaciones internacionales, incluyendo Gulfstream (más de 35 años), Honeywell (más de 3 décadas), General Dynamics, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. Relaciones de largo plazo que se miden en décadas, no en contratos.",
+              answer: "33 corporaciones internacionales, incluyendo Gulfstream (más de 35 años), Honeywell (más de 3 décadas), Rheem, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. Relaciones de largo plazo que se miden en décadas, no en contratos.",
             },
             {
               id: 5,

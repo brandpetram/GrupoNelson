@@ -65,7 +65,7 @@ export default function HomeClient() {
             badge1="4 Industrial Parks"
             badge2="33 International Corporations"
             titulo={<>Industrial Parks and <span className="whitespace-nowrap">Built‑to‑Suit</span> Buildings Across Mexicali</>}
-            descripcion="60 years developing industrial infrastructure on the California border. Gulfstream, Honeywell, General Dynamics and DHL already operate here."
+            descripcion="60 years developing industrial infrastructure on the California border. Rheem, Honeywell, Gulfstream and DHL already operate here."
             ctaPrimaryText="Learn More"
             ctaPrimaryHref="/about/difference"
             ctaSecondaryText="Contact Us"
@@ -342,7 +342,7 @@ export default function HomeClient() {
           circulo1Descripcion="The family that established Mexicali's first maquiladora in 1965 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project — not a manager who rotates every two years."
           circulo2Letra="33"
           circulo2Titulo="Corporations"
-          circulo2Descripcion="Gulfstream has been here for over 35 years. Honeywell for over 3 decades. General Dynamics, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
+          circulo2Descripcion="Gulfstream has been here for over 35 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
           circulo3Letra="75"
           circulo3Titulo="Projects"
           circulo3Descripcion="Baumex, our in-house construction firm, has 30 years and 75+ projects. A single contract from design to delivery. We build under ISN, LEED, FM Global and IBC standards — with over one million man-hours without fatal accidents."
@@ -375,7 +375,7 @@ export default function HomeClient() {
             {
               id: 4,
               question: "What companies operate in your parks?",
-              answer: "33 international corporations, including Gulfstream (over 35 years), Honeywell (over 3 decades), General Dynamics, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
+              answer: "33 international corporations, including Gulfstream (over 35 years), Honeywell (over 3 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
             },
             {
               id: 5,
