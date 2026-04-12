@@ -399,7 +399,7 @@ export default function Header({
                   <ThemeToggle variant={activeVariant} />
                   <Button asChild size="default" className="uppercase bg-blue-600 hover:bg-blue-700 font-extrabold">
                     <Link href={lang === 'en' ? '/contact' : '/contacto'}>
-                      <span>{lang === 'en' ? 'Contact' : 'Contacto'}</span>
+                      <span>{lang === 'en' ? 'Contact Us' : 'Contacto'}</span>
                     </Link>
                   </Button>
                 </div>
@@ -454,7 +454,7 @@ const MobileMenu = ({ closeMenu, lang = 'es' }: { closeMenu: () => void; lang?: 
             <ThemeToggle />
             <Button asChild size="lg" className="flex-1 uppercase">
               <Link href={lang === 'en' ? '/contact' : '/contacto'} onClick={closeMenu}>
-                <span>{lang === 'en' ? 'Contact' : 'Contacto'}</span>
+                <span>{lang === 'en' ? 'Contact Us' : 'Contacto'}</span>
               </Link>
             </Button>
           </div>
