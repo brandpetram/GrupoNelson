@@ -74,3 +74,6 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 45. Se corrigió el padding del text box del hero de casos de éxito — tenía `px-30` fijo que se desbordaba en móvil. Se cambió a padding responsivo `px-6 md:px-12` (ES + EN).
 46. Se hizo el tour virtual 360° full-width en móvil — tenía `px-10` que desperdiciaba espacio horizontal.
 47. Se mejoró el aspect ratio del tour virtual en móvil de 16:9 a 4:3 para mejor experiencia de exploración en vertical.
+48. Se renombró la ruta `/instrucciones` a `/admin` — nombre más claro y estándar. Se agregó redirect 301 de la ruta vieja.
+49. Se agregaron todas las rutas de dev/proyecto/herramientas al sidebar de `/admin` (Sanity Studio, QA Terrenos, Bitácora, Contenidos, Documentación, Componentes, etc.).
+50. Se corrigió que las rutas de dev (`/componentes`, `/dev`, `/producto`, `/proyecto`, etc.) no tenían `noindex` efectivo — el `robots` del layout `(dev)` no se propagaba. Se bloquearon todas en `robots.txt` con `Disallow`.
