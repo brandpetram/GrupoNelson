@@ -79,3 +79,6 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 50. Se corrigió que las rutas de dev (`/componentes`, `/dev`, `/producto`, `/proyecto`, etc.) no tenían `noindex` efectivo — el `robots` del layout `(dev)` no se propagaba. Se bloquearon todas en `robots.txt` con `Disallow`.
 51. Se reemplazaron las 20 fotos del hero mosaico en la página de diseño e ingeniería — ahora usa fotos de la 1 a la 191 (de 10 en 10) en vez de las 251-346.
 52. Se ajustaron las fotos de ImagenConEtiqueta, BigNumber y Mosaico en la misma página con imágenes más representativas.
+53. Se ocultaron las categorías con 0 posts en el sidebar del blog — confundían al usuario mostrando filtros vacíos.
+54. Se corrigió el color de fondo en dark mode de la sección de noticias — usaba `bg-muted` (gris) en vez de `bg-background`.
+55. Se quitó la barra de search (BlogCommandDialog) de la página de noticias — no era necesaria.
