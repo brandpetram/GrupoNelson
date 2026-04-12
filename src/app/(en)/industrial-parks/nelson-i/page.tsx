@@ -23,6 +23,7 @@ export default async function NelsonIPage() {
             gradientTop={0.4}
             gradientBottom={0.85}
             overlayColor="#2563eb10"
+            lang="en"
             gridConfig={{
                 strokeColor: 'stroke-white/25',
                 gridSize: 120,

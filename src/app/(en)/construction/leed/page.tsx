@@ -15,9 +15,9 @@ export default function LeedPage() {
     <div className="overflow-x-clip">
       <div className={'pt-20 lg:pt-30 lg:px-20'}>
         <div className="768:mt-10 834:mt-10 1024:mt-10 1200:mt-0">
-          <HeroMarketing1 />
+          <HeroMarketing1 lang="en" />
         </div>
-        <div className={'mt-20'}><SidebarSticky1 /></div>
+        <div className={'mt-20'}><SidebarSticky1 lang="en" /></div>
         <CarruselLeed lang="en" />
       </div>
     </div>

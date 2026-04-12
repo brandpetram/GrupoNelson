@@ -13,6 +13,21 @@ interface GridConfig {
   fadePosition?: 'center' | 'top' | 'bottom' | 'left' | 'right' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 
+const parkHeroText = {
+  es: {
+    since: (year: number) => `Desde ${year}`,
+    hectares: (n: number) => `${n} hectáreas`,
+    companies: (n: number) => `${n} ${n === 1 ? 'empresa' : 'empresas'} establecidas`,
+    buildings: (n: number) => `${n} naves`,
+  },
+  en: {
+    since: (year: number) => `Since ${year}`,
+    hectares: (n: number) => `${n} hectares`,
+    companies: (n: number) => `${n} established ${n === 1 ? 'company' : 'companies'}`,
+    buildings: (n: number) => `${n} buildings`,
+  },
+}
+
 interface ParkHeroProps {
   park: IndustrialPark
   /** Opacidad del gradiente desde arriba hacia abajo (0-1). Default: 0 */
@@ -25,6 +40,8 @@ interface ParkHeroProps {
   overlayColor?: string
   /** Cuadrícula decorativa de fondo */
   gridConfig?: GridConfig
+  /** Idioma */
+  lang?: 'en' | 'es'
 }
 
 export function ParkHero({
@@ -34,7 +51,9 @@ export function ParkHero({
   darkOverlay = 0,
   overlayColor,
   gridConfig,
+  lang = 'es',
 }: ParkHeroProps) {
+  const t = parkHeroText[lang]
   return (
     <section data-component="ParkHero" data-component-file="src/components/brandpetram/park-hero.tsx" data-component-props="true" className="relative">
       <div className="aspect-[1/1.4] md:aspect-[1/.7] 1280:aspect-[16/7] overflow-hidden">
@@ -105,17 +124,17 @@ export function ParkHero({
           {/* Badges de datos generales */}
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-sm text-white">
-              Desde {park.since}
+              {t.since(park.since)}
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-sm text-white">
-              {park.landSizeHectares} hectáreas
+              {t.hectares(park.landSizeHectares)}
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-sm text-white">
-              {park.establishedCompanies} {park.establishedCompanies === 1 ? 'empresa' : 'empresas'} establecidas
+              {t.companies(park.establishedCompanies)}
             </span>
             {(park.totalBuildings ?? (park.buildings?.length ?? 0)) > 0 && (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-sm text-white">
-                {park.totalBuildings ?? (park.buildings?.length ?? 0)} naves
+                {t.buildings(park.totalBuildings ?? (park.buildings?.length ?? 0))}
               </span>
             )}
           </div>

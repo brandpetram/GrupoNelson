@@ -18,11 +18,23 @@ import {EmblemaGrupoNelson} from "@/components/ui/brandpetram/emblema-nelson";
 import {PoligonoIcono1} from "@/components/ui/brandpetram/poligono-icono-1";
 
 
-export function HeroMarketing1() {
+const text = {
+  es: {
+    titulo: 'Certifica LEED tu nave industrial en Mexicali — donde el clima es el examen más difícil',
+    parrafo: 'Cada vez más corporativos globales exigen o prefieren LEED para aprobar nuevas instalaciones. Certificar a 48°C con un equipo que no conoce el desierto es una apuesta cara. Baumex lleva 28 años construyendo en Mexicali, con datos de desempeño térmico reales — no teóricos. Gulfstream ya está certificando LEED Gold su nave de 52,200 m² aquí.',
+  },
+  en: {
+    titulo: 'LEED-certify your industrial building in Mexicali — where extreme climate is the hardest test',
+    parrafo: 'More and more global corporations require or prefer LEED to approve new facilities. Certifying at 48°C with a team unfamiliar with the desert is an expensive gamble. Baumex has 28 years of building experience in Mexicali, with real thermal performance data — not theoretical. Gulfstream is already pursuing LEED Gold certification for its 52,200 m² facility here.',
+  },
+}
+
+export function HeroMarketing1({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const t = text[lang]
   // Configuración del contenido de texto
   const propsContenido = {
     className: 'rounded-2xl bg-background/80 px-[2rem] mx-[1rem] md:px-[3rem] md:mx-[5rem]  1728:px-[6rem] 1728:mx-[12rem] 1920:px-[6rem] 1920:mx-[15rem]',
-    titulo: 'Certifica LEED tu nave industrial en Mexicali — donde el clima es el examen más difícil',
+    titulo: t.titulo,
     clasesLinea: 'bg-gray-300 w-full h-1',
       mostrarLinea: true,
 
@@ -73,7 +85,7 @@ export function HeroMarketing1() {
         <div className="">
           <ContentText1 {...propsContenido}>
             <p>
-                Cada vez más corporativos globales exigen o prefieren LEED para aprobar nuevas instalaciones. Certificar a 48°C con un equipo que no conoce el desierto es una apuesta cara. Baumex lleva 28 años construyendo en Mexicali, con datos de desempeño térmico reales — no teóricos. Gulfstream ya está certificando LEED Gold su nave de 52,200 m² aquí.
+                {t.parrafo}
             </p>
           </ContentText1>
 
