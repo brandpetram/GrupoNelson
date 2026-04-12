@@ -190,7 +190,7 @@ export function BlogListing({ posts, categories }: BlogListingProps) {
                             <div>
                                 <h3 className="text-foreground mb-4 text-sm font-semibold">Categorías</h3>
                                 <ul className="space-y-1">
-                                    {categories.map((cat) => (
+                                    {categories.filter((cat) => (categoryCounts[cat.slug] ?? 0) > 0).map((cat) => (
                                         <li key={cat.slug}>
                                             <button
                                                 onClick={() => setActiveFilter(cat.slug)}
