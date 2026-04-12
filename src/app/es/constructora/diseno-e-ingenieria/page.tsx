@@ -119,7 +119,7 @@ export default function DisenoEIngenieriaPage() {
         <div className="container mx-auto mt-16 md:mt-32 w-11/12">
           <div className="relative h-60 md:h-[35vh] lg:h-[40vh] 1200:h-[60vh] xl:h-[70vh]">
             <ImagenConEtiquetaConProps
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-202.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-207.jpg"
               alt="Diseño e ingeniería industrial Mexicali"
               etiqueta={<>Resolvemos Ingeniería<br /><span className="block h-[1em]"><TypewriterTipo /></span></>}
             />
@@ -168,7 +168,7 @@ export default function DisenoEIngenieriaPage() {
         {/* BigNumber — Escala de ingeniería */}
         <div>
           <BigNumberConProps
-            imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-273.jpg"
+            imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-6.jpg"
             imageAlt="Nave industrial más grande de Mexicali"
             number="550K"
             title={<>Pies cuadrados<br/>con ingeniería<br/>de primera</>}
@@ -194,7 +194,7 @@ export default function DisenoEIngenieriaPage() {
             bloque1Descripcion="BRB antisísmico, 20 MW, LEED Gold — diseñado para una operación que no cabía en ningún catálogo"
             bloque1LinkTexto="Ver cómo se hizo"
             bloque1LinkHref="/constructora/build-to-suit"
-            bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-274.jpg"
+            bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-194.jpg"
             bloque2ImagenAlt="Proyecto Gulfstream"
             bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg"
             bloque3ImagenAlt="Construcción industrial"
@@ -202,7 +202,7 @@ export default function DisenoEIngenieriaPage() {
             bloque4Descripcion="La diseñamos desde cero para tu operación"
             bloque4LinkTexto="Contactar"
             bloque4LinkHref="/contacto"
-            imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-276.jpg"
+            imagenDerechaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-153.jpg"
             imagenDerechaAlt="Ingeniería industrial"
           />
 
