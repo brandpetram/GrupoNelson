@@ -172,7 +172,7 @@ El render delay bajó de 2,334ms a 1,431ms. Ambos cambios (lazy logos + poster c
 - Mosaicos con `/Seleccionadas/*`: usan `<Image>` de Next.js via `ImagenRectangulo` y están below-the-fold con lazy loading automático. No son fuga.
 - Logo cloud: ya tiene `loading="lazy"` del fix anterior.
 
-**Conclusión de la rama de imágenes tempranas:** Las fugas residuales identificadas no aplican — `TickerOverflow` era import muerto, Header no tiene imágenes `/Seleccionadas/*`, y los mosaicos ya usan `<Image>` lazy. La rama de imágenes tempranas está cerrada.
+**Hallazgo:** `TickerOverflow` era import muerto y Header.tsx no tiene `/Seleccionadas/*`. Pero `RadiantHeader` (`radiant-ts-header/header.tsx` línea 82) sí emite 4 `<img>` nativos con imágenes `/Seleccionadas/*` (1.5 MB total) sin `loading="lazy"` ni optimización. Este componente se renderiza below-the-fold en el home (después del hero + logo cloud + alpha). **La rama de imágenes tempranas NO está cerrada.**
 
 **Mediciones post-fix (3 corridas):**
 
@@ -185,7 +185,7 @@ El render delay bajó de 2,334ms a 1,431ms. Ambos cambios (lazy logos + poster c
 
 Alta variabilidad de PSI en esta ronda. La mediana se mantiene en 92. La corrida 1 (score 72) es un outlier — PSI tiene esta variabilidad inherente. La corrida 3 muestra render delay de 385ms, lo que sugiere que el servidor y la red pueden entregar el paint rápido cuando no hay congestión.
 
-**Siguiente paso:** La rama de imágenes tempranas está cerrada. El siguiente bloqueador es **render-blocking CSS** (740ms, dos chunks de 1.2 KB + 49 KB). Esto es generado por Next.js — investigar si hay configuración para inline CSS crítico o si se puede reducir el chunk CSS principal.
+**Siguiente paso:** Medir después del fix de `RadiantHeader` (4 `<img>` → `<Image>` con lazy). Si el render delay baja, la rama de imágenes tempranas sigue siendo la causa principal. Si no se mueve, cerrar la rama y pasar a **render-blocking CSS** (740ms).
 
 ---
 
@@ -209,7 +209,7 @@ Bajar 2 MB de payload (video duplicado, banderas gigantes) no movió el LCP ni e
 
 ### 5. Imágenes no-LCP tempranas correlacionan con render delay alto (2026-04-12)
 
-27 logos SVG en `logo-cloud.tsx` no tenían `loading="lazy"` y se descargaban en el initial load. Después de agregar lazy loading + migrar el poster a `<Image>`, el render delay bajó de 2,334ms a 1,431ms y el score subió de 71 a 92. **Correlación fuerte, pero causalidad no aislada** — ambos cambios se aplicaron juntos. Además, quedan fugas residuales: `ticker-overflow.tsx` también renderiza logos sin lazy, y hay preloads de `/logos-clientes/*` en producción. Antes de cerrar esta rama, confirmar que no quedan imágenes tempranas no-LCP compitiendo por recursos.
+27 logos SVG en `logo-cloud.tsx` no tenían `loading="lazy"` y se descargaban en el initial load. Después de agregar lazy loading + migrar el poster a `<Image>`, el render delay bajó de 2,334ms a 1,431ms y el score subió de 71 a 92. **Correlación fuerte, pero causalidad no aislada** — ambos cambios se aplicaron juntos. Se encontró una fuga adicional: `RadiantHeader` emite 4 `<img>` nativos de `/Seleccionadas/*` (1.5 MB) sin lazy loading — migrada a `<Image>` de Next.js.
 
 ### 6. Migrar `<img>` a `<Image>` de Next.js tiene impacto real en payload (2026-04-12)
 

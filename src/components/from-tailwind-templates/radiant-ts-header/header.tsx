@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { AnimatedNumber } from './animated-number'
 import { Container } from './container'
 import { Heading, Lead, Subheading } from './text'
@@ -82,30 +83,42 @@ export function Header({
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
           <div className="px-5 1280:px-0 -mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <img
+              <Image
                 alt="Parque Industrial Mexicali - Nave industrial moderna"
                 src="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-64.jpg"
+                width={800}
+                height={800}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 25vw, 50vw"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <img
+              <Image
                 alt="Parque Industrial Mexicali - Instalaciones de clase mundial"
                 src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-2.jpeg"
+                width={800}
+                height={800}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 25vw, 50vw"
                 className="block size-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <img
+              <Image
                 alt="Parque Industrial Mexicali - Infraestructura industrial"
                 src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-8.jpeg"
+                width={800}
+                height={800}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 25vw, 50vw"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <img
+              <Image
                 alt="Parque Industrial Mexicali - Espacios industriales modernos"
                 src="/Seleccionadas/puente-skyworks-2.jpg"
+                width={800}
+                height={800}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 25vw, 50vw"
                 className="block size-full object-cover"
               />
             </div>
