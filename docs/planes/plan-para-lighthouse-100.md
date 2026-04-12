@@ -146,10 +146,10 @@ Correr PSI en batch sobre las páginas más probables de tener problemas:
 - `/es/constructora/baumex`
 - `/es/constructora/portafolio`
 - `/es/parques-industriales-mexicali/nelson-ii`
-- `/es/experiencia/liderazgo`
+- `/es/nelson/liderazgo`
 - `/about/leadership`
 
-Documentar LCP element y score de cada una. Priorizar las que tengan LCP > 4s.
+Documentar LCP element y score de cada una. Priorizar las que tengan LCP > 2.5s.
 
 ### Fase 3: Optimización de imágenes (site-wide)
 
@@ -213,16 +213,79 @@ Si se quiere trabajar en navegación SPA como proyecto separado:
 
 ## Cómo medir
 
-**Request reproducible para cualquier página:**
-```
-GET https://www.googleapis.com/pagespeedonline/v5/runPagespeed
-  ?url=https://www.nelson.com.mx/{path}
-  &strategy=mobile
-  &category=performance
-  &key=<PSI_KEY de ~/.secrets/tokens.md>
+### Setup
+
+Cargar la API key como variable de entorno (el valor está en `~/.secrets/tokens.md` bajo "PageSpeed Insights API"):
+
+```bash
+export PSI_KEY="<copiar de ~/.secrets/tokens.md>"
 ```
 
-**Regla de verificación:** Los scores de PSI varían entre corridas. Para cualquier medición baseline o post-fix, correr la API **3 veces** y tomar la **mediana** del score de Performance. No tomar decisiones basadas en una sola corrida.
+### Comando reproducible
+
+```bash
+curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://www.nelson.com.mx&strategy=mobile&category=performance&key=$PSI_KEY" \
+| jq '{
+  score: (.lighthouseResult.categories.performance.score * 100),
+  metrics: {
+    FCP: .lighthouseResult.audits["first-contentful-paint"].displayValue,
+    LCP: .lighthouseResult.audits["largest-contentful-paint"].displayValue,
+    TBT: .lighthouseResult.audits["total-blocking-time"].displayValue,
+    CLS: .lighthouseResult.audits["cumulative-layout-shift"].displayValue,
+    SI:  .lighthouseResult.audits["speed-index"].displayValue,
+    TTI: .lighthouseResult.audits["interactive"].displayValue
+  },
+  lcp_element: (.lighthouseResult.audits["largest-contentful-paint-element"].details.items[0]?
+    // null | if . then {node: .node.snippet, type: .node.nodeLabel} else "no disponible en esta corrida" end),
+  opportunities: [.lighthouseResult.audits | to_entries[]
+    | select(.value.details.type? == "opportunity" and .value.score? != null and .value.score < 0.9)
+    | {title: .value.title, savings: .value.displayValue, score: .value.score}]
+    | sort_by(.score) | .[0:5],
+  diagnostics: [.lighthouseResult.audits | to_entries[]
+    | select(.value.details? != null and (.value.score? == null or .value.score < 0.9))
+    | select(.key | startswith("largest-contentful") or startswith("render-blocking") or
+      startswith("unused-") or startswith("legacy-") or startswith("total-byte") or
+      startswith("dom-size") or startswith("network-") or startswith("mainthread-") or
+      startswith("bootup-") or startswith("font-display") or startswith("uses-"))
+    | {title: .value.title, detail: .value.displayValue, score: .value.score}]
+    | .[0:8]
+}'
+```
+
+Para medir otra página, cambiar la URL en el parámetro `url=`. Ejemplo: `url=https://www.nelson.com.mx/es/constructora/diseno-e-ingenieria`.
+
+### Regla de 3 corridas
+
+Los scores de PSI varían entre corridas. Para cualquier medición baseline o post-fix:
+
+1. Correr el comando **3 veces**
+2. Tomar la **mediana** del score de Performance
+3. No tomar decisiones basadas en una sola corrida
+
+### Registro de mediciones
+
+Cada medición se registra en `docs/planes/bitacora-de-performance-y-aprendizajes.md` con este formato:
+
+```markdown
+### [página] — [fecha]
+
+**Contexto:** [baseline | post-fix de X]
+
+| Corrida | Score | LCP | FCP |
+|---|---|---|---|
+| 1 | 70 | 9.5s | 1.5s |
+| 2 | 68 | 10.1s | 1.6s |
+| 3 | 71 | 9.3s | 1.5s |
+| **Mediana** | **70** | **9.5s** | **1.5s** |
+
+**Top opportunities:** [listar las 2-3 principales]
+
+**Cambio aplicado:** [qué se hizo, o "baseline — sin cambios"]
+
+**Conclusión:** [qué aprendimos, qué sigue]
+```
+
+Opcionalmente, guardar el JSON completo de cada corrida para referencia futura (`docs/planes/psi-runs/[página]-[fecha]-[n].json`), pero la bitácora en Markdown es la fuente principal.
 
 ---
 
