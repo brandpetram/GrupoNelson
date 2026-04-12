@@ -26,7 +26,7 @@ export function HeroMarketing1Beta() {
       data-component-file="src/app/(site)/experiencia/casos-de-exito/sections/hero-marketing-1-beta.tsx"
     >
       {/* Imagen de fondo con overlay y grid — ligeramente menor width */}
-      <div className="mx-auto w-full px-20 ">
+      <div className="mx-auto w-full">
         <ImagenRectangulo
           src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-422.jpg"
           alt="Naves industriales Grupo Nelson en Mexicali"
