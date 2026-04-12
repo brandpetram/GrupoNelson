@@ -104,12 +104,6 @@ export default function TablaModelosDeProductos({ naves, onVerMas, lang = 'es' }
                     scope="col"
                     className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    {lang === 'en' ? 'Clear Height (m / ft)' : 'Altura libre (m / ft)'}
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
-                  >
                     Docks
                   </th>
                   <th
@@ -192,17 +186,6 @@ export default function TablaModelosDeProductos({ naves, onVerMas, lang = 'es' }
                             {/* Ciudad */}
                             <td className="px-3 py-4 text-sm whitespace-nowrap text-left text-gray-500 dark:text-gray-400 font-medium">
                               Mexicali
-                            </td>
-
-                            {/* Clear Height */}
-                            <td className="px-3 py-4 text-sm whitespace-nowrap text-right text-gray-700 dark:text-gray-300 font-medium tabular-nums">
-                              {nave.clearHeightFt > 0 ? (
-                                <>
-                                  <span className="text-gray-900 dark:text-white">{(nave.clearHeightFt * 0.3048).toFixed(1)} m</span>
-                                  <span className="mx-1 text-gray-400">/</span>
-                                  <span className="text-gray-500 dark:text-gray-400 text-xs">{nave.clearHeightFt} ft</span>
-                                </>
-                              ) : '—'}
                             </td>
 
                             {/* Docks */}

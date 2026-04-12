@@ -96,16 +96,19 @@ function TerrenoCard({ terreno, onClick }: { terreno: Terreno; onClick: () => vo
 
 // === Drawer ===
 
-function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => void }) {
-  const geoFeature = getGeoFeatureById(terreno.id)
+function TerrenoDrawer({ terreno, open, onClose }: { terreno: Terreno | null; open: boolean; onClose: () => void }) {
+  const geoFeature = terreno ? getGeoFeatureById(terreno.id) : null
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end">
+    <div
+      className={`fixed inset-0 z-50 transition-opacity duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      aria-hidden={!open}
+    >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
 
       {/* Panel */}
-      <div className="relative w-full max-w-md bg-background shadow-xl overflow-y-auto">
+      <div className={`fixed right-0 top-0 h-[100dvh] w-full max-w-md bg-background shadow-xl overflow-y-auto transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'} transform-gpu will-change-transform`}>
         {/* Header */}
         <div className="sticky top-0 z-10 bg-background border-b border-border px-6 py-4 flex items-center justify-between">
           <h2 className="text-lg font-bold text-foreground">Available land</h2>
@@ -121,7 +124,7 @@ function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => 
         </div>
 
         {/* Content */}
-        <div className="px-6 py-5 space-y-5">
+        {terreno && <div className="px-6 py-5 space-y-5">
           {/* Name and badges */}
           <div>
             <div className="flex flex-wrap gap-2 mb-2">
@@ -189,7 +192,7 @@ function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => 
           >
             Request information
           </a>
-        </div>
+        </div>}
       </div>
     </div>
   )
@@ -395,9 +398,7 @@ export default function LandClient({ terrenos }: { terrenos: Terreno[] }) {
       </div>
 
       {/* Drawer */}
-      {selectedTerreno && (
-        <TerrenoDrawer terreno={selectedTerreno} onClose={() => setSelectedTerreno(null)} />
-      )}
+      <TerrenoDrawer terreno={selectedTerreno} open={!!selectedTerreno} onClose={() => setSelectedTerreno(null)} />
     </main>
     </div>
   )
