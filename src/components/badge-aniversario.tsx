@@ -13,17 +13,22 @@ interface BadgeAniversarioProps {
   contentOffsetY?: number
   /** Radio del arco del texto curvo. 50 = borde del círculo, mayor = más alejado. Default: 58 */
   curvedTextRadius?: number
+  /** Idioma */
+  lang?: 'en' | 'es'
 }
 
 export function BadgeAniversario({
   numero = '60',
-  textoInferior = 'años',
-  textoCurvo = 'CELEBRANDO',
+  textoInferior,
+  textoCurvo,
   className = 'w-[200px] h-[200px]',
   curvedTextTracking = 0.9,
   contentOffsetY = -3,
   curvedTextRadius = 58,
+  lang = 'es',
 }: BadgeAniversarioProps) {
+  const _textoInferior = textoInferior ?? (lang === 'en' ? 'years' : 'años')
+  const _textoCurvo = textoCurvo ?? (lang === 'en' ? 'CELEBRATING' : 'CELEBRANDO')
   return (
     <div data-component="BadgeAniversario" data-component-file="src/components/badge-aniversario.tsx" data-component-props="true" className={`relative flex items-center justify-center ${className}`}>
 
@@ -89,13 +94,13 @@ export function BadgeAniversario({
           letterSpacing="1"
           fontFamily="system-ui, -apple-system, sans-serif"
         >
-          {textoInferior}
+          {_textoInferior}
         </text>
 
         {/* Texto curvo "CELEBRANDO" fuera del perímetro */}
         <text fill="white" fontSize="8.5" fontWeight="800" fontFamily="system-ui, -apple-system, sans-serif">
           <textPath href="#celebrando-arc" startOffset="50%" textAnchor="middle" letterSpacing={curvedTextTracking}>
-            {textoCurvo}
+            {_textoCurvo}
           </textPath>
         </text>
       </svg>

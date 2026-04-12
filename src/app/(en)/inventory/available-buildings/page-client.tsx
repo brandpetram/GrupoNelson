@@ -48,6 +48,7 @@ export default function AvailableBuildingsClient({ naves }: { naves: NaveIndustr
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         nave={naveSeleccionada}
+        lang="en"
       />
     </div>
   )

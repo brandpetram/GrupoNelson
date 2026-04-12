@@ -9,6 +9,7 @@ export type DrawerProps = {
   open: boolean
   onClose: () => void
   nave: NaveIndustrial | null
+  lang?: 'en' | 'es'
 }
 
 // ── Colores de badge de estatus ───────────────────────────────────────────────
@@ -18,7 +19,7 @@ const estatusBadgeClasses: Record<NaveIndustrial['estatus'], string> = {
   'En construcción':  'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300',
 }
 
-export default function Drawer({ open, onClose, nave }: DrawerProps) {
+export default function Drawer({ open, onClose, nave, lang = 'es' }: DrawerProps) {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
@@ -129,22 +130,23 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
   if (!mounted) return null
 
   // ── Filas del grid de especificaciones ────────────────────────────────────
+  const locale = lang === 'en' ? 'en-US' : 'es-MX'
   const specs: { label: string; value: string | number | undefined }[] = nave ? [
-    { label: 'Ubicación',       value: nave.ubicacion },
-    { label: 'Superficie',      value: nave.superficieM2 > 0 ? `${nave.superficieM2.toLocaleString('es-MX')} m²  ·  ${nave.superficieFt2.toLocaleString('es-MX')} sq ft` : undefined },
-    { label: 'Terreno',         value: nave.terreno },
+    { label: lang === 'en' ? 'Location' : 'Ubicación',       value: nave.ubicacion },
+    { label: lang === 'en' ? 'Area' : 'Superficie',      value: nave.superficieM2 > 0 ? `${nave.superficieM2.toLocaleString(locale)} m²  ·  ${nave.superficieFt2.toLocaleString(locale)} sq ft` : undefined },
+    { label: lang === 'en' ? 'Land' : 'Terreno',         value: nave.terreno },
     { label: 'Clear height',    value: `${nave.clearHeightFt} ft` },
-    { label: 'Altura máxima',   value: nave.alturaMaxM ? `${nave.alturaMaxM} m` : undefined },
-    { label: 'Andenes',         value: nave.docksDetalle ?? nave.docks },
-    { label: 'Estacionamiento', value: nave.estacionamiento ? `${nave.estacionamiento} espacios` : undefined },
-    { label: 'Patio maniobras', value: nave.patioManiobras },
-    { label: 'Piso',            value: nave.piso },
-    { label: 'Techo',           value: nave.techo },
-    { label: 'Paredes',         value: nave.paredes },
-    { label: 'Iluminación',     value: nave.iluminacion },
-    { label: 'Subestación',     value: nave.subestacion },
-    { label: 'HVAC',            value: nave.hvac ? 'Sí — área de oficinas' : undefined },
-    { label: 'Sprinklers',      value: nave.sprinklers ? 'Sí' : undefined },
+    { label: lang === 'en' ? 'Max height' : 'Altura máxima',   value: nave.alturaMaxM ? `${nave.alturaMaxM} m` : undefined },
+    { label: lang === 'en' ? 'Docks' : 'Andenes',         value: nave.docksDetalle ?? nave.docks },
+    { label: lang === 'en' ? 'Parking' : 'Estacionamiento', value: nave.estacionamiento ? `${nave.estacionamiento} ${lang === 'en' ? 'spaces' : 'espacios'}` : undefined },
+    { label: lang === 'en' ? 'Staging area' : 'Patio maniobras', value: nave.patioManiobras },
+    { label: lang === 'en' ? 'Floor' : 'Piso',            value: nave.piso },
+    { label: lang === 'en' ? 'Roof' : 'Techo',           value: nave.techo },
+    { label: lang === 'en' ? 'Walls' : 'Paredes',         value: nave.paredes },
+    { label: lang === 'en' ? 'Lighting' : 'Iluminación',     value: nave.iluminacion },
+    { label: lang === 'en' ? 'Substation' : 'Subestación',     value: nave.subestacion },
+    { label: 'HVAC',            value: nave.hvac ? (lang === 'en' ? 'Yes — office area' : 'Sí — área de oficinas') : undefined },
+    { label: 'Sprinklers',      value: nave.sprinklers ? (lang === 'en' ? 'Yes' : 'Sí') : undefined },
   ].filter(s => s.value !== undefined && s.value !== '') : []
 
   const images = nave?.images ?? []
@@ -161,7 +163,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
       <div
         role={viewerOpen ? undefined : 'dialog'}
         aria-modal={viewerOpen ? undefined : true}
-        aria-label={nave?.nave ?? 'Nave industrial'}
+        aria-label={nave?.nave ?? (lang === 'en' ? 'Industrial building' : 'Nave industrial')}
         className={`fixed right-0 top-0 h-[100dvh] w-[96vw] lg:w-[56vw] bg-white dark:bg-gray-900 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${open ? 'translate-x-0' : 'translate-x-full'} flex flex-col transform-gpu will-change-transform`}
       >
         {/* Header */}
@@ -175,7 +177,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
               onClick={onClose}
               className="relative rounded-xs p-1.5 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
-              <span className="sr-only">Cerrar panel</span>
+              <span className="sr-only">{lang === 'en' ? 'Close panel' : 'Cerrar panel'}</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
                 <path d="M6 6l12 12M18 6L6 18" />
               </svg>
@@ -188,7 +190,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           <div
             role="dialog"
             aria-modal="true"
-            aria-label={`Visor de imagen: ${nave?.nave ?? 'Nave industrial'}`}
+            aria-label={lang === 'en' ? `Image viewer: ${nave?.nave ?? 'Industrial building'}` : `Visor de imagen: ${nave?.nave ?? 'Nave industrial'}`}
             className="absolute inset-0 z-20 bg-black/40 backdrop-blur-xl flex items-center justify-center"
             style={{ touchAction: 'none' }}
             onTouchStart={(e) => {
@@ -218,7 +220,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
               onClick={(e) => { e.stopPropagation(); closeViewer() }}
               className="absolute top-3 left-3 z-30 inline-flex items-center rounded-xs bg-blue-600 px-4 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-              Cerrar
+              {lang === 'en' ? 'Close' : 'Cerrar'}
             </button>
 
             {/* Flecha izquierda */}
@@ -233,7 +235,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
                   })
                 }}
                 className="absolute left-3 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center size-14 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-white"
-                aria-label="Foto anterior"
+                aria-label={lang === 'en' ? 'Previous photo' : 'Foto anterior'}
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
                   <path d="M15 18l-6-6 6-6" />
@@ -253,7 +255,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
                   })
                 }}
                 className="absolute right-3 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center size-14 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-white"
-                aria-label="Foto siguiente"
+                aria-label={lang === 'en' ? 'Next photo' : 'Foto siguiente'}
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-7 w-7">
                   <path d="M9 18l6-6-6-6" />
@@ -317,17 +319,17 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
                   WhatsApp
                 </button>
                 <a
-                  href="/contacto"
+                  href={lang === 'en' ? '/contact' : '/contacto'}
                   className="inline-flex items-center justify-center rounded-xs bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-white/20 hover:bg-gray-50 dark:hover:bg-gray-700"
                 >
-                  Solicitar información
+                  {lang === 'en' ? 'Request information' : 'Solicitar información'}
                 </a>
                 <a
                   href="tel:+526865534088"
                   className="inline-flex items-center justify-center gap-2 rounded-xs bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   <Phone className="w-4 h-4" />
-                  Llamar
+                  {lang === 'en' ? 'Call' : 'Llamar'}
                 </a>
               </div>
             </div>
@@ -336,7 +338,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           {/* Grid de especificaciones */}
           {specs.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">Especificaciones</h3>
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">{lang === 'en' ? 'Specifications' : 'Especificaciones'}</h3>
               <dl className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
                 {specs.map(({ label, value }) => (
                   <div key={label} className="flex flex-col">
@@ -351,7 +353,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           {/* Aplicaciones */}
           {nave?.applications && nave.applications.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
-              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Usos ideales</h3>
+              <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">{lang === 'en' ? 'Ideal uses' : 'Usos ideales'}</h3>
               <div className="flex flex-wrap gap-2">
                 {nave.applications.map(a => (
                   <span key={a} className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">
@@ -366,7 +368,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
           {images.length > 0 && (
             <div className="px-4 py-5 sm:px-6">
               <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                Fotos {images.length > 1 && <span className="font-normal text-gray-400 dark:text-gray-500">({images.length})</span>}
+                {lang === 'en' ? 'Photos' : 'Fotos'} {images.length > 1 && <span className="font-normal text-gray-400 dark:text-gray-500">({images.length})</span>}
               </h3>
 
               {/* Strip de thumbnails cuando hay más de 1 */}
@@ -395,7 +397,7 @@ export default function Drawer({ open, onClose, nave }: DrawerProps) {
                     type="button"
                     onClick={() => { setActiveImage(img); setViewerOpen(true) }}
                     className={`relative aspect-square overflow-hidden rounded-xs group border-2 transition-colors ${activeImage === img ? 'border-blue-600' : 'border-transparent'}`}
-                    aria-label={`Ver foto ${i + 1} en pantalla completa`}
+                    aria-label={lang === 'en' ? `View photo ${i + 1} fullscreen` : `Ver foto ${i + 1} en pantalla completa`}
                   >
                     <img
                       src={img}
