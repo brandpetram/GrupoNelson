@@ -111,7 +111,9 @@ Opciones de menor a mayor intervención:
 
 **Fix 1.2 (ALTO): Optimizar imagen hero**
 
-2,067 KiB ahorrable. Verificar que la imagen del hero usa `<Image>` de Next.js con `priority` y que el formato avif/webp se está sirviendo correctamente. Si la imagen es de `/public/`, Next.js la optimiza via `/_next/image` — pero si es muy grande el original, la optimización puede no ser suficiente. Considerar comprimir el original.
+2,067 KiB ahorrable. El hero hoy usa `<img>` nativo en `hero-video-cover.tsx` (línea 175), no `<Image>` de Next.js — por lo tanto no recibe optimización avif/webp ni responsive sizing.
+
+**Decisión necesaria:** migrar a `<Image>` de Next.js (habilita avif/webp + responsive) o mantener `<img>` nativo y optimizar el asset manualmente (comprimir original, servir en formato óptimo). Migrar a `<Image>` es la opción recomendada porque resuelve el problema de forma automática y consistente.
 
 **Fix 1.3 (MEDIO): Investigar el network payload de 40,821 KiB**
 
@@ -133,7 +135,9 @@ El componente `CuadriculaSectionConProps` en `cuadricula-section-con-props.tsx` 
 - B) Reducir la cantidad de imágenes above-the-fold (cargar solo las visibles, lazy load el resto)
 - C) Cambiar animaciones de motion a opacity/CSS para no retrasar LCP
 
-**Recomendación:** Hacer A + B + C combinados. El impacto de 14s → <4s requiere atacar los tres vectores.
+**Recomendación:** Hacer A + B + C combinados.
+
+**Alcance:** Este fix afecta ambas rutas que usan el componente — `/es/constructora/diseno-e-ingenieria` y `/construction/engineering-design` (EN). La verificación post-fix debe medir ambas URLs.
 
 **Fix 2.2: Auditar las demás páginas pesadas**
 
@@ -200,7 +204,7 @@ Si se quiere trabajar en navegación SPA como proyecto separado:
 | 1.1 | Urgente | LCP homepage de 9.5s a <2.5s | Trivial (1 línea) a Baja |
 | 1.2 | Alta | Reduce payload ~2 MB | Baja |
 | 1.3 | Media | Investigación de payload | Baja (solo análisis) |
-| 2.1 | Urgente | LCP diseño de 14s a <4s | Media (20 imgs + animaciones) |
+| 2.1 | Urgente | LCP diseño de 14s a <2.5s | Media (20 imgs + animaciones) |
 | 2.2 | Media | Baseline de todo el sitio | Baja (solo auditoría) |
 | 3.1-3.3 | Media | Mejora global de imágenes | Media |
 | 4.1-4.3 | Baja | ~60 KiB menos + 400ms menos blocking | Baja |
@@ -224,13 +228,15 @@ GET https://www.googleapis.com/pagespeedonline/v5/runPagespeed
 
 ## Targets
 
-| Métrica | Actual (peor caso) | Target | Criterio |
-|---|---|---|---|
-| Performance | 66 | 90+ | Todas las páginas principales |
-| LCP | 14.0s | < 2.5s | Ninguna página arriba de 4s |
-| Accessibility | 100 | 100 | Mantener |
-| Best Practices | 100 | 100 | Mantener |
-| SEO | 100 | 100 | Mantener |
+**Definición canónica de éxito para LCP:** el target es **< 2.5s** en todas las páginas principales. Ese es el umbral "bueno" de Core Web Vitals y el que mueve el score de Performance a 90+. No hay un segundo umbral de "aceptable a 4s" — si una página queda arriba de 2.5s, sigue en la lista de trabajo.
+
+| Métrica | Actual (peor caso) | Target |
+|---|---|---|
+| Performance | 66 | 90+ en todas las páginas principales |
+| LCP | 14.0s | < 2.5s en todas las páginas principales |
+| Accessibility | 100 | Mantener |
+| Best Practices | 100 | Mantener |
+| SEO | 100 | Mantener |
 
 ---
 
