@@ -179,6 +179,12 @@ export default function HeroMotionPlus({
                             y: -1,
                             backgroundColor: "rgba(255, 255, 255, 0.05)",
                         }}
+                        onClick={(e) => {
+                            if (_secondaryButtonHref?.startsWith('#')) {
+                                e.preventDefault()
+                                document.querySelector(_secondaryButtonHref)?.scrollIntoView({ behavior: 'smooth' })
+                            }
+                        }}
                     >
                         {_secondaryButtonText}
                     </motion.a>
