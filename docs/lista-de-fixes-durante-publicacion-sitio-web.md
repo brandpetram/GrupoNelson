@@ -68,3 +68,7 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 39. Se agregaron las coordenadas GPS en Sanity para Nelson I, Vigía I y Vigía II — faltaban y por eso los mapas no se renderizaban.
 40. Se configuró la API key de Google Maps (`NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`) en Vercel para todos los environments — no existía.
 41. Se corrigió la restricción de sitio de la API key de Google Maps en Google Cloud — `https://www.nelson.com.mx/` no tenía wildcard (`*`), lo que bloqueaba las peticiones en producción.
+42. Se corrigió el menú móvil que al navegar cerraba instantáneamente mostrando la página actual por ~2 segundos antes de cargar la nueva — mala UX. Ahora el menú se cierra cuando la navegación se completa (usando `usePathname`).
+43. Se corrigió el scroll horizontal en las páginas de blog y noticias — se agregó `overflow-x-clip` a los layouts (se usó `clip` en vez de `hidden` para no romper los sidebars sticky).
+44. Se corrigió el hero de la página de casos de éxito que no era full-width — la imagen tenía `px-20` que agregaba padding innecesario en todos los viewports (ES + EN).
+45. Se corrigió el padding del text box del hero de casos de éxito — tenía `px-30` fijo que se desbordaba en móvil. Se cambió a padding responsivo `px-6 md:px-12` (ES + EN).
