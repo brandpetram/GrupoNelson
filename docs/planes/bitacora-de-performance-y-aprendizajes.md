@@ -210,6 +210,21 @@ Alta variabilidad de PSI en esta ronda. La mediana se mantiene en 92. La corrida
 
 **Estado de la rama de imágenes tempranas:** Las fugas conocidas están corregidas (logo-cloud, RadiantHeader). El render delay restante (~1.4s) ya no se explica por imágenes tempranas sin lazy. La siguiente rama es **render-blocking CSS** (740ms reportados por PSI).
 
+### Homepage ES (`/es`) — 2026-04-12
+
+Todos los fixes se aplicaron via componentes compartidos (hero-video-cover, logo-cloud, RadiantHeader, language-flags, tarjeta-hero-original) y cambios paralelos en `es/home-client.tsx` y `es/page.tsx`. No requirió cambios adicionales.
+
+**Mediciones (3 corridas, primera medición de esta página):**
+
+| Corrida | Score | LCP | FCP | Payload | Render delay |
+|---|---|---|---|---|---|
+| 1 | 92 | 3.2s | 1.2s | 30,415 KiB | 1,250ms |
+| 2 | 92 | 3.2s | 1.2s | 30,415 KiB | 1,250ms |
+| 3 | 83 | 4.3s | 1.5s | 30,436 KiB | 2,323ms |
+| **Mediana** | **92** | **3.2s** | **1.2s** | **30,415 KiB** | **1,250ms** |
+
+**Conclusión:** Score 92 supera el target de 90+. LCP 3.2s en el rango "needs improvement" (2.5-4.0s). Consistente con el homepage EN — los componentes compartidos ya estaban optimizados.
+
 ---
 
 ## Aprendizajes acumulados
