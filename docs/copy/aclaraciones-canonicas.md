@@ -571,6 +571,59 @@ Los documentos internos que decian "tercera generacion" para Humberto Jr. estaba
 
 ---
 
+## 16. Telefono oficial de Grupo Nelson
+
+### Decision canonica
+
+El telefono oficial de Grupo Nelson para comunicacion comercial y sitio web es:
+
+**(686) 553-4088**
+
+### Motivo
+
+El telefono (686) 561-3535 estaba incorrecto en el footer del sitio. Corregido el 2026-04-11.
+
+### Usar
+
+- `(686) 553-4088`
+- `+52 686 553 4088` (formato internacional)
+
+### No usar
+
+- `(686) 561-3535`
+- cualquier otro telefono sin verificar contra este documento
+
+---
+
+## 17. Direccion oficial de Grupo Nelson
+
+### Decision canonica
+
+La direccion oficial de Grupo Nelson para comunicacion comercial, sitio web y documentos legales es:
+
+**Ave. Reforma #1699, Col. Nueva, Mexicali, BC, Mexico 21100**
+
+### Motivo
+
+La direccion `Blvd. Lazaro Cardenas 9850` estaba incorrecta en las politicas de privacidad del sitio. Corregida el 2026-04-11.
+
+### Usar
+
+- `Ave. Reforma #1699, Col. Nueva, Mexicali, BC, Mexico 21100`
+- `Ave. Reforma #1699, Col. Nueva, Mexicali, BC, México 21100` (con acento)
+
+### No usar
+
+- `Blvd. Lazaro Cardenas 9850`
+- `Blvd. Lázaro Cárdenas 9850`
+- cualquier otra direccion como domicilio de Grupo Nelson sin verificar contra este documento
+
+### Aclaracion importante
+
+`Blvd. Lazaro Cardenas` puede aparecer como ubicacion de proyectos o naves de clientes (ej: Gulfstream, Honeywell). Eso es correcto — esa es la direccion de la nave del cliente, no la direccion de Grupo Nelson.
+
+---
+
 ## Regla final para roles futuros
 
 Cuando un rol futuro encuentre un documento viejo que contradiga este archivo, no debe reabrir la duda dentro del copy.
