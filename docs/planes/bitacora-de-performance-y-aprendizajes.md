@@ -185,7 +185,30 @@ El render delay bajó de 2,334ms a 1,431ms. Ambos cambios (lazy logos + poster c
 
 Alta variabilidad de PSI en esta ronda. La mediana se mantiene en 92. La corrida 1 (score 72) es un outlier — PSI tiene esta variabilidad inherente. La corrida 3 muestra render delay de 385ms, lo que sugiere que el servidor y la red pueden entregar el paint rápido cuando no hay congestión.
 
-**Siguiente paso:** Medir después del fix de `RadiantHeader` (4 `<img>` → `<Image>` con lazy). Si el render delay baja, la rama de imágenes tempranas sigue siendo la causa principal. Si no se mueve, cerrar la rama y pasar a **render-blocking CSS** (740ms).
+#### Fix de RadiantHeader (commit `422c7e3`)
+
+**Cambio aplicado:** 4 `<img>` nativos de `/Seleccionadas/*` (1.5 MB total) migrados a `<Image>` de Next.js con `width={800} height={800}` y `sizes` responsive. Esto habilita avif/webp + lazy loading automático (below-the-fold).
+
+**Mediciones post-fix (3 corridas):**
+
+| Corrida | Score | LCP | FCP | Payload | Render delay |
+|---|---|---|---|---|---|
+| 1 | 95 | 2.9s | 1.2s | 30,895 KiB | 1,127ms |
+| 2 | 90 | 3.4s | 1.2s | 30,436 KiB | 1,469ms |
+| 3 | 90 | 3.4s | 1.2s | 30,436 KiB | 1,469ms |
+| **Mediana** | **90** | **3.4s** | **1.2s** | **30,436 KiB** | **1,469ms** |
+
+**Comparación acumulada completa:**
+
+| Métrica | Baseline | Post-animación | Post-payload | Post-logos+poster | **Post-RadiantHeader** |
+|---|---|---|---|---|---|
+| Score | 70 | 71 | 71 | 92 | **90** |
+| LCP | 9.5s | 9.5s | 9.5s | 3.2s | **3.4s** |
+| Payload | 40,821 KiB | — | 38,943 KiB | 31,949 KiB | **30,436 KiB** |
+
+**Análisis:** El payload bajó ~1.5 MB más (ahora 30,436 KiB, -10 MB vs baseline). La mejor corrida llegó a **score 95 con LCP 2.9s**, rozando el target de 2.5s. La mediana se mantiene en 90/3.4s por variabilidad de PSI. El render delay no bajó significativamente (1,469ms vs 1,431ms anterior) — confirma que estas 4 imágenes contribuían al payload pero no eran el bloqueador principal del render delay.
+
+**Estado de la rama de imágenes tempranas:** Las fugas conocidas están corregidas (logo-cloud, RadiantHeader). El render delay restante (~1.4s) ya no se explica por imágenes tempranas sin lazy. La siguiente rama es **render-blocking CSS** (740ms reportados por PSI).
 
 ---
 
