@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import { BlogCommandDialog } from '@/components/blog-command'
 import { Post } from '@/types/post'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -54,10 +53,6 @@ export const BlogFilter = ({ categories, posts }: BlogFilterProps) => {
                 </div>
 
                 <div className="flex gap-1 max-md:pr-3">
-                    <BlogCommandDialog
-                        categories={categories}
-                        posts={posts}
-                    />
                     <Button
                         size="sm"
                         variant="ghost"
