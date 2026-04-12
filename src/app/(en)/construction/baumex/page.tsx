@@ -1,16 +1,16 @@
 import Header from '@/components/Header'
-import MuEn from './components/mu-en'
-import NuEn from './components/nu-en'
-import XiEn from './components/xi-en'
-import OmicronEn from './components/omicron-en'
-import PiEn from './components/pi-en'
-import RhoEn from './components/rho-en'
-import SigmaEn from './components/sigma-en'
-import TauEn from './components/tau-en'
-import UpsilonEn from './components/upsilon-en'
-import PhiEn from './components/phi-en'
-import ChiEn from './components/chi-en'
-import PsiEn from './components/psi-en'
+import Mu from '@/components/brandpetram/mu'
+import Nu from '@/components/brandpetram/nu'
+import Xi from '@/components/brandpetram/xi'
+import Omicron from '@/components/brandpetram/omicron'
+import Pi from '@/components/brandpetram/pi'
+import Rho from '@/components/brandpetram/rho'
+import Sigma from '@/components/brandpetram/sigma'
+import Tau from '@/components/brandpetram/tau'
+import Upsilon from '@/components/brandpetram/upsilon'
+import Phi from '@/components/brandpetram/phi'
+import Chi from '@/components/brandpetram/chi'
+import Psi from '@/components/brandpetram/psi'
 import { createMetadata } from '@/lib/create-metadata'
 
 export const metadata = createMetadata({
@@ -25,50 +25,50 @@ export default function BaumexPage() {
     <div className="overflow-hidden">
       <Header variant="dark" lang="en" />
 
-      <MuEn />
+      <Mu lang="en" />
 
       <div className="container mx-auto mt-20">
-        <NuEn />
+        <Nu lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <XiEn />
+        <Xi lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <OmicronEn />
+        <Omicron lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <PiEn />
+        <Pi lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <RhoEn />
+        <Rho lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <SigmaEn />
+        <Sigma lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <TauEn />
+        <Tau lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <UpsilonEn />
+        <Upsilon lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <PhiEn />
+        <Phi lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <ChiEn />
+        <Chi lang="en" />
       </div>
 
       <div className="container mx-auto mt-20">
-        <PsiEn />
+        <Psi lang="en" />
       </div>
     </div>
   )

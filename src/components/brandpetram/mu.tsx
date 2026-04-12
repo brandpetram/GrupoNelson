@@ -7,7 +7,31 @@
 
 import { TypewriterClients } from '@/components/motion-plus/typewriter-clients'
 
-export default function Mu() {
+const text = {
+  es: {
+    badge: 'Constructora in-house de Grupo Nelson',
+    heading: <>La Constructora en Mexicali que sirve a<br /> </>,
+    description: 'Empresas de clase mundial como Gulfstream llevan más de 20 años construyendo con nosotros. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 corporaciones internacionales eligen a Baumex proyecto tras proyecto. 4.5 millones de pies cuadrados construidos desde 1997. El 80% regresa.',
+    cta: 'Conocer más',
+    contact: 'Contacto',
+    badgeHref: '/constructora/baumex',
+    contactHref: '/contacto',
+  },
+  en: {
+    badge: "Grupo Nelson\u2019s in-house construction firm",
+    heading: <>The Construction Firm in Mexicali Trusted by<br /> </>,
+    description: 'World-class companies like Gulfstream have been building with us for over 20 years. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 international corporations choose Baumex project after project. 4.5 million square feet built since 1997. 80% come back.',
+    cta: 'Learn More',
+    contact: 'Contact Us',
+    badgeHref: '/construction/baumex',
+    contactHref: '/contact',
+  },
+}
+
+export default function Mu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const t = text[lang]
+  const patternId = `mu-dot-pattern-${lang}`
+
   return (
     <div data-component="Mu" data-component-file="src/components/brandpetram/mu.tsx" data-component-props="false"
       id="mu"
@@ -20,11 +44,6 @@ export default function Mu() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Overlay de color/contraste — cambiar clase para ajustar efecto:
-          Oscurecer:  bg-gray-900/60
-          Multiply:   bg-indigo-900/50 mix-blend-multiply
-          Screen:     bg-indigo-400/30 mix-blend-screen
-          Sin efecto: quitar este div */}
       <div className="absolute inset-0 bg-gray-900/70" />
 
       {/* SVG diagonal inferior */}
@@ -48,7 +67,7 @@ export default function Mu() {
         >
           <defs>
             <pattern
-              id="mu-dot-pattern"
+              id={patternId}
               x={0}
               y={0}
               width={20}
@@ -58,7 +77,7 @@ export default function Mu() {
               <rect x={0} y={0} width={4} height={4} fill="currentColor" />
             </pattern>
           </defs>
-          <rect width={364} height={384} fill="url(#mu-dot-pattern)" />
+          <rect width={364} height={384} fill={`url(#${patternId})`} />
         </svg>
       </div>
 
@@ -69,22 +88,22 @@ export default function Mu() {
               <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto 1200:col-span-6 1200:text-left 1200:flex 1200:items-center ">
                 <div>
                   <a
-                    href="/constructora/baumex"
+                    href={t.badgeHref}
                     className="hidden md:inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base 1200:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span className="px-3 py-0.5 text-white text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-semibold leading-5 uppercase tracking-wide bg-linear-to-br from-blue-600 to-blue-700 rounded-full">
                       Baumex
                     </span>
                     <span className="ml-4 text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem]">
-                      Constructora in-house de Grupo Nelson
+                      {t.badge}
                     </span>
                   </a>
                   <h1 className="mt-4 text-2xl 360:text-[2rem] 393:text-[2.5rem] 430:text-[3rem] 768:text-[3.5rem] 834:text-[3.75rem] 1024:text-[4rem] 1200:text-[2.5rem] 1280:text-[3rem] 1366:text-[3rem] 1440:text-[3.25rem] 1536:text-[3.5rem] 1728:text-[4rem] 1920:text-[4.5rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none 1200:mt-6">
-                    La Constructora en Mexicali que sirve a<br /> <span className="block h-[1em]"><TypewriterClients /></span>
+                    {t.heading}<span className="block h-[1em]"><TypewriterClients /></span>
 
                   </h1>
                   <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
-                    Empresas de clase mundial como Gulfstream llevan más de 20 años construyendo con nosotros. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 corporaciones internacionales eligen a Baumex proyecto tras proyecto. 4.5 millones de pies cuadrados construidos desde 1997. El 80% regresa.
+                    {t.description}
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
                     <div className="rounded-xs shadow">
@@ -98,15 +117,15 @@ export default function Mu() {
                         }}
                         className="cursor-pointer w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-white bg-linear-to-br from-blue-600 to-blue-700 hover:opacity-90 md:py-4 md:text-lg md:px-10"
                       >
-                        Conocer más
+                        {t.cta}
                       </button>
                     </div>
                     <div className="mt-3 sm:mt-0 sm:ml-3">
                       <a
-                        href="/contacto"
+                        href={t.contactHref}
                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xs text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
                       >
-                        Contacto
+                        {t.contact}
                       </a>
                     </div>
                   </div>
