@@ -40,7 +40,7 @@ export function VirtualTourBP({
         <iframe
           src={`https://app.cloudpano.com/tours/${tourId}?disable=logo,sound,ribbon,request,leadgen,floorplan,watermark${sceneId ? `&sceneId=${sceneId}` : ''}`}
           width="100%"
-          className="aspect-video"
+          className="aspect-4/3 md:aspect-video"
           allow="fullscreen; gyroscope; accelerometer"
           loading="lazy"
           title={resolvedTitle}
