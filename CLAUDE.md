@@ -92,6 +92,60 @@ Actualmente usa `file:../componentes-brandpetram` para desarrollo. Los cambios e
 - Si un cambio obliga a editar archivos fuera de la sección actual, detenerse y pedir confirmación antes de seguir.
 - Nunca hacer `git add`, `git commit`, `merge`, `push` o PR sin permiso explícito del usuario.
 
+### REGLAS DE WORKTREES (obligatorias para todo subagente)
+
+1. Tu trabajo NO ESTÁ TERMINADO hasta que hayas hecho `git add -A && git commit`.
+   Aunque el trabajo esté incompleto, roto, o feo: commitea con prefijo `wip:`.
+   Un commit feo es infinitamente mejor que perder el trabajo.
+
+2. NUNCA ejecutes ninguno de estos comandos, bajo ninguna circunstancia,
+   ni siquiera si crees que estás "limpiando" o "ordenando":
+   - `git reset --hard`
+   - `git checkout .` / `git restore .`
+   - `git clean`
+   - `git worktree remove`
+   - `git branch -d` / `-D`
+   - `rm` sobre archivos del worktree que no creaste tú mismo en esta sesión
+
+3. Al terminar tu tarea, tu último paso es SIEMPRE:
+   a) `git status` (para confirmar que no queda nada sin commitear)
+   b) `git log --oneline -5` (para confirmar que tus commits existen)
+   c) Reportar al orquestador: rama, último SHA, y resumen.
+   NO limpies nada. NO borres tu worktree. NO hagas housekeeping.
+   El orquestador es el ÚNICO responsable de integrar y limpiar.
+
+4. Si encuentras el worktree en mal estado al empezar, REPORTA y DETENTE.
+   No intentes "arreglarlo" con resets.
+
+### PROTOCOLO DE COMMITS EN WORKTREES (obligatorio)
+
+Estás trabajando en un worktree. Cualquier archivo que no esté commiteado
+NO EXISTE desde el punto de vista del orquestador. Se va a perder.
+
+REGLA DURA: commitea CADA VEZ que termines de editar un archivo o grupo
+de archivos relacionados. No esperes a "tener todo listo". No esperes a
+"que compile". No esperes a "validar". Commitea inmediatamente con
+mensaje `wip: <qué hiciste>`.
+
+Cadencia mínima obligatoria:
+- Después de crear o modificar más de 3 archivos: commit.
+- Después de cada 5 minutos de trabajo: commit.
+- ANTES de leer documentación larga, hacer búsquedas extensas, o
+  cualquier operación que pueda consumir contexto: commit.
+- ANTES de reportar progreso al orquestador: commit + git log -1 para
+  confirmar el SHA en tu reporte.
+
+Tu último mensaje al orquestador SIEMPRE debe incluir:
+- Rama en la que trabajaste
+- SHA del último commit (de `git log -1 --format=%H`)
+- Output literal de `git status` (debe decir "nothing to commit")
+
+Si tu git status muestra archivos sin commitear cuando vas a terminar,
+PARA. Commitea. Vuelve a verificar. Solo entonces reporta terminado.
+
+No existe el concepto de "lo iba a commitear al final". El final llega
+sin avisar — timeout, context window, error, lo que sea. Commitea ahora.
+
 ### Componentes de la librería: Uso directo vs Detachment
 
 **Uso directo** (sin modificaciones de estilo):

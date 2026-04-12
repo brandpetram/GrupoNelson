@@ -153,7 +153,7 @@ export default function Contact() {
                             <div className="text-muted-foreground mt-8 text-base">
                                 Looking for available warehouses?{' '}
                                 <Link
-                                    href="/es/inventario/naves-disponibles"
+                                    href="/inventory/available-buildings"
                                     className="text-primary font-medium hover:underline">
                                     View inventory
                                 </Link>
