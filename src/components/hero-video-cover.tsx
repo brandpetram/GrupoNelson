@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { GridOverlay } from "@/components/ui/grid"
 import { motion, type TargetAndTransition, type Transition } from "motion/react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 interface GridConfig {
@@ -175,12 +176,13 @@ export function HeroVideoCover({
             isVideoLoaded ? "opacity-0" : "opacity-100"
           }`}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={posterSrc}
             alt={alt}
-            fetchPriority="high"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
         </div>
 
