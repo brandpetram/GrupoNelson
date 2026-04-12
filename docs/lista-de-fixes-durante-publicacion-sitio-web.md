@@ -77,3 +77,5 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 48. Se renombró la ruta `/instrucciones` a `/admin` — nombre más claro y estándar. Se agregó redirect 301 de la ruta vieja.
 49. Se agregaron todas las rutas de dev/proyecto/herramientas al sidebar de `/admin` (Sanity Studio, QA Terrenos, Bitácora, Contenidos, Documentación, Componentes, etc.).
 50. Se corrigió que las rutas de dev (`/componentes`, `/dev`, `/producto`, `/proyecto`, etc.) no tenían `noindex` efectivo — el `robots` del layout `(dev)` no se propagaba. Se bloquearon todas en `robots.txt` con `Disallow`.
+51. Se reemplazaron las 20 fotos del hero mosaico en la página de diseño e ingeniería — ahora usa fotos de la 1 a la 191 (de 10 en 10) en vez de las 251-346.
+52. Se ajustaron las fotos de ImagenConEtiqueta, BigNumber y Mosaico en la misma página con imágenes más representativas.
