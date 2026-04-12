@@ -87,3 +87,6 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 58. Se agregó slide effect al drawer de terrenos (ES + EN) — antes aparecía sin transición, ahora tiene slide de 500ms igual que el drawer de naves.
 59. Se quitó la columna "Clear Height / Altura libre" de la tabla de naves industriales — mostraba guiones en todas las filas.
 60. Se actualizó el estatus del proyecto Gulfstream 550K a "2025" (terminado) y los dos Rollback Fitout a "En curso" en el portafolio de Baumex.
+61. Se actualizaron los años de trayectoria de Baumex de 28 a 30 en el sidebar del portafolio.
+62. Se cambiaron las 4 fotos del grid del home (sección "Dos caminos, un solo proveedor") por fotos seleccionadas de mayor calidad del folder `/Seleccionadas/`.
+63. Se ajustaron imágenes del Mosaico y otros componentes del home ES con fotos más representativas.
