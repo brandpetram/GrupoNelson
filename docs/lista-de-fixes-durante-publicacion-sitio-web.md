@@ -82,3 +82,8 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 53. Se ocultaron las categorías con 0 posts en el sidebar del blog — confundían al usuario mostrando filtros vacíos.
 54. Se corrigió el color de fondo en dark mode de la sección de noticias — usaba `bg-muted` (gris) en vez de `bg-background`.
 55. Se quitó la barra de search (BlogCommandDialog) de la página de noticias — no era necesaria.
+56. Se corrigió "tres generaciones" a "cuatro generaciones" en todo el sitio (11 archivos, ES + EN) — el dato canónico confirmado es 4 generaciones (ya documentado en aclaraciones-canonicas.md).
+57. Se corrigieron los colores de dark mode en las cards y drawer de terrenos — usaban zinc/gray hardcodeado en vez de variables semánticas (`bg-card`, `bg-background`, `border-border`).
+58. Se agregó slide effect al drawer de terrenos (ES + EN) — antes aparecía sin transición, ahora tiene slide de 500ms igual que el drawer de naves.
+59. Se quitó la columna "Clear Height / Altura libre" de la tabla de naves industriales — mostraba guiones en todas las filas.
+60. Se actualizó el estatus del proyecto Gulfstream 550K a "2025" (terminado) y los dos Rollback Fitout a "En curso" en el portafolio de Baumex.
