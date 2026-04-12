@@ -25,6 +25,7 @@ interface CirculosConPropsProps {
   circulo3Letra?: string
   circulo3Titulo?: string
   circulo3Descripcion?: string
+  lang?: 'en' | 'es'
 }
 
 export function CirculosConProps({

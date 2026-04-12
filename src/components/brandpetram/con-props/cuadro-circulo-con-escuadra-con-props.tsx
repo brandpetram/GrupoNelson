@@ -23,6 +23,7 @@ interface CuadroCirculoConEscuadraConPropsProps {
   simboloNumero?: string
   /** Items del checklist en el círculo */
   itemsCirculo?: string[]
+  lang?: 'en' | 'es'
 }
 
 export function CuadroCirculoConEscuadraConProps({

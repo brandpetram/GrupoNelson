@@ -46,6 +46,7 @@ interface Mosaico2ConPropsProps {
   imagenDerechaSrc?: string
   /** Alt de la imagen derecha */
   imagenDerechaAlt?: string
+  lang?: 'en' | 'es'
 }
 
 export function Mosaico2ConProps({

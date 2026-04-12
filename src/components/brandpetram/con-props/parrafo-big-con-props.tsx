@@ -8,6 +8,7 @@
 interface ParrafoBigConPropsProps {
   /** Texto del párrafo */
   children: React.ReactNode
+  lang?: 'en' | 'es'
 }
 
 export function ParrafoBigConProps({

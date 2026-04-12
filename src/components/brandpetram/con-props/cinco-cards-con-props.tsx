@@ -48,6 +48,7 @@ interface CincoCardsConPropsProps {
   card5ImagenSrc?: string
   card5ImagenAlt?: string
   mostrarCard5?: boolean
+  lang?: 'en' | 'es'
 }
 
 export function CincoCardsConProps({

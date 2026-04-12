@@ -51,6 +51,7 @@ interface CuadriculaSectionConPropsProps {
   filterBrightness: number // ej: 1.10
   filterSaturate: number // ej: 1.15
   filterContrast: number // ej: 1.05
+  lang?: 'en' | 'es'
 }
 
 export function CuadriculaSectionConProps({

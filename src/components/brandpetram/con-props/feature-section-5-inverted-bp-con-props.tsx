@@ -47,6 +47,7 @@ interface FeatureSection5InvertedBPConPropsProps {
   feature4IconColor?: string;
   feature4Titulo?: string;
   feature4Descripcion?: string;
+  lang?: 'en' | 'es';
 }
 
 export function FeatureSection5InvertedBPConProps({

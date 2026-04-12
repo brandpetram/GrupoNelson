@@ -19,6 +19,7 @@ interface FaqSectionsThreeColumnsBPConPropsProps {
   linkTexto?: string;
   linkHref?: string;
   faqs?: Faq[];
+  lang?: 'en' | 'es';
 }
 
 export function FaqSectionsThreeColumnsBPConProps({

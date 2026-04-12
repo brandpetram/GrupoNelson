@@ -16,6 +16,7 @@ interface ImagenConEtiquetaConProps {
   alt: string
   /** Texto de la etiqueta */
   etiqueta: ReactNode
+  lang?: 'en' | 'es'
 }
 
 export function ImagenConEtiquetaConProps({

@@ -33,6 +33,7 @@ interface FeatureSection6BPConPropsProps {
   button2Href?: string;
   imageSrc?: string;
   imageAlt?: string;
+  lang?: 'en' | 'es';
 }
 
 export function FeatureSection6BPConProps({

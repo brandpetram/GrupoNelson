@@ -13,6 +13,7 @@ interface GunLikeConPropsProps {
   poligonoText?: string;
   titulo?: string;
   parrafo?: string;
+  lang?: 'en' | 'es';
 }
 
 export function GunLikeConProps({

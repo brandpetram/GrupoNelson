@@ -13,6 +13,7 @@ interface LineaLConProps {
   color?: string
   /** Clases adicionales */
   className?: string
+  lang?: 'en' | 'es'
 }
 
 /**

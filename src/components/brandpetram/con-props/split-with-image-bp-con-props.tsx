@@ -43,6 +43,7 @@ interface SplitWithImageBPConPropsProps {
   parrafo3?: string
   subtitulo?: string
   parrafo4?: string
+  lang?: 'en' | 'es'
 }
 
 export function SplitWithImageBPConProps({

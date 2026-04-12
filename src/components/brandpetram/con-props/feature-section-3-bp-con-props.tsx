@@ -35,6 +35,7 @@ interface FeatureSection3BPConPropsProps {
   feature2IconColor?: string;
   feature2Titulo?: string;
   feature2Descripcion?: string;
+  lang?: 'en' | 'es';
 }
 
 export function FeatureSection3BPConProps({

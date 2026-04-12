@@ -9,6 +9,7 @@ interface BigNumberConProps {
   number: React.ReactNode
   title: React.ReactNode
   subtitle: React.ReactNode
+  lang?: 'en' | 'es'
 }
 
 export function BigNumberConProps({

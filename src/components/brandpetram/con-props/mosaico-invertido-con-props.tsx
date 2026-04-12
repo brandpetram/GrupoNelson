@@ -46,6 +46,7 @@ interface MosaicoInvertidoConPropsProps {
   imagenIzquierdaSrc?: string
   /** Alt de la imagen izquierda */
   imagenIzquierdaAlt?: string
+  lang?: 'en' | 'es'
 }
 
 export function MosaicoInvertidoConProps({
