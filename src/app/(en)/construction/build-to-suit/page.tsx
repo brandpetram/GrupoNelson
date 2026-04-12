@@ -69,7 +69,7 @@ export default function BuildToSuitPage() {
 
       {/* Beta component */}
       <div className="container mx-auto px-4 py-0 mt-56 mb-56">
-        <Beta />
+        <Beta lang="en" />
       </div>
 
       {/* Gamma component */}

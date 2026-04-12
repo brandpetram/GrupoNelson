@@ -57,7 +57,32 @@ function ImageCarousel({ className }: { className?: string }) {
   )
 }
 
+const editorialCascadaDefaults = {
+  es: {
+    titulo: 'De la primera maquiladora de Mexicali a la nave más grande de la ciudad.',
+    parrafo: 'En 1965, Rodolfo Nelson Sr. instaló la primera maquiladora de Mexicali. No existían parques industriales — existía una visión. Tres generaciones después, esa visión se convirtió en cinco parques, cuatro millones de pies cuadrados desarrollados y la confianza de treinta corporaciones internacionales que eligieron Mexicali porque Grupo Nelson ya había construido la infraestructura que necesitaban.',
+    ctaTitulo: '¿Buscas Parques Industriales en Mexicali?',
+    ctaSubtitulo: 'Sesenta años de experiencia respaldan cada proyecto.',
+    ctaPrimarioTexto: 'Contáctenos',
+    ctaPrimarioHref: '/contacto',
+    ctaSecundarioTexto: 'Conozca Grupo Nelson',
+    ctaSecundarioHref: '/nelson/diferencia-nelson',
+  },
+  en: {
+    titulo: 'From the first maquiladora in Mexicali to the city\'s largest industrial building.',
+    parrafo: 'In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed.',
+    ctaTitulo: 'Looking for Industrial Parks in Mexicali?',
+    ctaSubtitulo: 'Sixty years of experience back every project.',
+    ctaPrimarioTexto: 'Contact Us',
+    ctaPrimarioHref: '/contact',
+    ctaSecundarioTexto: 'About Grupo Nelson',
+    ctaSecundarioHref: '/about/difference',
+  },
+}
+
 interface EditorialCascadaBPProps {
+  /** Idioma */
+  lang?: 'en' | 'es'
   /** Título principal */
   titulo?: string
   /** Párrafo descriptivo */
@@ -79,28 +104,38 @@ interface EditorialCascadaBPProps {
 }
 
 export function EditorialCascadaBP({
-  titulo = 'De la primera maquiladora de Mexicali a la nave más grande de la ciudad.',
-  parrafo = 'En 1965, Rodolfo Nelson Sr. instaló la primera maquiladora de Mexicali. No existían parques industriales — existía una visión. Tres generaciones después, esa visión se convirtió en cinco parques, cuatro millones de pies cuadrados desarrollados y la confianza de treinta corporaciones internacionales que eligieron Mexicali porque Grupo Nelson ya había construido la infraestructura que necesitaban.',
-  ctaTitulo = '¿Buscas Parques Industriales en Mexicali?',
-  ctaSubtitulo = 'Sesenta años de experiencia respaldan cada proyecto.',
-  ctaPrimarioTexto = 'Contáctenos',
-  ctaPrimarioHref = '/contacto',
-  ctaSecundarioTexto = 'Conozca Grupo Nelson',
-  ctaSecundarioHref = '/nelson/diferencia-nelson',
+  lang = 'es',
+  titulo,
+  parrafo,
+  ctaTitulo,
+  ctaSubtitulo,
+  ctaPrimarioTexto,
+  ctaPrimarioHref,
+  ctaSecundarioTexto,
+  ctaSecundarioHref,
   carouselImages,
 }: EditorialCascadaBPProps) {
+  const d = editorialCascadaDefaults[lang]
+  const _titulo = titulo ?? d.titulo
+  const _parrafo = parrafo ?? d.parrafo
+  const _ctaTitulo = ctaTitulo ?? d.ctaTitulo
+  const _ctaSubtitulo = ctaSubtitulo ?? d.ctaSubtitulo
+  const _ctaPrimarioTexto = ctaPrimarioTexto ?? d.ctaPrimarioTexto
+  const _ctaPrimarioHref = ctaPrimarioHref ?? d.ctaPrimarioHref
+  const _ctaSecundarioTexto = ctaSecundarioTexto ?? d.ctaSecundarioTexto
+  const _ctaSecundarioHref = ctaSecundarioHref ?? d.ctaSecundarioHref
   return (
     <section data-component="EditorialCascadaBP" data-component-file="src/components/brandpetram/editorial-cascada-bp.tsx" data-component-props="false" className="w-10/12 mx-auto pt-10 sm:pt-14 pb-16 sm:pb-24">
       {/* Título — ancho completo */}
       <h2 className="w-9/12 768:w-full text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.5rem] 1024:text-[4rem] 1200:text-[3rem] 1366:text-[3.5rem] 1536:text-[4rem] 1728:text-[4.5rem] 1920:text-[5rem] font-extrabold tracking-tighter leading-none text-foreground text-balance">
-        {titulo}
+        {_titulo}
       </h2>
 
       {/* Párrafo + CTA (izquierda) | Carrusel (derecha) */}
       <div className="mt-8 768:mt-12 1200:mt-16 flex flex-col 1200:flex-row gap-10 1200:gap-16">
         <div className="1200:w-[55%]">
           <p className="text-[1rem] 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.5rem] 1200:text-[1.375rem] 1366:text-[1.5rem] 1536:text-[1.625rem] 1728:text-[1.75rem] 1920:text-[1.875rem] font-normal tracking-wider leading-relaxed text-muted-foreground">
-            {parrafo}
+            {_parrafo}
           </p>
 
           {/* Carrusel — mobile y tablet (debajo del párrafo) */}
@@ -109,23 +144,23 @@ export function EditorialCascadaBP({
           {/* CTA — debajo del párrafo (y del carrusel en mobile) */}
           <div className="mt-12 768:mt-16 border-t border-border pt-10 768:pt-12">
             <p className="max-w-lg 1200:max-w-2xl text-[2rem] 393:text-[2.25rem] 430:text-[2.5rem] 768:text-[2.5rem] 1024:text-[2.75rem] 1200:text-[3rem] 1366:text-[3.25rem] 1536:text-[3.5rem] 1920:text-[4rem] font-bold tracking-tighter leading-none text-foreground text-balance">
-              {ctaTitulo}
+              {_ctaTitulo}
             </p>
             <p className="mt-3 text-[1rem] 768:text-[1.125rem] 1200:text-[1.25rem] text-muted-foreground">
-              {ctaSubtitulo}
+              {_ctaSubtitulo}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href={ctaPrimarioHref}
+                href={_ctaPrimarioHref}
                 className="px-8 py-4 rounded-xs bg-blue-600 text-white font-medium text-center transition-all duration-200 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] shadow-md border-[0.5px] border-white/25 shadow-black/20"
               >
-                {ctaPrimarioTexto}
+                {_ctaPrimarioTexto}
               </a>
               <a
-                href={ctaSecundarioHref}
+                href={_ctaSecundarioHref}
                 className="px-8 py-4 rounded-xs border border-border text-foreground font-medium text-center transition-all duration-200 hover:bg-muted hover:ring-1 hover:ring-foreground/20 hover:scale-[1.02] active:scale-[0.98] shadow-sm shadow-black/15"
               >
-                {ctaSecundarioTexto}
+                {_ctaSecundarioTexto}
               </a>
             </div>
           </div>

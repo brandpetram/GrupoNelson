@@ -135,7 +135,7 @@ export default function DifferencePage() {
         </SplitSimpleBP>
 
         {/* ── Validation block ── */}
-        <OffsetWithFeatureListBP />
+        <OffsetWithFeatureListBP lang="en" />
 
         {/* ── Closing + CTA ── */}
         <div className="px-10 1200:px-0 lg:max-w-5xl xl:max-w-6xl 1728:max-w-[1400px] 1920:max-w-[1600px] mx-auto py-20 md:py-28 text-center">

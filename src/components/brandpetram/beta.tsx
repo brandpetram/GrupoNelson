@@ -10,7 +10,19 @@
 
 import Image from "next/image"
 
-export function Beta() {
+const betaText = {
+  es: {
+    heading: <>Nave a <span className="text-orange-600">la medida</span> vs. nave especulativa</>,
+    paragraph: <>Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. Build-to-suit elimina ese compromiso: <strong>Gulfstream</strong> necesitó 52,200 m² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Baumex los diseñó y construyó a la medida.</>,
+  },
+  en: {
+    heading: <>Custom-built <span className="text-orange-600">facility</span> vs. speculative building</>,
+    paragraph: <>A speculative building is built without a client — standard dimensions, generic systems. Build-to-suit eliminates that compromise: <strong>Gulfstream</strong> needed 52,200 m² with BRB seismic systems and 20 MW of electrical capacity. <strong>Skyworks</strong> needed a 95-meter bridge. Baumex designed and built them to spec.</>,
+  },
+}
+
+export function Beta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const t = betaText[lang]
   return (
     <div data-component="Beta" data-component-file="src/components/brandpetram/beta.tsx" data-component-props="false" className="relative flex flex-col md:flex-row gap-12 1200:translate-x-10 1280:translate-x-16 1366:translate-x-0  ">
       {/* Columna 1: Textos arriba + Imagen abajo */}
@@ -18,10 +30,10 @@ export function Beta() {
         {/* Sección de textos */}
         <div className="space-y-4 md:w-10/12 1200:w-8/12 md:translate-x-10 1024:translate-x-16 1200:translate-x-0 1366:translate-x-20 -mt-50 md:mt-0 md:-translate-y-50 1200:-translate-y-30 1280:-translate-y-30 1366:-translate-y-30 1440:-translate-y-35 1536:-translate-y-40 1728:-translate-y-40 1920:-translate-y-40">
           <h2 className="text-4xl 1024:text-[3.4rem] 1200:text-[3rem] 1280:text-[3rem] 1536:text-[3.5rem] 1728:text-[3.7rem] 1920:text-[3.5rem] font-bold text-foreground leading-none tracking-tight">
-            Nave a <span className="text-orange-600">la medida</span> vs. nave especulativa
+            {t.heading}
           </h2>
           <p className="text-lg 834:text-xl 1024:text-2xl 1200:text-lg 1280:text-[.7rem] 1366:text-[.8rem] 1440:text-[1rem] 1536:text-[1.1rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed 1280:w-10/12 1536:w-full">
-            Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. Build-to-suit elimina ese compromiso: <strong>Gulfstream</strong> necesitó 52,200 m² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Baumex los diseñó y construyó a la medida.
+            {t.paragraph}
           </p>
         </div>
 

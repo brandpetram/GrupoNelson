@@ -49,6 +49,7 @@ export default function TrackRecordPage() {
 
         {/* ── Editorial text + cascading cubes ── */}
         <EditorialCascadaBP
+          lang="en"
           titulo="From the first maquiladora in Mexicali to the city's largest industrial building."
           parrafo="In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
           ctaTitulo="Looking for Industrial Parks in Mexicali?"
