@@ -67,6 +67,33 @@ No agrega valor comercial.
 
 ---
 
+## 1b. Gulfstream y General Dynamics no se mencionan juntos
+
+### Decision canonica
+
+En comunicacion comercial **nunca** se mencionan Gulfstream y General Dynamics como si fueran dos empresas distintas operando en los parques de Grupo Nelson.
+
+### Motivo
+
+Gulfstream Aerospace es subsidiaria de General Dynamics. Mencionarlos juntos en una lista de clientes los presenta como dos empresas separadas, lo cual es incorrecto y reduce la credibilidad del copy.
+
+### Usar
+
+- `Gulfstream` como nombre comercial visible (ya resuelto en aclaracion 1)
+- si se necesita variedad en una lista, usar `Rheem` en lugar de `General Dynamics`
+
+### Usar asi
+
+- en listas de clientes tipo hero o FAQ: `Rheem, Honeywell, Gulfstream y DHL`
+- si por alguna razon se necesita mencionar General Dynamics, no incluir a Gulfstream en la misma lista (y viceversa)
+
+### No usar
+
+- `Gulfstream, Honeywell, General Dynamics y DHL` (los presenta como 4 empresas cuando son 3)
+- `General Dynamics` y `Gulfstream` en la misma enumeracion
+
+---
+
 ## 2. Tecnologico / Desarrollo Tecnologico
 
 ### Decision canonica
