@@ -1,7 +1,6 @@
 'use client'
 
 import { HeroVideoCover } from '@/components/hero-video-cover'
-import { HexagonFeatures } from '@/components/hexagon-features'
 import { Header as RadiantHeader } from '@/components/from-tailwind-templates/radiant-ts-header/header'
 import { DiagonalDivider } from '@/components/diagonal-divider'
 import { BadgeAniversario } from '@/components/badge-aniversario'
@@ -10,7 +9,6 @@ import { motion } from 'motion/react'
 import Image from 'next/image'
 import {Mosaico2ConProps} from "@/components/brandpetram/con-props/mosaico-2-con-props";
 import {MosaicoInvertidoConProps} from "@/components/brandpetram/con-props/mosaico-invertido-con-props";
-import TickerOverflow from '@/components/motion-plus/ticker-overflow';
 import LogoCloud from '@/components/motion-plus/logo-cloud';
 import { AlphaBP } from '@/components/brandpetram/alpha-bp';
 import { ScrollStorytelling } from '@/components/brandpetram/scroll-storytelling';
