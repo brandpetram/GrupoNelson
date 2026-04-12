@@ -183,8 +183,15 @@ export default function LiderazgoPage() {
         </section>
 
         {/* ── BLOQUE 3: CONTINUIDAD ── */}
-        <section className="relative border-t border-border/50 bg-muted/20">
-          <div className="px-6 md:px-12 lg:px-20 py-24 md:py-32">
+        <section className="relative border-t border-border/50 bg-muted/20 overflow-hidden">
+          {/* Mapa SVG de Mexicali como fondo decorativo */}
+          <img
+            src="/mexicali-light-mode.svg"
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom-0 right-0 w-[80%] max-w-4xl opacity-[0.04] pointer-events-none select-none"
+          />
+          <div className="relative px-6 md:px-12 lg:px-20 py-24 md:py-32">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground/70 mb-12">
               Continuidad
             </p>
