@@ -399,7 +399,7 @@ function NaveDetalle({ building, t }: { building: Building; t: Labels }) {
   const specs = building.constructionSpecs
 
   return (
-    <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
+    <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-border">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
         {/* Disponibilidad */}
@@ -511,8 +511,8 @@ export function FichaTecnicaParque({ park, lang = 'es' }: { park: IndustrialPark
               {seccion.filas.map((fila, fi) => (
                 <div
                   key={fi}
-                  className={`flex justify-between items-start px-4 py-3 text-sm border-b border-zinc-100 dark:border-zinc-800 ${
-                    fi % 2 === 0 ? "bg-white dark:bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
+                  className={`flex justify-between items-start px-4 py-3 text-sm border-b border-border ${
+                    fi % 2 === 0 ? "bg-background" : "bg-muted/50"
                   }`}
                 >
                   <span className="font-semibold text-zinc-800 dark:text-zinc-200 mr-4 shrink-0">{fila.label}</span>
@@ -551,8 +551,8 @@ export function FichaTecnicaParque({ park, lang = 'es' }: { park: IndustrialPark
                   <div key={building.id}>
                     <button
                       onClick={() => setNaveExpandida(naveExpandida === building.id ? null : building.id)}
-                      className={`w-full flex justify-between items-center px-4 py-3 text-sm border-b border-zinc-100 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors ${
-                        ni % 2 === 0 ? "bg-white dark:bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
+                      className={`w-full flex justify-between items-center px-4 py-3 text-sm border-b border-border hover:bg-muted/70 transition-colors ${
+                        ni % 2 === 0 ? "bg-background" : "bg-muted/50"
                       }`}
                     >
                       <div className="flex items-center gap-2">
