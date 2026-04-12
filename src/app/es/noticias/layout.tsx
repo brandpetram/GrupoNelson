@@ -9,7 +9,7 @@ export default function NoticiasLayout({
         <>
             <Header />
             <section className="bg-muted border-b">
-                <div className="@container overflow-x-hidden pt-22 pb-16 md:pb-24 md:pt-32">{children}</div>
+                <div className="@container overflow-x-clip pt-22 pb-16 md:pb-24 md:pt-32">{children}</div>
             </section>
         </>
     )
