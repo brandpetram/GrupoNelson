@@ -94,3 +94,5 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 65. Se agregó indicador de carga (spinner) en los links del menú móvil usando `useLinkStatus` de Next.js — el usuario ya no repite taps creyendo que el clic no funcionó.
 66. Se agregó estado activo (`aria-current="page"` + estilo visual) a los items del menú móvil — el usuario ahora ve en qué página está antes de navegar.
 67. Se corrigió el hook `check-worktree-clean.sh` que bloqueaba commits en el repo principal (MAIN) — solo debía bloquear en worktrees reales. Ahora distingue MAIN de worktrees comparando `git-dir` vs `git-common-dir`.
+68. Se corrigió la imagen grande del home (Nelson II) que no se renderizaba en móvil en producción — el contenedor tenía `h-full` que colapsaba a 0px sin parent con altura. Se quitó `h-full` para que `aspect-square` defina el tamaño (ES + EN).
+69. Se corrigió el overflow de contenido en las páginas de blog en móvil — texto e imágenes se cortaban por fuera del viewport. Se agregó `min-w-0` al grid item del post y `w-full` a las imágenes de Portable Text.
