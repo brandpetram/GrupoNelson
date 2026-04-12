@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Instrucciones — Grupo Nelson',
+    default: 'Admin — Grupo Nelson',
     template: '%s | Grupo Nelson',
   },
   robots: 'noindex, nofollow',
@@ -13,7 +13,7 @@ export default function InstruccionesGroupLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Este layout existe para que la sección /instrucciones NO herede
+  // Este layout existe para que la sección /admin NO herede
   // el footer de marketing del root layout.
   // Cuando MAIN implemente el refactor de Route Groups, este archivo
   // se integrará con la nueva estructura.

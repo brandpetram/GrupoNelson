@@ -8,19 +8,27 @@ import { ThemeToggle } from '@/components/theme-toggle'
 const navigation = [
   {
     items: [
-      { href: '/instrucciones', label: 'Inicio' },
-      { href: '/instrucciones/acceso-sanity', label: 'Acceso a Sanity' },
+      { href: '/admin', label: 'Inicio' },
+      { href: '/admin/acceso-sanity', label: 'Acceso a Sanity' },
     ],
   },
   {
     title: 'Editar',
     items: [
-      { href: '/instrucciones/naves-industriales', label: 'Naves industriales' },
-      { href: '/instrucciones/terrenos', label: 'Terrenos' },
-      { href: '/instrucciones/parques-industriales', label: 'Parques industriales' },
-      { href: '/instrucciones/blog', label: 'Blog' },
-      { href: '/instrucciones/noticias', label: 'Noticias' },
-      { href: '/instrucciones/categorias-y-autores', label: 'Categorías y autores' },
+      { href: '/admin/naves-industriales', label: 'Naves industriales' },
+      { href: '/admin/terrenos', label: 'Terrenos' },
+      { href: '/admin/parques-industriales', label: 'Parques industriales' },
+      { href: '/admin/blog', label: 'Blog' },
+      { href: '/admin/noticias', label: 'Noticias' },
+      { href: '/admin/categorias-y-autores', label: 'Categorías y autores' },
+    ],
+  },
+  {
+    title: 'Herramientas',
+    items: [
+      { href: '/studio', label: 'Sanity Studio' },
+      { href: '/qa/terrenos', label: 'QA Terrenos' },
+      { href: '/proyecto/bitacora', label: 'Bitácora del proyecto' },
     ],
   },
 ]
@@ -68,7 +76,7 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   )
 }
 
-export default function InstruccionesLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode
@@ -80,11 +88,11 @@ export default function InstruccionesLayout({
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-6">
-          <Link href="/instrucciones" className="flex items-center gap-2.5">
+          <Link href="/admin" className="flex items-center gap-2.5">
             <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-[10px] font-bold text-primary-foreground">
               GN
             </div>
-            <span className="text-sm font-medium tracking-tight">Instrucciones</span>
+            <span className="text-sm font-medium tracking-tight">Admin</span>
           </Link>
 
           <div className="flex items-center gap-2">

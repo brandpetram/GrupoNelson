@@ -5,7 +5,7 @@ import { createHmac } from 'crypto'
 import { redirect } from 'next/navigation'
 
 function computeHmac(password: string): string {
-  return createHmac('sha256', password).update('instrucciones-auth-v1').digest('hex')
+  return createHmac('sha256', password).update('admin-auth-v1').digest('hex')
 }
 
 export async function loginAction(formData: FormData) {
@@ -13,13 +13,13 @@ export async function loginAction(formData: FormData) {
   const envPassword = process.env.INSTRUCCIONES_PASSWORD
 
   if (!envPassword || password !== envPassword) {
-    redirect('/instrucciones/login?error=1')
+    redirect('/admin/login?error=1')
   }
 
   const hmac = computeHmac(envPassword)
   const cookieStore = await cookies()
 
-  cookieStore.set('instrucciones-auth', hmac, {
+  cookieStore.set('admin-auth', hmac, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
@@ -27,5 +27,5 @@ export async function loginAction(formData: FormData) {
     path: '/',
   })
 
-  redirect('/instrucciones')
+  redirect('/admin')
 }

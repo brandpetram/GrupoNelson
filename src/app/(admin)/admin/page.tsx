@@ -1,49 +1,49 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Instrucciones — Grupo Nelson',
+  title: 'Admin — Grupo Nelson',
   description: 'Guías para editar el contenido del sitio web de Grupo Nelson a través de Sanity Studio.',
 }
 
 const sections = [
   {
-    href: '/instrucciones/acceso-sanity',
+    href: '/admin/acceso-sanity',
     title: 'Acceso a Sanity Studio',
     description: 'Cómo entrar al panel de administración y navegar por las secciones.',
     tag: 'Inicio',
   },
   {
-    href: '/instrucciones/naves-industriales',
+    href: '/admin/naves-industriales',
     title: 'Naves industriales',
     description: 'Agregar, editar o cambiar el estatus de las naves disponibles.',
     tag: 'Editar',
   },
   {
-    href: '/instrucciones/terrenos',
+    href: '/admin/terrenos',
     title: 'Terrenos',
     description: 'Administrar el inventario de terrenos disponibles para desarrollo.',
     tag: 'Editar',
   },
   {
-    href: '/instrucciones/parques-industriales',
+    href: '/admin/parques-industriales',
     title: 'Parques industriales',
     description: 'Editar la información de los 4 parques industriales.',
     tag: 'Editar',
   },
   {
-    href: '/instrucciones/blog',
+    href: '/admin/blog',
     title: 'Blog',
     description: 'Crear y editar artículos del blog en español, inglés y chino.',
     tag: 'Editar',
   },
   {
-    href: '/instrucciones/noticias',
+    href: '/admin/noticias',
     title: 'Noticias',
     description: 'Publicar noticias sobre nuevos proyectos y expansiones.',
     tag: 'Editar',
   },
   {
-    href: '/instrucciones/categorias-y-autores',
+    href: '/admin/categorias-y-autores',
     title: 'Categorías y autores',
     description: 'Gestionar las categorías del blog/noticias y los perfiles de autores.',
     tag: 'Editar',

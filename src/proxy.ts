@@ -2,24 +2,24 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createHmac } from 'crypto'
 
 function computeHmac(password: string): string {
-  return createHmac('sha256', password).update('instrucciones-auth-v1').digest('hex')
+  return createHmac('sha256', password).update('admin-auth-v1').digest('hex')
 }
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
 
-  // Solo interceptar rutas /instrucciones/*
-  if (!path.startsWith('/instrucciones')) {
+  // Solo interceptar rutas /admin/*
+  if (!path.startsWith('/admin')) {
     return NextResponse.next()
   }
 
   // Dejar pasar la página de login (evita loop de redirect)
-  if (path === '/instrucciones/login') {
+  if (path === '/admin/login') {
     return NextResponse.next()
   }
 
   // Dejar pasar la API action de login
-  if (path.startsWith('/instrucciones/login/')) {
+  if (path.startsWith('/admin/login/')) {
     return NextResponse.next()
   }
 
@@ -30,16 +30,16 @@ export function proxy(request: NextRequest) {
   }
 
   // Verificar cookie HMAC
-  const cookie = request.cookies.get('instrucciones-auth')
+  const cookie = request.cookies.get('admin-auth')
   const expectedHmac = computeHmac(password)
 
   if (!cookie || cookie.value !== expectedHmac) {
-    return NextResponse.redirect(new URL('/instrucciones/login', request.url))
+    return NextResponse.redirect(new URL('/admin/login', request.url))
   }
 
   return NextResponse.next()
 }
 
 export const config = {
-  matcher: ['/instrucciones/:path*'],
+  matcher: ['/admin/:path*'],
 }

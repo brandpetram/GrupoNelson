@@ -68,7 +68,7 @@ export function DevOverlay() {
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
-  const nonSiteRoutes = ['/en', '/studio', '/instrucciones']
+  const nonSiteRoutes = ['/en', '/studio', '/admin']
   const isSiteRoute = !nonSiteRoutes.some((r) => pathname.startsWith(r))
   const pagePath = isSiteRoute
     ? (pathname === '/' ? 'src/app/(site)/page.tsx' : `src/app/(site)${pathname}/page.tsx`)

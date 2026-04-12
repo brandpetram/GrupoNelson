@@ -41,6 +41,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // /instrucciones redirige a /admin (renombrado)
+      { source: '/instrucciones', destination: '/admin', permanent: true },
+      { source: '/instrucciones/:path*', destination: '/admin/:path*', permanent: true },
+
       // /en redirige a / (inglés ahora vive en la raíz)
       { source: '/en', destination: '/', permanent: true },
       { source: '/en/:path*', destination: '/:path*', permanent: true },
