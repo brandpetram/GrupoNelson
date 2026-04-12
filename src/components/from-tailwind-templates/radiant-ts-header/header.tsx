@@ -84,28 +84,28 @@ export function Header({
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
                 alt="Parque Industrial Mexicali - Nave industrial moderna"
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg"
+                src="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-18.jpg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
               <img
                 alt="Parque Industrial Mexicali - Instalaciones de clase mundial"
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-382.jpg"
+                src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-2.jpeg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
                 alt="Parque Industrial Mexicali - Infraestructura industrial"
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-407.jpg"
+                src="/Seleccionadas/nave-industrial-en-parque-industrial-nelson2-11.jpeg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
               <img
                 alt="Parque Industrial Mexicali - Espacios industriales modernos"
-                src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
+                src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-5.jpeg"
                 className="block size-full object-cover"
               />
             </div>
