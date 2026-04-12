@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Container
                 className="grid-cols-[auto_1fr]"
                 asGrid>
-                <div>
+                <div className="min-w-0">
                     <div
                         data-grid-content
                         className="max-w-3xl p-6 lg:p-12">

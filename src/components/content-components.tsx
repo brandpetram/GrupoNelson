@@ -12,7 +12,7 @@ export const portableTextComponents: PortableTextComponents = {
                     alt={value.alt || ''}
                     width={1200}
                     height={675}
-                    className="rounded-lg"
+                    className="w-full rounded-lg"
                 />
             </div>
         ),

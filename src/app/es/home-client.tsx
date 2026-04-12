@@ -160,7 +160,7 @@ export default function HomeClient() {
       </div>
 
       {/* Imagen grande — Parque Industrial Nelson II */}
-      <div className="relative h-full mt-32 aspect-square lg:aspect-auto lg:h-[70vh]">
+      <div className="relative mt-32 aspect-square lg:aspect-auto lg:h-[70vh]">
         <Image
           src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-336.jpg"
           alt="Parque Industrial Nelson II en Mexicali — 27 hectáreas de infraestructura industrial"
