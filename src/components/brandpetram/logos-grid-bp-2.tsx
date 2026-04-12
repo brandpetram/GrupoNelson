@@ -39,19 +39,23 @@ interface LogosGridBP2Props {
   tagline?: string;
   title?: string;
   paragraph?: React.ReactNode;
+  lang?: 'en' | 'es';
 }
 
 export function LogosGridBP2({
-  tagline = "Trayectoria",
-  title = "33 corporaciones internacionales confían en Grupo Nelson",
-  paragraph = (
-    <>
-      Desde <strong>Gulfstream</strong> hasta <strong>DHL</strong>, las empresas
-      más exigentes del mundo operan en parques de Grupo Nelson. Cada una pasó
-      por su propio proceso de due diligence. Cada una firmó.
-    </>
-  ),
+  tagline,
+  title,
+  paragraph,
+  lang = 'es',
 }: LogosGridBP2Props) {
+  const _tagline = tagline ?? (lang === 'en' ? 'Track Record' : 'Trayectoria')
+  const _title = title ?? (lang === 'en'
+    ? '33 international corporations trust Grupo Nelson'
+    : '33 corporaciones internacionales confían en Grupo Nelson')
+  const _paragraph = paragraph ?? (lang === 'en'
+    ? (<>From <strong>Gulfstream</strong> to <strong>DHL</strong>, the world&apos;s most demanding companies operate in Grupo Nelson parks. Each one went through its own due diligence process. Each one signed.</>)
+    : (<>Desde <strong>Gulfstream</strong> hasta <strong>DHL</strong>, las empresas más exigentes del mundo operan en parques de Grupo Nelson. Cada una pasó por su propio proceso de due diligence. Cada una firmó.</>)
+  )
   return (
     <section data-component="LogosGridBP2" data-component-file="src/components/brandpetram/logos-grid-bp-2.tsx" data-component-props="true"
      
@@ -62,16 +66,16 @@ export function LogosGridBP2({
       <div className="flex flex-col lg:flex-row gap-[2rem] 1024:gap-[3rem] 1200:gap-[4rem]">
         {/* Texto — 40% */}
         <div className="flex flex-col justify-center lg:w-[40%] px-[1rem] 768:px-[1.5rem] 1200:px-[2rem]">
-          {tagline && (
+          {_tagline && (
             <p className="text-[1.125rem] 768:text-[1.25rem] 1024:text-[1.375rem] 1200:text-[1.5rem] 1536:text-[1.625rem] 1920:text-[1.75rem] font-semibold text-blue-600 mb-[0.5rem] 768:mb-[0.75rem]">
-              {tagline}
+              {_tagline}
             </p>
           )}
           <h2 className="text-[2rem] 360:text-[2.25rem] 393:text-[2.5rem] 430:text-[2.75rem] 768:text-[3.5rem] 834:text-[4rem] 1024:text-[3.5rem] 1200:text-[2.75rem] 1280:text-[3rem] 1366:text-[3.25rem] 1440:text-[3.5rem] 1536:text-[3.75rem] 1728:text-[4.25rem] 1920:text-[4.5rem] text-foreground leading-none tracking-tighter font-extrabold text-balance">
-            {title}
+            {_title}
           </h2>
           <p className="mt-[1rem] 768:mt-[1.5rem] 1200:mt-[2rem] text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1.25rem] 834:text-[1.375rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide">
-            {paragraph}
+            {_paragraph}
           </p>
         </div>
 
