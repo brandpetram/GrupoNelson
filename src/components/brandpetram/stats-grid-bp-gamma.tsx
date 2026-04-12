@@ -12,9 +12,10 @@ interface StatsGridBPGammaProps {
   stats?: StatsGridStat[]
   editorial?: string
   youtubeLabel?: string
+  lang?: 'en' | 'es'
 }
 
-const defaultStats: StatsGridStat[] = [
+const defaultStatsEs: StatsGridStat[] = [
   { value: '60+', label: 'años de trayectoria\nen la industria' },
   { value: '4M ft²', label: 'pies cuadrados\ndesarrollados' },
   { value: '30', label: 'corporaciones\ninternacionales' },
@@ -25,11 +26,28 @@ const defaultStats: StatsGridStat[] = [
   { value: '4', label: 'empresas Fortune 500\noperando aquí' },
 ]
 
+const defaultStatsEn: StatsGridStat[] = [
+  { value: '60+', label: 'years of experience\nin the industry' },
+  { value: '4M ft²', label: 'square feet\ndeveloped' },
+  { value: '30', label: 'international\ncorporations' },
+  { value: '5', label: 'industrial parks\nin Mexicali' },
+  { value: '3', label: 'generations\nof the Nelson family' },
+  { value: '80%', label: 'clients who\nrenew their lease' },
+  { value: '75+', label: 'projects built\nby Baumex' },
+  { value: '4', label: 'Fortune 500 companies\noperating here' },
+]
+
 export function StatsGridBPGamma({
-  stats = defaultStats,
-  editorial = 'Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.',
-  youtubeLabel = 'Ver en YouTube',
+  stats,
+  editorial,
+  youtubeLabel,
+  lang = 'es',
 }: StatsGridBPGammaProps = {}) {
+  const _stats = stats ?? (lang === 'en' ? defaultStatsEn : defaultStatsEs)
+  const _editorial = editorial ?? (lang === 'en'
+    ? 'Three generations building the industrial infrastructure that drives Mexicali.'
+    : 'Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.')
+  const _youtubeLabel = youtubeLabel ?? (lang === 'en' ? 'Watch on YouTube' : 'Ver en YouTube')
   const [showVideo, setShowVideo] = useState(false)
 
   useEffect(() => {
@@ -129,7 +147,7 @@ export function StatsGridBPGamma({
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-12">
             {/* Stats — 2 columnas, lado izquierdo */}
             <dl className="grid grid-cols-2 gap-x-8 gap-y-16 lg:w-[45%]">
-              {stats.map((stat, i) => (
+              {_stats.map((stat, i) => (
                 <div key={i} className="flex flex-col">
                   <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">{stat.label.split('\n').map((line, j) => <span key={j}>{j > 0 && <br />}{line}</span>)}</dt>
                   <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
@@ -142,7 +160,7 @@ export function StatsGridBPGamma({
             {/* Columna derecha — texto editorial + video */}
             <div className="flex flex-col gap-10 lg:w-[55%]">
               <p className="text-[1.75rem] 768:text-[2rem] 1024:text-[2.25rem] 1200:text-[2.25rem] 1366:text-[2.5rem] 1536:text-[2.75rem] 1728:text-[3rem] 1920:text-[3.25rem] font-light tracking-wider leading-tight text-white text-balance">
-                {editorial}
+                {_editorial}
               </p>
 
               {/* Video — se carga después que la página */}
@@ -165,7 +183,7 @@ export function StatsGridBPGamma({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-blue-100 hover:text-white transition-colors text-lg font-medium group"
               >
-                {youtubeLabel}
+                {_youtubeLabel}
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </a>
             </div>

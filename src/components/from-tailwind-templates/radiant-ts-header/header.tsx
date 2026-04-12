@@ -17,42 +17,66 @@ interface RadiantHeaderProps {
   paragraphs?: [string, string]
   statsHeading?: string
   stats?: RadiantHeaderStat[]
+  lang?: 'en' | 'es'
 }
 
-const defaultStats: RadiantHeaderStat[] = [
+const defaultStatsEs: RadiantHeaderStat[] = [
   { label: 'Corporaciones Internacionales', start: 20, end: 33 },
   { label: 'Años de Experiencia', start: 50, end: 60, prefix: '+' },
   { label: 'Parques Industriales', start: 2, end: 4 },
   { label: 'Pies Cuadrados\nDesarrollados', start: 2, end: 4, suffix: 'M' },
 ]
 
+const defaultStatsEn: RadiantHeaderStat[] = [
+  { label: 'International Corporations', start: 20, end: 33 },
+  { label: 'Years of Experience', start: 50, end: 60, prefix: '+' },
+  { label: 'Industrial Parks', start: 2, end: 4 },
+  { label: 'Square Feet\nDeveloped', start: 2, end: 4, suffix: 'M' },
+]
+
 export function Header({
-  headline = 'Los pioneros de la industria maquiladora de Mexicali desde 1965.',
-  lead = 'Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — relaciones de largo plazo que se miden en décadas.',
-  sectionTitle = 'Dos caminos, un solo proveedor',
-  paragraphs = [
-    'Si necesitas una nave lista para operar, tenemos 4 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II, el parque más moderno con subestación eléctrica dedicada y sistema contraincendio centralizado.',
-    'Si necesitas algo a medida, Baumex — nuestra constructora in-house con 30 años y más de 75 proyectos completados — lo diseña y construye bajo un solo contrato. La nave más grande que hemos construido: 550,000 ft² para Gulfstream, con certificación LEED, FM Global y sistemas antisísmicos BRB.',
-  ],
-  statsHeading = 'Nuestros Números',
-  stats = defaultStats,
+  headline,
+  lead,
+  sectionTitle,
+  paragraphs,
+  statsHeading,
+  stats,
+  lang = 'es',
 }: RadiantHeaderProps = {}) {
+  const _headline = headline ?? (lang === 'en'
+    ? 'Pioneers of the maquiladora industry in Mexicali since 1965.'
+    : 'Los pioneros de la industria maquiladora de Mexicali desde 1965.')
+  const _lead = lead ?? (lang === 'en'
+    ? 'Gulfstream has been with us for over 35 years. Honeywell for over 3 decades. 33 international corporations have already chosen to operate in our parks — long-term relationships measured in decades.'
+    : 'Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — relaciones de largo plazo que se miden en décadas.')
+  const _sectionTitle = sectionTitle ?? (lang === 'en' ? 'Two paths, one provider' : 'Dos caminos, un solo proveedor')
+  const _paragraphs = paragraphs ?? (lang === 'en'
+    ? [
+        'If you need a building ready to operate, we have 4 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a dedicated electrical substation and a centralized fire suppression system.',
+        'If you need something custom, Baumex — our in-house construction firm with 30 years and over 75 completed projects — designs and builds it under a single contract. The largest building we have built: 550,000 ft² for Gulfstream, with LEED certification, FM Global and BRB seismic systems.',
+      ] as [string, string]
+    : [
+        'Si necesitas una nave lista para operar, tenemos 4 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II, el parque más moderno con subestación eléctrica dedicada y sistema contraincendio centralizado.',
+        'Si necesitas algo a medida, Baumex — nuestra constructora in-house con 30 años y más de 75 proyectos completados — lo diseña y construye bajo un solo contrato. La nave más grande que hemos construido: 550,000 ft² para Gulfstream, con certificación LEED, FM Global y sistemas antisísmicos BRB.',
+      ] as [string, string])
+  const _statsHeading = statsHeading ?? (lang === 'en' ? 'Our Numbers' : 'Nuestros Números')
+  const _stats = stats ?? (lang === 'en' ? defaultStatsEn : defaultStatsEs)
   return (
     <Container className="mx-10 mt-16 lg:mt-16">
       <h1 className={' w-full text-balance text-[2rem] 430:text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >
-        {headline}
+        {_headline}
       </h1>
       <Lead className="mt-6 max-w-3xl">
-        {lead}
+        {_lead}
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
-          <h2 className="text-2xl font-medium tracking-tight">{sectionTitle}</h2>
+          <h2 className="text-2xl font-medium tracking-tight">{_sectionTitle}</h2>
           <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
-            {paragraphs[0]}
+            {_paragraphs[0]}
           </p>
           <p className="mt-8 text-lg/8 text-gray-600 dark:text-gray-400">
-            {paragraphs[1]}
+            {_paragraphs[1]}
           </p>
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -88,11 +112,11 @@ export function Header({
           </div>
         </div>
         <div className="max-lg:mt-16 lg:col-span-1">
-          <Subheading>{statsHeading}</Subheading>
+          <Subheading>{_statsHeading}</Subheading>
           <hr className="mt-6 border-t border-gray-200" />
           <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-            {stats.map((stat, i) => (
-              <div key={i} className={`flex flex-col gap-y-2 ${i < stats.length - 2 ? 'border-b border-dotted border-gray-200 pb-4' : i < stats.length - 1 ? 'max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4' : ''}`}>
+            {_stats.map((stat, i) => (
+              <div key={i} className={`flex flex-col gap-y-2 ${i < _stats.length - 2 ? 'border-b border-dotted border-gray-200 pb-4' : i < _stats.length - 1 ? 'max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4' : ''}`}>
                 <dt className="text-sm leading-none text-gray-600">{stat.label.includes('\n') ? stat.label.split('\n').map((line, j) => <span key={j}>{j > 0 && <br />}{line}</span>) : stat.label}</dt>
                 <dd className="order-first text-6xl font-medium tracking-tight">
                   {stat.prefix}<AnimatedNumber start={stat.start} end={stat.end} />{stat.suffix}

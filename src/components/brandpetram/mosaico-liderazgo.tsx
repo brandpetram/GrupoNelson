@@ -145,15 +145,46 @@ function ArrowIcon() {
   );
 }
 
+const itemsEn: MosaicoItem[] = items.map((item) => {
+  if (item.type !== 'card') return item
+  const translations: Record<string, { title: string; description: string; href: string }> = {
+    'La familia fundadora sigue operando': {
+      title: 'The founding family still operates',
+      description: 'Since 1965, the owners of Grupo Nelson handle every project personally. No corporate layers.',
+      href: '/about/leadership',
+    },
+    'Relaciones de largo plazo': {
+      title: 'Long-term relationships',
+      description: 'Gulfstream has been here over 35 years. Honeywell over 3 decades. The direct relationship with the owners produces loyalty measured in decades.',
+      href: '/about/leadership',
+    },
+    'Cuatro generaciones, una familia operando': {
+      title: 'Four generations, one family operating',
+      description: 'The person who negotiates your contract is the same person who signs it. No corporate layers, no executive turnover.',
+      href: '/about/leadership',
+    },
+    '30 años dirigiendo la construcción': {
+      title: '30 years leading construction',
+      description: 'Baumex was founded in 1997 and has been under the same leadership for nearly 30 years. Continuity is not limited to the family.',
+      href: '/about/leadership',
+    },
+  }
+  const t = translations[item.title]
+  return t ? { ...item, ...t } : item
+})
+
 interface MosaicoLiderazgoProps {
   rounding?: string;
   content?: MosaicoItem[];
+  lang?: 'en' | 'es';
 }
 
 export function MosaicoLiderazgo({
   rounding = "rounded-xs",
-  content = items,
+  content,
+  lang = 'es',
 }: MosaicoLiderazgoProps) {
+  const _content = content ?? (lang === 'en' ? itemsEn : items)
   return (
     <section data-component="MosaicoLiderazgo" data-component-file="src/components/brandpetram/mosaico-liderazgo.tsx" data-component-props="true"
      
@@ -162,7 +193,7 @@ export function MosaicoLiderazgo({
       className="mx-auto max-w-7xl px-4 py-16"
     >
       <div className="columns-2 gap-4 md:columns-3 lg:columns-4">
-        {content.map((item, idx) => {
+        {_content.map((item, idx) => {
           if (item.type === "card") {
             return (
               <Link
