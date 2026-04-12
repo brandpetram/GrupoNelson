@@ -36,7 +36,7 @@ export default async function IndustrialParksPage() {
             Grupo Nelson
           </p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            Industrial Parks
+            Industrial Parks in Mexicali
           </h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed">
             Over 60 years developing world-class industrial infrastructure in Mexicali&apos;s border region.

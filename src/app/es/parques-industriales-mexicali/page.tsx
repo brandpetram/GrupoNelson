@@ -36,7 +36,7 @@ export default async function ParquesIndustrialesMexicaliPage() {
             Grupo Nelson
           </p>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            Parques Industriales
+            Parques Industriales en Mexicali
           </h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed">
             Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali.
