@@ -74,17 +74,17 @@ export default function BuildToSuitPage() {
 
       {/* Gamma component */}
       <div className="container mx-auto px-4 py-16 mb-56">
-        <Gamma />
+        <Gamma lang="en" />
       </div>
 
       {/* Delta component */}
       <div className="container mx-auto">
-        <Delta />
+        <Delta lang="en" />
       </div>
 
       {/* Epsilon component */}
       <div className="container mx-auto ">
-        <Epsilon />
+        <Epsilon lang="en" />
       </div>
 
     </div>

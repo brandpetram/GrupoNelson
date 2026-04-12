@@ -11,7 +11,11 @@
 
 import Image from "next/image"
 
-export function Delta() {
+export function Delta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const title = lang === 'en'
+    ? <>Your Facility, Exactly<br/>As You Envisioned It</>
+    : <>Tu Nave Como<br/>Siempre la Quisiste</>
+
   return (
     <div data-component="Delta" data-component-file="src/components/brandpetram/delta.tsx" data-component-props="false" className="flex items-center gap-0">
       {/* Div izquierdo: Imagen */}
@@ -27,7 +31,7 @@ export function Delta() {
       {/* Div derecho: Texto muy grande (una palabra) */}
       <div className="flex-1 flex items-center justify-center">
         <h2 className="text-5xl 1200:text-6xl 1536:text-7xl 1920:text-8xl font-black text-foreground leading-none tracking-tighter">
-          Tu Nave Como<br/>Siempre la Quisiste
+          {title}
         </h2>
       </div>
     </div>

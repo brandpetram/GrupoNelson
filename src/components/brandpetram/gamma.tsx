@@ -11,12 +11,23 @@
 import Image from "next/image"
 import {CuadritosLluvia} from "@/components/ui/brandpetram/cuadritos-lluvia"
 
-export function Gamma() {
+export function Gamma({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const text = {
+    title: lang === 'en'
+      ? <>Custom-Built<br/>Industrial Facilities.</>
+      : <>Naves Industriales<br/>Fabricadas a la Medida.</>,
+    megawattsTitle: lang === 'en'
+      ? <>How Many<br/>Megawatts?<br/>As Many as You Need.</>
+      : <>¿Cuántos<br/>Megawatts?<br/>Los que necesites.</>,
+    megawattsDesc: lang === 'en'
+      ? 'You define the electrical specification. We design the substation, manage the process with CFE, and install it.'
+      : 'La especificación eléctrica la defines tú. Nosotros diseñamos la subestación, gestionamos con CFE y la instalamos.',
+  }
+
   return (
       <div data-component="Gamma" data-component-file="src/components/brandpetram/gamma.tsx" data-component-props="false">
           <h2 className="1200:-translate-y-10 -mt-24 translate-x-7 1200:translate-x-40 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[3.4rem] 1280:text-[4rem] 1366:text-[4.2rem] 1440:text-[4.5rem] 1536:text-[5rem] 1728:text-[5rem] 1920:text-[6rem] font-extrabold text-foreground leading-none tracking-tighter">
-              Naves Industriales<br/>
-              Fabricadas a la Medida.
+              {text.title}
           </h2>
           <div className="flex justify-center">
 
@@ -40,8 +51,8 @@ export function Gamma() {
                   </div>
                   <div
                       className="md:absolute md:hidden 1200:block md:bottom-0 md:right-0 md:translate-x-1/2 md:translate-y-[9rem] 1366:translate-y-[2rem] 1280:w-90 1366:w-105 h-auto aspect-square bg-orange-500 to-red-500 bg-linear-to-b text-white rounded-xs shadow-xl z-10 overflow-visible flex flex-col justify-center p-10">
-                      <h2 className="text-3xl 1366:text-4xl 1728:text-5xl 1920:text-5xl font-extrabold leading-none tracking-tighter mb-4">¿Cuántos<br/>Megawatts?<br/>Los que necesites.</h2>
-                      <p className="text-sm 1366:text-base 1728:text-lg text-white/80 leading-relaxed">La especificación eléctrica la defines tú. Nosotros diseñamos la subestación, gestionamos con CFE y la instalamos.</p>
+                      <h2 className="text-3xl 1366:text-4xl 1728:text-5xl 1920:text-5xl font-extrabold leading-none tracking-tighter mb-4">{text.megawattsTitle}</h2>
+                      <p className="text-sm 1366:text-base 1728:text-lg text-white/80 leading-relaxed">{text.megawattsDesc}</p>
                       <div className="absolute bottom-0 left-0 translate-y-1/2 pointer-events-none z-10">
                         <CuadritosLluvia />
                       </div>

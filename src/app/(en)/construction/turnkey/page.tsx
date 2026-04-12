@@ -36,17 +36,17 @@ export default function TurnkeyPage() {
 
       {/* Iota component */}
       <div className="container mx-auto mt-10 ">
-        <Iota />
+        <Iota lang="en" />
       </div>
 
       {/* Kappa component */}
       <div className="container mx-auto  mb-32 -mt-16">
-        <Kappa />
+        <Kappa lang="en" />
       </div>
 
       {/* Lamda component */}
       <div className="container mx-auto -mt-32 mb-32">
-        <Lamda />
+        <Lamda lang="en" />
       </div>
 
     </div>
