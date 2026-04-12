@@ -90,3 +90,7 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 61. Se actualizaron los años de trayectoria de Baumex de 28 a 30 en el sidebar del portafolio.
 62. Se cambiaron las 4 fotos del grid del home (sección "Dos caminos, un solo proveedor") por fotos seleccionadas de mayor calidad del folder `/Seleccionadas/`.
 63. Se ajustaron imágenes del Mosaico y otros componentes del home ES con fotos más representativas.
+64. Se corrigió el menú móvil que al navegar a otra sección cerraba el menú antes de que la página cargara — el usuario veía un flash de la página anterior por ~2 seg. Ahora el menú permanece abierto hasta que la navegación termine (`useEffect` en `pathname`), con cierre inmediato solo en same-page clicks.
+65. Se agregó indicador de carga (spinner) en los links del menú móvil usando `useLinkStatus` de Next.js — el usuario ya no repite taps creyendo que el clic no funcionó.
+66. Se agregó estado activo (`aria-current="page"` + estilo visual) a los items del menú móvil — el usuario ahora ve en qué página está antes de navegar.
+67. Se corrigió el hook `check-worktree-clean.sh` que bloqueaba commits en el repo principal (MAIN) — solo debía bloquear en worktrees reales. Ahora distingue MAIN de worktrees comparando `git-dir` vs `git-common-dir`.
