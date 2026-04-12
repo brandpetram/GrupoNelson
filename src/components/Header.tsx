@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { LogoNelson } from '@/components/logo-nelson';
 import { LanguageFlags } from '@/components/language-flags';
@@ -260,6 +261,12 @@ export default function Header({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const isLarge = useMedia('(min-width: 75rem)');
+  const pathname = usePathname();
+
+  // Cerrar menú móvil cuando la ruta cambia (navegación real completada)
+  React.useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   // Determine active variant based on screen size
   const activeVariant = isLarge ? variant : (mobileVariant ?? variant);
