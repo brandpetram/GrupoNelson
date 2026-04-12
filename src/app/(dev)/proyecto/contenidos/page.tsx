@@ -67,7 +67,7 @@ const sections: SectionDefinition[] = [
           {
             title: 'Evolución: De un parque a un ecosistema industrial',
             description:
-              'El Vigía → Nelson I → Nelson II. Tres generaciones de parques que reflejan la evolución de la industria.',
+              'El Vigía → Nelson I → Nelson II. Cuatro generaciones de parques que reflejan la evolución de la industria.',
             estimatedWords: 300,
             estimatedPhotos: 3,
           },
@@ -122,7 +122,7 @@ const sections: SectionDefinition[] = [
           'Copy comercial escrito. H1: "Hacemos nearshoring en Mexicali desde antes de que existiera la palabra". 80% repeat, casos Gulfstream/Honeywell/Interiores Aéreos, directiva familiar. Pendiente: QA y migración a componentes.',
         topics: [
           {
-            title: 'Tres generaciones al frente',
+            title: 'Cuatro generaciones al frente',
             description:
               'Desde el fundador hasta la generación actual: Humberto (comercial), Rodolfo (constructora), Juan Carlos (administración), Alfredo (operaciones). Cada uno aporta una especialidad.',
             estimatedWords: 300,

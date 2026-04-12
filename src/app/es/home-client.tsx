@@ -176,7 +176,7 @@ export default function HomeClient() {
         <CirculosConProps
           circulo1Letra="60"
           circulo1Titulo="Años"
-          circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
+          circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Cuatro generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
           circulo2Letra="33"
           circulo2Titulo="Corporaciones"
           circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
@@ -222,7 +222,7 @@ export default function HomeClient() {
             {
               id: 6,
               question: "¿Cuánto tiempo lleva Grupo Nelson en la industria?",
-              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
+              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1965. Cuatro generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
             },
           ]}
         />

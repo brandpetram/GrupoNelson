@@ -45,7 +45,7 @@ export default function TrackRecordPage() {
             { value: '75+', label: 'projects built\nby Baumex' },
             { value: '4', label: 'Fortune 500 companies\noperating here' },
           ]}
-          editorial="Three generations building the industrial infrastructure that drives Mexicali."
+          editorial="Four generations building the industrial infrastructure that drives Mexicali."
           youtubeLabel="Watch on YouTube"
         />
 
@@ -53,7 +53,7 @@ export default function TrackRecordPage() {
         <EditorialCascadaBP
           lang="en"
           titulo="From the first maquiladora in Mexicali to the city's largest industrial building."
-          parrafo="In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
+          parrafo="In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Four generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
           ctaTitulo="Looking for Industrial Parks in Mexicali?"
           ctaSubtitulo="Sixty years of experience back every project."
           ctaPrimarioTexto="Contact Us"

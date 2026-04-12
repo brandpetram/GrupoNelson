@@ -45,8 +45,8 @@ export function StatsGridBPGamma({
 }: StatsGridBPGammaProps = {}) {
   const _stats = stats ?? (lang === 'en' ? defaultStatsEn : defaultStatsEs)
   const _editorial = editorial ?? (lang === 'en'
-    ? 'Three generations building the industrial infrastructure that drives Mexicali.'
-    : 'Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.')
+    ? 'Four generations building the industrial infrastructure that drives Mexicali.'
+    : 'Cuatro generaciones construyendo la infraestructura industrial que mueve Mexicali.')
   const _youtubeLabel = youtubeLabel ?? (lang === 'en' ? 'Watch on YouTube' : 'Ver en YouTube')
   const [showVideo, setShowVideo] = useState(false)
 
