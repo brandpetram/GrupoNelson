@@ -66,13 +66,15 @@ nodeLabel: "Industrial Parks and Built‑to‑Suit Buildings Across Mexicali"
 | Time to first byte | ~0ms |
 | Element render delay | **2,334ms** |
 
-**Análisis:** El TTFB es perfecto. El problema es **element render delay de 2.3 segundos**. Incluso con `enableAnimations={false}`, el H1 tarda 2.3s en renderizarse. Esto se explica porque:
+**Análisis:** El TTFB es perfecto. El problema es **element render delay de 2.3 segundos** — el tiempo entre que el HTML llega al browser y el H1 se pinta visualmente.
 
-1. `home-client.tsx` es `'use client'` — todo el componente depende de JavaScript para renderizar
-2. El hero (`hero-video-cover.tsx`) es un Client Component que necesita hidratación de React antes de pintar el H1
-3. La animación de motion/react era un agravante, pero el delay fundamental viene de la hidratación del Client Component
+**Aclaración importante:** El H1 **sí existe en el HTML SSR** (verificado con `curl` en producción). El problema no es que el H1 dependa de hidratación para existir en el DOM — es que algo bloquea el paint del HTML que ya está ahí. El browser recibe el HTML pero no lo renderiza visualmente durante 2.3s.
 
-**El H1 no se pinta en el servidor.** Aunque Next.js hace SSR de Client Components, el hero tiene dependencia de `motion/react` que puede retrasar el paint hasta que JS ejecute.
+Causas posibles del paint delay (por investigar):
+- Render-blocking CSS (710ms reportados por PSI)
+- Web fonts que bloquean el paint del texto hasta que se descargan
+- Imágenes no-LCP que compiten por bandwidth y main thread (logo cloud, imágenes del header)
+- El bundle JS bloquea el main thread durante parsing (2.4s reportados)
 
 **Corrida adicional con LCP breakdown (post-deploy):**
 
@@ -109,12 +111,19 @@ nodeLabel: "Industrial Parks and Built‑to‑Suit Buildings Across Mexicali"
 
 **Hallazgo clave del payload:** El video del hero aparece **6 veces** en la lista de recursos pesados de PSI (6 × 2,810 KB = 16.8 MB). Los videos de scroll-storytelling también aparecen duplicados. Puede ser que PSI cuente requests de range/chunk por separado, o que el browser esté haciendo múltiples requests al mismo archivo.
 
-**Conclusión:** Los cambios de media redujeron payload en ~2 MB pero no movieron el LCP. El cuello de botella sigue siendo element render delay de 2.3s. La causa no es payload ni animaciones — es la **hidratación del Client Component tree** que bloquea el paint del H1. El patrón donut (TarjetaHeroOriginal como Server Component) se aplicó pero no fue suficiente porque `HeroVideoCover` sigue siendo un Client Component pesado que envuelve todo el hero.
+**Conclusión:** Los cambios de media redujeron payload en ~2 MB pero no movieron el LCP. El cuello de botella sigue siendo element render delay de 2.3s. El HTML SSR del H1 ya existe en la respuesta inicial (verificado con curl), así que el problema es que **algo bloquea el paint** del HTML que ya está ahí.
 
-**Siguiente paso:** Investigar por qué el SSR HTML del H1 no se pinta antes de la hidratación. Posibles causas:
-- Render-blocking CSS (710ms reportados por PSI)
-- Web fonts que bloquean el paint del texto
-- El bundle JS de motion/react bloquea el main thread durante parsing
+**Siguiente paso:** Investigar qué bloquea el paint del H1 que ya existe en el HTML SSR. Ramas de investigación por prioridad:
+
+1. **Imágenes no-LCP que compiten por recursos en el initial load:**
+   - `logo-cloud.tsx` (línea 51) renderiza una nube de logos grande en móvil
+   - `Header.tsx` (línea 82) emite varias imágenes `/Seleccionadas/*` crudas
+   - Estas imágenes no son el LCP pero pueden estar consumiendo bandwidth y main thread antes de que el H1 se pinte
+2. **Render-blocking CSS** (710ms reportados por PSI)
+3. **Web fonts** que bloquean el paint del texto
+4. **Main thread bloqueado** (2.4s) por bundle JS de motion/react durante parsing
+
+**Pendiente de investigar:** Los videos duplicados en PSI. `scroll-storytelling.tsx` (línea 68) crea un `<video>` temporal fuera del DOM para generar poster, y luego el reproductor visible vuelve a `load()`/`play()` en línea 95. Esto podría causar requests duplicados reales, no solo un artefacto de conteo de PSI. Mantener como hipótesis abierta.
 
 ---
 
@@ -128,14 +137,14 @@ La animación `x: -100vw` parecía la causa obvia del LCP alto, y el plan origin
 
 El campo `largest-contentful-paint-element` estuvo vacío en todas las corridas. Pero el audit `lcp-breakdown-insight` sí devuelve el elemento LCP como un nodo con selector, snippet y bounding rect. Usar este audit en vez del otro para diagnóstico.
 
-### 3. Client Components retrasan el LCP aunque no tengan animaciones (2026-04-12)
+### 3. El HTML SSR existe pero el paint se retrasa — no confundir con "el H1 depende de hidratación" (2026-04-12)
 
-Un `'use client'` en el componente raíz de la página hace que todo el contenido — incluyendo texto estático como un H1 — dependa de la hidratación de JavaScript para pintarse. El render delay de 2.3s no era de la animación, era de la hidratación. Para LCP óptimo, el elemento LCP debe poder renderizarse desde el servidor sin esperar JS.
+El H1 sí viene en el HTML SSR (verificado con `curl`). El render delay de 2.3s no es porque el H1 no exista en el DOM, sino porque algo bloquea el primer paint visual. Posibles bloqueadores: CSS, fonts, imágenes no-LCP que compiten por recursos, o JS que bloquea main thread. No asumir "hidratación" como causa cuando el HTML ya está presente.
 
 ### 4. Reducir payload no reduce render delay (2026-04-12)
 
 Bajar 2 MB de payload (video duplicado, banderas gigantes) no movió el LCP ni el element render delay. Son problemas independientes: payload afecta Speed Index y TTI, render delay afecta LCP. No confundir los dos.
 
-### 5. PSI cuenta un mismo video múltiples veces en el payload (2026-04-12)
+### 5. Videos duplicados en PSI: puede ser artefacto o bug real — no cerrar prematuramente (2026-04-12)
 
-El video del hero (2.7 MB) aparece 6 veces en la lista de recursos de PSI, inflando el payload reportado a ~17 MB solo por ese archivo. Puede ser que PSI cuente range requests, chunk transfers, o poster+video como entradas separadas. El payload real descargado es menor que el reportado.
+El video del hero (2.7 MB) aparece 6 veces en la lista de recursos de PSI. **Hipótesis sin confirmar:** puede ser que PSI cuente range requests por separado, o puede ser un bug real donde el código genera requests duplicados. `scroll-storytelling.tsx` crea un `<video>` temporal para generar poster (línea 68) y luego el reproductor visible hace `load()`/`play()` — eso podría causar descargas reales duplicadas. No asumir que es solo un artefacto de PSI hasta verificar en Network tab del browser.
