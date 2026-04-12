@@ -37,7 +37,7 @@ function TerrenoCard({ terreno, onClick }: { terreno: Terreno; onClick: () => vo
     <button
       type="button"
       onClick={onClick}
-      className="w-full text-left bg-white dark:bg-zinc-900 rounded-xs border border-gray-200 dark:border-zinc-800 p-5 hover:border-primary/50 hover:shadow-md transition-all group"
+      className="w-full text-left bg-card rounded-xs border border-border p-5 hover:border-primary/50 hover:shadow-md transition-all group"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
