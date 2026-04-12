@@ -336,7 +336,7 @@ export default function Header({
                   isMobileMenuOpen && 'border-b'
                 )}
               >
-                <Link href={lang === 'en' ? '/en' : '/'} aria-label="home" className="flex items-center space-x-2">
+                <Link href={lang === 'en' ? '/' : '/es'} aria-label="home" className="flex items-center space-x-2">
                   <LogoNelson variant={logoVariant} width={140} className="origin-left scale-75 393:scale-90 430:scale-100 768:scale-[1.35] 1024:scale-150" />
                 </Link>
 
@@ -379,7 +379,7 @@ export default function Header({
               <div className="hidden 1200:grid 1200:grid-cols-[auto_1fr_auto] 1280:grid-cols-[auto_1fr_auto_auto] 1200:items-center 1200:gap-x-6 1024:gap-x-8">
                 {/* Logo - izquierda */}
                 <div className="flex justify-start">
-                  <Link href={lang === 'en' ? '/en' : '/'} aria-label="home" className="flex items-center space-x-2">
+                  <Link href={lang === 'en' ? '/' : '/es'} aria-label="home" className="flex items-center space-x-2">
                     <LogoNelson variant={logoVariant} width={120} className="scale-100 md:scale-150 1200:scale-[1.2] 1280:scale-[1.2] 1366:scale-150 in-data-scrolled:scale-90 in-data-scrolled:md:scale-[1.2] in-data-scrolled:1200:scale-[0.96] in-data-scrolled:1280:scale-[0.96] in-data-scrolled:1366:scale-[1.2] transition-transform duration-500" />
                   </Link>
                 </div>
@@ -398,8 +398,8 @@ export default function Header({
                 <div className="flex items-center gap-2 justify-end pt-3">
                   <ThemeToggle variant={activeVariant} />
                   <Button asChild size="default" className="uppercase bg-blue-600 hover:bg-blue-700 font-extrabold">
-                    <Link href="/contacto">
-                      <span>Contacto</span>
+                    <Link href={lang === 'en' ? '/contact' : '/contacto'}>
+                      <span>{lang === 'en' ? 'Contact' : 'Contacto'}</span>
                     </Link>
                   </Button>
                 </div>
@@ -453,8 +453,8 @@ const MobileMenu = ({ closeMenu, lang = 'es' }: { closeMenu: () => void; lang?: 
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button asChild size="lg" className="flex-1 uppercase">
-              <Link href="/contacto" onClick={closeMenu}>
-                <span>Contacto</span>
+              <Link href={lang === 'en' ? '/contact' : '/contacto'} onClick={closeMenu}>
+                <span>{lang === 'en' ? 'Contact' : 'Contacto'}</span>
               </Link>
             </Button>
           </div>

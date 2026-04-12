@@ -85,7 +85,7 @@ export default function HomeClient() {
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
         >
-          <BadgeAniversario className="w-[180px] h-[180px] 768:w-[280px] 768:h-[280px] 1024:w-[350px] 1024:h-[350px]" />
+          <BadgeAniversario className="w-[180px] h-[180px] 768:w-[280px] 768:h-[280px] 1024:w-[350px] 1024:h-[350px]" textoInferior="years" textoCurvo="CELEBRATING" />
         </motion.div>
 
         {/* Diagonal divider - Positioned at bottom of hero */}
@@ -95,7 +95,7 @@ export default function HomeClient() {
       </div>
 
       {/* Logo Cloud (mobile/tablet) */}
-        <div className={'1200:hidden'}><LogoCloud/></div>
+        <div className={'1200:hidden'}><LogoCloud lang="en" /></div>
 
 
 
@@ -179,13 +179,13 @@ export default function HomeClient() {
               tag: {
                 icon: <Compass className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Consulting',
-                href: '/parques-industriales-mexicali',
+                href: '/industrial-parks',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'View available parks', href: '/parques-industriales-mexicali', primary: true },
-                { text: 'Contact a consultant', href: '/contacto', primary: false },
+                { text: 'View available parks', href: '/industrial-parks', primary: true },
+                { text: 'Contact a consultant', href: '/contact', primary: false },
               ],
             },
             {
@@ -196,13 +196,13 @@ export default function HomeClient() {
               tag: {
                 icon: <Ruler className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Executive Design',
-                href: '/constructora/diseno-e-ingenieria',
+                href: '/construction/engineering-design',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'View engineering & design', href: '/constructora/diseno-e-ingenieria', primary: true },
-                { text: 'Request a project', href: '/contacto', primary: false },
+                { text: 'View engineering & design', href: '/construction/engineering-design', primary: true },
+                { text: 'Request a project', href: '/contact', primary: false },
               ],
             },
             {
@@ -214,13 +214,13 @@ export default function HomeClient() {
               tag: {
                 icon: <Hammer className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Construction',
-                href: '/constructora/build-to-suit',
+                href: '/construction/build-to-suit',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'About build-to-suit', href: '/constructora/build-to-suit', primary: true },
-                { text: 'View portfolio', href: '/constructora/portafolio', primary: false },
+                { text: 'About build-to-suit', href: '/construction/build-to-suit', primary: true },
+                { text: 'View portfolio', href: '/construction/portfolio', primary: false },
               ],
             },
             {
@@ -232,13 +232,13 @@ export default function HomeClient() {
               tag: {
                 icon: <CheckCircle className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Delivery',
-                href: '/constructora/llave-en-mano',
+                href: '/construction/turnkey',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'Turnkey solutions', href: '/constructora/llave-en-mano', primary: true },
-                { text: 'Contact us', href: '/contacto', primary: false },
+                { text: 'Turnkey solutions', href: '/construction/turnkey', primary: true },
+                { text: 'Contact us', href: '/contact', primary: false },
               ],
             },
             {
@@ -250,13 +250,13 @@ export default function HomeClient() {
               tag: {
                 icon: <Shield className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: '24/7 Security',
-                href: '/experiencia/excelencia-operativa',
+                href: '/experience/operational-excellence',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'Operational excellence', href: '/experiencia/excelencia-operativa', primary: true },
-                { text: 'View parks', href: '/parques-industriales-mexicali', primary: false },
+                { text: 'Operational excellence', href: '/experience/operational-excellence', primary: true },
+                { text: 'View parks', href: '/industrial-parks', primary: false },
               ],
             },
             {
@@ -268,13 +268,13 @@ export default function HomeClient() {
               tag: {
                 icon: <Wrench className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Maintenance',
-                href: '/experiencia/excelencia-operativa',
+                href: '/experience/operational-excellence',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'About Baumex', href: '/constructora/baumex', primary: true },
-                { text: 'Contact us', href: '/contacto', primary: false },
+                { text: 'About Baumex', href: '/construction/baumex', primary: true },
+                { text: 'Contact us', href: '/contact', primary: false },
               ],
             },
             {
@@ -286,13 +286,13 @@ export default function HomeClient() {
               tag: {
                 icon: <TrendingUp className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Growth',
-                href: '/experiencia/casos-de-exito',
+                href: '/experience/success-stories',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'Success stories', href: '/experiencia/casos-de-exito', primary: true },
-                { text: 'Available inventory', href: '/inventario/naves-disponibles', primary: false },
+                { text: 'Success stories', href: '/experience/success-stories', primary: true },
+                { text: 'Available inventory', href: '/inventory/available-buildings', primary: false },
               ],
             },
             {
@@ -303,13 +303,13 @@ export default function HomeClient() {
               tag: {
                 icon: <Star className="w-5 h-5 text-gray-400" fill="currentColor" />,
                 text: 'Specialized Industrial Construction in Mexicali',
-                href: '/constructora/proyectos-especializados',
+                href: '/construction/specialized-projects',
                 gradientFrom: '#2563eb',
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'View special projects', href: '/constructora/proyectos-especializados', primary: true },
-                { text: 'Contact us', href: '/contacto', primary: false },
+                { text: 'View special projects', href: '/construction/specialized-projects', primary: true },
+                { text: 'Contact us', href: '/contact', primary: false },
               ],
             },
           ]}

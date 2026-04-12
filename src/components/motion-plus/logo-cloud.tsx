@@ -43,7 +43,12 @@ function LogoCliente({ src, isBig = false }: { src: string; isBig?: boolean }) {
     )
 }
 
-export default function LogoCloud() {
+const logoCloudTitle = {
+    es: <>Clientes y Proveedores que confían en <span className="font-black bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el Desarrollo de Naves y Parques Industriales en Mexicali.</>,
+    en: <>Clients and suppliers that trust <span className="font-black bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> for industrial building and park development in Mexicali.</>,
+}
+
+export default function LogoCloud({ lang = 'es' }: { lang?: 'en' | 'es' }) {
     // Todos los logos disponibles
     const todosLosLogos = [
         "logo-honeywell-2.svg",
@@ -81,8 +86,7 @@ export default function LogoCloud() {
         <section data-component="LogoCloud" data-component-file="src/components/motion-plus/logo-cloud.tsx" data-component-props="false" className="w-full mt-48 py-20 px-4">
             <div className="mx-auto">
                 <h2 className="360:text-[2rem] 393:text-[2rem] 430:text-[2rem] 768:text-[1.35rem] 834:text-[1.45rem] 1024:text-[1.6rem]  font-medium tracking-tighter leading-tight text-center mb-12 px-4 text-balance">
-                    Clientes y Proveedores que confían en <span className="font-black bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span> para el
-                    Desarrollo de Naves y Parques Industriales en Mexicali.
+                    {logoCloudTitle[lang]}
                 </h2>
 
                 {/* Grid responsive: 1 col en mobile, 2 cols en tablet, hidden en desktop */}

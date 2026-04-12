@@ -3,19 +3,22 @@
 interface BadgeAniversarioProps {
   numero?: string
   textoInferior?: string
+  /** Texto curvo superior del badge (default: "CELEBRANDO") */
+  textoCurvo?: string
   /** Clases de Tailwind para controlar el tamaño del badge, ej: "w-48 h-48 md:w-64 md:h-64" */
   className?: string
-  /** Letter spacing del texto curvo "CELEBRANDO", en unidades SVG. Negativo = más apretado. Default: -0.4 (tracking-tighter) */
+  /** Letter spacing del texto curvo, en unidades SVG. Negativo = más apretado. Default: 0.9 */
   curvedTextTracking?: number
-  /** Desplazamiento vertical del contenido "60 años" en unidades SVG. Negativo = sube, positivo = baja. Default: -8 */
+  /** Desplazamiento vertical del contenido en unidades SVG. Negativo = sube, positivo = baja. Default: -3 */
   contentOffsetY?: number
-  /** Radio del arco del texto "CELEBRANDO". 50 = borde del círculo, mayor = más alejado. Default: 58 */
+  /** Radio del arco del texto curvo. 50 = borde del círculo, mayor = más alejado. Default: 58 */
   curvedTextRadius?: number
 }
 
 export function BadgeAniversario({
   numero = '60',
   textoInferior = 'años',
+  textoCurvo = 'CELEBRANDO',
   className = 'w-[200px] h-[200px]',
   curvedTextTracking = 0.9,
   contentOffsetY = -3,
@@ -92,7 +95,7 @@ export function BadgeAniversario({
         {/* Texto curvo "CELEBRANDO" fuera del perímetro */}
         <text fill="white" fontSize="8.5" fontWeight="800" fontFamily="system-ui, -apple-system, sans-serif">
           <textPath href="#celebrando-arc" startOffset="50%" textAnchor="middle" letterSpacing={curvedTextTracking}>
-            CELEBRANDO
+            {textoCurvo}
           </textPath>
         </text>
       </svg>

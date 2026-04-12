@@ -18,7 +18,7 @@ export default function LeedPage() {
           <HeroMarketing1 />
         </div>
         <div className={'mt-20'}><SidebarSticky1 /></div>
-        <CarruselLeed />
+        <CarruselLeed lang="en" />
       </div>
     </div>
   )
