@@ -38,7 +38,7 @@ export default async function IndustrialParksPage() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
             Industrial Parks in Mexicali
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed text-balance">
             Over 60 years developing world-class industrial infrastructure in Mexicali&apos;s border region.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-8 text-sm text-muted-foreground">

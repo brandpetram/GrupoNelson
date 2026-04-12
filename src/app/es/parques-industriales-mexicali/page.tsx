@@ -38,7 +38,7 @@ export default async function ParquesIndustrialesMexicaliPage() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
             Parques Industriales en Mexicali
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed text-balance">
             Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-8 text-sm text-muted-foreground">
