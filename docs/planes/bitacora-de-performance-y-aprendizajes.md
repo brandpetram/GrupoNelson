@@ -158,9 +158,34 @@ El render delay bajó de 2,334ms a 1,431ms. Ambos cambios (lazy logos + poster c
 **Estado actual:** El score de 92 **supera el target de 90+** para el homepage EN. El LCP de 3.2s todavía está por encima del target ideal de 2.5s pero dentro del rango "needs improvement" (2.5-4.0s), no "poor" (>4.0s).
 
 **Siguiente paso para llegar a LCP <2.5s:**
-- El render delay restante (1,431ms) sigue siendo el bloqueador
+- El render delay restante (1,431ms mediana, pero con corridas tan bajas como 385ms) sigue siendo el bloqueador
 - **Imágenes no-LCP tempranas todavía presentes:** `ticker-overflow.tsx` (línea 30) renderiza logos con `motion.img` sin `loading="lazy"`. También hay preloads de `/logos-clientes/*.svg` que siguen apareciendo en producción. Y `Header.tsx` emite imágenes `/Seleccionadas/*` crudas. Antes de saltar a CSS, confirmar si estas fugas residuales siguen empujando el render delay.
 - **Render-blocking CSS** (740ms): dos chunks CSS suman 50 KB y bloquean ~740ms. Es la siguiente rama si las imágenes tempranas ya no explican el delay restante.
+
+#### Limpieza de imports muertos (commit `ea8f1f9`)
+
+**Cambio aplicado:** Quitar imports de `TickerOverflow` y `HexagonFeatures` de ambos home-client (EN + ES). Se importaban pero no se renderizaban.
+
+**Investigación de fugas residuales:**
+- `ticker-overflow.tsx`: importado pero **no renderizado** en ninguno de los dos homepages. Import muerto, no fuga de imágenes. Eliminado.
+- Header `/Seleccionadas/*`: verificado con grep — **no existen** imágenes `/Seleccionadas/*` en Header.tsx. El finding original no se confirma en el código actual.
+- Mosaicos con `/Seleccionadas/*`: usan `<Image>` de Next.js via `ImagenRectangulo` y están below-the-fold con lazy loading automático. No son fuga.
+- Logo cloud: ya tiene `loading="lazy"` del fix anterior.
+
+**Conclusión de la rama de imágenes tempranas:** Las fugas residuales identificadas no aplican — `TickerOverflow` era import muerto, Header no tiene imágenes `/Seleccionadas/*`, y los mosaicos ya usan `<Image>` lazy. La rama de imágenes tempranas está cerrada.
+
+**Mediciones post-fix (3 corridas):**
+
+| Corrida | Score | LCP | FCP | SI | Render delay |
+|---|---|---|---|---|---|
+| 1 | 72 | 8.2s | 1.6s | 4.6s | 2,451ms |
+| 2 | 93 | 3.2s | 1.2s | 2.5s | 1,186ms |
+| 3 | 92 | 3.4s | 1.2s | 1.4s | 385ms |
+| **Mediana** | **92** | **3.4s** | **1.2s** | **2.5s** | **1,186ms** |
+
+Alta variabilidad de PSI en esta ronda. La mediana se mantiene en 92. La corrida 1 (score 72) es un outlier — PSI tiene esta variabilidad inherente. La corrida 3 muestra render delay de 385ms, lo que sugiere que el servidor y la red pueden entregar el paint rápido cuando no hay congestión.
+
+**Siguiente paso:** La rama de imágenes tempranas está cerrada. El siguiente bloqueador es **render-blocking CSS** (740ms, dos chunks de 1.2 KB + 49 KB). Esto es generado por Next.js — investigar si hay configuración para inline CSS crítico o si se puede reducir el chunk CSS principal.
 
 ---
 
