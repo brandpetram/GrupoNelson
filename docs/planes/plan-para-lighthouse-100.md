@@ -10,10 +10,12 @@
 
 ### Scores por página (producción, mobile)
 
-| Página | Perf | FCP | LCP | TBT | CLS | SI | TTI | Payload |
-|---|---|---|---|---|---|---|---|---|
-| **Homepage** | 70 | 1.5s | **9.5s** | 20ms | 0 | 5.5s | 10.0s | 40,821 KiB |
-| **/es/constructora/diseno-e-ingenieria** | 66 | 2.0s | **14.0s** | 30ms | 0 | 7.9s | 15.0s | 4,602 KiB |
+| Página | URL PSI | Perf | FCP | LCP | TBT | CLS | SI | TTI | Payload |
+|---|---|---|---|---|---|---|---|---|---|
+| **Homepage EN** | `https://www.nelson.com.mx` | 70 | 1.5s | **9.5s** | 20ms | 0 | 5.5s | 10.0s | 40,821 KiB |
+| **Diseño e Ingeniería ES** | `https://www.nelson.com.mx/es/constructora/diseno-e-ingenieria` | 66 | 2.0s | **14.0s** | 30ms | 0 | 7.9s | 15.0s | 4,602 KiB |
+
+**Nota sobre URLs:** `/` es la homepage EN (`src/app/(en)/page.tsx` → `home-client.tsx`). `/es` es la homepage ES (`src/app/es/page.tsx` → `home-client.tsx`). El baseline de arriba mide `/` (EN). La homepage ES no se ha medido aún — agregar en la batch de Fase 2.
 
 **Accessibility, Best Practices y SEO ya están en 100 en ambas páginas.** El único problema es Performance, y la causa principal es el **LCP catastrófico**.
 
@@ -28,26 +30,27 @@
 - **LCP:** 9.5-14.0s (score 0) — esto solo destruye el score de Performance
 - **Speed Index / TTI:** derivados del LCP lento
 - **Imágenes:** ~2+ MB ahorrable por página en delivery
-- **Network payload homepage:** 40 MB (video de 40 MB incluido)
+- **Network payload homepage EN:** 40,821 KiB (PSI lo reporta así; verificar origen — el video local pesa ~2.7 MB con `preload="none"`, ver nota en Fase 1.3)
 
 ---
 
 ## Diagnóstico por página
 
-### Homepage — LCP 9.5s (empeoró desde 5.3s el 10 de abril)
+### Homepage EN (`/`) — LCP 9.5s (empeoró desde 5.3s el 10 de abril)
 
-**Elemento LCP:** El `<h1>` del hero — "Parques Industriales y Naves Built-to-Suit en Todo Mexicali"
+**Elemento LCP:** El `<h1>` del hero — el texto varía por idioma, pero el mecanismo es el mismo en ambos homes.
 
-**Causa raíz confirmada:** Animación `leftVariants` en `hero-video-cover.tsx` (línea 76-87):
+**Causa raíz confirmada:** Animación `leftVariants` en `hero-video-cover.tsx` (línea 80):
 ```
 hidden: { x: '-100vw' }    ← el contenido arranca fuera del viewport
 visible: { x: 0, transition: { duration: 0.8, delay: 0.8 } }
 ```
 
+`enableAnimations={true}` está activo en `home-client.tsx` (línea 51 EN).
+
 El H1 existe en el DOM desde SSR pero motion/react lo mueve a `x: -100vw` antes de animarlo. Lighthouse mide cuándo es visualmente visible, no cuándo existe en el DOM.
 
 **Problemas secundarios:**
-- Video `nelson-3-optimizado.mp4` (40 MB) en el ScrollStorytelling below-the-fold — infla el network payload
 - Imágenes: 2,067 KiB ahorrable en delivery
 - Render blocking CSS: 600ms
 - Unused JS: 47 KiB
@@ -55,10 +58,12 @@ El H1 existe en el DOM desde SSR pero motion/react lo mueve a `x: -100vw` antes 
 
 ### /es/constructora/diseno-e-ingenieria — LCP 14.0s
 
-**Causa probable:** Página con muchos componentes pesados (mosaicos, grids de imágenes, features sections). El LCP element probablemente es una imagen grande o un componente animado above-the-fold que tarda en renderizar. Necesita diagnóstico específico del elemento LCP.
+**Causa raíz identificada:** El hero es `CuadriculaSectionConProps` (`cuadricula-section-con-props.tsx` línea 57), que renderiza **20 `<img>` crudos** (no `<Image>` de Next.js) dentro del viewport con animaciones de motion/react (líneas 224-420). Cada imagen tiene animación de entrada con `motion.div`, y el componente monta las 20 imágenes above-the-fold simultáneamente.
+
+Esto es el mismo patrón que el homepage: contenido animado con motion/react que retrasa el LCP. Pero aquí es peor porque son 20 imágenes crudas sin optimización de Next.js, más las animaciones.
 
 **Problemas reportados:**
-- Imágenes: 2,327 KiB ahorrable en delivery
+- Imágenes: 2,327 KiB ahorrable en delivery (20 imágenes crudas sin avif/webp)
 - Network payload: 4,602 KiB
 - Render blocking CSS: 430ms
 
@@ -74,7 +79,7 @@ Opciones de menor a mayor intervención:
 
 | Opción | Cambio | Riesgo | Impacto esperado |
 |---|---|---|---|
-| A | `enableAnimations={false}` en `page.tsx` | Cero | LCP baja a ~1.5s |
+| A | `enableAnimations={false}` en ambos `home-client.tsx` | Cero | LCP baja a ~1.5s |
 | B | Cambiar `x: '-100vw'` por `opacity: 0` → `opacity: 1` | Bajo | LCP baja a ~1.5-2s, mantiene animación visual |
 | C | Reducir delay a 0 y duration a 0.3s | Bajo | LCP baja parcialmente |
 | D | CSS `@keyframes` en vez de motion/react | Medio | LCP óptimo, no depende de JS |
@@ -85,30 +90,37 @@ Opciones de menor a mayor intervención:
 
 2,067 KiB ahorrable. Verificar que la imagen del hero usa `<Image>` de Next.js con `priority` y que el formato avif/webp se está sirviendo correctamente. Si la imagen es de `/public/`, Next.js la optimiza via `/_next/image` — pero si es muy grande el original, la optimización puede no ser suficiente. Considerar comprimir el original.
 
-**Fix 1.3 (MEDIO): Verificar que el video no se pre-descarga**
+**Fix 1.3 (MEDIO): Investigar el network payload de 40,821 KiB**
 
-El video de 40 MB inflama el payload a 40,821 KiB. Verificar:
-- `preload="none"` en el `<video>` tag
-- Que no hay un `<link rel="preload">` para el video
-- Que el ScrollStorytelling no monta el video hasta que está en viewport (intersection observer o similar)
+PSI reporta 40,821 KiB de payload total, pero el video local (`parques-industriales-mexicali-nelson-3-optimizado.mp4`) pesa ~2.7 MB, no 40 MB. El video ya tiene `preload="none"` en `hero-video-cover.tsx` (líneas 200, 235) y en `scroll-storytelling.tsx` (línea 141), con IntersectionObserver (línea 317). 
 
-### Fase 2: LCP de páginas interiores
+**Pendiente:** Investigar qué compone los 40 MB de payload. Puede ser que PSI esté contando assets que se cargan después del initial load, o que haya otros recursos pesados no identificados. No asumir que es el video hasta verificar con el detalle del reporte PSI.
 
-**Fix 2.1: Diagnóstico del elemento LCP de /es/constructora/diseno-e-ingenieria**
+### Fase 2: LCP de /es/constructora/diseno-e-ingenieria (14.0s → <2.5s)
 
-Correr PSI con detalle completo para identificar qué elemento es el LCP en esta página. Puede ser:
-- Una imagen grande del hero/mosaico sin `priority`
-- Un componente animado (como en el homepage)
-- Una imagen de Sanity sin optimización
+**Fix 2.1 (CRÍTICO): Resolver las 20 imágenes crudas del hero mosaic**
+
+El componente `CuadriculaSectionConProps` en `cuadricula-section-con-props.tsx` renderiza 20 `<img>` HTML nativos con animaciones de motion/react above-the-fold. Esto causa:
+- 20 requests de imágenes sin optimización (sin avif/webp, sin responsive sizes)
+- Animaciones que retrasan la visibilidad del contenido LCP
+- Payload de imágenes innecesariamente grande
+
+**Opciones:**
+- A) Reemplazar `<img>` por `<Image>` de Next.js con `sizes` apropiados — reduce payload y habilita avif/webp
+- B) Reducir la cantidad de imágenes above-the-fold (cargar solo las visibles, lazy load el resto)
+- C) Cambiar animaciones de motion a opacity/CSS para no retrasar LCP
+
+**Recomendación:** Hacer A + B + C combinados. El impacto de 14s → <4s requiere atacar los tres vectores.
 
 **Fix 2.2: Auditar las demás páginas pesadas**
 
 Correr PSI en batch sobre las páginas más probables de tener problemas:
-- `/es/constructora/portafolio-baumex`
+- `/es` (homepage ES — no medida aún)
+- `/es/constructora/baumex`
+- `/es/constructora/portafolio`
 - `/es/parques-industriales-mexicali/nelson-ii`
 - `/es/experiencia/liderazgo`
 - `/about/leadership`
-- Homepage EN (`/`)
 
 Documentar LCP element y score de cada una. Priorizar las que tengan LCP > 4s.
 
@@ -129,32 +141,32 @@ Un `sizes="100vw"` en una imagen que solo ocupa 33% del viewport hace que Next.j
 
 Solo la imagen above-the-fold más grande de cada página debe tener `priority`. Verificar que no se está usando `loading="lazy"` en imágenes LCP.
 
-### Fase 4: Prefetch y velocidad de navegación SPA
+### Fase 4: Optimizaciones de bundle
 
-**Fix 4.1: Verificar que prefetch funciona en producción**
-
-Next.js hace prefetch automático de las rutas visibles en el viewport. Si la navegación tarda 10-15 segundos entre páginas, puede ser que:
-- El prefetch esté deshabilitado (`prefetch={false}` en los `<Link>`)
-- Las páginas destino tengan data fetching lento (llamadas a Sanity, etc.)
-- Las páginas sean estáticas pero muy pesadas en JS
-
-**Fix 4.2: Verificar que las páginas estáticas se sirven como estáticas**
-
-En el build output, verificar que las páginas marcadas con `○ (Static)` realmente se sirven como HTML estático desde el edge, no como server-rendered on demand.
-
-### Fase 5: Optimizaciones de bundle
-
-**Fix 5.1: Unused JavaScript (47 KiB)**
+**Fix 4.1: Unused JavaScript (47 KiB)**
 
 Identificar qué JS no se usa. Probablemente polyfills o librerías importadas pero no utilizadas en la página.
 
-**Fix 5.2: Legacy JavaScript (15 KiB)**
+**Fix 4.2: Legacy JavaScript (15 KiB)**
 
 Next.js debería manejar esto automáticamente con `browserslist`. Verificar configuración.
 
-**Fix 5.3: Render blocking CSS (430-600ms)**
+**Fix 4.3: Render blocking CSS (430-600ms)**
 
 Next.js inlinea CSS crítico automáticamente. Si hay 430-600ms de bloqueo, puede ser que haya imports CSS globales pesados o fonts bloqueantes. Verificar `globals.css` y la carga de fuentes.
+
+---
+
+## Fuera de la ruta crítica para score PSI
+
+### Prefetch y navegación SPA
+
+PSI/Lighthouse mide carga fría de URL, no transiciones internas. Mejorar la velocidad de navegación SPA (prefetch, etc.) mejora la UX real del usuario pero **no afecta el score de Lighthouse**. No incluir en la ruta crítica para "90+".
+
+Si se quiere trabajar en navegación SPA como proyecto separado:
+- Verificar que prefetch funciona en producción
+- Verificar que las páginas estáticas se sirven como estáticas desde el edge
+- Investigar si hay data fetching lento (Sanity, etc.) en las transiciones
 
 ---
 
@@ -164,12 +176,11 @@ Next.js inlinea CSS crítico automáticamente. Si hay 430-600ms de bloqueo, pued
 |---|---|---|---|
 | 1.1 | Urgente | LCP homepage de 9.5s a <2.5s | Trivial (1 línea) a Baja |
 | 1.2 | Alta | Reduce payload ~2 MB | Baja |
-| 1.3 | Alta | Reduce payload ~40 MB | Baja (verificación) |
-| 2.1 | Alta | LCP diseño de 14s a <4s | Media (diagnóstico + fix) |
+| 1.3 | Media | Investigación de payload | Baja (solo análisis) |
+| 2.1 | Urgente | LCP diseño de 14s a <4s | Media (20 imgs + animaciones) |
 | 2.2 | Media | Baseline de todo el sitio | Baja (solo auditoría) |
 | 3.1-3.3 | Media | Mejora global de imágenes | Media |
-| 4.1-4.2 | Media | Navegación SPA más rápida | Baja (verificación) |
-| 5.1-5.3 | Baja | ~60 KiB menos + 400ms menos blocking | Baja |
+| 4.1-4.3 | Baja | ~60 KiB menos + 400ms menos blocking | Baja |
 
 ---
 
@@ -206,6 +217,6 @@ GET https://www.googleapis.com/pagespeedonline/v5/runPagespeed
 |---|---|
 | Quitar animación del hero reduce calidad visual | Probar sin animación (Fix 1.1A), luego considerar fade (Fix 1.1B) |
 | Variabilidad de PSI da falsos positivos/negativos | Regla de 3 corridas + mediana |
-| Optimizar imágenes degrada calidad | avif/webp con quality 80+ (ya configurado en next.config) |
+| Optimizar imágenes degrada calidad | avif/webp con quality configurado en Next.js (nota: `next.config.ts` no define `quality` global, se usa el default de 75; subir a 80+ si la calidad visual no es suficiente) |
 | 100 en Performance es difícil de mantener | Target realista: 90+ sostenido |
 | Fix de una página no aplica a todas | Auditar las 6-8 páginas más visitadas individualmente |
