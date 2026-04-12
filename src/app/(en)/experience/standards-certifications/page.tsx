@@ -51,6 +51,7 @@ export default function StandardsCertificationsPage() {
         {/* HERO */}
         <div className="pt-20 md:pt-30">
         <HeroMotionPlus
+          lang="en"
           badge="Standards · Certifications · Compliance"
           headlineTop="Three types of requirements."
           headlineAccent="Each one demonstrated in a real project."

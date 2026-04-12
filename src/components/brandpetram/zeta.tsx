@@ -69,7 +69,21 @@ const textVariants = {
     }
 }
 
-export function Zeta() {
+const zetaText = {
+  es: {
+    poligonoText: 'Naves listas para operar en Mexicali',
+    paragraph: 'Ocupa tu nave industrial en Mexicali en semanas. 4 parques con inventario disponible, infraestructura Fortune 500 y seguridad 24/7. 30 corporaciones internacionales ya operan aquí.',
+    contactHref: '/contacto',
+  },
+  en: {
+    poligonoText: 'Move-in ready industrial buildings in Mexicali',
+    paragraph: 'Occupy your industrial building in Mexicali in weeks. 4 parks with available inventory, Fortune 500-grade infrastructure, and 24/7 security. 30 international corporations already operate here.',
+    contactHref: '/contact',
+  },
+}
+
+export function Zeta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+    const t = zetaText[lang]
     const palabrasLista = [
         'Nelson I',
         'Nelson II',
@@ -102,7 +116,7 @@ export function Zeta() {
                             variants={poligonoTextoVariants}
                         >
                             <PoligonoTexto1
-                                text="Naves listas para operar en Mexicali"
+                                text={t.poligonoText}
                                 backgroundColor="bg-background/80"
                                 textColor="text-foreground"
                                 fontSize="text-3xl 360:text-3xl 393:text-3xl 430:text-4xl 768:text-[3.6rem] 834:text-[3.8rem] 1024:text-[4.5rem] 1200:text-[4.3rem] 1280:text-[4.7rem] 1366:text-[5rem] 1440:text-[5.3rem] 1536:text-8xl 1920:text-[7rem] 2240:text-8xl"
@@ -184,8 +198,8 @@ export function Zeta() {
                         fontSize="text-xl 768:text-2xl 834:text-2xl 1024:text-2xl 1200:text-[1.8rem] 1280:text-[1.8rem] 1366:text-[2rem] 1440:text-[2rem] 1536:text-[2.2rem] 1728:text-[2.3rem] 1920:text-[2.7rem]"
                         textColor="text-muted-foreground"
                     >
-                        Ocupa tu nave industrial en Mexicali en semanas. 4 parques con inventario disponible, infraestructura Fortune 500 y seguridad 24/7. 30 corporaciones internacionales ya operan aquí.
-                        <Link href="/contacto" className="text-orange-600 hover:text-orange-700 transition-colors">
+                        {t.paragraph}
+                        <Link href={t.contactHref} className="text-orange-600 hover:text-orange-700 transition-colors">
                             <Flecha1 />
                         </Link>
                     </Parrafo>

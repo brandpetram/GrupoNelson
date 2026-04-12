@@ -1,4 +1,16 @@
-export function Teta() {
+const tetaText = {
+  es: {
+    heading: 'Arranca producción sin esperar 12-24 meses de construcción',
+    paragraph: 'Para empresas que llegan a México por nearshoring y necesitan operar rápido, una nave llave en mano elimina el ciclo completo de un build-to-suit. Visitas la nave, verificas que cumple tus requerimientos técnicos, firmas contrato y comienzas a operar en semanas. Contratos de 10-15 años. El 80% de los clientes de Grupo Nelson son recurrentes.',
+  },
+  en: {
+    heading: 'Start production without waiting 12-24 months for construction',
+    paragraph: 'For companies arriving in Mexico through nearshoring that need to operate quickly, a turnkey building eliminates the full build-to-suit cycle. You visit the facility, verify it meets your technical requirements, sign the contract, and begin operating in weeks. 10-15 year leases. 80% of Grupo Nelson clients are repeat customers.',
+  },
+}
+
+export function Teta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const t = tetaText[lang]
   return (
       <div data-component="Teta" data-component-file="src/components/brandpetram/teta.tsx" data-component-props="false" className={'overflow-hidden -mt-50 pt-50'}>
         <div
@@ -34,11 +46,11 @@ export function Teta() {
             <div
                 className="360:translate-x-0 393:translate-x-0 430:translate-x-0 768:translate-x-3 834:translate-x-3 1024:translate-x-[1.5rem] 1200:translate-x-[1rem] 1280:translate-x-[3rem] 1366:translate-x-[3rem] 1440:translate-x-[3.5rem] 1536:translate-x-12 1728:translate-x-12 1920:translate-x-17 mt-10 md:mt-0 834:-translate-y-[1rem] 1024:-translate-y-[3rem] 1200:-translate-y-[5rem] 1280:-translate-y-[7rem] 1366:-translate-y-[5rem]">
               <h2 className="360:w-full 393:w-full 430:w-full 768:w-[13rem] 834:w-[15rem] 1024:w-[19rem] 1200:w-[19rem] 1280:w-[20rem] 1366:w-[20rem] 1440:w-[20rem] 1536:w-[23rem] 1728:w-[24rem] 1920:w-[26rem] text-[2.6rem] 360:text-[2.6rem] 393:text-[2.7rem] 430:text-[2.8rem] 768:text-[2rem] 834:text-[2.1rem] 1024:text-[2.3rem] 1200:text-[2.5rem] 1280:text-[2.6rem] 1366:text-[2.6rem] 1440:text-[2.9rem] 1536:text-[3.3rem] 1728:text-[3.1rem] 1920:text-[3.2rem] font-semibold text-black dark:text-white leading-none">
-                Arranca producción sin esperar 12-24 meses de construcción
+                {t.heading}
               </h2>
 
               <p className="text-pretty 360:w-full 393:w-full 430:w-full 768:w-[15rem] 834:w-[15rem] 1024:w-[16rem] 1200:w-[22rem] 1280:w-[23rem] 1366:w-[23rem] 1440:w-[25rem] 1536:w-[26rem] 1728:w-[28rem] 1920:w-[31rem] text-[1.3rem] 360:text-[1.5rem] 393:text-[1.85rem] 430:text-[1.9rem] 768:text-[1.15rem] 834:text-[1.20rem] 1024:text-[1.4rem] 1200:text-[1.5rem] 1280:text-[1.3rem] 1366:text-[1.3rem] 1440:text-[1.4rem] 1536:text-[1.5rem] 1728:text-[1.6rem] 1920:text-[1.8rem] text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
-                Para empresas que llegan a México por nearshoring y necesitan operar rápido, una nave llave en mano elimina el ciclo completo de un build-to-suit. Visitas la nave, verificas que cumple tus requerimientos técnicos, firmas contrato y comienzas a operar en semanas. Contratos de 10-15 años. El 80% de los clientes de Grupo Nelson son recurrentes.
+                {t.paragraph}
               </p>
             </div>
           </div>

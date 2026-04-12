@@ -3,6 +3,7 @@
 import { motion, type Transition, type Variants } from "motion/react"
 
 interface HeroMotionPlusProps {
+    lang?: 'en' | 'es'
     staggerInterval?: number
     itemOffsetY?: number
     itemTransition?: Transition
@@ -23,26 +24,64 @@ const defaultItemTransition: Transition = {
     damping: 20,
 }
 
-const defaultMetrics = [
-    { value: "60+", label: "Años" },
-    { value: "75+", label: "Proyectos" },
-    { value: "33", label: "Corporaciones" },
-]
+const heroMotionPlusDefaults = {
+    es: {
+        badge: "Desde 1965 en Mexicali",
+        headlineTop: "Parques industriales",
+        headlineAccent: "de clase mundial",
+        subtitle: "Desarrollo, construcción y administración de naves industriales en Mexicali. La familia fundadora opera directamente cada proyecto.",
+        primaryButtonText: "Solicita una consulta",
+        primaryButtonHref: "/contacto",
+        secondaryButtonText: "Conoce los parques",
+        secondaryButtonHref: "/parques",
+        metrics: [
+            { value: "60+", label: "Años" },
+            { value: "75+", label: "Proyectos" },
+            { value: "33", label: "Corporaciones" },
+        ],
+    },
+    en: {
+        badge: "Since 1965 in Mexicali",
+        headlineTop: "World-class",
+        headlineAccent: "industrial parks",
+        subtitle: "Development, construction, and management of industrial buildings in Mexicali. The founding family operates every project directly.",
+        primaryButtonText: "Request a consultation",
+        primaryButtonHref: "/contact",
+        secondaryButtonText: "Explore the parks",
+        secondaryButtonHref: "/industrial-parks",
+        metrics: [
+            { value: "60+", label: "Years" },
+            { value: "75+", label: "Projects" },
+            { value: "33", label: "Corporations" },
+        ],
+    },
+}
 
 export default function HeroMotionPlus({
+    lang = 'es',
     staggerInterval = 0.1,
     itemOffsetY = 40,
     itemTransition = defaultItemTransition,
-    badge = "Desde 1965 en Mexicali",
-    headlineTop = "Parques industriales",
-    headlineAccent = "de clase mundial",
-    subtitle = "Desarrollo, construcción y administración de naves industriales en Mexicali. La familia fundadora opera directamente cada proyecto.",
-    primaryButtonText = "Solicita una consulta",
-    primaryButtonHref = "/contacto",
-    secondaryButtonText = "Conoce los parques",
-    secondaryButtonHref = "/parques",
-    metrics = defaultMetrics,
+    badge,
+    headlineTop,
+    headlineAccent,
+    subtitle,
+    primaryButtonText,
+    primaryButtonHref,
+    secondaryButtonText,
+    secondaryButtonHref,
+    metrics,
 }: HeroMotionPlusProps) {
+    const d = heroMotionPlusDefaults[lang]
+    const _badge = badge ?? d.badge
+    const _headlineTop = headlineTop ?? d.headlineTop
+    const _headlineAccent = headlineAccent ?? d.headlineAccent
+    const _subtitle = subtitle ?? d.subtitle
+    const _primaryButtonText = primaryButtonText ?? d.primaryButtonText
+    const _primaryButtonHref = primaryButtonHref ?? d.primaryButtonHref
+    const _secondaryButtonText = secondaryButtonText ?? d.secondaryButtonText
+    const _secondaryButtonHref = secondaryButtonHref ?? d.secondaryButtonHref
+    const _metrics = metrics ?? d.metrics
     const containerVariants: Variants = {
         hidden: {},
         visible: {
@@ -109,44 +148,44 @@ export default function HeroMotionPlus({
                             ease: "easeInOut",
                         }}
                     />
-                    {badge}
+                    {_badge}
                 </motion.div>
 
                 <motion.h1 variants={itemVariants} className="hero-mp-headline">
-                    {headlineTop}
+                    {_headlineTop}
                     <br />
-                    <span className="hero-mp-headline-accent">{headlineAccent}</span>
+                    <span className="hero-mp-headline-accent">{_headlineAccent}</span>
                 </motion.h1>
 
                 <motion.p variants={itemVariants} className="hero-mp-subtitle">
-                    {subtitle}
+                    {_subtitle}
                 </motion.p>
 
                 <motion.div variants={itemVariants} className="hero-mp-button-row">
                     <motion.a
-                        href={primaryButtonHref}
+                        href={_primaryButtonHref}
                         className="hero-mp-btn-primary"
                         whileHover={{
                             y: -1,
                             boxShadow: "0 4px 20px rgba(255, 255, 255, 0.2)",
                         }}
                     >
-                        {primaryButtonText}
+                        {_primaryButtonText}
                     </motion.a>
                     <motion.a
-                        href={secondaryButtonHref}
+                        href={_secondaryButtonHref}
                         className="hero-mp-btn-secondary"
                         whileHover={{
                             y: -1,
                             backgroundColor: "rgba(255, 255, 255, 0.05)",
                         }}
                     >
-                        {secondaryButtonText}
+                        {_secondaryButtonText}
                     </motion.a>
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="hero-mp-metrics">
-                    {metrics.map((metric) => (
+                    {_metrics.map((metric) => (
                         <div key={metric.label} className="hero-mp-metric">
                             <span className="hero-mp-metric-value">
                                 {metric.value}

@@ -21,17 +21,17 @@ export default function TurnkeyPage() {
 
       {/* Zeta component */}
       <div className="container mx-auto mb-32 mt-30">
-        <Zeta />
+        <Zeta lang="en" />
       </div>
 
       {/* Eta component */}
       <div className="container mx-auto mt-10 mb-32">
-        <Eta />
+        <Eta lang="en" />
       </div>
 
       {/* Teta component */}
       <div className="container mx-auto -mt-20 md:mt-60 1200:mt-80 mb-0">
-        <Teta />
+        <Teta lang="en" />
       </div>
 
       {/* Iota component */}
