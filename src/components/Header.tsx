@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link, { useLinkStatus } from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { LogoNelson } from '@/components/logo-nelson';
@@ -49,6 +49,7 @@ import {
   Download,
   Megaphone,
   Calendar,
+  Loader2,
 } from 'lucide-react';
 import { useMedia } from '@/hooks/use-media';
 import { ThemeToggle } from '@/components/theme-toggle';
@@ -413,7 +414,7 @@ export default function Header({
               </div>
 
               {!isLarge && isMobileMenuOpen && (
-                <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} lang={lang} />
+                <MobileMenu closeMenu={() => setIsMobileMenuOpen(false)} lang={lang} pathname={pathname} />
               )}
             </div>
           </div>
@@ -423,8 +424,81 @@ export default function Header({
   );
 }
 
+// === Mobile Menu Link with pending indicator ===
+function PendingIndicator() {
+  const { pending } = useLinkStatus();
+  return (
+    <span
+      aria-hidden
+      className={cn(
+        'size-4 flex items-center justify-center transition-opacity duration-200',
+        pending ? 'opacity-100' : 'opacity-0'
+      )}
+    >
+      <Loader2 className="size-4 animate-spin" />
+    </span>
+  );
+}
+
+function MobileMenuLink({
+  href,
+  closeMenu,
+  pathname,
+  icon,
+  name,
+  description,
+}: {
+  href: string;
+  closeMenu: () => void;
+  pathname: string;
+  icon?: React.ReactNode;
+  name: string;
+  description?: string;
+}) {
+  const isCurrent = href === pathname || href === `${pathname}/`;
+
+  return (
+    <Link
+      href={href}
+      aria-current={isCurrent ? 'page' : undefined}
+      onClick={() => {
+        if (isCurrent) {
+          closeMenu();
+        }
+      }}
+      className={cn(
+        'flex items-center gap-3 rounded-lg px-4 py-3 transition-colors',
+        isCurrent
+          ? 'bg-primary/10 text-primary'
+          : 'hover:bg-muted'
+      )}
+    >
+      {icon && (
+        <div
+          aria-hidden
+          className={cn(
+            'flex items-center justify-center *:size-5',
+            isCurrent ? 'text-primary' : 'text-muted-foreground'
+          )}
+        >
+          {icon}
+        </div>
+      )}
+      <div className="flex-1 min-w-0">
+        <div className="text-base font-medium">{name}</div>
+        {description && (
+          <div className="text-sm text-muted-foreground line-clamp-1">
+            {description}
+          </div>
+        )}
+      </div>
+      <PendingIndicator />
+    </Link>
+  );
+}
+
 // === Mobile Menu with Drill-Down Navigation ===
-const MobileMenu = ({ closeMenu, lang = 'es' }: { closeMenu: () => void; lang?: Lang }) => {
+const MobileMenu = ({ closeMenu, lang = 'es', pathname }: { closeMenu: () => void; lang?: Lang; pathname: string }) => {
   const mobileMenuData = buildMobileMenuData(lang);
   const [activeSubmenu, setActiveSubmenu] = React.useState<string | null>(null);
 
@@ -460,7 +534,15 @@ const MobileMenu = ({ closeMenu, lang = 'es' }: { closeMenu: () => void; lang?: 
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button asChild size="lg" className="flex-1 uppercase">
-              <Link href={lang === 'en' ? '/contact' : '/contacto'} onClick={closeMenu}>
+              <Link
+                href={lang === 'en' ? '/contact' : '/contacto'}
+                onClick={() => {
+                  const contactHref = lang === 'en' ? '/contact' : '/contacto';
+                  if (contactHref === pathname || contactHref === `${pathname}/`) {
+                    closeMenu();
+                  }
+                }}
+              >
                 <span>{lang === 'en' ? 'Contact Us' : 'Contacto'}</span>
               </Link>
             </Button>
@@ -505,26 +587,14 @@ const MobileMenu = ({ closeMenu, lang = 'es' }: { closeMenu: () => void; lang?: 
               <ul className="px-2 py-2">
                 {category.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link
+                    <MobileMenuLink
                       href={link.href}
-                      onClick={closeMenu}
-                      className="flex items-center gap-3 rounded-lg px-4 py-3 hover:bg-muted transition-colors"
-                    >
-                      <div
-                        aria-hidden
-                        className="flex items-center justify-center *:size-5 text-muted-foreground"
-                      >
-                        {link.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-base font-medium">{link.name}</div>
-                        {link.description && (
-                          <div className="text-sm text-muted-foreground line-clamp-1">
-                            {link.description}
-                          </div>
-                        )}
-                      </div>
-                    </Link>
+                      closeMenu={closeMenu}
+                      pathname={pathname}
+                      icon={link.icon}
+                      name={link.name}
+                      description={link.description}
+                    />
                   </li>
                 ))}
               </ul>
