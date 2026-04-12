@@ -1,8 +1,19 @@
 import Header from '@/components/Header'
 import Link from 'next/link'
-import { Building2 } from 'lucide-react'
+import { MapPin, ArrowRight } from 'lucide-react'
 import { getIndustrialParks } from '@/data/parks/parks-sanity'
 import { createMetadata } from '@/lib/create-metadata'
+import { ParkMiniMap } from '@/components/brandpetram/park-mini-map'
+
+// Coordenadas de respaldo — solo se usan si Sanity no tiene las del parque.
+// Nelson II tiene coordenadas exactas; las demás son aproximaciones
+// basadas en la dirección (Carretera a San Luis R.C.) y deben verificarse.
+const FALLBACK_COORDS: Record<string, { lat: number; lng: number }> = {
+  'nelson-ii': { lat: 32.576969, lng: -115.411850 },
+  'nelson-i': { lat: 32.550000, lng: -115.393000 },
+  'vigia-i': { lat: 32.557000, lng: -115.398000 },
+  'vigia-ii': { lat: 32.558000, lng: -115.397000 },
+}
 
 export const metadata = createMetadata({
   lang: 'es',
@@ -12,82 +23,146 @@ export const metadata = createMetadata({
 })
 
 export default async function ParquesIndustrialesMexicaliPage() {
-  const industrialParks = await getIndustrialParks()
+  const parks = await getIndustrialParks()
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              Parques Industriales en Mexicali
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza.
-            </p>
+      {/* Hero */}
+      <section className="pt-32 pb-14 md:pt-40 md:pb-20 border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <p className="text-xs font-medium text-blue-600 tracking-[0.25em] uppercase mb-4">
+            Grupo Nelson
+          </p>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            Parques Industriales
+          </h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+            Más de 60 años desarrollando infraestructura industrial de clase mundial en la región fronteriza de Mexicali.
+          </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-8 text-sm text-muted-foreground">
+            <span><span className="font-semibold text-foreground">4</span> parques</span>
+            <span className="text-border hidden sm:inline">·</span>
+            <span><span className="font-semibold text-foreground">75+</span> hectáreas</span>
+            <span className="text-border hidden sm:inline">·</span>
+            <span><span className="font-semibold text-foreground">28+</span> empresas establecidas</span>
           </div>
         </div>
       </section>
 
-      {/* Parques Grid */}
-      <section className="pb-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industrialParks.map((park) => (
-              <Link
-                key={park.slug}
-                href={`/parques-industriales-mexicali/${park.slug}`}
-                className="group relative overflow-hidden rounded-2xl bg-card border hover:border-primary/50 transition-all duration-300 hover:shadow-xl"
+      {/* Secciones de parques — orden invertido: Nelson II primero */}
+      {[...parks].reverse().map((park) => {
+        const coords = park.coordinates ?? FALLBACK_COORDS[park.slug]
+        const buildingCount = park.totalBuildings ?? (park.buildings?.length ?? 0)
+
+        return (
+          <section key={park.slug} className="mb-12 last:mb-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 px-10">
+
+              {/* Foto */}
+              <div
+                className="relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-muted"
               >
-                {/* Imagen */}
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={park.heroImage}
-                    alt={park.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                {/* Contenido */}
-                <div className="p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Building2 className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                        {park.name}
-                      </h2>
-                      {(park.totalBuildings ?? (park.buildings?.length ?? 0)) > 0 && (
-                        <p className="text-sm text-muted-foreground">
-                          {park.totalBuildings ?? (park.buildings?.length ?? 0)} naves
-                        </p>
-                      )}
-                    </div>
+                <img
+                  src={park.heroImage}
+                  alt={park.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                {park.immediateAvailability && (
+                  <div className="absolute top-4 left-4 lg:top-6 lg:left-6">
+                    <span className="inline-flex items-center gap-1.5 bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                      Disponible ahora
+                    </span>
                   </div>
+                )}
+              </div>
 
-                  <p className="text-muted-foreground mb-4">
-                    {park.description}
-                  </p>
+              {/* Datos + Mapa */}
+              <div className="px-6 py-8 lg:px-12 xl:px-16 lg:py-8 flex flex-col justify-center">
+                <p className="text-xs font-medium text-blue-600 tracking-[0.2em] uppercase mb-2">
+                  Parque Industrial
+                </p>
+                <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+                  {park.shortName}
+                </h2>
 
-                  <p className="text-sm text-muted-foreground">
-                    {park.address ?? park.location}
-                  </p>
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-6">
+                  <div>
+                    <p className="text-2xl lg:text-3xl font-semibold tabular-nums">
+                      {park.landSizeHectares}
+                    </p>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                      Hectáreas
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-2xl lg:text-3xl font-semibold tabular-nums">
+                      {park.since}
+                    </p>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                      Fundado
+                    </p>
+                  </div>
+                  {buildingCount > 0 && (
+                    <div>
+                      <p className="text-2xl lg:text-3xl font-semibold tabular-nums">
+                        {buildingCount}
+                      </p>
+                      <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                        Naves
+                      </p>
+                    </div>
+                  )}
+                  <div>
+                    <p className="text-2xl lg:text-3xl font-semibold tabular-nums">
+                      {park.establishedCompanies}
+                    </p>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground mt-0.5">
+                      Empresas
+                    </p>
+                  </div>
                 </div>
 
-                {/* Arrow indicator */}
-                <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                {/* Espacio disponible */}
+                {(park.availableLandM2 ?? 0) > 0 && (
+                  <p className="text-sm text-muted-foreground mb-4">
+                    <span className="font-medium text-foreground">
+                      {new Intl.NumberFormat('es-MX').format(park.availableLandM2!)} m²
+                    </span>{' '}
+                    de terreno disponible
+                  </p>
+                )}
+                {(park.availableAreaM2 ?? 0) > 0 && (
+                  <p className="text-sm text-muted-foreground mb-4">
+                    <span className="font-medium text-foreground">
+                      {new Intl.NumberFormat('es-MX').format(park.availableAreaM2!)} m²
+                    </span>{' '}
+                    de nave disponible
+                  </p>
+                )}
+
+                {/* Dirección */}
+                <div className="flex items-start gap-2 text-sm text-muted-foreground mb-6">
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>{park.address ?? park.location}</span>
                 </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+
+                {/* CTA */}
+                <Link
+                  href={`/parques-industriales-mexicali/${park.slug}`}
+                  className="group inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  Ver detalles
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        )
+      })}
     </div>
   )
 }

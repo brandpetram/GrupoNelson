@@ -580,7 +580,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* La Empresa links */}
                   <div>
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      La Empresa
+                      {navLabels.empresa}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {whyNelsonLinks.map((item, index) => (
@@ -623,7 +623,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Mexicali */}
                   <div className="pr-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Mexicali
+                      {navLabels.mexicali}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {parksMexicaliLinks.map((item, index) => (
@@ -641,7 +641,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Inventario */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Inventario
+                      {navLabels.inventario}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {parksInventoryLinks.map((item, index) => (
@@ -672,7 +672,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Servicios de Construcción */}
                   <div className="pr-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Servicios de Construcción
+                      {navLabels.servicios}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {solutionsServicesLinks.map((item, index) => (
@@ -690,7 +690,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Calidad y Estándares */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Calidad y Estándares
+                      {navLabels.calidad}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {solutionsIndustryLinks.map((item, index) => (
@@ -721,7 +721,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Resultados links */}
                   <div>
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Resultados
+                      {navLabels.resultados}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {expertiseCapabilitiesLinks.map((item, index) => (
@@ -739,7 +739,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {expertiseStandardsLinks.length > 0 ? (
                     <div className="pl-6">
                       <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                        Standards
+                        {navLabels.calidad}
                       </span>
                       <ul className="mt-3 space-y-1">
                         {expertiseStandardsLinks.map((item, index) => (
@@ -784,7 +784,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Aprender */}
                   <div className="pr-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Aprender
+                      {navLabels.aprender}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {insightsLearnLinks.map((item, index) => (
@@ -802,7 +802,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                   {/* Conectar */}
                   <div className="pl-6">
                     <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-                      Conectar
+                      {navLabels.conectar}
                     </span>
                     <ul className="mt-3 space-y-1">
                       {insightsConnectLinks.map((item, index) => (

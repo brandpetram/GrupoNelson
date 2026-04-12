@@ -939,6 +939,8 @@ export const industrialParks: IndustrialPark[] = [
     availableLandM2: 17169.3,
     immediateAvailability: false,
     establishedCompanies: 9,
+    // Coordenadas aproximadas — verificar con ubicación real
+    coordinates: { lat: 32.550000, lng: -115.393000 },
     infrastructure: [
       'Seguridad 24/7',
       'Agua potable',
@@ -966,6 +968,8 @@ export const industrialParks: IndustrialPark[] = [
     landSizeHectares: 14,
     establishedCompanies: 11,
     totalBuildings: 16,
+    // Coordenadas aproximadas — verificar con ubicación real
+    coordinates: { lat: 32.557000, lng: -115.398000 },
     infrastructure: [
       'Seguridad 24/7',
       'Agua potable',
@@ -990,6 +994,8 @@ export const industrialParks: IndustrialPark[] = [
     location: 'Carretera a San Luis Km. 12.5',
     address: 'Carretera a San Luis R.C. KM 12, Mexicali B.C.',
     landSizeHectares: 7.5,
+    // Coordenadas aproximadas — verificar con ubicación real
+    coordinates: { lat: 32.558000, lng: -115.397000 },
     availableBuildings: 1,
     availableAreaM2: 6074.79,
     availableLandM2: 0,
