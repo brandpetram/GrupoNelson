@@ -119,7 +119,7 @@ export default function DisenoEIngenieriaPage() {
         <div className="container mx-auto mt-16 md:mt-32 w-11/12">
           <div className="relative h-60 md:h-[35vh] lg:h-[40vh] 1200:h-[60vh] xl:h-[70vh]">
             <ImagenConEtiquetaConProps
-              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-271.jpg"
+              src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-202.jpg"
               alt="Diseño e ingeniería industrial Mexicali"
               etiqueta={<>Resolvemos Ingeniería<br /><span className="block h-[1em]"><TypewriterTipo /></span></>}
             />
