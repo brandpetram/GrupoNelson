@@ -46,7 +46,7 @@ export default function HomeClient() {
           videoOverlayBlendMode="multiply"
           darkOverlay={0.5}
           darkOverlayMobile={0.3}
-          enableAnimations={true}
+          enableAnimations={false}
           gridConfig={{
             strokeColor: 'stroke-white/20',
             gridSize: 150,
