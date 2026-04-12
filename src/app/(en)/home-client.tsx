@@ -145,7 +145,7 @@ export default function HomeClient() {
                   bloque4Descripcion="Check availability across our 4 parks"
                   bloque4LinkTexto="Contact us"
                   bloque4LinkHref="/contact"
-                  imagenDerechaSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-5.jpeg"
+                  imagenDerechaSrc="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-54.jpg"
                   imagenDerechaAlt="Nelson II Industrial Park in Mexicali"
               />
 
