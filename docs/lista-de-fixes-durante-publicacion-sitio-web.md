@@ -72,3 +72,5 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 43. Se corrigió el scroll horizontal en las páginas de blog y noticias — se agregó `overflow-x-clip` a los layouts (se usó `clip` en vez de `hidden` para no romper los sidebars sticky).
 44. Se corrigió el hero de la página de casos de éxito que no era full-width — la imagen tenía `px-20` que agregaba padding innecesario en todos los viewports (ES + EN).
 45. Se corrigió el padding del text box del hero de casos de éxito — tenía `px-30` fijo que se desbordaba en móvil. Se cambió a padding responsivo `px-6 md:px-12` (ES + EN).
+46. Se hizo el tour virtual 360° full-width en móvil — tenía `px-10` que desperdiciaba espacio horizontal.
+47. Se mejoró el aspect ratio del tour virtual en móvil de 16:9 a 4:3 para mejor experiencia de exploración en vertical.
