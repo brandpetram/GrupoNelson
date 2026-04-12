@@ -65,7 +65,7 @@ export default function NormasCertificacionesEstandaresPage() {
           primaryButtonText="Solicita una consulta"
           primaryButtonHref="/contacto"
           secondaryButtonText="Conoce los estándares"
-          secondaryButtonHref="#certificaciones-corporativas"
+          secondaryButtonHref="#estandares-ingenieria"
           metrics={[
             { value: 'ISN', label: 'Recomendado' },
             { value: 'LEED', label: 'Ambiental' },
@@ -142,7 +142,7 @@ export default function NormasCertificacionesEstandaresPage() {
             CAPA 2 — Estándares de construcción e ingeniería
             Componente: centered-2x2-grid (Tailwind UI)
             ═══════════════════════════════════════════════════════ */}
-        <div className="bg-gray-900 py-24 sm:py-32">
+        <div id="estandares-ingenieria" style={{ scrollMarginTop: '100px' }} className="bg-gray-900 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base/7 font-semibold text-indigo-400">

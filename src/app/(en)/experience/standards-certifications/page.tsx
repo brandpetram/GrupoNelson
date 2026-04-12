@@ -59,7 +59,7 @@ export default function StandardsCertificationsPage() {
           primaryButtonText="Request a consultation"
           primaryButtonHref="/contact"
           secondaryButtonText="See the standards"
-          secondaryButtonHref="#corporate-certifications"
+          secondaryButtonHref="#engineering-standards"
           metrics={[
             { value: 'ISN', label: 'Recommended' },
             { value: 'LEED', label: 'Environmental' },
@@ -131,7 +131,7 @@ export default function StandardsCertificationsPage() {
         </div>
 
         {/* LAYER 2 — Engineering and construction standards */}
-        <div className="bg-gray-900 py-24 sm:py-32">
+        <div id="engineering-standards" style={{ scrollMarginTop: '100px' }} className="bg-gray-900 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base/7 font-semibold text-indigo-400">
