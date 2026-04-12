@@ -242,11 +242,9 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://
     | {title: .value.title, savings: .value.displayValue, score: .value.score}]
     | sort_by(.score) | .[0:5],
   diagnostics: [.lighthouseResult.audits | to_entries[]
+    | select(.value.title? != null and .value.displayValue? != null)
     | select(.value.details? != null and (.value.score? == null or .value.score < 0.9))
-    | select(.key | startswith("largest-contentful") or startswith("render-blocking") or
-      startswith("unused-") or startswith("legacy-") or startswith("total-byte") or
-      startswith("dom-size") or startswith("network-") or startswith("mainthread-") or
-      startswith("bootup-") or startswith("font-display") or startswith("uses-"))
+    | select(.key | test("^(render-blocking|unused-|legacy-|total-byte|dom-size|network-|mainthread-|bootup-|font-display|uses-)"))
     | {title: .value.title, detail: .value.displayValue, score: .value.score}]
     | .[0:8]
 }'
