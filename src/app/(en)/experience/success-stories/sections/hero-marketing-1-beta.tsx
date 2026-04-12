@@ -42,9 +42,9 @@ export function HeroMarketing1Beta() {
 
       {/* Overlapping text box with CTAs above the H1 */}
       <div className="relative z-10 -mt-32 md:-mt-24 xl:-mt-80">
-        <div className="rounded-2xl bg-background/80 1200:mx-[10rem] 1920:mx-[20rem]  py-12 md:py-16 lg:py-20">
+        <div className="rounded-2xl bg-background/80 px-6 md:px-12 1200:mx-[10rem] 1920:mx-[20rem] py-12 md:py-16 lg:py-20">
           {/* CTAs above the title */}
-          <div className="px-30">
+          <div className="">
             <div className="flex flex-wrap items-center gap-8 mb-8">
               <Button
                 size="lg"
