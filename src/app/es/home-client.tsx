@@ -174,7 +174,7 @@ export default function HomeClient() {
       {/* Mapa de Mexicali */}
       <div className="px-6 md:px-12 lg:px-20 py-16">
         <img
-          src="/mexicali-light-mode.png"
+          src="/mexicali-light-mode-optimized.svg"
           alt="Mexicali"
           className="w-full"
         />
