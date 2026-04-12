@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import { ParkHero } from '@/components/brandpetram/park-hero'
 import { FichaTecnicaParque } from '@/components/brandpetram/ficha-tecnica-parque'
+import { ParkMap } from '@/components/brandpetram/park-map'
 import { VirtualTourBP } from '@/components/brandpetram/virtual-tour-bp'
 import { getParkBySlug } from '@/data/parks/parks-sanity'
 import { createMetadata } from '@/lib/create-metadata'
@@ -33,8 +34,18 @@ export default async function NelsonIPage() {
 
             }}
         /></div>
-      <div className="w-11/12 1200:w-10/12 mx-auto mb-32">
+      <div className={'mb-32 w-11/12 1200:w-10/12 mx-auto'}>
         <FichaTecnicaParque park={park} />
+        {park.coordinates && (
+          <ParkMap
+            parkName={park.name}
+            address={park.address ?? park.location}
+            lat={park.coordinates.lat}
+            lng={park.coordinates.lng}
+            zoom={16}
+            mapsUrl={park.mapsUrl}
+          />
+        )}
       </div>
       <VirtualTourBP
         tourId="hY5fjENu2"
