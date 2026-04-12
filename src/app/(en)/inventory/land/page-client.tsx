@@ -105,14 +105,14 @@ function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => 
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
 
       {/* Panel */}
-      <div className="relative w-full max-w-md bg-white dark:bg-zinc-900 shadow-xl overflow-y-auto">
+      <div className="relative w-full max-w-md bg-background shadow-xl overflow-y-auto">
         {/* Header */}
-        <div className="sticky top-0 z-10 bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800 px-6 py-4 flex items-center justify-between">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">Available land</h2>
+        <div className="sticky top-0 z-10 bg-background border-b border-border px-6 py-4 flex items-center justify-between">
+          <h2 className="text-lg font-bold text-foreground">Available land</h2>
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -136,21 +136,21 @@ function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => 
                 </span>
               )}
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tighter leading-none text-gray-900 dark:text-white">{terreno.nombre}</h3>
-            <p className="text-sm font-light tracking-wider text-gray-500 dark:text-gray-400 mt-2">{terreno.ciudad}</p>
+            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tighter leading-none text-foreground">{terreno.nombre}</h3>
+            <p className="text-sm font-light tracking-wider text-muted-foreground mt-2">{terreno.ciudad}</p>
           </div>
 
           {/* Map */}
           {geoFeature && (
-            <div className="rounded-xs overflow-hidden border border-gray-200 dark:border-zinc-700">
+            <div className="rounded-xs overflow-hidden border border-border">
               <TerrenoMiniMapDynamic feature={geoFeature} nombre={terreno.nombre} />
             </div>
           )}
 
           {/* Area */}
-          <div className="bg-gray-50 dark:bg-zinc-800 rounded-xs p-4">
-            <p className="text-xs font-medium uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2">Land area</p>
-            <p className="text-3xl font-extrabold tracking-tighter text-gray-900 dark:text-white tabular-nums">
+          <div className="bg-muted rounded-xs p-4">
+            <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2">Land area</p>
+            <p className="text-3xl font-extrabold tracking-tighter text-foreground tabular-nums">
               {formatM2Full(terreno.superficieM2)}
             </p>
             {terreno.superficieSqftEdificio && (
@@ -171,8 +171,8 @@ function TerrenoDrawer({ terreno, onClose }: { terreno: Terreno; onClose: () => 
 
           {/* Legal location */}
           <div>
-            <p className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Legal location</p>
-            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{terreno.ubicacionLegal}</p>
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">Legal location</p>
+            <p className="text-sm text-foreground/80 leading-relaxed">{terreno.ubicacionLegal}</p>
           </div>
 
           {/* Note */}
