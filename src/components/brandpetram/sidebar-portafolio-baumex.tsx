@@ -44,7 +44,7 @@ export function SidebarPortafolioBaumex({
           </div>
 
           <div>
-            <div className="text-3xl font-bold text-primary">28</div>
+            <div className="text-3xl font-bold text-primary">30</div>
             <div className="text-sm font-medium text-foreground mt-1 uppercase tracking-wider">{lang === 'en' ? 'Years of Experience' : 'Años de Trayectoria'}</div>
             <div className="h-0.5 w-10 bg-primary/20 mt-3" />
           </div>
