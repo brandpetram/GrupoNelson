@@ -171,6 +171,15 @@ export default function HomeClient() {
         />
       </div>
 
+      {/* Mapa de Mexicali */}
+      <div className="px-6 md:px-12 lg:px-20 py-16">
+        <img
+          src="/mexicali-light-mode.png"
+          alt="Mexicali"
+          className="w-full"
+        />
+      </div>
+
       {/* Círculos — 3 pilares comprimidos */}
       <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
         <CirculosConProps

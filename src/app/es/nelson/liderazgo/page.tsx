@@ -182,15 +182,6 @@ export default function LiderazgoPage() {
           </div>
         </section>
 
-        {/* ── SVG MEXICALI ── */}
-        <section className="border-t border-border/50 px-6 md:px-12 lg:px-20 py-16">
-          <img
-            src="/mexicali-light-mode-optimized.svg"
-            alt="Mexicali"
-            className="w-full"
-          />
-        </section>
-
         {/* ── BLOQUE 3: CONTINUIDAD ── */}
         <section className="relative border-t border-border/50 bg-muted/20">
           <div className="px-6 md:px-12 lg:px-20 py-24 md:py-32">
