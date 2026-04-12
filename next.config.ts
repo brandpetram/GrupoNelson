@@ -55,7 +55,11 @@ const nextConfig: NextConfig = {
 
       // Redirects 301: rutas españolas viejas → /es/*
       { source: '/nelson/:path*', destination: '/es/nelson/:path*', permanent: true },
-      { source: '/parques-industriales-mexicali/:path*', destination: '/es/parques-industriales-mexicali/:path*', permanent: true },
+      { source: '/parques-industriales-mexicali', destination: '/es/parques-industriales-mexicali', permanent: true },
+      { source: '/parques-industriales-mexicali/nelson-i', destination: '/es/parques-industriales-mexicali/nelson-i', permanent: true },
+      { source: '/parques-industriales-mexicali/nelson-ii', destination: '/es/parques-industriales-mexicali/nelson-ii', permanent: true },
+      { source: '/parques-industriales-mexicali/vigia-i', destination: '/es/parques-industriales-mexicali/vigia-i', permanent: true },
+      { source: '/parques-industriales-mexicali/vigia-ii', destination: '/es/parques-industriales-mexicali/vigia-ii', permanent: true },
       { source: '/constructora/:path*', destination: '/es/constructora/:path*', permanent: true },
       { source: '/experiencia/:path*', destination: '/es/experiencia/:path*', permanent: true },
       { source: '/inventario/:path*', destination: '/es/inventario/:path*', permanent: true },
