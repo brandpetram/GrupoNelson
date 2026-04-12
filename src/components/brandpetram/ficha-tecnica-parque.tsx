@@ -383,8 +383,8 @@ function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
 function NavCell({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">{label}</p>
-      <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 mt-0.5">{value}</p>
+      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{label}</p>
+      <p className="text-sm font-semibold text-foreground mt-0.5">{value}</p>
     </div>
   )
 }
@@ -399,7 +399,7 @@ function NaveDetalle({ building, t }: { building: Building; t: Labels }) {
   const specs = building.constructionSpecs
 
   return (
-    <div className="px-4 py-4 bg-zinc-50 dark:bg-zinc-900 border-b border-border">
+    <div className="px-4 py-4 bg-muted/50 border-b border-border">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
         {/* Disponibilidad */}
