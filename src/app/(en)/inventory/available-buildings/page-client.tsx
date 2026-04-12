@@ -40,6 +40,7 @@ export default function AvailableBuildingsClient({ naves }: { naves: NaveIndustr
           <TablaModelosDeProductos
             naves={naves}
             onVerMas={handleVerMas}
+            lang="en"
           />
         </section>
       </main>

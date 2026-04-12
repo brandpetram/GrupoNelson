@@ -432,6 +432,7 @@ export default function HomeClient() {
         tourId="hY5fjENu2"
         title="360° Virtual Tour"
         subtitle="Explore our facilities as if you were here."
+        lang="en"
       />
     </div>
   );

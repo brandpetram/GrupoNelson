@@ -21,10 +21,11 @@ const PARQUES = [
 interface TablaNavesProps {
   naves: NaveIndustrial[]
   onVerMas: (nave: NaveIndustrial) => void
+  lang?: 'en' | 'es'
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
-export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesProps) {
+export default function TablaModelosDeProductos({ naves, onVerMas, lang = 'es' }: TablaNavesProps) {
   // Lista plana de naves en el orden en que aparecen en la tabla
   const navesOrdenadas = PARQUES.flatMap(parque => naves.filter(n => n.parque === parque))
 
@@ -79,31 +80,31 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                     scope="col"
                     className="sticky left-0 z-10 bg-background py-3.5 pl-4 pr-3 sm:pl-3"
                   >
-                    <span className="sr-only">Ver más</span>
+                    <span className="sr-only">{lang === 'en' ? 'See more' : 'Ver más'}</span>
                   </th>
                   <th
                     scope="col"
                     className="py-3.5 pr-3 pl-2 text-left text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Nave
+                    {lang === 'en' ? 'Building' : 'Nave'}
                   </th>
                   <th
                     scope="col"
                     className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Superficie (m² / ft²)
+                    {lang === 'en' ? 'Area (m² / ft²)' : 'Superficie (m² / ft²)'}
                   </th>
                   <th
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Ciudad
+                    {lang === 'en' ? 'City' : 'Ciudad'}
                   </th>
                   <th
                     scope="col"
                     className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Altura libre (m / ft)
+                    {lang === 'en' ? 'Clear Height (m / ft)' : 'Altura libre (m / ft)'}
                   </th>
                   <th
                     scope="col"
@@ -115,7 +116,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    Estatus
+                    {lang === 'en' ? 'Status' : 'Estatus'}
                   </th>
                 </tr>
               </thead>
@@ -165,7 +166,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                               <button
                                 type="button"
                                 onClick={(e) => { e.stopPropagation(); onVerMas(nave) }}
-                                aria-label={`Ver especificaciones de ${nave.nave}`}
+                                aria-label={lang === 'en' ? `View specifications for ${nave.nave}` : `Ver especificaciones de ${nave.nave}`}
                                 className="flex items-center justify-center size-8 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
                               >
                                 <span className="text-lg font-light leading-none select-none">+</span>
@@ -212,7 +213,11 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
                             {/* Estatus badge */}
                             <td className="px-3 py-4 text-sm whitespace-nowrap">
                               <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${estatusBadgeClasses[nave.estatus]}`}>
-                                {nave.estatus}
+                                {lang === 'en'
+                                  ? nave.estatus === 'Disponible' ? 'Available'
+                                    : nave.estatus === 'Ocupada' ? 'Occupied'
+                                    : 'Under Construction'
+                                  : nave.estatus}
                               </span>
                             </td>
                           </tr>
@@ -230,7 +235,7 @@ export default function TablaModelosDeProductos({ naves, onVerMas }: TablaNavesP
       {/* Hint de teclado */}
       {selectedIndex !== -1 && (
         <p className="mt-3 text-xs text-gray-400 text-right select-none">
-          ↑ ↓ navegar · Enter abrir
+          {lang === 'en' ? '↑ ↓ navigate · Enter open' : '↑ ↓ navegar · Enter abrir'}
         </p>
       )}
     </div>
