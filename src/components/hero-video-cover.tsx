@@ -47,6 +47,8 @@ interface HeroVideoCoverProps {
   gridConfigMobile?: GridConfig
   /** Habilitar animaciones de entrada (default: false) */
   enableAnimations?: boolean
+  /** Idioma para textos fallback */
+  lang?: 'en' | 'es'
 }
 
 export function HeroVideoCover({
@@ -68,6 +70,7 @@ export function HeroVideoCover({
   gridConfig,
   gridConfigMobile,
   enableAnimations = false,
+  lang = 'es',
 }: HeroVideoCoverProps) {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -199,7 +202,7 @@ export function HeroVideoCover({
               aria-label={alt}
             >
               <source src={videoSrc} type="video/mp4" />
-              {"Tu navegador no soporta el elemento video."}
+              {lang === 'en' ? 'Your browser does not support the video element.' : 'Tu navegador no soporta el elemento video.'}
             </video>
             {videoOverlayMobile && (
               <div
@@ -234,7 +237,7 @@ export function HeroVideoCover({
           aria-label={alt}
         >
           <source src={videoSrc} type="video/mp4" />
-          {"Tu navegador no soporta el elemento video."}
+          {lang === 'en' ? 'Your browser does not support the video element.' : 'Tu navegador no soporta el elemento video.'}
         </video>
 
         {/* Overlay de color para desktop */}

@@ -15,9 +15,8 @@ interface Feature {
   description: string
 }
 
-export function HexagonFeatures() {
-  // Edita aquí los items directamente
-  const features: Feature[] = [
+export function HexagonFeatures({ lang = 'es' }: { lang?: 'en' | 'es' }) {
+  const featuresEs: Feature[] = [
     {
       title: 'Ubicación Estratégica',
       description: 'Parques industriales en zonas de alto crecimiento en Mexicali, con acceso inmediato a infraestructura vial y cercanía a Estados Unidos.'
@@ -43,6 +42,35 @@ export function HexagonFeatures() {
       description: 'Comprometidos con prácticas de construcción sustentables que minimizan el impacto ambiental y maximizan la eficiencia energética.'
     }
   ]
+
+  const featuresEn: Feature[] = [
+    {
+      title: 'Strategic Location',
+      description: 'Industrial parks in high-growth zones in Mexicali, with immediate access to road infrastructure and proximity to the United States.'
+    },
+    {
+      title: 'Modern Infrastructure',
+      description: 'Facilities built with the highest quality and technology standards, designed for advanced manufacturing operations.'
+    },
+    {
+      title: '60 Years of Experience',
+      description: 'Six decades building world-class industrial spaces for global companies in the Baja California border region.'
+    },
+    {
+      title: 'Built to Suit',
+      description: 'We design and build industrial spaces tailored to your operational needs and specific technical requirements.'
+    },
+    {
+      title: 'Full-Service Solutions',
+      description: 'From planning and permits to construction and maintenance, we offer turnkey solutions for your industrial project.'
+    },
+    {
+      title: 'Sustainable Development',
+      description: 'Committed to sustainable construction practices that minimize environmental impact and maximize energy efficiency.'
+    }
+  ]
+
+  const features = lang === 'en' ? featuresEn : featuresEs
 
   return (
     <section data-component="HexagonFeatures" data-component-file="src/components/hexagon-features.tsx" data-component-props="false" className="w-full bg-background">

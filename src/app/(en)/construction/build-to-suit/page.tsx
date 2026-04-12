@@ -21,6 +21,7 @@ export default function BuildToSuitPage() {
 
       <div className="mt-0">
         <HeroVideoCover
+          lang="en"
           videoSrc="/video-2-720p.mp4"
           posterSrc="/hero-poster-0.jpg"
           alt="Build to Suit | Grupo Nelson"
@@ -50,6 +51,7 @@ export default function BuildToSuitPage() {
           }}
         >
           <TarjetaHeroOriginalBeta
+            lang="en"
             badge1="Build-to-Suit"
             badge2="Custom-built facilities"
             titulo="Build the facility that doesn't exist in any catalog"

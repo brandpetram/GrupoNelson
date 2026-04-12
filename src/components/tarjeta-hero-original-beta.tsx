@@ -8,6 +8,7 @@ interface TarjetaHeroOriginalBetaProps {
   badge2?: string
   titulo?: string
   descripcion?: string
+  lang?: 'en' | 'es'
 }
 
 export function TarjetaHeroOriginalBeta({
@@ -15,6 +16,7 @@ export function TarjetaHeroOriginalBeta({
   badge2 = "Sustainable Design",
   titulo = "Los Expertos en Parques Industriales en Mexicali",
   descripcion = "60 años creando soluciones llave en mano para empresas globales en parques y espacios industriales en Mexicali",
+  lang = 'es',
 }: TarjetaHeroOriginalBetaProps) {
   return (
     <div data-component="TarjetaHeroOriginalBeta" data-component-file="src/components/tarjeta-hero-original-beta.tsx" data-component-props="true" className="max-w-xl mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
@@ -42,7 +44,7 @@ export function TarjetaHeroOriginalBeta({
       {/* Botones CTA */}
       <div className="flex flex-col sm:flex-row gap-4">
         <Button asChild size="lg" className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto">
-          <a href="/constructora/build-to-suit">{"Conocer más"}</a>
+          <a href={lang === 'en' ? '/construction/build-to-suit' : '/constructora/build-to-suit'}>{lang === 'en' ? 'Learn More' : 'Conocer más'}</a>
         </Button>
         <Button
           asChild
@@ -50,8 +52,8 @@ export function TarjetaHeroOriginalBeta({
           variant="ghost"
           className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto text-white border border-white/20 hover:bg-white/10 hover:text-white"
         >
-          <a href="/contacto">
-            <span>{"Contactar"}</span>
+          <a href={lang === 'en' ? '/contact' : '/contacto'}>
+            <span>{lang === 'en' ? 'Contact' : 'Contactar'}</span>
             <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 1024:h-6 1024:w-6 1200:h-5 1200:w-5 1280:h-5 1280:w-5 1366:h-5 1366:w-5 1440:h-6 1440:w-6 1536:h-6 1536:w-6 1728:h-6 1728:w-6 1920:h-7 1920:w-7" />
           </a>
         </Button>

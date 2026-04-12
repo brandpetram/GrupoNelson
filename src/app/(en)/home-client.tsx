@@ -32,6 +32,7 @@ export default function HomeClient() {
       <div className="relative">
         {/* Hero with industrial park video */}
         <HeroVideoCover
+          lang="en"
           videoSrc="/parques-industriales-mexicali-nelson-3-optimizado.mp4"
           posterSrc="/hero-poster-0.jpg"
           alt="Nelson II Industrial Park in Mexicali — Aerial view of industrial buildings"
