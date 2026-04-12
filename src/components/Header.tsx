@@ -544,6 +544,7 @@ const MobileMenu = ({ closeMenu, lang = 'es', pathname }: { closeMenu: () => voi
                 }}
               >
                 <span>{lang === 'en' ? 'Contact Us' : 'Contacto'}</span>
+                <PendingIndicator />
               </Link>
             </Button>
           </div>
