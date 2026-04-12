@@ -172,7 +172,7 @@ export const expertiseStandardsLinks: typeof expertiseCapabilitiesLinks = [];
 // Column 1: Learn
 export const insightsLearnLinks = [
   {
-    href: '/en/blog',
+    href: '/es/blog',
     name: 'Blog',
     description: 'Industry insights & trends',
     iconKey: 'newspaper',
@@ -188,7 +188,7 @@ export const insightsLearnLinks = [
 // Column 2: Connect
 export const insightsConnectLinks = [
   {
-    href: '/en/news',
+    href: '/es/noticias',
     name: 'News & Updates',
     description: 'Latest announcements',
     iconKey: 'megaphone',

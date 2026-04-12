@@ -1,184 +1,202 @@
-# Plan para Lighthouse 100/100/100/100
+# Plan para Performance del sitio web
 
-> **Fecha:** 2026-04-10  
-> **Página auditada:** Homepage  
-> **Herramientas:** Lighthouse 13.1.0 CLI (localhost) + PageSpeed Insights API v5 (producción)  
+> **Última actualización:** 2026-04-12
+> **Herramienta:** PageSpeed Insights API v5 (producción, mobile)
 > **API Key:** PageSpeed Insights en brandpetram-assets (ver `~/.secrets/tokens.md`)
 
 ---
 
-## Scores actuales
+## Estado actual (2026-04-12)
 
-### Producción (nelson.com.mx — PageSpeed Insights API, mobile)
+### Scores por página (producción, mobile)
 
-**Request reproducible:**
-```
-GET https://www.googleapis.com/pagespeedonline/v5/runPagespeed
-  ?url=https://www.nelson.com.mx
-  &strategy=mobile
-  &category=performance
-  &category=accessibility
-  &category=best-practices
-  &category=seo
-  &key=<PSI_KEY de ~/.secrets/tokens.md>
-```
+| Página | Perf | FCP | LCP | TBT | CLS | SI | TTI | Payload |
+|---|---|---|---|---|---|---|---|---|
+| **Homepage** | 70 | 1.5s | **9.5s** | 20ms | 0 | 5.5s | 10.0s | 40,821 KiB |
+| **/es/constructora/diseno-e-ingenieria** | 66 | 2.0s | **14.0s** | 30ms | 0 | 7.9s | 15.0s | 4,602 KiB |
 
-| Métrica | Score | Estado |
-|---|---|---|
-| **Performance** | 71 | Mejorable |
-| **Accessibility** | 100 | Perfecto |
-| **Best Practices** | 100 | Perfecto |
-| **SEO** | 100 | Perfecto |
+**Accessibility, Best Practices y SEO ya están en 100 en ambas páginas.** El único problema es Performance, y la causa principal es el **LCP catastrófico**.
 
-### Localhost (Lighthouse CLI, mobile)
+### Lo que ya funciona bien
 
-| Métrica | Score | Estado |
-|---|---|---|
-| **Performance** | 38 | Crítico (no representativo — sin CDN ni compresión) |
-| **Accessibility** | 97 | Casi perfecto |
-| **Best Practices** | 100 | Perfecto |
-| **SEO** | 100 | Perfecto |
+- **TBT:** 20-30ms (score 100) — el JS no bloquea el hilo principal
+- **CLS:** 0 (score 100) — no hay layout shifts
+- **FCP:** 1.5-2.0s (score 85-95) — el primer paint es razonable
+
+### Lo que está roto
+
+- **LCP:** 9.5-14.0s (score 0) — esto solo destruye el score de Performance
+- **Speed Index / TTI:** derivados del LCP lento
+- **Imágenes:** ~2+ MB ahorrable por página en delivery
+- **Network payload homepage:** 40 MB (video de 40 MB incluido)
 
 ---
 
-## Performance (71 → 90+)
+## Diagnóstico por página
 
-### Métricas de producción (PageSpeed Insights API, mobile)
+### Homepage — LCP 9.5s (empeoró desde 5.3s el 10 de abril)
 
-| Métrica | Valor actual | Target | Score |
-|---|---|---|---|
-| First Contentful Paint | ~1.5s | < 1.8s | 95 |
-| Largest Contentful Paint | **5.3s** | < 2.5s | 22 |
-| Total Blocking Time | 20ms | < 200ms | 100 |
-| Cumulative Layout Shift | 0 | < 0.1 | 100 |
-| Speed Index | 5.1s | < 3.4s | 62 |
-| Time to Interactive | 5.5s | < 3.8s | 70 |
+**Elemento LCP:** El `<h1>` del hero — "Parques Industriales y Naves Built-to-Suit en Todo Mexicali"
 
-**FCP, TBT y CLS ya son perfectos en producción.** El único problema real es **LCP de 5.3 segundos**.
-
-### Causa raíz identificada: LCP
-
-**Elemento LCP:** El `<h1>` del hero — `"Parques Industriales y Naves Built‑to‑Suit en Todo Mexicali"`  
-**Selector:** `div.container > div > div.max-w-md > h1.text-3xl`
-
-**Breakdown del LCP:**
-- Time to first byte: **0.6s** (excelente)
-- Element render delay: **2,469ms** (el problema)
-
-**Causa raíz real: la animación del hero mueve el H1 fuera de pantalla al inicio.**
-
-En `src/components/hero-video-cover.tsx` (línea 76-87), `leftVariants` define:
+**Causa raíz confirmada:** Animación `leftVariants` en `hero-video-cover.tsx` (línea 76-87):
 ```
 hidden: { x: '-100vw' }    ← el contenido arranca fuera del viewport
 visible: { x: 0, transition: { duration: 0.8, delay: 0.8 } }
 ```
 
-Y en `src/app/(site)/page.tsx` (línea 51): `enableAnimations={true}`.
+El H1 existe en el DOM desde SSR pero motion/react lo mueve a `x: -100vw` antes de animarlo. Lighthouse mide cuándo es visualmente visible, no cuándo existe en el DOM.
 
-El flujo real es:
-1. TTFB llega en 0.6s
-2. React hydration ejecuta
-3. motion/react inicializa y posiciona el H1 en `x: -100vw` (fuera de pantalla)
-4. Después de 0.8s de delay, comienza la animación de 0.8s
-5. El H1 se vuelve visible en su posición final ~2.2s después de hydration
+**Problemas secundarios:**
+- Video `nelson-3-optimizado.mp4` (40 MB) en el ScrollStorytelling below-the-fold — infla el network payload
+- Imágenes: 2,067 KiB ahorrable en delivery
+- Render blocking CSS: 600ms
+- Unused JS: 47 KiB
+- Legacy JS: 15 KiB
 
-**El H1 técnicamente existe en el DOM desde el SSR, pero motion/react lo mueve fuera del viewport antes de que el usuario lo vea.** Lighthouse mide cuándo el elemento es visualmente pintado en el viewport, no cuándo existe en el DOM.
+### /es/constructora/diseno-e-ingenieria — LCP 14.0s
 
-**LCP Request Discovery = score 0:** El browser no puede determinar que el H1 será el LCP element porque su posición visual depende de JavaScript.
+**Causa probable:** Página con muchos componentes pesados (mosaicos, grids de imágenes, features sections). El LCP element probablemente es una imagen grande o un componente animado above-the-fold que tarda en renderizar. Necesita diagnóstico específico del elemento LCP.
 
-### Problemas secundarios encontrados
-
-| Problema | Impacto | Detalle |
-|---|---|---|
-| **Imagen hero no en formato óptimo** | 1,420 KiB ahorrable | `parque-industrial-mexicali...` debería servirse en avif/webp más agresivo |
-| **Imagen de bandera `/eua.jpg`** | Menor | No usa Next Image, no está optimizada |
-| **Video de 40 MB en network** | Network payload | `nelson-3-optimizado.mp4` se referencia en el homepage |
-| **Render blocking CSS** | 740ms | 2 chunks CSS bloquean el render inicial |
-| **Unused JS** | 47 KiB | JS cargado pero no usado |
-| **Legacy JavaScript** | 15 KiB | Polyfills innecesarios en el bundle |
-
-### Fixes ordenados por impacto
-
-**Fix 1 (CRÍTICO): Eliminar o reducir la animación de entrada del hero**
-
-La animación `leftVariants` con `x: '-100vw'` y `delay: 0.8` es la causa directa del LCP de 5.3s. El H1 está en el DOM pero fuera del viewport hasta que la animación termina.
-
-Opciones (de menor a mayor intervención):
-- A) **Cambiar `enableAnimations={false}`** en `page.tsx` línea 51. Impacto inmediato, cero riesgo. El hero aparece sin animación. Verificar con PSI si el LCP baja a ~1.5s.
-- B) **Cambiar la animación para que no mueva el contenido fuera del viewport.** En vez de `x: '-100vw'`, usar `opacity: 0` → `opacity: 1`. El elemento ocupa su posición desde el inicio y Lighthouse lo detecta como visible. La animación visual se mantiene pero como fade en vez de slide.
-- C) **Reducir el delay.** Cambiar `delay: 0.8` → `delay: 0` y `duration: 0.8` → `duration: 0.3`. El contenido aparece más rápido sin eliminar la animación.
-- D) **Usar CSS animation en vez de motion/react.** El CSS `@keyframes` se aplica desde el HTML inicial sin esperar JS. Más complejo pero más correcto.
-
-**Recomendación:** Probar A primero (5 segundos de cambio). Si el LCP baja a <2.5s, el problema está resuelto y se decide después si se quiere una animación alternativa (B, C o D).
-
-**Fix 2 (ALTO): Optimizar imagen hero**
-
-La imagen del hero pierde 1,420 KiB por no estar en formato óptimo. Next.js ya tiene `formats: ['image/avif', 'image/webp']` configurado — verificar que la imagen del hero usa `<Image>` de Next.js con `priority`.
-
-**Fix 3 (MEDIO): Lazy load del video**
-
-El video `nelson-3-optimizado.mp4` (40 MB) se referencia en el ScrollStorytelling que está below-the-fold. Con `preload="none"` (que ya tiene) no debería afectar el LCP, pero sí el network payload total. Verificar que no se descarga hasta que el usuario scrollea.
-
-**Fix 4 (BAJO): CSS render blocking**
-
-740ms de bloqueo por CSS. Next.js maneja esto automáticamente — verificar si hay imports CSS globales innecesarios o si se puede inline el CSS crítico.
+**Problemas reportados:**
+- Imágenes: 2,327 KiB ahorrable en delivery
+- Network payload: 4,602 KiB
+- Render blocking CSS: 430ms
 
 ---
 
-## Accessibility (100 en producción)
+## Estrategia: Fixes ordenados por impacto
 
-Ya perfecto en producción. En localhost hay un issue menor de contraste (`text-gray-500`/`text-gray-600`) que Vercel/producción no reporta — posiblemente porque la versión deployeada tiene dark mode/theme distinto. Monitorear pero no bloquea.
+### Fase 1: LCP del homepage (9.5s → <2.5s)
 
----
+**Fix 1.1 (CRÍTICO): Resolver la animación del hero**
 
-## Best Practices (100) — Ya perfecto
+Opciones de menor a mayor intervención:
 
-Nada que hacer.
+| Opción | Cambio | Riesgo | Impacto esperado |
+|---|---|---|---|
+| A | `enableAnimations={false}` en `page.tsx` | Cero | LCP baja a ~1.5s |
+| B | Cambiar `x: '-100vw'` por `opacity: 0` → `opacity: 1` | Bajo | LCP baja a ~1.5-2s, mantiene animación visual |
+| C | Reducir delay a 0 y duration a 0.3s | Bajo | LCP baja parcialmente |
+| D | CSS `@keyframes` en vez de motion/react | Medio | LCP óptimo, no depende de JS |
 
----
+**Recomendación:** Probar A para confirmar que el LCP baja. Luego implementar B o D como solución definitiva si se quiere mantener animación.
 
-## SEO (100) — Ya perfecto
+**Fix 1.2 (ALTO): Optimizar imagen hero**
 
-Nada que hacer.
+2,067 KiB ahorrable. Verificar que la imagen del hero usa `<Image>` de Next.js con `priority` y que el formato avif/webp se está sirviendo correctamente. Si la imagen es de `/public/`, Next.js la optimiza via `/_next/image` — pero si es muy grande el original, la optimización puede no ser suficiente. Considerar comprimir el original.
+
+**Fix 1.3 (MEDIO): Verificar que el video no se pre-descarga**
+
+El video de 40 MB inflama el payload a 40,821 KiB. Verificar:
+- `preload="none"` en el `<video>` tag
+- Que no hay un `<link rel="preload">` para el video
+- Que el ScrollStorytelling no monta el video hasta que está en viewport (intersection observer o similar)
+
+### Fase 2: LCP de páginas interiores
+
+**Fix 2.1: Diagnóstico del elemento LCP de /es/constructora/diseno-e-ingenieria**
+
+Correr PSI con detalle completo para identificar qué elemento es el LCP en esta página. Puede ser:
+- Una imagen grande del hero/mosaico sin `priority`
+- Un componente animado (como en el homepage)
+- Una imagen de Sanity sin optimización
+
+**Fix 2.2: Auditar las demás páginas pesadas**
+
+Correr PSI en batch sobre las páginas más probables de tener problemas:
+- `/es/constructora/portafolio-baumex`
+- `/es/parques-industriales-mexicali/nelson-ii`
+- `/es/experiencia/liderazgo`
+- `/about/leadership`
+- Homepage EN (`/`)
+
+Documentar LCP element y score de cada una. Priorizar las que tengan LCP > 4s.
+
+### Fase 3: Optimización de imágenes (site-wide)
+
+**Fix 3.1: Auditar tamaños de imágenes en `/public/`**
+
+Muchas imágenes originales pueden ser excesivamente grandes (4000x3000+). Next.js las optimiza al servirlas, pero:
+- La optimización on-the-fly tiene límite (el original muy grande = más tiempo de procesamiento en el primer request)
+- Hay que verificar que todas las imágenes usan `<Image>` de Next.js, no `<img>` nativo
+- Verificar que `sizes` está configurado correctamente (no `sizes="100vw"` cuando el elemento solo ocupa 50vw)
+
+**Fix 3.2: Verificar `sizes` prop en todos los `<Image>`**
+
+Un `sizes="100vw"` en una imagen que solo ocupa 33% del viewport hace que Next.js sirva una imagen 3x más grande de lo necesario. Esto es un patrón común que desperdicia bandwidth.
+
+**Fix 3.3: Agregar `priority` a imágenes LCP**
+
+Solo la imagen above-the-fold más grande de cada página debe tener `priority`. Verificar que no se está usando `loading="lazy"` en imágenes LCP.
+
+### Fase 4: Prefetch y velocidad de navegación SPA
+
+**Fix 4.1: Verificar que prefetch funciona en producción**
+
+Next.js hace prefetch automático de las rutas visibles en el viewport. Si la navegación tarda 10-15 segundos entre páginas, puede ser que:
+- El prefetch esté deshabilitado (`prefetch={false}` en los `<Link>`)
+- Las páginas destino tengan data fetching lento (llamadas a Sanity, etc.)
+- Las páginas sean estáticas pero muy pesadas en JS
+
+**Fix 4.2: Verificar que las páginas estáticas se sirven como estáticas**
+
+En el build output, verificar que las páginas marcadas con `○ (Static)` realmente se sirven como HTML estático desde el edge, no como server-rendered on demand.
+
+### Fase 5: Optimizaciones de bundle
+
+**Fix 5.1: Unused JavaScript (47 KiB)**
+
+Identificar qué JS no se usa. Probablemente polyfills o librerías importadas pero no utilizadas en la página.
+
+**Fix 5.2: Legacy JavaScript (15 KiB)**
+
+Next.js debería manejar esto automáticamente con `browserslist`. Verificar configuración.
+
+**Fix 5.3: Render blocking CSS (430-600ms)**
+
+Next.js inlinea CSS crítico automáticamente. Si hay 430-600ms de bloqueo, puede ser que haya imports CSS globales pesados o fonts bloqueantes. Verificar `globals.css` y la carga de fuentes.
 
 ---
 
 ## Orden de ejecución
 
-### Fase A: Accesibilidad — Ya 100 en producción
+| Fase | Prioridad | Impacto esperado | Complejidad |
+|---|---|---|---|
+| 1.1 | Urgente | LCP homepage de 9.5s a <2.5s | Trivial (1 línea) a Baja |
+| 1.2 | Alta | Reduce payload ~2 MB | Baja |
+| 1.3 | Alta | Reduce payload ~40 MB | Baja (verificación) |
+| 2.1 | Alta | LCP diseño de 14s a <4s | Media (diagnóstico + fix) |
+| 2.2 | Media | Baseline de todo el sitio | Baja (solo auditoría) |
+| 3.1-3.3 | Media | Mejora global de imágenes | Media |
+| 4.1-4.2 | Media | Navegación SPA más rápida | Baja (verificación) |
+| 5.1-5.3 | Baja | ~60 KiB menos + 400ms menos blocking | Baja |
 
-No requiere acción. Monitorear en futuros deploys.
+---
 
-### Fase B: Performance — LCP (5.3s → <2.5s)
+## Cómo medir
 
-**Causa raíz confirmada:** Animación `leftVariants` en hero-video-cover.tsx.
+**Request reproducible para cualquier página:**
+```
+GET https://www.googleapis.com/pagespeedonline/v5/runPagespeed
+  ?url=https://www.nelson.com.mx/{path}
+  &strategy=mobile
+  &category=performance
+  &key=<PSI_KEY de ~/.secrets/tokens.md>
+```
 
-1. Probar Fix 1A: cambiar `enableAnimations={false}` en `page.tsx`
-2. Deploy a preview de Vercel
-3. Correr PSI contra el preview URL
-4. Si LCP < 2.5s → decidir si se quiere animación alternativa (Fix 1B/C/D) o se deja sin animación
-5. Si LCP sigue alto → investigar si hay otra causa (imagen hero, CSS blocking)
+**Regla de verificación:** Los scores de PSI varían entre corridas. Para cualquier medición baseline o post-fix, correr la API **3 veces** y tomar la **mediana** del score de Performance. No tomar decisiones basadas en una sola corrida.
 
-**Estimación:** 15 minutos para el test. La decisión sobre la animación puede tomar más.
+---
 
-### Fase C: Performance — Optimizaciones secundarias
+## Targets
 
-Solo si Fase B no lleva el score a 90+:
-
-1. Optimizar imagen hero (1,420 KiB ahorrable en delivery)
-2. Verificar que video `nelson-3-optimizado.mp4` no se pre-descarga
-3. Reducir unused JS (47 KiB)
-4. Evaluar CSS render blocking (740ms)
-
-**Nota:** TBT ya es 20ms en producción (score 100). No requiere trabajo.
-
-### Fase D: Verificación
-
-1. Correr PSI contra producción (mobile + desktop) — **3 corridas, tomar la mediana**
-2. Verificar en las páginas más pesadas (Homepage, Baumex, Parques)
-3. Documentar scores finales
-
-**Regla de verificación para PSI:** Los scores de PSI varían entre corridas. Para cualquier medición baseline o post-fix, correr la API **3 veces** y tomar la **mediana** del score de Performance. No tomar decisiones basadas en una sola corrida.
+| Métrica | Actual (peor caso) | Target | Criterio |
+|---|---|---|---|
+| Performance | 66 | 90+ | Todas las páginas principales |
+| LCP | 14.0s | < 2.5s | Ninguna página arriba de 4s |
+| Accessibility | 100 | 100 | Mantener |
+| Best Practices | 100 | 100 | Mantener |
+| SEO | 100 | 100 | Mantener |
 
 ---
 
@@ -186,22 +204,8 @@ Solo si Fase B no lleva el score a 90+:
 
 | Riesgo | Mitigación |
 |---|---|
-| Quitar animación del hero reduce calidad visual | Probar primero sin animación (Fix 1A), luego considerar fade (Fix 1B) como alternativa |
-| Variabilidad de PSI da falsos positivos/negativos | Regla de 3 corridas + mediana para cualquier decisión |
-| Optimizar imágenes degrada calidad | Usar avif/webp con quality 80+ (ya configurado en next.config) |
-| 100 en Performance es difícil de mantener | Target realista: 90+ sostenido. 100 requiere cero animaciones JS en above-the-fold |
-
----
-
-## Nota importante
-
-Tres de cuatro métricas ya están en 100 en producción. El único trabajo real es bajar el LCP de 5.3s a <2.5s, y la causa raíz ya está identificada (animación del hero).
-
-| Métrica | Actual (prod) | Target | Trabajo necesario |
-|---|---|---|---|
-| Performance | 71 | 90+ | Fix de animación hero (LCP) |
-| Accessibility | 100 | 100 | Ninguno |
-| Best Practices | 100 | 100 | Ninguno |
-| SEO | 100 | 100 | Ninguno |
-
-100 en Performance requiere que no haya animaciones JS en el above-the-fold. 90+ es alcanzable con una animación de fade (opacity) en vez del slide actual (translateX).
+| Quitar animación del hero reduce calidad visual | Probar sin animación (Fix 1.1A), luego considerar fade (Fix 1.1B) |
+| Variabilidad de PSI da falsos positivos/negativos | Regla de 3 corridas + mediana |
+| Optimizar imágenes degrada calidad | avif/webp con quality 80+ (ya configurado en next.config) |
+| 100 en Performance es difícil de mantener | Target realista: 90+ sostenido |
+| Fix de una página no aplica a todas | Auditar las 6-8 páginas más visitadas individualmente |
