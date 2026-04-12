@@ -67,3 +67,6 @@ docs/meetings-donde-hablamos-sobre-grupo-nelson/
 # Carpeta de specs completa (PDFs duplicados + .md movidos a raíz)
 docs/Specs de Naves Grupo Nelson/
 .worktrees/
+
+# Documentos enviados por Susana (archivos internos, no código)
+docs/enviados-por-susana/
