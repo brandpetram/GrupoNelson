@@ -68,7 +68,7 @@ export default function HomeClient() {
             descripcion="60 years developing industrial infrastructure on the California border. Gulfstream, Honeywell, General Dynamics and DHL already operate here."
             ctaPrimaryText="Learn More"
             ctaPrimaryHref="/about/difference"
-            ctaSecondaryText="Contact"
+            ctaSecondaryText="Contact Us"
             ctaSecondaryHref="/contact"
           />
         </HeroVideoCover>
