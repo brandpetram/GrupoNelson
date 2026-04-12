@@ -8,7 +8,7 @@
 
 ## Estado actual del sitemap
 
-El sitemap en producción (`https://www.nelson.com.mx/sitemap.xml`) contiene **112 URLs**:
+El sitemap en producción (`https://www.nelson.com.mx/sitemap.xml`) contiene **114 URLs**:
 
 | Tipo | Cantidad | hreflang |
 |---|---|---|
