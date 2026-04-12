@@ -67,11 +67,12 @@ export default function PortfolioClient() {
           <SidebarPortafolioBaumex
             totalProyectos={proyectosBaumex.length}
             totalM2={totalM2}
+            lang="en"
           />
 
           {/* Main Column - Table */}
           <div className="lg:col-span-9">
-            <TablaPortafolioBaumex proyectos={proyectosBaumex} />
+            <TablaPortafolioBaumex proyectos={proyectosBaumex} lang="en" />
           </div>
         </div>
       </main>

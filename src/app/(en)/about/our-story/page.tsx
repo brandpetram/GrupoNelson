@@ -163,7 +163,7 @@ export default function OurStoryPage() {
       </div>
     </div>
 
-    <CursorTrailGrupoNelson />
+    <CursorTrailGrupoNelson lang="en" />
     </>
   )
 }

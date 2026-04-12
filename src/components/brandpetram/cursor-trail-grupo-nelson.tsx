@@ -50,12 +50,14 @@ export default function CursorTrailGrupoNelson({
     imageWidth = 320,
     imageHeight = 180,
     spawnDistance = 120,
+    lang = 'es',
 }: {
     fadeOutDuration?: number
     images?: string[]
     imageWidth?: number
     imageHeight?: number
     spawnDistance?: number
+    lang?: 'en' | 'es'
 }) {
     const [hasPointer, setHasPointer] = useState(false)
 
@@ -65,7 +67,7 @@ export default function CursorTrailGrupoNelson({
 
     if (!hasPointer) return null
 
-    return <CursorTrailInner fadeOutDuration={fadeOutDuration} images={images} imageWidth={imageWidth} imageHeight={imageHeight} spawnDistance={spawnDistance} />
+    return <CursorTrailInner fadeOutDuration={fadeOutDuration} images={images} imageWidth={imageWidth} imageHeight={imageHeight} spawnDistance={spawnDistance} lang={lang} />
 }
 
 function CursorTrailInner({
@@ -74,12 +76,14 @@ function CursorTrailInner({
     imageWidth,
     imageHeight,
     spawnDistance,
+    lang,
 }: {
     fadeOutDuration: number
     images: string[]
     imageWidth: number
     imageHeight: number
     spawnDistance: number
+    lang: 'en' | 'es'
 }) {
     const imageIndex = useRef(0)
     const idCounter = useRef(0)
@@ -131,7 +135,7 @@ function CursorTrailInner({
                         Grupo Nelson
                     </p>
                     <h2 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white dark:text-[#0a1628] uppercase select-none leading-none">
-                        60 años<br />en Mexicali
+                        {lang === 'en' ? <>60 years<br />in Mexicali</> : <>60 años<br />en Mexicali</>}
                     </h2>
                 </div>
             </div>

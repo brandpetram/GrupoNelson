@@ -5,9 +5,10 @@ import { ProyectoBaumex } from '@/data/proyectos-baumex'
 
 interface TablaPortafolioProps {
   proyectos: ProyectoBaumex[]
+  lang?: 'en' | 'es'
 }
 
-export default function TablaPortafolioBaumex({ proyectos }: TablaPortafolioProps) {
+export default function TablaPortafolioBaumex({ proyectos, lang = 'es' }: TablaPortafolioProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const rowRefs = useRef<Map<string, HTMLTableRowElement>>(new Map())
 
@@ -45,19 +46,19 @@ export default function TablaPortafolioBaumex({ proyectos }: TablaPortafolioProp
             <thead>
               <tr className="border-b border-gray-200 dark:border-white/10">
                 <th scope="col" className="sticky left-0 z-10 bg-background py-4 pl-4 pr-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 sm:pl-3">
-                  Año
+                  {lang === 'en' ? 'Year' : 'Año'}
                 </th>
                 <th scope="col" className="px-3 py-4 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                  Proyecto / Cliente
+                  {lang === 'en' ? 'Project / Client' : 'Proyecto / Cliente'}
                 </th>
                 <th scope="col" className="px-3 py-4 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                  Servicio
+                  {lang === 'en' ? 'Service' : 'Servicio'}
                 </th>
                 <th scope="col" className="px-3 py-4 text-right text-xs font-medium uppercase tracking-wider text-gray-500">
-                  Superficie (m² / ft²)
+                  {lang === 'en' ? 'Area (m² / ft²)' : 'Superficie (m² / ft²)'}
                 </th>
                 <th scope="col" className="px-3 py-4 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                  Ubicación
+                  {lang === 'en' ? 'Location' : 'Ubicación'}
                 </th>
               </tr>
             </thead>
@@ -118,7 +119,7 @@ export default function TablaPortafolioBaumex({ proyectos }: TablaPortafolioProp
       </div>
       {selectedId && (
         <p className="mt-4 text-xs text-gray-400 text-right select-none italic">
-          ↑ ↓ para navegar por el historial
+          {lang === 'en' ? '↑ ↓ to navigate through history' : '↑ ↓ para navegar por el historial'}
         </p>
       )}
     </div>
