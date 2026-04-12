@@ -28,7 +28,28 @@ const navigation = [
     items: [
       { href: '/studio', label: 'Sanity Studio' },
       { href: '/qa/terrenos', label: 'QA Terrenos' },
-      { href: '/proyecto/bitacora', label: 'Bitácora del proyecto' },
+    ],
+  },
+  {
+    title: 'Proyecto',
+    items: [
+      { href: '/proyecto', label: 'Índice' },
+      { href: '/proyecto/bitacora', label: 'Bitácora' },
+      { href: '/proyecto/contenidos', label: 'Contenidos' },
+      { href: '/proyecto/documentacion', label: 'Documentación' },
+      { href: '/proyecto/fase-2-baumex', label: 'Fase 2 Baumex' },
+      { href: '/proyecto/fotografias', label: 'Fotografías' },
+    ],
+  },
+  {
+    title: 'Dev',
+    items: [
+      { href: '/dev', label: 'Dev tools' },
+      { href: '/componentes', label: 'Componentes' },
+      { href: '/componentes-dos', label: 'Componentes 2' },
+      { href: '/componentes-tres', label: 'Componentes 3' },
+      { href: '/product', label: 'Product' },
+      { href: '/productos', label: 'Productos' },
     ],
   },
 ]
