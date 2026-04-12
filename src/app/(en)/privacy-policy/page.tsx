@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
           <section className="space-y-4">
             <h2 className="text-lg font-medium text-foreground tracking-tight">Identity and address of the data controller</h2>
             <p>
-              Parque Industrial Nelson S.A. de C.V. (hereinafter, &quot;Grupo Nelson&quot;), with address at Blvd. Lazaro Cardenas 9850, Mexicali, Baja California, Mexico, and email <a href="mailto:contacto@nelson.com.mx" className="text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground transition-colors">contacto@nelson.com.mx</a>, is responsible for collecting your personal data, the use given to it, and its protection.
+              Parque Industrial Nelson S.A. de C.V. (hereinafter, &quot;Grupo Nelson&quot;), with address at Ave. Reforma #1699, Col. Nueva, Mexicali, BC, Mexico 21100, and email <a href="mailto:contacto@nelson.com.mx" className="text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground transition-colors">contacto@nelson.com.mx</a>, is responsible for collecting your personal data, the use given to it, and its protection.
             </p>
           </section>
 

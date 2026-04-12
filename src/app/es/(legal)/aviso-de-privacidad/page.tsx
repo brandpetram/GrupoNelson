@@ -31,7 +31,7 @@ export default function AvisoDePrivacidadPage() {
         <section className="space-y-4">
           <h2 className="text-lg font-medium text-foreground tracking-tight">Identidad y domicilio del responsable</h2>
           <p>
-            Parque Industrial Nelson S.A. de C.V. (en adelante, &quot;Grupo Nelson&quot;), con domicilio en Blvd. Lázaro Cárdenas 9850, Mexicali, Baja California, México, y correo electrónico <a href="mailto:contacto@nelson.com.mx" className="text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground transition-colors">contacto@nelson.com.mx</a> es el responsable de recabar sus datos personales, el uso que se le dé a los mismos y de su protección.
+            Parque Industrial Nelson S.A. de C.V. (en adelante, &quot;Grupo Nelson&quot;), con domicilio en Ave. Reforma #1699, Col. Nueva, Mexicali, BC, México 21100, y correo electrónico <a href="mailto:contacto@nelson.com.mx" className="text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground transition-colors">contacto@nelson.com.mx</a> es el responsable de recabar sus datos personales, el uso que se le dé a los mismos y de su protección.
           </p>
         </section>
 

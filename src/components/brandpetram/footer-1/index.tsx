@@ -350,7 +350,7 @@ export default function Footer1({ lang = 'es' }: { lang?: Lang }) {
                 <p>{addressLabel}</p>
                 <p>Ave. Reforma #1699, Col. Nueva</p>
                 <p>Mexicali, BC, México 21100</p>
-                <p>(686) 561-3535</p>
+                <p>(686) 553-4088</p>
               </div>
             </div>
 
