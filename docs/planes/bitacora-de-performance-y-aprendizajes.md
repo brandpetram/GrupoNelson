@@ -153,14 +153,14 @@ Causas posibles del paint delay (por investigar):
 1. **Lazy load de logos:** 27 imágenes que antes se descargaban inmediatamente ahora esperan a estar en viewport. Esto liberó bandwidth y main thread para que el browser pudiera pintar el H1 más rápido.
 2. **Hero poster como `<Image>`:** Next.js ahora sirve el poster en avif/webp optimizado con `priority`, lo que le da al preload scanner del browser una imagen más liviana y descubrible temprano.
 
-El render delay bajó de 2,334ms a 1,431ms — la liberación de recursos por lazy loading de logos fue el factor principal. El LCP bajó de 9.5s a 3.2s, y el score subió de 71 a 92.
+El render delay bajó de 2,334ms a 1,431ms. Ambos cambios (lazy logos + poster como `<Image>`) se aplicaron juntos, así que no se puede aislar cuál tuvo más impacto. La mejora está correlacionada con estos fixes pero no confirmada como causal de uno solo de ellos.
 
 **Estado actual:** El score de 92 **supera el target de 90+** para el homepage EN. El LCP de 3.2s todavía está por encima del target ideal de 2.5s pero dentro del rango "needs improvement" (2.5-4.0s), no "poor" (>4.0s).
 
 **Siguiente paso para llegar a LCP <2.5s:**
 - El render delay restante (1,431ms) sigue siendo el bloqueador
-- El render-blocking CSS (740ms) es la próxima oportunidad: dos chunks CSS suman 50 KB y bloquean ~740ms
-- Investigar si se puede inline el CSS crítico o reducir el tamaño del chunk CSS principal (49 KB)
+- **Imágenes no-LCP tempranas todavía presentes:** `ticker-overflow.tsx` (línea 30) renderiza logos con `motion.img` sin `loading="lazy"`. También hay preloads de `/logos-clientes/*.svg` que siguen apareciendo en producción. Y `Header.tsx` emite imágenes `/Seleccionadas/*` crudas. Antes de saltar a CSS, confirmar si estas fugas residuales siguen empujando el render delay.
+- **Render-blocking CSS** (740ms): dos chunks CSS suman 50 KB y bloquean ~740ms. Es la siguiente rama si las imágenes tempranas ya no explican el delay restante.
 
 ---
 
@@ -182,9 +182,9 @@ El H1 sí viene en el HTML SSR (verificado con `curl`). El render delay de 2.3s 
 
 Bajar 2 MB de payload (video duplicado, banderas gigantes) no movió el LCP ni el element render delay. Son problemas independientes: payload afecta Speed Index y TTI, render delay afecta LCP. No confundir los dos.
 
-### 5. Imágenes no-LCP below-the-fold son el bloqueador silencioso del LCP (2026-04-12)
+### 5. Imágenes no-LCP tempranas correlacionan con render delay alto (2026-04-12)
 
-27 logos SVG sin `loading="lazy"` se descargaban en el initial load y competían por bandwidth y main thread con el H1 (el LCP element). Al agregar `loading="lazy"`, el render delay bajó de 2,334ms a 1,431ms y el score subió de 71 a 92. **Las imágenes no-LCP que se cargan temprano son tan dañinas como tener un LCP element pesado.** Siempre verificar que solo las imágenes above-the-fold críticas se cargan sin lazy.
+27 logos SVG en `logo-cloud.tsx` no tenían `loading="lazy"` y se descargaban en el initial load. Después de agregar lazy loading + migrar el poster a `<Image>`, el render delay bajó de 2,334ms a 1,431ms y el score subió de 71 a 92. **Correlación fuerte, pero causalidad no aislada** — ambos cambios se aplicaron juntos. Además, quedan fugas residuales: `ticker-overflow.tsx` también renderiza logos sin lazy, y hay preloads de `/logos-clientes/*` en producción. Antes de cerrar esta rama, confirmar que no quedan imágenes tempranas no-LCP compitiendo por recursos.
 
 ### 6. Migrar `<img>` a `<Image>` de Next.js tiene impacto real en payload (2026-04-12)
 
@@ -192,7 +192,7 @@ El hero poster pasó de `<img>` nativo (183 KB JPEG sin optimización) a `<Image
 
 ### 7. Los fixes que parecen obvios no siempre son los que mueven la aguja (2026-04-12)
 
-La animación del hero, el video duplicado y el payload excesivo parecían las causas obvias. Ninguno movió el LCP significativamente. Lo que sí funcionó fue lazy-loading de 27 logos SVG que nadie había identificado como problema. **Medir después de cada fix, no asumir impacto por intuición.**
+La animación del hero, el video duplicado y el payload excesivo parecían las causas obvias. Ninguno movió el LCP significativamente. La combinación de lazy-loading de logos + migración de poster a `<Image>` correlacionó con la mejora real. **Medir después de cada fix, no asumir impacto por intuición.**
 
 ### 8. Videos duplicados en PSI: puede ser artefacto o bug real — no cerrar prematuramente (2026-04-12)
 
