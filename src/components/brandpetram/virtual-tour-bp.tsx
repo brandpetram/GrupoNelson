@@ -36,7 +36,7 @@ export function VirtualTourBP({
           </p>
         )}
       </div>
-      <div className="w-full px-10 overflow-hidden">
+      <div className="w-full overflow-hidden">
         <iframe
           src={`https://app.cloudpano.com/tours/${tourId}?disable=logo,sound,ribbon,request,leadgen,floorplan,watermark${sceneId ? `&sceneId=${sceneId}` : ''}`}
           width="100%"
