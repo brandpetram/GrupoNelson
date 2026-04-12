@@ -69,7 +69,30 @@ Esto es el mismo patrón que el homepage: contenido animado con motion/react que
 
 ---
 
-## Estrategia: Fixes ordenados por impacto
+## Estrategia
+
+### Enfoque: página por página, con aprendizajes acumulados
+
+No vamos a optimizar todo el sitio de golpe. Vamos a ir **página por página**, comenzando por el homepage. Cada página optimizada genera aprendizajes que se aplican a la siguiente — patrones que se repiten, fixes que se pueden replicar, trampas que hay que evitar.
+
+**Dos documentos de trabajo:**
+
+| Documento | Propósito |
+|---|---|
+| **Este plan** (`plan-para-lighthouse-100.md`) | Qué hacer, en qué orden, qué medir |
+| **Bitácora** (`docs/planes/bitacora-de-performance-y-aprendizajes.md`) | Qué hicimos en cada página, qué aprendimos, qué cambiaríamos |
+
+El plan define la estrategia. La bitácora documenta la ejecución real — decisiones tomadas, scores antes/después, sorpresas, y aprendizajes que informan las siguientes páginas. Antes de optimizar una página nueva, revisar la bitácora para no repetir errores y reutilizar lo que funcionó.
+
+**Orden de páginas:**
+1. Homepage EN (`/`) — comenzar aquí porque tiene el diagnóstico más completo
+2. Homepage ES (`/es`) — aplicar los mismos aprendizajes del EN
+3. `/es/constructora/diseno-e-ingenieria` — caso más severo (LCP 14s), pero requiere fix de componente compartido
+4. Resto de páginas pesadas (batch de Fase 2)
+
+---
+
+## Fixes ordenados por impacto
 
 ### Fase 1: LCP del homepage (9.5s → <2.5s)
 
