@@ -38,7 +38,12 @@ function LogoCliente({ src }: { src: string }) {
     )
 }
 
-export default function TickerOverflow() {
+const tickerTitle = {
+    es: <>Clientes de Clase Mundial confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson:</span></>,
+    en: <>World-class clients trust <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson:</span></>,
+}
+
+export default function TickerOverflow({ lang = 'es' }: { lang?: 'en' | 'es' }) {
     // Todos los logos disponibles
     const todosLosLogos = [
         { src: "logo-gulfstream-2.svg", key: "13" },
@@ -87,8 +92,7 @@ export default function TickerOverflow() {
 
             <div className={'ml-40 1920:ml-60 mb-28'}><h2
                 className="768:mt-5 834:mt-5 1024:mt-6 1200:mt-5 1280:mt-5 1366:mt-5 1440:mt-6 1536:mt-6 1728:mt-6 1920:mt-6 text-4xl 360:text-5xl 393:text-5xl 430:text-[3.5rem] 768:text-7xl 834:text-7xl 1024:text-8xl 1200:text-[3rem] 1280:text-[3.3rem] 1366:text-[3.5rem] 1440:text-[3.5rem] 1536:text-[5.3rem] 1728:text-[6rem] 1920:text-[5rem] font-medium text-foreground leading-none tracking-tighter text-balance w-10/12">
-                Clientes de Clase Mundial confían en <span
-                className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson:</span>
+                {tickerTitle[lang]}
             </h2></div>
 
             {/* Primer ticker - RTL (izquierda) */}

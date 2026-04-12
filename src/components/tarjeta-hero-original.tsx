@@ -8,6 +8,10 @@ interface TarjetaHeroOriginalProps {
   badge2?: string
   titulo?: React.ReactNode
   descripcion?: string
+  ctaPrimaryText?: string
+  ctaPrimaryHref?: string
+  ctaSecondaryText?: string
+  ctaSecondaryHref?: string
 }
 
 export function TarjetaHeroOriginal({
@@ -15,6 +19,10 @@ export function TarjetaHeroOriginal({
   badge2 = "Sustainable Design",
   titulo = "Parques Industriales y Naves Built‑to‑Suit en Mexicali",
   descripcion = "60 años creando soluciones llave en mano para empresas globales en parques y espacios industriales en Mexicali",
+  ctaPrimaryText = "Conocer más",
+  ctaPrimaryHref = "/nelson/diferencia-nelson",
+  ctaSecondaryText = "Contactar",
+  ctaSecondaryHref = "/contacto",
 }: TarjetaHeroOriginalProps) {
   return (
     <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-md 1200:max-w-2xl mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
@@ -42,7 +50,7 @@ export function TarjetaHeroOriginal({
       {/* Botones CTA */}
       <div className="flex flex-col sm:flex-row gap-4">
         <Button asChild size="lg" className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto">
-          <a href="/nelson/diferencia-nelson">Conocer más</a>
+          <a href={ctaPrimaryHref}>{ctaPrimaryText}</a>
         </Button>
         <Button
           asChild
@@ -50,8 +58,8 @@ export function TarjetaHeroOriginal({
           variant="ghost"
           className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto text-white border border-white/20 hover:bg-white/10 hover:text-white"
         >
-          <a href="/contacto">
-            <span>Contactar</span>
+          <a href={ctaSecondaryHref}>
+            <span>{ctaSecondaryText}</span>
             <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 1024:h-6 1024:w-6 1200:h-5 1200:w-5 1280:h-5 1280:w-5 1366:h-5 1366:w-5 1440:h-6 1440:w-6 1536:h-6 1536:w-6 1728:h-6 1728:w-6 1920:h-7 1920:w-7" />
           </a>
         </Button>

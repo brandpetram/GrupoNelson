@@ -65,6 +65,10 @@ export default function HomeClient() {
             badge2="33 International Corporations"
             titulo={<>Industrial Parks and <span className="whitespace-nowrap">Built‑to‑Suit</span> Buildings Across Mexicali</>}
             descripcion="60 years developing industrial infrastructure on the California border. Gulfstream, Honeywell, General Dynamics and DHL already operate here."
+            ctaPrimaryText="Learn More"
+            ctaPrimaryHref="/about/difference"
+            ctaSecondaryText="Contact"
+            ctaSecondaryHref="/contact"
           />
         </HeroVideoCover>
 
@@ -103,6 +107,7 @@ export default function HomeClient() {
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP
           descripcion="The family that established Mexicali's first maquiladora in 1965 still operates personally. 4 parks, 33 international corporations and long-term relationships measured in decades."
+          lang="en"
         />
       </div>
 
