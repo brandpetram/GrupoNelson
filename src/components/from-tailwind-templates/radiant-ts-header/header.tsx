@@ -84,7 +84,7 @@ export function Header({
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
                 alt="Parque Industrial Mexicali - Nave industrial moderna"
-                src="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-18.jpg"
+                src="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-64.jpg"
                 className="block size-full object-cover"
               />
             </div>
@@ -98,14 +98,14 @@ export function Header({
             <div className="aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <img
                 alt="Parque Industrial Mexicali - Infraestructura industrial"
-                src="/Seleccionadas/nave-industrial-en-parque-industrial-nelson2-11.jpeg"
+                src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-8.jpeg"
                 className="block size-full object-cover"
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-sm shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
               <img
                 alt="Parque Industrial Mexicali - Espacios industriales modernos"
-                src="/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-5.jpeg"
+                src="/Seleccionadas/puente-skyworks-2.jpg"
                 className="block size-full object-cover"
               />
             </div>
