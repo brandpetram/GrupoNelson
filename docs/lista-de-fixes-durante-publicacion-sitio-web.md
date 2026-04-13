@@ -106,3 +106,31 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 74. Se asignó "Staff Redaccion" como autor a las 12 noticias en Sanity — todas estaban sin autor asignado.
 75. Se cerró el fail-open de `/admin` en `proxy.ts` — sin `INSTRUCCIONES_PASSWORD` configurada, el proxy dejaba pasar a cualquiera. Ahora devuelve 503. Se reordenó el proxy para verificar la env var antes de exceptuar `/admin/login`. Se extrajo `computeHmac` a helper compartido y se agregó logout.
 76. Se corrigió que todos los botones `<Button><Link>` del sitio tenían el `Link` anidado dentro del `Button` sin `asChild`, generando HTML inválido (`<button><a>`) — el área clickeable se limitaba al texto, requiriendo múltiples intentos para hacer clic. Se agregó `asChild` a 7 archivos: heroes y CTAs de casos-de-éxito/success-stories (ES + EN), botón RSS de blog y noticias, y botón CTA del componente content-text-1.
+77. Se eliminó el badge "4 Industrial Parks" / "4 Parques Industriales" del hero del home (ES + EN), conservando solo el badge de corporaciones. Se refactorizó el componente TarjetaHeroOriginal y TarjetaHeroOriginalBeta a una sola prop `badge` opcional.
+78. Se acortó la descripción del hero del home — se eliminó el listado de clientes (Rheem, Honeywell, etc.) y se dejó solo "Developing and leasing industrial properties on the California border."
+79. Se eliminaron los dos puntos del título del ticker de logos "Clientes confían en Grupo Nelson:" → "Grupo Nelson" (ES + EN).
+80. Se eliminaron los logos de Dentsply Sirona e IVEMSA del ticker de logos en desktop (TickerOverflow) y del carrusel de logos en móvil (LogoCloud).
+81. Se corrigieron las fotos de las cards de parques en el home (ES + EN): Nelson II usa imagen estática en vez de video; Nelson I usa la foto de su hero en Sanity; Vigía I y Vigía II usan las fotos correctas de cada parque.
+82. Se recortó el video del flyout "About" del Header de 5 segundos a 2 segundos y se quitó el loop — ahora se reproduce una vez y se detiene.
+83. Se eliminó la mención de "subestación eléctrica dedicada" en todo el sitio (dato incorrecto) — corregido en 8 archivos (ES + EN): home, nuestra-historia/our-story, eta, radiant-header.
+84. Se corrigió el dato canónico de generaciones de la familia fundadora de 4 a 3 — actualizado en 18 archivos del sitio (ES + EN) y en `aclaraciones-canonicas.md`.
+85. Se actualizó el dato canónico de parques industriales de 4 a 5 — corregido en 17 archivos del sitio (ES + EN) y en `aclaraciones-canonicas.md`.
+86. Se cambió el stat de corporaciones internacionales de "30" a "30+" en la página de trayectoria y en los defaults del componente StatsGridBPGamma (ES + EN).
+87. Se cambió el stat "4M ft²" a "4M+" en la página de trayectoria y defaults del componente (ES + EN).
+88. Se cambió el stat "clients who renew their lease" / "clientes que renuevan contrato" a "repeat business" (ES + EN).
+89. Se eliminó "by Baumex" / "por Baumex" del stat de proyectos construidos (ES + EN).
+90. Se eliminó "operating here" / "operando aquí" del stat de empresas Fortune 500 (ES + EN).
+91. Se actualizó el editorial de trayectoria: "Three generations serving world-class international companies in Mexicali" en vez de "Four generations building..." (ES + EN).
+92. Se actualizó el título del editorial cascada: "From the first maquiladora in Mexicali to nesting some of the most complex industrial projects in the city" (ES + EN).
+93. Se actualizó el texto de nuestra-historia/our-story para mencionar 5 parques — el cuarto con nuevos estándares de infraestructura y el quinto en etapa de planeación (ES + EN).
+94. Se cambió "problems" a "challenges" / "problemas" a "retos" en el h1 de proyectos especializados (ES + EN).
+95. Se actualizó la descripción del componente AlphaBP en el home: "The family that established Mexicali's first maquiladora in 1965 remains actively involved today establishing long-term relationships measured in decades" (ES + EN).
+96. Se agregaron subtítulos "Existing Buildings for Lease" / "Naves Existentes en Renta" y "Custom Build-to-Suit" / "Construcción a la Medida" en la sección RadiantHeader del home (ES + EN).
+97. Se actualizó el párrafo de naves disponibles en RadiantHeader para reflejar que el sistema contraincendio centralizado está en 3 parques (Nelson I, Nelson II y El Vigía I) y que Nelson II tiene línea dedicada para energía KVAS (ES + EN).
+98. Se actualizó el párrafo de construcción build-to-suit en RadiantHeader: "Our in-house construction team, with 30 years of experience and over 75 completed projects, designs and delivers under a single contract" (ES + EN).
+99. Se eliminó el lead/subtítulo largo del RadiantHeader en home EN ("Gulfstream has been with us...").
+100. Se eliminó el badge "33 International Corporations" / "33 Corporaciones Internacionales" del hero del home (ES + EN).
+101. Se redujo el ancho del div azul del hero del home — de `max-w-md 1200:max-w-2xl` a `max-w-sm 1200:max-w-xl`.
+102. Se actualizó la descripción del hero del home a "60 years developing industrial projects and facilities on the Baja California border" (ES + EN).
+103. Se documentó la aclaración canónica #18: sistema contraincendio centralizado en N1, N2 y V1 + línea dedicada KVAS exclusiva de Nelson II.
+104. Se escribió y publicó en Sanity la noticia "Grupo Nelson Lanza su Nuevo Sitio Web Corporativo con Enfoque en el Mercado Internacional" — reemplazando el lorem ipsum con contenido editorial real de ~800 palabras.
