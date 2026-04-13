@@ -55,6 +55,7 @@ export function HeroMarketing1Beta() {
           <div className="">
             <div className="flex flex-wrap items-center gap-8 mb-8">
               <Button
+                asChild
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-base px-8 py-6 font-semibold"
               >
@@ -112,6 +113,7 @@ export function HeroMarketing1Beta() {
             </p>
             <div className="pt-4">
               <Button
+                asChild
                 size="lg"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-base py-6 font-semibold"
               >

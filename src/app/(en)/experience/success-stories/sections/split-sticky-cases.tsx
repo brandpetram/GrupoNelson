@@ -180,12 +180,14 @@ export function SplitStickyCases() {
             {/* 2 CTAs below the image */}
             <div className="flex flex-col gap-3 mt-6">
               <Button
+                asChild
                 size="lg"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-base py-6 font-semibold"
               >
                 <Link href="/contact">Request a consultation</Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="w-full text-base py-6 font-semibold"

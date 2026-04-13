@@ -54,6 +54,7 @@ export const BlogFilter = ({ categories, posts }: BlogFilterProps) => {
 
                 <div className="flex gap-1 max-md:pr-3">
                     <Button
+                        asChild
                         size="sm"
                         variant="ghost"
                         aria-label="RSS Feed">

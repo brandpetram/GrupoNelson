@@ -182,12 +182,14 @@ export function SplitStickyCasos() {
             {/* 2 CTAs debajo de la imagen */}
             <div className="flex flex-col gap-3 mt-6">
               <Button
+                asChild
                 size="lg"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-base py-6 font-semibold"
               >
                 <Link href="/contacto">Solicita una consulta</Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="w-full text-base py-6 font-semibold"

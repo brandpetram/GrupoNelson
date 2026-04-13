@@ -60,6 +60,7 @@ export const BlogFilter = ({ categories, posts }: BlogFilterProps) => {
                         posts={posts}
                     />
                     <Button
+                        asChild
                         size="sm"
                         variant="ghost"
                         aria-label="RSS Feed">
