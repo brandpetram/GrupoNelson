@@ -226,25 +226,25 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
           card1Titulo={<>Parque Industrial<br/>Nelson II</>}
           card1BotonTexto="Ver especificaciones"
           card1BotonHref="/parques-industriales-mexicali/nelson-ii"
-          card1VideoSrc="/parques-industriales-mexicali-nelson-3-optimizado.mp4"
-          card1VideoPoster="/hero-poster-0.jpg"
+          card1ImagenSrc="/parque-industrial-nelson-2-en-mexicali.jpeg"
+          card1ImagenAlt="Parque Industrial Nelson II en Mexicali"
 
           card2Titulo={<>Parque Industrial<br/>Nelson I</>}
           card2BotonTexto="Ver más"
           card2BotonHref="/parques-industriales-mexicali/nelson-i"
-          card2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-2.jpeg"
+          card2ImagenSrc="/parque-industrial-nelson-1-en-mexicali.jpeg"
           card2ImagenAlt="Parque Industrial Nelson I en Mexicali"
 
           card3Titulo={<>Parque Industrial<br/>El Vigía I</>}
           card3BotonTexto="Ver especificaciones"
           card3BotonHref="/parques-industriales-mexicali/vigia-i"
-          card3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-4.jpeg"
+          card3ImagenSrc="/parque-industrial-el-vigia-1-mexicali.jpg"
           card3ImagenAlt="Parque Industrial El Vigía I en Mexicali"
 
           card4Titulo={<>Parque Industrial<br/>El Vigía II</>}
           card4BotonTexto="Ver especificaciones"
           card4BotonHref="/parques-industriales-mexicali/vigia-ii"
-          card4ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-6.jpeg"
+          card4ImagenSrc="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
           card4ImagenAlt="Parque Industrial El Vigía II en Mexicali"
 
           card5Titulo={<>Honeywell<br/>en Mexicali</>}

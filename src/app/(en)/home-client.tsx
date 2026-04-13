@@ -385,25 +385,25 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
           card1Titulo={<>Nelson II<br/>Industrial Park</>}
           card1BotonTexto="View specifications"
           card1BotonHref="/industrial-parks/nelson-ii"
-          card1VideoSrc="/parques-industriales-mexicali-nelson-3-optimizado.mp4"
-          card1VideoPoster="/hero-poster-0.jpg"
+          card1ImagenSrc="/parque-industrial-nelson-2-en-mexicali.jpeg"
+          card1ImagenAlt="Nelson II Industrial Park in Mexicali"
 
           card2Titulo={<>Nelson I<br/>Industrial Park</>}
           card2BotonTexto="Learn more"
           card2BotonHref="/industrial-parks"
-          card2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-2.jpeg"
+          card2ImagenSrc="/parque-industrial-nelson-1-en-mexicali.jpeg"
           card2ImagenAlt="Nelson I Industrial Park in Mexicali"
 
           card3Titulo={<>El Vigia I<br/>Industrial Park</>}
           card3BotonTexto="View specifications"
           card3BotonHref="/industrial-parks"
-          card3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-4.jpeg"
+          card3ImagenSrc="/parque-industrial-el-vigia-1-mexicali.jpg"
           card3ImagenAlt="El Vigia I Industrial Park in Mexicali"
 
           card4Titulo={<>El Vigia II<br/>Industrial Park</>}
           card4BotonTexto="View specifications"
           card4BotonHref="/industrial-parks"
-          card4ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-6.jpeg"
+          card4ImagenSrc="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
           card4ImagenAlt="El Vigia II Industrial Park in Mexicali"
 
           card5Titulo={<>Honeywell<br/>in Mexicali</>}

@@ -17,6 +17,8 @@ interface CincoCardsConPropsProps {
   card1Titulo?: ReactNode
   card1BotonTexto?: string
   card1BotonHref?: string
+  card1ImagenSrc?: string
+  card1ImagenAlt?: string
   card1VideoSrc?: string
   card1VideoPoster?: string
 
@@ -55,6 +57,8 @@ export function CincoCardsConProps({
   card1Titulo = <>Card<br/>Uno</>,
   card1BotonTexto = "Ver más",
   card1BotonHref = "#",
+  card1ImagenSrc = "",
+  card1ImagenAlt = "",
   card1VideoSrc = "",
   card1VideoPoster = "",
   card2Titulo = <>Card<br/>Dos</>,
@@ -101,9 +105,13 @@ export function CincoCardsConProps({
             </a>
           </div>
           <div className="relative aspect-square bg-black">
-            <video className="w-full h-full object-cover" autoPlay loop muted playsInline controls={false} poster={card1VideoPoster}>
-              <source src={card1VideoSrc} type="video/mp4" />
-            </video>
+            {card1VideoSrc ? (
+              <video className="w-full h-full object-cover" autoPlay loop muted playsInline controls={false} poster={card1VideoPoster}>
+                <source src={card1VideoSrc} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={card1ImagenSrc} alt={card1ImagenAlt} className="w-full h-full object-cover" />
+            )}
           </div>
         </div>
 
