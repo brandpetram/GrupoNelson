@@ -43,9 +43,7 @@ export default function BaumexPage() {
         <Pi lang="en" />
       </div>
 
-      <div className="container mx-auto mt-20">
-        <Rho lang="en" />
-      </div>
+      <Rho lang="en" />
 
       <div className="container mx-auto mt-20">
         <Sigma lang="en" />

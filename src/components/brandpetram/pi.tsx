@@ -7,7 +7,7 @@ const text = {
   es: {
     heading: <>Nos hemos profesionalizado con{" "}<span className="font-bold text-blue-600 uppercase">estándares LEED</span>{" "}para construir naves que reducen consumo energético, recuperan el 90% del agua de condensación en torres de enfriamiento y generan hasta 10 MW de energía solar limpia desde la cubierta y los carports del estacionamiento.</>,
     labelDesktop: 'Arquitectura Industrial',
-    bigTextDesktop: 'Funciona y se Ve Bien.',
+    bigTextDesktop: 'Espacios Industriales donde Funcionalidad y Arquitectura se Encuentran.',
     labelMobile: 'Arquitectura Industrial',
     bigTextMobile: 'Fachadas, oficinas y áreas de producción diseñadas para funcionar y para verse bien.',
     imgAlt: 'Nave industrial',
@@ -15,7 +15,7 @@ const text = {
   en: {
     heading: <>We have professionalized with{" "}<span className="font-bold text-blue-600 uppercase">LEED standards</span>{" "}to build facilities that reduce energy consumption, recover 90% of condensation water in cooling towers, and generate up to 10 MW of clean solar energy from rooftops and parking carports.</>,
     labelDesktop: 'Industrial Architecture',
-    bigTextDesktop: 'It Works and Looks Good.',
+    bigTextDesktop: 'Industrial Spaces Where Function Meets Design.',
     labelMobile: 'Industrial Architecture',
     bigTextMobile: 'Facades, offices, and production areas designed to perform and to impress.',
     imgAlt: 'Industrial building in Mexicali',
@@ -38,13 +38,13 @@ export default function Pi({ lang = 'es' }: { lang?: 'en' | 'es' }) {
 
       {/* Desktop: imagen con texto superpuesto */}
       <div className="w-9/12 hidden md:block lg:max-w-4xl xl:max-w-6xl 1728:max-w-[1400px] 1920:max-w-[1600px] mx-auto relative">
-        <div className="flex flex-col text-foreground bg-white/40 backdrop-blur-sm pt-8 pb-16 px-5 overflow-hidden w-[11rem] md:w-[13rem] lg:w-[13rem] xl:w-[14rem] 1366:w-[15rem] 1440:w-[16rem] 1536:w-[18rem] 1728:w-[22rem] 1920:w-[26rem] aspect-[4/5] z-10 absolute left-0 -translate-x-1/4   md:top-1/2 1200:top-1/3 -translate-y-1/2 rounded-xs">
+        <div className="flex flex-col text-foreground dark:text-[#0a1628] bg-white/40 backdrop-blur-sm pt-8 pb-16 px-5 overflow-hidden w-[11rem] md:w-[13rem] lg:w-[13rem] xl:w-[14rem] 1366:w-[15rem] 1440:w-[16rem] 1536:w-[18rem] 1728:w-[22rem] 1920:w-[26rem] aspect-[4/5] z-10 absolute left-0 -translate-x-1/4   md:top-1/2 1200:top-1/3 -translate-y-1/2 rounded-xs">
           {/* Label arriba */}
-          <h3 className="text-xs 768:text-sm 1728:text-base uppercase font-semibold tracking-wider text-foreground">
+          <h3 className="text-xs 768:text-sm 1728:text-base uppercase font-semibold tracking-wider">
             {t.labelDesktop}
           </h3>
-          {/* Texto grande — empujado hacia abajo pero no pegado al fondo */}
-          <h2 className="mt-auto text-foreground text-xl 768:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.3rem] 1280:text-[1.4rem] 1366:text-[1.5rem] 1440:text-[1.5rem] 1536:text-[2.3rem] 1728:text-[2.8rem] 1920:text-[3.2rem] font-extrabold leading-none tracking-tight">
+          {/* Texto grande — debajo del label con espacio natural */}
+          <h2 className="mt-4 text-xl 768:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.3rem] 1280:text-[1.4rem] 1366:text-[1.5rem] 1440:text-[1.5rem] 1536:text-[2.3rem] 1728:text-[2.8rem] 1920:text-[3.2rem] font-extrabold leading-none tracking-tight">
             {t.bigTextDesktop}
           </h2>
         </div>
@@ -58,7 +58,7 @@ export default function Pi({ lang = 'es' }: { lang?: 'en' | 'es' }) {
 
       {/* Mobile: imagen con texto superpuesto */}
       <div className="md:hidden relative pt-10">
-          <div className="flex flex-col text-foreground bg-white/40 backdrop-blur-sm pt-8 pb-16 px-5 overflow-hidden w-[11rem] md:w-[13rem] lg:w-[13rem] xl:w-[14rem] 1366:w-[15rem] 1440:w-[16rem] 1536:w-[18rem] 1728:w-[22rem] 1920:w-[26rem] aspect-[4/5] z-10 absolute left-0  rounded-xs">
+          <div className="flex flex-col text-foreground dark:text-[#0a1628] bg-white/40 backdrop-blur-sm pt-8 pb-16 px-5 overflow-hidden w-[11rem] md:w-[13rem] lg:w-[13rem] xl:w-[14rem] 1366:w-[15rem] 1440:w-[16rem] 1536:w-[18rem] 1728:w-[22rem] 1920:w-[26rem] aspect-[4/5] z-10 absolute left-0  rounded-xs">
           <h3 className="text-xs uppercase font-extrabold">{t.labelMobile}</h3>
           <h2 className="mt-5 pl-3 pb-5 text-xl 360:text-[1.2rem] 393:text-[1.2rem] 430:text-[1.2rem]  font-bold leading-none">
            {t.bigTextMobile}
