@@ -96,3 +96,12 @@ Fixes, correcciones y mejoras aplicadas durante la semana de publicación del si
 67. Se corrigió el hook `check-worktree-clean.sh` que bloqueaba commits en el repo principal (MAIN) — solo debía bloquear en worktrees reales. Ahora distingue MAIN de worktrees comparando `git-dir` vs `git-common-dir`.
 68. Se corrigió la imagen grande del home (Nelson II) que no se renderizaba en móvil en producción — el contenedor tenía `h-full` que colapsaba a 0px sin parent con altura. Se quitó `h-full` para que `aspect-square` defina el tamaño (ES + EN).
 69. Se corrigió el overflow de contenido en las páginas de blog en móvil — texto e imágenes se cortaban por fuera del viewport. Se agregó `min-w-0` al grid item del post y `w-full` a las imágenes de Portable Text.
+
+## 13 de abril
+
+70. Se corrigió el posicionamiento del texto "Funciona y se Ve Bien" / "It Works and Looks Good" en el componente Pi — tenía `mt-auto` que lo empujaba al fondo del contenedor. Se cambió a `mt-4` para flujo natural debajo del label.
+71. Se actualizó el copy desktop de Pi: ES → "Espacios Industriales donde Funcionalidad y Arquitectura se Encuentran." / EN → "Industrial Spaces Where Function Meets Design."
+72. Se corrigió el color del texto overlay de Pi en dark mode — usaba `text-foreground` (blanco) en vez del color del dark bg (`#0a1628`) para mejor contraste sobre el fondo semi-transparente.
+73. Se corrigió el componente Rho que no era full-width — estaba envuelto en un `container mx-auto` en ambas páginas de Baumex (ES + EN) que le ponía `max-width`.
+74. Se asignó "Staff Redaccion" como autor a las 12 noticias en Sanity — todas estaban sin autor asignado.
+75. Se cerró el fail-open de `/admin` en `proxy.ts` — sin `INSTRUCCIONES_PASSWORD` configurada, el proxy dejaba pasar a cualquiera. Ahora devuelve 503. Se reordenó el proxy para verificar la env var antes de exceptuar `/admin/login`. Se extrajo `computeHmac` a helper compartido y se agregó logout.

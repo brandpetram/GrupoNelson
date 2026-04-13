@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { logoutAction } from './login/actions'
 
 const navigation = [
   {
@@ -126,6 +127,15 @@ export default function AdminLayout({
               </svg>
               Volver al sitio
             </Link>
+            <div className="h-4 w-px bg-border/50" />
+            <form action={logoutAction}>
+              <button
+                type="submit"
+                className="flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground hover:bg-muted"
+              >
+                Cerrar sesión
+              </button>
+            </form>
             <div className="h-4 w-px bg-border/50" />
             <ThemeToggle />
 

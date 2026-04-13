@@ -2,6 +2,11 @@
 
 Este es un sitio web de cliente construido con componentes de `@brandpetram/componentes-2026`.
 
+## Sanity
+
+- **Project ID:** `rnz30p1s`
+- **Dataset:** `production`
+
 ## Orígenes de Componentes y Brandpetramización
 
 ### Biblioteca Multi-origen

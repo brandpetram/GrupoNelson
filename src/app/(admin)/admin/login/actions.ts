@@ -1,12 +1,8 @@
 'use server'
 
 import { cookies } from 'next/headers'
-import { createHmac } from 'crypto'
 import { redirect } from 'next/navigation'
-
-function computeHmac(password: string): string {
-  return createHmac('sha256', password).update('admin-auth-v1').digest('hex')
-}
+import { computeHmac } from '@/lib/admin-auth'
 
 export async function loginAction(formData: FormData) {
   const password = formData.get('password') as string
@@ -28,4 +24,10 @@ export async function loginAction(formData: FormData) {
   })
 
   redirect('/admin')
+}
+
+export async function logoutAction() {
+  const cookieStore = await cookies()
+  cookieStore.delete('admin-auth')
+  redirect('/admin/login')
 }

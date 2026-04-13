@@ -1,35 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createHmac } from 'crypto'
-
-function computeHmac(password: string): string {
-  return createHmac('sha256', password).update('admin-auth-v1').digest('hex')
-}
+import { computeHmac } from '@/lib/admin-auth'
 
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
 
-  // Solo interceptar rutas /admin/*
+  // 1. Solo interceptar rutas /admin/*
   if (!path.startsWith('/admin')) {
     return NextResponse.next()
   }
 
-  // Dejar pasar la página de login (evita loop de redirect)
-  if (path === '/admin/login') {
-    return NextResponse.next()
-  }
-
-  // Dejar pasar la API action de login
-  if (path.startsWith('/admin/login/')) {
-    return NextResponse.next()
-  }
-
+  // 2. Verificar que la env var existe ANTES de exceptuar login
   const password = process.env.INSTRUCCIONES_PASSWORD
   if (!password) {
-    // Si no hay contraseña configurada, dejar pasar (dev sin .env.local)
+    return new NextResponse(
+      'Admin no disponible: INSTRUCCIONES_PASSWORD no está configurada.',
+      { status: 503 }
+    )
+  }
+
+  // 3. Dejar pasar login (la env var ya existe)
+  if (path === '/admin/login' || path.startsWith('/admin/login/')) {
     return NextResponse.next()
   }
 
-  // Verificar cookie HMAC
+  // 4. Verificar cookie HMAC
   const cookie = request.cookies.get('admin-auth')
   const expectedHmac = computeHmac(password)
 
