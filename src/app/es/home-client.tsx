@@ -97,7 +97,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Componente Alpha - Resumen de identidad y oferta */}
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP
-          descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. 4 parques, 33 corporaciones internacionales y relaciones de largo plazo que se miden en décadas."
+          descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue activamente involucrada hoy, estableciendo relaciones de largo plazo que se miden en décadas."
         />
       </div>
 
@@ -108,7 +108,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       <div className={'w-full p-10 mx-auto mt-32 relative'}>
               <Mosaico2ConProps
                   bloque1Titulo="Naves Disponibles"
-                  bloque1Descripcion="4 parques en Mexicali con naves listas para operar — desde El Vigía hasta Nelson II"
+                  bloque1Descripcion="5 parques en Mexicali con naves listas para operar — desde El Vigía hasta Nelson II"
                   bloque1LinkTexto="Ver parques"
                   bloque1LinkHref="/parques-industriales-mexicali"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
@@ -116,7 +116,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                   bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
                   bloque3ImagenAlt="Interior de nave industrial en Mexicali"
                   bloque4Titulo="¿Buscas espacio industrial?"
-                  bloque4Descripcion="Consulta disponibilidad en nuestros 4 parques"
+                  bloque4Descripcion="Consulta disponibilidad en nuestros 5 parques"
                   bloque4LinkTexto="Contactar"
                   bloque4LinkHref="/contacto"
                   imagenDerechaSrc="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-54.jpg"
@@ -189,12 +189,12 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 1,
               question: "¿Qué tipos de naves industriales ofrecen?",
-              answer: "Naves en renta y construcción build-to-suit en nuestros 4 parques industriales de Mexicali. Desde espacios renovados en El Vigía hasta naves de clase mundial en Nelson II, con alturas libres de hasta 28 ft y cumplimiento de códigos IBC.",
+              answer: "Naves en renta y construcción build-to-suit en nuestros 5 parques industriales de Mexicali. Desde espacios renovados en El Vigía hasta naves de clase mundial en Nelson II, con alturas libres de hasta 28 ft y cumplimiento de códigos IBC.",
             },
             {
               id: 2,
               question: "¿Dónde están sus parques industriales?",
-              answer: "Operamos 4 parques en Mexicali, B.C., en la frontera con California: El Vigía I, El Vigía II, Nelson I y Nelson II. Nelson II es el más moderno: 27 hectáreas con sistema contraincendio centralizado con tanque de 360,000 galones bajo estándares NFPA y FM.",
+              answer: "Operamos 5 parques en Mexicali, B.C., en la frontera con California: El Vigía I, El Vigía II, Nelson I y Nelson II. Nelson II es el más moderno: 27 hectáreas con sistema contraincendio centralizado con tanque de 360,000 galones bajo estándares NFPA y FM.",
             },
             {
               id: 3,

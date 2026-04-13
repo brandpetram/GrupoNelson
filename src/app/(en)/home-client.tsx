@@ -95,7 +95,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Alpha component - Identity and offering summary */}
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP
-          descripcion="The family that established Mexicali's first maquiladora in 1965 still operates personally. 4 parks, 33 international corporations and long-term relationships measured in decades."
+          descripcion="The family that established Mexicali's first maquiladora in 1965 remains actively involved today establishing long-term relationships measured in decades."
           lang="en"
         />
       </div>
@@ -106,14 +106,14 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
         lead="Gulfstream has been with us for over 35 years. Honeywell for over 3 decades. 33 international corporations have already chosen to operate in our parks — long-term relationships measured in decades."
         sectionTitle="Two paths, one provider"
         paragraphs={[
-          'If you need a building ready to operate, we have 4 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
+          'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
           'If you need something custom, Baumex — our in-house construction firm with 30 years and over 75 completed projects — designs and builds it under a single contract. The largest building we have built: 550,000 ft² for Gulfstream, with LEED certification, FM Global and BRB seismic systems.',
         ]}
         statsHeading="Our Numbers"
         stats={[
           { label: 'International Corporations', start: 20, end: 33 },
           { label: 'Years of Experience', start: 50, end: 60, prefix: '+' },
-          { label: 'Industrial Parks', start: 2, end: 4 },
+          { label: 'Industrial Parks', start: 2, end: 5 },
           { label: 'Square Feet\nDeveloped', start: 2, end: 4, suffix: 'M' },
         ]}
       />
@@ -122,7 +122,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       <div className={'w-full p-10 mx-auto mt-32 relative'}>
               <Mosaico2ConProps
                   bloque1Titulo="Available Buildings"
-                  bloque1Descripcion="4 parks in Mexicali with buildings ready to operate — from El Vigia to Nelson II"
+                  bloque1Descripcion="5 parks in Mexicali with buildings ready to operate — from El Vigia to Nelson II"
                   bloque1LinkTexto="View parks"
                   bloque1LinkHref="/industrial-parks"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
@@ -130,7 +130,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                   bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
                   bloque3ImagenAlt="Interior of industrial building in Mexicali"
                   bloque4Titulo="Looking for industrial space?"
-                  bloque4Descripcion="Check availability across our 4 parks"
+                  bloque4Descripcion="Check availability across our 5 parks"
                   bloque4LinkTexto="Contact us"
                   bloque4LinkHref="/contact"
                   imagenDerechaSrc="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-54.jpg"
@@ -348,12 +348,12 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 1,
               question: "What types of industrial buildings do you offer?",
-              answer: "Buildings for lease and build-to-suit construction across our 4 industrial parks in Mexicali. From renovated spaces in El Vigia to world-class buildings in Nelson II, with clear heights up to 28 ft and IBC code compliance.",
+              answer: "Buildings for lease and build-to-suit construction across our 5 industrial parks in Mexicali. From renovated spaces in El Vigia to world-class buildings in Nelson II, with clear heights up to 28 ft and IBC code compliance.",
             },
             {
               id: 2,
               question: "Where are your industrial parks located?",
-              answer: "We operate 4 parks in Mexicali, B.C., on the California border: El Vigia I, El Vigia II, Nelson I and Nelson II. Nelson II is the most modern: 27 hectares with a centralized fire suppression system with a 360,000-gallon tank under NFPA and FM standards.",
+              answer: "We operate 5 parks in Mexicali, B.C., on the California border: El Vigia I, El Vigia II, Nelson I and Nelson II. Nelson II is the most modern: 27 hectares with a centralized fire suppression system with a 360,000-gallon tank under NFPA and FM standards.",
             },
             {
               id: 3,

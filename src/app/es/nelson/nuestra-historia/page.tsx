@@ -7,7 +7,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/nelson/nuestra-historia',
   title: 'Nuestra Historia',
-  description: 'La historia de Grupo Nelson: de una empresa familiar en 1962 a operar 4 parques industriales con más de 4.5 millones de pies² en Mexicali. Naves industriales built-to-suit para empresas globales.',
+  description: 'La historia de Grupo Nelson: de una empresa familiar en 1962 a operar 5 parques industriales con más de 4.5 millones de pies² en Mexicali. Naves industriales built-to-suit para empresas globales.',
 })
 
 export default function NuestraHistoriaPage() {
@@ -43,7 +43,7 @@ export default function NuestraHistoriaPage() {
                     Rodolfo Nelson Bárbara llegó a Mexicali y construyó el primer edificio industrial
                     de la ciudad. No había parques industriales, no había modelo de negocio probado,
                     no había mercado de manufactura fronteriza. Lo que había era un terreno y una
-                    decisión. De esa decisión salió todo lo que hoy es Grupo Nelson: 4 parques
+                    decisión. De esa decisión salió todo lo que hoy es Grupo Nelson: 5 parques
                     industriales, más de 4 millones de pies cuadrados desarrollados, y 33
                     corporaciones internacionales que operan en nuestras instalaciones.
                 </p>
@@ -77,7 +77,8 @@ export default function NuestraHistoriaPage() {
                     Nuestro primer parque fue de block y techos bajos. El segundo ya tenía áreas
                     verdes, estacionamiento y barda perimetral. El tercero tiene tanque
                     contraincendio de 360,000 galones y naves con
-                    certificación LEED. El cuarto ya tiene terreno. Cada parque fue una decisión de
+                    certificación LEED. El cuarto introdujo nuevos estándares de infraestructura.
+                    El quinto ya está en etapa de planeación. Cada parque fue una decisión de
                     inversión que hicimos antes de que el mercado nos lo pidiera.
                 </p>
             </div>

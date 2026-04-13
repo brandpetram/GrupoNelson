@@ -66,7 +66,7 @@ export default function AccesoSanityPage() {
           {[
             { name: 'Nave Industrial', desc: 'Naves disponibles para renta/venta' },
             { name: 'Terreno', desc: 'Terrenos disponibles para desarrollo' },
-            { name: 'Parque Industrial', desc: 'Fichas de los 4 parques' },
+            { name: 'Parque Industrial', desc: 'Fichas de los 5 parques' },
             { name: 'Post', desc: 'Artículos del blog' },
             { name: 'Noticia', desc: 'Noticias de la empresa' },
             { name: 'Category', desc: 'Categorías para organizar blog y noticias' },

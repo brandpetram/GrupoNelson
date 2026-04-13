@@ -19,7 +19,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/parques-industriales-mexicali',
   title: 'Parques Industriales en Mexicali',
-  description: '4 parques industriales en Mexicali con más de 4.5 millones de pies². Naves industriales built-to-suit, terrenos disponibles y más de 60 años de experiencia.',
+  description: '5 parques industriales en Mexicali con más de 4.5 millones de pies². Naves industriales built-to-suit, terrenos disponibles y más de 60 años de experiencia.',
 })
 
 export default async function ParquesIndustrialesMexicaliPage() {

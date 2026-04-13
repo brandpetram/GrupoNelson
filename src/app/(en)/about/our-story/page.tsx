@@ -7,7 +7,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/about/our-story',
   title: 'Our Story',
-  description: 'The story of Grupo Nelson: from a family business in 1962 to operating 4 industrial parks with over 4.5 million sq ft in Mexicali. Built-to-suit industrial buildings for global companies.',
+  description: 'The story of Grupo Nelson: from a family business in 1962 to operating 5 industrial parks with over 4.5 million sq ft in Mexicali. Built-to-suit industrial buildings for global companies.',
 })
 
 export default function OurStoryPage() {
@@ -44,7 +44,7 @@ export default function OurStoryPage() {
                     industrial building. There were no industrial parks, no proven business
                     model, no border manufacturing market. What existed was a piece of land
                     and a decision. From that decision came everything that Grupo Nelson is
-                    today: 4 industrial parks, over 4 million square feet developed, and 33
+                    today: 5 industrial parks, over 4 million square feet developed, and 33
                     international corporations operating in our facilities.
                 </p>
             </div>
@@ -77,7 +77,8 @@ export default function OurStoryPage() {
                     Our first park was built with cinder blocks and low ceilings. The second
                     already had green areas, parking, and a perimeter wall. The third features
                     a 360,000-gallon fire suppression tank
-                    and LEED-certified buildings. The fourth already has land. Each park was an
+                    and LEED-certified buildings. The fourth introduced new infrastructure
+                    standards. The fifth is already in the planning stages. Each park was an
                     investment decision we made before the market demanded it.
                 </p>
             </div>

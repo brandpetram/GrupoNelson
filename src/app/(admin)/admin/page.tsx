@@ -27,7 +27,7 @@ const sections = [
   {
     href: '/admin/parques-industriales',
     title: 'Parques industriales',
-    description: 'Editar la información de los 4 parques industriales.',
+    description: 'Editar la información de los 5 parques industriales.',
     tag: 'Editar',
   },
   {

@@ -72,12 +72,12 @@ const textVariants = {
 const zetaText = {
   es: {
     poligonoText: 'Naves listas para operar en Mexicali',
-    paragraph: 'Ocupa tu nave industrial en Mexicali en semanas. 4 parques con inventario disponible, infraestructura Fortune 500 y seguridad 24/7. 30 corporaciones internacionales ya operan aquí.',
+    paragraph: 'Ocupa tu nave industrial en Mexicali en semanas. 5 parques con inventario disponible, infraestructura Fortune 500 y seguridad 24/7. 30 corporaciones internacionales ya operan aquí.',
     contactHref: '/contacto',
   },
   en: {
     poligonoText: 'Move-in ready industrial buildings in Mexicali',
-    paragraph: 'Occupy your industrial building in Mexicali in weeks. 4 parks with available inventory, Fortune 500-grade infrastructure, and 24/7 security. 30 international corporations already operate here.',
+    paragraph: 'Occupy your industrial building in Mexicali in weeks. 5 parks with available inventory, Fortune 500-grade infrastructure, and 24/7 security. 30 international corporations already operate here.',
     contactHref: '/contact',
   },
 }

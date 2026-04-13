@@ -24,14 +24,14 @@ interface RadiantHeaderProps {
 const defaultStatsEs: RadiantHeaderStat[] = [
   { label: 'Corporaciones Internacionales', start: 20, end: 33 },
   { label: 'Años de Experiencia', start: 50, end: 60, prefix: '+' },
-  { label: 'Parques Industriales', start: 2, end: 4 },
+  { label: 'Parques Industriales', start: 2, end: 5 },
   { label: 'Pies Cuadrados\nDesarrollados', start: 2, end: 4, suffix: 'M' },
 ]
 
 const defaultStatsEn: RadiantHeaderStat[] = [
   { label: 'International Corporations', start: 20, end: 33 },
   { label: 'Years of Experience', start: 50, end: 60, prefix: '+' },
-  { label: 'Industrial Parks', start: 2, end: 4 },
+  { label: 'Industrial Parks', start: 2, end: 5 },
   { label: 'Square Feet\nDeveloped', start: 2, end: 4, suffix: 'M' },
 ]
 
@@ -53,11 +53,11 @@ export function Header({
   const _sectionTitle = sectionTitle ?? (lang === 'en' ? 'Two paths, one provider' : 'Dos caminos, un solo proveedor')
   const _paragraphs = paragraphs ?? (lang === 'en'
     ? [
-        'If you need a building ready to operate, we have 4 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
+        'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
         'If you need something custom, Baumex — our in-house construction firm with 30 years and over 75 completed projects — designs and builds it under a single contract. The largest building we have built: 550,000 ft² for Gulfstream, with LEED certification, FM Global and BRB seismic systems.',
       ] as [string, string]
     : [
-        'Si necesitas una nave lista para operar, tenemos 4 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II, el parque más moderno con sistema contraincendio centralizado.',
+        'Si necesitas una nave lista para operar, tenemos 5 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II, el parque más moderno con sistema contraincendio centralizado.',
         'Si necesitas algo a medida, Baumex — nuestra constructora in-house con 30 años y más de 75 proyectos completados — lo diseña y construye bajo un solo contrato. La nave más grande que hemos construido: 550,000 ft² para Gulfstream, con certificación LEED, FM Global y sistemas antisísmicos BRB.',
       ] as [string, string])
   const _statsHeading = statsHeading ?? (lang === 'en' ? 'Our Numbers' : 'Nuestros Números')

@@ -296,36 +296,24 @@ La cifra rectora comercial del sistema sera `75+ proyectos`.
 
 ### Decision canonica
 
-El numero oficial de parques industriales de Grupo Nelson que ya operan y ya estan construidos es:
+El numero oficial de parques industriales de Grupo Nelson es:
 
-**4 parques industriales**
-
-Adicionalmente:
-
-**Nelson III existe como desarrollo en etapas iniciales de planeacion y desarrollo, pero no cuenta como parque operativo construido.**
+**5 parques industriales**
 
 ### Motivo
 
-Necesitamos separar con claridad:
-
-- lo que ya opera y ya existe
-- de lo que apenas esta en primeras etapas
+Corregido el 13-abr-2026 por instruccion directa del cliente. El claim comercial correcto es 5 parques.
 
 ### Usar
 
-- `4 parques industriales`
-- `cuatro parques industriales desarrollados por Grupo Nelson`
-
-### Usar asi
-
-- cuando se hable del portafolio actual y operativo
-- se puede mencionar `Nelson III` solo como desarrollo en etapas de planeacion o primeras etapas de desarrollo
+- `5 parques industriales`
+- `cinco parques industriales`
+- `5 industrial parks`
 
 ### No usar
 
+- `4 parques` como cifra rectora del sistema
 - `3 parques` como cifra rectora del sistema
-- `5 parques` como cifra rectora del sistema
-- contar `Nelson III` como parque ya construido y operativo
 
 ---
 

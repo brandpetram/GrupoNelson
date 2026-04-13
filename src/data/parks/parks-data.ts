@@ -1,4 +1,4 @@
-// Data centralizada de los 4 parques industriales de Grupo Nelson
+// Data centralizada de los 5 parques industriales de Grupo Nelson
 // Fuentes: PDFs de especificaciones (mapeados a /docs/) + sitio web antiguo
 
 import type { IndustrialPark, Building } from './types'

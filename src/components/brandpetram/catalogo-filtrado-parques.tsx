@@ -1,5 +1,5 @@
 // Catálogo de parques industriales — adaptado del catálogo filtrado de Extrutech
-// Sin props. Sin filtros por ahora (solo 4 parques). Datos de parks-data.ts
+// Sin props. Sin filtros por ahora (solo 5 parques). Datos de parks-data.ts
 
 import Image from "next/image"
 import Link from "next/link"

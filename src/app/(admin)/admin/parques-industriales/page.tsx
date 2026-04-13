@@ -14,7 +14,7 @@ export default function ParquesIndustrialesPage() {
       <GuideHeader
         tag="Editar"
         title="Parques industriales"
-        description="Edita la información de los 4 parques industriales de Grupo Nelson."
+        description="Edita la información de los 5 parques industriales de Grupo Nelson."
       />
 
       <section className="space-y-3">
@@ -60,8 +60,8 @@ export default function ParquesIndustrialesPage() {
 
       <Danger>
         <p>
-          <strong>No crear parques nuevos.</strong> El sistema solo soporta los 4 parques existentes
-          (Nelson I, Nelson II, Vigía I, Vigía II). Si creas un quinto parque en Sanity, aparecerá
+          <strong>No crear parques nuevos.</strong> El sistema solo soporta los 5 parques existentes
+          (Nelson I, Nelson II, Vigía I, Vigía II, Vigía III). Si creas un sexto parque en Sanity, aparecerá
           en el índice pero su link llevará a una página que no existe (error 404).
         </p>
         <p className="mt-2">

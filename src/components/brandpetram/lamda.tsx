@@ -1,8 +1,8 @@
 export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
   const text = {
     title: lang === 'en'
-      ? '4 industrial parks with available buildings in Mexicali'
-      : '4 parques industriales con naves disponibles en Mexicali',
+      ? '5 industrial parks with available buildings in Mexicali'
+      : '5 parques industriales con naves disponibles en Mexicali',
     subtitle: lang === 'en'
       ? 'From cost-effective spaces in El Vigía to Fortune 500 infrastructure in Nelson II. 30 international corporations already operate here.'
       : 'Desde espacios económicos en El Vigía hasta infraestructura Fortune 500 en Nelson II. 30 corporaciones internacionales ya operan aquí.',
@@ -14,8 +14,8 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       ? 'Browse available inventory in Mexicali'
       : 'Consulta el inventario disponible en Mexicali',
     blackDesc: lang === 'en'
-      ? "4 industrial parks. Buildings from 5,000 ft² to Fortune 500 infrastructure. Move in, install your equipment, and start production. No waiting for design, permits, or construction. 80% of our tenants renew their lease."
-      : '4 parques industriales. Naves desde 5,000 ft² hasta infraestructura Fortune 500. Entra, instala tu equipo y arranca producción. Sin esperar diseño, permisos ni construcción. 80% de nuestros clientes renuevan contrato.',
+      ? "5 industrial parks. Buildings from 5,000 ft² to Fortune 500 infrastructure. Move in, install your equipment, and start production. No waiting for design, permits, or construction. 80% of our tenants renew their lease."
+      : '5 parques industriales. Naves desde 5,000 ft² hasta infraestructura Fortune 500. Entra, instala tu equipo y arranca producción. Sin esperar diseño, permisos ni construcción. 80% de nuestros clientes renuevan contrato.',
   }
 
   return (

@@ -94,7 +94,7 @@ export default function ProyectosEspecializadosPage() {
                         </span>
                       </span>
                       <h1 className="mt-4 text-3xl 360:text-[2.5rem] 393:text-[3rem] 430:text-[3.5rem] 768:text-[4rem] 834:text-[4.5rem] 1024:text-[5rem] 1200:text-[3.5rem] 1280:text-[4rem] 1366:text-[4.5rem] 1440:text-[5rem] 1536:text-[4.5rem] 1728:text-[5rem] 1920:text-[5.5rem] tracking-tight font-extrabold text-white sm:mt-5 leading-none 1200:mt-6">
-                        Cuatro problemas que no tenían solución estándar
+                        Cuatro retos que no tenían solución estándar
                       </h1>
                       <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
                         Cada uno empezó con un requerimiento que no existía en

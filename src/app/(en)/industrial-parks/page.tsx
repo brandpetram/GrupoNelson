@@ -19,7 +19,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/industrial-parks',
   title: 'Industrial Parks in Mexicali',
-  description: '4 industrial parks in Mexicali with over 4.5 million sq ft. Built-to-suit industrial buildings, available land, and more than 60 years of experience.',
+  description: '5 industrial parks in Mexicali with over 4.5 million sq ft. Built-to-suit industrial buildings, available land, and more than 60 years of experience.',
 })
 
 export default async function IndustrialParksPage() {
