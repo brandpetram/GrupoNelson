@@ -677,12 +677,11 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                     <video
                       autoPlay
                       muted
-                      loop
                       playsInline
                       poster="/fundador-grupo-nelson-mexicali.jpg"
                       className="h-full w-full object-cover"
                     >
-                      <source src="/fundador-animado-v4.mp4" type="video/mp4" />
+                      <source src="/fundador-animado-v7.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
