@@ -123,7 +123,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       <div className={'w-full p-10 mx-auto mt-32 relative'}>
               <Mosaico2ConProps
                   bloque1Titulo="Available Buildings"
-                  bloque1Descripcion="4 parks operating in Mexicali with buildings ready to occupy — Nelson III in its early planning stages"
+                  bloque1Descripcion="4 parks operating in Mexicali with buildings ready to occupy — our 5th park, Nelson III, in its early planning stages"
                   bloque1LinkTexto="View parks"
                   bloque1LinkHref="/industrial-parks"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
