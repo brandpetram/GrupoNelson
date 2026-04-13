@@ -1,5 +1,6 @@
 import { loginAction } from './actions'
 import { LogoNelson } from '@/components/logo-nelson'
+import { PasswordInput } from './password-input'
 
 export const metadata = {
   title: 'Acceso — Instrucciones',
@@ -25,16 +26,7 @@ export default async function LoginPage({
         </div>
 
         <form action={loginAction} className="space-y-4">
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Contraseña"
-              required
-              autoFocus
-              className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-            />
-          </div>
+          <PasswordInput />
 
           {error && (
             <p className="text-sm text-red-500">

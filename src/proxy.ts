@@ -4,8 +4,10 @@ import { computeHmac } from '@/lib/admin-auth'
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
 
-  // 1. Solo interceptar rutas /admin/*
-  if (!path.startsWith('/admin')) {
+  // 1. Solo interceptar rutas internas (admin, proyecto, dev, etc.)
+  //    /studio se excluye porque Sanity tiene su propia autenticación
+  const protectedPrefixes = ['/admin', '/qa', '/proyecto', '/dev', '/componentes', '/product', '/productos']
+  if (!protectedPrefixes.some(prefix => path.startsWith(prefix))) {
     return NextResponse.next()
   }
 
@@ -35,5 +37,15 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: [
+    '/admin/:path*',
+    '/qa/:path*',
+    '/proyecto/:path*',
+    '/dev/:path*',
+    '/componentes/:path*',
+    '/componentes-dos/:path*',
+    '/componentes-tres/:path*',
+    '/product/:path*',
+    '/productos/:path*',
+  ],
 }
