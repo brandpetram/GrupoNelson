@@ -16,6 +16,7 @@ interface RadiantHeaderProps {
   lead?: string
   sectionTitle?: string
   paragraphs?: [string, string]
+  paragraphTitles?: [string?, string?]
   statsHeading?: string
   stats?: RadiantHeaderStat[]
   lang?: 'en' | 'es'
@@ -40,6 +41,7 @@ export function Header({
   lead,
   sectionTitle,
   paragraphs,
+  paragraphTitles,
   statsHeading,
   stats,
   lang = 'es',
@@ -53,13 +55,16 @@ export function Header({
   const _sectionTitle = sectionTitle ?? (lang === 'en' ? 'Two paths, one provider' : 'Dos caminos, un solo proveedor')
   const _paragraphs = paragraphs ?? (lang === 'en'
     ? [
-        'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
-        'If you need something custom, Baumex — our in-house construction firm with 30 years and over 75 completed projects — designs and builds it under a single contract. The largest building we have built: 550,000 ft² for Gulfstream, with LEED certification, FM Global and BRB seismic systems.',
+        'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II. Three parks (Nelson I, Nelson II and El Vigía I) have a centralized fire suppression system. Nelson II also has a dedicated power line for KVAS energy access.',
+        'Our in-house construction team, with 30 years of experience and over 75 completed projects, designs and delivers under a single contract. Our largest project: a 550,000 ft² facility built to LEED standards and incorporating FM Global with reinforced seismic systems.',
       ] as [string, string]
     : [
-        'Si necesitas una nave lista para operar, tenemos 5 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II, el parque más moderno con sistema contraincendio centralizado.',
-        'Si necesitas algo a medida, Baumex — nuestra constructora in-house con 30 años y más de 75 proyectos completados — lo diseña y construye bajo un solo contrato. La nave más grande que hemos construido: 550,000 ft² para Gulfstream, con certificación LEED, FM Global y sistemas antisísmicos BRB.',
+        'Si necesitas una nave lista para operar, tenemos 5 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II. Tres parques (Nelson I, Nelson II y El Vigía I) cuentan con sistema contraincendio centralizado. Nelson II además tiene línea dedicada para acceso a energía KVAS.',
+        'Nuestro equipo de construcción in-house, con 30 años de experiencia y más de 75 proyectos completados, diseña y entrega bajo un solo contrato. Nuestro proyecto más grande: una nave de 550,000 ft² construida bajo estándares LEED e incorporando FM Global con sistemas sísmicos reforzados.',
       ] as [string, string])
+  const _paragraphTitles = paragraphTitles ?? (lang === 'en'
+    ? ['Existing Buildings for Lease', 'Custom Build-to-Suit']
+    : ['Naves Existentes en Renta', 'Construcción a la Medida'])
   const _statsHeading = statsHeading ?? (lang === 'en' ? 'Our Numbers' : 'Nuestros Números')
   const _stats = stats ?? (lang === 'en' ? defaultStatsEn : defaultStatsEs)
   return (
@@ -67,16 +72,24 @@ export function Header({
       <h1 className={' w-full text-balance text-[2rem] 430:text-[3rem] 1366:text-[5rem] 1920:text-[7rem] tracking-tight leading-none font-extrabold'} >
         {_headline}
       </h1>
-      <Lead className="mt-6 max-w-3xl">
-        {_lead}
-      </Lead>
+      {_lead && (
+        <Lead className="mt-6 max-w-3xl">
+          {_lead}
+        </Lead>
+      )}
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
           <h2 className="text-2xl font-medium tracking-tight">{_sectionTitle}</h2>
-          <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
+          {_paragraphTitles?.[0] && (
+            <h3 className="mt-6 text-lg font-semibold text-foreground">{_paragraphTitles[0]}</h3>
+          )}
+          <p className={`${_paragraphTitles?.[0] ? 'mt-2' : 'mt-6'} text-lg/8 text-gray-600 dark:text-gray-400`}>
             {_paragraphs[0]}
           </p>
-          <p className="mt-8 text-lg/8 text-gray-600 dark:text-gray-400">
+          {_paragraphTitles?.[1] && (
+            <h3 className="mt-8 text-lg font-semibold text-foreground">{_paragraphTitles[1]}</h3>
+          )}
+          <p className={`${_paragraphTitles?.[1] ? 'mt-2' : 'mt-8'} text-lg/8 text-gray-600 dark:text-gray-400`}>
             {_paragraphs[1]}
           </p>
         </div>

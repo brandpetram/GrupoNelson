@@ -14,9 +14,8 @@ export default function Home() {
     <HomeClient
       heroContent={
         <TarjetaHeroOriginal
-          badge="33 Corporaciones Internacionales"
           titulo={<>Parques Industriales y Naves <span className="whitespace-nowrap">Built‑to‑Suit</span> en Todo Mexicali</>}
-          descripcion="Desarrollo y arrendamiento de propiedades industriales en la frontera con California."
+          descripcion="60 años desarrollando proyectos e instalaciones industriales en la frontera de Baja California."
         />
       }
     />

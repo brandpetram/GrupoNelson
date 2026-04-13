@@ -633,6 +633,40 @@ La direccion `Blvd. Lazaro Cardenas 9850` estaba incorrecta en las politicas de 
 
 ---
 
+## 18. Sistema contraincendio centralizado y linea dedicada KVAS
+
+### Decision canonica
+
+El sistema contraincendio centralizado **no es exclusivo de Nelson II**. Lo tienen tres parques:
+
+- **Nelson I**
+- **Nelson II**
+- **El Vigia I**
+
+Adicionalmente, **Nelson II tiene una linea dedicada para acceso a energia KVAS**.
+
+### Motivo
+
+Informacion proporcionada directamente por el cliente el 13-abr-2026. Anteriormente el copy atribuia el sistema contraincendio solo a Nelson II, lo cual era incompleto.
+
+### Usar
+
+- `Tres parques cuentan con sistema contraincendio centralizado: Nelson I, Nelson II y El Vigia I`
+- `Nelson II tiene linea dedicada para acceso a energia KVAS`
+
+### Usar asi
+
+- cuando se hable de infraestructura de parques, distribuir el merito del sistema contraincendio entre los tres parques que lo tienen
+- la linea dedicada KVAS es exclusiva de Nelson II y se puede usar como diferenciador de ese parque
+
+### No usar
+
+- atribuir el sistema contraincendio centralizado unicamente a Nelson II
+- decir que todos los parques tienen sistema contraincendio centralizado (El Vigia II no lo tiene)
+- decir que todos los parques tienen linea KVAS (solo Nelson II)
+
+---
+
 ## Regla final para roles futuros
 
 Cuando un rol futuro encuentre un documento viejo que contradiga este archivo, no debe reabrir la duda dentro del copy.

@@ -103,11 +103,12 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* About us section with animated numbers */}
       <RadiantHeader
         headline="Pioneers of the maquiladora industry in Mexicali since 1965."
-        lead="Gulfstream has been with us for over 35 years. Honeywell for over 3 decades. 33 international corporations have already chosen to operate in our parks — long-term relationships measured in decades."
+        lead=""
         sectionTitle="Two paths, one provider"
+        paragraphTitles={['Existing Buildings for Lease', 'Custom Build-to-Suit']}
         paragraphs={[
-          'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
-          'If you need something custom, Baumex — our in-house construction firm with 30 years and over 75 completed projects — designs and builds it under a single contract. The largest building we have built: 550,000 ft² for Gulfstream, with LEED certification, FM Global and BRB seismic systems.',
+          'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II. Three parks (Nelson I, Nelson II and El Vigía I) have a centralized fire suppression system. Nelson II also has a dedicated power line for KVAS energy access.',
+          'Our in-house construction team, with 30 years of experience and over 75 completed projects, designs and delivers under a single contract. Our largest project: a 550,000 ft² facility built to LEED standards and incorporating FM Global with reinforced seismic systems.',
         ]}
         statsHeading="Our Numbers"
         stats={[

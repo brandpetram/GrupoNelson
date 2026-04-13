@@ -21,7 +21,7 @@ export function TarjetaHeroOriginal({
   ctaSecondaryHref = "/contacto",
 }: TarjetaHeroOriginalProps) {
   return (
-    <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-md 1200:max-w-2xl mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
+    <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-sm 1200:max-w-xl mt-32 md:mt-0 1024:mt-0 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
       {/* Badge */}
       {badge && (
         <div className="hidden md:flex items-center gap-3 mb-3">

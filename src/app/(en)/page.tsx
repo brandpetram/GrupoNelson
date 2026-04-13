@@ -14,9 +14,8 @@ export default function Home() {
     <HomeClient
       heroContent={
         <TarjetaHeroOriginal
-          badge="33 International Corporations"
           titulo={<>Industrial Parks and <span className="whitespace-nowrap">Built‑to‑Suit</span> Buildings Across Mexicali</>}
-          descripcion="Developing and leasing industrial properties on the California border."
+          descripcion="60 years developing industrial projects and facilities on the Baja California border."
           ctaPrimaryText="Learn More"
           ctaPrimaryHref="/about/difference"
           ctaSecondaryText="Contact Us"
