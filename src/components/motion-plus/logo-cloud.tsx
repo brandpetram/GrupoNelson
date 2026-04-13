@@ -12,13 +12,11 @@ const darkBrightnessLogos = new Set([
     "logo-gameloft-2.svg",
     "logo-sds-sybron-dental-specialities-2.svg",
     "logo-mohawk-2.svg",
-    "logo-dentsply-2.svg",
     "logo-goodrich-2.svg",
     "logo-jonathan-2.svg",
     "logo-liebert-3.svg",
     "logo-utc-aerospace-systems-3.svg",
     "logo-baxter-2.svg",
-    "logo-ivemsa-2.svg",
 ])
 
 const darkInvertLogos = new Set([
@@ -61,7 +59,6 @@ export default function LogoCloud({ lang = 'es' }: { lang?: 'en' | 'es' }) {
         "logo-air-liquide-2.svg",
         "logo-utc-aerospace-systems-3.svg",
         "logo-goodrich-2.svg",
-        "logo-dentsply-2.svg",
         "logo-rheem-2.svg",
         // "logo-intuitive-2.svg", // usa invertSet
 
@@ -74,7 +71,6 @@ export default function LogoCloud({ lang = 'es' }: { lang?: 'en' | 'es' }) {
         "logo-creation-technologies-2.svg",
         "logo-direct-pack-2.svg",
         "logo-hirsh-industries-2.svg",
-        "logo-ivemsa-2.svg",
         "logo-jonathan-2.svg",
         "logo-psf-2.svg",
         "logo-vertiv-2.svg",
