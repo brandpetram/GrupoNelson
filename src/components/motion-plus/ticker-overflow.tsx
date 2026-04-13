@@ -13,13 +13,11 @@ const darkBrightnessLogos = new Set([
     "logo-gameloft-2.svg",
     "logo-sds-sybron-dental-specialities-2.svg",
     "logo-mohawk-2.svg",
-    "logo-dentsply-2.svg",
     "logo-goodrich-2.svg",
     "logo-jonathan-2.svg",
     "logo-liebert-3.svg",
     "logo-utc-aerospace-systems-3.svg",
     "logo-baxter-2.svg",
-    "logo-ivemsa-2.svg",
 ])
 
 const darkInvertLogos = new Set([
@@ -39,8 +37,8 @@ function LogoCliente({ src }: { src: string }) {
 }
 
 const tickerTitle = {
-    es: <>Clientes de Clase Mundial confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson:</span></>,
-    en: <>World-class clients trust <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson:</span></>,
+    es: <>Clientes de Clase Mundial confían en <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span></>,
+    en: <>World-class clients trust <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-black up">Grupo Nelson</span></>,
 }
 
 export default function TickerOverflow({ lang = 'es' }: { lang?: 'en' | 'es' }) {
@@ -52,7 +50,6 @@ export default function TickerOverflow({ lang = 'es' }: { lang?: 'en' | 'es' }) 
         { src: "logo-dhl-2.svg", key: "4" },
         { src: "logo-cornell-dubilier-2.svg", key: "5" },
         { src: "logo-creation-technologies-2.svg", key: "6" },
-        { src: "logo-dentsply-2.svg", key: "7" },
         { src: "logo-dhl-2.svg", key: "8" },
         { src: "logo-direct-pack-2.svg", key: "9" },
         { src: "logo-general-dynamics-2.svg", key: "11" },
@@ -60,7 +57,6 @@ export default function TickerOverflow({ lang = 'es' }: { lang?: 'en' | 'es' }) 
         { src: "logo-hirsh-industries-2.svg", key: "14" },
         { src: "logo-honeywell-2.svg", key: "15" },
         { src: "logo-intuitive-2.svg", key: "16" },
-        { src: "logo-ivemsa-2.svg", key: "17" },
         { src: "logo-jonathan-2.svg", key: "18" },
         { src: "logo-liebert-3.svg", key: "19" },
         { src: "logo-mohawk-2.svg", key: "20" },

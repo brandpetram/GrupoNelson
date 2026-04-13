@@ -14,10 +14,9 @@ export default function Home() {
     <HomeClient
       heroContent={
         <TarjetaHeroOriginal
-          badge1="4 Industrial Parks"
-          badge2="33 International Corporations"
+          badge="33 International Corporations"
           titulo={<>Industrial Parks and <span className="whitespace-nowrap">Built‑to‑Suit</span> Buildings Across Mexicali</>}
-          descripcion="60 years developing industrial infrastructure on the California border. Rheem, Honeywell, Gulfstream and DHL already operate here."
+          descripcion="Developing and leasing industrial properties on the California border."
           ctaPrimaryText="Learn More"
           ctaPrimaryHref="/about/difference"
           ctaSecondaryText="Contact Us"

@@ -14,10 +14,9 @@ export default function Home() {
     <HomeClient
       heroContent={
         <TarjetaHeroOriginal
-          badge1="4 Parques Industriales"
-          badge2="33 Corporaciones Internacionales"
+          badge="33 Corporaciones Internacionales"
           titulo={<>Parques Industriales y Naves <span className="whitespace-nowrap">Built‑to‑Suit</span> en Todo Mexicali</>}
-          descripcion="60 años desarrollando infraestructura industrial en la frontera con California. Rheem, Honeywell, Gulfstream y DHL ya operan aquí."
+          descripcion="Desarrollo y arrendamiento de propiedades industriales en la frontera con California."
         />
       }
     />

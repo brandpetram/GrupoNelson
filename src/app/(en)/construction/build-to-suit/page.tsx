@@ -52,8 +52,7 @@ export default function BuildToSuitPage() {
         >
           <TarjetaHeroOriginalBeta
             lang="en"
-            badge1="Build-to-Suit"
-            badge2="Custom-built facilities"
+            badge="Custom-built facilities"
             titulo="Build the facility that doesn't exist in any catalog"
             descripcion="Designed from scratch for your exact operation. 52,200 m² for Gulfstream. 95-meter bridge for Skyworks. 3,000 HP wind tunnel for Honeywell."
           />
