@@ -108,7 +108,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       <div className={'w-full p-10 mx-auto mt-32 relative'}>
               <Mosaico2ConProps
                   bloque1Titulo="Naves Disponibles"
-                  bloque1Descripcion="5 parques en Mexicali con naves listas para operar — desde El Vigía hasta Nelson II"
+                  bloque1Descripcion="4 parques operando en Mexicali con naves listas para operar — Nelson III en sus primeras etapas de desarrollo"
                   bloque1LinkTexto="Ver parques"
                   bloque1LinkHref="/parques-industriales-mexicali"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
