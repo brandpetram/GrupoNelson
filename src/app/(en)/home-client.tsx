@@ -106,7 +106,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
         lead="Gulfstream has been with us for over 35 years. Honeywell for over 3 decades. 33 international corporations have already chosen to operate in our parks — long-term relationships measured in decades."
         sectionTitle="Two paths, one provider"
         paragraphs={[
-          'If you need a building ready to operate, we have 4 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a dedicated electrical substation and a centralized fire suppression system.',
+          'If you need a building ready to operate, we have 4 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II, the most modern park with a centralized fire suppression system.',
           'If you need something custom, Baumex — our in-house construction firm with 30 years and over 75 completed projects — designs and builds it under a single contract. The largest building we have built: 550,000 ft² for Gulfstream, with LEED certification, FM Global and BRB seismic systems.',
         ]}
         statsHeading="Our Numbers"
@@ -327,7 +327,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
         <CirculosConProps
           circulo1Letra="60"
           circulo1Titulo="Years"
-          circulo1Descripcion="The family that established Mexicali's first maquiladora in 1965 still operates personally. Nearshoring before the word existed. Four generations later, the owners handle your project — not a manager who rotates every two years."
+          circulo1Descripcion="The family that established Mexicali's first maquiladora in 1965 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project — not a manager who rotates every two years."
           circulo2Letra="33"
           circulo2Titulo="Corporations"
           circulo2Descripcion="Gulfstream has been here for over 35 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
@@ -353,7 +353,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 2,
               question: "Where are your industrial parks located?",
-              answer: "We operate 4 parks in Mexicali, B.C., on the California border: El Vigia I, El Vigia II, Nelson I and Nelson II. Nelson II is the most modern: 27 hectares with a dedicated electrical substation and a centralized fire suppression system with a 360,000-gallon tank under NFPA and FM standards.",
+              answer: "We operate 4 parks in Mexicali, B.C., on the California border: El Vigia I, El Vigia II, Nelson I and Nelson II. Nelson II is the most modern: 27 hectares with a centralized fire suppression system with a 360,000-gallon tank under NFPA and FM standards.",
             },
             {
               id: 3,
@@ -373,7 +373,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 6,
               question: "How long has Grupo Nelson been in the industry?",
-              answer: "Over 60 years. We founded Mexicali's maquiladora industry in 1965. Four generations later, the founding family still operates personally — the owners handle every project directly.",
+              answer: "Over 60 years. We founded Mexicali's maquiladora industry in 1965. Three generations later, the founding family still operates personally — the owners handle every project directly.",
             },
           ]}
         />

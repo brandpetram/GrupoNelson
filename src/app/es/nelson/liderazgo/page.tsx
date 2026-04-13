@@ -6,7 +6,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/nelson/liderazgo',
   title: 'Liderazgo',
-  description: 'Cuatro generaciones liderando el desarrollo de parques industriales y naves industriales built-to-suit en Mexicali. La familia fundadora opera directamente cada proyecto.',
+  description: 'Tres generaciones liderando el desarrollo de parques industriales y naves industriales built-to-suit en Mexicali. La familia fundadora opera directamente cada proyecto.',
 })
 
 const team = [

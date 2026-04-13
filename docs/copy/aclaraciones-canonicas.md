@@ -563,38 +563,32 @@ Estos estandares estan documentados en fuente primaria del negocio (temario de B
 
 ### Decision canonica
 
-Son **4 generaciones**. El fundador, Rodolfo Nelson Barbara, es el **bisabuelo** de Humberto Juarez Garcia Jr.
+Son **3 generaciones** activas en comunicacion comercial.
 
 La estructura generacional es:
 
 - **1a generacion:** Rodolfo Nelson Barbara (fundador, instalo la primera maquiladora en 1965)
 - **2a generacion:** Humberto Juarez Nelson (padre de Humberto Sr.) y otros
 - **3a generacion:** Humberto Juarez Garcia (Humberto Sr., brazo comercial actual), Rodolfo Nelson L., Juan Carlos Nelson L., Alfredo Martinez Nelson
-- **4a generacion:** Humberto Juarez Garcia Jr. (fotografia, video, documentacion)
 
 ### Motivo
 
-Confirmado directamente por Humberto Juarez Garcia (3a generacion) el 10-abr-2026: "Humberto Juarez Garcia (mi hijo) es Cuarta Generacion (Yo soy tercera). Rodolfo Nelson Barbara era mi abuelo, por lo tanto, bisabuelo de Humberto Jr."
-
-Los documentos internos que decian "tercera generacion" para Humberto Jr. estaban equivocados. El dato correcto es cuarta generacion.
+Corregido el 13-abr-2026 por instruccion directa del cliente. El claim comercial correcto es 3 generaciones.
 
 ### Usar
 
-- `4 generaciones`
-- `cuarta generacion` para Humberto Jr.
-- `tercera generacion` para Humberto Sr., Rodolfo L., Juan Carlos, Alfredo
-- `bisabuelo` cuando se refiera a la relacion entre Humberto Jr. y el fundador
+- `3 generaciones`
+- `tres generaciones`
 
 ### Usar asi
 
-- `4 generaciones de la familia fundadora`
-- `La cuarta generacion ya trabaja en el grupo`
+- `3 generaciones de la familia fundadora`
+- `Tres generaciones al servicio de empresas internacionales de clase mundial`
 
 ### No usar
 
-- `3 generaciones` como claim de continuidad (son 4)
-- `abuelo` como relacion entre Humberto Jr. y el fundador (es bisabuelo)
-- `tercera generacion` para describir a Humberto Jr. (es cuarta)
+- `4 generaciones` como claim de continuidad
+- `cuatro generaciones`
 
 ---
 

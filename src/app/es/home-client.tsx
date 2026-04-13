@@ -168,7 +168,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
         <CirculosConProps
           circulo1Letra="60"
           circulo1Titulo="Años"
-          circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Cuatro generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
+          circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
           circulo2Letra="33"
           circulo2Titulo="Corporaciones"
           circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
@@ -194,7 +194,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 2,
               question: "¿Dónde están sus parques industriales?",
-              answer: "Operamos 4 parques en Mexicali, B.C., en la frontera con California: El Vigía I, El Vigía II, Nelson I y Nelson II. Nelson II es el más moderno: 27 hectáreas con subestación eléctrica dedicada y sistema contraincendio centralizado con tanque de 360,000 galones bajo estándares NFPA y FM.",
+              answer: "Operamos 4 parques en Mexicali, B.C., en la frontera con California: El Vigía I, El Vigía II, Nelson I y Nelson II. Nelson II es el más moderno: 27 hectáreas con sistema contraincendio centralizado con tanque de 360,000 galones bajo estándares NFPA y FM.",
             },
             {
               id: 3,
@@ -214,7 +214,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 6,
               question: "¿Cuánto tiempo lleva Grupo Nelson en la industria?",
-              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1965. Cuatro generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
+              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
             },
           ]}
         />

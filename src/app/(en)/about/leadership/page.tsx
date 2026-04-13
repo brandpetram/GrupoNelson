@@ -7,7 +7,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/about/leadership',
   title: 'Leadership',
-  description: 'Four generations leading the development of industrial parks and built-to-suit industrial buildings in Mexicali. The founding family operates every project directly.',
+  description: 'Three generations leading the development of industrial parks and built-to-suit industrial buildings in Mexicali. The founding family operates every project directly.',
 })
 
 const team = [
@@ -131,7 +131,7 @@ const mosaicoContent: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "Four generations, one family operating",
+    title: "Three generations, one family operating",
     description:
       "The person who negotiates your contract is the same one who signs it. No corporate layers, no executive rotation.",
     href: "/about/leadership",

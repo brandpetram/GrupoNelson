@@ -19,7 +19,7 @@ export const whyNelsonLinks = [
   {
     href: '/nelson/liderazgo',
     name: 'Liderazgo',
-    description: 'Cuatro generaciones de experiencia',
+    description: 'Tres generaciones de experiencia',
     iconKey: 'users',
   },
   {

@@ -76,7 +76,7 @@ export default function OurStoryPage() {
                 <p className="mt-8 text:xl 1200:text-[2rem] leading-loose tracking-wide text-foreground font-semibold">
                     Our first park was built with cinder blocks and low ceilings. The second
                     already had green areas, parking, and a perimeter wall. The third features
-                    a dedicated electrical substation, a 360,000-gallon fire suppression tank,
+                    a 360,000-gallon fire suppression tank
                     and LEED-certified buildings. The fourth already has land. Each park was an
                     investment decision we made before the market demanded it.
                 </p>
@@ -136,7 +136,7 @@ export default function OurStoryPage() {
                         </p>
                     </div>
                     <div>
-                        <p className="text-4xl 1200:text-5xl font-bold text-foreground">4 generations</p>
+                        <p className="text-4xl 1200:text-5xl font-bold text-foreground">3 generations</p>
                         <p className="mt-2 text-lg text-muted-foreground">
                             of the founding family. The fourth generation is already
                             working within the group.

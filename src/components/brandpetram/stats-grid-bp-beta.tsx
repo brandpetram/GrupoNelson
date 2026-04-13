@@ -148,7 +148,7 @@ export function StatsGridBPBeta() {
             {/* Texto editorial — lado derecho */}
             <div className="flex items-center lg:w-[55%]">
               <p className="text-[1.75rem] 768:text-[2rem] 1024:text-[2.25rem] 1200:text-[2.25rem] 1366:text-[2.5rem] 1536:text-[2.75rem] 1728:text-[3rem] 1920:text-[3.25rem] font-light tracking-wider leading-tight text-white text-balance">
-                Cuatro generaciones construyendo la infraestructura industrial que mueve Mexicali.
+                Tres generaciones construyendo la infraestructura industrial que mueve Mexicali.
               </p>
             </div>
           </div>

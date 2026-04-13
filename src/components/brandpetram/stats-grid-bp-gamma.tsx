@@ -17,24 +17,24 @@ interface StatsGridBPGammaProps {
 
 const defaultStatsEs: StatsGridStat[] = [
   { value: '60+', label: 'años de trayectoria\nen la industria' },
-  { value: '4M ft²', label: 'pies cuadrados\ndesarrollados' },
-  { value: '30', label: 'corporaciones\ninternacionales' },
+  { value: '4M+', label: 'pies cuadrados\ndesarrollados' },
+  { value: '30+', label: 'corporaciones\ninternacionales' },
   { value: '5', label: 'parques industriales\nen Mexicali' },
   { value: '3', label: 'generaciones\nde familia Nelson' },
-  { value: '80%', label: 'clientes que\nrenuevan contrato' },
-  { value: '75+', label: 'proyectos construidos\npor Baumex' },
-  { value: '4', label: 'empresas Fortune 500\noperando aquí' },
+  { value: '80%', label: 'repeat\nbusiness' },
+  { value: '75+', label: 'proyectos\nconstruidos' },
+  { value: '4', label: 'empresas\nFortune 500' },
 ]
 
 const defaultStatsEn: StatsGridStat[] = [
   { value: '60+', label: 'years of experience\nin the industry' },
-  { value: '4M ft²', label: 'square feet\ndeveloped' },
-  { value: '30', label: 'international\ncorporations' },
+  { value: '4M+', label: 'square feet\ndeveloped' },
+  { value: '30+', label: 'international\ncorporations' },
   { value: '5', label: 'industrial parks\nin Mexicali' },
   { value: '3', label: 'generations\nof the Nelson family' },
-  { value: '80%', label: 'clients who\nrenew their lease' },
-  { value: '75+', label: 'projects built\nby Baumex' },
-  { value: '4', label: 'Fortune 500 companies\noperating here' },
+  { value: '80%', label: 'repeat\nbusiness' },
+  { value: '75+', label: 'projects\nbuilt' },
+  { value: '4', label: 'Fortune 500\ncompanies' },
 ]
 
 export function StatsGridBPGamma({
@@ -45,8 +45,8 @@ export function StatsGridBPGamma({
 }: StatsGridBPGammaProps = {}) {
   const _stats = stats ?? (lang === 'en' ? defaultStatsEn : defaultStatsEs)
   const _editorial = editorial ?? (lang === 'en'
-    ? 'Four generations building the industrial infrastructure that drives Mexicali.'
-    : 'Cuatro generaciones construyendo la infraestructura industrial que mueve Mexicali.')
+    ? 'Three generations serving world-class international companies in Mexicali.'
+    : 'Tres generaciones al servicio de empresas internacionales de clase mundial en Mexicali.')
   const _youtubeLabel = youtubeLabel ?? (lang === 'en' ? 'Watch on YouTube' : 'Ver en YouTube')
   const [showVideo, setShowVideo] = useState(false)
 

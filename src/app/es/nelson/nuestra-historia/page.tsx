@@ -75,8 +75,8 @@ export default function NuestraHistoriaPage() {
             <div className={'px-6 1200:px-24'}>
                 <p className="mt-8 text:xl 1200:text-[2rem] leading-loose tracking-wide text-foreground font-semibold">
                     Nuestro primer parque fue de block y techos bajos. El segundo ya tenía áreas
-                    verdes, estacionamiento y barda perimetral. El tercero tiene subestación
-                    eléctrica dedicada, tanque contraincendio de 360,000 galones y naves con
+                    verdes, estacionamiento y barda perimetral. El tercero tiene tanque
+                    contraincendio de 360,000 galones y naves con
                     certificación LEED. El cuarto ya tiene terreno. Cada parque fue una decisión de
                     inversión que hicimos antes de que el mercado nos lo pidiera.
                 </p>
@@ -136,7 +136,7 @@ export default function NuestraHistoriaPage() {
                         </p>
                     </div>
                     <div>
-                        <p className="text-4xl 1200:text-5xl font-bold text-foreground">4 generaciones</p>
+                        <p className="text-4xl 1200:text-5xl font-bold text-foreground">3 generaciones</p>
                         <p className="mt-2 text-lg text-muted-foreground">
                             de la familia fundadora. La cuarta generación ya trabaja en el grupo.
                         </p>

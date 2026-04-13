@@ -23,7 +23,7 @@ export const whyNelsonLinks = [
   {
     href: '/en/about/leadership',
     name: 'Leadership',
-    description: 'Four generations of expertise',
+    description: 'Three generations of expertise',
     iconKey: 'users',
   },
   {

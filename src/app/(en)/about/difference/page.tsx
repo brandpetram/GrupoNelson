@@ -30,7 +30,7 @@ export default function DifferencePage() {
           <EditorialCascadaBeta
             lang="en"
             titulo="The Nelson Difference: pioneers of border manufacturing since 1965, direct operation by the founding family, and in-house construction."
-            parrafo="Grupo Nelson established the first maquiladora in Mexicali in 1965. Four generations later, the founding family still operates every park, every contract, and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners, and an in-house construction firm with 28 years of experience. That translates to less risk, less friction, and more speed for your project."
+            parrafo="Grupo Nelson established the first maquiladora in Mexicali in 1965. Three generations later, the founding family still operates every park, every contract, and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners, and an in-house construction firm with 28 years of experience. That translates to less risk, less friction, and more speed for your project."
             stats={[
               { titulo: 'Pioneers since 1965', descripcion: 'Established the first maquiladora in Mexicali' },
               { titulo: 'Owners operating directly', descripcion: 'They negotiate, decide, and respond personally' },

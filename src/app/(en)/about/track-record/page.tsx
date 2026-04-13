@@ -37,23 +37,23 @@ export default function TrackRecordPage() {
           lang="en"
           stats={[
             { value: '60+', label: 'years of track record\nin the industry' },
-            { value: '4M ft²', label: 'square feet\ndeveloped' },
-            { value: '30', label: 'international\ncorporations' },
+            { value: '4M+', label: 'square feet\ndeveloped' },
+            { value: '30+', label: 'international\ncorporations' },
             { value: '5', label: 'industrial parks\nin Mexicali' },
             { value: '3', label: 'generations\nof the Nelson family' },
-            { value: '80%', label: 'clients who\nrenew their lease' },
-            { value: '75+', label: 'projects built\nby Baumex' },
-            { value: '4', label: 'Fortune 500 companies\noperating here' },
+            { value: '80%', label: 'repeat\nbusiness' },
+            { value: '75+', label: 'projects\nbuilt' },
+            { value: '4', label: 'Fortune 500\ncompanies' },
           ]}
-          editorial="Four generations building the industrial infrastructure that drives Mexicali."
+          editorial="Three generations serving world-class international companies in Mexicali."
           youtubeLabel="Watch on YouTube"
         />
 
         {/* ── Editorial text + cascading cubes ── */}
         <EditorialCascadaBP
           lang="en"
-          titulo="From the first maquiladora in Mexicali to the city's largest industrial building."
-          parrafo="In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Four generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
+          titulo="From the first maquiladora in Mexicali to nesting some of the most complex industrial projects in the city."
+          parrafo="In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
           ctaTitulo="Looking for Industrial Parks in Mexicali?"
           ctaSubtitulo="Sixty years of experience back every project."
           ctaPrimarioTexto="Contact Us"

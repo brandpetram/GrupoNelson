@@ -84,7 +84,7 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "Cuatro generaciones, una familia operando",
+    title: "Tres generaciones, una familia operando",
     description:
       "La persona que negocia tu contrato es la misma que lo firma. Sin capas corporativas, sin rotación de ejecutivos.",
     href: "/nelson/liderazgo",
@@ -158,8 +158,8 @@ const itemsEn: MosaicoItem[] = items.map((item) => {
       description: 'Gulfstream has been here over 35 years. Honeywell over 3 decades. The direct relationship with the owners produces loyalty measured in decades.',
       href: '/about/leadership',
     },
-    'Cuatro generaciones, una familia operando': {
-      title: 'Four generations, one family operating',
+    'Tres generaciones, una familia operando': {
+      title: 'Three generations, one family operating',
       description: 'The person who negotiates your contract is the same person who signs it. No corporate layers, no executive turnover.',
       href: '/about/leadership',
     },

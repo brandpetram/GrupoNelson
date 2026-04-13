@@ -6,13 +6,13 @@
 const etaText = {
   es: {
     heading: 'Selecciona el parque que se ajusta a tu operación y tu presupuesto.',
-    paragraph: 'El Vigía — rentas más económicas del portafolio, Interiores Aéreos creció de 5,000 ft² a 550,000 aquí. Nelson I — desde 1984. Vigía II — Honeywell Aerospace opera aquí desde hace más de 30 años. Nelson II — 27 hectáreas, subestación eléctrica dedicada, contraincendio central de 360,000 galones, Gulfstream, DHL y Vertiv operan aquí.',
+    paragraph: 'El Vigía — rentas más económicas del portafolio, Interiores Aéreos creció de 5,000 ft² a 550,000 aquí. Nelson I — desde 1984. Vigía II — Honeywell Aerospace opera aquí desde hace más de 30 años. Nelson II — 27 hectáreas, contraincendio central de 360,000 galones, Gulfstream, DHL y Vertiv operan aquí.',
     cta: 'Contáctanos',
     ctaHref: '/contacto',
   },
   en: {
     heading: 'Choose the park that fits your operation and your budget.',
-    paragraph: 'El Vigía — most affordable rents in the portfolio; Interiores Aereos grew from 5,000 ft² to 550,000 here. Nelson I — since 1984. Vigía II — Honeywell Aerospace has operated here for over 30 years. Nelson II — 27 hectares, dedicated electrical substation, centralized fire suppression with 360,000-gallon tank; Gulfstream, DHL, and Vertiv operate here.',
+    paragraph: 'El Vigía — most affordable rents in the portfolio; Interiores Aereos grew from 5,000 ft² to 550,000 here. Nelson I — since 1984. Vigía II — Honeywell Aerospace has operated here for over 30 years. Nelson II — 27 hectares, centralized fire suppression with 360,000-gallon tank; Gulfstream, DHL, and Vertiv operate here.',
     cta: 'Contact Us',
     ctaHref: '/contact',
   },
