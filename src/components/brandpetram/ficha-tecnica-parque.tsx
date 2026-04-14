@@ -186,7 +186,7 @@ function buildNaveSummary(building: Building) {
 
 // === Galería ===
 
-function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
+function ParkGallery({ park, t, lang = 'es' }: { park: IndustrialPark; t: Labels; lang?: Lang }) {
   const gallery: GalleryGroup[] = park.gallery ?? [
     { label: "Parque", images: [park.heroImage] },
   ]
@@ -368,7 +368,7 @@ function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
             <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">{t.infraestructura}</span>
           </div>
           <div className="flex flex-wrap gap-2">
-            {(park.infrastructure ?? []).map((item) => (
+            {(lang === 'en' && park.infrastructureEn?.length ? park.infrastructureEn : park.infrastructure ?? []).map((item) => (
               <span
                 key={item}
                 className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1.5 rounded-full"
@@ -498,7 +498,7 @@ export function FichaTecnicaParque({ park, lang = 'es' }: { park: IndustrialPark
 
         {/* Columna izquierda — galería */}
         <div className="w-full lg:w-80 shrink-0">
-          <ParkGallery park={park} t={t} />
+          <ParkGallery park={park} t={t} lang={lang} />
         </div>
 
         {/* Columna derecha — especificaciones */}

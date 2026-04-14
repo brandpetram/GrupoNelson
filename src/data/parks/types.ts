@@ -198,6 +198,7 @@ export interface IndustrialPark {
   /** 'pending' cuando hay información por confirmar con el cliente */
   availableInfo?: 'pending'
   infrastructure: string[]
+  infrastructureEn?: string[]
   buildings: Building[]
   hasSpecs: boolean
   coordinates?: { lat: number; lng: number }

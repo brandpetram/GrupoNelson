@@ -232,7 +232,8 @@ export const industrialParkType = defineType({
     defineField({name: 'establishedCompanies', title: 'Empresas establecidas', type: 'number'}),
     defineField({name: 'totalBuildings', title: 'Total de naves', type: 'number'}),
     defineField({name: 'tenants', title: 'Inquilinos', type: 'array', of: [{type: 'tenantEntry'}]}),
-    defineField({name: 'infrastructure', title: 'Infraestructura', type: 'array', of: [{type: 'string'}]}),
+    defineField({name: 'infrastructure', title: 'Infraestructura (ES)', type: 'array', of: [{type: 'string'}]}),
+    defineField({name: 'infrastructureEn', title: 'Infrastructure (EN)', type: 'array', of: [{type: 'string'}]}),
     defineField({name: 'hasSpecs', title: 'Tiene especificaciones', type: 'boolean'}),
     defineField({
       name: 'coordinates',
