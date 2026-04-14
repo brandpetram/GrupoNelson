@@ -7,11 +7,11 @@ export const TestimonialExcelencia = () => {
             <div className="@4xl:grid-cols-10 grid">
                 <div className="@4xl:pl-12 @4xl:col-span-8 @4xl:col-start-2 max-w-2xl p-6 md:py-12 lg:py-20">
                     <Image
-                        src="/gulfstream/gulfstream-logo.svg"
+                        src="/logos-clientes/logo-gulfstream.svg"
                         alt="Gulfstream Aerospace"
-                        width={160}
-                        height={40}
-                        className="h-7 w-auto dark:invert"
+                        width={640}
+                        height={160}
+                        className="h-28 w-auto dark:invert"
                     />
 
                     <div className="mt-6 lg:mt-12">
