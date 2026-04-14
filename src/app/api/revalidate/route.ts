@@ -1,5 +1,6 @@
 import { revalidatePath } from 'next/cache'
 import { type NextRequest, NextResponse } from 'next/server'
+import { createHmac } from 'crypto'
 
 /**
  * Webhook de revalidación para Sanity.
@@ -7,9 +8,12 @@ import { type NextRequest, NextResponse } from 'next/server'
  * Revalida las páginas que consumen ese tipo de documento.
  *
  * Configurar en: manage.sanity.io → proyecto → API → Webhooks
- * URL: https://nelson.com.mx/api/revalidate
- * Secret: el valor de SANITY_REVALIDATE_SECRET en .env.local
+ * URL: https://www.nelson.com.mx/api/revalidate (usar www para evitar redirect)
+ * Secret: el valor de SANITY_REVALIDATE_SECRET
+ * Dataset: production
  * Trigger on: Create, Update, Delete
+ * Filter: _type in ["industrialPark", "naveIndustrial", "terreno"]
+ * Projection: {_type}
  */
 
 const PATHS_BY_TYPE: Record<string, string[]> = {
@@ -35,15 +39,33 @@ const PATHS_BY_TYPE: Record<string, string[]> = {
   ],
 }
 
-export async function POST(req: NextRequest) {
-  const secret = req.headers.get('x-sanity-webhook-secret')
+/**
+ * Verifica la firma HMAC-SHA256 que Sanity envía en el header x-sanity-signature.
+ * Sanity firma el body con el secret configurado en el webhook.
+ */
+function isValidSignature(body: string, signature: string | null, secret: string): boolean {
+  if (!signature) return false
+  const hmac = createHmac('sha256', secret)
+  hmac.update(body)
+  const digest = hmac.digest('hex')
+  return signature === digest
+}
 
-  if (secret !== process.env.SANITY_REVALIDATE_SECRET) {
-    return NextResponse.json({ message: 'Invalid secret' }, { status: 401 })
+export async function POST(req: NextRequest) {
+  const secret = process.env.SANITY_REVALIDATE_SECRET
+  if (!secret) {
+    return NextResponse.json({ message: 'Secret not configured' }, { status: 500 })
+  }
+
+  const rawBody = await req.text()
+  const signature = req.headers.get('x-sanity-signature')
+
+  if (!isValidSignature(rawBody, signature, secret)) {
+    return NextResponse.json({ message: 'Invalid signature' }, { status: 401 })
   }
 
   try {
-    const body = await req.json()
+    const body = JSON.parse(rawBody)
     const type = body?._type as string | undefined
 
     if (type && PATHS_BY_TYPE[type]) {
@@ -53,10 +75,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ revalidated: true, type, paths: PATHS_BY_TYPE[type] })
     }
 
-    // Tipo no mapeado — revalidar todo por si acaso
-    revalidatePath('/', 'layout')
-    return NextResponse.json({ revalidated: true, type, paths: ['/ (all)'] })
-  } catch (err) {
+    // Tipo no mapeado — ignorar (el filtro del webhook debería evitar esto)
+    return NextResponse.json({ revalidated: false, type, message: 'Type not mapped' })
+  } catch {
     return NextResponse.json({ message: 'Error parsing body' }, { status: 400 })
   }
 }
