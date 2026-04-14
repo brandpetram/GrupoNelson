@@ -75,7 +75,7 @@ const mosaicoContent: MosaicoItem[] = [
     type: "card",
     title: "The founding family still operates directly",
     description:
-      "Since 1965, the owners of Grupo Nelson handle every project personally. No corporate layers.",
+      "Since 1967, the owners of Grupo Nelson handle every project personally. No corporate layers.",
     href: "/about/leadership",
     bg: "bg-blue-700",
   },
@@ -222,7 +222,7 @@ export default function LeadershipPage() {
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl">
-            The family that established the first maquiladora in Mexicali in 1965 is still
+            The family that established the first maquiladora in Mexicali in 1967 is still
             operating directly — 60 years later. There are no corporate layers between your
             project and the person with the authority to approve it.
           </p>

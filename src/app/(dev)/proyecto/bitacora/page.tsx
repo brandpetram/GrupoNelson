@@ -238,7 +238,7 @@ export default function BitacoraPage() {
         '  • Detalle de directiva familiar y sus roles',
         'Página /nelson/trayectoria:',
         '  • H1: "60 años construyendo naves industriales para empresas Fortune 500"',
-        '  • Timeline 1965→hoy, 8 números impresionantes, placeholder grid 30 logos',
+        '  • Timeline 1967→hoy, 8 números impresionantes, placeholder grid 30 logos',
         '  • Diseño visual: números a la izquierda, logos a la derecha (pendiente componentes)',
         'Pendiente: QA de las 3 páginas y migración de copy a componentes visuales',
       ],

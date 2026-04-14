@@ -24,11 +24,11 @@ export function FeatureSection8BP() {
           <div className="flex flex-col gap-[1rem] 768:gap-[1.25rem] 1200:gap-[1.25rem] 1920:gap-[1.5rem]">
             <Tagline>La Diferencia Nelson</Tagline>
             <h2 className="text-[1.5rem] 360:text-[1.5rem] 393:text-[1.5rem] 430:text-[1.75rem] 768:text-[2rem] 834:text-[2.25rem] 1024:text-[2.5rem] 1200:text-[2.75rem] 1280:text-[3rem] 1366:text-[3.25rem] 1440:text-[3.5rem] 1536:text-[3.75rem] 1728:text-[4.25rem] 1920:text-[4.5rem] text-foreground leading-none tracking-tighter font-extrabold">
-              Familia fundadora. Trato directo. Desde 1965.
+              Familia fundadora. Trato directo. Desde 1967.
             </h2>
             <p className="text-[0.875rem] 360:text-[0.875rem] 393:text-[0.875rem] 430:text-[1rem] 768:text-[1rem] 834:text-[1.0625rem] 1024:text-[1.125rem] 1200:text-[1.125rem] 1280:text-[1.1875rem] 1366:text-[1.25rem] 1440:text-[1.3125rem] 1536:text-[1.375rem] 1728:text-[1.4375rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed tracking-wide text-balance">
               Grupo Nelson no es un fondo de inversión que administra <strong>parques industriales</strong> desde otra ciudad.
-              Es la familia que creó la industria maquiladora de <strong>Mexicali</strong> en <strong>1965</strong> y sigue operando personalmente
+              Es la familia que creó la industria maquiladora de <strong>Mexicali</strong> en <strong>1967</strong> y sigue operando personalmente
               cada parque, cada contrato y cada proyecto de construcción. Tres hechos verificables
               que ningún competidor en <strong>Mexicali</strong> puede replicar simultáneamente: <strong>60 años de trayectoria</strong>,
               operación directa por la <strong>familia fundadora</strong>, y <strong>constructora in-house</strong> con 28 años

@@ -37,7 +37,7 @@ export default function OurStoryPage() {
             </div>
             <div className={'px-6 1200:px-10'}>
                 <h1 className="text-3xl 1200:text-5xl font-bold tracking-wide text-foreground">
-                In 1965 we established the first maquiladora in Mexicali. 60 years later, the founding family is still building.
+                In 1967 we established the first maquiladora in Mexicali. 60 years later, the founding family is still building.
             </h1>
                 <p className="mt-8 text:xl 1200:text-2xl leading-loose tracking-wide text-foreground">
                     Rodolfo Nelson Barbara arrived in Mexicali and built the city&apos;s first

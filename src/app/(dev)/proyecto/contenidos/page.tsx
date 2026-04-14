@@ -98,7 +98,7 @@ const sections: SectionDefinition[] = [
               'Los propios dueños lo mencionaron como diferenciador clave en las reuniones.',
           },
           {
-            title: 'Pioneros desde 1965: La empresa más antigua del sector en Mexicali',
+            title: 'Pioneros desde 1967: La empresa más antigua del sector en Mexicali',
             description:
               'Grupo Nelson fundó la industria maquiladora en Mexicali. 60 años de experiencia no se improvisan. Mientras otros llevan 15-20 años, Nelson lleva 60.',
             estimatedWords: 250,
@@ -138,7 +138,7 @@ const sections: SectionDefinition[] = [
         url: '/nelson/trayectoria',
         status: 'con-contenido',
         summary:
-          'Copy comercial escrito. H1: "60 años construyendo naves industriales para empresas Fortune 500". Timeline 1965→hoy, 8 números, placeholder grid 30 logos. Pendiente: QA, componente visual de logos y migración.',
+          'Copy comercial escrito. H1: "60 años construyendo naves industriales para empresas Fortune 500". Timeline 1967→hoy, 8 números, placeholder grid 30 logos. Pendiente: QA, componente visual de logos y migración.',
         topics: [
           {
             title: 'Clientes Fortune 500 que confían en nosotros',

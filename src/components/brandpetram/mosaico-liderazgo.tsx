@@ -28,7 +28,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "La familia fundadora sigue operando",
     description:
-      "Desde 1965, los dueños de Grupo Nelson atienden cada proyecto personalmente. Sin capas corporativas.",
+      "Desde 1967, los dueños de Grupo Nelson atienden cada proyecto personalmente. Sin capas corporativas.",
     href: "/nelson/liderazgo",
     bg: "bg-blue-700",
   },
@@ -150,7 +150,7 @@ const itemsEn: MosaicoItem[] = items.map((item) => {
   const translations: Record<string, { title: string; description: string; href: string }> = {
     'La familia fundadora sigue operando': {
       title: 'The founding family still operates',
-      description: 'Since 1965, the owners of Grupo Nelson handle every project personally. No corporate layers.',
+      description: 'Since 1967, the owners of Grupo Nelson handle every project personally. No corporate layers.',
       href: '/about/leadership',
     },
     'Relaciones de largo plazo': {

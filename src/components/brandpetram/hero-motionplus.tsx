@@ -26,7 +26,7 @@ const defaultItemTransition: Transition = {
 
 const heroMotionPlusDefaults = {
     es: {
-        badge: "Desde 1965 en Mexicali",
+        badge: "Desde 1967 en Mexicali",
         headlineTop: "Parques industriales",
         headlineAccent: "de clase mundial",
         subtitle: "Desarrollo, construcción y administración de naves industriales en Mexicali. La familia fundadora opera directamente cada proyecto.",
@@ -41,7 +41,7 @@ const heroMotionPlusDefaults = {
         ],
     },
     en: {
-        badge: "Since 1965 in Mexicali",
+        badge: "Since 1967 in Mexicali",
         headlineTop: "World-class",
         headlineAccent: "industrial parks",
         subtitle: "Development, construction, and management of industrial buildings in Mexicali. The founding family operates every project directly.",

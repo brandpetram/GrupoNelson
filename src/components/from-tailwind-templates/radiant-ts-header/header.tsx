@@ -47,8 +47,8 @@ export function Header({
   lang = 'es',
 }: RadiantHeaderProps = {}) {
   const _headline = headline ?? (lang === 'en'
-    ? 'Pioneers of the maquiladora industry in Mexicali since 1965.'
-    : 'Los pioneros de la industria maquiladora de Mexicali desde 1965.')
+    ? 'Pioneers of the maquiladora industry in Mexicali since 1967.'
+    : 'Los pioneros de la industria maquiladora de Mexicali desde 1967.')
   const _lead = lead ?? (lang === 'en'
     ? 'Gulfstream has been with us for over 35 years. Honeywell for over 3 decades. 33 international corporations have already chosen to operate in our parks — long-term relationships measured in decades.'
     : 'Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — relaciones de largo plazo que se miden en décadas.')

@@ -95,14 +95,14 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Alpha component - Identity and offering summary */}
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP
-          descripcion="The family that established Mexicali's first maquiladora in 1965 remains actively involved today establishing long-term relationships measured in decades."
+          descripcion="The family that established Mexicali's first maquiladora in 1967 remains actively involved today establishing long-term relationships measured in decades."
           lang="en"
         />
       </div>
 
       {/* About us section with animated numbers */}
       <RadiantHeader
-        headline="Pioneers of the maquiladora industry in Mexicali since 1965."
+        headline="Pioneers of the maquiladora industry in Mexicali since 1967."
         lead=""
         sectionTitle="Two paths, one provider"
         paragraphTitles={['Existing Buildings for Lease', 'Custom Build-to-Suit']}
@@ -328,7 +328,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
         <CirculosConProps
           circulo1Letra="60"
           circulo1Titulo="Years"
-          circulo1Descripcion="The family that established Mexicali's first maquiladora in 1965 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project — not a manager who rotates every two years."
+          circulo1Descripcion="The family that established Mexicali's first maquiladora in 1967 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project — not a manager who rotates every two years."
           circulo2Letra="33"
           circulo2Titulo="Corporations"
           circulo2Descripcion="Gulfstream has been here for over 35 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
@@ -374,7 +374,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 6,
               question: "How long has Grupo Nelson been in the industry?",
-              answer: "Over 60 years. We founded Mexicali's maquiladora industry in 1965. Three generations later, the founding family still operates personally — the owners handle every project directly.",
+              answer: "Over 60 years. We founded Mexicali's maquiladora industry in 1967. Three generations later, the founding family still operates personally — the owners handle every project directly.",
             },
           ]}
         />

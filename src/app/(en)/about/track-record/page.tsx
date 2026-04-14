@@ -41,7 +41,7 @@ export default function TrackRecordPage() {
             { value: '30+', label: 'international\ncorporations' },
             { value: '5', label: 'industrial parks\nin Mexicali' },
             { value: '3', label: 'generations\nof the Nelson family' },
-            { value: '80%', label: 'repeat\nbusiness' },
+            { value: '80%', label: 'client retention\nrate' },
             { value: '75+', label: 'projects\nbuilt' },
             { value: '4', label: 'Fortune 500\ncompanies' },
           ]}
@@ -53,7 +53,7 @@ export default function TrackRecordPage() {
         <EditorialCascadaBP
           lang="en"
           titulo="From the first maquiladora in Mexicali to nesting some of the most complex industrial projects in the city."
-          parrafo="In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
+          parrafo="In 1967, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed."
           ctaTitulo="Looking for Industrial Parks in Mexicali?"
           ctaSubtitulo="Sixty years of experience back every project."
           ctaPrimarioTexto="Contact Us"

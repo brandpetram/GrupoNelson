@@ -120,7 +120,7 @@ export default function LiderazgoPage() {
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl">
-            La familia que instaló la primera maquiladora de Mexicali en 1965 sigue operando
+            La familia que instaló la primera maquiladora de Mexicali en 1967 sigue operando
             directamente — 60 años después. No hay capas corporativas entre tu proyecto
             y la persona con autoridad para aprobarlo.
           </p>

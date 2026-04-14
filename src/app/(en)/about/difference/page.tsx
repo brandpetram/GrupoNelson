@@ -29,10 +29,10 @@ export default function DifferencePage() {
         <div>
           <EditorialCascadaBeta
             lang="en"
-            titulo="The Nelson Difference: pioneers of border manufacturing since 1965, direct operation by the founding family, and in-house construction."
-            parrafo="Grupo Nelson established the first maquiladora in Mexicali in 1965. Three generations later, the founding family still operates every park, every contract, and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners, and an in-house construction firm with 28 years of experience. That translates to less risk, less friction, and more speed for your project."
+            titulo="The Nelson Difference: pioneers of border manufacturing since 1967, direct operation by the founding family, and in-house construction."
+            parrafo="Grupo Nelson established the first maquiladora in Mexicali in 1967. Three generations later, the founding family still operates every park, every contract, and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners, and an in-house construction firm with 28 years of experience. That translates to less risk, less friction, and more speed for your project."
             stats={[
-              { titulo: 'Pioneers since 1965', descripcion: 'Established the first maquiladora in Mexicali' },
+              { titulo: 'Pioneers since 1967', descripcion: 'Established the first maquiladora in Mexicali' },
               { titulo: 'Owners operating directly', descripcion: 'They negotiate, decide, and respond personally' },
               { titulo: 'In-house construction', descripcion: 'Baumex: 28 years and 75 projects with our own team' },
             ]}
@@ -67,7 +67,7 @@ export default function DifferencePage() {
           cuadritosPosition="right"
         >
           <p className={splitParagraphClass}>
-            In <strong>1965</strong>, Rodolfo Nelson Sr. established the first
+            In <strong>1967</strong>, Rodolfo Nelson Sr. established the first
             maquiladora in <strong>Mexicali</strong>. The modern industrial
             parks of the region did not exist. The manufacturing ecosystem
             that today houses{" "}

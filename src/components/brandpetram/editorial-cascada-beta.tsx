@@ -97,10 +97,10 @@ export function EditorialCascadaBeta({
   lang = 'es',
 }: EditorialCascadaBetaProps) {
   const defaults = lang === 'en' ? {
-    titulo: 'The Nelson Difference: pioneers of border manufacturing since 1965, direct operation by the founding family and in-house construction firm.',
-    parrafo: 'Grupo Nelson established the first maquiladora in Mexicali in 1965. Three generations later, the founding family still operates every park, every contract and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners and an in-house construction firm with 28 years of experience. That translates to less risk, less friction and more speed for your project.',
+    titulo: 'The Nelson Difference: pioneers of border manufacturing since 1967, direct operation by the founding family and in-house construction firm.',
+    parrafo: 'Grupo Nelson established the first maquiladora in Mexicali in 1967. Three generations later, the founding family still operates every park, every contract and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners and an in-house construction firm with 28 years of experience. That translates to less risk, less friction and more speed for your project.',
     stats: [
-      { titulo: 'Pioneers since 1965', descripcion: 'Established the first maquiladora in Mexicali' },
+      { titulo: 'Pioneers since 1967', descripcion: 'Established the first maquiladora in Mexicali' },
       { titulo: 'Owners operating', descripcion: 'They negotiate, decide and respond personally' },
       { titulo: 'In-house construction', descripcion: 'Baumex: 28 years and 75 projects with own team' },
     ],
@@ -110,10 +110,10 @@ export function EditorialCascadaBeta({
     ctaSecundarioTexto: 'Learn about our track record',
     ctaSecundarioHref: '/about/track-record',
   } : {
-    titulo: 'La Diferencia Nelson: pioneros de la manufactura fronteriza desde 1965, operación directa por la familia fundadora y constructora propia.',
-    parrafo: 'Grupo Nelson instaló la primera maquiladora de Mexicali en 1965. Tres generaciones después, la familia fundadora sigue operando cada parque, cada contrato y cada proyecto de construcción. Muy pocos desarrolladores industriales en esta ciudad combinan 60 años de permanencia, dueños involucrados operativamente y constructora propia con 28 años de experiencia. Eso se traduce en menos riesgo, menos fricción y más velocidad para tu proyecto.',
+    titulo: 'La Diferencia Nelson: pioneros de la manufactura fronteriza desde 1967, operación directa por la familia fundadora y constructora propia.',
+    parrafo: 'Grupo Nelson instaló la primera maquiladora de Mexicali en 1967. Tres generaciones después, la familia fundadora sigue operando cada parque, cada contrato y cada proyecto de construcción. Muy pocos desarrolladores industriales en esta ciudad combinan 60 años de permanencia, dueños involucrados operativamente y constructora propia con 28 años de experiencia. Eso se traduce en menos riesgo, menos fricción y más velocidad para tu proyecto.',
     stats: [
-      { titulo: 'Pioneros desde 1965', descripcion: 'Instalaron la primera maquiladora de Mexicali' },
+      { titulo: 'Pioneros desde 1967', descripcion: 'Instalaron la primera maquiladora de Mexicali' },
       { titulo: 'Dueños operando', descripcion: 'Negocian, deciden y responden personalmente' },
       { titulo: 'Constructora propia', descripcion: 'Baumex: 28 años y 75 proyectos con equipo propio' },
     ],

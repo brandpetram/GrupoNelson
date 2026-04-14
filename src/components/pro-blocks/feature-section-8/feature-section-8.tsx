@@ -14,11 +14,11 @@ export function FeatureSection8() {
           <div className="section-title-gap-lg flex flex-col">
             <Tagline>La Diferencia Nelson</Tagline>
             <h2 className="heading-lg text-foreground">
-              Instala tu nave industrial en Mexicali con el único desarrollador operado por su familia fundadora desde 1965
+              Instala tu nave industrial en Mexicali con el único desarrollador operado por su familia fundadora desde 1967
             </h2>
             <p className="text-muted-foreground">
               Grupo Nelson no es un fondo de inversión que administra parques industriales desde otra ciudad.
-              Es la familia que creó la industria maquiladora de Mexicali en 1965 y sigue operando personalmente
+              Es la familia que creó la industria maquiladora de Mexicali en 1967 y sigue operando personalmente
               cada parque, cada contrato y cada proyecto de construcción. Tres hechos verificables
               que ningún competidor en Mexicali puede replicar simultáneamente: 60 años de trayectoria,
               operación directa por la familia fundadora, y constructora in-house con 28 años

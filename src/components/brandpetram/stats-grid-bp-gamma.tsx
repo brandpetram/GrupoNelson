@@ -21,7 +21,7 @@ const defaultStatsEs: StatsGridStat[] = [
   { value: '30+', label: 'corporaciones\ninternacionales' },
   { value: '5', label: 'parques industriales\nen Mexicali' },
   { value: '3', label: 'generaciones\nde familia Nelson' },
-  { value: '80%', label: 'repeat\nbusiness' },
+  { value: '80%', label: 'retención\nde clientes' },
   { value: '75+', label: 'proyectos\nconstruidos' },
   { value: '4', label: 'empresas\nFortune 500' },
 ]
@@ -32,7 +32,7 @@ const defaultStatsEn: StatsGridStat[] = [
   { value: '30+', label: 'international\ncorporations' },
   { value: '5', label: 'industrial parks\nin Mexicali' },
   { value: '3', label: 'generations\nof the Nelson family' },
-  { value: '80%', label: 'repeat\nbusiness' },
+  { value: '80%', label: 'client retention\nrate' },
   { value: '75+', label: 'projects\nbuilt' },
   { value: '4', label: 'Fortune 500\ncompanies' },
 ]

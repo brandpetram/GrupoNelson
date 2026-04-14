@@ -60,7 +60,7 @@ function ImageCarousel({ className }: { className?: string }) {
 const editorialCascadaDefaults = {
   es: {
     titulo: 'De la primera maquiladora de Mexicali a albergar algunos de los proyectos industriales más complejos de la ciudad.',
-    parrafo: 'En 1965, Rodolfo Nelson Sr. instaló la primera maquiladora de Mexicali. No existían parques industriales — existía una visión. Tres generaciones después, esa visión se convirtió en cinco parques, cuatro millones de pies cuadrados desarrollados y la confianza de treinta corporaciones internacionales que eligieron Mexicali porque Grupo Nelson ya había construido la infraestructura que necesitaban.',
+    parrafo: 'En 1967, Rodolfo Nelson Sr. instaló la primera maquiladora de Mexicali. No existían parques industriales — existía una visión. Tres generaciones después, esa visión se convirtió en cinco parques, cuatro millones de pies cuadrados desarrollados y la confianza de treinta corporaciones internacionales que eligieron Mexicali porque Grupo Nelson ya había construido la infraestructura que necesitaban.',
     ctaTitulo: '¿Buscas Parques Industriales en Mexicali?',
     ctaSubtitulo: 'Sesenta años de experiencia respaldan cada proyecto.',
     ctaPrimarioTexto: 'Contáctenos',
@@ -70,7 +70,7 @@ const editorialCascadaDefaults = {
   },
   en: {
     titulo: 'From the first maquiladora in Mexicali to nesting some of the most complex industrial projects in the city.',
-    parrafo: 'In 1965, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed.',
+    parrafo: 'In 1967, Rodolfo Nelson Sr. established the first maquiladora in Mexicali. There were no industrial parks — there was a vision. Three generations later, that vision became five parks, four million square feet developed, and the trust of thirty international corporations that chose Mexicali because Grupo Nelson had already built the infrastructure they needed.',
     ctaTitulo: 'Looking for Industrial Parks in Mexicali?',
     ctaSubtitulo: 'Sixty years of experience back every project.',
     ctaPrimarioTexto: 'Contact Us',

@@ -218,7 +218,7 @@ export default function ConveyorsIndustrialesPage() {
             imageAlt="Lorem ipsum"
             number="+4.5"
             title={<>Millones de <br /> Pies² Desarrollados</>}
-            subtitle={<>Construidos en naves <br /> industriales en Mexicali desde 1965</>}
+            subtitle={<>Construidos en naves <br /> industriales en Mexicali desde 1967</>}
           />
 
 

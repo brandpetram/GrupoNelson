@@ -37,7 +37,7 @@ export default function NuestraHistoriaPage() {
             </div>
             <div className={'px-6 1200:px-10'}>
                 <h1 className="text-3xl 1200:text-5xl font-bold tracking-wide text-foreground">
-                En 1965 instalamos la primera maquiladora de Mexicali. 60 años después, la familia fundadora sigue construyendo.
+                En 1967 instalamos la primera maquiladora de Mexicali. 60 años después, la familia fundadora sigue construyendo.
             </h1>
                 <p className="mt-8 text:xl 1200:text-2xl leading-loose tracking-wide text-foreground">
                     Rodolfo Nelson Bárbara llegó a Mexicali y construyó el primer edificio industrial

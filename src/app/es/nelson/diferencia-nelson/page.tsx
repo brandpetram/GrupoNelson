@@ -53,7 +53,7 @@ export default function DiferenciaNelsonPage() {
           cuadritosPosition="right"
         >
           <p className={splitParagraphClass}>
-            En <strong>1965</strong>, Rodolfo Nelson Sr. instaló la primera
+            En <strong>1967</strong>, Rodolfo Nelson Sr. instaló la primera
             maquiladora de <strong>Mexicali</strong>. No existían los parques
             industriales modernos de la región. No existía el ecosistema
             manufacturero que hoy alberga a{" "}

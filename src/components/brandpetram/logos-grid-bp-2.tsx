@@ -17,7 +17,7 @@ const topLogos = [
     alt: "UTC Aerospace Systems",
     darkMode: 'brightness' as const,
   },
-  { src: "/logos-clientes/logo-general-dynamics.svg", alt: "General Dynamics", darkMode: 'brightness' as const },
+  { src: "/logos-clientes/logo-aqua-lung.svg", alt: "Aqua Lung", darkMode: 'brightness' as const, scale: 90 },
 ];
 
 const logos = [
@@ -106,7 +106,7 @@ export function LogosGridBP2({
                 key={logo.alt}
                 className="flex items-center justify-center border-r border-b border-border p-[1rem] 768:p-[1.25rem] 1024:p-[1.5rem] 1200:p-[1.75rem] 1536:p-[2rem] 1920:p-[2.25rem] aspect-[3/1]"
               >
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full" style={logo.scale ? { width: `${logo.scale}%`, height: `${logo.scale}%`, margin: 'auto' } : undefined}>
                   <Image
                     src={logo.src}
                     alt={logo.alt}
