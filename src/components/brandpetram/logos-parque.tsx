@@ -4,6 +4,7 @@
 
 import Image from "next/image"
 import type { IndustrialPark } from "@/data/parks/types"
+import { resolveImageUrl } from "@/sanity/lib/image"
 
 export function LogosParque({ park }: { park: IndustrialPark }) {
   if (!park.tenants || park.tenants.length === 0) return null
@@ -25,7 +26,7 @@ export function LogosParque({ park }: { park: IndustrialPark }) {
         {tenants.map((tenant) => (
           <div key={tenant.name} className="relative h-12 w-36" title={tenant.name}>
             <Image
-              src={tenant.logo!}
+              src={resolveImageUrl(tenant.logo!, 288)!}
               alt={`Logo ${tenant.name}`}
               fill
               className="object-contain object-left"
@@ -44,7 +45,7 @@ export function LogosParque({ park }: { park: IndustrialPark }) {
               title={tenant.name}
             >
               <Image
-                src={tenant.logo!}
+                src={resolveImageUrl(tenant.logo!, 288)!}
                 alt={`Logo ${tenant.name}`}
                 fill
                 className="object-contain object-left"

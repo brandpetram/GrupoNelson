@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import type { IndustrialPark } from '@/data/parks/types'
+import { resolveImageUrl } from '@/sanity/lib/image'
 import { GridOverlay } from '@/components/ui/grid'
 
 interface GridConfig {
@@ -56,12 +58,16 @@ export function ParkHero({
   const t = parkHeroText[lang]
   return (
     <section data-component="ParkHero" data-component-file="src/components/brandpetram/park-hero.tsx" data-component-props="true" className="relative">
-      <div className="aspect-[1/1.4] md:aspect-[1/.7] 1280:aspect-[16/7] overflow-hidden">
-        <img
-          src={park.heroImage}
-          alt={park.name}
-          className="w-full h-full object-cover"
-        />
+      <div className="relative aspect-[1/1.4] md:aspect-[1/.7] 1280:aspect-[16/7] overflow-hidden">
+        {resolveImageUrl(park.heroImage, 1920) && (
+          <Image
+            src={resolveImageUrl(park.heroImage, 1920)!}
+            alt={park.name}
+            fill
+            className="object-cover"
+            priority
+          />
+        )}
       </div>
 
       {/* Capa de color uniforme (contraste/tinte) */}

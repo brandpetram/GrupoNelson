@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { industrialParks } from "@/data/parks/parks-data"
 import type { IndustrialPark } from "@/data/parks/types"
+import { resolveImageUrl } from "@/sanity/lib/image"
 
 function ParqueCard({ parque }: { parque: IndustrialPark }) {
   const subtitulo = `Parque Industrial · Desde ${parque.since}`
@@ -17,12 +18,14 @@ function ParqueCard({ parque }: { parque: IndustrialPark }) {
       {/* Imagen */}
       <div className="sm:w-72 shrink-0 bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
         <div className="w-full aspect-[16/10] sm:aspect-square overflow-hidden relative">
-          <Image
-            src={parque.heroImage}
-            alt={parque.name}
-            fill
-            className="object-cover"
-          />
+          {resolveImageUrl(parque.heroImage, 576) && (
+            <Image
+              src={resolveImageUrl(parque.heroImage, 576)!}
+              alt={parque.name}
+              fill
+              className="object-cover"
+            />
+          )}
         </div>
       </div>
 

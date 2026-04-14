@@ -35,7 +35,7 @@ export const naveIndustrialType = defineType({
       options: {list: ['Disponible', 'Ocupada', 'En construcción']},
     }),
     defineField({name: 'nota', title: 'Nota', type: 'text', rows: 2}),
-    defineField({name: 'images', title: 'Imágenes (rutas)', type: 'array', of: [{type: 'string'}]}),
+    defineField({name: 'images', title: 'Imágenes', type: 'array', of: [{type: 'image', options: {hotspot: true}}]}),
     defineField({name: 'shortDescription', title: 'Descripción corta', type: 'string'}),
     defineField({name: 'features', title: 'Características', type: 'array', of: [{type: 'string'}]}),
     defineField({name: 'applications', title: 'Aplicaciones', type: 'array', of: [{type: 'string'}]}),

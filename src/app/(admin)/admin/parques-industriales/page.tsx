@@ -99,7 +99,7 @@ export default function ParquesIndustrialesPage() {
         <div className="grid gap-1.5">
           {[
             { field: 'Nombre', desc: 'Nombre de la empresa' },
-            { field: 'Logo (ruta)', desc: 'Ruta al archivo del logo' },
+            { field: 'Logo', desc: 'Imagen del logo (subir desde Studio)' },
           ].map((item) => (
             <div key={item.field} className="flex items-baseline gap-2 text-sm">
               <span className="shrink-0 font-medium text-foreground">{item.field}</span>

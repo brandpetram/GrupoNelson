@@ -1,8 +1,10 @@
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
 import { getIndustrialParks } from '@/data/parks/parks-sanity'
 import { createMetadata } from '@/lib/create-metadata'
+import { resolveImageUrl } from '@/sanity/lib/image'
 import { ParkMiniMap } from '@/components/brandpetram/park-mini-map'
 
 // Coordenadas de respaldo — solo se usan si Sanity no tiene las del parque.
@@ -64,11 +66,14 @@ export default async function ParquesIndustrialesMexicaliPage() {
               <div
                 className="relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-muted"
               >
-                <img
-                  src={park.heroImage}
-                  alt={park.name}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                {resolveImageUrl(park.heroImage, 960) && (
+                  <Image
+                    src={resolveImageUrl(park.heroImage, 960)!}
+                    alt={park.name}
+                    fill
+                    className="object-cover"
+                  />
+                )}
                 {park.immediateAvailability && (
                   <div className="absolute top-4 left-4 lg:top-6 lg:left-6">
                     <span className="inline-flex items-center gap-1.5 bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-sm">

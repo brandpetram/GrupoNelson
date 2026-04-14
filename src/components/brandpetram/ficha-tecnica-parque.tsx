@@ -6,7 +6,8 @@
 
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import type { IndustrialPark, Building, GalleryGroup } from "@/data/parks/types"
+import type { IndustrialPark, Building, GalleryGroup, ImageField } from "@/data/parks/types"
+import { resolveImageUrl } from "@/sanity/lib/image"
 import { LogosParque } from "@/components/brandpetram/logos-parque"
 
 // === Helpers ===
@@ -198,6 +199,8 @@ function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
   const allImages = activeGroup?.images ?? []
   const currentImage = allImages[activeImageIdx] ?? park.heroImage
 
+  const imgUrl = (img: ImageField | null | undefined, width = 800) => resolveImageUrl(img, width)
+
   const goNext = useCallback(() => {
     setActiveImageIdx((i) => (i + 1) % allImages.length)
   }, [allImages.length])
@@ -229,7 +232,7 @@ function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
             className="relative w-full h-full max-w-5xl max-h-[90vh] mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image src={currentImage} alt={`${park.shortName} — ${activeGroup.label}`} fill className="object-contain" />
+            {imgUrl(currentImage, 1600) && <Image src={imgUrl(currentImage, 1600)!} alt={`${park.shortName} — ${activeGroup.label}`} fill className="object-contain" />}
           </div>
 
           {/* Info */}
@@ -291,13 +294,15 @@ function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
           className="relative bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in group"
           onClick={() => setLightboxOpen(true)}
         >
-          <Image
-            key={currentImage}
-            src={currentImage}
-            alt={`${park.shortName} — ${activeGroup.label}`}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
+          {imgUrl(currentImage) && (
+            <Image
+              key={imgUrl(currentImage)}
+              src={imgUrl(currentImage)!}
+              alt={`${park.shortName} — ${activeGroup.label}`}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          )}
           <div className="absolute top-3 right-3 bg-black/40 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm0 0v0M11 8v6M8 11h6" />
@@ -321,7 +326,7 @@ function ParkGallery({ park, t }: { park: IndustrialPark; t: Labels }) {
                     : "border-zinc-200 dark:border-zinc-700 hover:border-zinc-400"
                 }`}
               >
-                <Image src={img} alt={`${activeGroup.label} ${i + 1}`} fill className="object-cover" />
+                {imgUrl(img, 112) && <Image src={imgUrl(img, 112)!} alt={`${activeGroup.label} ${i + 1}`} fill className="object-cover" />}
               </button>
             ))}
           </div>

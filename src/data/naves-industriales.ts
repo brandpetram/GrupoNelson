@@ -1,3 +1,5 @@
+import type { ImageField } from '@/data/parks/types'
+
 export type NaveIndustrial = {
   id: string
   nave: string
@@ -21,7 +23,7 @@ export type NaveIndustrial = {
   sprinklers?: boolean
   estatus: 'Disponible' | 'Ocupada' | 'En construcción'
   nota?: string
-  images?: string[]
+  images?: ImageField[]
   shortDescription: string
   features: string[]
   applications: string[]

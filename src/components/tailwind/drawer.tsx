@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { Phone } from 'lucide-react'
 import { NaveIndustrial } from '@/data/naves-industriales'
+import { resolveImageUrl } from '@/sanity/lib/image'
 
 export type DrawerProps = {
   open: boolean
@@ -17,6 +18,13 @@ const estatusBadgeClasses: Record<NaveIndustrial['estatus'], string> = {
   'Disponible':       'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300',
   'Ocupada':          'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400',
   'En construcción':  'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300',
+}
+
+/** Convierte un item de images (puede ser string legacy o SanityImage) a URL */
+function toImageUrl(img: unknown): string {
+  if (typeof img === 'string') return img
+  if (img && typeof img === 'object' && '_type' in img) return resolveImageUrl(img as import('@/data/parks/types').ImageField, 960) ?? ''
+  return ''
 }
 
 export default function Drawer({ open, onClose, nave, lang = 'es' }: DrawerProps) {
@@ -56,13 +64,16 @@ export default function Drawer({ open, onClose, nave, lang = 'es' }: DrawerProps
   const touchStartXRef = useRef<number | null>(null)
   const swipedRef = useRef(false)
 
+  // Convertir imágenes de nave a URLs (soporta SanityImage y string legacy)
+  const imageUrls = useMemo(() => (nave?.images ?? []).map(toImageUrl).filter(Boolean), [nave?.images])
+
   // Resetear imagen activa y scroll cuando cambia la nave
   useEffect(() => {
-    setActiveImage(nave?.images?.[0] ?? null)
+    setActiveImage(imageUrls[0] ?? null)
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTop = 0
     }
-  }, [nave?.id])
+  }, [nave?.id, imageUrls])
 
   const closeViewer = () => {
     setViewerOpen(false)
@@ -83,7 +94,7 @@ export default function Drawer({ open, onClose, nave, lang = 'es' }: DrawerProps
   useEffect(() => {
     if (!viewerOpen) return
     closeBtnRef.current?.focus()
-    const images = nave?.images ?? []
+    const images = imageUrls
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault()
@@ -149,7 +160,7 @@ export default function Drawer({ open, onClose, nave, lang = 'es' }: DrawerProps
     { label: 'Sprinklers',      value: nave.sprinklers ? (lang === 'en' ? 'Yes' : 'Sí') : undefined },
   ].filter(s => s.value !== undefined && s.value !== '') : []
 
-  const images = nave?.images ?? []
+  const images = imageUrls
 
   const overlay = (
     <div

@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { industrialParks } from "@/data/parks/parks-data"
 import type { IndustrialPark } from "@/data/parks/types"
+import { resolveImageUrl } from "@/sanity/lib/image"
 
 type Zona = "Corredor Industrial" | "Carretera a San Luis"
 
@@ -35,12 +36,14 @@ function ParqueCard({ parque }: { parque: IndustrialPark }) {
     >
       {/* Imagen */}
       <div className="w-36 shrink-0 bg-zinc-50 dark:bg-zinc-800 relative overflow-hidden">
-        <Image
-          src={parque.heroImage}
-          alt={parque.name}
-          fill
-          className="object-cover"
-        />
+        {resolveImageUrl(parque.heroImage, 288) && (
+          <Image
+            src={resolveImageUrl(parque.heroImage, 288)!}
+            alt={parque.name}
+            fill
+            className="object-cover"
+          />
+        )}
       </div>
 
       {/* Contenido */}

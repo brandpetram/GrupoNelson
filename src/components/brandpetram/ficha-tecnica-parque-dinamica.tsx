@@ -7,6 +7,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import type { IndustrialPark, Building } from "@/data/parks/types"
+import { resolveImageUrl } from "@/sanity/lib/image"
 
 function formatArea(m2: number, sqft?: number) {
   const m2Str = m2.toLocaleString("es-MX", { maximumFractionDigits: 2 })
@@ -82,12 +83,14 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
             className="relative w-full h-full max-w-4xl max-h-[90vh] mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={park.heroImage}
-              alt={park.name}
-              fill
-              className="object-contain"
-            />
+            {resolveImageUrl(park.heroImage, 960) && (
+              <Image
+                src={resolveImageUrl(park.heroImage, 960)!}
+                alt={park.name}
+                fill
+                className="object-contain"
+              />
+            )}
           </div>
           <button
             onClick={() => setLightboxAbierto(false)}
@@ -151,12 +154,14 @@ export function FichaTecnicaParqueDinamica({ park }: { park: IndustrialPark }) {
               className="relative bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-xl overflow-hidden aspect-[4/3] cursor-zoom-in group"
               onClick={() => setLightboxAbierto(true)}
             >
-              <Image
-                src={park.heroImage}
-                alt={park.name}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              {resolveImageUrl(park.heroImage, 960) && (
+                <Image
+                  src={resolveImageUrl(park.heroImage, 960)!}
+                  alt={park.name}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              )}
               <div className="absolute top-3 right-3 bg-black/40 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm0 0v0M11 8v6M8 11h6" />

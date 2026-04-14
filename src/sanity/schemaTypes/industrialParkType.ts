@@ -193,7 +193,7 @@ const galleryGroup = defineType({
   type: 'object',
   fields: [
     defineField({name: 'label', title: 'Etiqueta', type: 'string'}),
-    defineField({name: 'images', title: 'Imágenes', type: 'array', of: [{type: 'string'}]}),
+    defineField({name: 'images', title: 'Imágenes', type: 'array', of: [{type: 'image', options: {hotspot: true}}]}),
   ],
 })
 
@@ -203,7 +203,7 @@ const tenantEntry = defineType({
   type: 'object',
   fields: [
     defineField({name: 'name', title: 'Nombre', type: 'string'}),
-    defineField({name: 'logo', title: 'Logo (ruta)', type: 'string'}),
+    defineField({name: 'logo', title: 'Logo', type: 'image'}),
   ],
 })
 
@@ -219,7 +219,7 @@ export const industrialParkType = defineType({
     defineField({name: 'name', title: 'Nombre', type: 'string', validation: (Rule) => Rule.required()}),
     defineField({name: 'shortName', title: 'Nombre corto', type: 'string'}),
     defineField({name: 'description', title: 'Descripción', type: 'text', rows: 3}),
-    defineField({name: 'heroImage', title: 'Imagen hero (ruta)', type: 'string'}),
+    defineField({name: 'heroImage', title: 'Imagen hero', type: 'image', options: {hotspot: true}}),
     defineField({name: 'since', title: 'Desde (año)', type: 'number'}),
     defineField({name: 'location', title: 'Ubicación', type: 'string'}),
     defineField({name: 'address', title: 'Dirección', type: 'string'}),

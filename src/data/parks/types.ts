@@ -1,6 +1,22 @@
 // Interfaces para el sistema de datos de parques industriales
 // Dos niveles: Parque (general) y Nave/Building (específico)
 
+// === Sanity image asset ===
+
+/** Objeto image nativo de Sanity (compatible con urlFor) */
+export interface SanityImage {
+  _type: 'image'
+  asset: {
+    _ref: string
+    _type: 'reference'
+  }
+  hotspot?: { x: number; y: number; height: number; width: number }
+  crop?: { top: number; bottom: number; left: number; right: number }
+}
+
+/** Imagen que puede ser un asset de Sanity o una ruta string (datos estáticos legacy) */
+export type ImageField = SanityImage | string
+
 // === Utilidades de medida ===
 
 /** Área con medidas en m² y sq ft */
@@ -154,7 +170,7 @@ export interface Building {
 export interface GalleryGroup {
   /** Etiqueta visible: "Parque", "DHL", "Gulfstream", etc. */
   label: string
-  images: string[]
+  images: ImageField[]
 }
 
 // === NIVEL PARQUE (data general/común) ===
@@ -165,7 +181,7 @@ export interface IndustrialPark {
   name: string
   shortName: string
   description: string
-  heroImage: string
+  heroImage: ImageField
   since: number
   location: string
   address?: string
@@ -178,7 +194,7 @@ export interface IndustrialPark {
   establishedCompanies: number
   totalBuildings?: number
   /** Empresas establecidas en el parque (independiente de las naves) */
-  tenants?: { name: string; logo?: string }[]
+  tenants?: { name: string; logo?: ImageField }[]
   /** 'pending' cuando hay información por confirmar con el cliente */
   availableInfo?: 'pending'
   infrastructure: string[]
