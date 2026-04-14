@@ -24,7 +24,7 @@ const betaText = {
 export function Beta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
   const t = betaText[lang]
   return (
-    <div data-component="Beta" data-component-file="src/components/brandpetram/beta.tsx" data-component-props="false" className="relative flex flex-col md:flex-row gap-12 1200:translate-x-10 1280:translate-x-16 1366:translate-x-0  ">
+    <div data-component="Beta" data-component-file="src/components/brandpetram/beta.tsx" data-component-props="false" className="relative flex flex-col md:flex-row gap-12 1200:translate-x-10 1280:translate-x-16 1366:translate-x-0">
       {/* Columna 1: Textos arriba + Imagen abajo */}
       <div className="flex flex-col gap-8 md:w-5/12">
         {/* Sección de textos */}
@@ -46,7 +46,8 @@ export function Beta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       {/* Columna 2: Imagen con divs posicionados (contenido actual) */}
       <div className="mt-32 md:mt-0 md:w-[48%] 1024:w-[45%] 1200:w-[48%] 1280:w-[45%] 1920:w-[48%] md:aspect-[1/1.5] 1200:aspect-[4.3/3]  relative overflow-visible">
         {/* Div ABC posicionado arriba a la derecha, por detrás */}
-        <div className="md:absolute translate-x-16 360:translate-x-25 393:translate-x-30 430:translate-x-40 md:translate-x-0 -translate-y-30 right-20 w-50 h-60 bg-linear-to-tr from-orange-500 to-red-600 rounded-t-xs flex items-center justify-center -z-10">
+        <div className="md:absolute translate-x-16 360:translate-x-25 393:translate-x-30 430:translate-x-40 md:translate-x-0 -translate-y-30 right-20 w-50 h-60 bg-linear-to-tr from-orange-500 to-red-600 rounded-t-xs flex items-center justify-center -z-10 relative">
+          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-sm 768:text-base 1200:text-lg font-black text-foreground tracking-widest whitespace-nowrap">BUILT-TO-SUIT</span>
           <span className="text-[6rem] font-black text-white -translate-y-15 tracking-tighter">BTS</span>
         </div>
 
