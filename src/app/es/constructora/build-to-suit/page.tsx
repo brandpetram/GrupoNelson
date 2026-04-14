@@ -16,7 +16,7 @@ export const metadata = createMetadata({
 
 export default function BuiltToSuitPage() {
   return (
-    <div className="[&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white">
+    <div className="overflow-x-hidden [&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white">
       <Header variant="dark" />
 
       <div className="mt-0">
