@@ -187,6 +187,23 @@ export function VideoPlaceholder({ description }: { description: string }) {
   )
 }
 
+export function VideoTutorial({ youtubeId, title }: { youtubeId: string; title: string }) {
+  return (
+    <section className="space-y-3">
+      <h2 className="text-base font-semibold tracking-tight">Video tutorial</h2>
+      <div className="overflow-hidden rounded-lg border border-border/60">
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="aspect-video w-full"
+        />
+      </div>
+    </section>
+  )
+}
+
 export function Warning({ children }: { children: ReactNode }) {
   return (
     <div className="flex gap-3 rounded-lg border border-amber-200/60 bg-amber-50/50 p-4 dark:border-amber-800/30 dark:bg-amber-950/20">

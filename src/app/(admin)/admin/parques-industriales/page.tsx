@@ -1,6 +1,6 @@
 import {
   GuideHeader, SiteLink, Permissions, FieldsTable,
-  Steps, Errors, VideoPlaceholder, Warning, Danger,
+  Steps, Errors, VideoTutorial, Warning, Danger,
 } from '../guide-components'
 
 export const metadata = {
@@ -176,7 +176,7 @@ export default function ParquesIndustrialesPage() {
         ]}
       />
 
-      <VideoPlaceholder description="Cómo editar la ficha de un parque industrial" />
+      <VideoTutorial youtubeId="2k7dTcIJ40M" title="Cómo editar la ficha de un parque industrial" />
     </div>
   )
 }

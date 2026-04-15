@@ -1,6 +1,6 @@
 import {
   GuideHeader, SiteLink, Permissions, FieldsTable,
-  Steps, Errors, VideoPlaceholder, Warning,
+  Steps, Errors, VideoTutorial, Warning,
 } from '../guide-components'
 
 export const metadata = {
@@ -115,7 +115,7 @@ export default function NavesIndustrialesPage() {
         ]}
       />
 
-      <VideoPlaceholder description="Cómo agregar y editar naves en Sanity Studio" />
+      <VideoTutorial youtubeId="kcvkU5Fr25k" title="Cómo agregar y editar naves en Sanity Studio" />
     </div>
   )
 }

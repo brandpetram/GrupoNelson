@@ -165,23 +165,17 @@ export default function AccesoSanityPage() {
         </div>
       </section>
 
-      {/* Video placeholder */}
+      {/* Video tutorial */}
       <section className="space-y-3">
         <h2 className="text-base font-semibold tracking-tight">Video tutorial</h2>
-        <div className="flex items-center justify-center rounded-lg border border-dashed border-border/60 bg-muted/20 py-16">
-          <div className="text-center">
-            <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="text-muted-foreground/50">
-                <path d="M6 3.5v9l7-4.5-7-4.5z" />
-              </svg>
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Video pendiente: recorrido general por Sanity Studio
-            </p>
-            <p className="mt-0.5 text-[10px] text-muted-foreground/50">
-              Luis grabará este video próximamente
-            </p>
-          </div>
+        <div className="overflow-hidden rounded-lg border border-border/60">
+          <iframe
+            src="https://www.youtube.com/embed/5RhNZ_kEbqc"
+            title="Cómo abrir una cuenta en Sanity"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="aspect-video w-full"
+          />
         </div>
       </section>
     </div>

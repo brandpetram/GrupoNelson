@@ -1,6 +1,6 @@
 import {
   GuideHeader, SiteLink, Permissions, FieldsTable,
-  Steps, Errors, VideoPlaceholder, Warning,
+  Steps, Errors, VideoTutorial, Warning,
 } from '../guide-components'
 
 export const metadata = {
@@ -103,7 +103,7 @@ export default function TerrenosPage() {
         ]}
       />
 
-      <VideoPlaceholder description="Cómo agregar y editar terrenos en Sanity Studio" />
+      <VideoTutorial youtubeId="Em9QEpSF_vQ" title="Cómo agregar y editar terrenos en Sanity Studio" />
     </div>
   )
 }

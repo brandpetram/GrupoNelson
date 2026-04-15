@@ -1,6 +1,6 @@
 import {
   GuideHeader, SiteLink, Permissions, FieldsTable,
-  Steps, Errors, VideoPlaceholder, Info,
+  Steps, Errors, VideoTutorial, Info,
 } from '../guide-components'
 
 export const metadata = {
@@ -121,7 +121,7 @@ export default function BlogPage() {
         ]}
       />
 
-      <VideoPlaceholder description="Cómo crear un artículo de blog paso a paso" />
+      <VideoTutorial youtubeId="FQJG6LDkpI4" title="Cómo crear un artículo de blog paso a paso" />
     </div>
   )
 }

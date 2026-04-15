@@ -1,6 +1,6 @@
 import {
   GuideHeader, SiteLink, Permissions, FieldsTable,
-  Steps, Errors, VideoPlaceholder, Info,
+  Steps, Errors, VideoTutorial, Info,
 } from '../guide-components'
 
 export const metadata = {
@@ -87,7 +87,7 @@ export default function NoticiasPage() {
         ]}
       />
 
-      <VideoPlaceholder description="Cómo publicar una noticia" />
+      <VideoTutorial youtubeId="TkWFQ6nTDhw" title="Cómo publicar una noticia" />
     </div>
   )
 }

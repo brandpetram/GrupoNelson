@@ -1,5 +1,5 @@
 import {
-  GuideHeader, FieldsTable, Steps, Errors, VideoPlaceholder,
+  GuideHeader, FieldsTable, Steps, Errors, VideoTutorial,
 } from '../guide-components'
 
 export const metadata = {
@@ -106,7 +106,7 @@ export default function CategoriasYAutoresPage() {
         ]}
       />
 
-      <VideoPlaceholder description="Cómo gestionar categorías y autores" />
+      <VideoTutorial youtubeId="JFGHqd7kJrg" title="Cómo gestionar categorías y autores" />
     </div>
   )
 }
