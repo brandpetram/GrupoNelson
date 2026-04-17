@@ -31,6 +31,34 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Grupo Nelson',
+  alternateName: ['Grupo Nelson Industrial', 'Nelson Industrial Parks'],
+  url: 'https://www.nelson.com.mx',
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Grupo Nelson',
+  url: 'https://www.nelson.com.mx',
+  logo: 'https://www.nelson.com.mx/logo-nelson.svg',
+  description:
+    'Industrial park developer in Mexicali, Baja California with over 60 years of experience. Operator of Nelson II, El Vigía I, and El Vigía II industrial parks.',
+  foundingDate: '1967',
+  telephone: '+52-686-553-4088',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Ave. Reforma #1699, Col. Nueva',
+    addressLocality: 'Mexicali',
+    addressRegion: 'Baja California',
+    postalCode: '21100',
+    addressCountry: 'MX',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,6 +69,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
