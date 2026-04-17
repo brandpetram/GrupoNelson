@@ -3,42 +3,67 @@
 import { useEffect, useState } from 'react'
 import { X, Copy, Check } from 'lucide-react'
 
+type SectionEntry = { name: string; count: number }
+type StatusFilter = 'all' | 'used' | 'unused'
+
 /**
- * Client component que maneja buscador + lightbox + copiar ruta.
+ * Client wrapper que envuelve el grid (renderizado server-side).
  *
- * No recibe el array completo de fotos (362 KB) para mantener el payload JS bajo.
- * Toda la info que necesita la extrae de data-attributes en el DOM:
- *   - [data-photo-filename], [data-photo-path]: filtro del buscador
- *   - [data-photo-open]: abrir lightbox
- *   - [data-copy]: copiar ruta al portapapeles
- *   - [data-section]: ocultar secciones sin resultados
+ * Maneja buscador, filtro por estado, filtro por sección, lightbox y copiar ruta.
+ * No recibe el array completo de fotos — interactúa con el DOM usando data-attributes
+ * de cada tarjeta (data-photo-filename, data-photo-path, data-photo-used, data-photo-pages).
  */
-export function GalleryClient() {
+export function GalleryClient({
+  sections,
+  children,
+}: {
+  sections: SectionEntry[]
+  children: React.ReactNode
+}) {
   const [query, setQuery] = useState('')
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
+  const [selectedSection, setSelectedSection] = useState<string | null>(null)
+  const [visibleCount, setVisibleCount] = useState<number>(0)
+
   const [lightboxPath, setLightboxPath] = useState<string | null>(null)
   const [lightboxFilename, setLightboxFilename] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
 
-  // Filtro visual: oculta tarjetas cuyo filename/path no coincide.
+  // Aplicar filtros al DOM.
   useEffect(() => {
     const q = query.toLowerCase().trim()
     const cards = document.querySelectorAll<HTMLElement>('[data-photo-filename]')
+
+    let visible = 0
     cards.forEach((card) => {
       const fn = (card.dataset.photoFilename || '').toLowerCase()
       const path = (card.dataset.photoPath || '').toLowerCase()
-      card.hidden = q.length > 0 && !fn.includes(q) && !path.includes(q)
-    })
+      const used = card.dataset.photoUsed === '1'
+      const pagesRaw = card.dataset.photoPages || ''
+      const pages = pagesRaw ? pagesRaw.split('|') : []
 
-    const sections = document.querySelectorAll<HTMLElement>('[data-section]')
-    sections.forEach((section) => {
+      let hidden = false
+      if (q.length > 0 && !fn.includes(q) && !path.includes(q)) hidden = true
+      if (statusFilter === 'used' && !used) hidden = true
+      if (statusFilter === 'unused' && used) hidden = true
+      if (selectedSection && !pages.includes(selectedSection)) hidden = true
+
+      card.hidden = hidden
+      if (!hidden) visible++
+    })
+    setVisibleCount(visible)
+
+    // Ocultar sección entera si no hay tarjetas visibles.
+    const grids = document.querySelectorAll<HTMLElement>('[data-section]')
+    grids.forEach((section) => {
       const anyVisible = Array.from(
         section.querySelectorAll<HTMLElement>('[data-photo-filename]'),
       ).some((c) => !c.hidden)
       section.hidden = !anyVisible
     })
-  }, [query])
+  }, [query, statusFilter, selectedSection])
 
-  // Delegación de clicks: copiar ruta o abrir lightbox.
+  // Delegación: copiar ruta / abrir lightbox.
   useEffect(() => {
     const handler = async (e: MouseEvent) => {
       const target = e.target as HTMLElement
@@ -52,9 +77,7 @@ export function GalleryClient() {
           await navigator.clipboard.writeText(path)
           setCopied(true)
           setTimeout(() => setCopied(false), 1500)
-        } catch {
-          // clipboard denied; no-op
-        }
+        } catch {}
         return
       }
 
@@ -78,39 +101,102 @@ export function GalleryClient() {
     return () => window.removeEventListener('keydown', handler)
   }, [lightboxPath])
 
+  const clearFilters = () => {
+    setQuery('')
+    setStatusFilter('all')
+    setSelectedSection(null)
+  }
+
+  const anyFilterActive =
+    query.trim().length > 0 || statusFilter !== 'all' || selectedSection !== null
+
   return (
     <>
-      <div className="sticky top-0 z-10 -mx-4 px-4 py-3 bg-background/90 backdrop-blur-md border-b border-border/60 mb-10">
-        <div className="max-w-7xl mx-auto flex items-center gap-4">
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Buscar por nombre de archivo o ruta…"
-            className="flex-1 px-4 py-2.5 rounded-lg bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
-          />
-          {query && (
-            <button
-              onClick={() => setQuery('')}
-              className="text-sm text-muted-foreground hover:text-foreground px-3 py-1.5"
-            >
-              Limpiar
-            </button>
-          )}
+      <div className="flex gap-8">
+        {/* Sidebar sticky */}
+        <aside className="hidden lg:block w-56 shrink-0">
+          <div className="sticky top-6 space-y-7 text-sm max-h-[calc(100vh-3rem)] overflow-y-auto pr-2 -mr-2">
+            <FilterGroup title="Estado">
+              <FilterRow
+                label="Todas"
+                active={statusFilter === 'all'}
+                onClick={() => setStatusFilter('all')}
+              />
+              <FilterRow
+                label="En uso"
+                active={statusFilter === 'used'}
+                onClick={() => setStatusFilter('used')}
+              />
+              <FilterRow
+                label="Sin uso"
+                active={statusFilter === 'unused'}
+                onClick={() => setStatusFilter('unused')}
+              />
+            </FilterGroup>
+
+            <FilterGroup title={`Secciones del sitio (${sections.length})`}>
+              {sections.map((s) => (
+                <FilterRow
+                  key={s.name}
+                  label={stripPrefix(s.name)}
+                  prefix={getPrefix(s.name)}
+                  count={s.count}
+                  active={selectedSection === s.name}
+                  onClick={() =>
+                    setSelectedSection((prev) => (prev === s.name ? null : s.name))
+                  }
+                />
+              ))}
+            </FilterGroup>
+
+            {anyFilterActive && (
+              <button
+                onClick={clearFilters}
+                className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2"
+              >
+                Limpiar filtros
+              </button>
+            )}
+          </div>
+        </aside>
+
+        {/* Main */}
+        <div className="flex-1 min-w-0">
+          {/* Buscador sticky */}
+          <div className="sticky top-0 z-20 -mx-4 px-4 py-3 bg-background/95 backdrop-blur-md border-b border-border/60 mb-8">
+            <div className="flex items-center gap-3">
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Buscar por nombre de archivo o ruta…"
+                className="flex-1 px-4 py-2.5 rounded-lg bg-muted/50 border border-border text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
+              />
+              {anyFilterActive && (
+                <span className="text-xs text-muted-foreground whitespace-nowrap">
+                  {visibleCount} {visibleCount === 1 ? 'resultado' : 'resultados'}
+                </span>
+              )}
+            </div>
+          </div>
+
+          {children}
         </div>
       </div>
 
+      {/* Toast de copiado */}
       {copied && (
-        <div className="fixed bottom-6 right-6 z-30 px-4 py-2.5 rounded-lg bg-foreground text-background text-sm shadow-xl flex items-center gap-2">
+        <div className="fixed bottom-6 right-6 z-[70] px-4 py-2.5 rounded-lg bg-foreground text-background text-sm shadow-xl flex items-center gap-2">
           <Check size={16} />
           Ruta copiada
         </div>
       )}
 
+      {/* Lightbox */}
       {lightboxPath && (
         <div
           onClick={() => setLightboxPath(null)}
-          className="fixed inset-0 z-40 bg-black/95 flex items-center justify-center p-6 cursor-zoom-out"
+          className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-6 cursor-zoom-out"
         >
           <button
             onClick={(e) => {
@@ -146,4 +232,69 @@ export function GalleryClient() {
       )}
     </>
   )
+}
+
+function FilterGroup({
+  title,
+  children,
+}: {
+  title: string
+  children: React.ReactNode
+}) {
+  return (
+    <div>
+      <h3 className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground mb-2 px-2">
+        {title}
+      </h3>
+      <div className="space-y-0.5">{children}</div>
+    </div>
+  )
+}
+
+function FilterRow({
+  label,
+  prefix,
+  count,
+  active,
+  onClick,
+}: {
+  label: string
+  prefix?: string
+  count?: number
+  active: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={[
+        'w-full flex items-center gap-1.5 px-2 py-1 rounded-md text-left transition-colors text-[12.5px] leading-tight',
+        active
+          ? 'bg-primary/10 text-primary font-medium'
+          : 'text-foreground/80 hover:bg-muted/60 hover:text-foreground',
+      ].join(' ')}
+    >
+      {prefix && (
+        <span className="text-[9px] uppercase tracking-wide text-muted-foreground/80 shrink-0 font-medium">
+          {prefix}
+        </span>
+      )}
+      <span className="flex-1 truncate">{label}</span>
+      {typeof count === 'number' && (
+        <span className="text-[11px] text-muted-foreground tabular-nums shrink-0">
+          {count}
+        </span>
+      )}
+    </button>
+  )
+}
+
+function getPrefix(name: string): string | undefined {
+  if (name.startsWith('page:')) return 'P'
+  if (name.startsWith('layout:')) return 'L'
+  return undefined
+}
+
+function stripPrefix(name: string): string {
+  return name.replace(/^(page:|layout:)\s*/, '')
 }

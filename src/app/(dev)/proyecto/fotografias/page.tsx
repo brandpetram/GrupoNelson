@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
-import Header from '@/components/Header'
 import inventoryData from '@/data/foto-inventory.json'
 import { GalleryClient } from './gallery-client'
 
@@ -33,6 +32,8 @@ type Inventory = {
   folders: FolderSummary[]
 }
 
+type SectionEntry = { name: string; count: number }
+
 const inventory = inventoryData as Inventory
 
 function extractNumericSuffix(filename: string): number {
@@ -40,7 +41,6 @@ function extractNumericSuffix(filename: string): number {
   return match ? parseInt(match[1], 10) : NaN
 }
 
-// Construye las secciones narrativas + el resto de carpetas.
 function buildSections() {
   const allPhotos = inventory.folders.flatMap((f) => f.photos)
 
@@ -58,13 +58,11 @@ function buildSections() {
     return !isNaN(n) && n > 250
   })
 
-  // Specs de parques — las 3 carpetas con fotos extraídas de PDFs técnicos.
   const parqueSpecsFolders = inventory.folders.filter(
     (f) => f.folder.startsWith('parque-industrial-') && f.folder.endsWith('-mexicali'),
   )
   const specsFlat = parqueSpecsFolders.flatMap((f) => f.photos)
 
-  // Resto: las carpetas que no caen en ninguna narrativa.
   const narrativeFolderNames = new Set<string>([
     'parques-industriales-mexicali',
     ...parqueSpecsFolders.map((f) => f.folder),
@@ -72,7 +70,6 @@ function buildSections() {
   const restFolders = inventory.folders
     .filter((f) => !narrativeFolderNames.has(f.folder))
     .sort((a, b) => {
-      // "(raíz)" al final; el resto alfabético.
       if (a.folder === '(raíz)') return 1
       if (b.folder === '(raíz)') return -1
       return a.folder.localeCompare(b.folder)
@@ -81,15 +78,67 @@ function buildSections() {
   return { reales, profesionales, specs: specsFlat, restFolders }
 }
 
+// Rutas internas del sitio (no públicas). Coincide con los prefijos protegidos
+// por el proxy en src/proxy.ts — si ese archivo cambia, mantener en sync.
+const INTERNAL_ROUTE_SEGMENTS = new Set([
+  'componentes',
+  'componentes-dos',
+  'componentes-tres',
+  'componentes-cuatro',
+  'product',
+  'productos',
+  'proyecto',
+  'admin',
+  'qa',
+  'dev',
+])
+
+const INTERNAL_LAYOUT_PREFIXES = ['(dev)', '(admin)']
+
+function isPublicSection(name: string): boolean {
+  const route = name.replace(/^(page:|layout:)\s*/, '')
+  if (name.startsWith('layout:')) {
+    return !INTERNAL_LAYOUT_PREFIXES.some((p) => route.startsWith(p))
+  }
+  const firstSegment = route.split('/')[0]
+  return !INTERNAL_ROUTE_SEGMENTS.has(firstSegment)
+}
+
+// Calcula páginas/layouts únicos con su conteo de fotos.
+function buildSiteSections(): SectionEntry[] {
+  const counts = new Map<string, number>()
+  for (const folder of inventory.folders) {
+    for (const photo of folder.photos) {
+      for (const used of photo.usedIn) {
+        if (used.startsWith('page:') || used.startsWith('layout:')) {
+          counts.set(used, (counts.get(used) || 0) + 1)
+        }
+      }
+    }
+  }
+  return Array.from(counts.entries())
+    .filter(([name]) => isPublicSection(name))
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => {
+      // page: home primero, luego layouts, luego páginas alfabético
+      if (a.name === 'page: home') return -1
+      if (b.name === 'page: home') return 1
+      const aIsLayout = a.name.startsWith('layout:')
+      const bIsLayout = b.name.startsWith('layout:')
+      if (aIsLayout && !bIsLayout) return 1
+      if (!aIsLayout && bIsLayout) return -1
+      return a.name.localeCompare(b.name)
+    })
+}
+
 const { reales, profesionales, specs, restFolders } = buildSections()
+const siteSections = buildSiteSections()
 
 export default function FotografiasPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
-
-      <div className="pt-24 pb-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="pt-8 pb-20 px-4">
+        <div className="max-w-[90rem] mx-auto">
           <Link
             href="/admin"
             className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors"
@@ -98,14 +147,16 @@ export default function FotografiasPage() {
             Volver al admin
           </Link>
 
-          <header className="mb-6">
+          <header className="mb-8">
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
               Fotografías
             </h1>
             <p className="text-base text-muted-foreground max-w-2xl">
-              Inventario de todas las imágenes en <code className="text-xs px-1.5 py-0.5 rounded bg-muted font-mono">public/</code>, con información de qué páginas y componentes las usan.
+              Inventario de todas las imágenes en{' '}
+              <code className="text-xs px-1.5 py-0.5 rounded bg-muted font-mono">public/</code>
+              , con información de qué páginas y componentes las usan.
             </p>
-            <div className="flex flex-wrap gap-5 mt-5 text-sm">
+            <div className="flex flex-wrap gap-5 mt-4 text-sm">
               <span>
                 <strong className="text-foreground">{inventory.totalPhotos}</strong>{' '}
                 <span className="text-muted-foreground">fotos</span>
@@ -123,46 +174,44 @@ export default function FotografiasPage() {
                 <span className="text-muted-foreground">carpetas</span>
               </span>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">
+            <p className="mt-3 text-xs text-muted-foreground">
               Generado: {new Date(inventory.generatedAt).toLocaleString('es-MX')}
             </p>
           </header>
 
-          <GalleryClient />
-
-          {/* Secciones narrativas (con anchors compatibles con deep links existentes) */}
-          <Section
-            id="reales"
-            title="Fotos reales (1-250)"
-            description="Extraídas de 86 videos proporcionados por el cliente. Se generó 1 captura por segundo resultando en ~1,600 imágenes; estas 250 fueron seleccionadas manualmente."
-            photos={reales}
-          />
-
-          <Section
-            id="profesionales"
-            title={`Fotos profesionales (251-${extractNumericSuffix(profesionales[profesionales.length - 1]?.filename ?? '') || '…'})`}
-            description="Stock profesional adquirido para la comunicación comercial. Mantienen similitud con las operaciones reales con calidad fotográfica superior."
-            photos={profesionales}
-          />
-
-          <Section
-            id="parques"
-            title="Specs de parques industriales"
-            description="Imágenes extraídas de los PDFs técnicos de cada parque. Algunas procesadas con Upscayl para mejorar resolución."
-            photos={specs}
-          />
-
-          {/* Resto de carpetas (agrupadas por folder) */}
-          {restFolders.map((folder) => (
+          <GalleryClient sections={siteSections}>
             <Section
-              key={folder.folder}
-              title={folder.folder}
-              description=""
-              photos={folder.photos}
-              count={folder.count}
-              usedCount={folder.usedCount}
+              id="reales"
+              title="Fotos reales (1-250)"
+              description="Extraídas de 86 videos proporcionados por el cliente. Se generó 1 captura por segundo resultando en ~1,600 imágenes; estas 250 fueron seleccionadas manualmente."
+              photos={reales}
             />
-          ))}
+
+            <Section
+              id="profesionales"
+              title={`Fotos profesionales (251-${extractNumericSuffix(profesionales[profesionales.length - 1]?.filename ?? '') || '…'})`}
+              description="Stock profesional adquirido para la comunicación comercial. Mantienen similitud con las operaciones reales con calidad fotográfica superior."
+              photos={profesionales}
+            />
+
+            <Section
+              id="parques"
+              title="Specs de parques industriales"
+              description="Imágenes extraídas de los PDFs técnicos de cada parque. Algunas procesadas con Upscayl para mejorar resolución."
+              photos={specs}
+            />
+
+            {restFolders.map((folder) => (
+              <Section
+                key={folder.folder}
+                title={folder.folder}
+                description=""
+                photos={folder.photos}
+                count={folder.count}
+                usedCount={folder.usedCount}
+              />
+            ))}
+          </GalleryClient>
         </div>
       </div>
     </div>
@@ -193,11 +242,11 @@ function Section({
     <section
       id={id}
       data-section={id ?? title}
-      className="mt-16 scroll-mt-24 first:mt-12"
+      className="mt-14 scroll-mt-24 first:mt-0"
     >
-      <header className="mb-6 flex items-baseline justify-between gap-6 border-b border-border/60 pb-3">
+      <header className="mb-5 flex items-baseline justify-between gap-6 border-b border-border/60 pb-3">
         <div>
-          <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-foreground">
+          <h2 className="text-lg md:text-xl font-semibold tracking-tight text-foreground">
             {title}
           </h2>
           {description && (
@@ -206,11 +255,16 @@ function Section({
         </div>
         <div className="text-sm text-muted-foreground shrink-0 whitespace-nowrap">
           {total} {total === 1 ? 'foto' : 'fotos'}
-          {used > 0 && <> · <span className="text-foreground">{used}</span> en uso</>}
+          {used > 0 && (
+            <>
+              {' '}
+              · <span className="text-foreground">{used}</span> en uso
+            </>
+          )}
         </div>
       </header>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {photos.map((photo) => (
           <PhotoCard key={photo.path} photo={photo} />
         ))}
@@ -228,6 +282,8 @@ function PhotoCard({ photo }: { photo: FotoEntry }) {
     <article
       data-photo-filename={photo.filename}
       data-photo-path={photo.path}
+      data-photo-used={photo.usedInCode ? '1' : '0'}
+      data-photo-pages={pages.join('|')}
       className="group flex flex-col"
     >
       <button
@@ -255,11 +311,12 @@ function PhotoCard({ photo }: { photo: FotoEntry }) {
         </p>
 
         {firstPage && (
-          <p className="text-[11px] text-foreground/80 truncate" title={pages.join('\n')}>
+          <p
+            className="text-[11px] text-foreground/80 truncate"
+            title={pages.join('\n')}
+          >
             {firstPage}
-            {extraCount > 0 && (
-              <span className="text-muted-foreground"> +{extraCount}</span>
-            )}
+            {extraCount > 0 && <span className="text-muted-foreground"> +{extraCount}</span>}
           </p>
         )}
 
