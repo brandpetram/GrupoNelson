@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment, useState, useEffect, useCallback, useRef } from 'react'
-import { NaveIndustrial } from '@/data/naves-industriales'
+import type { NaveIndustrial } from '@/data/naves-industriales'
 
 // ── Colores de badge de estatus ───────────────────────────────────────────────
 const estatusBadgeClasses: Record<NaveIndustrial['estatus'], string> = {

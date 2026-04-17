@@ -45,7 +45,6 @@ const navigation = [
   {
     title: 'Dev',
     items: [
-      { href: '/dev', label: 'Dev tools' },
       { href: '/componentes', label: 'Componentes' },
       { href: '/componentes-dos', label: 'Componentes 2' },
       { href: '/componentes-tres', label: 'Componentes 3' },

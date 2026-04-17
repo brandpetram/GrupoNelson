@@ -25,7 +25,7 @@ Ese es el único propósito. Todo lo demás queda fuera de alcance.
 - **`/proyecto/fotografias` es READ-ONLY para siempre.** Solo navega, busca, muestra uso y copia rutas. Nunca edita, nunca cura.
 - **Cualquier función de curación futura (aprobar, rechazar, asignar secciones, mover, borrar) vive en otra ruta** bajo `/dev` (protegida con `notFound()` en producción) o `/admin` (con auth real). **No se agrega al visor público.**
 
-Esta frontera existe porque `/proyecto/fotografias` no tiene guard de producción — el route group `(dev)` solo agrega `noindex, nofollow`; cualquier persona con la URL la puede abrir. El guard real vive específicamente en `src/app/(dev)/dev/layout.tsx`. Mezclar tooling destructivo en una ruta pública, aunque sea `noindex`, es abrir la puerta exactamente al problema que este plan busca evitar.
+Corrección sobre hallazgos previos: `/proyecto/fotografias` **sí está protegido** con cookie HMAC vía `src/proxy.ts` (matcher `/proyecto/:path*`). El route group `(dev)` solo agrega `noindex` además. Entonces técnicamente podríamos agregar curación aquí sin exponer tooling. Aun así mantenemos la frontera read-only por razones de propósito (un visor hace una sola cosa bien) y separación (ver vs curar), no por exposición.
 
 ## Funcionalidades del nuevo visor (cada una justificada)
 

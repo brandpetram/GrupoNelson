@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { Phone } from 'lucide-react'
-import { NaveIndustrial } from '@/data/naves-industriales'
+import type { NaveIndustrial } from '@/data/naves-industriales'
 import { resolveImageUrl } from '@/sanity/lib/image'
 
 export type DrawerProps = {

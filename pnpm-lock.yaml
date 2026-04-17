@@ -195,6 +195,9 @@ importers:
       svgo:
         specifier: ^4.0.0
         version: 4.0.0
+      tsx:
+        specifier: ^4.21.0
+        version: 4.21.0
       tw-animate-css:
         specifier: ^1.4.0
         version: 1.4.0
@@ -11341,7 +11344,7 @@ snapshots:
       console-table-printer: 2.15.0
       debug: 4.4.3(supports-color@8.1.1)
       fast-fifo: 1.3.2
-      get-tsconfig: 4.13.0
+      get-tsconfig: 4.13.6
       groq-js: 1.27.1
       lodash-es: 4.17.23
       p-map: 7.0.4
@@ -16760,7 +16763,7 @@ snapshots:
   tsx@4.21.0:
     dependencies:
       esbuild: 0.27.3
-      get-tsconfig: 4.13.0
+      get-tsconfig: 4.13.6
     optionalDependencies:
       fsevents: 2.3.3
 
