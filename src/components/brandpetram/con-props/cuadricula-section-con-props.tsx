@@ -9,10 +9,48 @@
 
 import { Grid as GridBackground } from '@/components/ui/brandpetram/grid'
 import { motion, type Variants } from 'motion/react'
+import Image from 'next/image'
 import { type ReactNode } from 'react'
 
+// Los sizes siguen los mismos breakpoints del CSS `zoom` de abajo:
+// sin zoom el tile medería basePx; con zoom activo mide basePx × factor.
+// Reportar el tamaño real evita que Next descargue variantes oversized.
+const CUADRICULA_ZOOM_BREAKPOINTS: ReadonlyArray<readonly [number, number]> = [
+  [2560, 1.00],
+  [2240, 0.95],
+  [1920, 1.20],
+  [1728, 1.10],
+  [1536, 0.90],
+  [1440, 0.95],
+  [1280, 0.85],
+  [1200, 0.80],
+  [1024, 0.90],
+  [834, 0.80],
+  [768, 0.65],
+  [430, 0.40],
+  [393, 0.38],
+]
+const CUADRICULA_DEFAULT_ZOOM = 0.35
+
+function sizesFor(basePx: number): string {
+  const parts = CUADRICULA_ZOOM_BREAKPOINTS.map(
+    ([bp, zoom]) => `(min-width: ${bp}px) ${Math.ceil(basePx * zoom)}px`
+  )
+  return `${parts.join(', ')}, ${Math.ceil(basePx * CUADRICULA_DEFAULT_ZOOM)}px`
+}
+
+const SIZES_137 = sizesFor(137)
+const SIZES_127 = sizesFor(127)
+const SIZES_173 = sizesFor(173)
+const SIZES_246 = sizesFor(246)
+const SIZES_81 = sizesFor(81)
+const SIZES_87 = sizesFor(87)
+const SIZES_248 = sizesFor(248)
+const SIZES_330 = sizesFor(330)
+const SIZES_500 = sizesFor(500)
+
 interface CuadriculaSectionConPropsProps {
-  // 20 imágenes del mosaico
+  // 17 imágenes visibles del mosaico (columna 5 eliminada — era hidden y descargaba sin mostrarse)
   imagen1: string
   imagen2: string
   imagen3: string
@@ -30,9 +68,6 @@ interface CuadriculaSectionConPropsProps {
   imagen15: string // Imagen principal (la más grande)
   imagen16: string
   imagen17: string
-  imagen18: string
-  imagen19: string
-  imagen20: string
 
   // Contenido de texto
   badge: string
@@ -72,9 +107,6 @@ export function CuadriculaSectionConProps({
   imagen15,
   imagen16,
   imagen17,
-  imagen18,
-  imagen19,
-  imagen20,
   badge,
   titulo,
   parrafo,
@@ -232,11 +264,13 @@ export function CuadriculaSectionConProps({
           {/* COLUMNA 1 */}
           <motion.div className="flex flex-col place-content-end" variants={columnVariants}>
             <div className="relative w-[136.62px] aspect-[1/2] overflow-hidden rounded-none border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen1}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_137}
               />
               <div
                 className="absolute inset-0"
@@ -248,11 +282,13 @@ export function CuadriculaSectionConProps({
           {/* COLUMNA 2 */}
           <motion.div className="flex flex-col place-content-end gap-1" variants={columnVariants}>
             <div className="relative w-[126.62px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen2}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_127}
               />
               <div
                 className="absolute inset-0"
@@ -260,11 +296,13 @@ export function CuadriculaSectionConProps({
               />
             </div>
             <div className="relative w-[126.62px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen3}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_127}
               />
               <div
                 className="absolute inset-0"
@@ -272,11 +310,13 @@ export function CuadriculaSectionConProps({
               />
             </div>
             <div className="relative w-[126.62px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen4}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_127}
               />
               <div
                 className="absolute inset-0"
@@ -288,11 +328,13 @@ export function CuadriculaSectionConProps({
           {/* COLUMNA 3 */}
           <motion.div className="flex flex-col place-content-start gap-1" variants={columnVariants}>
             <div className="relative w-[172.5px] aspect-square overflow-hidden rounded-none self-end border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen5}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_173}
               />
               <div
                 className="absolute inset-0"
@@ -301,11 +343,13 @@ export function CuadriculaSectionConProps({
             </div>
 
             <div className="relative w-[172.5px] aspect-square overflow-hidden rounded-none self-end border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen6}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_173}
               />
               <div
                 className="absolute inset-0"
@@ -315,11 +359,13 @@ export function CuadriculaSectionConProps({
             <div className="flex flex-col ml-auto place-content-end place-items-end gap-1">
               <div className="grid grid-cols-[245.5px_80.5px] grid-rows-[80.5px_80.5px_80.5px] gap-1">
                 <div className="relative row-span-3 overflow-hidden rounded-none border-0 border-blue-500">
-                  <img
+                  <Image
+                    fill
                     src={imagen7}
-                    alt="Ambaflex Conveyor"
-                    className="w-full h-full object-cover object-center"
+                    alt="Industrial construction"
+                    className="object-cover object-center"
                     style={{filter: cssFilter}}
+                    sizes={SIZES_246}
                   />
                   <div
                     className="absolute inset-0"
@@ -328,11 +374,13 @@ export function CuadriculaSectionConProps({
                 </div>
 
                 <div className="relative overflow-hidden rounded-none border-0 border-blue-500">
-                  <img
+                  <Image
+                    fill
                     src={imagen8}
-                    alt="Ambaflex Conveyor"
-                    className="w-full h-full object-cover object-center"
+                    alt="Industrial construction"
+                    className="object-cover object-center"
                     style={{filter: cssFilter}}
+                    sizes={SIZES_81}
                   />
                   <div
                     className="absolute inset-0"
@@ -341,11 +389,13 @@ export function CuadriculaSectionConProps({
                 </div>
 
                 <div className="relative overflow-hidden rounded-none border-0 border-blue-500">
-                  <img
+                  <Image
+                    fill
                     src={imagen9}
-                    alt="Ambaflex Conveyor"
-                    className="w-full h-full object-cover object-center"
+                    alt="Industrial construction"
+                    className="object-cover object-center"
                     style={{filter: cssFilter}}
+                    sizes={SIZES_81}
                   />
                   <div
                     className="absolute inset-0"
@@ -354,11 +404,13 @@ export function CuadriculaSectionConProps({
                 </div>
 
                 <div className="relative overflow-hidden rounded-none border-0 border-blue-500">
-                  <img
+                  <Image
+                    fill
                     src={imagen10}
-                    alt="Ambaflex Conveyor"
-                    className="w-full h-full object-cover object-center"
+                    alt="Industrial construction"
+                    className="object-cover object-center"
                     style={{filter: cssFilter}}
+                    sizes={SIZES_81}
                   />
                   <div
                     className="absolute inset-0"
@@ -368,11 +420,13 @@ export function CuadriculaSectionConProps({
               </div>
 
               <div className="relative w-[330px] h-[322px] overflow-hidden rounded-none border-0 border-blue-500">
-                <img
+                <Image
+                  fill
                   src={imagen11}
-                  alt="Ambaflex Conveyor"
-                  className="w-full h-full object-cover object-center"
+                  alt="Industrial construction"
+                  className="object-cover object-center"
                   style={{filter: cssFilter}}
+                  sizes={SIZES_330}
                 />
                 <div
                   className="absolute inset-0"
@@ -386,11 +440,13 @@ export function CuadriculaSectionConProps({
           <motion.div className="flex flex-col place-content-end place-items-end gap-1" variants={columnVariants}>
             <div className="flex flex-row self-start gap-1">
               <div className="relative w-[172.5px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-                <img
+                <Image
+                  fill
                   src={imagen12}
-                  alt="Ambaflex Conveyor"
-                  className="w-full h-full object-cover object-center"
+                  alt="Industrial construction"
+                  className="object-cover object-center"
                   style={{filter: cssFilter}}
+                  sizes={SIZES_173}
                 />
                 <div
                   className="absolute inset-0"
@@ -398,11 +454,13 @@ export function CuadriculaSectionConProps({
                 />
               </div>
               <div className="relative w-[172.5px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-                <img
+                <Image
+                  fill
                   src={imagen13}
-                  alt="Ambaflex Conveyor"
-                  className="w-full h-full object-cover object-center"
+                  alt="Industrial construction"
+                  className="object-cover object-center"
                   style={{filter: cssFilter}}
+                  sizes={SIZES_173}
                 />
                 <div
                   className="absolute inset-0"
@@ -410,11 +468,13 @@ export function CuadriculaSectionConProps({
                 />
               </div>
               <div className="relative w-[86.25px] aspect-square overflow-hidden rounded-none self-end border-0 border-blue-500">
-                <img
+                <Image
+                  fill
                   src={imagen14}
-                  alt="Ambaflex Conveyor"
-                  className="w-full h-full object-cover object-center"
+                  alt="Industrial construction"
+                  className="object-cover object-center"
                   style={{filter: cssFilter}}
+                  sizes={SIZES_87}
                 />
                 <div
                   className="absolute inset-0"
@@ -425,11 +485,13 @@ export function CuadriculaSectionConProps({
 
             {/* IMAGEN PRINCIPAL */}
             <div className="relative w-[500px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-              <img
+              <Image
+                fill
                 src={imagen15}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
+                alt="Industrial construction"
+                className="object-cover object-center"
                 style={{filter: cssFilter}}
+                sizes={SIZES_500}
               />
               <div
                 className="absolute inset-0"
@@ -439,11 +501,13 @@ export function CuadriculaSectionConProps({
 
             <div className="flex flex-row">
               <div className="relative w-[248px] aspect-square overflow-hidden rounded-none mr-1 border-0 border-blue-500">
-                <img
+                <Image
+                  fill
                   src={imagen16}
-                  alt="Ambaflex Conveyor"
-                  className="w-full h-full object-cover object-center"
+                  alt="Industrial construction"
+                  className="object-cover object-center"
                   style={{filter: cssFilter}}
+                  sizes={SIZES_248}
                 />
                 <div
                   className="absolute inset-0"
@@ -452,57 +516,19 @@ export function CuadriculaSectionConProps({
               </div>
 
               <div className="relative w-[248px] aspect-square overflow-hidden rounded-none border-0 border-blue-500">
-                <img
+                <Image
+                  fill
                   src={imagen17}
-                  alt="Ambaflex Conveyor"
-                  className="w-full h-full object-cover object-center"
+                  alt="Industrial construction"
+                  className="object-cover object-center"
                   style={{filter: cssFilter}}
+                  sizes={SIZES_248}
                 />
                 <div
                   className="absolute inset-0"
                   style={{backgroundColor: overlayColor, mixBlendMode: overlayBlendMode}}
                 />
               </div>
-            </div>
-          </motion.div>
-
-          {/* COLUMNA 5 - oculta */}
-          <motion.div className="flex flex-col place-content-end gap-1 hidden" variants={columnVariants}>
-            <div className="relative w-[103.5px] aspect-[1/2] overflow-hidden rounded-none border-0 border-blue-500">
-              <img
-                src={imagen18}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
-                style={{filter: cssFilter}}
-              />
-              <div
-                className="absolute inset-0"
-                style={{backgroundColor: overlayColor, mixBlendMode: overlayBlendMode}}
-              />
-            </div>
-            <div className="relative w-[103.5px] aspect-[1/2] overflow-hidden rounded-none border-0 border-blue-500">
-              <img
-                src={imagen19}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
-                style={{filter: cssFilter}}
-              />
-              <div
-                className="absolute inset-0"
-                style={{backgroundColor: overlayColor, mixBlendMode: overlayBlendMode}}
-              />
-            </div>
-            <div className="relative w-[103.5px] aspect-[1/2] overflow-hidden rounded-none border-0 border-blue-500">
-              <img
-                src={imagen20}
-                alt="Ambaflex Conveyor"
-                className="w-full h-full object-cover object-center"
-                style={{filter: cssFilter}}
-              />
-              <div
-                className="absolute inset-0"
-                style={{backgroundColor: overlayColor, mixBlendMode: overlayBlendMode}}
-              />
             </div>
           </motion.div>
         </motion.div>

@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import { CuadriculaSectionConProps } from '@/components/brandpetram/con-props/cuadricula-section-con-props'
 import { GunLikeConProps } from '@/components/brandpetram/con-props/gun-like-con-props'
@@ -17,7 +14,8 @@ import {FeatureSection3BPConProps} from '@/components/brandpetram/con-props/feat
 import {FeatureSection5InvertedBPConProps} from '@/components/brandpetram/con-props/feature-section-5-inverted-bp-con-props'
 import {FeatureSection6BPConProps} from "@/components/brandpetram/con-props/feature-section-6-bp-con-props"
 import {SplitWithImageBPConProps} from '@/components/brandpetram/con-props/split-with-image-bp-con-props'
-import { Compass, Zap, Shield, Ruler, ClipboardCheck, FileSearch, Settings } from 'lucide-react'
+import {TypewriterTipo} from '@/components/brandpetram/typewriter-tipo'
+import { Compass, Zap, Shield, Ruler, Settings } from 'lucide-react'
 import { CloudArrowUpIcon, LockClosedIcon } from '@heroicons/react/20/solid'
 
 const TYPES = [
@@ -32,35 +30,6 @@ const TYPES = [
   'HVAC',
   'Specialized',
 ]
-
-function TypewriterType() {
-  const [index, setIndex] = useState(0)
-  const [displayed, setDisplayed] = useState('')
-  const [isDeleting, setIsDeleting] = useState(false)
-
-  useEffect(() => {
-    const word = TYPES[index]
-    const speed = isDeleting ? 40 : 80
-    const pause = !isDeleting && displayed === word ? 2000 : isDeleting && displayed === '' ? 300 : speed
-
-    const timer = setTimeout(() => {
-      if (!isDeleting && displayed === word) {
-        setIsDeleting(true)
-      } else if (isDeleting && displayed === '') {
-        setIsDeleting(false)
-        setIndex((i) => (i + 1) % TYPES.length)
-      } else if (isDeleting) {
-        setDisplayed(word.slice(0, displayed.length - 1))
-      } else {
-        setDisplayed(word.slice(0, displayed.length + 1))
-      }
-    }, pause)
-
-    return () => clearTimeout(timer)
-  }, [displayed, isDeleting, index])
-
-  return <span>{displayed}<span className="animate-pulse">|</span></span>
-}
 
 export default function EngineeringDesignPage() {
   return (
@@ -88,9 +57,6 @@ export default function EngineeringDesignPage() {
             imagen15="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-141.jpg"
             imagen16="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-151.jpg"
             imagen17="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-161.jpg"
-            imagen18="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-171.jpg"
-            imagen19="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-181.jpg"
-            imagen20="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-191.jpg"
             badge="Industrial Engineering in Mexicali"
             titulo={<>Engineering designed<br/>for your operation</>}
             parrafo="Deep foundations in collapsible soil. BRB seismic systems. 20 MW substations. HVAC with 90% water recovery. Six engineering disciplines work in parallel to solve what your operation demands — from the executive project to final delivery."
@@ -121,7 +87,7 @@ export default function EngineeringDesignPage() {
             <ImagenConEtiquetaConProps
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-207.jpg"
               alt="Industrial engineering and design in Mexicali"
-              etiqueta={<>We Solve<br /><span className="block h-[1em]"><TypewriterType /></span> Engineering</>}
+              etiqueta={<>We Solve<br /><span className="block h-[1em]"><TypewriterTipo words={TYPES} /></span> Engineering</>}
             />
             <GridOverlay
               fadeRadius="16rem"

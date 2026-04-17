@@ -54,9 +54,6 @@ export default function ComponentesTresPage() {
               imagen15="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-265.jpg"
               imagen16="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-266.jpg"
               imagen17="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-267.jpg"
-              imagen18="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-268.jpg"
-              imagen19="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
-              imagen20="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-270.jpg"
               badge="Desarrollo industrial en Mexicali"
               titulo={<>Parques Industriales <br/> en Mexicali</>}
               parrafo="Renta y construcción de naves industriales en los mejores parques industriales de Mexicali. Ubicación estratégica, infraestructura de clase mundial y servicios completos para tu operación industrial."

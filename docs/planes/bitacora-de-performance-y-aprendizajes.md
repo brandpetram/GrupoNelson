@@ -227,6 +227,61 @@ Todos los fixes se aplicaron via componentes compartidos (hero-video-cover, logo
 
 ---
 
+### Diseño e Ingeniería ES (`/es/constructora/diseno-e-ingenieria`) — 2026-04-15
+
+#### Baseline (antes de cualquier cambio)
+
+| Corrida | Score | LCP | FCP | SI | TBT | Render delay | Payload |
+|---|---|---|---|---|---|---|---|
+| 1 | 67 | 12.8s | 2.0s | 7.0s | 40ms | 2,554ms | 4,137 KiB |
+| 2 | 77 | 5.9s | 1.2s | 3.2s | 90ms | 837ms | 4,137 KiB |
+| 3 | 72 | 13.1s | 1.2s | 4.2s | 110ms | 832ms | 4,137 KiB |
+| **Mediana** | **72** | **12.8s** | **1.2s** | **4.2s** | **90ms** | **837ms** | **4,137 KiB** |
+
+**LCP element identificado (vía `lcp-breakdown-insight`):**
+
+```
+selector: div.relative > div.-translate-y-18 > div.md:-mr-120 > p.md:max-w-xl
+nodeLabel: "Cimentaciones profundas en suelo colapsable. Sistemas antisísmicos BRB. Subesta…"
+```
+
+El LCP **no es una imagen del mosaico**. Es el `<p>` del hero — el párrafo de texto debajo del H1. Mismo patrón que el homepage: un elemento de texto SSR con render delay alto.
+
+**LCP breakdown (corrida de identificación):**
+
+| Subpart | Duración |
+|---|---|
+| Time to first byte | ~0ms |
+| Element render delay | **2,392ms** |
+
+**Top diagnostics:** Render blocking requests 430ms, Unused JS 47 KiB, Legacy JS 15 KiB.
+
+**Alta variabilidad:** El LCP oscila entre 5.9s y 13.1s entre corridas. El render delay oscila entre 832ms y 2,554ms. Cuando el render delay es bajo, el score sube a 77. Cuando es alto, baja a 67.
+
+**Análisis del componente `CuadriculaSectionConProps`:**
+- 20 `<img>` HTML nativos (sin `<Image>` de Next.js, sin lazy, sin avif/webp)
+- Animación `x: 300, opacity: 0` en 5 columnas con `staggerChildren: 0.08` (mismo patrón que homepage)
+- Columna 5 tiene `className="hidden"` pero renderiza 3 imágenes (18, 19, 20) que se descargan sin mostrarse
+- Tamaños fijos en px (136px a 500px) con `zoom: 0.35` en mobile — las imágenes se sirven mucho más grandes de lo que se muestran
+- Toda la página es `'use client'` — no hay Server Components
+
+**Siguiente paso:** Fix 2.1A — Migrar 17 imágenes visibles a `<Image>` con lazy, eliminar 3 imágenes hidden, medir post-fix.
+
+### Engineering Design EN (`/construction/engineering-design`) — 2026-04-15
+
+#### Baseline (antes de cualquier cambio)
+
+| Corrida | Score | LCP | FCP | SI | TBT | Render delay | Payload |
+|---|---|---|---|---|---|---|---|
+| 1 | 73 | 6.6s | 1.2s | 5.2s | 40ms | 1,054ms | 4,139 KiB |
+| 2 | 67 | 12.8s | 2.0s | 6.9s | 10ms | 2,401ms | 4,139 KiB |
+| 3 | 77 | 6.0s | 1.2s | 2.8s | 80ms | 332ms | 4,139 KiB |
+| **Mediana** | **73** | **6.6s** | **1.2s** | **5.2s** | **40ms** | **1,054ms** | **4,139 KiB** |
+
+Usa el mismo componente `CuadriculaSectionConProps`. Cualquier fix al componente aplica a ambas URLs. Misma variabilidad de LCP observada.
+
+---
+
 ## Aprendizajes acumulados
 
 ### 1. No asumir causa raíz sin medir después del fix (2026-04-12)
@@ -260,3 +315,23 @@ La animación del hero, el video duplicado y el payload excesivo parecían las c
 ### 8. Videos duplicados en PSI: puede ser artefacto o bug real — no cerrar prematuramente (2026-04-12)
 
 El video del hero (2.7 MB) aparece 6 veces en la lista de recursos de PSI. **Hipótesis sin confirmar:** puede ser que PSI cuente range requests por separado, o puede ser un bug real donde el código genera requests duplicados. `scroll-storytelling.tsx` crea un `<video>` temporal para generar poster (línea 68) y luego el reproductor visible hace `load()`/`play()` — eso podría causar descargas reales duplicadas. No asumir que es solo un artefacto de PSI hasta verificar en Network tab del browser.
+
+### 9. El patrón "texto SSR con render delay" se repite en páginas sin video (2026-04-15)
+
+En `/es/constructora/diseno-e-ingenieria` el LCP element es un `<p>` de texto (no una imagen del mosaico de 20 fotos). El render delay es 2,392ms con TTFB de ~0ms — idéntico al patrón del homepage. Esto confirma que **el cuello de botella no es payload ni imágenes específicas, sino algo que bloquea el paint del HTML que ya está en el DOM.** En esta página no hay video, el payload es bajo (4.1 MB vs 40 MB del homepage), y sin embargo el render delay es prácticamente igual (~2.4s). Esto apunta a causas globales del sitio (CSS blocking, fonts, bundle JS) más que a recursos específicos de cada página.
+
+### 10. Elementos con `hidden` en CSS siguen descargando sus recursos (2026-04-15)
+
+La columna 5 del mosaico (`CuadriculaSectionConProps`) tiene `className="hidden"` pero renderiza 3 `<img>` nativos que el browser descarga de todos modos. `display: none` (que es lo que `hidden` de Tailwind aplica) **no impide la descarga de imágenes en `<img>` HTML**. Si una imagen no se va a mostrar, no debe estar en el DOM. Opciones: renderizado condicional en React, o usar `<Image>` de Next.js con `loading="lazy"` que al menos posterga la descarga.
+
+### 11. Payload bajo no implica buen LCP — el render delay es independiente del peso de la página (2026-04-15)
+
+La página de diseño-e-ingeniería tiene payload de 4.1 MB (10x menor que el homepage con 40 MB), pero su LCP (12.8s) es **peor** que el del homepage (9.5s pre-fix). Esto refuerza el aprendizaje #4 pero con evidencia más fuerte: dos páginas con payloads dramáticamente diferentes tienen render delays casi idénticos (~2.3-2.4s). **El render delay es un problema del shell de la aplicación (CSS, fonts, JS), no de los recursos específicos de cada página.**
+
+### 12. La variabilidad de PSI es extrema en páginas con muchas imágenes above-fold (2026-04-15)
+
+En las 3 corridas de diseño-e-ingeniería ES, el LCP osciló entre 5.9s y 13.1s (variación de 2.2x). En el homepage pre-fix la variabilidad era menor (~9.3-9.5s). Hipótesis: cuando hay 17+ imágenes compitiendo por bandwidth en el initial load, el orden en que PSI las descarga varía entre corridas, lo que amplifica la variabilidad del render delay. **La regla de 3 corridas sigue siendo el mínimo, pero en páginas con muchas imágenes above-fold considerar 5 corridas si la varianza entre las 3 primeras es mayor a 2x.**
+
+### 13. Siempre identificar el LCP element ANTES de planificar fixes (2026-04-15)
+
+El plan original (del 12 de abril) asumía que el LCP era una de las 20 imágenes del mosaico y planificó fixes centrados en imágenes. La medición reveló que el LCP es el `<p>` de texto. Si hubiéramos ejecutado el plan sin medir primero, habríamos optimizado imágenes que no son el LCP element — repitiendo el error del homepage con la animación. **Regla: correr PSI con extracción de `lcp-breakdown-insight` antes de escribir una sola línea de fix.** Esto aplica a cada página nueva que se optimice.
