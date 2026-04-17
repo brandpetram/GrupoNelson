@@ -24,20 +24,20 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
         <div className="flex gap-[5rem] 1200:gap-[15rem] md:translate-y-[7rem] 1200:translate-y-[10rem]">
           {/* Columna 1 - Izquierda */}
           <div className="flex-1 flex flex-col gap-16">
-            <h2 className="360:text-[2rem] 393:text-[2.1rem] 430:text-[2.2rem] 768:text-[2.6rem] 834:text-[2.6rem] 1024:text-[2.6rem] 1200:text-[2.6rem] 1280:text-[2.85rem] 1366:text-[3rem] 1440:text-[3.2rem] 1536:text-[3.4rem] 1728:text-[3.7rem] 1920:text-[4rem] font-semibold leading-none text-black ">
+            <h2 className="360:text-[2rem] 393:text-[2.1rem] 430:text-[2.2rem] 768:text-[2.6rem] 834:text-[2.6rem] 1024:text-[2.6rem] 1200:text-[2.6rem] 1280:text-[2.85rem] 1366:text-[3rem] 1440:text-[3.2rem] 1536:text-[3.4rem] 1728:text-[3.7rem] 1920:text-[4rem] font-semibold leading-none text-black dark:text-white">
               {text.title}
             </h2>
 
             <img
-              src="/placeholder.svg"
-              alt="Imagen columna izquierda"
+              src="/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG"
+              alt="Naves 17-23 en parque industrial El Vigía I, Mexicali"
               className="w-full aspect-square object-cover"
             />
           </div>
 
           {/* Columna 2 - Derecha */}
           <div className="flex-1 flex flex-col gap-6 translate-y-[10rem]">
-            <p className="360:text-[0.95rem] 393:text-[1rem] 430:text-[1.1rem] 768:text-[1.25rem] 834:text-[1.25rem] 1024:text-[1.25rem] 1200:text-[1.25rem] 1280:text-[1.4rem] 1366:text-[1.5rem] 1440:text-[1.6rem] 1536:text-[1.7rem] 1728:text-[1.9rem] 1920:text-[2.1rem] leading-relaxed text-gray-600">
+            <p className="360:text-[0.95rem] 393:text-[1rem] 430:text-[1.1rem] 768:text-[1.25rem] 834:text-[1.25rem] 1024:text-[1.25rem] 1200:text-[1.25rem] 1280:text-[1.4rem] 1366:text-[1.5rem] 1440:text-[1.6rem] 1536:text-[1.7rem] 1728:text-[1.9rem] 1920:text-[2.1rem] leading-relaxed text-gray-600 dark:text-gray-400">
               {text.subtitle}
             </p>
 
@@ -52,8 +52,8 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             </div>
 
             <img
-              src="/placeholder.svg"
-              alt="Imagen columna derecha"
+              src="/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG"
+              alt="Naves 1-4 en parque industrial El Vigía I, Mexicali"
               className="w-full aspect-square object-cover"
             />
           </div>
@@ -61,13 +61,13 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       </section>
 
       {/* Sección de Título y Párrafo - Full Width */}
-      <div className="w-full bg-black mt-0 pt-[20rem] 1200:pt-[24rem] 1366:pt-[30rem] pb-[20rem]">
+      <div className="w-full bg-[#0a1628] dark:bg-white mt-0 pt-[20rem] 1200:pt-[24rem] 1366:pt-[30rem] pb-[20rem]">
         <div className=" w-10/12 1366:w-8/12 mx-auto flex flex-col gap-6">
-          <h2 className="360:text-[2.3rem] 393:text-[2.4rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.7rem] 1024:text-[4rem] 1200:text-[3.7rem] 1280:text-[3.95rem] 1366:text-[4.2rem] 1440:text-[4.5rem] 1536:text-[4.8rem] 1728:text-[5.2rem] 1920:text-[5.6rem] font-semibold leading-tight text-white">
+          <h2 className="360:text-[2.3rem] 393:text-[2.4rem] 430:text-[2.5rem] 768:text-[3rem] 834:text-[3.7rem] 1024:text-[4rem] 1200:text-[3.7rem] 1280:text-[3.95rem] 1366:text-[4.2rem] 1440:text-[4.5rem] 1536:text-[4.8rem] 1728:text-[5.2rem] 1920:text-[5.6rem] font-semibold leading-tight text-white dark:text-[#0a1628]">
             {text.blackTitle}
           </h2>
 
-          <p className="360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.4rem] 834:text-[1.4rem] 1024:text-[1.4rem] 1200:text-[1.4rem] 1280:text-[1.5rem] 1366:text-[1.6rem] 1440:text-[1.7rem] 1536:text-[1.8rem] 1728:text-[2rem] 1920:text-[2.2rem] leading-relaxed text-gray-300 font-light tracking-wider">
+          <p className="360:text-[1.1rem] 393:text-[1.15rem] 430:text-[1.2rem] 768:text-[1.4rem] 834:text-[1.4rem] 1024:text-[1.4rem] 1200:text-[1.4rem] 1280:text-[1.5rem] 1366:text-[1.6rem] 1440:text-[1.7rem] 1536:text-[1.8rem] 1728:text-[2rem] 1920:text-[2.2rem] leading-relaxed text-gray-300 dark:text-gray-700 font-light tracking-wider">
             {text.blackDesc}
           </p>
 
@@ -76,7 +76,7 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             <a href={text.ctaHref} className="px-8 py-4 bg-blue-600 text-white font-medium transition-all hover:bg-blue-700 inline-block">
               {text.cta}
             </a>
-            <a href={text.moreHref} className="px-8 py-4 border border-blue-600 text-white font-medium hover:border-blue-700 transition-colors inline-block">
+            <a href={text.moreHref} className="px-8 py-4 border border-blue-600 text-white dark:text-blue-600 font-medium hover:border-blue-700 transition-colors inline-block">
               {text.more}
             </a>
           </div>
@@ -91,8 +91,8 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
         <div className="absolute top-0 left-0 w-1/2 h-1/2 border-t border-l border-gray-400 pointer-events-none"></div>
 
         <img
-            src="/placeholder.svg"
-            alt="Imagen sección negra"
+            src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-443.jpg"
+            alt="Nave industrial en parque industrial Grupo Nelson, Mexicali"
             className="w-full h-full object-cover p-5 md:aspect-[4/4 1200:aspect-[4/3]"
         />
       </div>

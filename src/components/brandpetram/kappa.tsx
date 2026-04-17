@@ -54,7 +54,7 @@ export function Kappa({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       {/* Segunda imagen 16/9 */}
       <div className="w-full 360:w-[100%] 393:w-[95%] 430:w-[90%] 768:w-[85%] 834:w-[80%] 1024:w-[78%] 1200:w-[75%] mx-auto">
         <div className="w-full aspect-video overflow-hidden">
-          <img src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-8.jpeg" alt="Imagen secundaria" className="w-full h-full object-cover" />
+          <img src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-436.jpg" alt="Nave industrial en parque industrial Grupo Nelson, Mexicali" className="w-full h-full object-cover" />
         </div>
       </div>
     </section>
