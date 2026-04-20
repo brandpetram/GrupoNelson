@@ -4,6 +4,7 @@ import { submitSchema } from '@/lib/form-schema'
 import { escapeHtml } from '@/lib/escape-html'
 import { checkRatelimit } from '@/lib/ratelimit'
 import { getClientIp } from '@/lib/get-client-ip'
+import { verifyTurnstile } from '@/lib/turnstile'
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -92,6 +93,15 @@ export async function POST(request: Request) {
   if (!rate.success) {
     logGuard('ratelimit', `exceeded, remaining=${rate.remaining}`, ip)
     return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
+  }
+
+  const verify = await verifyTurnstile(data.turnstileToken, ip)
+  if (!verify.ok) {
+    logGuard('turnstile', `code=${verify.code}`, ip)
+    return NextResponse.json(
+      { error: verify.code === 'expired' ? 'verification_expired' : 'verification_failed' },
+      { status: 403 }
+    )
   }
 
   const fields = [

@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Turnstile } from '@marsidev/react-turnstile'
+import { useTurnstileSubmit } from '@/hooks/use-turnstile-submit'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
@@ -65,12 +67,18 @@ export default function Contact() {
     const router = useRouter()
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState<string | null>(null)
+    const turnstile = useTurnstileSubmit()
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        setIsSubmitting(true)
         setError(null)
 
+        if (!turnstile.canSubmit) {
+            setError('We are verifying you are not a bot. Please wait a moment.')
+            return
+        }
+
+        setIsSubmitting(true)
         const form = e.currentTarget
         const data = new FormData(form)
 
@@ -84,7 +92,7 @@ export default function Contact() {
         const full_name = [first, last].filter(Boolean).join(' ')
 
         try {
-            const res = await fetch('/api/submit-form', {
+            const res = await turnstile.submit(token => ({
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -94,8 +102,9 @@ export default function Contact() {
                     country: getString('country'),
                     message: getString('message'),
                     website: getString('website') ?? '',
+                    turnstileToken: token,
                 }),
-            })
+            }))
 
             if (res.ok) {
                 router.push('/thank-you')
@@ -106,6 +115,8 @@ export default function Contact() {
                 setError('Please check the form, some fields are invalid.')
             } else if (res.status === 429) {
                 setError('You have submitted several forms recently. Please wait a few minutes and try again.')
+            } else if (res.status === 403) {
+                setError('We could not verify you are human. Please reload the page and try again.')
             } else {
                 setError('There was an error submitting the form. Please try again.')
             }
@@ -308,6 +319,25 @@ export default function Contact() {
                                     />
                                 </div>
 
+                                {turnstile.siteKey && (
+                                    <Turnstile
+                                        ref={turnstile.ref}
+                                        siteKey={turnstile.siteKey}
+                                        options={{ language: 'en', theme: 'auto' }}
+                                        onSuccess={turnstile.onSuccess}
+                                        onExpire={turnstile.onExpire}
+                                        onError={turnstile.onError}
+                                    />
+                                )}
+
+                                {(!turnstile.siteKey || turnstile.widgetFailed) && (
+                                    <div className="rounded-md bg-yellow-50 border border-yellow-300 p-3 dark:bg-yellow-900/20 dark:border-yellow-500/40">
+                                        <p className="text-sm text-yellow-800 dark:text-yellow-200">
+                                            We could not load the security verification. Please reload the page or disable your ad blocker to submit the form.
+                                        </p>
+                                    </div>
+                                )}
+
                                 {error && (
                                     <div className="rounded-md bg-red-50 border border-red-200 p-3 dark:bg-red-900/30 dark:border-red-500/30">
                                         <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
@@ -323,8 +353,8 @@ export default function Contact() {
                                             Privacy Policy
                                         </Link>
                                     </p>
-                                    <Button className="max-sm:row-start-1" disabled={isSubmitting}>
-                                        {isSubmitting ? 'Sending...' : 'Send message'}
+                                    <Button className="max-sm:row-start-1" disabled={isSubmitting || !turnstile.canSubmit}>
+                                        {isSubmitting ? 'Sending...' : !turnstile.canSubmit ? 'Verifying…' : 'Send message'}
                                     </Button>
                                 </div>
                             </form>

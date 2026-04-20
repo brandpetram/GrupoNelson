@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Turnstile } from '@marsidev/react-turnstile'
+import { useTurnstileSubmit } from '@/hooks/use-turnstile-submit'
 import Header from '@/components/Header'
 
 // ── Imagen y efectos visuales (configurables) ──────────────────────
@@ -48,6 +50,7 @@ export default function ContactForm() {
 
   const [errors, setErrors] = useState<Record<string, string | null>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const turnstile = useTurnstileSubmit()
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value } = e.target
@@ -90,9 +93,14 @@ export default function ContactForm() {
       return
     }
 
+    if (!turnstile.canSubmit) {
+      setErrors({ submit: 'Estamos verificando que no eres un bot. Espera un momento.' })
+      return
+    }
+
     setIsSubmitting(true)
     try {
-      const res = await fetch('/api/submit-form', {
+      const res = await turnstile.submit(token => ({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -105,8 +113,9 @@ export default function ContactForm() {
           interest: formData.interests.join(', '),
           message: formData.message,
           website: formData.website,
+          turnstileToken: token,
         }),
-      })
+      }))
 
       if (res.ok) {
         router.push('/gracias')
@@ -117,6 +126,8 @@ export default function ContactForm() {
         setErrors({ submit: 'Revisa los campos, hay datos inválidos.' })
       } else if (res.status === 429) {
         setErrors({ submit: 'Has enviado varios formularios recientemente. Espera unos minutos e intenta de nuevo.' })
+      } else if (res.status === 403) {
+        setErrors({ submit: 'No pudimos verificar que eres humano. Recarga la página e intenta de nuevo.' })
       } else {
         setErrors({ submit: 'Hubo un error al enviar. Inténtalo de nuevo.' })
       }
@@ -330,13 +341,34 @@ export default function ContactForm() {
               </div>
             )}
 
+            {/* Turnstile widget (invisible/managed) */}
+            {turnstile.siteKey && (
+              <Turnstile
+                ref={turnstile.ref}
+                siteKey={turnstile.siteKey}
+                options={{ language: 'es', theme: 'auto' }}
+                onSuccess={turnstile.onSuccess}
+                onExpire={turnstile.onExpire}
+                onError={turnstile.onError}
+              />
+            )}
+
+            {/* Aviso si el widget falló de cargar (adblock, CSP, env var ausente). */}
+            {(!turnstile.siteKey || turnstile.widgetFailed) && (
+              <div className="rounded-xs bg-yellow-50 border border-yellow-300 p-3 dark:bg-yellow-900/20 dark:border-yellow-500/40">
+                <p className="text-sm text-yellow-800 dark:text-yellow-200">
+                  No pudimos cargar la verificación de seguridad. Recarga la página o desactiva tu bloqueador de anuncios para poder enviar el formulario.
+                </p>
+              </div>
+            )}
+
             {/* Submit */}
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !turnstile.canSubmit}
               className="w-full rounded-xs bg-primary hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 px-6 text-base transition-colors"
             >
-              {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+              {isSubmitting ? 'Enviando...' : !turnstile.canSubmit ? 'Verificando…' : 'Enviar mensaje'}
             </button>
           </form>
         </div>

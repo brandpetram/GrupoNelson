@@ -9,6 +9,8 @@ import { CheckCircle2 } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
+import { Turnstile } from '@marsidev/react-turnstile'
+import { useTurnstileSubmit } from '@/hooks/use-turnstile-submit'
 import Header from '@/components/Header'
 
 const countries = [
@@ -49,12 +51,18 @@ export default function Contact() {
     const router = useRouter()
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState<string | null>(null)
+    const turnstile = useTurnstileSubmit()
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        setIsSubmitting(true)
         setError(null)
 
+        if (!turnstile.canSubmit) {
+            setError('Estamos verificando que no eres un bot. Espera un momento.')
+            return
+        }
+
+        setIsSubmitting(true)
         const form = e.currentTarget
         const data = new FormData(form)
 
@@ -68,7 +76,7 @@ export default function Contact() {
         const full_name = [first, last].filter(Boolean).join(' ')
 
         try {
-            const res = await fetch('/api/submit-form', {
+            const res = await turnstile.submit(token => ({
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -78,8 +86,9 @@ export default function Contact() {
                     country: getString('country'),
                     message: getString('message'),
                     website: getString('website') ?? '',
+                    turnstileToken: token,
                 }),
-            })
+            }))
 
             if (res.ok) {
                 router.push('/gracias')
@@ -90,6 +99,8 @@ export default function Contact() {
                 setError('Revisa los campos, hay datos inválidos.')
             } else if (res.status === 429) {
                 setError('Has enviado varios formularios recientemente. Espera unos minutos e intenta de nuevo.')
+            } else if (res.status === 403) {
+                setError('No pudimos verificar que eres humano. Recarga la página e intenta de nuevo.')
             } else {
                 setError('Hubo un error al enviar. Inténtalo de nuevo.')
             }
@@ -260,6 +271,25 @@ export default function Contact() {
                                     />
                                 </div>
 
+                                {turnstile.siteKey && (
+                                    <Turnstile
+                                        ref={turnstile.ref}
+                                        siteKey={turnstile.siteKey}
+                                        options={{ language: 'es', theme: 'auto' }}
+                                        onSuccess={turnstile.onSuccess}
+                                        onExpire={turnstile.onExpire}
+                                        onError={turnstile.onError}
+                                    />
+                                )}
+
+                                {(!turnstile.siteKey || turnstile.widgetFailed) && (
+                                    <div className="rounded-md bg-yellow-50 border border-yellow-300 p-3 dark:bg-yellow-900/20 dark:border-yellow-500/40">
+                                        <p className="text-sm text-yellow-800 dark:text-yellow-200">
+                                            No pudimos cargar la verificación de seguridad. Recarga la página o desactiva tu bloqueador de anuncios para poder enviar el formulario.
+                                        </p>
+                                    </div>
+                                )}
+
                                 {error && (
                                     <div className="rounded-md bg-red-50 border border-red-200 p-3 dark:bg-red-900/30 dark:border-red-500/30">
                                         <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
@@ -275,8 +305,8 @@ export default function Contact() {
                                             Política de Privacidad
                                         </Link>
                                     </p>
-                                    <Button className="max-sm:row-start-1" disabled={isSubmitting}>
-                                        {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                                    <Button className="max-sm:row-start-1" disabled={isSubmitting || !turnstile.canSubmit}>
+                                        {isSubmitting ? 'Enviando...' : !turnstile.canSubmit ? 'Verificando…' : 'Enviar mensaje'}
                                     </Button>
                                 </div>
                             </form>

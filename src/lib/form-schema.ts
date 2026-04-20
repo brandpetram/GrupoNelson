@@ -22,7 +22,7 @@ export const submitSchema = z.object({
   interest: z.string().trim().max(500).optional(),
   message: z.string().trim().max(2000).optional(),
   website: z.string().max(500).optional(),
-  turnstileToken: z.string().min(10).max(2048).optional(),
+  turnstileToken: z.string().min(10).max(2048),
 })
 
 export type SubmitPayload = z.infer<typeof submitSchema>

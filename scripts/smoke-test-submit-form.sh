@@ -82,10 +82,22 @@ STATUS=$(run POST "application/json" '{"full_name":"Test\r\nBcc: attacker@evil.c
 BODY=$(cat /tmp/smoke-body.json)
 assert "CRLF in full_name (Zod fail)" "400" "invalid_payload" "$STATUS" "$BODY"
 
-# Test 5: Honeypot filled → 200 silencioso (sin enviar email)
-STATUS=$(run POST "application/json" '{"full_name":"Smoke Bot","email":"bot@example.com","website":"http://spam.example"}')
+# Test 5: Honeypot filled → 200 silencioso (sin enviar email).
+# Incluye turnstileToken dummy de shape válida (>=10 chars) para pasar Zod;
+# el honeypot corta antes de que Turnstile tenga chance de evaluarlo.
+STATUS=$(run POST "application/json" '{"full_name":"Smoke Bot","email":"bot@example.com","website":"http://spam.example","turnstileToken":"dummy-token-to-pass-zod"}')
 BODY=$(cat /tmp/smoke-body.json)
 assert "Honeypot filled (silent 200)" "200" "true" "$STATUS" "$BODY"
+
+# Test 6: Payload sin turnstileToken → 400 invalid_payload (Zod lo requiere ahora)
+STATUS=$(run POST "application/json" '{"full_name":"Smoke Test","email":"test@example.com"}')
+BODY=$(cat /tmp/smoke-body.json)
+assert "Missing turnstile token (Zod fail)" "400" "invalid_payload" "$STATUS" "$BODY"
+
+# Test 7: Payload con turnstileToken inválido pero válido en shape → 403 verification_failed
+STATUS=$(run POST "application/json" '{"full_name":"Smoke Test","email":"test@example.com","turnstileToken":"definitely-not-a-real-token"}')
+BODY=$(cat /tmp/smoke-body.json)
+assert "Invalid turnstile token (403)" "403" "verification_failed" "$STATUS" "$BODY"
 
 # Rate limit — NO se testea automáticamente en este script.
 #
