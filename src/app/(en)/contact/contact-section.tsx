@@ -101,7 +101,7 @@ export default function Contact() {
                     company: getString('company'),
                     country: getString('country'),
                     message: getString('message'),
-                    website: getString('website') ?? '',
+                    contact_url: getString('contact_url') ?? '',
                     turnstileToken: token,
                 }),
             }))
@@ -234,7 +234,7 @@ export default function Contact() {
                             <form onSubmit={handleSubmit} className="**:data-[slot=label]:block relative mt-8 space-y-6">
                                 <input
                                     type="text"
-                                    name="website"
+                                    name="contact_url"
                                     tabIndex={-1}
                                     autoComplete="off"
                                     aria-hidden="true"

@@ -21,7 +21,7 @@ export const submitSchema = z.object({
   park: z.string().trim().max(50).optional(),
   interest: z.string().trim().max(500).optional(),
   message: z.string().trim().max(2000).optional(),
-  website: z.string().max(500).optional(),
+  contact_url: z.string().max(500).optional(),
   turnstileToken: z.string().min(10).max(2048),
 })
 

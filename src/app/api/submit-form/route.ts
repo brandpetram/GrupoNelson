@@ -84,8 +84,8 @@ export async function POST(request: Request) {
   const data = parsed.data
   const ip = getClientIp(request)
 
-  if (data.website && data.website.length > 0) {
-    logGuard('honeypot', 'website field populated', ip)
+  if (data.contact_url && data.contact_url.length > 0) {
+    logGuard('honeypot', 'honeypot field populated', ip)
     return NextResponse.json({ success: true })
   }
 

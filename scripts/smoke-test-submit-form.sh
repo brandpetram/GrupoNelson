@@ -85,7 +85,7 @@ assert "CRLF in full_name (Zod fail)" "400" "invalid_payload" "$STATUS" "$BODY"
 # Test 5: Honeypot filled → 200 silencioso (sin enviar email).
 # Incluye turnstileToken dummy de shape válida (>=10 chars) para pasar Zod;
 # el honeypot corta antes de que Turnstile tenga chance de evaluarlo.
-STATUS=$(run POST "application/json" '{"full_name":"Smoke Bot","email":"bot@example.com","website":"http://spam.example","turnstileToken":"dummy-token-to-pass-zod"}')
+STATUS=$(run POST "application/json" '{"full_name":"Smoke Bot","email":"bot@example.com","contact_url":"http://spam.example","turnstileToken":"dummy-token-to-pass-zod"}')
 BODY=$(cat /tmp/smoke-body.json)
 assert "Honeypot filled (silent 200)" "200" "true" "$STATUS" "$BODY"
 
@@ -103,7 +103,7 @@ assert "Invalid turnstile token (403)" "403" "verification_failed" "$STATUS" "$B
 #
 # Razón: el honeypot se evalúa ANTES del rate limit en el endpoint (por
 # diseño — el honeypot es sync y gratis; rate limit cuesta una llamada
-# HTTPS a Upstash). Entonces un payload con `website` relleno siempre
+# HTTPS a Upstash). Entonces un payload con `contact_url` relleno siempre
 # devuelve 200 sin tocar Upstash. Para disparar el rate limit hay que
 # enviar payloads válidos, y eso dispara emails reales a las 4 cuentas
 # de nelson.com.mx. No queremos eso desde un smoke test.
