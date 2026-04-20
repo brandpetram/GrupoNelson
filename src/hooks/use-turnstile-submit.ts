@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { TurnstileInstance } from '@marsidev/react-turnstile'
 
-const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ''
+const TURNSTILE_SITE_KEY = (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '').trim()
 const FRESH_TOKEN_TIMEOUT_MS = 10_000
 const FRESH_TOKEN_POLL_MS = 200
 
