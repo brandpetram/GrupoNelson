@@ -74,21 +74,41 @@ export default function Contact() {
         const form = e.currentTarget
         const data = new FormData(form)
 
+        const getString = (name: string): string | undefined => {
+            const v = data.get(name)
+            return typeof v === 'string' ? v : undefined
+        }
+
+        const first = (getString('first-name') ?? '').trim()
+        const last = (getString('last-name') ?? '').trim()
+        const full_name = [first, last].filter(Boolean).join(' ')
+
         try {
             const res = await fetch('/api/submit-form', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    full_name: `${data.get('first-name')} ${data.get('last-name')}`,
-                    email: data.get('email'),
-                    company: data.get('company'),
-                    country: data.get('country'),
-                    message: data.get('message'),
+                    full_name,
+                    email: getString('email'),
+                    company: getString('company'),
+                    country: getString('country'),
+                    message: getString('message'),
+                    website: getString('website') ?? '',
                 }),
             })
 
-            if (!res.ok) throw new Error('Error submitting form')
-            router.push('/thank-you')
+            if (res.ok) {
+                router.push('/thank-you')
+                return
+            }
+
+            if (res.status === 400) {
+                setError('Please check the form, some fields are invalid.')
+            } else if (res.status === 429) {
+                setError('You have submitted several forms recently. Please wait a few minutes and try again.')
+            } else {
+                setError('There was an error submitting the form. Please try again.')
+            }
         } catch {
             setError('There was an error submitting the form. Please try again.')
         } finally {
@@ -201,6 +221,15 @@ export default function Contact() {
                             <p className="text-muted-foreground mt-2 text-base">Fill out the form and we will get back to you within 24 hours.</p>
 
                             <form onSubmit={handleSubmit} className="**:data-[slot=label]:block relative mt-8 space-y-6">
+                                <input
+                                    type="text"
+                                    name="website"
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                    defaultValue=""
+                                    style={{ display: 'none' }}
+                                />
                                 <div className="grid gap-4 sm:grid-cols-2">
                                     <div className="space-y-2.5">
                                         <Label htmlFor="first-name">First name</Label>

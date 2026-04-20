@@ -1,5 +1,9 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { submitSchema } from '@/lib/form-schema'
+import { escapeHtml } from '@/lib/escape-html'
+import { checkRatelimit } from '@/lib/ratelimit'
+import { getClientIp } from '@/lib/get-client-ip'
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
@@ -15,15 +19,27 @@ const RECIPIENTS = [
   'sosuna@nelson.com.mx',
 ]
 
+function logGuard(layer: string, reason: string, ip?: string) {
+  console.log(
+    JSON.stringify({
+      tag: 'form-guard',
+      layer,
+      reason,
+      ip: ip ?? null,
+      timestamp: new Date().toISOString(),
+    })
+  )
+}
+
 function buildEmailHtml(fields: { label: string; value: string }[]) {
   const rows = fields
     .map(
       f => `
       <tr>
-        <td style="padding:8px 0 2px;font-size:14px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.5px">${f.label}</td>
+        <td style="padding:8px 0 2px;font-size:14px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.5px">${escapeHtml(f.label)}</td>
       </tr>
       <tr>
-        <td style="padding:0 0 12px;font-size:16px;color:#333;line-height:24px">${f.value}</td>
+        <td style="padding:0 0 12px;font-size:16px;color:#333;line-height:24px">${escapeHtml(f.value)}</td>
       </tr>`
     )
     .join('')
@@ -50,39 +66,65 @@ function buildEmailHtml(fields: { label: string; value: string }[]) {
 }
 
 export async function POST(request: Request) {
+  let body: unknown
   try {
-    const body = await request.json()
+    body = await request.json()
+  } catch {
+    logGuard('parse', 'invalid JSON body')
+    return NextResponse.json({ error: 'invalid_body' }, { status: 400 })
+  }
 
-    const fields = [
-      { label: 'Nombre', value: body.full_name },
-      { label: 'Email', value: body.email },
-      { label: 'Teléfono', value: body.phone_number },
-      { label: 'Empresa', value: body.company },
-      { label: 'País', value: body.country },
-      { label: 'Tipo', value: body.role },
-      { label: 'Parque industrial', value: body.park },
-      { label: 'Interés', value: body.interest },
-      { label: 'Mensaje', value: body.message },
-    ].filter(f => f.value)
+  const parsed = submitSchema.safeParse(body)
+  if (!parsed.success) {
+    logGuard('zod', parsed.error.issues.map(i => i.path.join('.') + ':' + i.code).join(','))
+    return NextResponse.json({ error: 'invalid_payload' }, { status: 400 })
+  }
 
+  const data = parsed.data
+  const ip = getClientIp(request)
+
+  if (data.website && data.website.length > 0) {
+    logGuard('honeypot', 'website field populated', ip)
+    return NextResponse.json({ success: true })
+  }
+
+  const rate = await checkRatelimit(ip)
+  if (!rate.success) {
+    logGuard('ratelimit', `exceeded, remaining=${rate.remaining}`, ip)
+    return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
+  }
+
+  const fields = [
+    { label: 'Nombre', value: data.full_name },
+    { label: 'Email', value: data.email },
+    { label: 'Teléfono', value: data.phone_number },
+    { label: 'Empresa', value: data.company },
+    { label: 'País', value: data.country },
+    { label: 'Tipo', value: data.role },
+    { label: 'Parque industrial', value: data.park },
+    { label: 'Interés', value: data.interest },
+    { label: 'Mensaje', value: data.message },
+  ].filter((f): f is { label: string; value: string } => Boolean(f.value))
+
+  try {
     const resend = getResend()
     const { error } = await resend.emails.send({
       from: 'Grupo Nelson <leads@nelson.com.mx>',
       to: RECIPIENTS,
       bcc: ['notifications@brandpetram.com'],
-      replyTo: body.email,
-      subject: `Nuevo lead desde nelson.com.mx — ${body.full_name}`,
+      replyTo: data.email,
+      subject: `Nuevo lead desde nelson.com.mx — ${data.full_name}`,
       html: buildEmailHtml(fields),
     })
 
     if (error) {
-      console.error('Resend error:', error)
-      return NextResponse.json({ error: 'Error enviando email' }, { status: 500 })
+      logGuard('resend', JSON.stringify(error))
+      return NextResponse.json({ error: 'send_failed' }, { status: 500 })
     }
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error('API error:', err)
-    return NextResponse.json({ error: 'Error interno' }, { status: 500 })
+    logGuard('resend', err instanceof Error ? err.message : 'unknown')
+    return NextResponse.json({ error: 'internal' }, { status: 500 })
   }
 }

@@ -38,6 +38,9 @@
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.37.0",
+    "@vercel/functions": "^3.4.3",
     "@vercel/toolbar": "^0.2.2",
     "@vis.gl/react-google-maps": "^1.7.1",
     "class-variance-authority": "^0.7.1",
@@ -65,7 +68,8 @@
     "shiki": "^3.17.0",
     "styled-components": "^6.3.11",
     "tailwind-merge": "^3.4.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@sanity/client": "^7.16.0",

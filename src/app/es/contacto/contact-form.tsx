@@ -43,6 +43,7 @@ export default function ContactForm() {
     park: '',
     interests: [] as string[],
     message: '',
+    website: '',
   })
 
   const [errors, setErrors] = useState<Record<string, string | null>>({})
@@ -103,11 +104,22 @@ export default function ContactForm() {
           park: formData.park,
           interest: formData.interests.join(', '),
           message: formData.message,
+          website: formData.website,
         }),
       })
 
-      if (!res.ok) throw new Error('Error enviando formulario')
-      router.push('/gracias')
+      if (res.ok) {
+        router.push('/gracias')
+        return
+      }
+
+      if (res.status === 400) {
+        setErrors({ submit: 'Revisa los campos, hay datos inválidos.' })
+      } else if (res.status === 429) {
+        setErrors({ submit: 'Has enviado varios formularios recientemente. Espera unos minutos e intenta de nuevo.' })
+      } else {
+        setErrors({ submit: 'Hubo un error al enviar. Inténtalo de nuevo.' })
+      }
     } catch {
       setErrors({ submit: 'Hubo un error al enviar. Inténtalo de nuevo.' })
     } finally {
@@ -134,6 +146,17 @@ export default function ContactForm() {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5 max-w-md">
+            {/* Honeypot: campo oculto, debe permanecer vacío. Si un bot lo llena, el endpoint responde 200 silencioso sin enviar email. display:none para que password managers no lo autocompleten. */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              value={formData.website}
+              onChange={e => setFormData(prev => ({ ...prev, website: e.target.value }))}
+              style={{ display: 'none' }}
+            />
             {/* Nombre */}
             <div>
               <label htmlFor="fullName" className="block text-sm font-semibold text-gray-900 dark:text-white mb-1">
