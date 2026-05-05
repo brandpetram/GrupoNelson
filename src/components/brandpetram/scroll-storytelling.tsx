@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useId } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
@@ -308,6 +308,7 @@ export function ScrollStorytelling({
   const [activeIndex, setActiveIndex] = useState(0)
   const [playingMobileVideo, setPlayingMobileVideo] = useState<number | null>(null)
   const blocksRef = useRef<(HTMLDivElement | null)[]>([])
+  const gridPatternId = useId()
 
   // Calcular la posición del indicador basado en el activeIndex
   const indicatorHeight = 100 / items.length // Altura proporcional (ej: 20% para 5 items)
@@ -341,7 +342,32 @@ export function ScrollStorytelling({
   }, [])
 
   return (
-    <section data-component="ScrollStorytelling" data-component-file="src/components/brandpetram/scroll-storytelling.tsx" data-component-props="true" className={cn('relative md:w-10/12 xl:w-10/12 2xl:w-11/12 mx-auto min-h-screen bg-background', className)}>
+    <div className="relative isolate w-full">
+      {/* Cuadrícula de fondo — sticky al viewport durante el scroll por la sección */}
+      <div
+        aria-hidden="true"
+        className="sticky top-0 h-screen w-full -z-10 pointer-events-none"
+        style={{ marginBottom: '-100vh' }}
+      >
+        <svg
+          className="absolute inset-0 w-full h-full stroke-gray-200 dark:stroke-white/10"
+          style={{
+            maskImage: 'radial-gradient(80rem 80rem at center, white, transparent)',
+            WebkitMaskImage: 'radial-gradient(80rem 80rem at center, white, transparent)',
+          }}
+        >
+          <defs>
+            <pattern x="50%" y={-1} id={gridPatternId} width={200} height={200} patternUnits="userSpaceOnUse">
+              <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y={-1} className="overflow-visible fill-gray-50 dark:fill-gray-800">
+            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" strokeWidth={0} />
+          </svg>
+          <rect fill={`url(#${gridPatternId})`} width="100%" height="100%" strokeWidth={0} />
+        </svg>
+      </div>
+    <section data-component="ScrollStorytelling" data-component-file="src/components/brandpetram/scroll-storytelling.tsx" data-component-props="true" className={cn('relative md:w-10/12 xl:w-10/12 2xl:w-11/12 mx-auto min-h-screen bg-transparent', className)}>
       {/* Scrollbar progress indicator - estilo JetBrains */}
       <div className="hidden 1200:block absolute left-0 top-0 bottom-0 w-1 z-20">
         {/* Track (fondo de la barra) */}
@@ -510,5 +536,6 @@ export function ScrollStorytelling({
           </aside>
         </div>
     </section>
+    </div>
   )
 }

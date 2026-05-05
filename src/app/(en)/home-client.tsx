@@ -162,7 +162,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
 
 
       {/* ScrollStorytelling - Interactive scroll storytelling */}
-      <div className={'1200:mt-80 relative'}>
+      <div className={'1200:mt-40 relative'}>
         <ScrollStorytelling
           mediaAspectRatio="aspect-[16/9]"
           items={[
