@@ -75,7 +75,7 @@ export function LogosMarcas() {
           <li key={index} className="bg-background">
             <Link
               href={marca.href}
-              className="group flex items-start gap-3 p-4 hover:bg-gradient-to-br hover:from-orange-600 hover:to-red-700 transition-all"
+              className="group flex items-start gap-3 p-4 hover:bg-blue-600 transition-all"
             >
               {/* Logo */}
               <div className="bg-background ring-foreground/10 flex size-12 shrink-0 items-center justify-center rounded-xs shadow-sm ring-1 group-hover:bg-white group-hover:ring-white">
@@ -100,7 +100,7 @@ export function LogosMarcas() {
           <div className="flex h-full items-center justify-center p-6">
             <Link
               href="/contacto"
-              className="inline-flex items-center justify-center px-8 py-3 bg-orange-600 hover:bg-red-600 text-white font-semibold rounded-xs transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xs transition-colors"
             >
               Cotizar
             </Link>

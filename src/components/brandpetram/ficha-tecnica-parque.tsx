@@ -71,7 +71,7 @@ const labels = {
     incluida: "Incluida",
     galeria: "Galería",
     infraestructura: "Infraestructura",
-    sinNavesDisponibles: "Este parque no tiene naves disponibles actualmente. Contáctenos para explorar opciones build-to-suit.",
+    sinNavesDisponibles: "Este parque no tiene naves disponibles actualmente. Contáctenos para explorar opciones a la medida.",
     fichasNoDisponibles: "Las fichas técnicas de naves para este parque aún no están disponibles.",
   },
   en: {

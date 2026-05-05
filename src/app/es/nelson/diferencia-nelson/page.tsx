@@ -98,9 +98,9 @@ export default function DiferenciaNelsonPage() {
 
         <div className="h-16 768:h-20 1200:h-24" />
 
-        {/* ── Diferenciador 3: Constructora in-house ── */}
+        {/* ── Diferenciador 3: Constructora interna ── */}
         <SplitSimpleBP
-          tagline="Constructora in-house"
+          tagline="Constructora interna"
           title="Baumex: un contrato, un responsable, de terreno a llave en mano"
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"

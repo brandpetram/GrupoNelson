@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/baumex',
   title: 'Baumex Constructora',
-  description: 'Constructora in-house de Grupo Nelson con más de 25 años construyendo naves industriales built-to-suit en Mexicali. 75+ proyectos entregados para empresas Fortune 500.',
+  description: 'Constructora interna de Grupo Nelson con más de 25 años construyendo naves industriales built-to-suit en Mexicali. 75+ proyectos entregados para empresas Fortune 500.',
 })
 
 export default function BaumexPage() {

@@ -77,7 +77,7 @@ export const terms = {
     industrialParks: 'Parques Industriales',
     warehouse: 'Nave Industrial',
     warehouses: 'Naves Industriales',
-    buildToSuit: 'Build-to-Suit',
+    buildToSuit: 'A la medida',
     turnkey: 'Llave en Mano',
     land: 'Terrenos',
     availableBuildings: 'Naves Disponibles',

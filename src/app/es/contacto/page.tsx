@@ -5,7 +5,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/contacto',
   title: 'Contacto',
-  description: 'Contáctanos para renta de naves industriales, terrenos disponibles y servicios de construcción build-to-suit en Mexicali.',
+  description: 'Contáctanos para renta de naves industriales, terrenos disponibles y servicios de construcción a la medida en Mexicali.',
 })
 
 export default function ContactoPage() {

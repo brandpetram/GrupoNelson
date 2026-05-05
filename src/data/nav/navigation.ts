@@ -87,7 +87,7 @@ export const solutionsServicesLinks = [
   {
     href: '/constructora/baumex',
     name: 'Baumex Constructora',
-    description: 'Constructora in-house con 25+ años',
+    description: 'Constructora interna con 25+ años',
     iconKey: 'award',
   },
     {
@@ -98,7 +98,7 @@ export const solutionsServicesLinks = [
   },
   {
     href: '/constructora/build-to-suit',
-    name: 'Construcción Build-to-Suit',
+    name: 'Construcción a la medida',
     description: 'Naves diseñadas y construidas a la medida',
     iconKey: 'hammer',
   },

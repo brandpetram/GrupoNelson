@@ -31,7 +31,7 @@ export function FeatureSection8BP() {
               Es la familia que creó la industria maquiladora de <strong>Mexicali</strong> en <strong>1967</strong> y sigue operando personalmente
               cada parque, cada contrato y cada proyecto de construcción. Tres hechos verificables
               que ningún competidor en <strong>Mexicali</strong> puede replicar simultáneamente: <strong>60 años de trayectoria</strong>,
-              operación directa por la <strong>familia fundadora</strong>, y <strong>constructora in-house</strong> con 28 años
+              operación directa por la <strong>familia fundadora</strong>, y <strong>constructora interna</strong> con 28 años
               y 75 proyectos completados.
             </p>
           </div>

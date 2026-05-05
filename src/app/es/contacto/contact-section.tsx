@@ -59,7 +59,7 @@ const countries = [
 const benefits = [
     'Pioneros en Parques Industriales en Mexicali',
     'Certificaciones de Clase Mundial',
-    'Construcción build-to-suit a la medida',
+    'Construcción a la medida',
     'Atención personalizada y respuesta rápida',
 ]
 

@@ -44,7 +44,11 @@ export function FaqSectionsThreeColumnsBPConProps({
       answer: "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
     },
   ],
+  lang = 'en',
 }: FaqSectionsThreeColumnsBPConPropsProps) {
+  const trailingText = lang === 'es'
+    ? 'Nos pondremos en contacto a la brevedad posible.'
+    : "and we'll get back to you as soon as we can.";
   return (
     <div data-component="FaqSectionsThreeColumnsBPConProps" data-component-file="src/components/brandpetram/con-props/faq-sections-three-columns-bp-con-props.tsx" data-component-props="true" className="bg-gray-900 relative overflow-hidden">
       <div className="mx-auto w-full 360:w-full 393:w-11/12 430:w-11/12 768:w-10/12 834:w-10/12 1024:w-9/12 1200:w-8/12 1280:max-w-7xl 1366:max-w-7xl 1440:max-w-7xl 1536:max-w-7xl 1728:max-w-7xl 1920:max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
@@ -57,7 +61,7 @@ export function FaqSectionsThreeColumnsBPConProps({
             <a href={linkHref} className="font-semibold text-indigo-400 hover:text-indigo-300">
               {linkTexto}
             </a>{' '}
-            and we'll get back to you as soon as we can.
+            {trailingText}
           </p>
         </div>
         <div className="mt-20">

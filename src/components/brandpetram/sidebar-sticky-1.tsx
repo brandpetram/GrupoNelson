@@ -35,7 +35,7 @@ const sidebarText = {
     constructora: 'Constructora',
     constructoraLinks: [
       { href: '/constructora/baumex', label: 'Baumex Constructora' },
-      { href: '/constructora/build-to-suit', label: 'Build-to-Suit' },
+      { href: '/constructora/build-to-suit', label: 'A la medida' },
       { href: '/constructora/proyectos-especializados', label: 'Proyectos Especializados' },
     ],
     h2_1: 'La decisión de negocio: por qué LEED',

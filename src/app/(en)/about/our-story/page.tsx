@@ -84,8 +84,8 @@ export default function OurStoryPage() {
             </div>
             {/* Industrial park card */}
             <div className="mt-8 flex flex-col overflow-hidden px-10">
-                {/* Orange header */}
-                <div className="bg-orange-500 py-10 px-10 flex flex-col gap-3">
+                {/* Blue header */}
+                <div className="bg-blue-600 py-10 px-10 flex flex-col gap-3">
                     <h3 className="text-white text-3xl 1200:text-5xl font-bold leading-none">
                         Nelson II Industrial Park
                     </h3>

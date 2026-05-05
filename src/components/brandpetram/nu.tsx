@@ -13,7 +13,7 @@ const text = {
     contactHref: '/contacto',
     boxTitleStart: 'Disciplinas',
     boxTitleMid: 'de ingeniería',
-    boxTitleHighlight: 'in-house',
+    boxTitleHighlight: 'internas',
     list: ['Diseño Arquitectónico Industrial', 'Ingeniería Estructural y Sísmica', 'Sistemas Eléctricos de Alta Capacidad'],
   },
   en: {

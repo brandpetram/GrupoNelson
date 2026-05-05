@@ -29,7 +29,7 @@ export default function ComoTrabajamosSection() {
                                 <span className="font-mono">01.</span> Planeación
                             </FeatureCardTitle>
                             <FeatureCardDescription className="text-balance">
-                                <span className="text-foreground">Ruta crítica con 18 hitos interdependientes.</span> Identificamos equipos con largo tiempo de entrega — transformadores, chillers, bombas contra incendio — antes de que se conviertan en retraso. Presupuesto detallado con Cost Engineer in-house.
+                                <span className="text-foreground">Ruta crítica con 18 hitos interdependientes.</span> Identificamos equipos con largo tiempo de entrega — transformadores, chillers, bombas contra incendio — antes de que se conviertan en retraso. Presupuesto detallado con Cost Engineer interno.
                             </FeatureCardDescription>
                         </FeatureCardContent>
                     </FeatureCard>

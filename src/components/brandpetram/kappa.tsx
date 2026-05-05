@@ -5,7 +5,7 @@ export function Kappa({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       : '¿No encuentras lo que necesitas?',
     desc: lang === 'en'
       ? "If your operation requires specific heights, high-demand electrical capacity, cleanrooms, or specialized systems that don't exist in inventory, Baumex — Grupo Nelson's in-house construction firm — designs and builds the facility to your exact specifications. One provider for both paths."
-      : 'Si tu operación requiere alturas específicas, capacidad eléctrica de alta demanda, cuartos limpios o sistemas especializados que no existen en el inventario, Baumex — la constructora in-house de Grupo Nelson — diseña y construye la nave según tus especificaciones exactas. Un solo proveedor para ambos caminos.',
+      : 'Si tu operación requiere alturas específicas, capacidad eléctrica de alta demanda, cuartos limpios o sistemas especializados que no existen en el inventario, Baumex — la constructora interna de Grupo Nelson — diseña y construye la nave según tus especificaciones exactas. Un solo proveedor para ambos caminos.',
     sidebar: lang === 'en'
       ? 'Gulfstream started in an existing building and now operates in 52,200 m² of custom-built space'
       : 'Gulfstream empezó en una nave existente y hoy opera en 52,200 m² construidos a medida',

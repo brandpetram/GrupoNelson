@@ -25,7 +25,7 @@ export function HeroSection1() {
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">
-              Naves industriales diseñadas para optimizar tu operación. Construye exactamente lo que necesitas con nuestra constructora in-house y 58 años de expertise en el mercado fronterizo.
+              Naves industriales diseñadas para optimizar tu operación. Construye exactamente lo que necesitas con nuestra constructora interna y 58 años de expertise en el mercado fronterizo.
             </p>
           </div>
 

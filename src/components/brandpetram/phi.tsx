@@ -16,7 +16,7 @@ const text = {
     doc1: 'Reportes semanales con fotografías',
     doc2: 'Minutas firmadas con responsables',
     doc3: 'Control de submittals y long lead items',
-    svc1Title: 'Construcción Build-to-Suit',
+    svc1Title: 'Construcción a la medida',
     svc1Desc: 'Nave diseñada y construida a la medida exacta de tu operación. Precio cerrado desde proyecto ejecutivo.',
     svc1Href: '/constructora/build-to-suit',
     svc1Btn: 'Ver más',

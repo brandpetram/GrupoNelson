@@ -95,7 +95,7 @@ export function CincoCardsConProps({
 
         {/* Card 1 - Video */}
         <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
-          <div className="bg-gradient-to-br from-orange-400 to-orange-500 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
+          <div className="bg-blue-500 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card1Titulo}
             </h3>
@@ -117,7 +117,7 @@ export function CincoCardsConProps({
 
         {/* Card 2 - Imagen */}
         <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
+          <div className="bg-blue-600 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card2Titulo}
             </h3>
@@ -149,7 +149,7 @@ export function CincoCardsConProps({
 
         {/* Card 4 - Imagen */}
         <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
-          <div className="bg-gradient-to-br from-orange-600 to-orange-700 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
+          <div className="bg-blue-700 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card4Titulo}
             </h3>

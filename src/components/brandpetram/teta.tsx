@@ -1,7 +1,7 @@
 const tetaText = {
   es: {
     heading: 'Arranca producción sin esperar 12-24 meses de construcción',
-    paragraph: 'Para empresas que llegan a México por nearshoring y necesitan operar rápido, una nave llave en mano elimina el ciclo completo de un build-to-suit. Visitas la nave, verificas que cumple tus requerimientos técnicos, firmas contrato y comienzas a operar en semanas. Contratos de 10-15 años. El 80% de los clientes de Grupo Nelson son recurrentes.',
+    paragraph: 'Para empresas que llegan a México por nearshoring y necesitan operar rápido, una nave llave en mano elimina el ciclo completo de una construcción a la medida. Visitas la nave, verificas que cumple tus requerimientos técnicos, firmas contrato y comienzas a operar en semanas. Contratos de 10-15 años. El 80% de los clientes de Grupo Nelson son recurrentes.',
   },
   en: {
     heading: 'Start production without waiting 12-24 months for construction',
@@ -19,9 +19,9 @@ export function Teta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
           <div
               className="360:w-full 393:w-full 430:w-full 768:w-[48%] 834:w-[50%] 1024:w-[52%] 1200:w-[55%] 1280:w-[52%] 1366:w-[53%] 1440:w-[54.5%] 1536:w-[56%] 1728:w-[58%] 1920:w-[60%]">
             <div className="relative translate-y-[4rem] 360:translate-y-[4rem]  393:translate-y-[4rem] z-30 md:z-0">
-              {/* Div decorativo: cuadrado con gradiente naranja a rojo, asomando por arriba */}
+              {/* Div decorativo: cuadrado azul, asomando por arriba */}
               <div
-                  className="absolute left-[6rem] 360:left-[7rem] 430:left-[9rem] md:left-1/2 -translate-x-1/2 top-8 md:-top-20 w-[10rem] 1200:w-[20rem] h-[7rem] md:h-[20rem] bg-gradient-to-r from-orange-500 to-red-500 z-0"></div>
+                  className="absolute left-[6rem] 360:left-[7rem] 430:left-[9rem] md:left-1/2 -translate-x-1/2 top-8 md:-top-20 w-[10rem] 1200:w-[20rem] h-[7rem] md:h-[20rem] bg-blue-600 z-0"></div>
 
               {/* Imagen principal: aspect 3:2 */}
               <img

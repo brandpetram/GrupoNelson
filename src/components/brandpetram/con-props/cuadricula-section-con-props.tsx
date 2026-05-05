@@ -236,7 +236,7 @@ export function CuadriculaSectionConProps({
       <div className=" -translate-y-18 md:translate-y-0 relative isolate z-20 flex flex-col 1200:flex-row min-h-screen 1200:items-center justify-start 1200:justify-between w-full py-0 px-0 1280:pl-12 1366:pl-14 md:py-0 1200:-translate-y-20 1280:translate-y-0">
         {/* Columna izquierda - Contenido de texto */}
         <div className="md:-mr-120 order-2 md:order-1 relative z-20 1280:max-w-2xl 1728:max-w-4xl p-5 md:p-10 1280:p-0 1200:-translate-y-20 1280:-translate-y-28 1366:-translate-y-28  1440:-translate-y-40 1536:-translate-y-24 1728:-translate-y-40 1920:-translate-y-56 1920:translate-x-10">
-          <span className="rounded-xl bg-orange-700/10 px-4 py-2 text-xs lg:text-lg font-semibold leading-6 text-red-600  ring-1 ring-inset ring-red-500/20">{badge}</span>
+          <span className="rounded-xl bg-blue-700/10 px-4 py-2 text-xs lg:text-lg font-semibold leading-6 text-blue-600  ring-1 ring-inset ring-blue-500/20">{badge}</span>
           <h1 className="mt-4 md:mt-5  text-3xl 393:text-4xl 430:text-5xl md:text-6xl 1024:text-7xl 1536:text-8xl font-extrabold text-foreground mb-6 leading-none tracking-tighter">
            {titulo}
           </h1>
@@ -244,7 +244,7 @@ export function CuadriculaSectionConProps({
             {parrafo}
           </p>
           <div className="flex flex-col md:max-w-[18rem] 1024:max-w-sm 1200:flex-row md:w-2/12 834:w-2/12 1024:w-2/12 1200:w-full gap-4 md:-mr-[7rem] text-xs 360:text-sm 393:text-lg">
-            <a href={boton1Href} className="px-6 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-500 transition text-center">
+            <a href={boton1Href} className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition text-center">
               {boton1Texto}
             </a>
             <a href={boton2Href} className="px-6 py-3 bg-transparent text-foreground border border-border rounded-lg font-semibold hover:bg-muted transition text-center">

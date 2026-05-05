@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     default: 'Grupo Nelson — Parques Industriales en Mexicali',
     template: '%s | Grupo Nelson',
   },
-  description: 'Desarrollo industrial con más de 60 años de experiencia en Mexicali. Parques industriales, construcción build-to-suit, naves industriales y terrenos disponibles.',
+  description: 'Desarrollo industrial con más de 60 años de experiencia en Mexicali. Parques industriales, construcción a la medida, naves industriales y terrenos disponibles.',
   metadataBase: new URL('https://www.nelson.com.mx'),
   openGraph: {
     type: 'website',
     locale: 'es_MX',
     siteName: 'Grupo Nelson',
     title: 'Grupo Nelson — Parques Industriales en Mexicali',
-    description: 'Desarrollo industrial con más de 60 años de experiencia en Mexicali. Parques industriales, construcción build-to-suit, naves industriales y terrenos disponibles.',
+    description: 'Desarrollo industrial con más de 60 años de experiencia en Mexicali. Parques industriales, construcción a la medida, naves industriales y terrenos disponibles.',
   },
 };
 

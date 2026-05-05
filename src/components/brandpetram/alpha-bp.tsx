@@ -44,8 +44,8 @@ export function AlphaBP({
       >
         <defs>
           <linearGradient id="gradient-orange-red-left-bp" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#f97316" />
-            <stop offset="100%" stopColor="#dc2626" />
+            <stop offset="0%" stopColor="#2563eb" />
+            <stop offset="100%" stopColor="#1d4ed8" />
           </linearGradient>
           <pattern
             id="dot-pattern-left-bp"
@@ -73,8 +73,8 @@ export function AlphaBP({
         >
             <defs>
                 <linearGradient id="gradient-orange-red-right-bp-mobile" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#f97316" />
-                    <stop offset="100%" stopColor="#dc2626" />
+                    <stop offset="0%" stopColor="#2563eb" />
+                    <stop offset="100%" stopColor="#1d4ed8" />
                 </linearGradient>
                 <pattern
                     id="dot-pattern-right-bp-mobile"
@@ -100,8 +100,8 @@ export function AlphaBP({
         >
             <defs>
                 <linearGradient id="gradient-orange-red-right-bp-desktop" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#f97316" />
-                    <stop offset="100%" stopColor="#dc2626" />
+                    <stop offset="0%" stopColor="#2563eb" />
+                    <stop offset="100%" stopColor="#1d4ed8" />
                 </linearGradient>
                 <pattern
                     id="dot-pattern-right-bp-desktop"

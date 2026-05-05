@@ -24,9 +24,9 @@ export function CuadritosLluviaTres() {
         style={{ top: '0px', left: '0px' }}
       />
 
-      {/* Cuadrito 3: Pequeño, naranja, tocando esquina inferior derecha del 2 */}
+      {/* Cuadrito 3: Pequeño, azul, tocando esquina inferior derecha del 2 */}
       <div
-        className="absolute w-8 h-8 bg-orange-600"
+        className="absolute w-8 h-8 bg-blue-600"
         style={{ top: '112px', left: '112px' }}
       />
 

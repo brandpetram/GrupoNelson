@@ -81,7 +81,7 @@ const footerDataEs: FooterColumn[] = [
         title: 'Servicios',
         links: [
           { label: 'Baumex Constructora', href: '/constructora/baumex' },
-          { label: 'Built-to-Suit', href: '/constructora/build-to-suit' },
+          { label: 'A la medida', href: '/constructora/build-to-suit' },
           { label: 'Llave en Mano', href: '/constructora/llave-en-mano' },
           { label: 'Ingeniería y Diseño', href: '/constructora/diseno-e-ingenieria' },
           { label: 'Proyectos Especializados', href: '/constructora/proyectos-especializados' },

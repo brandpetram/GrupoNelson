@@ -95,7 +95,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Alpha component - Identity and offering summary */}
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP
-          descripcion="The family that established Mexicali's first maquiladora in 1967 remains actively involved today establishing long-term relationships measured in decades."
+          descripcion="The family that established Mexicali's first maquiladora in 1956 and opened its first industrial park in 1967 remains actively involved today, building long-term relationships measured in decades."
           lang="en"
         />
       </div>
@@ -104,18 +104,18 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       <RadiantHeader
         headline="Pioneers of the maquiladora industry in Mexicali since 1967."
         lead=""
-        sectionTitle="Two paths, one provider"
+        sectionTitle="Solutions designed for success"
         paragraphTitles={['Existing Buildings for Lease', 'Custom Build-to-Suit']}
         paragraphs={[
-          'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II. Three parks (Nelson I, Nelson II and El Vigía I) have a centralized fire suppression system. Nelson II also has a dedicated power line for KVAS energy access.',
+          'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings. Three parks (Nelson I, Nelson II and El Vigía I) have a centralized fire suppression system. Nelson II also has a dedicated power line for KVAS energy access.',
           'Our in-house construction team, with 30 years of experience and over 75 completed projects, designs and delivers under a single contract. Our largest project: a 550,000 ft² facility built to LEED standards and incorporating FM Global with reinforced seismic systems.',
         ]}
         statsHeading="Our Numbers"
         stats={[
-          { label: 'International Corporations', start: 20, end: 33 },
+          { label: 'International Corporations', start: 20, end: 30, prefix: '+' },
           { label: 'Years of Experience', start: 50, end: 60, prefix: '+' },
           { label: 'Industrial Parks', start: 2, end: 5 },
-          { label: 'Square Feet\nDeveloped', start: 2, end: 4, suffix: 'M' },
+          { label: 'Square Feet\nLeased', start: 2, end: 4, prefix: '+', suffix: 'M' },
         ]}
       />
 
@@ -142,8 +142,8 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
               <div className="-mt-1">
                   <MosaicoInvertidoConProps
                       bloque1Titulo="Custom-Built to Your Specs"
-                      bloque1Descripcion="Baumex, our in-house construction firm: 30 years, 75+ projects. Design, permits and construction under a single contract — no intermediaries"
-                      bloque1LinkTexto="About Baumex"
+                      bloque1Descripcion="Our in-house construction firm: 30 years, 75+ projects. Design, permits and construction under a single contract — no intermediaries"
+                      bloque1LinkTexto="MEET OUR CONSTRUCTION FIRM"
                       bloque1LinkHref="/construction/baumex"
                       bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg"
                       bloque2ImagenAlt="Build-to-suit industrial building construction in Mexicali"
@@ -169,7 +169,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               caption: 'Phase 1: Planning',
               title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">1</span><div>Site Selection in<br/>Mexicali and Consulting</div></div>,
-              description: 'We analyze your operational requirements — electrical capacity, clear height, surface area, technical specifications — and present the exact location your operation needs in Mexicali.',
+              description: 'We analyze your operational requirements — electrical capacity, clear height, surface area, technical specifications — and develop a comprehensive proposal tailored to your needs.',
               image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-3.jpg',
               tag: {
                 icon: <Compass className="w-5 h-5 text-gray-400" fill="currentColor" />,
@@ -203,7 +203,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               caption: 'Phase 3: Execution',
               title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">3</span><div>Build-to-Suit<br/>Construction</div></div>,
-              description: 'Our in-house construction firm executes your project from start to finish — from earthwork and foundations to electromechanical installations — meeting the quality standards demanded by companies like Gulfstream, DHL and Honeywell.',
+              description: 'Our in-house construction firm executes your project from start to finish — from earthwork and foundations to electromechanical installations — meeting world-class quality standards.',
               video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
               mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
               tag: {
@@ -214,14 +214,14 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'About build-to-suit', href: '/construction/build-to-suit', primary: true },
+                { text: 'Build-to-suit construction', href: '/construction/build-to-suit', primary: true },
                 { text: 'View portfolio', href: '/construction/portfolio', primary: false },
               ],
             },
             {
               caption: 'Phase 4: Opening',
               title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">4</span><div>Turnkey<br/>Delivery</div></div>,
-              description: 'You receive a facility ready to operate. Walk in, connect your equipment and start production. No intermediaries, no delays, no surprises.',
+              description: 'You receive a facility ready to operate. Walk in, connect your equipment and start production. No intermediaries, no delays.',
               video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
               mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg',
               tag: {
@@ -268,7 +268,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                 gradientTo: '#0ea5e9',
               },
               buttons: [
-                { text: 'About Baumex', href: '/construction/baumex', primary: true },
+                { text: 'Meet our construction firm', href: '/construction/baumex', primary: true },
                 { text: 'Contact us', href: '/contact', primary: false },
               ],
             },
@@ -293,7 +293,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               caption: 'Phase 8: Special Projects',
               title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">8</span><div>Specialized Industrial<br/>Construction in Mexicali</div></div>,
-              description: '95 meters without columns. Unprecedented. A vehicular bridge with European arch steel structure, foundations 18 meters deep in seismic zone 4, assembled over two Sundays to avoid closing the road. When Skyworks needed to connect two semiconductor plants over a boulevard and a federal drain, they came to us.',
+              description: 'We pulled off the seemingly impossible: a 95-meter clear span with no columns. We engineered and erected a steel arch bridge with deep foundations built to hold up in a seismic zone. When Skyworks needed to link two semiconductor plants across a boulevard and a federal drainage canal, they picked us.',
               image: '/contructora-mexicali/puente-skyworks-2.jpg',
               tag: {
                 icon: <Star className="w-5 h-5 text-gray-400" fill="currentColor" />,
@@ -326,21 +326,22 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Circles — 3 compressed pillars */}
       <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
         <CirculosConProps
-          circulo1Letra="60"
+          circulo1Letra="60+"
           circulo1Titulo="Years"
-          circulo1Descripcion="The family that established Mexicali's first maquiladora in 1967 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project — not a manager who rotates every two years."
-          circulo2Letra="33"
+          circulo1Descripcion="The family that established Mexicali's first maquiladora in 1956 and opened the city's first industrial park in 1967 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project."
+          circulo2Letra="30+"
           circulo2Titulo="Corporations"
           circulo2Descripcion="Gulfstream has been here for over 35 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
-          circulo3Letra="75"
+          circulo3Letra="75+"
           circulo3Titulo="Projects"
-          circulo3Descripcion="Baumex, our in-house construction firm, has 30 years and 75+ projects. A single contract from design to delivery. We build under ISN, LEED, FM Global and IBC standards — with over one million man-hours without fatal accidents."
+          circulo3Descripcion="Our in-house construction firm has 30 years of experience and more than 75 completed projects. A single contract from design to delivery. We build to ISN, LEED, FM Global and IBC standards — with over one million man-hours and no fatal accidents."
         />
       </div>
 
       {/* FAQs */}
       <div className="mt-32">
         <FaqSectionsThreeColumnsBPConProps
+          lang="en"
           titulo="Frequently Asked Questions"
           descripcion="Have an additional question? Contact us directly by"
           linkTexto="email"
@@ -359,22 +360,22 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 3,
               question: "Do you offer build-to-suit construction?",
-              answer: "Yes. Baumex, our in-house construction firm with 30 years and over 75 completed projects, designs and builds buildings to your exact requirements under a single contract — no intermediaries. We have built from 5,000 ft² to 550,000 ft².",
+              answer: "Yes. Our in-house construction firm, with 30 years and over 75 completed projects, designs and builds buildings to your exact requirements under a single contract — no intermediaries. We have built from 5,000 ft² to 550,000 ft².",
             },
             {
               id: 4,
               question: "What companies operate in your parks?",
-              answer: "33 international corporations, including Gulfstream (over 35 years), Honeywell (over 3 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
+              answer: "International corporations, including Gulfstream (over 35 years), Honeywell (over 3 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
             },
             {
               id: 5,
               question: "What certifications and standards do you meet?",
-              answer: "We build under the International Building Code (IBC), with demonstrated capability in LEED certification, FM Global, BRB seismic systems and NFPA standards. Baumex holds an ISN 'Recommended' rating by Honeywell.",
+              answer: "We build under the International Building Code (IBC), with demonstrated capability in LEED certification, FM Global, BRB seismic systems and NFPA standards.",
             },
             {
               id: 6,
               question: "How long has Grupo Nelson been in the industry?",
-              answer: "Over 60 years. We founded Mexicali's maquiladora industry in 1967. Three generations later, the founding family still operates personally — the owners handle every project directly.",
+              answer: "Over 60 years. We founded Mexicali's maquiladora industry in 1956. Three generations later, the founding family still operates personally — the owners handle every project directly.",
             },
           ]}
         />
@@ -383,29 +384,29 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Five Cards */}
       <div className="mt-32">
         <CincoCardsConProps
-          card1Titulo={<>Nelson II<br/>Industrial Park</>}
+          card1Titulo={<>El Vigia I<br/>Industrial Park</>}
           card1BotonTexto="View specifications"
-          card1BotonHref="/industrial-parks/nelson-ii"
-          card1ImagenSrc="/parque-industrial-nelson-2-en-mexicali.jpeg"
-          card1ImagenAlt="Nelson II Industrial Park in Mexicali"
+          card1BotonHref="/industrial-parks"
+          card1ImagenSrc="/parque-industrial-el-vigia-1-mexicali.jpg"
+          card1ImagenAlt="El Vigia I Industrial Park in Mexicali"
 
           card2Titulo={<>Nelson I<br/>Industrial Park</>}
-          card2BotonTexto="Learn more"
+          card2BotonTexto="View specifications"
           card2BotonHref="/industrial-parks"
           card2ImagenSrc="/parque-industrial-nelson-1-en-mexicali.jpeg"
           card2ImagenAlt="Nelson I Industrial Park in Mexicali"
 
-          card3Titulo={<>El Vigia I<br/>Industrial Park</>}
+          card3Titulo={<>El Vigia II<br/>Industrial Park</>}
           card3BotonTexto="View specifications"
           card3BotonHref="/industrial-parks"
-          card3ImagenSrc="/parque-industrial-el-vigia-1-mexicali.jpg"
-          card3ImagenAlt="El Vigia I Industrial Park in Mexicali"
+          card3ImagenSrc="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
+          card3ImagenAlt="El Vigia II Industrial Park in Mexicali"
 
-          card4Titulo={<>El Vigia II<br/>Industrial Park</>}
+          card4Titulo={<>Nelson II<br/>Industrial Park</>}
           card4BotonTexto="View specifications"
-          card4BotonHref="/industrial-parks"
-          card4ImagenSrc="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
-          card4ImagenAlt="El Vigia II Industrial Park in Mexicali"
+          card4BotonHref="/industrial-parks/nelson-ii"
+          card4ImagenSrc="/parque-industrial-nelson-2-en-mexicali.jpeg"
+          card4ImagenAlt="Nelson II Industrial Park in Mexicali"
 
           card5Titulo={<>Honeywell<br/>in Mexicali</>}
           card5BotonTexto="Learn more"
@@ -419,6 +420,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Virtual Tour 360° */}
       <VirtualTourBP
         tourId="hY5fjENu2"
+        sceneId="TYW_If4PeV"
         title="360° Virtual Tour"
         subtitle="Explore our facilities as if you were here."
         lang="en"

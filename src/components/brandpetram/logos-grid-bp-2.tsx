@@ -50,8 +50,8 @@ export function LogosGridBP2({
 }: LogosGridBP2Props) {
   const _tagline = tagline ?? (lang === 'en' ? 'Track Record' : 'Trayectoria')
   const _title = title ?? (lang === 'en'
-    ? '33 international corporations trust Grupo Nelson'
-    : '33 corporaciones internacionales confían en Grupo Nelson')
+    ? 'International corporations trust Grupo Nelson'
+    : 'Corporaciones internacionales confían en Grupo Nelson')
   const _paragraph = paragraph ?? (lang === 'en'
     ? (<>From <strong>Gulfstream</strong> to <strong>DHL</strong>, the world&apos;s most demanding companies operate in Grupo Nelson parks. Each one went through its own due diligence process. Each one signed.</>)
     : (<>Desde <strong>Gulfstream</strong> hasta <strong>DHL</strong>, las empresas más exigentes del mundo operan en parques de Grupo Nelson. Cada una pasó por su propio proceso de due diligence. Cada una firmó.</>)

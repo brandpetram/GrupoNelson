@@ -9,7 +9,7 @@ import { TypewriterClients } from '@/components/motion-plus/typewriter-clients'
 
 const text = {
   es: {
-    badge: 'Constructora in-house de Grupo Nelson',
+    badge: 'Constructora interna de Grupo Nelson',
     heading: <>La Constructora en Mexicali que sirve a<br /> </>,
     description: 'Empresas de clase mundial como Gulfstream llevan más de 20 años construyendo con nosotros. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 corporaciones internacionales eligen a Baumex proyecto tras proyecto. 4.5 millones de pies cuadrados construidos desde 1997. El 80% regresa.',
     cta: 'Conocer más',

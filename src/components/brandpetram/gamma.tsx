@@ -36,7 +36,7 @@ export function Gamma({ lang = 'es' }: { lang?: 'en' | 'es' }) {
                   className="mt-32 md:mt-20 1200:mt-24 1920:mt-32 md:w-[90%] 1024:w-[90%] 1200:w-[60%] 1280:w-[60%] 1920:w-[60%] md:aspect-[1/1.5] 1200:aspect-[5.3/3] relative overflow-visible">
                   {/* Div ABC centrado horizontalmente en el top, por detrás */}
                   <div
-                      className="absolute -translate-y-15 right-10 1200:left-1/2 1200:-translate-x-1/2 w-50 h-60 bg-gradient-to-tr from-orange-500 to-red-600 rounded-t-xs flex items-center justify-center -z-10">
+                      className="absolute -translate-y-15 right-10 1200:left-1/2 1200:-translate-x-1/2 w-50 h-60 bg-blue-600 rounded-t-xs flex items-center justify-center -z-10">
                   </div>
 
                   {/* Div pequeño centrado en la esquina superior izquierda, por delante */}
@@ -50,7 +50,7 @@ export function Gamma({ lang = 'es' }: { lang?: 'en' | 'es' }) {
                       />
                   </div>
                   <div
-                      className="md:absolute md:hidden 1200:block md:bottom-0 md:right-0 md:translate-x-1/2 md:translate-y-[9rem] 1366:translate-y-[2rem] 1280:w-90 1366:w-105 h-auto aspect-square bg-orange-500 to-red-500 bg-linear-to-b text-white rounded-xs shadow-xl z-10 overflow-visible flex flex-col justify-center p-10">
+                      className="md:absolute md:hidden 1200:block md:bottom-0 md:right-0 md:translate-x-1/2 md:translate-y-[9rem] 1366:translate-y-[2rem] 1280:w-90 1366:w-105 h-auto aspect-square bg-blue-600 text-white rounded-xs shadow-xl z-10 overflow-visible flex flex-col justify-center p-10">
                       <h2 className="text-3xl 1366:text-4xl 1728:text-5xl 1920:text-5xl font-extrabold leading-none tracking-tighter mb-4">{text.megawattsTitle}</h2>
                       <p className="text-sm 1366:text-base 1728:text-lg text-white/80 leading-relaxed">{text.megawattsDesc}</p>
                       <div className="absolute bottom-0 left-0 translate-y-1/2 pointer-events-none z-10">

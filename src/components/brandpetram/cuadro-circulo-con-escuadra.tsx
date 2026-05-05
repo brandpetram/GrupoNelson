@@ -37,7 +37,7 @@ export function CuadroCirculoConEscuadra() {
 
           {/* Círculo */}
           <div
-            className="-translate-30 360:-translate-20 md:-translate-10 1200:translate-0 size-70 md:size-90 1024:size-90 1200:size-85 1280:size-90 1366:size-100 1920:size-120 rounded-full bg-linear-to-b from-orange-600 to-red-700 flex flex-col items-center justify-center p-8"
+            className="-translate-30 360:-translate-20 md:-translate-10 1200:translate-0 size-70 md:size-90 1024:size-90 1200:size-85 1280:size-90 1366:size-100 1920:size-120 rounded-full bg-blue-600 flex flex-col items-center justify-center p-8"
           >
             <div className="text-4xl md:text-6xl 1920:text-7xl font-black text-white mb-6">
               360<span className="text-2xl md:text-xl">°</span>

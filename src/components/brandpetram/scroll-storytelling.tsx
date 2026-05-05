@@ -151,9 +151,9 @@ function VideoPlayer({
 const defaultItems: ContentItem[] = [
   {
     caption: 'Fase 1: Planificación',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">1</span><div>Elección de Sitio en <br/>Méxicalí y Consultoría</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">1</span><div>Elección de Sitio en <br/>Mexicali y Consultoría</div></div>,
     description:
-      'Analizamos sus requerimientos operativos — capacidad eléctrica, altura de nave, superficie, especificaciones técnicas — y le presentamos la ubicación exacta que su operación necesita en Mexicali.',
+      'Analizamos sus requerimientos operativos — capacidad eléctrica, altura de nave, superficie, especificaciones técnicas — y les desarrollamos una propuesta integral acorde a sus necesidades.',
     image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-3.jpg',
     tag: {
       icon: <Compass className="w-5 h-5 text-gray-400" fill="currentColor" />,
@@ -187,9 +187,9 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 3: Ejecución',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">3</span><div>Construcción<br/>Build-to-Suit</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">3</span><div>Construcción<br/>a la medida</div></div>,
     description:
-      'Nuestra constructora interna ejecuta su proyecto de principio a fin — desde movimiento de tierras y cimentación hasta instalaciones electromecánicas — con los estándares de calidad que exigen empresas como Gulfstream, DHL y Honeywell.',
+      'Nuestra constructora interna ejecuta su proyecto de principio a fin — desde movimiento de tierras y cimentación hasta instalaciones electromecánicas — con los estándares de calidad que exigen las empresas más demandantes.',
     video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
     mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg',
     tag: {
@@ -200,15 +200,15 @@ const defaultItems: ContentItem[] = [
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Conocer build-to-suit', href: '/constructora/build-to-suit', primary: true },
+      { text: 'Construcción a la medida', href: '/constructora/build-to-suit', primary: true },
       { text: 'Ver portafolio', href: '/constructora/portafolio', primary: false },
     ],
   },
   {
     caption: 'Fase 4: Apertura',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">4</span><div>Entrega Turnkey <br/> Llave en Mano</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">4</span><div>Entrega <br/> Llave en Mano</div></div>,
     description:
-      'Usted recibe una instalación lista para operar. Entra, conecta sus equipos y arranca producción. Sin intermediarios, sin retrasos, sin sorpresas.',
+      'Usted recibe una instalación lista para operar. Entra, conecta sus equipos y arranca producción. Sin intermediarios, sin retrasos.',
     video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
     mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg',
     tag: {
@@ -257,7 +257,7 @@ const defaultItems: ContentItem[] = [
       gradientTo: '#0ea5e9',
     },
     buttons: [
-      { text: 'Conocer Baumex', href: '/constructora/baumex', primary: true },
+      { text: 'Conoce nuestra Constructora', href: '/constructora/baumex', primary: true },
       { text: 'Contactar', href: '/contacto', primary: false },
     ],
   },
@@ -265,7 +265,7 @@ const defaultItems: ContentItem[] = [
     caption: 'Fase 7: Crecimiento',
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">7</span><div>Crecimiento y<br/>Expansión</div></div>,
     description:
-      'Cuando su operación crece, nosotros crecemos con usted. Clientes que iniciaron en 5,000 pies cuadrados hoy operan en más de 400,000 — sin cambiar de socio. Más de seis décadas construyendo relaciones que se miden en décadas, no en contratos.',
+      'Cuando tu operación crece, nosotros crecemos contigo. Clientes que iniciaron con 5,000 pies cuadrados hoy operan en más de 400,000 — sin cambiar de socio. Más de seis décadas construyendo relaciones que se miden en décadas, no en contratos.',
     video: '/scroll-storytelling/crecimiento.mp4',
     mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
     tag: {
@@ -284,7 +284,7 @@ const defaultItems: ContentItem[] = [
     caption: 'Fase 8: Proyectos Especiales',
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">8</span><div>Construcciones Industriales<br/>Especiales en Mexicali</div></div>,
     description:
-      '95 metros sin columnas. Sin precedente. Un puente vehicular de estructura metálica con diseño europeo de arco, cimentación a 18 metros de profundidad en zona sísmica 4, montado en dos domingos para no cerrar la vialidad. Cuando Skyworks necesitó conectar dos plantas de semiconductores sobre un boulevard y un dren federal, nos buscaron a nosotros.',
+      'Logramos lo que parecía imposible: 95 metros de claro sin columnas. Diseñamos y montamos un puente de estructura metálica con diseño europeo de arco y cimentación profunda para garantizar estabilidad en zona sísmica. Cuando Skyworks necesitó conectar dos plantas de semiconductores atravesando un bulevar y un dren federal, nos eligieron.',
     image: '/contructora-mexicali/puente-skyworks-2.jpg',
     tag: {
       icon: <Star className="w-5 h-5 text-gray-400" fill="currentColor" />,

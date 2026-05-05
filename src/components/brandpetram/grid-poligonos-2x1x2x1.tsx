@@ -84,7 +84,7 @@ export function GridPoligonos2x1x2x1() {
 
           {/* Texto abajo izquierda - cuadrado */}
           <div className="relative aspect-square">
-            <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-gradient-to-br from-orange-600 to-orange-500 rounded-none">
+            <div className="group relative flex items-center justify-center w-full h-full overflow-hidden bg-blue-600 rounded-none">
                 <p className="p-6 w-full 1728:w-full text-white font-bold tracking-tighter leading-none text-center break-words transition-transform duration-300 group-hover:scale-110 text-md 393:text-md 430:text-xl 768:text-xl 834:text-3xl 1024:text-3xl 1200:text-3xl 1280:text-xl 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-3xl 1920:text-3xl">
                 Automatización
               </p>

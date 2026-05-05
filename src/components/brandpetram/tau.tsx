@@ -10,7 +10,7 @@ const text = {
     cell1Desc: <>6 departamentos <br /> bajo un solo techo</>,
     cell1Href: '/constructora/diseno-e-ingenieria',
     cell3Label: 'Servicios',
-    cell3Title: <>Build-to- <br className="hidden md:block" /> Suit</>,
+    cell3Title: <>A la <br className="hidden md:block" /> medida</>,
     cell3Desc: <>Naves diseñadas <br /> a tu medida exacta</>,
     cell3Href: '/constructora/build-to-suit',
     cell5Label: 'Servicios',
@@ -120,7 +120,7 @@ export default function Tau({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             </div>
           </div>
 
-          {/* Celda 3: Build-to-Suit */}
+          {/* Celda 3: A la medida */}
           <a href={t.cell3Href} className="aspect-square relative bg-linear-to-br from-blue-600 to-blue-700 text-white group">
             <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer transition-opacity group-hover:opacity-80">
               <h2 className="text-center mb-3 uppercase text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-light leading-none">

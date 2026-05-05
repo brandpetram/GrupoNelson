@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/experiencia/excelencia-operativa',
   title: 'Excelencia Operativa',
-  description: '75 proyectos completados en 28 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. Baumex, la constructora in-house de Grupo Nelson.',
+  description: '75 proyectos completados en 28 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. Baumex, la constructora interna de Grupo Nelson.',
 })
 
 export default function ExcelenciaOperativaPage() {
@@ -143,7 +143,7 @@ export default function ExcelenciaOperativaPage() {
         <TestimonialExcelencia />
         <Separator className="h-24" />
 
-        {/* Capacidades in-house + Certificaciones */}
+        {/* Capacidades internas + Certificaciones */}
         <CapacidadesInhouse />
 
         {/* Documentación auditable — submittals, minutas, EPGC */}

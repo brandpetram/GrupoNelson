@@ -23,17 +23,17 @@ interface RadiantHeaderProps {
 }
 
 const defaultStatsEs: RadiantHeaderStat[] = [
-  { label: 'Corporaciones Internacionales', start: 20, end: 33 },
+  { label: 'Corporaciones Internacionales', start: 20, end: 30, prefix: '+' },
   { label: 'Años de Experiencia', start: 50, end: 60, prefix: '+' },
   { label: 'Parques Industriales', start: 2, end: 5 },
-  { label: 'Pies Cuadrados\nDesarrollados', start: 2, end: 4, suffix: 'M' },
+  { label: 'Pies Cuadrados\nArrendados', start: 2, end: 4, prefix: '+', suffix: 'M' },
 ]
 
 const defaultStatsEn: RadiantHeaderStat[] = [
-  { label: 'International Corporations', start: 20, end: 33 },
+  { label: 'International Corporations', start: 20, end: 30, prefix: '+' },
   { label: 'Years of Experience', start: 50, end: 60, prefix: '+' },
   { label: 'Industrial Parks', start: 2, end: 5 },
-  { label: 'Square Feet\nDeveloped', start: 2, end: 4, suffix: 'M' },
+  { label: 'Square Feet\nLeased', start: 2, end: 4, prefix: '+', suffix: 'M' },
 ]
 
 export function Header({
@@ -50,17 +50,17 @@ export function Header({
     ? 'Pioneers of the maquiladora industry in Mexicali since 1967.'
     : 'Los pioneros de la industria maquiladora de Mexicali desde 1967.')
   const _lead = lead ?? (lang === 'en'
-    ? 'Gulfstream has been with us for over 35 years. Honeywell for over 3 decades. 33 international corporations have already chosen to operate in our parks — long-term relationships measured in decades.'
-    : 'Gulfstream lleva más de 35 años con nosotros. Honeywell más de 3 décadas. 33 corporaciones internacionales ya eligieron operar en nuestros parques — relaciones de largo plazo que se miden en décadas.')
-  const _sectionTitle = sectionTitle ?? (lang === 'en' ? 'Two paths, one provider' : 'Dos caminos, un solo proveedor')
+    ? 'International corporations have already chosen to operate in our parks — long-term relationships measured in decades.'
+    : 'Corporaciones internacionales ya eligieron operar en nuestros parques — relaciones de largo plazo que se miden en décadas.')
+  const _sectionTitle = sectionTitle ?? (lang === 'en' ? 'Solutions designed for success' : 'Soluciones diseñadas para el éxito')
   const _paragraphs = paragraphs ?? (lang === 'en'
     ? [
-        'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings — from El Vigia to Nelson II. Three parks (Nelson I, Nelson II and El Vigía I) have a centralized fire suppression system. Nelson II also has a dedicated power line for KVAS energy access.',
+        'If you need a building ready to operate, we have 5 industrial parks in Mexicali with available buildings. Three parks (Nelson I, Nelson II and El Vigía I) have a centralized fire suppression system. Nelson II also has a dedicated power line for KVAS energy access.',
         'Our in-house construction team, with 30 years of experience and over 75 completed projects, designs and delivers under a single contract. Our largest project: a 550,000 ft² facility built to LEED standards and incorporating FM Global with reinforced seismic systems.',
       ] as [string, string]
     : [
-        'Si necesitas una nave lista para operar, tenemos 5 parques industriales en Mexicali con naves disponibles — desde El Vigía hasta Nelson II. Tres parques (Nelson I, Nelson II y El Vigía I) cuentan con sistema contraincendio centralizado. Nelson II además tiene línea dedicada para acceso a energía KVAS.',
-        'Nuestro equipo de construcción in-house, con 30 años de experiencia y más de 75 proyectos completados, diseña y entrega bajo un solo contrato. Nuestro proyecto más grande: una nave de 550,000 ft² construida bajo estándares LEED e incorporando FM Global con sistemas sísmicos reforzados.',
+        'Si necesitas una nave lista para operar, tenemos 5 parques industriales en Mexicali con naves disponibles. Tres parques (Nelson I, Nelson II y El Vigía I) cuentan con sistema contraincendio centralizado. Nelson II además tiene línea dedicada para acceso a energía KVAS.',
+        'Nuestro equipo de construcción interno, con 30 años de experiencia y más de 75 proyectos completados, diseña y entrega bajo un solo contrato. Nuestro proyecto más grande: una nave de 550,000 ft² construida bajo estándares LEED e incorporando FM Global con sistemas sísmicos reforzados.',
       ] as [string, string])
   const _paragraphTitles = paragraphTitles ?? (lang === 'en'
     ? ['Existing Buildings for Lease', 'Custom Build-to-Suit']

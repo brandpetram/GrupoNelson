@@ -97,14 +97,14 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Componente Alpha - Resumen de identidad y oferta */}
       <div className="container mx-auto 1200:px-4 py-16 overflow-hidden">
         <AlphaBP
-          descripcion="La familia que instaló la primera maquiladora de Mexicali en 1967 sigue activamente involucrada hoy, estableciendo relaciones de largo plazo que se miden en décadas."
+          descripcion="La familia que instaló la primera maquiladora de Mexicali en 1956 y en 1967 establece su primer Parque Industrial, sigue activamente involucrada hoy, estableciendo relaciones de largo plazo que se miden en décadas."
         />
       </div>
 
       {/* Sección sobre nosotros con números animados */}
       <RadiantHeader />
 
-      {/* Dos caminos: renta + build-to-suit */}
+      {/* Dos caminos: renta + a la medida */}
       <div className={'w-full p-10 mx-auto mt-32 relative'}>
               <Mosaico2ConProps
                   bloque1Titulo="Naves Disponibles"
@@ -123,15 +123,15 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                   imagenDerechaAlt="Parque Industrial Nelson II en Mexicali"
               />
 
-              {/* Build-to-suit con Baumex */}
+              {/* Construcción a la medida con Baumex */}
               <div className="-mt-1">
                   <MosaicoInvertidoConProps
                       bloque1Titulo="Construcción a tu Medida"
-                      bloque1Descripcion="Baumex, nuestra constructora in-house: 30 años, 75+ proyectos. Diseño, permisos y construcción bajo un solo contrato — sin intermediarios"
-                      bloque1LinkTexto="Conocer Baumex"
+                      bloque1Descripcion="Nuestra constructora interna: 30 años, 75+ proyectos. Diseño, permisos y construcción bajo un solo contrato — sin intermediarios"
+                      bloque1LinkTexto="CONOCE NUESTRA CONSTRUCTORA"
                       bloque1LinkHref="/constructora/baumex"
                       bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-254.jpg"
-                      bloque2ImagenAlt="Construcción build-to-suit de nave industrial en Mexicali"
+                      bloque2ImagenAlt="Construcción a la medida de nave industrial en Mexicali"
                       bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
                       bloque3ImagenAlt="Construcción de nave industrial a medida por Baumex"
                       bloque4Titulo="¿Necesitas algo a medida?"
@@ -139,7 +139,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                       bloque4LinkTexto="Solicitar proyecto"
                       bloque4LinkHref="/contacto"
                       imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
-                      imagenIzquierdaAlt="Nave industrial build-to-suit construida por Baumex en Mexicali"
+                      imagenIzquierdaAlt="Nave industrial a la medida construida por Baumex en Mexicali"
                   />
               </div>
           </div>
@@ -166,21 +166,22 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Círculos — 3 pilares comprimidos */}
       <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
         <CirculosConProps
-          circulo1Letra="60"
+          circulo1Letra="60+"
           circulo1Titulo="Años"
-          circulo1Descripcion="La familia que instaló la primera maquiladora de Mexicali en 1967 sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto — no un gerente que rota cada dos años."
-          circulo2Letra="33"
+          circulo1Descripcion="La familia que instaló la primera maquiladora en Mexicali en 1956 y desarrolló el primer Parque Industrial en 1967, sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto."
+          circulo2Letra="30+"
           circulo2Titulo="Corporaciones"
           circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
-          circulo3Letra="75"
+          circulo3Letra="75+"
           circulo3Titulo="Proyectos"
-          circulo3Descripcion="Baumex, nuestra constructora in-house, lleva 30 años y 75+ proyectos. Un solo contrato de diseño a entrega. Construimos bajo estándares ISN, LEED, FM Global e IBC — con más de un millón de horas hombre sin accidentes fatales."
+          circulo3Descripcion="Nuestra constructora interna lleva 30 años con más de 75 proyectos. Un solo contrato de diseño a entrega. Construimos bajo estándares ISN, LEED, FM Global e IBC — con más de un millón de horas hombre sin accidentes fatales."
         />
       </div>
 
       {/* FAQs */}
       <div className="mt-32">
         <FaqSectionsThreeColumnsBPConProps
+          lang="es"
           titulo="Preguntas Frecuentes"
           descripcion="¿Tienes alguna pregunta adicional? Contáctanos directamente por"
           linkTexto="correo electrónico"
@@ -189,7 +190,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 1,
               question: "¿Qué tipos de naves industriales ofrecen?",
-              answer: "Naves en renta y construcción build-to-suit en nuestros 5 parques industriales de Mexicali. Desde espacios renovados en El Vigía hasta naves de clase mundial en Nelson II, con alturas libres de hasta 28 ft y cumplimiento de códigos IBC.",
+              answer: "Naves en renta y construcción a la medida en nuestros 5 parques industriales de Mexicali. Desde espacios renovados en El Vigía hasta naves de clase mundial en Nelson II, con alturas libres de hasta 28 ft y cumplimiento de códigos IBC.",
             },
             {
               id: 2,
@@ -198,23 +199,23 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             },
             {
               id: 3,
-              question: "¿Ofrecen construcción build-to-suit?",
-              answer: "Sí. Baumex, nuestra constructora in-house con 30 años y más de 75 proyectos completados, diseña y construye naves a la medida exacta de sus requerimientos bajo un solo contrato — sin intermediarios. Hemos construido desde 5,000 ft² hasta 550,000 ft².",
+              question: "¿Ofrecen construcción a la medida?",
+              answer: "Sí. Nuestra constructora interna, con 30 años y más de 75 proyectos completados, diseña y construye naves a la medida exacta de sus requerimientos bajo un solo contrato — sin intermediarios. Hemos construido desde 5,000 ft² hasta 550,000 ft².",
             },
             {
               id: 4,
               question: "¿Qué empresas operan en sus parques?",
-              answer: "33 corporaciones internacionales, incluyendo Gulfstream (más de 35 años), Honeywell (más de 3 décadas), Rheem, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. Relaciones de largo plazo que se miden en décadas, no en contratos.",
+              answer: "Corporaciones internacionales, incluyendo Gulfstream (más de 35 años), Honeywell (más de 3 décadas), Rheem, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. Relaciones de largo plazo que se miden en décadas, no en contratos.",
             },
             {
               id: 5,
               question: "¿Qué certificaciones y estándares cumplen?",
-              answer: "Construimos bajo International Building Code (IBC), con capacidad demostrada en certificación LEED, FM Global, sistemas antisísmicos BRB y estándares NFPA. Baumex tiene calificación ISN 'Recomendado' por Honeywell.",
+              answer: "Construimos bajo International Building Code (IBC), con capacidad demostrada en certificación LEED, FM Global, sistemas antisísmicos BRB y estándares NFPA.",
             },
             {
               id: 6,
               question: "¿Cuánto tiempo lleva Grupo Nelson en la industria?",
-              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1967. Tres generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
+              answer: "Más de 60 años. Fundamos la industria maquiladora de Mexicali en 1956. Tres generaciones después, la familia fundadora sigue operando personalmente — los dueños atienden cada proyecto directamente.",
             },
           ]}
         />
@@ -223,29 +224,29 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       {/* Cinco Cards */}
       <div className="mt-32">
         <CincoCardsConProps
-          card1Titulo={<>Parque Industrial<br/>Nelson II</>}
+          card1Titulo={<>Parque Industrial<br/>El Vigía I</>}
           card1BotonTexto="Ver especificaciones"
-          card1BotonHref="/parques-industriales-mexicali/nelson-ii"
-          card1ImagenSrc="/parque-industrial-nelson-2-en-mexicali.jpeg"
-          card1ImagenAlt="Parque Industrial Nelson II en Mexicali"
+          card1BotonHref="/parques-industriales-mexicali/vigia-i"
+          card1ImagenSrc="/parque-industrial-el-vigia-1-mexicali.jpg"
+          card1ImagenAlt="Parque Industrial El Vigía I en Mexicali"
 
           card2Titulo={<>Parque Industrial<br/>Nelson I</>}
-          card2BotonTexto="Ver más"
+          card2BotonTexto="Ver especificaciones"
           card2BotonHref="/parques-industriales-mexicali/nelson-i"
           card2ImagenSrc="/parque-industrial-nelson-1-en-mexicali.jpeg"
           card2ImagenAlt="Parque Industrial Nelson I en Mexicali"
 
-          card3Titulo={<>Parque Industrial<br/>El Vigía I</>}
+          card3Titulo={<>Parque Industrial<br/>El Vigía II</>}
           card3BotonTexto="Ver especificaciones"
-          card3BotonHref="/parques-industriales-mexicali/vigia-i"
-          card3ImagenSrc="/parque-industrial-el-vigia-1-mexicali.jpg"
-          card3ImagenAlt="Parque Industrial El Vigía I en Mexicali"
+          card3BotonHref="/parques-industriales-mexicali/vigia-ii"
+          card3ImagenSrc="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
+          card3ImagenAlt="Parque Industrial El Vigía II en Mexicali"
 
-          card4Titulo={<>Parque Industrial<br/>El Vigía II</>}
+          card4Titulo={<>Parque Industrial<br/>Nelson II</>}
           card4BotonTexto="Ver especificaciones"
-          card4BotonHref="/parques-industriales-mexicali/vigia-ii"
-          card4ImagenSrc="/parque-industrial-el-vigia-2-en-mexicali.jpeg"
-          card4ImagenAlt="Parque Industrial El Vigía II en Mexicali"
+          card4BotonHref="/parques-industriales-mexicali/nelson-ii"
+          card4ImagenSrc="/parque-industrial-nelson-2-en-mexicali.jpeg"
+          card4ImagenAlt="Parque Industrial Nelson II en Mexicali"
 
           card5Titulo={<>Honeywell<br/>en Mexicali</>}
           card5BotonTexto="Conocer más"
@@ -257,7 +258,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       </div>
 
       {/* Tour Virtual 360° */}
-      <VirtualTourBP tourId="hY5fjENu2" />
+      <VirtualTourBP tourId="hY5fjENu2" sceneId="TYW_If4PeV" />
 
       {/* TODO: Migrar KeynoteHero */}
       {/* <section id="screencasts" className="min-h-screen py-20">

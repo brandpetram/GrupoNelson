@@ -337,7 +337,7 @@
   --color-card-foreground: var(--color-zinc-950);
   --color-popover: var(--color-white);
   --color-popover-foreground: var(--color-zinc-950);
-  --color-primary: var(--color-orange-600);
+  --color-primary: var(--color-blue-600);
   --color-primary-foreground: var(--color-white);
   --color-secondary: var(--color-sky-100);
   --color-secondary-foreground: var(--color-sky-600);
@@ -348,7 +348,7 @@
   --color-destructive: var(--color-red-600);
   --color-border: var(--color-zinc-200);
   --color-input: var(--color-zinc-200);
-  --color-ring: var(--color-orange-600);
+  --color-ring: var(--color-blue-600);
 }
 
 /* ============================================

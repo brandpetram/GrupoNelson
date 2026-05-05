@@ -18,9 +18,9 @@ const team = [
   },
   {
     name: 'Dirección de Constructora',
-    role: 'Baumex — construcción build-to-suit',
+    role: 'Baumex — construcción a la medida',
     description:
-      'Baumex, la constructora in-house, ejecuta cada proyecto de principio a fin. Las decisiones de ingeniería y presupuesto se validan en consejo ejecutivo — tu obra no depende de un solo gerente de proyecto.',
+      'Baumex, la constructora interna, ejecuta cada proyecto de principio a fin. Las decisiones de ingeniería y presupuesto se validan en consejo ejecutivo — tu obra no depende de un solo gerente de proyecto.',
   },
   {
     name: 'Dirección Administrativa',

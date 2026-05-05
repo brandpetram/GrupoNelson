@@ -40,7 +40,7 @@ export function BigNumberConProps({
           >
             {/* +200 */}
             <h2
-              className="text-right text-7xl md:text-[6rem] 1200:text-[10rem] 1366:text-[12rem] font-black leading-none tracking-tighter bg-linear-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+              className="text-right text-7xl md:text-[6rem] 1200:text-[10rem] 1366:text-[12rem] font-black leading-none tracking-tighter bg-linear-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent"
             >
               {number}
             </h2>
@@ -93,7 +93,7 @@ export function BigNumberLeft({
           >
             {/* +200 */}
             <h2
-              className="text-left text-7xl md:text-[10rem] 1200:text-[15rem] 1366:text-[17rem] font-black leading-none tracking-tighter bg-linear-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+              className="text-left text-7xl md:text-[10rem] 1200:text-[15rem] 1366:text-[17rem] font-black leading-none tracking-tighter bg-linear-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent"
             >
               {number}
             </h2>

@@ -18,7 +18,7 @@ export function TresCards() {
         {/* Card 1 - Video */}
         <div className="flex-1 flex flex-col">
           {/* Área de texto - altura fija para alineación */}
-          <div className="bg-gradient-to-br from-orange-600 to-red-700 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
+          <div className="bg-blue-600 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
               Lorem de<br/>Ipsum Consectetur
             </h3>
@@ -48,7 +48,7 @@ export function TresCards() {
         {/* Card 2 - Imagen */}
         <div className="flex-1 flex flex-col">
           {/* Área de texto - altura fija para alineación */}
-          <div className="bg-gradient-to-br from-orange-600 to-red-700 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
+          <div className="bg-blue-600 p-8 md:p-10 lg:p-12 flex flex-col justify-end h-[230px] 1280:h-[280px] rounded-t-xs">
             <h3 className="text-3xl md:text-lg 1024:text-lg 1200:text-2xl 1280:text-2xl 1366:text-3xl 1440:text-3xl 1536:text-3xl 1728:text-4xl 1920:text-4xl font-normal text-white leading-none mb-8">
               Lorem<br/>Ipsum Dolor<br/>Sit Amet
             </h3>

@@ -113,7 +113,7 @@ export function MosaicoInvertidoConProps({
           </motion.div>
 
           {/* Bloque 2: Imagen (columna derecha, fila superior) */}
-          <div className="aspect-square bg-linear-to-r from-orange-600 to-red-600 p-6 md:p-8 1024:p-10 flex items-center justify-center relative">
+          <div className="aspect-square bg-blue-600 p-6 md:p-8 1024:p-10 flex items-center justify-center relative">
             {/* Triángulo SVG apuntando a la derecha */}
             <svg
               className="absolute left-0 top-1/4 -translate-y-1/2 w-4 h-8 md:w-6 md:h-12 1024:w-8 1024:h-16"
@@ -145,7 +145,7 @@ export function MosaicoInvertidoConProps({
             whileHover={{ scale: 0.95 }}
             whileTap={{ scale: 0.90 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="aspect-square bg-linear-to-r from-orange-600 to-red-600 text-white p-6 md:p-8 1024:p-10 flex flex-col justify-center items-center text-center will-change-transform"
+            className="aspect-square bg-blue-600 text-white p-6 md:p-8 1024:p-10 flex flex-col justify-center items-center text-center will-change-transform"
           >
             <h3 className="text-base md:text-lg 1024:text-sm 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg font-bold tracking-wide uppercase 1200:leading-none">
               {bloque4Titulo}

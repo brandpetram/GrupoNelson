@@ -21,7 +21,7 @@ export function FeatureSection8() {
               Es la familia que creó la industria maquiladora de Mexicali en 1967 y sigue operando personalmente
               cada parque, cada contrato y cada proyecto de construcción. Tres hechos verificables
               que ningún competidor en Mexicali puede replicar simultáneamente: 60 años de trayectoria,
-              operación directa por la familia fundadora, y constructora in-house con 28 años
+              operación directa por la familia fundadora, y constructora interna con 28 años
               y 75 proyectos completados.
             </p>
           </div>
