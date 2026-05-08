@@ -54,6 +54,12 @@ import {
 import { useMedia } from '@/hooks/use-media';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
+import {
+  findLongestPrefixHref,
+  isCategoryActive,
+  isHrefExact,
+  normalizeNavPath,
+} from '@/lib/nav-active';
 
 // === Data imports ===
 import * as navEs from '@/data/nav/navigation';
@@ -226,18 +232,46 @@ interface ListItemProps {
   title: string;
   description?: string;
   children?: React.ReactNode;
+  pathname: string;
+  longestActiveHref: string | null;
 }
 
-function ListItem({ title, description, children, href }: ListItemProps) {
+function ListItem({ title, description, children, href, pathname, longestActiveHref }: ListItemProps) {
+  const isExactCurrent = isHrefExact(pathname, href);
+  const isVisuallyActive =
+    longestActiveHref !== null &&
+    normalizeNavPath(href) === normalizeNavPath(longestActiveHref);
+
   return (
     <li>
       <NavigationMenuLink asChild>
-        <Link href={href} className="grid grid-cols-[auto_1fr] gap-3">
-          <div className="bg-muted/50 ring-foreground/10 flex size-10 items-center justify-center rounded-lg ring-1">
+        <Link
+          href={href}
+          aria-current={isExactCurrent ? 'page' : undefined}
+          className={cn(
+            'grid grid-cols-[auto_1fr] gap-3 rounded-md px-1 py-1 -mx-1 transition-colors',
+            isVisuallyActive && 'bg-primary/5 ring-1 ring-primary/15'
+          )}
+        >
+          <div
+            className={cn(
+              'flex size-10 items-center justify-center rounded-lg ring-1',
+              isVisuallyActive
+                ? 'bg-primary/10 ring-primary/25'
+                : 'bg-muted/50 ring-foreground/10'
+            )}
+          >
             {children}
           </div>
           <div className="space-y-0.5">
-            <div className="text-foreground text-sm font-medium">{title}</div>
+            <div
+              className={cn(
+                'text-sm font-medium',
+                isVisuallyActive ? 'text-primary' : 'text-foreground'
+              )}
+            >
+              {title}
+            </div>
             {description && (
               <p className="text-muted-foreground line-clamp-2 text-xs leading-none">{description}</p>
             )}
@@ -444,6 +478,7 @@ function MobileMenuLink({
   href,
   closeMenu,
   pathname,
+  longestActiveHref,
   icon,
   name,
   description,
@@ -451,24 +486,28 @@ function MobileMenuLink({
   href: string;
   closeMenu: () => void;
   pathname: string;
+  longestActiveHref: string | null;
   icon?: React.ReactNode;
   name: string;
   description?: string;
 }) {
-  const isCurrent = href === pathname || href === `${pathname}/`;
+  const isExactCurrent = isHrefExact(pathname, href);
+  const isVisuallyActive =
+    longestActiveHref !== null &&
+    normalizeNavPath(href) === normalizeNavPath(longestActiveHref);
 
   return (
     <Link
       href={href}
-      aria-current={isCurrent ? 'page' : undefined}
+      aria-current={isExactCurrent ? 'page' : undefined}
       onClick={() => {
-        if (isCurrent) {
+        if (isExactCurrent) {
           closeMenu();
         }
       }}
       className={cn(
         'flex items-center gap-3 rounded-lg px-4 py-3 transition-colors',
-        isCurrent
+        isVisuallyActive
           ? 'bg-primary/10 text-primary'
           : 'hover:bg-muted'
       )}
@@ -478,7 +517,7 @@ function MobileMenuLink({
           aria-hidden
           className={cn(
             'flex items-center justify-center *:size-5',
-            isCurrent ? 'text-primary' : 'text-muted-foreground'
+            isVisuallyActive ? 'text-primary' : 'text-muted-foreground'
           )}
         >
           {icon}
@@ -502,8 +541,20 @@ const MobileMenu = ({ closeMenu, lang = 'es', pathname }: { closeMenu: () => voi
   const mobileMenuData = buildMobileMenuData(lang);
   const [activeSubmenu, setActiveSubmenu] = React.useState<string | null>(null);
 
+  // Por sección: longest-prefix entre los hrefs renderizados (espejo del cálculo desktop).
+  // Nota: a diferencia de desktop, esto no incluye CATEGORY_BASE_PATHS — ver edge case
+  // documentado en el plan (asimetría desktop/móvil aceptada).
+  const sectionStates = mobileMenuData.map((section) => {
+    const sectionHrefs = section.categories.flatMap((c) => c.links.map((l) => l.href));
+    const longestHref = findLongestPrefixHref(pathname, sectionHrefs);
+    return { name: section.name, longestHref, isActive: longestHref !== null };
+  });
+
   const activeSection = activeSubmenu
     ? mobileMenuData.find((section) => section.name === activeSubmenu)
+    : null;
+  const activeSectionState = activeSubmenu
+    ? sectionStates.find((s) => s.name === activeSubmenu) ?? null
     : null;
 
   return (
@@ -516,17 +567,28 @@ const MobileMenu = ({ closeMenu, lang = 'es', pathname }: { closeMenu: () => voi
         )}
       >
         <ul className="px-2 py-4">
-          {mobileMenuData.map((section, index) => (
-            <li key={index}>
-              <button
-                onClick={() => setActiveSubmenu(section.name)}
-                className="flex w-full items-center justify-between rounded-lg px-4 py-4 text-lg font-medium hover:bg-muted transition-colors"
-              >
-                <span>{section.name}</span>
-                <ChevronRight className="size-5 text-muted-foreground" />
-              </button>
-            </li>
-          ))}
+          {mobileMenuData.map((section, index) => {
+            const isActive = sectionStates[index]?.isActive ?? false;
+            return (
+              <li key={index}>
+                <button
+                  onClick={() => setActiveSubmenu(section.name)}
+                  className={cn(
+                    'flex w-full items-center justify-between rounded-lg px-4 py-4 text-lg font-medium transition-colors',
+                    isActive ? 'text-primary bg-primary/5' : 'hover:bg-muted'
+                  )}
+                >
+                  <span className="flex items-center gap-2">
+                    {isActive && (
+                      <span aria-hidden className="size-1.5 rounded-full bg-primary" />
+                    )}
+                    {section.name}
+                  </span>
+                  <ChevronRight className={cn('size-5', isActive ? 'text-primary' : 'text-muted-foreground')} />
+                </button>
+              </li>
+            );
+          })}
         </ul>
 
         {/* CTA Button and Language Flags at bottom */}
@@ -592,6 +654,7 @@ const MobileMenu = ({ closeMenu, lang = 'es', pathname }: { closeMenu: () => voi
                       href={link.href}
                       closeMenu={closeMenu}
                       pathname={pathname}
+                      longestActiveHref={activeSectionState?.longestHref ?? null}
                       icon={link.icon}
                       name={link.name}
                       description={link.description}
@@ -610,6 +673,7 @@ const MobileMenu = ({ closeMenu, lang = 'es', pathname }: { closeMenu: () => voi
 // === Desktop Navigation Menu ===
 const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light'; lang?: Lang }) => {
   const isDarkVariant = variant === 'dark';
+  const pathname = usePathname() ?? '/';
   const {
     whyNelsonLinks, parksMexicaliLinks, parksInventoryLinks,
     solutionsServicesLinks, solutionsIndustryLinks,
@@ -620,6 +684,41 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
   const navLabels = lang === 'en'
     ? { nosotros: 'About', parques: 'Parks', constructora: 'Construction', experiencia: 'Experience', recursos: 'Resources', empresa: 'The Company', mexicali: 'Mexicali', inventario: 'Inventory', servicios: 'Construction Services', calidad: 'Quality & Standards', resultados: 'Results', aprender: 'Learn', conectar: 'Connect', contacto: 'Contact' }
     : { nosotros: 'Nosotros', parques: 'Parques', constructora: 'Constructora', experiencia: 'Experiencia', recursos: 'Recursos', empresa: 'La Empresa', mexicali: 'Mexicali', inventario: 'Inventario', servicios: 'Servicios de Construcción', calidad: 'Calidad y Estándares', resultados: 'Resultados', aprender: 'Aprender', conectar: 'Conectar', contacto: 'Contacto' };
+
+  // Base paths por categoría — cubre landings top-level si llegan a existir
+  // y hace robusto el matching contra rutas profundas que no estén en el dropdown.
+  const CATEGORY_BASE_PATHS = lang === 'en'
+    ? { nosotros: ['/about'], parques: ['/industrial-parks', '/inventory'], constructora: ['/construction'], experiencia: ['/experience'], recursos: ['/resources'] }
+    : { nosotros: ['/nelson'], parques: ['/parques-industriales-mexicali', '/inventario'], constructora: ['/constructora'], experiencia: ['/experiencia'], recursos: ['/recursos'] };
+
+  const parquesAllHrefs = [...parksMexicaliLinks, ...parksInventoryLinks].map((l) => l.href);
+  const constructoraAllHrefs = [...solutionsServicesLinks, ...solutionsIndustryLinks].map((l) => l.href);
+  const experienciaAllHrefs = [...expertiseCapabilitiesLinks, ...expertiseStandardsLinks].map((l) => l.href);
+  const recursosAllHrefs = [...insightsLearnLinks, ...insightsConnectLinks].map((l) => l.href);
+  const nosotrosAllHrefs = whyNelsonLinks.map((l) => l.href);
+
+  const categoryHrefs = {
+    nosotros: [...CATEGORY_BASE_PATHS.nosotros, ...nosotrosAllHrefs],
+    parques: [...CATEGORY_BASE_PATHS.parques, ...parquesAllHrefs],
+    constructora: [...CATEGORY_BASE_PATHS.constructora, ...constructoraAllHrefs],
+    experiencia: [...CATEGORY_BASE_PATHS.experiencia, ...experienciaAllHrefs],
+    recursos: [...CATEGORY_BASE_PATHS.recursos, ...recursosAllHrefs],
+  } as const;
+
+  const activeCategory = (Object.keys(categoryHrefs) as Array<keyof typeof categoryHrefs>)
+    .find((k) => isCategoryActive(pathname, categoryHrefs[k])) ?? null;
+
+  // Longest-prefix-match por dropdown — solo se ilumina UN sub-link.
+  const longestNosotros = findLongestPrefixHref(pathname, nosotrosAllHrefs);
+  const longestParques = findLongestPrefixHref(pathname, parquesAllHrefs);
+  const longestConstructora = findLongestPrefixHref(pathname, constructoraAllHrefs);
+  const longestExperiencia = findLongestPrefixHref(pathname, experienciaAllHrefs);
+  const longestRecursos = findLongestPrefixHref(pathname, recursosAllHrefs);
+
+  // Clases que se aplican al trigger activo (subrayado tipo tab).
+  // Usa un pseudo-elemento `after:` para no pelear con las clases globales
+  // **:data-[slot=navigation-menu-trigger]:* del NavigationMenu.
+  const triggerActiveClass = 'relative after:absolute after:left-3 after:right-3 after:bottom-1 after:h-px after:rounded-full after:bg-primary';
 
   return (
     <NavigationMenu
@@ -650,7 +749,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
       <NavigationMenuList className="gap-1">
         {/* NOSOTROS - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{navLabels.nosotros}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={cn(activeCategory === 'nosotros' && triggerActiveClass)}>{navLabels.nosotros}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -667,6 +766,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestNosotros}
                         >
                           {item.icon}
                         </ListItem>
@@ -692,7 +793,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
 
         {/* PARQUES - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{navLabels.parques}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={cn(activeCategory === 'parques' && triggerActiveClass)}>{navLabels.parques}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -709,6 +810,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestParques}
                         >
                           {item.icon}
                         </ListItem>
@@ -727,6 +830,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestParques}
                         >
                           {item.icon}
                         </ListItem>
@@ -741,7 +846,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
 
         {/* CONSTRUCTORA - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{navLabels.constructora}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={cn(activeCategory === 'constructora' && triggerActiveClass)}>{navLabels.constructora}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -758,6 +863,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestConstructora}
                         >
                           {item.icon}
                         </ListItem>
@@ -776,6 +883,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestConstructora}
                         >
                           {item.icon}
                         </ListItem>
@@ -790,7 +899,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
 
         {/* EXPERIENCIA - links + visual */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{navLabels.experiencia}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={cn(activeCategory === 'experiencia' && triggerActiveClass)}>{navLabels.experiencia}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -807,6 +916,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestExperiencia}
                         >
                           {item.icon}
                         </ListItem>
@@ -825,6 +936,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                             href={item.href}
                             title={item.name}
                             description={item.description}
+                            pathname={pathname}
+                            longestActiveHref={longestExperiencia}
                           >
                             {item.icon}
                           </ListItem>
@@ -853,7 +966,7 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
 
         {/* RECURSOS - 2 columnas */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{navLabels.recursos}</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={cn(activeCategory === 'recursos' && triggerActiveClass)}>{navLabels.recursos}</NavigationMenuTrigger>
           <NavigationMenuContent className="p-0.5">
             <div className="w-[620px] pr-[1.5px]">
               <div className="bg-card ring-foreground/5 rounded-[calc(var(--radius)-2px)] border border-transparent p-4 shadow ring-1">
@@ -870,6 +983,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestRecursos}
                         >
                           {item.icon}
                         </ListItem>
@@ -888,6 +1003,8 @@ const NavMenu = ({ variant = 'light', lang = 'es' }: { variant?: 'dark' | 'light
                           href={item.href}
                           title={item.name}
                           description={item.description}
+                          pathname={pathname}
+                          longestActiveHref={longestRecursos}
                         >
                           {item.icon}
                         </ListItem>
