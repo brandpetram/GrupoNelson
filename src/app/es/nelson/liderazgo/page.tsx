@@ -195,7 +195,7 @@ export default function LiderazgoPage() {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
               <p className="text-base leading-relaxed text-muted-foreground/80">
-                La continuidad del liderazgo no se limita a la familia. Baumex fue co-fundada
+                La continuidad del liderazgo no se limita a la familia. Baumex fue cofundada
                 junto con la segunda generación — no es un contratista rotativo ni un gerente
                 recién asignado.
               </p>

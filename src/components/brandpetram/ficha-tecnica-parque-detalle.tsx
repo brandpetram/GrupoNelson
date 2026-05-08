@@ -198,7 +198,7 @@ export function FichaTecnicaParqueDetalle() {
           {/* Columna derecha — especificaciones */}
           <div className="flex-1 space-y-0">
             <h2 className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: "var(--primary)" }}>
-              Especificaciones del parque
+              Especificaciones del parque industrial
             </h2>
 
             {especificacionesGenerales.map((seccion, si) => (

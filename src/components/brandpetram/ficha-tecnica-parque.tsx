@@ -28,7 +28,7 @@ function formatHeight(m: number, ft?: number) {
 const labels = {
   es: {
     consultar: "Consultar",
-    especificacionesDelParque: "Especificaciones del parque",
+    especificacionesDelParque: "Especificaciones del parque industrial",
     datosGenerales: "Datos generales",
     parque: "Parque",
     añoDeOperacion: "Año de operación",
@@ -76,7 +76,7 @@ const labels = {
   },
   en: {
     consultar: "Contact us",
-    especificacionesDelParque: "Park specifications",
+    especificacionesDelParque: "Industrial park specifications",
     datosGenerales: "General data",
     parque: "Park",
     añoDeOperacion: "Year of operation",
@@ -152,13 +152,6 @@ function buildEspecificaciones(park: IndustrialPark, t: Labels) {
             ? `${park.availableLandM2.toLocaleString("es-MX")} m²`
             : t.consultar,
         },
-        {
-          label: t.disponibilidadInmediata,
-          valor: park.immediateAvailability != null
-            ? (park.immediateAvailability ? t.si : t.no)
-            : t.consultar,
-        },
-        { label: t.ubicacion, valor: park.location },
         ...(park.address ? [{ label: t.direccion, valor: park.address }] : []),
       ],
     },

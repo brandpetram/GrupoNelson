@@ -8,7 +8,7 @@ const text = {
     imgAlt: 'Nave industrial',
     label: 'Track record',
     heading: '33 corporaciones internacionales en 28 años',
-    p1: 'Con Baumex obtienes Dos Project Executives, un Director Administrativo, un Project Manager, superintendentes de campo y crews de ejecución directa — con amplia experiencia constructiva con empresas Fortune 500. Toda la cadena de decisión dentro de la misma empresa.',
+    p1: 'Con Baumex obtienes dos Project Executives, un Director Administrativo, un Project Manager, superintendentes de campo y crews de ejecución directa — con amplia experiencia constructiva con empresas Fortune 500. Toda la cadena de decisión dentro de la misma empresa.',
     p2: 'Un equipo integrado bajo un mismo techo acelera la ejecución, elimina los vacíos de comunicación entre firmas y eleva el control de calidad en cada fase — desde el proyecto ejecutivo hasta la entrega de tu nave industrial o comercial.',
     li1: 'Naves desde 5,000 m² hasta 50,000+ m²',
     li2: '7 sectores: aeroespacial, médico, electrónica, HVAC, logística, manufactura pesada, alimentos',

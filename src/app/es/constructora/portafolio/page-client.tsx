@@ -53,7 +53,7 @@ export default function PortafolioBaumexClient() {
         {/* Hero Section */}
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-7xl font-light tracking-tighter leading-none text-gray-900 dark:text-white">
-            +75 proyectos. <br/> en 28 años.
+            +75 proyectos <br/> en 28 años.
             <span className="block text-primary mt-2 font-extrabold text-5xl sm:text-7xl">Experiencia que da confianza.</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">

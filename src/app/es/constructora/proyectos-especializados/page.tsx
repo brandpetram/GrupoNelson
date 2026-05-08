@@ -146,7 +146,7 @@ export default function ProyectosEspecializadosPage() {
         >
           <p className={splitParagraphClass}>
             <strong>Skyworks</strong> necesitaba mover microchips entre dos
-            plantas de semiconductores separadas por un boulevard y un dren
+            plantas de semiconductores separadas por un bulevar y un dren
             federal de la CNA. Los chips viajan en carritos de golf con{" "}
             <strong>temperatura controlada</strong> — la conexión tenía que ser
             un puente cerrado, sin columnas intermedias, sobre una vialidad
@@ -163,7 +163,7 @@ export default function ProyectosEspecializadosPage() {
             meses de coordinación logística previos.
           </p>
           <p className={splitParagraphClass}>
-            Hoy los microchips cruzan el boulevard en carritos de golf con
+            Hoy los microchips cruzan el bulevar en carritos de golf con
             temperatura controlada. El puente opera.
           </p>
         </SplitSimpleBP>
