@@ -70,7 +70,7 @@ export default function Nu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
 
           <div className="relative 1200:grid 1200:grid-cols-3 gap-x-40 1728:gap-x-56">
             {/* Columna izquierda: título */}
-            <div className="1200:col-span-1 1200:min-w-[20rem] 1536:min-w-[24rem] ml-5 md:ml-10 1728:ml-0">
+            <div className="1200:col-span-1 1200:min-w-[20rem] 1536:min-w-[24rem] 1920:min-w-[28rem] ml-5 md:ml-10 1728:ml-0 1920:-ml-12">
               <h3 className="text-[2rem] 360:text-[2rem] 393:text-[2rem] 430:text-[2rem] 768:text-[3rem] 834:text-[3rem] 1024:text-[3.5rem] 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-9 font-extrabold tracking-tight text-foreground leading-none">
                 {t.titleStart}{" "}
                 <span className="text-blue-600">{t.titleHighlight}</span>
@@ -80,7 +80,7 @@ export default function Nu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             {/* Columnas derecha: texto + lista */}
             <div className=" ml-5 md:ml-10 1200:ml-0 mt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 1200:col-span-2 1200:mt-0">
               {/* Texto descriptivo */}
-              <div className="sm:max-w-xs 1200:max-w-lg 1366:max-w-sm  1366:ml-0 leading-loose text-muted-foreground text-[1rem] 360:text-[1rem] 393:text-[1.3rem] 430:text-[1.3rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.5rem] 1200:text-[1.45rem] 1280:text-[1.2rem] 1366:text-[1.3rem] 1440:text-[1.3rem] 1536:text-[1.3rem] 1728:text-[1.3rem] 1920:text-[1.7rem]">
+              <div className="sm:max-w-xs 1200:max-w-lg 1366:max-w-sm 1920:max-w-md 1366:ml-0 leading-loose text-muted-foreground text-[1rem] 360:text-[1rem] 393:text-[1.3rem] 430:text-[1.3rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.5rem] 1200:text-[1.45rem] 1280:text-[1.2rem] 1366:text-[1.3rem] 1440:text-[1.3rem] 1536:text-[1.3rem] 1728:text-[1.3rem] 1920:text-[1.7rem]">
                 <p>
                   Baumex{" "}
                   <span className="text-blue-700 font-bold">{t.descriptionBold}</span>{" "}
