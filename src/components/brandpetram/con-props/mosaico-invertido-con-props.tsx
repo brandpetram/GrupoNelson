@@ -113,7 +113,7 @@ export function MosaicoInvertidoConProps({
           </motion.div>
 
           {/* Bloque 2: Imagen (columna derecha, fila superior) */}
-          <div className="aspect-square bg-blue-600 p-6 md:p-8 1024:p-10 flex items-center justify-center relative">
+          <div className="aspect-square 1024:aspect-auto 1024:h-full bg-blue-600 p-6 md:p-8 1024:p-10 flex items-center justify-center relative">
             {/* Triángulo SVG apuntando a la derecha */}
             <svg
               className="absolute left-0 top-1/4 -translate-y-1/2 w-4 h-8 md:w-6 md:h-12 1024:w-8 1024:h-16"
