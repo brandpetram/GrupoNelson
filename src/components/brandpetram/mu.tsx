@@ -41,7 +41,6 @@ export default function Mu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
           'url("/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-312.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "90% center",
-        backgroundAttachment: "fixed",
       }}
     >
       <div className="absolute inset-0 bg-gray-900/70" />
