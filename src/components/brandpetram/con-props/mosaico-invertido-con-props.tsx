@@ -166,7 +166,7 @@ export function MosaicoInvertidoConProps({
           <ImagenRectangulo
             src={bloque3ImagenSrc}
             alt={bloque3ImagenAlt}
-            className="aspect-square"
+            className="aspect-square 1024:aspect-auto 1024:h-full"
           />
 
         </div>
