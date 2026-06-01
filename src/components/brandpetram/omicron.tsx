@@ -53,7 +53,7 @@ export default function Omicron({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       </div>
 
       {/* Fila 2 — overlap con fila anterior */}
-      <div className="grid grid-cols-12 gap-5 lg:gap-20 mb-10 md:mb-0 1024:-my-10">
+      <div className="grid grid-cols-12 gap-5 lg:gap-20 mb-10 md:mb-0 1024:my-8 1200:-my-10">
         <div className="col-span-3 md:col-span-4 opacity-80">
           <svg viewBox="0 0 100 100" className="w-full">
             <defs>
