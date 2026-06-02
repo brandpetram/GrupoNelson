@@ -94,9 +94,9 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "80% repeat business",
+    title: "80% clientes recurrentes",
     description:
-      "La mayoría de los clientes regresa, expande o inicia nuevos proyectos. La permanencia dice más que cualquier brochure.",
+      "La mayoría de los clientes regresa, expande o inicia nuevos proyectos. La permanencia dice más que cualquier folleto.",
     href: "/contacto",
     bg: "bg-sky-700",
   },

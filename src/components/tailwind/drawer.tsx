@@ -146,7 +146,7 @@ export default function Drawer({ open, onClose, nave, lang = 'es' }: DrawerProps
     { label: lang === 'en' ? 'Location' : 'Ubicación',       value: nave.ubicacion },
     { label: lang === 'en' ? 'Area' : 'Superficie',      value: nave.superficieM2 > 0 ? `${nave.superficieM2.toLocaleString(locale)} m²  ·  ${nave.superficieFt2.toLocaleString(locale)} sq ft` : undefined },
     { label: lang === 'en' ? 'Land' : 'Terreno',         value: nave.terreno },
-    { label: 'Clear height',    value: `${nave.clearHeightFt} ft` },
+    { label: lang === 'en' ? 'Clear height' : 'Altura libre',    value: `${nave.clearHeightFt} ft` },
     { label: lang === 'en' ? 'Max height' : 'Altura máxima',   value: nave.alturaMaxM ? `${nave.alturaMaxM} m` : undefined },
     { label: lang === 'en' ? 'Docks' : 'Andenes',         value: nave.docksDetalle ?? nave.docks },
     { label: lang === 'en' ? 'Parking' : 'Estacionamiento', value: nave.estacionamiento ? `${nave.estacionamiento} ${lang === 'en' ? 'spaces' : 'espacios'}` : undefined },

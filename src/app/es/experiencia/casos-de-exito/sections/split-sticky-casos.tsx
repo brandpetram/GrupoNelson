@@ -32,7 +32,7 @@ export function SplitStickyCasos() {
             <p className="text-lg leading-relaxed text-muted-foreground">
               Gulfstream es Fortune 500. Manufactura aeroespacial. Una de las
               empresas con estándares de producción más exigentes del mundo —
-              estándares corporativos de seguridad, calidad y compliance que
+              estándares corporativos de seguridad, calidad y cumplimiento que
               descalifican automáticamente a la mayoría de los proveedores.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">

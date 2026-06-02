@@ -30,7 +30,7 @@ export function HexagonFeatures({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       description: 'Seis décadas construyendo espacios industriales de clase mundial para empresas globales en la región fronteriza de Baja California.'
     },
     {
-      title: 'Built to Suit',
+      title: 'Construcción a la Medida',
       description: 'Diseñamos y construimos espacios industriales a la medida de tus necesidades operativas y especificaciones técnicas particulares.'
     },
     {

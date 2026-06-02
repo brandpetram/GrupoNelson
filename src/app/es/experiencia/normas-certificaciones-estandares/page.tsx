@@ -211,7 +211,7 @@ export default function NormasCertificacionesEstandaresPage() {
                 </p>
                 <p className="text-base leading-relaxed">
                   Permisos diarios de trabajo con control de presión arterial
-                  antes de subir, checklist de caída, firmas escalonadas por
+                  antes de subir, lista de verificación de caída, firmas escalonadas por
                   supervisor y coordinador de seguridad. Cada permiso es un
                   registro verificable.
                 </p>

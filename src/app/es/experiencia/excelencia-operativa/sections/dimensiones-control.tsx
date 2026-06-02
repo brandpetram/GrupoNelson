@@ -32,7 +32,7 @@ export function DimensionesControl() {
                                 </div>
 
                                 <p className="mt-12 max-w-lg text-xl">
-                                    Gantt con fases detalladas (225 días documentados en Honeywell Mission). Monitoreo de long lead items para que un equipo con 4 meses de entrega no se convierta en retraso de obra. Reuniones semanales con 16 asistentes y minutas firmadas.
+                                    Gantt con fases detalladas (225 días documentados en Honeywell Mission). Monitoreo de insumos de entrega prolongada para que un equipo con 4 meses de entrega no se convierta en retraso de obra. Reuniones semanales con 16 asistentes y minutas firmadas.
                                 </p>
                             </div>
 
@@ -84,7 +84,7 @@ export function DimensionesControl() {
                         <FeatureCardContent className="bg-card!">
                             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">Control de calidad</p>
                             <p className="text-lg lg:text-xl">
-                                11 puntos de control documentados por proyecto. Submittals aprobados por el cliente antes de instalarse. Ensayos de laboratorio externo por EPGC — verificación independiente que no depende solo de Baumex. Evidencia fotográfica por fase de construcción.
+                                11 puntos de control documentados por proyecto. Entregables técnicos aprobados por el cliente antes de instalarse. Ensayos de laboratorio externo por EPGC — verificación independiente que no depende solo de Baumex. Evidencia fotográfica por fase de construcción.
                             </p>
                         </FeatureCardContent>
 
@@ -113,7 +113,7 @@ export function DimensionesControl() {
                         <FeatureCardContent className="bg-background!">
                             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">Control de seguridad</p>
                             <p className="text-lg lg:text-xl">
-                                Permisos diarios de trabajo con matriz de riesgo cuantitativa antes de cada turno. Permisos especializados para alturas (NOM-009) y soldadura (NOM-027). Scorecard transparente que registra cada incidente, incluyendo los menores. 1,092,745 HHT con cero incidentes graves como resultado del sistema.
+                                Permisos diarios de trabajo con matriz de riesgo cuantitativa antes de cada turno. Permisos especializados para alturas (NOM-009) y soldadura (NOM-027). Tabla de indicadores transparente que registra cada incidente, incluyendo los menores. 1,092,745 HHT con cero incidentes graves como resultado del sistema.
                             </p>
                         </FeatureCardContent>
 

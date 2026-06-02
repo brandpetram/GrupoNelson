@@ -80,7 +80,7 @@ const categories = [
         name: 'NOM-009-STPS-2011',
         fullName: 'Condiciones de seguridad para realizar trabajos en altura',
         description:
-          'Norma oficial mexicana de la Secretaría del Trabajo que establece los requerimientos de seguridad para trabajo en alturas: control de presión arterial, checklists de caída, permisos diarios y firmas escalonadas.',
+          'Norma oficial mexicana de la Secretaría del Trabajo que establece los requerimientos de seguridad para trabajo en alturas: control de presión arterial, listas de verificación de caída, permisos diarios y firmas escalonadas.',
         url: 'https://dof.gob.mx/normasOficiales/4377/stps/stps.htm',
         org: 'STPS / DOF',
       },

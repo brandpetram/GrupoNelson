@@ -10,7 +10,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/parques-industriales-mexicali/vigia-i',
   title: 'Parque Industrial El Vigía I',
-  description: 'Parque Industrial El Vigía I en Mexicali: 14 hectáreas, 11 empresas establecidas y naves industriales built-to-suit desde 1967.',
+  description: 'Parque Industrial El Vigía I en Mexicali: 14 hectáreas, 11 empresas establecidas y naves industriales de construcción a la medida (build-to-suit) desde 1967.',
 })
 
 export default async function VigiaIPage() {

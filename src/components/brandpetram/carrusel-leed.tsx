@@ -63,7 +63,7 @@ const leedCarruselData: Record<"es" | "en", { heading: string; items: LeedSlide[
         id: "leed2",
         title: "Proceso &<br>Certificación LEED",
         subtitle:
-          "Domina la documentación técnica y los submittals ante el USGBC bajo LEED v4 BD+C, con proceso integrativo desde el diseño conceptual hasta la entrega del certificado.",
+          "Domina la documentación técnica y los entregables técnicos ante el USGBC bajo LEED v4 BD+C, con proceso integrativo desde el diseño conceptual hasta la entrega del certificado.",
         href: "/constructora/leed/proceso-certificacion",
         etiqueta: "Proceso & Certificación LEED",
       },
@@ -79,7 +79,7 @@ const leedCarruselData: Record<"es" | "en", { heading: string; items: LeedSlide[
         id: "leed4",
         title: "Sitios Sostenibles<br>& Agua",
         subtitle:
-          "Reduce la isla de calor con techos reflectivos y pavimentos claros, y optimiza cada litro de agua con fixtures de alta eficiencia en una de las zonas más áridas del país.",
+          "Reduce la isla de calor con techos reflectivos y pavimentos claros, y optimiza cada litro de agua con accesorios sanitarios de alta eficiencia en una de las zonas más áridas del país.",
         href: "/constructora/leed/sitios-sostenibles",
         etiqueta: "Sitios Sostenibles & Agua",
       },

@@ -7,15 +7,15 @@ import { ClipboardCheck, HardHat, Handshake, Users, RotateCcw } from "lucide-rea
 
 const text = {
   es: {
-    mainTitle: 'De brief a entrega — cómo construimos',
+    mainTitle: 'De anteproyecto a entrega — cómo construimos',
     mainSubtitle: 'Un solo contrato, un solo responsable. Así se ve un proyecto con Baumex de principio a fin.',
     section1Title: 'El proceso constructivo en 3 fases',
     section1Subtitle: 'Cada proyecto sigue una secuencia probada en más de 75 entregas. Sin improvisación, sin sorpresas.',
     section2Title: 'Por qué las Fortune 500 regresan',
     section2Subtitle: 'El 80% de los clientes de Baumex son recurrentes. La razón no es el precio — es la certeza de entrega.',
     transferFeatures: [
-      { id: 1, name: 'Brief y proyecto ejecutivo', description: 'Defines tus requerimientos. 6 departamentos de ingeniería desarrollan el proyecto ejecutivo en paralelo.', icon: ClipboardCheck },
-      { id: 2, name: 'Permisos y procura', description: 'Permisos municipales, estatales y federales. Long lead items ordenados desde el día uno.', icon: HardHat },
+      { id: 1, name: 'Anteproyecto y proyecto ejecutivo', description: 'Defines tus requerimientos. 6 departamentos de ingeniería desarrollan el proyecto ejecutivo en paralelo.', icon: ClipboardCheck },
+      { id: 2, name: 'Permisos y procura', description: 'Permisos municipales, estatales y federales. Insumos de entrega prolongada ordenados desde el día uno.', icon: HardHat },
       { id: 3, name: 'Construcción y entrega', description: '450 trabajadores, 45 subcontratistas, reuniones semanales con 16+ asistentes. Entrega llave en mano.', icon: Handshake },
     ],
     communicationFeatures: [

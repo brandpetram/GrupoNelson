@@ -27,7 +27,7 @@ const TIPOS = [
   'Mecánica',
   'Hidráulica',
   'Sustentable',
-  'HVAC',
+  'Climatización',
   'Especializada',
 ]
 
@@ -59,7 +59,7 @@ export default function DisenoEIngenieriaPage() {
             imagen17="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-161.jpg"
             badge="Ingeniería Industrial en Mexicali"
             titulo={<>Ingeniería diseñada<br/>para tu operación</>}
-            parrafo="Cimentaciones profundas en suelo colapsable. Sistemas antisísmicos BRB. Subestaciones de 20 MW. HVAC con recuperación de agua al 90%. Seis disciplinas de ingeniería trabajan en paralelo para resolver lo que tu operación exige — desde el proyecto ejecutivo hasta la entrega."
+            parrafo="Cimentaciones profundas en suelo colapsable. Sistemas antisísmicos BRB. Subestaciones de 20 MW. Climatización con recuperación de agua al 90%. Seis disciplinas de ingeniería trabajan en paralelo para resolver lo que tu operación exige — desde el proyecto ejecutivo hasta la entrega."
             boton1Texto="Contacto"
             boton1Href="/contacto"
             boton2Texto="Ver más →"
@@ -77,7 +77,7 @@ export default function DisenoEIngenieriaPage() {
           <GunLikeConProps
             poligonoText="Ingeniería Industrial de Clase Mundial"
             titulo="Seis disciplinas de ingeniería"
-            parrafo="Civil, estructural, eléctrica, mecánica, arquitectura y costos. Desde cimentaciones en zona sísmica 4 hasta subestaciones de 20 MW y fire protection FM Global."
+            parrafo="Civil, estructural, eléctrica, mecánica, arquitectura y costos. Desde cimentaciones en zona sísmica 4 hasta subestaciones de 20 MW y protección contra incendios FM Global."
           />
         </div>
 
@@ -121,7 +121,7 @@ export default function DisenoEIngenieriaPage() {
             feature1Icon={<Compass className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
             feature2Title="¿Alta demanda eléctrica? La dimensionamos desde proyecto"
-            feature2Description="Desde 500 KVA hasta 20 MW de capacidad instalada. Subestaciones, paneles solares, HVAC con recuperación de agua al 90%. Todo integrado en un solo proyecto ejecutivo."
+            feature2Description="Desde 500 KVA hasta 20 MW de capacidad instalada. Subestaciones, paneles solares, climatización con recuperación de agua al 90%. Todo integrado en un solo proyecto ejecutivo."
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
             button1Text="Consulta de ingeniería"
@@ -201,7 +201,7 @@ export default function DisenoEIngenieriaPage() {
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
             feature2Titulo="Alta tensión y energía solar"
-            feature2Descripcion="Subestaciones de hasta 20 MW. 10 MW en paneles solares distribuidos en cubierta y carports. Tramitología completa con CFE."
+            feature2Descripcion="Subestaciones de hasta 20 MW. 10 MW en paneles solares distribuidos en cubierta y marquesinas. Tramitología completa con CFE."
             feature3Icon={<Compass className="h-5 w-5" />}
             feature3IconColor="text-green-600"
             feature3Titulo="Cimentaciones profundas"
@@ -239,12 +239,12 @@ export default function DisenoEIngenieriaPage() {
             imagenAlt="Ingeniería Baumex"
             tagline="Tu Obra Segura"
             titulo="Tu personal y el nuestro protegidos por el mismo sistema que aprobó Gulfstream"
-            parrafo1="Si tu corporativo audita seguridad antes de autorizar un constructor, este es el scorecard: 1,092,745 horas hombre trabajadas con cero muertes. 404 días consecutivos sin accidentes."
-            parrafo2="Manual HSE de 18 capítulos. Permisos antes de cada turno. Control de presión arterial antes de subir a alturas. Certificación DC-3 para todo el personal. Jornada máxima de 12 horas."
+            parrafo1="Si tu corporativo audita seguridad antes de autorizar un constructor, esta es la tabla de indicadores: 1,092,745 horas hombre trabajadas con cero muertes. 404 días consecutivos sin accidentes."
+            parrafo2="Manual SSMA de 18 capítulos. Permisos antes de cada turno. Control de presión arterial antes de subir a alturas. Certificación DC-3 para todo el personal. Jornada máxima de 12 horas."
             feature1Icon={<CloudArrowUpIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature1IconColor="text-orange-600 dark:text-orange-500"
             feature1Titulo="404 días consecutivos sin accidentes."
-            feature1Descripcion="Scorecard público del proyecto Gulfstream. Registro transparente de cada incidente — incluyendo los menores."
+            feature1Descripcion="Tabla de indicadores pública del proyecto Gulfstream. Registro transparente de cada incidente — incluyendo los menores."
             feature2Icon={<LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature2IconColor="text-blue-600 dark:text-blue-500"
             feature2Titulo="Matriz de riesgo antes de cada turno."
@@ -271,7 +271,7 @@ export default function DisenoEIngenieriaPage() {
               {
                 id: 2,
                 question: "¿Puedo obtener certificación LEED Gold para mi nave industrial?",
-                answer: "Sí. El proyecto ejecutivo integra paneles solares, HVAC de alta eficiencia con recuperación de agua al 90%, y materiales certificados. Gulfstream 550K está en proceso de LEED Gold con 10 MW solares.",
+                answer: "Sí. El proyecto ejecutivo integra paneles solares, climatización de alta eficiencia con recuperación de agua al 90%, y materiales certificados. Gulfstream 550K está en proceso de LEED Gold con 10 MW solares.",
               },
               {
                 id: 3,

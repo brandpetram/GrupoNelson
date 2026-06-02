@@ -168,7 +168,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
         <CirculosConProps
           circulo1Letra="60+"
           circulo1Titulo="Años"
-          circulo1Descripcion="La familia que instaló la primera maquiladora en Mexicali en 1956 y desarrolló el primer Parque Industrial en 1967, sigue operando personalmente. Nearshoring antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto."
+          circulo1Descripcion="La familia que instaló la primera maquiladora en Mexicali en 1956 y desarrolló el primer Parque Industrial en 1967, sigue operando personalmente. Relocalización industrial (nearshoring) antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto."
           circulo2Letra="30+"
           circulo2Titulo="Corporaciones"
           circulo2Descripcion="Gulfstream lleva más de 35 años. Honeywell más de 3 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."

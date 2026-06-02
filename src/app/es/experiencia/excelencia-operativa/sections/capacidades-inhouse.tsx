@@ -9,8 +9,8 @@ import { Container } from '@/components/container'
 
 const features = [
     {
-        title: 'Submittals antes de instalar',
-        description: 'Cada material y equipo pasa por aprobación documentada del cliente antes de entrar a obra. Nada se instala sin submittal autorizado.',
+        title: 'Entregables técnicos antes de instalar',
+        description: 'Cada material y equipo pasa por aprobación documentada del cliente antes de entrar a obra. Nada se instala sin entregable técnico autorizado.',
         icon: ClipboardCheck,
         image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2340&auto=format&fit=crop',
     },
@@ -22,7 +22,7 @@ const features = [
     },
     {
         title: 'Permisos diarios de trabajo',
-        description: 'Matriz de riesgo cuantitativa antes de cada turno. Permisos especializados para alturas y soldadura. Manual HSE de 18 capítulos aplicado en campo.',
+        description: 'Matriz de riesgo cuantitativa antes de cada turno. Permisos especializados para alturas y soldadura. Manual SSMA de 18 capítulos aplicado en campo.',
         icon: ShieldCheck,
         image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2340&auto=format&fit=crop',
     },
@@ -48,8 +48,8 @@ export function CapacidadesInhouse() {
                         data-grid-content
                         className="@4xl:px-12 @4xl:pt-12 flex h-full flex-col gap-12 px-6 pt-6">
                         <div className="text-balance">
-                            <h2 className="text-foreground text-3xl font-semibold">Los mismos 11 checkpoints en cada disciplina</h2>
-                            <p className="text-muted-foreground mt-4">Cada fase de obra genera evidencia que el cliente puede auditar: submittals aprobados, inspecciones documentadas y permisos de trabajo firmados antes de cada turno.</p>
+                            <h2 className="text-foreground text-3xl font-semibold">Los mismos 11 puntos de control en cada disciplina</h2>
+                            <p className="text-muted-foreground mt-4">Cada fase de obra genera evidencia que el cliente puede auditar: entregables técnicos aprobados, inspecciones documentadas y permisos de trabajo firmados antes de cada turno.</p>
                         </div>
 
                         <div className={cn('mt-auto grid divide-y transition-all duration-300', expandedIndex === 0 && 'grid-rows-[1fr_auto_auto]', expandedIndex === 1 && 'grid-rows-[auto_1fr_auto]', expandedIndex === 2 && 'grid-rows-[auto_auto_1fr]')}>

@@ -5,7 +5,7 @@
 
 const text = {
   es: {
-    heading: <>Nos hemos profesionalizado con{" "}<span className="font-bold text-blue-600 uppercase">estándares LEED</span>{" "}para construir naves que reducen consumo energético, recuperan el 90% del agua de condensación en torres de enfriamiento y generan hasta 10 MW de energía solar limpia desde la cubierta y los carports del estacionamiento.</>,
+    heading: <>Nos hemos profesionalizado con{" "}<span className="font-bold text-blue-600 uppercase">estándares LEED</span>{" "}para construir naves que reducen consumo energético, recuperan el 90% del agua de condensación en torres de enfriamiento y generan hasta 10 MW de energía solar limpia desde la cubierta y las marquesinas del estacionamiento.</>,
     labelDesktop: 'Arquitectura Industrial',
     bigTextDesktop: 'Espacios Industriales donde Funcionalidad y Arquitectura se Encuentran.',
     labelMobile: 'Arquitectura Industrial',

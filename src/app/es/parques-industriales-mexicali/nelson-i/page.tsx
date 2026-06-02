@@ -10,7 +10,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/parques-industriales-mexicali/nelson-i',
   title: 'Parque Industrial Nelson I',
-  description: 'Parque Industrial Nelson I en Mexicali: 27 hectáreas, 9 empresas establecidas y naves industriales built-to-suit desde 1987.',
+  description: 'Parque Industrial Nelson I en Mexicali: 27 hectáreas, 9 empresas establecidas y naves industriales de construcción a la medida (build-to-suit) desde 1987.',
 })
 
 export default async function NelsonIPage() {

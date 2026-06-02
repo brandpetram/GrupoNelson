@@ -34,7 +34,7 @@ export function Epsilon({ lang = "es" }: { lang?: "en" | "es" }) {
           "LEED Gold Integrado",
           "Paneles Solares",
           "HVAC Recuperación 90%",
-          "Fire Protection NFPA",
+          "Protección contra Incendios NFPA",
         ];
 
   const col2 =

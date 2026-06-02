@@ -10,8 +10,8 @@ import { createMetadata } from '@/lib/create-metadata'
 export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/build-to-suit',
-  title: 'Construcción Built-to-Suit',
-  description: 'Naves industriales built-to-suit en Mexicali diseñadas y construidas a la medida. Grupo Nelson entrega desde terreno hasta nave operando en sus parques industriales.',
+  title: 'Construcción a la Medida (Build-to-Suit)',
+  description: 'Naves industriales de construcción a la medida en Mexicali diseñadas y construidas para tu operación. Grupo Nelson entrega desde terreno hasta nave operando en sus parques industriales.',
 })
 
 export default function BuiltToSuitPage() {

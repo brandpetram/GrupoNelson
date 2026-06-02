@@ -29,7 +29,7 @@ export default function ComoTrabajamosSection() {
                                 <span className="font-mono">01.</span> Planeación
                             </FeatureCardTitle>
                             <FeatureCardDescription className="text-balance">
-                                <span className="text-foreground">Ruta crítica con 18 hitos interdependientes.</span> Identificamos equipos con largo tiempo de entrega — transformadores, chillers, bombas contra incendio — antes de que se conviertan en retraso. Presupuesto detallado con Cost Engineer interno.
+                                <span className="text-foreground">Ruta crítica con 18 hitos interdependientes.</span> Identificamos equipos con largo tiempo de entrega — transformadores, chillers, bombas contra incendio — antes de que se conviertan en retraso. Presupuesto detallado con ingeniero de costos interno.
                             </FeatureCardDescription>
                         </FeatureCardContent>
                     </FeatureCard>
@@ -51,7 +51,7 @@ export default function ComoTrabajamosSection() {
                                 <span className="font-mono">03.</span> Entrega
                             </FeatureCardTitle>
                             <FeatureCardDescription className="text-balance">
-                                <span className="text-foreground">Documentación completa: submittals, evidencia fotográfica por fase.</span> Verificación independiente FM Global y LEED antes de entregar llaves. Nave lista para operar sin pendientes.
+                                <span className="text-foreground">Documentación completa: entregables técnicos, evidencia fotográfica por fase.</span> Verificación independiente FM Global y LEED antes de entregar llaves. Nave lista para operar sin pendientes.
                             </FeatureCardDescription>
                         </FeatureCardContent>
                     </FeatureCard>

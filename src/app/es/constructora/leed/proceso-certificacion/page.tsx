@@ -5,25 +5,25 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/leed/proceso-certificacion',
   title: 'Proceso de Certificación LEED | Grupo Nelson Mexicali',
-  description: 'Certificación LEED v4 BD+C para naves industriales en Mexicali. Del predesign al certificado GBCI con trazabilidad completa. Gulfstream 550K apuntando a LEED Gold. Grupo Nelson.',
+  description: 'Certificación LEED v4 BD+C para naves industriales en Mexicali. De la fase preliminar de diseño al certificado GBCI con trazabilidad completa. Gulfstream 550K apuntando a LEED Gold. Grupo Nelson.',
 })
 
 export default function ProcesoCertificacionPage() {
   return (
     <LeedPageLayout
       eyebrow="Del diseño al certificado GBCI"
-      titulo="Certifica tu nave industrial LEED en Mexicali — del predesign al certificado GBCI sin detener la obra"
-      intro="Gulfstream 550K (52,200 m²) está en proceso de certificación LEED Gold — actualmente en 53-55 puntos (Silver), apuntando a Gold con 10 MW de paneles solares. Baumex gestiona el proceso completo: registro, Design Review, gestión de evidencias en construcción y Construction Review con trazabilidad en LEED Online."
+      titulo="Certifica tu nave industrial LEED en Mexicali — de la fase preliminar de diseño al certificado GBCI sin detener la obra"
+      intro="Gulfstream 550K (52,200 m²) está en proceso de certificación LEED Gold — actualmente en 53-55 puntos (Silver), apuntando a Gold con 10 MW de paneles solares. Baumex gestiona el proceso completo: registro, revisión de diseño, gestión de evidencias en construcción y revisión de construcción con trazabilidad en LEED Online."
       imageSrc="/leed/leed2-mexicali-nave-industrial-certificacion-bdc-3.jpeg"
       imageAlt="Proceso de certificación LEED v4 BD+C — Nave industrial Mexicali"
       parrafos={[
-        'Asegura que cada decisión técnica de tu nave en Mexicali quede documentada en formato certificable desde el primer día. La certificación LEED no se obtiene al final de la obra — se gana o se pierde en las primeras semanas de diseño. Baumex alinea arquitectura, ingeniería MEP, sustentabilidad y construcción desde el predesign para que el proceso integrativo de LEED v4 BD+C se ejecute sin improvisar documentación.',
-        'Cada crédito LEED requiere evidencia específica: memorias de cálculo, reportes de comisionamiento, certificados de materiales, registros de manejo de residuos, resultados de modelado energético. Cada evidencia tiene un formato y un momento preciso para generarse. En una nave de Mexicali donde el cronograma compite con la velocidad del nearshoring, un proceso LEED mal gestionado retrasa la entrega. Baumex certifica sin detener la obra.',
+        'Asegura que cada decisión técnica de tu nave en Mexicali quede documentada en formato certificable desde el primer día. La certificación LEED no se obtiene al final de la obra — se gana o se pierde en las primeras semanas de diseño. Baumex alinea arquitectura, ingeniería MEP, sustentabilidad y construcción desde la fase preliminar de diseño para que el proceso integrativo de LEED v4 BD+C se ejecute sin improvisar documentación.',
+        'Cada crédito LEED requiere evidencia específica: memorias de cálculo, reportes de comisionamiento, certificados de materiales, registros de manejo de residuos, resultados de modelado energético. Cada evidencia tiene un formato y un momento preciso para generarse. En una nave de Mexicali donde el cronograma compite con la velocidad de la relocalización industrial (nearshoring), un proceso LEED mal gestionado retrasa la entrega. Baumex certifica sin detener la obra.',
         'Obtén un certificado LEED que se sostiene ante inversionistas, inquilinos multinacionales y el propio GBCI. La calidad de la certificación depende de la calidad documental — y esa calidad se construye en cada fase del proyecto, no al final. Baumex ha ejecutado proyectos para Gulfstream, Honeywell y otras corporaciones Fortune 500 que exigen trazabilidad documental completa en cada fase constructiva.',
       ]}
       features={[
         {
-          title: 'Proceso integrativo desde predesign',
+          title: 'Proceso integrativo desde la fase preliminar de diseño',
           description: 'Arquitectura, MEP, sustentabilidad y construcción alineados desde el primer día. Cada decisión documentada en formato LEED Online.',
         },
         {
@@ -32,7 +32,7 @@ export default function ProcesoCertificacionPage() {
         },
         {
           title: 'Certificación que resiste auditoría',
-          description: 'Trazabilidad completa: Design Review, gestión de evidencias en construcción y Construction Review ante GBCI.',
+          description: 'Trazabilidad completa: revisión de diseño, gestión de evidencias en construcción y revisión de construcción ante GBCI.',
         },
       ]}
       subtituloSeccion="Certifica tu nave LEED en Mexicali con la constructora que ya está certificando la más grande de la ciudad"

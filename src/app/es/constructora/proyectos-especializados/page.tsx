@@ -224,7 +224,7 @@ export default function ProyectosEspecializadosPage() {
           </p>
           <p className={splitParagraphClass}>
             El edificio mide <strong>20 metros de altura</strong> y aloja un
-            blower de <strong>3,000 HP</strong> alimentado con alta tensión de
+            soplador de <strong>3,000 HP</strong> alimentado con alta tensión de
             4.16 KV. Los ductos de{" "}
             <strong>2.5 × 2.5 metros</strong> están fabricados con placa
             estructural soldada — no lámina, porque la fuerza del aire la

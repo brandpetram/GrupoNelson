@@ -17,7 +17,7 @@ export function FeatureCardsResultados() {
                         <FeatureCardContent>
                             <FeatureCardTitle>
                                 <ShieldCheck className="size-4" />
-                                Scorecard de Seguridad
+                                Tabla de Indicadores de Seguridad
                             </FeatureCardTitle>
                             <FeatureCardDescription>
                                 <span className="text-foreground">1,092,745 horas hombre trabajadas.</span> Cero accidentes graves. 404 días consecutivos de operación segura en el proyecto más grande de Mexicali.

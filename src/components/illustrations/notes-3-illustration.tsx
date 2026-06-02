@@ -7,7 +7,7 @@ export const Notes3Illustration = ({ lang = 'es' }: { lang?: 'en' | 'es' }) => {
     const tasksEs = [
         { id: 1, text: 'Elección de Sitio', completed: true },
         { id: 2, text: 'Diseño e Ingeniería', completed: true },
-        { id: 3, text: 'Built-to-Suit', completed: true },
+        { id: 3, text: 'Construcción a la Medida', completed: true },
         { id: 4, text: 'Seguridad del Parque', completed: true },
         { id: 5, text: 'Crecimiento y Expansión', completed: true },
         { id: 6, text: 'Construcciones Especiales', completed: true },

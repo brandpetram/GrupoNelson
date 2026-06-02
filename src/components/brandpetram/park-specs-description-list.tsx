@@ -203,7 +203,7 @@ export function ParkSpecsDescriptionList({ building }: ParkSpecsDescriptionListP
       {fireProtection && (
         <SpecSection title="Protección Contra Incendios">
           {fireProtection.cabinets && <SpecRow label="Gabinetes" value="Gabinetes y mangueras" />}
-          {fireProtection.sprinklers && <SpecRow label="Rociadores" value="Sistema de rociadores (sprinkler)" />}
+          {fireProtection.sprinklers && <SpecRow label="Rociadores" value="Sistema de rociadores" />}
           {fireProtection.waterTank && <SpecRow label="Cisterna" value="Tanque de almacenamiento de agua" />}
           {fireProtection.complianceStandards && (
             <SpecRow label="Estándares" value={fireProtection.complianceStandards.join(', ')} />

@@ -13,7 +13,7 @@ import Image from "next/image"
 const betaText = {
   es: {
     heading: <>Nave a <span className="text-orange-600">la medida</span> vs. nave especulativa</>,
-    paragraph: <>Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. La construcción a la medida elimina ese compromiso: <strong>Gulfstream</strong> necesitó 52,200 m² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Baumex los diseñó y construyó a la medida.</>,
+    paragraph: <>Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. La construcción a la medida (build-to-suit) elimina ese compromiso: <strong>Gulfstream</strong> necesitó 52,200 m² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Baumex los diseñó y construyó a la medida.</>,
   },
   en: {
     heading: <>Custom-built <span className="text-orange-600">facility</span> vs. speculative building</>,

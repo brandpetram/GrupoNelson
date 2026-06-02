@@ -11,7 +11,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/nelson/diferencia-nelson',
   title: 'La Diferencia Nelson',
-  description: 'Lo que distingue a Grupo Nelson: operación directa por la familia fundadora, construcción built-to-suit de naves industriales y parques industriales de primer nivel en Mexicali.',
+  description: 'Lo que distingue a Grupo Nelson: operación directa por la familia fundadora, construcción a la medida (build-to-suit) de naves industriales y parques industriales de primer nivel en Mexicali.',
 })
 
 export default function DiferenciaNelsonPage() {
@@ -72,7 +72,7 @@ export default function DiferenciaNelsonPage() {
 
         {/* ── Diferenciador 2: Ownership directo ── */}
         <SplitSimpleBP
-          tagline="Ownership directo"
+          tagline="Operación directa"
           title="Habla con los dueños, no con gerentes regionales"
           imagePosition="right"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg"
@@ -89,7 +89,7 @@ export default function DiferenciaNelsonPage() {
           </p>
           <p className={splitParagraphClass}>
             Eso se traduce en <strong>velocidad de decisión</strong>,{" "}
-            <strong>accountability personal</strong> y{" "}
+            <strong>responsabilidad personal</strong> y{" "}
             <strong>continuidad</strong>. Contratos de{" "}
             <strong>10 a 15 años</strong> negociados directamente con quienes
             toman las decisiones.

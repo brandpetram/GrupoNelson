@@ -8,13 +8,13 @@ const group1 = [
     '18 hitos monitoreados',
     'Reportes semanales',
     'Minutas firmadas',
-    'Submittals',
-    'Long lead items',
+    'Entregables técnicos',
+    'Insumos de entrega prolongada',
 ]
 
 const group2 = [
     'Permisos diarios',
-    'Scorecard HSE',
+    'Tabla de indicadores SSMA',
     'Control de calidad',
     'Responsables asignados',
     'Avance medible',

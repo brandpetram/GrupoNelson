@@ -6,12 +6,12 @@
 const text = {
   es: {
     imgAlt: 'Nave industrial',
-    label: 'Track record',
+    label: 'Trayectoria',
     heading: '33 corporaciones internacionales en 28 años',
-    p1: 'Con Baumex obtienes dos Project Executives, un Director Administrativo, un Project Manager, superintendentes de campo y crews de ejecución directa — con amplia experiencia constructiva con empresas Fortune 500. Toda la cadena de decisión dentro de la misma empresa.',
+    p1: 'Con Baumex obtienes dos directores de proyecto, un Director Administrativo, un gerente de proyecto, superintendentes de campo y cuadrillas de ejecución directa — con amplia experiencia constructiva con empresas Fortune 500. Toda la cadena de decisión dentro de la misma empresa.',
     p2: 'Un equipo integrado bajo un mismo techo acelera la ejecución, elimina los vacíos de comunicación entre firmas y eleva el control de calidad en cada fase — desde el proyecto ejecutivo hasta la entrega de tu nave industrial o comercial.',
     li1: 'Naves desde 5,000 m² hasta 50,000+ m²',
-    li2: '7 sectores: aeroespacial, médico, electrónica, HVAC, logística, manufactura pesada, alimentos',
+    li2: '7 sectores: aeroespacial, médico, electrónica, climatización, logística, manufactura pesada, alimentos',
     li3: 'Mexicali, Hermosillo, Tecate, San Luis Río Colorado, El Salto (Jalisco)',
     subheading: 'El historial habla por sí solo',
     closing: 'Si tu operación necesita una nave industrial con estándares internacionales en el noroeste de México, hablemos.',

@@ -8,7 +8,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/nelson/trayectoria',
   title: 'Trayectoria',
-  description: 'Más de 60 años desarrollando parques industriales y naves industriales built-to-suit en Mexicali. Empresas Fortune 500 confían en Grupo Nelson.',
+  description: 'Más de 60 años desarrollando parques industriales y naves industriales de construcción a la medida (build-to-suit) en Mexicali. Grandes corporaciones globales confían en Grupo Nelson.',
 })
 
 export default function TrayectoriaPage() {

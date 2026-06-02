@@ -10,7 +10,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/parques-industriales-mexicali/vigia-ii',
   title: 'Parque Industrial El Vigía II',
-  description: 'Parque Industrial El Vigía II en Mexicali: 7.5 hectáreas, naves industriales built-to-suit e instalaciones modernas desde 1987.',
+  description: 'Parque Industrial El Vigía II en Mexicali: 7.5 hectáreas, naves industriales de construcción a la medida (build-to-suit) e instalaciones modernas desde 1987.',
 })
 
 export default async function VigiaIIPage() {

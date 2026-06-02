@@ -8,7 +8,7 @@ const text = {
     row1Title: 'Construcción Industrial',
     row1Text: 'Naves industriales, plantas de manufactura, centros de distribución y edificios comerciales diseñados y construidos bajo un solo contrato. Equipo propio de arquitectura, ingeniería civil, estructural, eléctrica, mecánica y estimación de costos. Sin subcontratos de diseño.',
     row2Title: 'Proyectos Especiales',
-    row2Text: 'Puentes vehiculares de 95 metros sin columnas, túneles de viento con blowers de 3,000 HP, cimentaciones profundas a 18 metros en zona sísmica 4. Ingeniería compleja que requiere experiencia demostrada — no se licita en un directorio, se asigna por track record.',
+    row2Text: 'Puentes vehiculares de 95 metros sin columnas, túneles de viento con sopladores de 3,000 HP, cimentaciones profundas a 18 metros en zona sísmica 4. Ingeniería compleja que requiere experiencia demostrada — no se licita en un directorio, se asigna por trayectoria.',
     row3Title: 'Estándares Internacionales',
     row3Text: 'Certificación FM Global en muros, cubierta, estructura y sistema contraincendio. LEED Gold en proceso para Gulfstream 550K. ISN Recomendado por Honeywell International. Diseño conforme a NFPA, IBC y Normas Oficiales Mexicanas desde el proyecto ejecutivo.',
   },

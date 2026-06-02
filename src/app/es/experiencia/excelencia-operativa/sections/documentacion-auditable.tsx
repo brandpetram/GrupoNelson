@@ -8,7 +8,7 @@ import Notes3Illustration from "@/components/illustrations/notes-3-illustration"
 const subFeatures = [
     {
         icon: FileCheck2,
-        title: 'Submittals y aprobaciones',
+        title: 'Entregables técnicos y aprobaciones',
         description: 'Cada material y equipo se aprueba por el cliente antes de instalarse. Nada entra a obra sin documentación firmada.',
     },
     {
@@ -51,9 +51,9 @@ export function DocumentacionAuditable() {
                                     <FileCheck2 className="text-muted-foreground m-auto size-4" />
                                 </div>
                                 <h3 className="text-3xl font-semibold">Sistema de documentación</h3>
-                                <p className="text-muted-foreground text-balance">Cada fase de construcción produce evidencia verificable. Submittals aprobados, fotografías por etapa y trazabilidad completa desde diseño hasta entrega.</p>
+                                <p className="text-muted-foreground text-balance">Cada fase de construcción produce evidencia verificable. Entregables técnicos aprobados, fotografías por etapa y trazabilidad completa desde diseño hasta entrega.</p>
                                 <ul className="w-full space-y-2">
-                                    {['Submittals aprobados por el cliente', 'Evidencia fotográfica por fase', 'Trazabilidad diseño → entrega'].map((feature, index) => (
+                                    {['Entregables técnicos aprobados por el cliente', 'Evidencia fotográfica por fase', 'Trazabilidad diseño → entrega'].map((feature, index) => (
                                         <li
                                             key={index}
                                             className="text-muted-foreground flex items-center gap-2">

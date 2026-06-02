@@ -8,7 +8,7 @@ const text = {
     titleStart: 'Construcción Industrial',
     titleHighlight: 'de Clase Mundial',
     descriptionBold: 'concentra diseño, estimación, construcción y supervisión',
-    descriptionRest: 'bajo un mismo contrato. El arquitecto que traza el layout trabaja en el mismo edificio que el superintendente que supervisa el colado.',
+    descriptionRest: 'bajo un mismo contrato. El arquitecto que traza la distribución trabaja en el mismo edificio que el superintendente que supervisa el colado.',
     contactText: 'Contáctanos →',
     contactHref: '/contacto',
     boxTitleStart: 'Disciplinas',

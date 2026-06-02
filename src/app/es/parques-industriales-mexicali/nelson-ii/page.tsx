@@ -10,7 +10,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/parques-industriales-mexicali/nelson-ii',
   title: 'Parque Industrial Nelson II',
-  description: 'Parque Industrial Nelson II en Mexicali: 26.6 hectáreas, naves industriales built-to-suit con tecnología de punta. Gulfstream, Honeywell y más empresas Fortune 500.',
+  description: 'Parque Industrial Nelson II en Mexicali: 26.6 hectáreas, naves industriales de construcción a la medida (build-to-suit) con tecnología de punta. Gulfstream, Honeywell y más empresas Fortune 500.',
 })
 
 export default async function NelsonIIPage() {
