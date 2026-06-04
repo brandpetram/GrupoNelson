@@ -342,7 +342,7 @@ export function ScrollStorytelling({
   }, [])
 
   return (
-    <div className="relative isolate w-full">
+    <div data-component="ScrollStorytelling" data-component-file="src/components/brandpetram/scroll-storytelling.tsx" data-component-props="true" className="relative isolate w-full">
       {/* Cuadrícula de fondo — sticky al viewport durante el scroll por la sección */}
       <div
         aria-hidden="true"
