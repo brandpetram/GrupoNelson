@@ -24,7 +24,7 @@ const subFeatures = [
     {
         icon: FlaskConical,
         title: 'Third-party lab testing',
-        description: 'Independent verification by EPGC. Quality control does not depend solely on Baumex — a third party validates it.',
+        description: 'Independent verification by EPGC. Quality control does not depend solely on our In-House Construction team — a third party validates it.',
     },
 ]
 

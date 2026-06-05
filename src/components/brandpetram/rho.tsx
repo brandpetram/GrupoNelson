@@ -5,7 +5,7 @@
 
 const text = {
   es: {
-    quote: <>Cuando necesitamos expandir nuestra operación en Mexicali,{" "}<span className="font-bold">no tuvimos que buscar otra constructora</span>.{" "}Baumex ya conocía nuestros estándares y nuestros tiempos.</>,
+    quote: <>Cuando necesitamos expandir nuestra operación en Mexicali,{" "}<span className="font-bold">no tuvimos que buscar otra constructora</span>.{" "}El equipo de Constructora de Casa ya conocía nuestros estándares y nuestros tiempos.</>,
     quoteAuthor: 'Director de Planta — Empresa Fortune 500 en Mexicali',
     item1Title: 'Arquitectura Industrial',
     item1Text: 'Distribución de planta, oficinas corporativas, fachadas y disposición de espacios optimizada para tus procesos de manufactura y logística.',
@@ -21,7 +21,7 @@ const text = {
     item6Text: 'Presupuestos detallados, control de costos durante toda la ejecución de obra y precio cerrado desde el proyecto ejecutivo sin sorpresas.',
   },
   en: {
-    quote: <>When we needed to expand our operations in Mexicali,{" "}<span className="font-bold">we didn&apos;t have to look for another contractor</span>.{" "}Baumex already knew our standards and our timelines.</>,
+    quote: <>When we needed to expand our operations in Mexicali,{" "}<span className="font-bold">we didn&apos;t have to look for another contractor</span>.{" "}The In-House Construction team already knew our standards and our timelines.</>,
     quoteAuthor: 'Plant Director — Fortune 500 Company in Mexicali',
     item1Title: 'Industrial Architecture',
     item1Text: 'Plant layout, corporate offices, facades, and space distribution optimized for your manufacturing and logistics processes.',
@@ -60,11 +60,11 @@ export default function Rho({ lang = 'es' }: { lang?: 'en' | 'es' }) {
 
         {/* Texto decorativo de fondo */}
         <h1 className="hidden md:block w-full text-[25vw] text-white font-extrabold tracking-tighter opacity-20 md:-mt-48 leading-none">
-          BAUMEX
+          CONSTRUCTORA DE CASA
         </h1>
 
         <h1 className="md:hidden w-full text-[25vw] text-center text-white font-extrabold tracking-tighter opacity-20 -mt-10 leading-none">
-          BAUMEX
+          CONSTRUCTORA DE CASA
         </h1>
 
         {/* Grid de 6 celdas — flat grid: md=2 cols, 1024+=3 cols */}

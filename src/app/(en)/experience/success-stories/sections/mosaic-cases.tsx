@@ -36,7 +36,7 @@ const items: MosaicItem[] = [
     type: "card",
     title: "35 years with Gulfstream Aerospace",
     description:
-      "Fortune 500, aerospace manufacturing. 5 facilities built by Baumex. Direct assignment without bidding.",
+      "Fortune 500, aerospace manufacturing. 5 facilities built by our In-House Construction team. Direct assignment without bidding.",
     href: "/contact",
     bg: "bg-blue-700",
   },
@@ -66,7 +66,7 @@ const items: MosaicItem[] = [
   },
   {
     type: "card",
-    title: "ISN \"Recommended\" by Honeywell",
+    title: "\"Recommended\" rating on ISN",
     description:
       "The highest rating the ISN platform allows. The client's filter validates the contractor.",
     href: "/contact",

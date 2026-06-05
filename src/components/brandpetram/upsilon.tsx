@@ -14,7 +14,7 @@ const text = {
     titleStart: '¿Necesitas una constructora con experiencia en:',
     titleEnd: <>No te preocupes.{" "}<span className="ml-3">Estás en buenas manos.</span></>,
     imgAlt: 'Nave industrial',
-    bottomText: <>Con{" "}<span className="font-black tracking-tight text-blue-600">Baumex</span>{" "}ya no tienes que preocuparte por{" "}<span className="line-through"><br className="md:hidden" />coordinar múltiples contratistas</span>{" "}<br className="md:hidden" /><span className="text-foreground font-black">un solo responsable.</span></>,
+    bottomText: <>Con{" "}<span className="font-black tracking-tight text-blue-600">la Constructora de Casa</span>{" "}ya no tienes que preocuparte por{" "}<span className="line-through"><br className="md:hidden" />coordinar múltiples contratistas</span>{" "}<br className="md:hidden" /><span className="text-foreground font-black">un solo responsable.</span></>,
   },
   en: {
     pills: [
@@ -26,7 +26,7 @@ const text = {
     titleStart: 'Need a construction firm with experience in:',
     titleEnd: <>Don&apos;t worry.{" "}<span className="ml-3">You&apos;re in good hands.</span></>,
     imgAlt: 'Industrial building in Mexicali',
-    bottomText: <>With{" "}<span className="font-black tracking-tight text-blue-600">Baumex</span>{" "}you no longer have to worry about{" "}<span className="line-through"><br className="md:hidden" />coordinating multiple contractors</span>{" "}<br className="md:hidden" /><span className="text-foreground font-black">one single point of accountability.</span></>,
+    bottomText: <>With{" "}<span className="font-black tracking-tight text-blue-600">our In-House Construction team</span>{" "}you no longer have to worry about{" "}<span className="line-through"><br className="md:hidden" />coordinating multiple contractors</span>{" "}<br className="md:hidden" /><span className="text-foreground font-black">one single point of accountability.</span></>,
   },
 }
 

@@ -19,9 +19,9 @@ const team = [
   },
   {
     name: 'Construction Director',
-    role: 'Baumex — built-to-suit construction',
+    role: 'In-house, built-to-suit construction',
     description:
-      'Baumex, the in-house construction firm, executes every project from start to finish. Engineering and budget decisions are validated in executive council — your project does not depend on a single project manager.',
+      'Our In-House Construction team executes every project from start to finish. Engineering and budget decisions are validated in executive council — your project does not depend on a single project manager.',
   },
   {
     name: 'Administrative Director',
@@ -159,7 +159,7 @@ const mosaicoContent: MosaicoItem[] = [
     type: "card",
     title: "30 years leading construction",
     description:
-      "Baumex was founded in 1997 and has operated for nearly 30 years under the same leadership. Continuity extends beyond the family.",
+      "Our In-House Construction team was founded in 1997 and has operated for nearly 30 years under the same leadership. Continuity extends beyond the family.",
     href: "/about/leadership",
     bg: "bg-blue-900",
   },
@@ -297,9 +297,9 @@ export default function LeadershipPage() {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
               <p className="text-base leading-relaxed text-muted-foreground/80">
-                Leadership continuity is not limited to the family. Baumex was co-founded
-                alongside the second generation — it is not a rotating contractor or a
-                recently assigned manager.
+                Leadership continuity is not limited to the family. Our In-House
+                Construction team was co-founded alongside the second generation — it is
+                not a rotating contractor or a recently assigned manager.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground/80">
                 And continuity looks forward: the fourth generation is already working for

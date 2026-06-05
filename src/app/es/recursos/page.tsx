@@ -6,7 +6,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/recursos',
   title: 'Recursos',
-  description: 'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y Baumex implementan en sus desarrollos industriales.',
+  description: 'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y su Constructora de Casa implementan en sus desarrollos industriales.',
 })
 
 const categories = [
@@ -119,8 +119,9 @@ export default function RecursosPage() {
             Recursos
           </h1>
           <p className="text-lg font-light tracking-wide text-gray-500 dark:text-gray-400 mb-16 max-w-2xl leading-relaxed">
-            Normas, certificaciones y estándares que Grupo Nelson y Baumex
-            implementan en el desarrollo y operación de parques industriales.
+            Normas, certificaciones y estándares que Grupo Nelson y su
+            constructora interna implementan en el desarrollo y operación de
+            parques industriales.
           </p>
 
           <div className="space-y-16">

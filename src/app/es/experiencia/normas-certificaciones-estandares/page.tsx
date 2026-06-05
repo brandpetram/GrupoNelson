@@ -12,7 +12,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/experiencia/normas-certificaciones-estandares',
   title: 'Normas, Certificaciones y Estándares',
-  description: 'Baumex responde a tres tipos de exigencia: corporativas (ISN Recomendado por Honeywell), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
+  description: 'La Constructora de Casa de Grupo Nelson responde a tres tipos de exigencia: corporativas (ISN Recomendado), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
 })
 
 const engineeringStandards = [
@@ -31,7 +31,7 @@ const engineeringStandards = [
   {
     name: 'Ingeniería antisísmica BRB',
     description:
-      'Baumex implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica 4 en la nave Gulfstream de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
+      'Nuestra Constructora de Casa implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica 4 en la nave Gulfstream de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
     icon: BoltIcon,
   },
   {
@@ -61,7 +61,7 @@ export default function NormasCertificacionesEstandaresPage() {
           badge="Normas · Certificaciones · Estándares"
           headlineTop="Tres tipos de exigencia."
           headlineAccent="Cada una demostrada en proyecto real."
-          subtitle="Tu proyecto llega con tres tipos de exigencia: las de tu corporativo, las de tu industria y aseguradora, y las de la regulación. Baumex ha cumplido las tres — en naves industriales reales en Mexicali."
+          subtitle="Tu proyecto llega con tres tipos de exigencia: las de tu corporativo, las de tu industria y aseguradora, y las de la regulación. Nuestra Constructora de Casa ha cumplido las tres — en naves industriales reales en Mexicali."
           primaryButtonText="Solicita una consulta"
           primaryButtonHref="/contacto"
           secondaryButtonText="Conoce los estándares"
@@ -98,7 +98,7 @@ export default function NormasCertificacionesEstandaresPage() {
             {/* ISN */}
             <div className="mb-12">
               <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                Honeywell califica a Baumex como &quot;Recomendado&quot; en
+                Nuestra Constructora de Casa es contratista &quot;Recomendado&quot; en
                 ISNetworld
               </h3>
               <p className="text-lg leading-relaxed mb-4">
@@ -108,10 +108,10 @@ export default function NormasCertificacionesEstandaresPage() {
                 diligence.
               </p>
               <p className="text-lg leading-relaxed">
-                Baumex tiene calificación &quot;Recomendado&quot; — la más alta
-                de la plataforma — activa para Honeywell Aero-Mexicali y Honeywell
-                Mexico-Corporate. Si tu corporativo exige validación ISN, el
-                precedente ya existe y es verificable.
+                Nuestro equipo tiene calificación &quot;Recomendado&quot; — la más alta
+                de la plataforma — activa y verificable para corporativos
+                Fortune 500 en Mexicali. Si tu corporativo exige validación ISN, el
+                precedente ya existe.
               </p>
             </div>
 
@@ -156,7 +156,7 @@ export default function NormasCertificacionesEstandaresPage() {
                 estándares de construcción, aseguramiento y protección que
                 garanticen la integridad del edificio y la continuidad de la
                 operación. Ninguno de estos es obligatorio por ley mexicana — son
-                estándares superiores que Baumex ya cumple.
+                estándares superiores que nuestra Constructora de Casa ya cumple.
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -237,7 +237,7 @@ export default function NormasCertificacionesEstandaresPage() {
                   Capacitación laboral certificada
                 </p>
                 <p className="text-base leading-relaxed">
-                  Todo el personal de Baumex cuenta con constancia DC-3 de
+                  Todo el personal de nuestra Constructora de Casa cuenta con constancia DC-3 de
                   habilidades laborales. No es una política de capacitación: es
                   certificación verificable de cada trabajador en campo.
                 </p>
@@ -250,7 +250,7 @@ export default function NormasCertificacionesEstandaresPage() {
                   Seguridad comparable a EE.UU.
                 </p>
                 <p className="text-base leading-relaxed">
-                  Los manuales de seguridad de Baumex están basados en estándares
+                  Los manuales de seguridad de nuestra Constructora de Casa están basados en estándares
                   OSHA además de las normas mexicanas. Para un comprador
                   americano: la seguridad en obra cumple criterios comparables a
                   los de tu país.
@@ -264,7 +264,7 @@ export default function NormasCertificacionesEstandaresPage() {
                 Validación independiente: EPGC
               </h3>
               <p className="text-base leading-relaxed">
-                El control de calidad no depende solo de Baumex. Laboratorios
+                El control de calidad no depende solo de nuestra Constructora de Casa. Laboratorios
                 externos como EPGC (Especialistas en Geotecnia y Concretos)
                 verifican compactación de terracerías y calidad de cimentaciones
                 en cada proyecto. Un tercero lo valida.

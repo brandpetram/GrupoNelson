@@ -118,8 +118,8 @@ export default function OurStoryPage() {
                         </h2>
                         <p className="1200:text-md 1728:text-xl 2560:text-2xl leading-normal text-balance text-white px-12 pb-10">
                             We depended on external contractors to build the facilities our
-                            clients needed. We decided that was a bottleneck. We founded
-                            Baumex — our in-house construction firm — and since then we
+                            clients needed. We decided that was a bottleneck. We established
+                            our In-House Construction team — and since then we
                             control the entire chain: from land to turnkey. 75+ projects
                             built in 30 years.
                         </p>

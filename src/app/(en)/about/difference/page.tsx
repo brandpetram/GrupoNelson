@@ -30,11 +30,11 @@ export default function DifferencePage() {
           <EditorialCascadaBeta
             lang="en"
             titulo="The Nelson Difference: pioneers of border manufacturing since 1967, direct operation by the founding family, and in-house construction."
-            parrafo="Grupo Nelson established the first maquiladora in Mexicali in 1967. Three generations later, the founding family still operates every park, every contract, and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners, and an in-house construction firm with 28 years of experience. That translates to less risk, less friction, and more speed for your project."
+            parrafo="Grupo Nelson established the first maquiladora in Mexicali in 1967. Three generations later, the founding family still operates every park, every contract, and every construction project. Very few industrial developers in this city combine 60 years of permanence, operationally involved owners, and an in-house construction firm with 30 years of experience. That translates to less risk, less friction, and more speed for your project."
             stats={[
               { titulo: 'Pioneers since 1967', descripcion: 'Established the first maquiladora in Mexicali' },
               { titulo: 'Owners operating directly', descripcion: 'They negotiate, decide, and respond personally' },
-              { titulo: 'In-house construction', descripcion: 'Baumex: 28 years and 75 projects with our own team' },
+              { titulo: 'In-house construction', descripcion: '30 years and 75 projects built with our own team' },
             ]}
             destacado="Long-term relationships — the majority of clients expand or start new projects decade after decade."
             ctaPrimarioTexto="Request a Consultation"
@@ -115,20 +115,20 @@ export default function DifferencePage() {
         {/* ── Differentiator 3: In-house construction ── */}
         <SplitSimpleBP
           tagline="In-house construction"
-          title="Baumex: one contract, one point of responsibility, from land to turnkey"
+          title="One contract, one point of responsibility, from land to turnkey"
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
-          imageAlt="Baumex construction — industrial buildings in Mexicali"
+          imageAlt="In-House Construction — industrial buildings in Mexicali"
         >
           <p className={splitParagraphClass}>
-            If you need a building that does not exist in inventory,{" "}
-            <strong>Baumex</strong> designs and builds it. It is Grupo
-            Nelson&apos;s own construction firm — not a subcontracted third party.
+            If you need a building that does not exist in inventory, our{" "}
+            <strong>In-House Construction</strong> team designs and builds it.
+            It is Grupo Nelson&apos;s own construction firm — not a subcontracted third party.
             A single contract covers design, permits, construction, and
             delivery.
           </p>
           <p className={splitParagraphClass}>
-            <strong>28 years</strong> of operation.{" "}
+            <strong>30 years</strong> of operation.{" "}
             <strong>75 projects</strong> completed. The same group that
             manages the park where you will operate is the one that builds
             your facility.

@@ -53,11 +53,11 @@ export default function PortafolioBaumexClient() {
         {/* Hero Section */}
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-7xl font-light tracking-tighter leading-none text-gray-900 dark:text-white">
-            +75 proyectos <br/> en 28 años.
+            +75 proyectos <br/> en 30 años.
             <span className="block text-primary mt-2 font-extrabold text-5xl sm:text-7xl">Experiencia que da confianza.</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-            Desde nuestra primera nave industrial en 1997 hasta el complejo aeroespacial de 52,200 m² que construimos hoy para Gulfstream. Este es el registro completo de Baumex Constructora.
+            Desde nuestra primera nave industrial en 1997 hasta el complejo aeroespacial de 52,200 m² que construimos hoy para Gulfstream. Este es el registro completo de la constructora interna de Grupo Nelson.
           </p>
         </div>
 

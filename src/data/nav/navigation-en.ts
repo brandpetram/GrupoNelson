@@ -50,15 +50,15 @@ export const parksMexicaliLinks = [
     iconKey: 'building',
   },
   {
-    href: '/en/industrial-parks/vigia-i',
-    name: 'El Vigía I Park',
-    description: 'Strategic location',
-    iconKey: 'building',
-  },
-  {
     href: '/en/industrial-parks/vigia-ii',
     name: 'El Vigía II Park',
     description: 'Modern facilities',
+    iconKey: 'building',
+  },
+  {
+    href: '/en/industrial-parks/vigia-i',
+    name: 'El Vigía I Park',
+    description: 'Strategic location',
     iconKey: 'building',
   },
 ];
@@ -90,8 +90,8 @@ export const parksInventoryLinks = [
 export const solutionsServicesLinks = [
   {
     href: '/en/construction/baumex',
-    name: 'Baumex Construction',
-    description: 'In-house construction firm with 25+ years',
+    name: 'In-House Construction',
+    description: 'In-house construction firm with 30+ years',
     iconKey: 'award',
   },
   {

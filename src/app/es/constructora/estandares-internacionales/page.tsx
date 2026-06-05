@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/estandares-internacionales',
   title: 'Estándares Internacionales de Construcción',
-  description: 'Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Baumex: 75+ proyectos, auditorías de Gulfstream y Honeywell.',
+  description: 'Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Nuestra Constructora de Casa: 75+ proyectos, auditorías de Gulfstream y Honeywell.',
 })
 
 export default function EstandaresInternacionalesPage() {
@@ -72,7 +72,7 @@ export default function EstandaresInternacionalesPage() {
           <GunLikeConProps
             poligonoText="Estándares Internacionales"
             titulo="Trae tu certificación más exigente"
-            parrafo="28 años aprendiendo, implementando y cumpliendo estándares internacionales en naves industriales de Mexicali."
+            parrafo="30 años aprendiendo, implementando y cumpliendo estándares internacionales en naves industriales de Mexicali."
           />
         </div>
 
@@ -111,7 +111,7 @@ export default function EstandaresInternacionalesPage() {
             tagline="Tu Proyecto, Tus Estándares"
             titulo="Dinos qué necesitas cumplir"
             parrafo1="Si ya sabes qué certificaciones exige tu corporativo, dinos cuáles. Si todavía no lo tienes claro, podemos ayudarte a definirlo."
-            parrafo2="28 años implementando estándares internacionales en naves industriales de Mexicali. Cada certificación que hoy dominamos la aprendimos porque un cliente la necesitó — y la entregamos."
+            parrafo2="30 años implementando estándares internacionales en naves industriales de Mexicali. Cada certificación que hoy dominamos la aprendimos porque un cliente la necesitó — y la entregamos."
             feature1Icon={
               <CloudArrowUpIcon
                 aria-hidden="true"
@@ -137,7 +137,7 @@ export default function EstandaresInternacionalesPage() {
               />
             }
             feature3IconColor="text-green-600 dark:text-green-500"
-            feature3Titulo="28 años haciendo esto."
+            feature3Titulo="30 años haciendo esto."
             feature3Descripcion="Cada certificación que hoy dominamos la aprendimos porque un cliente la necesitó."
             parrafo3="Dinos qué necesita tu operación. Te mostramos cómo se implementa en tu proyecto."
             subtitulo="Consulta sin costo"

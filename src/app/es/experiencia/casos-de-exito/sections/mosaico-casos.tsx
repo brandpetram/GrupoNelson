@@ -38,7 +38,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "35 años con Gulfstream Aerospace",
     description:
-      "Fortune 500, manufactura aeroespacial. 5 naves construidas por Baumex. Asignación directa sin licitación.",
+      "Fortune 500, manufactura aeroespacial. 5 naves construidas por nuestra Constructora de Casa. Asignación directa sin licitación.",
     href: "/contacto",
     bg: "bg-blue-700",
   },
@@ -68,7 +68,7 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "ISN «Recomendado» por Honeywell",
+    title: "Calificación «Recomendado» en ISN",
     description:
       "La calificación más alta que la plataforma ISN permite. El filtro del cliente valida al constructor.",
     href: "/contacto",

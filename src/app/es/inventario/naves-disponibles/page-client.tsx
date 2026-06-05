@@ -29,10 +29,6 @@ export default function NavesDisponiblesClient({ naves }: { naves: NaveIndustria
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
               Naves Industriales<br className="hidden sm:block" /> Disponibles
             </h1>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-              {disponibles} naves disponibles en Nelson II, El Vigía y El Vigía II.
-              Da clic en <strong>+</strong> para ver especificaciones completas y solicitar información.
-            </p>
           </div>
         </section>
 

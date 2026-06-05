@@ -6,7 +6,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/resources',
   title: 'Resources',
-  description: 'Official documentation on standards, certifications and codes that Grupo Nelson and Baumex implement in their industrial developments.',
+  description: 'Official documentation on standards, certifications and codes that Grupo Nelson and its In-House Construction team implement in their industrial developments.',
 })
 
 const categories = [
@@ -119,8 +119,9 @@ export default function ResourcesPage() {
             Resources
           </h1>
           <p className="text-lg font-light tracking-wide text-gray-500 dark:text-gray-400 mb-16 max-w-2xl leading-relaxed">
-            Standards, certifications and codes that Grupo Nelson and Baumex
-            implement in the development and operation of industrial parks.
+            Standards, certifications and codes that Grupo Nelson and our
+            In-House Construction team implement in the development and operation
+            of industrial parks.
           </p>
 
           <div className="space-y-16">

@@ -102,7 +102,7 @@ export function EditorialCascadaBeta({
     stats: [
       { titulo: 'Pioneers since 1967', descripcion: 'Established the first maquiladora in Mexicali' },
       { titulo: 'Owners operating', descripcion: 'They negotiate, decide and respond personally' },
-      { titulo: 'In-house construction', descripcion: 'Baumex: 28 years and 75 projects with own team' },
+      { titulo: 'In-house construction', descripcion: '30 years and 75 projects with our own team' },
     ],
     destacado: 'Long-term relationships — most clients expand or start new projects decade after decade.',
     ctaPrimarioTexto: 'Request a consultation',
@@ -115,7 +115,7 @@ export function EditorialCascadaBeta({
     stats: [
       { titulo: 'Pioneros desde 1967', descripcion: 'Instalaron la primera maquiladora de Mexicali' },
       { titulo: 'Dueños operando', descripcion: 'Negocian, deciden y responden personalmente' },
-      { titulo: 'Constructora propia', descripcion: 'Baumex: 28 años y 75 proyectos con equipo propio' },
+      { titulo: 'Constructora propia', descripcion: 'Constructora de Casa: 30 años y 75 proyectos con equipo propio' },
     ],
     destacado: 'Relaciones de largo plazo — la mayoría de los clientes expande o inicia nuevos proyectos década tras década.',
     ctaPrimarioTexto: 'Solicita una consulta',

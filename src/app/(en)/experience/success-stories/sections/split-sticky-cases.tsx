@@ -35,16 +35,17 @@ export function SplitStickyCases() {
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               After the 7.2 earthquake in 2010 that damaged their existing
-              plant, Gulfstream trusted Baumex to build the largest facility
-              in the city. They did not look for alternatives. They did not
-              open a bidding process. They assigned directly.
+              plant, Gulfstream trusted our In-House Construction team to
+              build the largest facility in the city. They did not look for
+              alternatives. They did not open a bidding process. They assigned
+              directly.
             </p>
 
             {/* Anchor data — each fact appears ONCE */}
             <div className="space-y-4 border-l-2 border-blue-600/30 pl-6">
               <div>
                 <p className="font-semibold text-foreground">
-                  5 facilities built by Baumex
+                  5 facilities built by our In-House Construction team
                 </p>
                 <p className="text-muted-foreground">
                   Including the 562,000 ft² facility — the largest in
@@ -107,8 +108,9 @@ export function SplitStickyCases() {
                   30+ years of relationship
                 </p>
                 <p className="text-muted-foreground">
-                  Multiple expansions — Mission 1, 2, and 3 — built by
-                  Baumex over three decades of continuous relationship.
+                  Multiple expansions — Mission 1, 2, and 3 — built by our
+                  In-House Construction team over three decades of continuous
+                  relationship.
                 </p>
               </div>
               <div>
@@ -117,8 +119,9 @@ export function SplitStickyCases() {
                 </p>
                 <p className="text-muted-foreground">
                   The highest rating the platform allows. It is not just
-                  that Baumex meets Honeywell&apos;s standards — it holds
-                  the maximum rating of the system that measures them.
+                  that our In-House Construction team meets Honeywell&apos;s
+                  standards — it holds the maximum rating of the system that
+                  measures them.
                 </p>
               </div>
               <div>
@@ -128,8 +131,8 @@ export function SplitStickyCases() {
                 <p className="text-muted-foreground">
                   When Honeywell needed an aerospace wind tunnel, the
                   executive project was developed jointly between Honeywell
-                  engineers and Baumex engineers. That only happens when the
-                  level of trust is high.
+                  engineers and our in-house engineers. That only
+                  happens when the level of trust is high.
                 </p>
               </div>
             </div>
@@ -154,8 +157,8 @@ export function SplitStickyCases() {
           <div className="space-y-3">
             <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
               If Gulfstream did not need to look for alternatives in 35
-              years, and Honeywell gave Baumex the highest possible
-              rating — the standard is already proven.
+              years, and we hold ISN&apos;s highest possible rating to work on
+              Honeywell&apos;s facilities — the standard is already proven.
             </h3>
             <p className="text-lg leading-relaxed text-muted-foreground">
               What these clients&apos; standards demand says more about

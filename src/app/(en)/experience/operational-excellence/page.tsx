@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/experience/operational-excellence',
   title: 'Operational Excellence',
-  description: "75 projects completed in 28 years. 1,092,745 man-hours worked with a documented safety record. Weekly site control with documented reports. Baumex, Grupo Nelson's in-house general contractor.",
+  description: "75 projects completed in 30 years. 1,092,745 man-hours worked with a documented safety record. Weekly site control with documented reports. In-House Construction, Grupo Nelson's general contractor.",
 })
 
 export default function OperationalExcellencePage() {
@@ -49,7 +49,7 @@ export default function OperationalExcellencePage() {
                         Site control. Measurable progress. Weekly reports.
                       </h1>
                       <p className="text-muted-foreground mx-auto mb-8 mt-6 text-balance text-lg">
-                        75 projects completed in 28 years. 1,092,745 man-hours
+                        75 projects completed in 30 years. 1,092,745 man-hours
                         worked without a single serious accident. The difference
                         between promising discipline and showing the documents
                         that prove it.
@@ -63,7 +63,7 @@ export default function OperationalExcellencePage() {
                         <Link href="/contact">Request a consultation</Link>
                       </Button>
                       <span className="text-muted-foreground mt-3 block text-center text-sm">
-                        Baumex General Contractor · Grupo Nelson
+                        In-House Construction · Grupo Nelson
                       </span>
                     </div>
                   </div>

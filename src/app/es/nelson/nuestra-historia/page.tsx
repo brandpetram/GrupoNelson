@@ -119,7 +119,7 @@ export default function NuestraHistoriaPage() {
                         <p className="1200:text-md 1728:text-xl 2560:text-2xl leading-normal text-balance text-white px-12 pb-10">
                             Dependíamos de constructoras externas para edificar las naves que
                             nuestros clientes necesitaban. Decidimos que eso era un cuello de
-                            botella. Fundamos Baumex — nuestra constructora interna — y desde
+                            botella. Levantamos nuestra constructora interna y desde
                             entonces controlamos toda la cadena: del terreno a la llave. 75+
                             proyectos construidos en 30 años.
                         </p>

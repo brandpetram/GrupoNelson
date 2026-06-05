@@ -13,13 +13,13 @@ export default function MaterialesRecursosPage() {
     <LeedPageLayout
       eyebrow="Materiales verificados y reciclables"
       titulo="Construye tu nave industrial LEED en Mexicali con materiales documentados por EPD y contenido reciclado verificable"
-      intro="El acero estructural de tu nave puede tener 90% de contenido reciclado o 15% — la diferencia está en la Declaración Ambiental de Producto (EPD). Baumex especifica cada material con EPD verificada por tercero: acero con contenido reciclado documentado, concreto con adiciones que reducen cemento Portland, y acabados con HPD que verifican ausencia de sustancias de preocupación."
+      intro="El acero estructural de tu nave puede tener 90% de contenido reciclado o 15% — la diferencia está en la Declaración Ambiental de Producto (EPD). Nuestra constructora interna especifica cada material con EPD verificada por tercero: acero con contenido reciclado documentado, concreto con adiciones que reducen cemento Portland, y acabados con HPD que verifican ausencia de sustancias de preocupación."
       imageSrc="/leed/leed6-mexicali-nave-industrial-materiales-recursos-1.jpeg"
       imageAlt="Materiales con EPD verificada en nave industrial LEED — Mexicali"
       parrafos={[
-        'Exige datos verificables de cada material que entra a tu nave industrial en Mexicali. El acero reciclado reduce significativamente las emisiones de CO₂ respecto al acero virgen (World Steel Association, 2023) — pero solo cuenta si tiene EPD que lo demuestre. Baumex especifica acero estructural con alto contenido reciclado documentado, concreto con cenizas volantes o escoria que mejoran durabilidad en clima extremo, y materiales de acabado con Declaraciones de Productos Saludables (HPD).',
-        'Reduce la huella de transporte con abastecimiento regional dentro de un radio de 160 km del sitio de construcción en Mexicali. Acero de Ternium y ArcelorMittal, concreto de plantas locales de CEMEX y Holcim, y materiales de construcción de distribuidores regionales — todos dentro del radio que suma créditos LEED en la categoría de Materiales y Recursos. Baumex tiene relaciones de largo plazo con estos proveedores — 28 años de construcción en Mexicali generan una cadena de suministro que no se improvisa.',
-        'Gestiona los residuos de obra con separación del 100% de materiales recuperables y desvío mínimo del 50% de vertedero. Acero, concreto, cartón, madera y plásticos de embalaje — cada fracción con destino documentado y trazabilidad verificable. En la nave Gulfstream 550K, Baumex gestionó residuos de 52,200 m² de construcción con este estándar.',
+        'Exige datos verificables de cada material que entra a tu nave industrial en Mexicali. El acero reciclado reduce significativamente las emisiones de CO₂ respecto al acero virgen (World Steel Association, 2023) — pero solo cuenta si tiene EPD que lo demuestre. Nuestra constructora interna especifica acero estructural con alto contenido reciclado documentado, concreto con cenizas volantes o escoria que mejoran durabilidad en clima extremo, y materiales de acabado con Declaraciones de Productos Saludables (HPD).',
+        'Reduce la huella de transporte con abastecimiento regional dentro de un radio de 160 km del sitio de construcción en Mexicali. Acero de Ternium y ArcelorMittal, concreto de plantas locales de CEMEX y Holcim, y materiales de construcción de distribuidores regionales — todos dentro del radio que suma créditos LEED en la categoría de Materiales y Recursos. Grupo Nelson tiene relaciones de largo plazo con estos proveedores — 30 años de construcción en Mexicali generan una cadena de suministro que no se improvisa.',
+        'Gestiona los residuos de obra con separación del 100% de materiales recuperables y desvío mínimo del 50% de vertedero. Acero, concreto, cartón, madera y plásticos de embalaje — cada fracción con destino documentado y trazabilidad verificable. En la nave Gulfstream 550K, nuestra constructora interna gestionó residuos de 52,200 m² de construcción con este estándar.',
       ]}
       features={[
         {
@@ -28,7 +28,7 @@ export default function MaterialesRecursosPage() {
         },
         {
           title: 'Abastecimiento regional <160 km',
-          description: 'Proveedores locales de Mexicali que suman créditos LEED adicionales. 28 años de relaciones con la cadena de suministro de la región.',
+          description: 'Proveedores locales de Mexicali que suman créditos LEED adicionales. 30 años de relaciones con la cadena de suministro de la región.',
         },
         {
           title: 'Desvío de residuos >50% con trazabilidad',
@@ -36,8 +36,8 @@ export default function MaterialesRecursosPage() {
         },
       ]}
       subtituloSeccion="Materiales con EPD verificada para tu nave industrial LEED en Mexicali"
-      parrafoCierre="Construye tu nave industrial en Mexicali con materiales que tienen EPD, certificados de contenido reciclado y trazabilidad de residuos documentada. Baumex integra estos estándares en cada proyecto con proveedores como Ternium, CEMEX y Holcim dentro del radio de 160 km. Solicita una consulta."
-      fuentes="LEED v4.1 Materials & Resources Credits · ISO 14025 (Environmental Product Declarations) · Datos de proyecto: Gulfstream 550K, Baumex (2024-2026)"
+      parrafoCierre="Construye tu nave industrial en Mexicali con materiales que tienen EPD, certificados de contenido reciclado y trazabilidad de residuos documentada. Nuestra constructora interna integra estos estándares en cada proyecto con proveedores como Ternium, CEMEX y Holcim dentro del radio de 160 km. Solicita una consulta."
+      fuentes="LEED v4.1 Materials & Resources Credits · ISO 14025 (Environmental Product Declarations) · Datos de proyecto: Gulfstream 550K, Grupo Nelson (2024-2026)"
     />
   )
 }

@@ -25,7 +25,7 @@ export function GridPoligonos2x1TextoVertical() {
               src="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-269.jpg"
               alt="Nave industrial LEED en Mexicali — Grupo Nelson"
               overlayColor="oklch(64.6% 0.222 41.116 / 0.9)"
-              text="28 años en clima extremo"
+              text="30 años en clima extremo"
               textColor="text-white"
               className="rounded-none"
             />

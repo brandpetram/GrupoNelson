@@ -190,12 +190,12 @@ export default function ProyectosEspecializadosPage() {
             sismo no volviera a parar la operación.
           </p>
           <p className={splitParagraphClass}>
-            Baumex propuso sistemas antisísmicos{" "}
+            La constructora interna de Grupo Nelson propuso sistemas antisísmicos{" "}
             <strong>BRB (Buckling-Restrained Braces)</strong> — disipadores de
             energía en puntos estratégicos de la estructura. Era la primera vez
-            que Baumex los implementaba. Tecnología usada en Ciudad de México y
-            Japón, aplicada por primera vez a esta escala en un proyecto de
-            Baumex. La propuesta vino de Baumex, no del cliente.
+            que los implementábamos. Tecnología usada en Ciudad de México y
+            Japón, aplicada por primera vez a esta escala en uno de nuestros
+            proyectos. La propuesta vino de nuestro equipo, no del cliente.
           </p>
           <p className={splitParagraphClass}>
             Hoy es <strong>la nave industrial más grande de Mexicali</strong>,
@@ -219,8 +219,8 @@ export default function ProyectosEspecializadosPage() {
           <p className={splitParagraphClass}>
             <strong>Honeywell</strong> necesitaba simular condiciones de vuelo —
             velocidad y volumen de aire — para pruebas de componentes
-            aeroespaciales. El requerimiento no tenía precedente en los
-            proyectos de Baumex.
+            aeroespaciales. El requerimiento no tenía precedente en
+            nuestros proyectos.
           </p>
           <p className={splitParagraphClass}>
             El edificio mide <strong>20 metros de altura</strong> y aloja un
@@ -236,7 +236,7 @@ export default function ProyectosEspecializadosPage() {
           <p className={splitParagraphClass}>
             El proyecto ejecutivo se elaboró en conjunto entre ingenieros de{" "}
             <strong>Honeywell</strong> e ingenieros de{" "}
-            <strong>Baumex</strong>. Tomó 8 meses de construcción más meses
+            <strong>Grupo Nelson</strong>. Tomó 8 meses de construcción más meses
             adicionales de pruebas por parte de Honeywell. Hoy el túnel opera y
             los componentes aeroespaciales se prueban en condiciones simuladas
             de vuelo.

@@ -29,10 +29,6 @@ export default function AvailableBuildingsClient({ naves }: { naves: NaveIndustr
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
               Available Industrial<br className="hidden sm:block" /> Buildings
             </h1>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-              {disponibles} buildings available in Nelson II, El Vigia and El Vigia II.
-              Click <strong>+</strong> to view full specifications and request information.
-            </p>
           </div>
         </section>
 

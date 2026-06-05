@@ -8,18 +8,18 @@ import { ClipboardCheck, HardHat, Handshake, Users, RotateCcw } from "lucide-rea
 const text = {
   es: {
     mainTitle: 'De anteproyecto a entrega — cómo construimos',
-    mainSubtitle: 'Un solo contrato, un solo responsable. Así se ve un proyecto con Baumex de principio a fin.',
+    mainSubtitle: 'Un solo contrato, un solo responsable. Así se ve un proyecto con Constructora de Casa de principio a fin.',
     section1Title: 'El proceso constructivo en 3 fases',
     section1Subtitle: 'Cada proyecto sigue una secuencia probada en más de 75 entregas. Sin improvisación, sin sorpresas.',
     section2Title: 'Por qué las Fortune 500 regresan',
-    section2Subtitle: 'El 80% de los clientes de Baumex son recurrentes. La razón no es el precio — es la certeza de entrega.',
+    section2Subtitle: 'El 80% de los clientes que construyen con Constructora de Casa regresan. La razón no es el precio — es la certeza de entrega.',
     transferFeatures: [
       { id: 1, name: 'Anteproyecto y proyecto ejecutivo', description: 'Defines tus requerimientos. 6 departamentos de ingeniería desarrollan el proyecto ejecutivo en paralelo.', icon: ClipboardCheck },
       { id: 2, name: 'Permisos y procura', description: 'Permisos municipales, estatales y federales. Insumos de entrega prolongada ordenados desde el día uno.', icon: HardHat },
       { id: 3, name: 'Construcción y entrega', description: '450 trabajadores, 45 subcontratistas, reuniones semanales con 16+ asistentes. Entrega llave en mano.', icon: Handshake },
     ],
     communicationFeatures: [
-      { id: 1, name: 'Clientes que regresan década tras década', description: 'Gulfstream lleva 20+ años con Baumex. Honeywell, 30. Ya conocemos sus estándares y sus tiempos.', icon: RotateCcw },
+      { id: 1, name: 'Clientes que regresan década tras década', description: 'Gulfstream lleva 20+ años construyendo con nosotros. Honeywell, 30. Ya conocemos sus estándares y sus tiempos.', icon: RotateCcw },
       { id: 2, name: 'La maquinaria humana detrás de cada proyecto', description: '1,092,745 horas hombre. Ruta crítica de 18 hitos. 11 puntos de control. ERP en tiempo real.', icon: Users },
     ],
     imgAlt1: 'Nave industrial',
@@ -27,18 +27,18 @@ const text = {
   },
   en: {
     mainTitle: 'From Brief to Delivery — How We Build',
-    mainSubtitle: 'One contract, one point of accountability. This is what a project with Baumex looks like from start to finish.',
+    mainSubtitle: 'One contract, one point of accountability. This is what a project with our In-House Construction team looks like from start to finish.',
     section1Title: 'The construction process in 3 phases',
     section1Subtitle: 'Every project follows a sequence proven across 75+ deliveries. No improvisation, no surprises.',
     section2Title: 'Why Fortune 500 companies keep coming back',
-    section2Subtitle: '80% of Baumex clients are repeat customers. The reason is not price — it is certainty of delivery.',
+    section2Subtitle: '80% of the clients who build with In-House Construction come back. The reason is not price — it is certainty of delivery.',
     transferFeatures: [
       { id: 1, name: 'Brief and executive design', description: 'You define your requirements. 6 engineering departments develop the executive design in parallel.', icon: ClipboardCheck },
       { id: 2, name: 'Permits and procurement', description: 'Municipal, state, and federal permits. Long lead items ordered from day one.', icon: HardHat },
       { id: 3, name: 'Construction and delivery', description: '450 workers, 45 subcontractors, weekly meetings with 16+ attendees. Turnkey delivery.', icon: Handshake },
     ],
     communicationFeatures: [
-      { id: 1, name: 'Clients who return decade after decade', description: 'Gulfstream has been with Baumex for 20+ years. Honeywell, 30. We already know their standards and their timelines.', icon: RotateCcw },
+      { id: 1, name: 'Clients who return decade after decade', description: 'Gulfstream has been building with us for 20+ years. Honeywell, 30. We already know their standards and their timelines.', icon: RotateCcw },
       { id: 2, name: 'The human machinery behind every project', description: '1,092,745 man-hours. Critical path of 18 milestones. 11 quality checkpoints. Real-time ERP.', icon: Users },
     ],
     imgAlt1: 'Industrial building construction',

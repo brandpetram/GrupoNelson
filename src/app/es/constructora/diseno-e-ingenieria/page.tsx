@@ -228,7 +228,7 @@ export default function DisenoEIngenieriaPage() {
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
             feature2Titulo="ISN activo — acceso a cadenas Fortune 500"
-            feature2Descripcion="Calificación 'Recomendado' por Honeywell en ISN. Sin eso, no entras a su cadena de proveedores. Con eso, tu nave la construye un equipo pre-aprobado."
+            feature2Descripcion="Calificación 'Recomendado' en ISN, la más alta de la plataforma. Sin eso, no entras a cadenas de proveedores Fortune 500. Con eso, tu nave la construye un equipo pre-aprobado."
           />
         </div>
 
@@ -236,7 +236,7 @@ export default function DisenoEIngenieriaPage() {
         <div>
           <SplitWithImageBPConProps
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
-            imagenAlt="Ingeniería Baumex"
+            imagenAlt="Ingeniería Constructora de Casa"
             tagline="Tu Obra Segura"
             titulo="Tu personal y el nuestro protegidos por el mismo sistema que aprobó Gulfstream"
             parrafo1="Si tu corporativo audita seguridad antes de autorizar un constructor, esta es la tabla de indicadores: 1,092,745 horas hombre trabajadas con cero muertes. 404 días consecutivos sin accidentes."

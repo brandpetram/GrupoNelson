@@ -26,7 +26,7 @@ export function CallToAction() {
                     <div className="mx-auto max-w-xl text-center">
                         <div className="relative">
                             <h2 className="text-foreground text-balance text-4xl font-semibold lg:text-5xl">Your next industrial facility in Mexicali</h2>
-                            <p className="text-foreground mb-6 mt-4 text-balance text-lg">Documented planning, weekly reports, signed meeting minutes, and safety scorecard. 75 projects managed with this method over 28 years.</p>
+                            <p className="text-foreground mb-6 mt-4 text-balance text-lg">Documented planning, weekly reports, signed meeting minutes, and safety scorecard. 75 projects managed with this method over 30 years.</p>
 
                             <Button
                                 asChild

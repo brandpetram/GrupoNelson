@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/construction/international-standards',
   title: 'International Construction Standards',
-  description: 'Industrial buildings in Mexicali built to FM Global, NFPA, LEED, ISN, IBC, and NOM standards. Baumex: 75+ projects, audits by Gulfstream and Honeywell.',
+  description: 'Industrial buildings in Mexicali built to FM Global, NFPA, LEED, ISN, IBC, and NOM standards. In-House Construction: 75+ projects, audits by Gulfstream and Honeywell.',
 })
 
 export default function InternationalStandardsPage() {
@@ -72,7 +72,7 @@ export default function InternationalStandardsPage() {
           <GunLikeConProps
             poligonoText="International Standards"
             titulo="Bring your most demanding certification"
-            parrafo="28 years learning, implementing, and meeting international standards in industrial buildings across Mexicali."
+            parrafo="30 years learning, implementing, and meeting international standards in industrial buildings across Mexicali."
           />
         </div>
 
@@ -111,7 +111,7 @@ export default function InternationalStandardsPage() {
             tagline="Your Project, Your Standards"
             titulo="Tell us what you need to comply with"
             parrafo1="If you already know which certifications your corporate requires, tell us which ones. If you're not sure yet, we can help you define them."
-            parrafo2="28 years implementing international standards in industrial buildings across Mexicali. Every certification we master today was learned because a client needed it — and we delivered."
+            parrafo2="30 years implementing international standards in industrial buildings across Mexicali. Every certification we master today was learned because a client needed it — and we delivered."
             feature1Icon={
               <CloudArrowUpIcon
                 aria-hidden="true"
@@ -137,7 +137,7 @@ export default function InternationalStandardsPage() {
               />
             }
             feature3IconColor="text-green-600 dark:text-green-500"
-            feature3Titulo="28 years doing this."
+            feature3Titulo="30 years doing this."
             feature3Descripcion="Every certification we master today was learned because a client needed it."
             parrafo3="Tell us what your operation needs. We'll show you how it's implemented in your project."
             subtitulo="Free consultation"

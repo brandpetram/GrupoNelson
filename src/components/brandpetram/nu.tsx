@@ -7,26 +7,22 @@ const text = {
   es: {
     titleStart: 'Construcción Industrial',
     titleHighlight: 'de Clase Mundial',
-    descriptionBold: 'concentra diseño, estimación, construcción y supervisión',
-    descriptionRest: 'bajo un mismo contrato. El arquitecto que traza la distribución trabaja en el mismo edificio que el superintendente que supervisa el colado.',
+    description: 'Desde el primer plano hasta la supervisión en campo, nuestro equipo colabora hombro con hombro bajo el mismo techo para garantizar una ejecución impecable.',
     contactText: 'Contáctanos →',
     contactHref: '/contacto',
     boxTitleStart: 'Disciplinas',
-    boxTitleMid: 'de ingeniería',
     boxTitleHighlight: 'internas',
-    list: ['Diseño Arquitectónico Industrial', 'Ingeniería Estructural y Sísmica', 'Sistemas Eléctricos de Alta Capacidad'],
+    list: ['Diseño Arquitectónico Industrial', 'Ingeniería Estructural y Sísmica', 'Sistemas Eléctricos de Alta Capacidad', 'HVAC', 'Sistema Contraincendio', 'Distribución Eléctrica', 'Sistema Fotovoltaico'],
   },
   en: {
     titleStart: 'World-Class',
     titleHighlight: 'Industrial Construction',
-    descriptionBold: 'integrates design, estimation, construction, and supervision',
-    descriptionRest: 'under a single contract. The architect who draws the layout works in the same building as the superintendent who oversees the concrete pour.',
+    description: 'From the first blueprint to on-site supervision, our team works side by side under one roof to ensure flawless execution.',
     contactText: 'Contact us →',
     contactHref: '/contact',
     boxTitleStart: 'In-House',
-    boxTitleMid: 'Engineering',
     boxTitleHighlight: 'Disciplines',
-    list: ['Industrial Architectural Design', 'Structural & Seismic Engineering', 'High-Capacity Electrical Systems'],
+    list: ['Industrial Architectural Design', 'Structural & Seismic Engineering', 'High-Capacity Electrical Systems', 'HVAC', 'Fire Protection System', 'Electrical Distribution', 'Photovoltaic System'],
   },
 }
 
@@ -81,11 +77,7 @@ export default function Nu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             <div className=" ml-5 md:ml-10 1200:ml-0 mt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 1200:col-span-2 1200:mt-0">
               {/* Texto descriptivo */}
               <div className="sm:max-w-xs 1200:max-w-lg 1366:max-w-sm 1920:max-w-md 1366:ml-0 leading-loose text-muted-foreground text-[1rem] 360:text-[1rem] 393:text-[1.3rem] 430:text-[1.3rem] 768:text-[1.2rem] 834:text-[1.2rem] 1024:text-[1.5rem] 1200:text-[1.45rem] 1280:text-[1.2rem] 1366:text-[1.3rem] 1440:text-[1.3rem] 1536:text-[1.3rem] 1728:text-[1.3rem] 1920:text-[1.7rem]">
-                <p>
-                  Baumex{" "}
-                  <span className="text-blue-700 font-bold">{t.descriptionBold}</span>{" "}
-                  {t.descriptionRest}
-                </p>
+                <p>{t.description}</p>
                 <div className="mt-12">
                   <div className="cursor-pointer mt-4">
                     <a href={t.contactHref} className="text-blue-700 font-medium hover:text-blue-900">
@@ -100,8 +92,6 @@ export default function Nu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
                 <div className="border border-foreground/20 py-10 px-10 font-bold 1200:w-[18rem] 1366:w-[20rem] 1536:w-[22rem] 1728:w-[24rem] 1920:w-[26rem]">
                   <h5 className="text-foreground text-base 360:text-base 393:text-[1.05rem] 430:text-[1.1rem] 768:text-[1.3rem] 834:text-[1.3rem] 1024:text-[1.3rem] 1200:text-[1.1rem] 1280:text-[1.15rem] 1366:text-[1.2rem] 1440:text-[1.25rem] 1536:text-[1.35rem] 1728:text-[1.5rem] 1920:text-[1.75rem] leading-none w-10/12">
                     {t.boxTitleStart}{" "}
-                    <br className="md:hidden" />{" "}
-                    {t.boxTitleMid}{" "}
                     <span className="font-bold text-blue-500">{t.boxTitleHighlight}</span>
                   </h5>
                   <ul className="text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-medium mt-8 text-muted-foreground tracking-wider uppercase">

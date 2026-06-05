@@ -40,14 +40,13 @@ export function FeatureCardsResultados() {
                                 75 Proyectos Completados
                             </FeatureCardTitle>
                             <FeatureCardDescription>
-                                <span className="text-foreground">28 años de ejecución documentada.</span> Desde 5,000 m² hasta 52,200 m². 7 sectores industriales. Presencia en 4 estados.
+                                <span className="text-foreground">30 años de ejecución documentada.</span> Desde 5,000 m² hasta 52,200 m². 7 sectores industriales. Presencia en 4 estados.
                             </FeatureCardDescription>
                         </FeatureCardContent>
                         <FeatureCardCIllustration>
                             <div className="flex flex-col items-center gap-2 py-6">
                                 <span className="text-foreground text-6xl font-bold">75</span>
                                 <span className="text-muted-foreground text-lg font-medium">proyectos</span>
-                                <span className="text-muted-foreground text-sm">1997–2025</span>
                             </div>
                         </FeatureCardCIllustration>
                     </FeatureCard>

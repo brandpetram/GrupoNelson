@@ -18,9 +18,9 @@ const team = [
   },
   {
     name: 'Dirección de Constructora',
-    role: 'Baumex — construcción a la medida',
+    role: 'Constructora de Casa — construcción a la medida',
     description:
-      'Baumex, la constructora interna, ejecuta cada proyecto de principio a fin. Las decisiones de ingeniería y presupuesto se validan en consejo ejecutivo — tu obra no depende de un solo gerente de proyecto.',
+      'Nuestra Constructora de Casa ejecuta cada proyecto de principio a fin. Las decisiones de ingeniería y presupuesto se validan en consejo ejecutivo — tu obra no depende de un solo gerente de proyecto.',
   },
   {
     name: 'Dirección Administrativa',
@@ -195,8 +195,8 @@ export default function LiderazgoPage() {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
               <p className="text-base leading-relaxed text-muted-foreground/80">
-                La continuidad del liderazgo no se limita a la familia. Baumex fue cofundada
-                junto con la segunda generación — no es un contratista rotativo ni un gerente
+                La continuidad del liderazgo no se limita a la familia. Nuestra Constructora de Casa
+                fue cofundada junto con la segunda generación — no es un contratista rotativo ni un gerente
                 recién asignado.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground/80">

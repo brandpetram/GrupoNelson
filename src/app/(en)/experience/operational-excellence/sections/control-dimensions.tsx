@@ -9,7 +9,7 @@ export function ControlDimensions() {
                 <div className="mx-auto w-full max-w-5xl px-6 xl:px-0">
                     <div className="mx-auto max-w-2xl space-y-6 text-center">
                         <h2 className="text-foreground text-balance text-4xl font-semibold lg:text-5xl">Three dimensions of control on every project</h2>
-                        <p className="text-muted-foreground text-balance text-lg">Baumex&apos;s control system operates simultaneously across schedule, quality, and safety. It is not a single practice — it is a system that covers the three areas where a project can fail.</p>
+                        <p className="text-muted-foreground text-balance text-lg">Our In-House Construction team&apos;s control system operates simultaneously across schedule, quality, and safety. It is not a single practice — it is a system that covers the three areas where a project can fail.</p>
                     </div>
                 </div>
             </Container>
@@ -84,7 +84,7 @@ export function ControlDimensions() {
                         <FeatureCardContent className="bg-card!">
                             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">Quality control</p>
                             <p className="text-lg lg:text-xl">
-                                11 documented control points per project. Submittals approved by the client before installation. Third-party lab testing by EPGC — independent verification that does not depend solely on Baumex. Photographic evidence by construction phase.
+                                11 documented control points per project. Submittals approved by the client before installation. Third-party lab testing by EPGC — independent verification that does not depend solely on our In-House Construction team. Photographic evidence by construction phase.
                             </p>
                         </FeatureCardContent>
 

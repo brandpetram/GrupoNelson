@@ -37,16 +37,17 @@ export function SplitStickyCasos() {
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Después del terremoto de 7.2 en 2010 que dañó su planta
-              existente, Gulfstream confió en Baumex para construir la nave
-              más grande de la ciudad. No buscaron alternativas. No abrieron
-              licitación. Asignaron directamente.
+              existente, Gulfstream confió en la constructora interna de
+              Grupo Nelson para construir la nave más grande de la ciudad.
+              No buscaron alternativas. No abrieron licitación. Asignaron
+              directamente.
             </p>
 
             {/* Datos ancla — cada fact aparece UNA sola vez */}
             <div className="space-y-4 border-l-2 border-blue-600/30 pl-6">
               <div>
                 <p className="font-semibold text-foreground">
-                  5 naves construidas por Baumex
+                  5 naves construidas por nuestro equipo
                 </p>
                 <p className="text-muted-foreground">
                   Incluyendo la nave de 52,200 m² — la más grande de
@@ -109,7 +110,8 @@ export function SplitStickyCasos() {
                 </p>
                 <p className="text-muted-foreground">
                   Múltiples expansiones — Mission 1, 2 y 3 — construidas por
-                  Baumex a lo largo de tres décadas de relación continua.
+                  nuestra constructora interna a lo largo de tres décadas de
+                  relación continua.
                 </p>
               </div>
               <div>
@@ -117,9 +119,9 @@ export function SplitStickyCasos() {
                   Calificación ISN &quot;Recomendado&quot;
                 </p>
                 <p className="text-muted-foreground">
-                  La calificación más alta que la plataforma permite. No es
-                  solo que Baumex cumpla los estándares de Honeywell — tiene
-                  la calificación máxima del sistema que los mide.
+                  La calificación más alta que ISN permite. No es solo que
+                  Constructora de Casa cumpla los estándares de Honeywell —
+                  tiene la calificación máxima de la plataforma que los mide.
                 </p>
               </div>
               <div>
@@ -129,8 +131,8 @@ export function SplitStickyCasos() {
                 <p className="text-muted-foreground">
                   Cuando Honeywell necesitó un túnel de viento aeroespacial,
                   el proyecto ejecutivo se elaboró conjuntamente entre
-                  ingenieros de Honeywell e ingenieros de Baumex. Eso solo
-                  pasa cuando el nivel de confianza es alto.
+                  ingenieros de Honeywell e ingenieros de Constructora de
+                  Casa. Eso solo pasa cuando el nivel de confianza es alto.
                 </p>
               </div>
             </div>
@@ -155,8 +157,9 @@ export function SplitStickyCasos() {
           <div className="space-y-3">
             <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
               Si Gulfstream no necesitó buscar alternativas en 35 años, y
-              Honeywell le dio a Baumex la calificación más alta posible —
-              el nivel ya está demostrado.
+              en las instalaciones de Honeywell la plataforma ISN le dio a
+              Constructora de Casa la calificación más alta posible — el
+              nivel ya está demostrado.
             </h3>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Lo que los estándares de estos clientes exigen dice más sobre

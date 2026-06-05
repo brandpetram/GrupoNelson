@@ -101,19 +101,19 @@ export default function DiferenciaNelsonPage() {
         {/* ── Diferenciador 3: Constructora interna ── */}
         <SplitSimpleBP
           tagline="Constructora interna"
-          title="Baumex: un contrato, un responsable, de terreno a llave en mano"
+          title="Constructora de Casa: un contrato, un responsable, de terreno a llave en mano"
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
-          imageAlt="Baumex constructora — naves industriales en Mexicali"
+          imageAlt="Constructora de Casa — naves industriales en Mexicali"
         >
           <p className={splitParagraphClass}>
             Si necesitas una nave que no existe en inventario,{" "}
-            <strong>Baumex</strong> la diseña y construye. Es la constructora
-            propia de Grupo Nelson — no un tercero subcontratado. Un solo
-            contrato cubre diseño, permisos, construcción y entrega.
+            <strong>Constructora de Casa</strong> la diseña y construye — la
+            constructora propia de Grupo Nelson, no un tercero subcontratado.
+            Un solo contrato cubre diseño, permisos, construcción y entrega.
           </p>
           <p className={splitParagraphClass}>
-            <strong>28 años</strong> de operación.{" "}
+            <strong>30 años</strong> de operación.{" "}
             <strong>75 proyectos</strong> completados. El mismo grupo que
             administra el parque donde vas a operar es el que construye tu nave.
           </p>

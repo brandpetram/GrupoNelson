@@ -139,7 +139,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                       bloque4LinkTexto="Solicitar proyecto"
                       bloque4LinkHref="/contacto"
                       imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
-                      imagenIzquierdaAlt="Nave industrial a la medida construida por Baumex en Mexicali"
+                      imagenIzquierdaAlt="Nave industrial a la medida construida por Constructora de Casa en Mexicali"
                   />
               </div>
           </div>

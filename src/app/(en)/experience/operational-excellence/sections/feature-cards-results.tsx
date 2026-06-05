@@ -40,14 +40,13 @@ export function FeatureCardsResults() {
                                 75 Completed Projects
                             </FeatureCardTitle>
                             <FeatureCardDescription>
-                                <span className="text-foreground">28 years of documented execution.</span> From 54,000 ft² to 562,000 ft². 7 industrial sectors. Presence in 4 states.
+                                <span className="text-foreground">30 years of documented execution.</span> From 54,000 ft² to 562,000 ft². 7 industrial sectors. Presence in 4 states.
                             </FeatureCardDescription>
                         </FeatureCardContent>
                         <FeatureCardCIllustration>
                             <div className="flex flex-col items-center gap-2 py-6">
                                 <span className="text-foreground text-6xl font-bold">75</span>
                                 <span className="text-muted-foreground text-lg font-medium">projects</span>
-                                <span className="text-muted-foreground text-sm">1997–2025</span>
                             </div>
                         </FeatureCardCIllustration>
                     </FeatureCard>

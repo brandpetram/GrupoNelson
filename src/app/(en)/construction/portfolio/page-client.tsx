@@ -53,11 +53,11 @@ export default function PortfolioClient() {
         {/* Hero Section */}
         <div className="max-w-3xl">
           <h1 className="text-3xl sm:text-7xl font-light tracking-tighter leading-none text-gray-900 dark:text-white">
-            +75 projects. <br/> in 28 years.
+            +75 projects. <br/> in 30 years.
             <span className="block text-primary mt-2 font-extrabold text-5xl sm:text-7xl">Experience that builds confidence.</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-            From our first industrial building in 1997 to the 52,200 m² aerospace complex we are building today for Gulfstream. This is the complete track record of Baumex Constructora.
+            From our first industrial building in 1997 to the 52,200 m² aerospace complex we are building today for Gulfstream. This is the complete track record of our In-House Construction team.
           </p>
         </div>
 

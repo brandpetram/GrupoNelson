@@ -10,8 +10,7 @@ import { TypewriterClients } from '@/components/motion-plus/typewriter-clients'
 const text = {
   es: {
     badge: 'Constructora interna de Grupo Nelson',
-    heading: <>La Constructora en Mexicali que sirve a<br /> </>,
-    description: 'Empresas de clase mundial como Gulfstream llevan más de 20 años construyendo con nosotros. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 corporaciones internacionales eligen a Baumex proyecto tras proyecto. 4.5 millones de pies cuadrados construidos desde 1997. El 80% regresa.',
+    heading: <>La Constructora de confianza para líderes globales como<br /> </>,
     cta: 'Conocer más',
     contact: 'Contacto',
     badgeHref: '/constructora/baumex',
@@ -19,8 +18,7 @@ const text = {
   },
   en: {
     badge: "Grupo Nelson\u2019s in-house construction firm",
-    heading: <>The Construction Firm in Mexicali Trusted by<br /> </>,
-    description: 'World-class companies like Gulfstream have been building with us for over 20 years. Honeywell, 30. DHL, Vertiv, Skyworks, Baxter — 33 international corporations choose Baumex project after project. 4.5 million square feet built since 1997. 80% come back.',
+    heading: <>The construction firm trusted by global leaders like<br /> </>,
     cta: 'Learn More',
     contact: 'Contact Us',
     badgeHref: '/construction/baumex',
@@ -91,7 +89,7 @@ export default function Mu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
                     className="hidden md:inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base 1200:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span className="px-3 py-0.5 text-white text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem] font-semibold leading-5 uppercase tracking-wide bg-linear-to-br from-blue-600 to-blue-700 rounded-full">
-                      Baumex
+                      Constructora de Casa
                     </span>
                     <span className="ml-4 text-xs 360:text-xs 393:text-xs 430:text-[0.8rem] 768:text-sm 834:text-sm 1024:text-sm 1200:text-[0.75rem] 1280:text-[0.8rem] 1366:text-[0.85rem] 1440:text-[0.875rem] 1536:text-[0.9rem] 1728:text-[1rem] 1920:text-[1.1rem]">
                       {t.badge}
@@ -101,9 +99,6 @@ export default function Mu({ lang = 'es' }: { lang?: 'en' | 'es' }) {
                     {t.heading}<span className="block h-[1em]"><TypewriterClients /></span>
 
                   </h1>
-                  <p className="mt-3 text-sm 360:text-sm 393:text-[1rem] 430:text-[1.1rem] 768:text-xl 834:text-xl 1024:text-[1.5rem] 1200:text-[1.2rem] 1280:text-[1rem] 1366:text-[1.05rem] 1440:text-[1.1rem] 1536:text-[1.15rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-gray-300 sm:mt-5">
-                    {t.description}
-                  </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center 1200:justify-start">
                     <div className="rounded-xs shadow">
                       <button

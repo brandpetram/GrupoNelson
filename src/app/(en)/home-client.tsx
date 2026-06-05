@@ -154,7 +154,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                       bloque4LinkTexto="Request a project"
                       bloque4LinkHref="/contact"
                       imagenIzquierdaSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-256.jpg"
-                      imagenIzquierdaAlt="Build-to-suit industrial building by Baumex in Mexicali"
+                      imagenIzquierdaAlt="Build-to-suit industrial building by In-House Construction in Mexicali"
                   />
               </div>
           </div>

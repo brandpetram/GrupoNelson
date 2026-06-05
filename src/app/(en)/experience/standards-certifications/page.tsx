@@ -12,7 +12,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/experience/standards-certifications',
   title: 'Standards & Certifications',
-  description: 'Baumex meets three types of requirements: corporate (ISN Recommended by Honeywell), engineering (IBC, FM Global, BRB, NFPA, LEED), and regulatory (NOM-009, NOM-027, DC-3). Each standard demonstrated in real industrial facilities in Mexicali.',
+  description: 'Grupo Nelson’s In-House Construction team meets three types of requirements: corporate (ISN Recommended), engineering (IBC, FM Global, BRB, NFPA, LEED), and regulatory (NOM-009, NOM-027, DC-3). Each standard demonstrated in real industrial facilities in Mexicali.',
 })
 
 const engineeringStandards = [
@@ -31,7 +31,7 @@ const engineeringStandards = [
   {
     name: 'BRB seismic engineering',
     description:
-      'Baumex implemented Buckling-Restrained Braces for the first time in industrial facilities in Mexicali — technology proven in Mexico City and Japan, applied in seismic zone 4 on the 550,000 ft² Gulfstream facility. It is not a certification: it is structural engineering that protects the continuity of your operation.',
+      'Our In-House Construction team implemented Buckling-Restrained Braces for the first time in industrial facilities in Mexicali — technology proven in Mexico City and Japan, applied in seismic zone 4 on the 550,000 ft² Gulfstream facility. It is not a certification: it is structural engineering that protects the continuity of your operation.',
     icon: BoltIcon,
   },
   {
@@ -55,7 +55,7 @@ export default function StandardsCertificationsPage() {
           badge="Standards · Certifications · Compliance"
           headlineTop="Three types of requirements."
           headlineAccent="Each one demonstrated in a real project."
-          subtitle="Your project comes with three types of requirements: your corporate standards, your industry and insurer standards, and regulatory compliance. Baumex has met all three — in real industrial facilities in Mexicali."
+          subtitle="Your project comes with three types of requirements: your corporate standards, your industry and insurer standards, and regulatory compliance. Our In-House Construction team has met all three — in real industrial facilities in Mexicali."
           primaryButtonText="Request a consultation"
           primaryButtonHref="/contact"
           secondaryButtonText="See the standards"
@@ -90,8 +90,8 @@ export default function StandardsCertificationsPage() {
             {/* ISN */}
             <div className="mb-12">
               <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                Honeywell rates Baumex as &quot;Recommended&quot; on
-                ISNetworld
+                Our In-House Construction team is a &quot;Recommended&quot;
+                contractor on ISNetworld
               </h3>
               <p className="text-lg leading-relaxed mb-4">
                 ISNetworld is the platform Fortune 500 companies use to
@@ -99,9 +99,9 @@ export default function StandardsCertificationsPage() {
                 most local contractors do not pass the due diligence phase.
               </p>
               <p className="text-lg leading-relaxed">
-                Baumex holds a &quot;Recommended&quot; rating — the highest
-                on the platform — active for Honeywell Aero-Mexicali and
-                Honeywell Mexico-Corporate. If your corporate office
+                Grupo Nelson holds a &quot;Recommended&quot; rating — the highest
+                on the platform — active and verifiable for Fortune 500
+                corporations in Mexicali. If your corporate office
                 requires ISN validation, the precedent already exists and
                 is verifiable.
               </p>
@@ -145,7 +145,7 @@ export default function StandardsCertificationsPage() {
                 construction, asset protection, and engineering standards
                 that ensure building integrity and operational continuity.
                 None of these are mandatory under Mexican law — they are
-                superior standards that Baumex already meets.
+                superior standards our In-House Construction team already meets.
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -225,7 +225,7 @@ export default function StandardsCertificationsPage() {
                   Certified labor training
                 </p>
                 <p className="text-base leading-relaxed">
-                  All Baumex personnel hold DC-3 labor skills certification.
+                  All personnel on our In-House Construction crews hold DC-3 labor skills certification.
                   It is not a training policy: it is verifiable certification
                   of every worker in the field.
                 </p>
@@ -238,7 +238,7 @@ export default function StandardsCertificationsPage() {
                   U.S.-comparable safety
                 </p>
                 <p className="text-base leading-relaxed">
-                  Baumex safety manuals are based on OSHA standards in
+                  Our In-House Construction team builds its safety manuals on OSHA standards in
                   addition to Mexican regulations. For an American buyer:
                   on-site safety meets standards comparable to those in your
                   home country.
@@ -252,7 +252,7 @@ export default function StandardsCertificationsPage() {
                 Independent validation: EPGC
               </h3>
               <p className="text-base leading-relaxed">
-                Quality control does not depend solely on Baumex. Independent
+                Quality control does not depend solely on our In-House Construction team. Independent
                 laboratories such as EPGC (Especialistas en Geotecnia y
                 Concretos) verify earthwork compaction and foundation quality
                 on every project. A third party validates it.

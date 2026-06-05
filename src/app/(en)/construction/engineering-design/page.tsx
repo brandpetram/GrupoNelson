@@ -228,7 +228,7 @@ export default function EngineeringDesignPage() {
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
             feature2Titulo="Active ISN — access to Fortune 500 supply chains"
-            feature2Descripcion="'Recommended' rating by Honeywell on ISN. Without it, you can't enter their supply chain. With it, your facility is built by a pre-approved team."
+            feature2Descripcion="'Recommended' rating on ISN, the platform's highest. Without it, you can't enter Fortune 500 supply chains. With it, your facility is built by a pre-approved team."
           />
         </div>
 
@@ -236,7 +236,7 @@ export default function EngineeringDesignPage() {
         <div>
           <SplitWithImageBPConProps
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
-            imagenAlt="Baumex Engineering"
+            imagenAlt="In-House Construction Engineering"
             tagline="Your Safe Worksite"
             titulo="Your workforce and ours protected by the same system Gulfstream approved"
             parrafo1="If your corporate audits safety before authorizing a builder, here is our scorecard: 1,092,745 man-hours worked with zero fatalities. 404 consecutive days without incidents."

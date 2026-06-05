@@ -6,19 +6,19 @@
 const text = {
   es: {
     row1Title: 'Construcción Industrial',
-    row1Text: 'Naves industriales, plantas de manufactura, centros de distribución y edificios comerciales diseñados y construidos bajo un solo contrato. Equipo propio de arquitectura, ingeniería civil, estructural, eléctrica, mecánica y estimación de costos. Sin subcontratos de diseño.',
+    row1Text: 'Naves industriales, plantas de manufactura, centros de distribución y edificios comerciales diseñados y construidos bajo un solo contrato. Equipo propio de arquitectura, ingeniería civil, estructural, eléctrica, mecánica y estimación de costos.',
     row2Title: 'Proyectos Especiales',
-    row2Text: 'Puentes vehiculares de 95 metros sin columnas, túneles de viento con sopladores de 3,000 HP, cimentaciones profundas a 18 metros en zona sísmica 4. Ingeniería compleja que requiere experiencia demostrada — no se licita en un directorio, se asigna por trayectoria.',
+    row2Text: 'Puentes vehiculares de 95 metros sin columnas, túneles de viento con sopladores de 3,000 HP, cimentaciones profundas a 18 metros en zona sísmica 4. Ingeniería compleja que requiere experiencia demostrada.',
     row3Title: 'Estándares Internacionales',
-    row3Text: 'Certificación FM Global en muros, cubierta, estructura y sistema contraincendio. LEED Gold en proceso para Gulfstream 550K. ISN Recomendado por Honeywell International. Diseño conforme a NFPA, IBC y Normas Oficiales Mexicanas desde el proyecto ejecutivo.',
+    row3Text: 'Garantizamos el cumplimiento de estándares globales mediante la certificación FM Global, así como desarrollos con certificación LEED y estatus de contratista aprobado ISN. Diseñamos el proyecto ejecutivo bajo normativas NFPA, IBC y Normas Oficiales Mexicanas.',
   },
   en: {
     row1Title: 'Industrial Construction',
-    row1Text: 'Industrial buildings, manufacturing plants, distribution centers, and commercial buildings designed and built under a single contract. In-house architecture, civil, structural, electrical, mechanical, and cost estimation teams. No outsourced design.',
+    row1Text: 'Industrial buildings, manufacturing plants, distribution centers, and commercial buildings designed and built under a single contract. In-house architecture, civil, structural, electrical, mechanical, and cost estimation teams.',
     row2Title: 'Specialized Projects',
-    row2Text: '95-meter column-free vehicular bridges, wind tunnels with 3,000 HP blowers, deep foundations at 18 meters in seismic zone 4. Complex engineering that requires proven experience — not bid through a directory, but assigned by track record.',
+    row2Text: '95-meter column-free vehicular bridges, wind tunnels with 3,000 HP blowers, deep foundations at 18 meters in seismic zone 4. Complex engineering that requires proven experience.',
     row3Title: 'International Standards',
-    row3Text: 'FM Global certification for walls, roofing, structure, and fire protection systems. LEED Gold in progress for Gulfstream 550K. ISN Recommended by Honeywell International. Design compliant with NFPA, IBC, and Mexican Official Standards from the executive design phase.',
+    row3Text: 'We ensure compliance with global standards through FM Global certification, along with LEED-certified developments and approved ISN contractor status. We develop the executive design in compliance with NFPA, IBC, and Mexican Official Standards.',
   },
 }
 

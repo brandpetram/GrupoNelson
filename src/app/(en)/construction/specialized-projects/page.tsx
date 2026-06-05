@@ -190,12 +190,13 @@ export default function SpecializedProjectsPage() {
             was clear: an earthquake must never stop the operation again.
           </p>
           <p className={splitParagraphClass}>
-            Baumex proposed{" "}
+            Our In-House Construction team proposed{" "}
             <strong>BRB (Buckling-Restrained Braces)</strong> seismic systems —
             energy dissipators at strategic structural points. It was the first
-            time Baumex implemented them. Technology used in Mexico City and
-            Japan, applied for the first time at this scale in a Baumex project.
-            The proposal came from Baumex, not the client.
+            time our team implemented them. Technology used in Mexico City and
+            Japan, applied for the first time at this scale in one of our
+            In-House Construction projects. The proposal came from us, not the
+            client.
           </p>
           <p className={splitParagraphClass}>
             Today it is <strong>the largest industrial building in Mexicali</strong>,
@@ -219,7 +220,7 @@ export default function SpecializedProjectsPage() {
           <p className={splitParagraphClass}>
             <strong>Honeywell</strong> needed to simulate flight conditions —
             air speed and volume — for aerospace component testing. The
-            requirement had no precedent in Baumex projects.
+            requirement had no precedent in our In-House Construction projects.
           </p>
           <p className={splitParagraphClass}>
             The building stands <strong>20 meters tall</strong> and houses a{" "}
@@ -233,8 +234,8 @@ export default function SpecializedProjectsPage() {
           </p>
           <p className={splitParagraphClass}>
             The executive project was developed jointly between{" "}
-            <strong>Honeywell</strong> engineers and{" "}
-            <strong>Baumex</strong> engineers. Construction took 8 months plus
+            <strong>Honeywell</strong> engineers and our own in-house
+            engineers. Construction took 8 months plus
             additional months of testing by Honeywell. Today the tunnel is
             operational and aerospace components are tested under simulated
             flight conditions.

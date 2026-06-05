@@ -13,13 +13,13 @@ export default function ProcesoCertificacionPage() {
     <LeedPageLayout
       eyebrow="Del diseño al certificado GBCI"
       titulo="Certifica tu nave industrial LEED en Mexicali — de la fase preliminar de diseño al certificado GBCI sin detener la obra"
-      intro="Gulfstream 550K (52,200 m²) está en proceso de certificación LEED Gold — actualmente en 53-55 puntos (Silver), apuntando a Gold con 10 MW de paneles solares. Baumex gestiona el proceso completo: registro, revisión de diseño, gestión de evidencias en construcción y revisión de construcción con trazabilidad en LEED Online."
+      intro="Gulfstream 550K (52,200 m²) está en proceso de certificación LEED Gold — actualmente en 53-55 puntos (Silver), apuntando a Gold con 10 MW de paneles solares. La constructora interna de Grupo Nelson gestiona el proceso completo: registro, revisión de diseño, gestión de evidencias en construcción y revisión de construcción con trazabilidad en LEED Online."
       imageSrc="/leed/leed2-mexicali-nave-industrial-certificacion-bdc-3.jpeg"
       imageAlt="Proceso de certificación LEED v4 BD+C — Nave industrial Mexicali"
       parrafos={[
-        'Asegura que cada decisión técnica de tu nave en Mexicali quede documentada en formato certificable desde el primer día. La certificación LEED no se obtiene al final de la obra — se gana o se pierde en las primeras semanas de diseño. Baumex alinea arquitectura, ingeniería MEP, sustentabilidad y construcción desde la fase preliminar de diseño para que el proceso integrativo de LEED v4 BD+C se ejecute sin improvisar documentación.',
-        'Cada crédito LEED requiere evidencia específica: memorias de cálculo, reportes de comisionamiento, certificados de materiales, registros de manejo de residuos, resultados de modelado energético. Cada evidencia tiene un formato y un momento preciso para generarse. En una nave de Mexicali donde el cronograma compite con la velocidad de la relocalización industrial (nearshoring), un proceso LEED mal gestionado retrasa la entrega. Baumex certifica sin detener la obra.',
-        'Obtén un certificado LEED que se sostiene ante inversionistas, inquilinos multinacionales y el propio GBCI. La calidad de la certificación depende de la calidad documental — y esa calidad se construye en cada fase del proyecto, no al final. Baumex ha ejecutado proyectos para Gulfstream, Honeywell y otras corporaciones Fortune 500 que exigen trazabilidad documental completa en cada fase constructiva.',
+        'Asegura que cada decisión técnica de tu nave en Mexicali quede documentada en formato certificable desde el primer día. La certificación LEED no se obtiene al final de la obra — se gana o se pierde en las primeras semanas de diseño. Nuestro equipo alinea arquitectura, ingeniería MEP, sustentabilidad y construcción desde la fase preliminar de diseño para que el proceso integrativo de LEED v4 BD+C se ejecute sin improvisar documentación.',
+        'Cada crédito LEED requiere evidencia específica: memorias de cálculo, reportes de comisionamiento, certificados de materiales, registros de manejo de residuos, resultados de modelado energético. Cada evidencia tiene un formato y un momento preciso para generarse. En una nave de Mexicali donde el cronograma compite con la velocidad de la relocalización industrial (nearshoring), un proceso LEED mal gestionado retrasa la entrega. Nuestra constructora interna certifica sin detener la obra.',
+        'Obtén un certificado LEED que se sostiene ante inversionistas, inquilinos multinacionales y el propio GBCI. La calidad de la certificación depende de la calidad documental — y esa calidad se construye en cada fase del proyecto, no al final. Grupo Nelson ha ejecutado proyectos para Gulfstream, Honeywell y otras corporaciones Fortune 500 que exigen trazabilidad documental completa en cada fase constructiva.',
       ]}
       features={[
         {
@@ -36,8 +36,8 @@ export default function ProcesoCertificacionPage() {
         },
       ]}
       subtituloSeccion="Certifica tu nave LEED en Mexicali con la constructora que ya está certificando la más grande de la ciudad"
-      parrafoCierre="Acelera tu certificación LEED en Mexicali. Baumex gestiona el proceso completo — del registro al certificado GBCI — con la experiencia de estar certificando la nave industrial más grande de la ciudad. Solicita una consulta para tu proyecto."
-      fuentes="USGBC LEED v4.1 BD+C (Building Design and Construction) · GBCI Certification Process · Datos de proyecto: Gulfstream 550K, Baumex (2024-2026)"
+      parrafoCierre="Acelera tu certificación LEED en Mexicali. La constructora interna de Grupo Nelson gestiona el proceso completo — del registro al certificado GBCI — con la experiencia de estar certificando la nave industrial más grande de la ciudad. Solicita una consulta para tu proyecto."
+      fuentes="USGBC LEED v4.1 BD+C (Building Design and Construction) · GBCI Certification Process · Datos de proyecto: Gulfstream 550K, Constructora de Casa (2024-2026)"
     />
   )
 }

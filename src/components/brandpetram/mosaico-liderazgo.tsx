@@ -112,7 +112,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "30 años dirigiendo la construcción",
     description:
-      "Baumex fue fundada en 1997 y lleva casi 30 años bajo la misma dirección. La continuidad no se limita a la familia.",
+      "Nuestra Constructora de Casa fue fundada en 1997 y lleva casi 30 años bajo la misma dirección. La continuidad no se limita a la familia.",
     href: "/nelson/liderazgo",
     bg: "bg-blue-900",
   },
@@ -165,7 +165,7 @@ const itemsEn: MosaicoItem[] = items.map((item) => {
     },
     '30 años dirigiendo la construcción': {
       title: '30 years leading construction',
-      description: 'Baumex was founded in 1997 and has been under the same leadership for nearly 30 years. Continuity is not limited to the family.',
+      description: 'Our In-House Construction team was founded in 1997 and has been under the same leadership for nearly 30 years. Continuity is not limited to the family.',
       href: '/about/leadership',
     },
   }
