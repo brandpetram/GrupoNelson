@@ -106,14 +106,14 @@ const items: MosaicItem[] = [
   },
   {
     type: "image",
-    src: "/grupo-nelson-naves-en-parques-industriales-en-mexicali-4.jpeg",
-    alt: "Industrial park in Mexicali",
+    src: "/parque-industrial-nelson-2-en-mexicali.jpeg",
+    alt: "Nelson II industrial park in Mexicali",
     aspect: "square",
   },
   {
     type: "image",
-    src: "/honeywell/honeywell-en-parque-industrial-de-mexicali-12.jpeg",
-    alt: "Honeywell industrial facility Mexicali",
+    src: "/grupo-nelson-naves-en-parques-industriales-en-mexicali-11.jpeg",
+    alt: "Grupo Nelson industrial facility in Mexicali",
     aspect: "tall",
   },
   {

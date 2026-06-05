@@ -74,8 +74,8 @@ export function HeroMarketing1Beta() {
 
             {/* H1 — sin borde debajo */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-none tracking-tight text-foreground">
-              Las empresas más exigentes que operan en Mexicali ya eligieron a
-              Grupo Nelson — y la mayoría se quedó.
+              Las empresas más exigentes que operan en Mexicali eligieron a
+              Grupo Nelson.
             </h1>
           </div>
         </div>
@@ -101,15 +101,13 @@ export function HeroMarketing1Beta() {
           {/* Columna derecha: H2 + P */}
           <div className="flex-1 space-y-4">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-foreground">
-              Lo que los estándares de estos clientes exigen dice más sobre
-              Grupo Nelson que cualquier cosa que Nelson pueda decir sobre sí
-              mismo.
+              Nuestra mejor carta de presentación es la exigencia de nuestros
+              clientes.
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-light">
-              Los casos de éxito no son testimoniales editados — son hechos
-              verificables con nombres, números y décadas de historia.
-              Gulfstream lleva 40 años. Honeywell lleva 30. Relaciones de
-              largo plazo donde los clientes expanden e inician nuevos proyectos.
+              Contamos con clientes que han confiado en nuestra solidez por más
+              de 30 años, expandiendo sus operaciones junto a nosotros gracias a
+              un historial de éxito y continuidad.
             </p>
             <div className="pt-4">
               <Button

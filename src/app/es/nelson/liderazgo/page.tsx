@@ -50,13 +50,13 @@ const results = [
       'Fortune 500 aeroespacial. Asignación directa sin licitación para la quinta expansión. La confianza con los dueños eliminó el proceso formal.',
   },
   {
-    value: '3+',
+    value: '4+',
     label: 'décadas con Honeywell',
     detail:
-      'Honeywell Aerospace opera con Grupo Nelson desde hace más de 3 décadas. Múltiples expansiones con el mismo equipo directivo del otro lado.',
+      'Honeywell Aerospace opera con Grupo Nelson desde hace más de 4 décadas. Múltiples expansiones con el mismo equipo directivo del otro lado.',
   },
   {
-    value: '35+',
+    value: '40+',
     label: 'años con nuestros clientes más antiguos',
     detail:
       'Relaciones de largo plazo que se miden en décadas, no en contratos. La relación directa con los dueños produce un nivel de servicio que justifica quedarse.',

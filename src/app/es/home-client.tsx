@@ -171,7 +171,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
           circulo1Descripcion="La familia que instaló la primera maquiladora en Mexicali en 1956 y desarrolló el primer Parque Industrial en 1967, sigue operando personalmente. Relocalización industrial (nearshoring) antes de que existiera la palabra. Tres generaciones después, los dueños atienden tu proyecto."
           circulo2Letra="30+"
           circulo2Titulo="Corporaciones"
-          circulo2Descripcion="Gulfstream lleva más de 40 años. Honeywell más de 3 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
+          circulo2Descripcion="Gulfstream lleva más de 40 años. Honeywell más de 4 décadas. Rheem, DHL, Baxter e Intuitive ya eligieron operar aquí. Relaciones de largo plazo que se miden en décadas."
           circulo3Letra="75+"
           circulo3Titulo="Proyectos"
           circulo3Descripcion="Nuestra constructora interna lleva 30 años con más de 75 proyectos. Un solo contrato de diseño a entrega. Construimos bajo estándares ISN, LEED, FM Global e IBC — con más de un millón de horas hombre sin accidentes fatales."
@@ -205,7 +205,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 4,
               question: "¿Qué empresas operan en sus parques?",
-              answer: "Corporaciones internacionales, incluyendo Gulfstream (más de 40 años), Honeywell (más de 3 décadas), Rheem, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. Relaciones de largo plazo que se miden en décadas, no en contratos.",
+              answer: "Corporaciones internacionales, incluyendo Gulfstream (más de 40 años), Honeywell (más de 4 décadas), Rheem, DHL, Baxter, Vertiv, Intuitive y Celestica, entre otras. Relaciones de largo plazo que se miden en décadas, no en contratos.",
             },
             {
               id: 5,

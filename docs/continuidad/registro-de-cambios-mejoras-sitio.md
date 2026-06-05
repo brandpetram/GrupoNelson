@@ -99,6 +99,20 @@ Foto de arquitectura industrial (Pi):
 
 - Se unificó la antigüedad de la relación con **Gulfstream de 35 → 40 años** en todo el sitio (ES e inglés): ~31 menciones en 18 archivos. Erick lo señaló en un punto (la card "35 años con Gulfstream" de casos-de-éxito) y se extendió a todo el sitio para mantener consistencia. Se corrigió además una **contradicción previa**: el FAQ (psi) decía "Gulfstream 20+ años" → ahora "40+". No se tocó la antigüedad de **Honeywell** (30 años) ni otros números (horas hombre, m², años de experiencia de construcción). Typecheck verde.
 
+## Antigüedad de Honeywell + cierre de casos-de-éxito — 2026-06-05
+
+- **Honeywell 30 → 40 años (todo el sitio, ES+EN):** a petición de Erick (comentarios en casos-de-éxito) se unificó la antigüedad de la relación con Honeywell a 40 años (~22 menciones: stats "3+/30+" → "4+/40+", "3 décadas" → "4 décadas", prosa, FAQ, hero, eta, sigma, psi). **⚠️ Posible confusión:** Honeywell estaba documentado como 30+ años / 3 décadas en todo el sitio — el de 40 años es **Gulfstream**. Es posible que Erick haya confundido los dos casos (van uno tras otro en la página). **Se aplicó tal como se pidió**, pero conviene confirmarlo con Erick. No se tocaron los "30 años de experiencia" de la Constructora de Casa.
+- **SplitSticky (casos):** reescritos con copy de Erick — intro ISN de Honeywell, dato "Mission 1/2/3", y dato de crecimiento de Gulfstream ("+1M de pies cuadrados", con heading ajustado de "5,000–550,000" a "Más de 1 millón de pies²"). [ES + EN]
+- **Gulfstream — limpieza de consistencia:** se corrigieron menciones que el barrido previo no capturó (`sigma` "20+ años", stat "35+ años con clientes más antiguos") → 40.
+
+## Casos de éxito — hero + foto del mosaico — 2026-06-05
+
+- **Hero (HeroMarketing1Beta):** título acortado (se quitó "ya" y "— y la mayoría se quedó", queda "Las empresas más exigentes que operan en Mexicali eligieron a Grupo Nelson"); subtítulo H2 → "Nuestra mejor carta de presentación es la exigencia de nuestros clientes"; párrafo → "Contamos con clientes que han confiado en nuestra solidez por más de 30 años…". [ES + EN]
+- **SplitSticky · intro de Gulfstream:** reescrito a "Operar con un miembro de Fortune 500 como Gulfstream…" (texto de Erick). [ES + EN]
+- **Mosaico · fotos repetidas:** se detectó que dos tomas del edificio Envista quedaban casi idénticas; se reemplazó `honeywell-12` → vista de Grupo Nelson y luego `grupo-nelson-4` (la gemela de Envista) → vista del Parque Nelson II.
+- **SplitSticky · dato de Gulfstream:** heading del dato de crecimiento → **"+1M de pies cuadrados"** (forma exacta pedida por Erick); en el párrafo del terremoto, "la nave" → **"su nave"** (ajuste menor). [ES + EN]
+- **Nota:** el nuevo párrafo del hero dice "más de 30 años" (claim genérico de clientes), que convive con el "40 años" de Gulfstream/Honeywell. **Se deja en "30" por decisión de Luis** (es copy textual de Erick), pero —igual que con la antigüedad de Honeywell— **es posible que de nuevo haya una confusión con los años**. Anotado por si conviene confirmarlo con Erick.
+
 ## No realizados (por recomendación — no convenían)
 
 - Menús **EXPERIENCIA**, **NOSOTROS** y **PARQUES**: se pidió que el título de cada menú fuera clickeable a una página *y además* abriera su flyout, quitando un ítem del submenú. **No se hizo.** Es un cambio mayor de arquitectura de navegación y un patrón de UX problemático (ambigüedad entre "navegar" y "abrir menú", inconsistencia desktop/mobile, conflictos de accesibilidad ARIA). Se le explicó a Erick y se propuso la alternativa estándar: un link "Ver todo…" como primer ítem del flyout. **Pendiente de su decisión.**

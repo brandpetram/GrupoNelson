@@ -19,7 +19,7 @@ const text = {
       { id: 3, name: 'Construcción y entrega', description: '450 trabajadores, 45 subcontratistas, reuniones semanales con 16+ asistentes. Entrega llave en mano.', icon: Handshake },
     ],
     communicationFeatures: [
-      { id: 1, name: 'Clientes que regresan década tras década', description: 'Gulfstream lleva 20+ años construyendo con nosotros. Honeywell, 30. Ya conocemos sus estándares y sus tiempos.', icon: RotateCcw },
+      { id: 1, name: 'Clientes que regresan década tras década', description: 'Gulfstream lleva 40+ años construyendo con nosotros. Honeywell, 40. Ya conocemos sus estándares y sus tiempos.', icon: RotateCcw },
       { id: 2, name: 'La maquinaria humana detrás de cada proyecto', description: '1,092,745 horas hombre. Ruta crítica de 18 hitos. 11 puntos de control. ERP en tiempo real.', icon: Users },
     ],
     imgAlt1: 'Nave industrial',
@@ -38,7 +38,7 @@ const text = {
       { id: 3, name: 'Construction and delivery', description: '450 workers, 45 subcontractors, weekly meetings with 16+ attendees. Turnkey delivery.', icon: Handshake },
     ],
     communicationFeatures: [
-      { id: 1, name: 'Clients who return decade after decade', description: 'Gulfstream has been building with us for 20+ years. Honeywell, 30. We already know their standards and their timelines.', icon: RotateCcw },
+      { id: 1, name: 'Clients who return decade after decade', description: 'Gulfstream has been building with us for 40+ years. Honeywell, 40. We already know their standards and their timelines.', icon: RotateCcw },
       { id: 2, name: 'The human machinery behind every project', description: '1,092,745 man-hours. Critical path of 18 milestones. 11 quality checkpoints. Real-time ERP.', icon: Users },
     ],
     imgAlt1: 'Industrial building construction',

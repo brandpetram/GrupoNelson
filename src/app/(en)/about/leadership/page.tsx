@@ -51,13 +51,13 @@ const results = [
       'Fortune 500 aerospace company. Direct assignment — no bidding process — for the fifth expansion. Trust with the owners eliminated the formal process.',
   },
   {
-    value: '3+',
+    value: '4+',
     label: 'decades with Honeywell',
     detail:
-      'Honeywell Aerospace has operated with Grupo Nelson for over 3 decades. Multiple expansions with the same executive team on the other side.',
+      'Honeywell Aerospace has operated with Grupo Nelson for over 4 decades. Multiple expansions with the same executive team on the other side.',
   },
   {
-    value: '35+',
+    value: '40+',
     label: 'years with our longest-standing clients',
     detail:
       'Long-term relationships measured in decades, not contracts. The direct relationship with the owners produces a level of service that justifies staying.',
@@ -107,7 +107,7 @@ const mosaicoContent: MosaicoItem[] = [
     type: "card",
     title: "Long-term relationships",
     description:
-      "Gulfstream has been here for over 40 years. Honeywell for over 3 decades. The direct relationship with the owners produces loyalty measured in decades.",
+      "Gulfstream has been here for over 40 years. Honeywell for over 4 decades. The direct relationship with the owners produces loyalty measured in decades.",
     href: "/about/leadership",
     bg: "bg-indigo-600",
   },

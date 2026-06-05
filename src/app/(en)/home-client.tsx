@@ -331,7 +331,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
           circulo1Descripcion="The family that established Mexicali's first maquiladora in 1956 and opened the city's first industrial park in 1967 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project."
           circulo2Letra="30+"
           circulo2Titulo="Corporations"
-          circulo2Descripcion="Gulfstream has been here for over 40 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
+          circulo2Descripcion="Gulfstream has been here for over 40 years. Honeywell for over 4 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
           circulo3Letra="75+"
           circulo3Titulo="Projects"
           circulo3Descripcion="Our in-house construction firm has 30 years of experience and more than 75 completed projects. A single contract from design to delivery. We build to ISN, LEED, FM Global and IBC standards — with over one million man-hours and no fatal accidents."
@@ -365,7 +365,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 4,
               question: "What companies operate in your parks?",
-              answer: "International corporations, including Gulfstream (over 40 years), Honeywell (over 3 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
+              answer: "International corporations, including Gulfstream (over 40 years), Honeywell (over 4 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
             },
             {
               id: 5,

@@ -66,8 +66,8 @@ export function HeroMarketing1Beta() {
 
             {/* H1 */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-none tracking-tight text-foreground">
-              The most demanding companies operating in Mexicali already chose
-              Grupo Nelson — and most of them stayed.
+              The most demanding companies operating in Mexicali chose
+              Grupo Nelson.
             </h1>
           </div>
         </div>
@@ -93,15 +93,12 @@ export function HeroMarketing1Beta() {
           {/* Right column: H2 + P */}
           <div className="flex-1 space-y-4">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-foreground">
-              What these clients&apos; standards demand says more about
-              Grupo Nelson than anything Nelson could say about itself.
+              Our best calling card is what our clients demand.
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-light">
-              These success stories are not edited testimonials — they are
-              verifiable facts with names, numbers, and decades of history.
-              Gulfstream has been with us for 40 years. Honeywell for 30+.
-              Long-term relationships where clients expand and start new
-              projects.
+              We have clients who have trusted our strength for more than 30
+              years, expanding their operations alongside us thanks to a track
+              record of success and continuity.
             </p>
             <div className="pt-4">
               <Button

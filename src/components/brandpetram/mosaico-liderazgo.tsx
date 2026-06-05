@@ -60,7 +60,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "Relaciones de largo plazo",
     description:
-      "Gulfstream lleva más de 40 años. Honeywell más de 3 décadas. La relación directa con los dueños produce lealtad que se mide en décadas.",
+      "Gulfstream lleva más de 40 años. Honeywell más de 4 décadas. La relación directa con los dueños produce lealtad que se mide en décadas.",
     href: "/nelson/liderazgo",
     bg: "bg-indigo-600",
   },
@@ -155,7 +155,7 @@ const itemsEn: MosaicoItem[] = items.map((item) => {
     },
     'Relaciones de largo plazo': {
       title: 'Long-term relationships',
-      description: 'Gulfstream has been here over 40 years. Honeywell over 3 decades. The direct relationship with the owners produces loyalty measured in decades.',
+      description: 'Gulfstream has been here over 40 years. Honeywell over 4 decades. The direct relationship with the owners produces loyalty measured in decades.',
       href: '/about/leadership',
     },
     'Tres generaciones, una familia operando': {

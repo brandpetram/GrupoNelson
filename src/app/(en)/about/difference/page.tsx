@@ -77,7 +77,7 @@ export default function DifferencePage() {
           <p className={splitParagraphClass}>
             <strong>Gulfstream</strong> has been working with the family for{" "}
             <strong>40 years</strong>.{" "}
-            <strong>Honeywell</strong>, 30. They are not going to disappear
+            <strong>Honeywell</strong>, 40. They are not going to disappear
             in the middle of your 15-year lease.
           </p>
         </SplitSimpleBP>

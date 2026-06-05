@@ -28,15 +28,16 @@ export function SplitStickyCases() {
               Gulfstream Aerospace: 40 Years Trusting Nelson
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Gulfstream is Fortune 500. Aerospace manufacturing. One of the
-              companies with the most demanding production standards in the
-              world — corporate safety, quality, and compliance standards
-              that automatically disqualify most contractors.
+              Working with a Fortune 500 member like Gulfstream means meeting
+              the highest corporate standards in the aerospace industry. Meeting
+              their strict safety, quality, and compliance requirements not only
+              makes us proud — it establishes us as a strategic partner capable
+              of supporting global leaders.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               After the 7.2 earthquake in 2010 that damaged their existing
               plant, Gulfstream trusted our In-House Construction team to
-              build the largest facility in the city. They did not look for
+              build their largest facility in the city. They did not look for
               alternatives. They did not open a bidding process. They assigned
               directly.
             </p>
@@ -54,13 +55,13 @@ export function SplitStickyCases() {
               </div>
               <div>
                 <p className="font-semibold text-foreground">
-                  From 5,000 to 550,000 square feet
+                  +1M square feet
                 </p>
                 <p className="text-muted-foreground">
-                  Gulfstream started with a small operation at El Vigia and
-                  today occupies the largest facility in the city. Multiple
-                  expansions across different generations of Grupo Nelson
-                  parks.
+                  What began as a small operation at El Vigia Industrial Park
+                  has evolved extraordinarily over the years. Gulfstream has
+                  consolidated more than 1 million square feet with us,
+                  steadily expanding its facilities.
                 </p>
               </div>
               <div>
@@ -95,22 +96,23 @@ export function SplitStickyCases() {
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Honeywell Aerospace is a global corporation whose contractor
-              selection standards go through the ISN platform — a safety,
-              documentation, and quality filter that most local contractors
-              cannot pass. To even work on their facilities, you need an
-              active ISN rating.
+              selection standards run through ISN — the strictest international
+              platform for safety and quality. Holding an active certification
+              in this system places us within a select group of world-class
+              contractors.
             </p>
 
             {/* Honeywell anchor data */}
             <div className="space-y-4 border-l-2 border-blue-600/30 pl-6">
               <div>
                 <p className="font-semibold text-foreground">
-                  30+ years of relationship
+                  40+ years of relationship
                 </p>
                 <p className="text-muted-foreground">
-                  Multiple expansions — Mission 1, 2, and 3 — built by our
-                  In-House Construction team over three decades of continuous
-                  relationship.
+                  Our alliance of more than 40 years is backed by facts:
+                  multiple successful expansions, including the key Mission 1,
+                  2, and 3 projects, built end to end by our In-House
+                  Construction team.
                 </p>
               </div>
               <div>

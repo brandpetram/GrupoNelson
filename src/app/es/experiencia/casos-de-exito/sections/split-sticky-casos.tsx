@@ -30,15 +30,17 @@ export function SplitStickyCasos() {
               Gulfstream Aerospace: 40 Años Confiando en Nelson
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Gulfstream es Fortune 500. Manufactura aeroespacial. Una de las
-              empresas con estándares de producción más exigentes del mundo —
-              estándares corporativos de seguridad, calidad y cumplimiento que
-              descalifican automáticamente a la mayoría de los proveedores.
+              Operar con un miembro de Fortune 500 como Gulfstream implica
+              cumplir con los estándares corporativos más elevados de la
+              industria aeroespacial. Cumplir con sus estrictos niveles de
+              seguridad, calidad y cumplimiento no solo nos llena de orgullo,
+              sino que nos consolida como un socio estratégico capaz de
+              respaldar a líderes globales.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Después del terremoto de 7.2 en 2010 que dañó su planta
               existente, Gulfstream confió en la constructora interna de
-              Grupo Nelson para construir la nave más grande de la ciudad.
+              Grupo Nelson para construir su nave más grande de la ciudad.
               No buscaron alternativas. No abrieron licitación. Asignaron
               directamente.
             </p>
@@ -56,13 +58,14 @@ export function SplitStickyCasos() {
               </div>
               <div>
                 <p className="font-semibold text-foreground">
-                  De 5,000 a 550,000 pies cuadrados
+                  +1M de pies cuadrados
                 </p>
                 <p className="text-muted-foreground">
-                  Gulfstream empezó con una operación pequeña en El Vigía y
-                  hoy ocupa la nave más grande de la ciudad. Múltiples
-                  expansiones a lo largo de diferentes generaciones de parques
-                  de Grupo Nelson.
+                  Lo que comenzó con una operación pequeña en el Parque
+                  Industrial El Vigía ha evolucionado de manera extraordinaria
+                  a lo largo de los años. Gulfstream ha consolidado más de 1
+                  millón de pies cuadrados con nosotros, expandiendo sus
+                  instalaciones de manera constante.
                 </p>
               </div>
               <div>
@@ -96,22 +99,23 @@ export function SplitStickyCasos() {
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Honeywell Aerospace es un corporativo global cuyos estándares de
-              selección de contratistas pasan por la plataforma ISN — un filtro
-              de seguridad, documentación y calidad que la mayoría de
-              constructoras locales no supera. Para siquiera trabajar en sus
-              instalaciones, necesitas calificación ISN activa.
+              selección de contratistas pasan por ISN — la plataforma
+              internacional más estricta en seguridad y calidad. Contar con una
+              certificación activa en este sistema nos consolida dentro de un
+              grupo selecto de proveedores de nivel mundial.
             </p>
 
             {/* Datos ancla Honeywell */}
             <div className="space-y-4 border-l-2 border-blue-600/30 pl-6">
               <div>
                 <p className="font-semibold text-foreground">
-                  30+ años de relación
+                  40+ años de relación
                 </p>
                 <p className="text-muted-foreground">
-                  Múltiples expansiones — Mission 1, 2 y 3 — construidas por
-                  nuestra constructora interna a lo largo de tres décadas de
-                  relación continua.
+                  Nuestra alianza de más de 40 años se respalda con hechos:
+                  múltiples expansiones exitosas, incluyendo los proyectos
+                  clave —Mission 1, 2 y 3—, construidos de principio a fin por
+                  nuestra Constructora de Casa.
                 </p>
               </div>
               <div>
