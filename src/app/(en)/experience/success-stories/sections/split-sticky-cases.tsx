@@ -25,7 +25,7 @@ export function SplitStickyCases() {
               Success Story 1
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
-              Gulfstream Aerospace: 35 Years Trusting Nelson
+              Gulfstream Aerospace: 40 Years Trusting Nelson
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Gulfstream is Fortune 500. Aerospace manufacturing. One of the
@@ -70,7 +70,7 @@ export function SplitStickyCases() {
                 <p className="text-muted-foreground">
                   For their most recent expansion, Gulfstream did not open
                   a bidding process. When you have been with the same
-                  contractor for 35 years, the selection process is no
+                  contractor for 40 years, the selection process is no
                   longer necessary.
                 </p>
               </div>
@@ -79,7 +79,7 @@ export function SplitStickyCases() {
 
           {/* Transition Gulfstream to Honeywell */}
           <p className="text-lg leading-relaxed text-muted-foreground italic">
-            35 years with the same client is hard evidence to ignore.
+            40 years with the same client is hard evidence to ignore.
             But there is another proof: the filters a contractor must pass
             before even setting foot on the site.
           </p>
@@ -118,10 +118,10 @@ export function SplitStickyCases() {
                   ISN &quot;Recommended&quot; rating
                 </p>
                 <p className="text-muted-foreground">
-                  The highest rating the platform allows. It is not just
-                  that our In-House Construction team meets Honeywell&apos;s
-                  standards — it holds the maximum rating of the system that
-                  measures them.
+                  Our In-House Construction team does not just meet the basic
+                  standards — it holds the highest rating the platform allows.
+                  This &quot;Recommended&quot; level attests to our absolute
+                  commitment to operational excellence.
                 </p>
               </div>
               <div>
@@ -129,10 +129,11 @@ export function SplitStickyCases() {
                   Direct technical collaboration
                 </p>
                 <p className="text-muted-foreground">
-                  When Honeywell needed an aerospace wind tunnel, the
-                  executive project was developed jointly between Honeywell
-                  engineers and our in-house engineers. That only
-                  happens when the level of trust is high.
+                  The purest reflection of this trust was the development of
+                  the aerospace wind tunnel: a high-engineering project built
+                  shoulder to shoulder by Honeywell&apos;s engineering teams
+                  and our In-House Construction team, demonstrating
+                  extraordinary technical synergy.
                 </p>
               </div>
             </div>
@@ -141,28 +142,31 @@ export function SplitStickyCases() {
           {/* DHL + Subordinate context */}
           <div className="border-t border-border pt-12">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              It is not just aerospace.{" "}
-              <strong className="text-foreground">DHL</strong> chose Grupo
-              Nelson for its logistics operation in Mexicali — and came
-              back after the first project.{" "}
+              Today,{" "}
               <strong className="text-foreground">
-                30 international corporations
+                more than 30 international corporations
               </strong>{" "}
-              operate today in Grupo Nelson parks. Most return, expand, or
-              start new projects.
+              — including DHL, Vertiv, Envista, Aqualung, and Intuitive
+              Surgical, to name a few — operate successfully in Grupo
+              Nelson&apos;s industrial parks. Our greatest pride is that the
+              vast majority choose to expand or start new projects with us,
+              reflecting a loyalty rate unmatched in the market.
             </p>
           </div>
 
           {/* Argumentative close */}
           <div className="space-y-3">
             <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-              If Gulfstream did not need to look for alternatives in 35
+              If Gulfstream did not need to look for alternatives in 40
               years, and we hold ISN&apos;s highest possible rating to work on
               Honeywell&apos;s facilities — the standard is already proven.
             </h3>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              What these clients&apos; standards demand says more about
-              Grupo Nelson than anything Nelson could say about itself.
+              Our best calling card is not what we can say about ourselves, but
+              the rigor of the standards our global clients demand of us. That
+              corporations of this caliber trust our quality, safety, and
+              compliance systems is the truest testament to Grupo
+              Nelson&apos;s excellence.
             </p>
           </div>
         </div>

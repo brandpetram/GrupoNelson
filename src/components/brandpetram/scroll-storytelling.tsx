@@ -265,7 +265,7 @@ const defaultItems: ContentItem[] = [
     caption: 'Fase 7: Crecimiento',
     title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">7</span><div>Crecimiento y<br/>Expansión</div></div>,
     description:
-      'Cuando tu operación crece, nosotros crecemos contigo. Clientes que iniciaron con 5,000 pies cuadrados hoy operan en más de 400,000 — sin cambiar de socio. Más de seis décadas construyendo relaciones que se miden en décadas, no en contratos.',
+      'Cuando tu operación crece, nosotros crecemos contigo. Clientes que iniciaron con 5,000 pies cuadrados hoy operan en más de 400,000. Nuestra experiencia de 6 décadas se refleja en la fidelidad y permanencia de nuestros clientes.',
     video: '/scroll-storytelling/crecimiento.mp4',
     mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
     tag: {

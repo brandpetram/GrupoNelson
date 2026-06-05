@@ -35,11 +35,26 @@ Hero (Mu):
 Bloque "Construcción Industrial de Clase Mundial" (Nu):
 - Párrafo descriptivo reescrito ("Desde el primer plano hasta la supervisión en campo…"). [ES + EN]
 
+Bloque LEED / Arquitectura Industrial (Pi):
+- Encabezado reescrito a "Diseñamos y construimos bajo Estándares LEED, desarrollando naves de alta eficiencia…" (texto provisto por Erick). [ES + EN]
+
+Bloque testimonio + marca de fondo (Rho):
+- Se eliminó el texto decorativo gigante de fondo (decía "CONSTRUCTORA DE CASA", antes "BAUMEX") y se ajustó el espaciado de la sección. [ES + EN]
+
+Foto de arquitectura industrial (Pi):
+- **Para el correo a Erick:** la foto necesita retoque (borrar "fantasmas"/carrete, agregar zacate a la zona de tierra). Es edición de imagen, no código — pendiente de que llegue la imagen editada.
+
+## Normas, Certificaciones y Estándares — 2026-06-04
+
+- Tarjetas **FM Global** y **BRB** (sección "Estándares de ingeniería"): se quitó la mención al cliente "Gulfstream". FM Global → "Contamos con certificación FM Global…"; BRB → "…aplicada en zona sísmica 4 en una nave de 550,000 ft²" (se conserva la escala, se quita el nombre). [ES + EN]
+- La subsección **LEED** de esa misma página conserva la mención a Gulfstream (decisión acordada: aplicar solo donde Erick comentó; el resto del sitio —success-stories, /constructora/leed, home— tampoco se toca).
+
 ## Home (/es) — 2026-06-04
 
 - Hero: el párrafo "Corporaciones internacionales…" ya estaba aplicado tal como se pidió.
 - Storytelling (Fase 1): ya estaba aplicado ("…les desarrollamos una propuesta integral acorde a sus necesidades").
 - Storytelling y FAQ — varios ajustes ya estaban aplicados: quitar "como Gulfstream, DHL y Honeywell", "Turnkey" → "Llave en Mano", quitar "sin sorpresas", reescribir el bloque del puente Skyworks, y FAQ "Baumex" → "Nuestra constructora".
+- Storytelling (Fase 7 "Crecimiento"): se reescribió el cierre del párrafo a "…Nuestra experiencia de 6 décadas se refleja en la fidelidad y permanencia de nuestros clientes" (se quitó "sin cambiar de socio / relaciones que se miden en décadas"). [ES + EN]
 
 ## Antigüedad de Baumex (todo el sitio) — 2026-06-04
 
@@ -63,6 +78,28 @@ Bloque "Construcción Industrial de Clase Mundial" (Nu):
 - **Se preservó "Baumex"** solo en: URLs (`/constructora/baumex`), **rutas de imágenes** (`/fotos-dron/CONSTRUCTORA BAUMEX/...`), identificadores de código (`proyectosBaumex`, etc.) y 2 comentarios. **0 "Baumex" en texto visible / alt / metadata.**
 - Números alineados al "30 años": nav → "30+ años/years"; se quitó el rango "1997–2025" (implicaba 28).
 
+## Metadata título — página de la Constructora — 2026-06-04
+
+- `title` de `/constructora/baumex` · `/construction/baumex`: "Baumex Constructora" → **"Constructora de Casa | Grupo Nelson"**; "Baumex Construction" → **"In-House Construction | Grupo Nelson"**. Las descriptions ya no tenían Baumex. Se conserva "Baumex" solo en URL e identificadores internos (igual que el rename). [ES + EN]
+
+## Casos de éxito — 2026-06-04
+
+- Card "80% clientes recurrentes": título cambiado a **"Alta tasa de retención"** (a petición de Erick). Nota: se pierde el dato "80%"; se puede reincorporar en la descripción si se prefiere. [ES + EN]
+- Sección **SplitSticky**: se reescribieron 4 párrafos a versiones provistas por Erick (corrigiendo su ortografía): el **cierre** ("Nuestra mejor carta de presentación…"), el bloque **DHL/corporaciones** (ahora lista DHL, Vertiv, Envista, Aqualung, Intuitive Surgical), el dato de **colaboración técnica** (túnel de viento) y el de **calificación ISN «Recomendado»**. [ES + EN]
+
+## Contacto — 2026-06-04
+
+- Teléfonos: se agregó **+52** al (686) 553-4088 y **+1** al (760) 357-0309, y se **alinearon** ambos números (el rótulo "Toll Free" pasó a sufijo del segundo). [ES + EN]
+- Formulario: se quitaron los placeholders de ejemplo de Nombre/Apellido ("Juan/Pérez" · "John/Smith") — boxes en blanco. [ES + EN]
+- **CAPTCHA (Turnstile) — aclaración para Erick:** el formulario YA tiene CAPTCHA habilitado y funcionando. Es **Cloudflare Turnstile**, el tipo moderno invisible/sin fricción (no es el clásico de "selecciona los semáforos" ni una imagen estática). El check verde "Success!" es la confirmación de que ya verificó al visitante; además hay validación real en el servidor antes de mandar el correo. No requiere acción.
+- Dirección (bloque "Oficinas"): "Mexico" → **"México"** (acento). [solo ES]
+- Erick pidió (en un comment viejo) revisar la ortografía/acentos de la página. **Ya estaba hecho:** la revisión ortográfica del sitio se realizó ~2 semanas antes (mediados de mayo 2026); solo faltaba el acento de "México", ya corregido. No queda pendiente.
+
+## Antigüedad de Gulfstream (todo el sitio) — 2026-06-04
+
+- Se unificó la antigüedad de la relación con **Gulfstream de 35 → 40 años** en todo el sitio (ES e inglés): ~31 menciones en 18 archivos. Erick lo señaló en un punto (la card "35 años con Gulfstream" de casos-de-éxito) y se extendió a todo el sitio para mantener consistencia. Se corrigió además una **contradicción previa**: el FAQ (psi) decía "Gulfstream 20+ años" → ahora "40+". No se tocó la antigüedad de **Honeywell** (30 años) ni otros números (horas hombre, m², años de experiencia de construcción). Typecheck verde.
+
 ## No realizados (por recomendación — no convenían)
 
 - Menús **EXPERIENCIA**, **NOSOTROS** y **PARQUES**: se pidió que el título de cada menú fuera clickeable a una página *y además* abriera su flyout, quitando un ítem del submenú. **No se hizo.** Es un cambio mayor de arquitectura de navegación y un patrón de UX problemático (ambigüedad entre "navegar" y "abrir menú", inconsistencia desktop/mobile, conflictos de accesibilidad ARIA). Se le explicó a Erick y se propuso la alternativa estándar: un link "Ver todo…" como primer ítem del flyout. **Pendiente de su decisión.**
+- Menú **RECURSOS**: en este lote Erick pidió lo mismo (al hacer click en RECURSOS dirigir a /recursos y quitarlo del submenú). **No se hizo**, por la misma razón que los otros menús. Se mantiene la propuesta del link "Ver todo…".

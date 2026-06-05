@@ -16,7 +16,7 @@ import { createMetadata } from '@/lib/create-metadata'
 export const metadata = createMetadata({
   lang: 'en',
   path: '/construction/baumex',
-  title: 'Baumex Construction',
+  title: 'In-House Construction',
   description: 'Grupo Nelson\'s in-house construction firm with over 25 years building industrial facilities in Mexicali. 75+ projects delivered for Fortune 500 companies. 4.5 million square feet built since 1997.',
 })
 

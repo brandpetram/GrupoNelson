@@ -16,12 +16,12 @@ export const TestimonialExcellence = () => {
 
                     <div className="mt-6 lg:mt-12">
                         <p className="text-xl *:leading-relaxed md:text-2xl">
-                            Gulfstream did not put its fifth facility in Mexicali out to bid. After 35 years, 5 projects, and 1,092,745 man-hours worked with a flawless safety record, trust was already proven. Direct assignment — no bidding process.
+                            Gulfstream did not put its fifth facility in Mexicali out to bid. After 40 years, 5 projects, and 1,092,745 man-hours worked with a flawless safety record, trust was already proven. Direct assignment — no bidding process.
                         </p>
 
                         <div className="mt-12 flex items-center gap-3">
                             <div className="bg-primary/10 flex size-10 items-center justify-center rounded-lg">
-                                <span className="text-primary text-sm font-bold">35</span>
+                                <span className="text-primary text-sm font-bold">40</span>
                             </div>
 
                             <div className="space-y-px">

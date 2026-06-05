@@ -16,7 +16,7 @@ import { createMetadata } from '@/lib/create-metadata'
 export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/baumex',
-  title: 'Baumex Constructora',
+  title: 'Constructora de Casa',
   description: 'Constructora interna de Grupo Nelson con más de 25 años construyendo naves industriales de construcción a la medida (build-to-suit) en Mexicali. 75+ proyectos entregados para empresas Fortune 500.',
 })
 

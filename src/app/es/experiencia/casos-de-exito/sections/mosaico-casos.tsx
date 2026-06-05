@@ -36,7 +36,7 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "35 años con Gulfstream Aerospace",
+    title: "40 años con Gulfstream Aerospace",
     description:
       "Fortune 500, manufactura aeroespacial. 5 naves construidas por nuestra Constructora de Casa. Asignación directa sin licitación.",
     href: "/contacto",
@@ -94,7 +94,7 @@ const items: MosaicoItem[] = [
   },
   {
     type: "card",
-    title: "80% clientes recurrentes",
+    title: "Alta tasa de retención",
     description:
       "La mayoría de los clientes regresa, expande o inicia nuevos proyectos. La permanencia dice más que cualquier folleto.",
     href: "/contacto",

@@ -205,15 +205,15 @@ export default function Contact() {
                                     <Link
                                         href="tel:+526865534088"
                                         className="text-foreground hover:decoration-primary text-base font-medium hover:underline">
-                                        (686) 553-4088
+                                        +52 (686) 553-4088
                                     </Link>
                                     <br />
-                                    <span className="text-muted-foreground text-sm">Toll Free: </span>
                                     <Link
                                         href="tel:+17603570309"
                                         className="text-foreground hover:decoration-primary text-base font-medium hover:underline">
-                                        (760) 357-0309
+                                        +1 (760) 357-0309
                                     </Link>
+                                    <span className="text-muted-foreground text-sm"> Toll Free</span>
                                 </div>
 
                                 <div>
@@ -247,7 +247,6 @@ export default function Contact() {
                                         <Input
                                             id="first-name"
                                             name="first-name"
-                                            placeholder="John"
                                             required
                                         />
                                     </div>
@@ -256,7 +255,6 @@ export default function Contact() {
                                         <Input
                                             id="last-name"
                                             name="last-name"
-                                            placeholder="Smith"
                                             required
                                         />
                                     </div>

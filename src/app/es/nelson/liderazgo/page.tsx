@@ -44,7 +44,7 @@ const stats = [
 
 const results = [
   {
-    value: '35+',
+    value: '40+',
     label: 'años con Gulfstream',
     detail:
       'Fortune 500 aeroespacial. Asignación directa sin licitación para la quinta expansión. La confianza con los dueños eliminó el proceso formal.',
@@ -215,11 +215,11 @@ export default function LiderazgoPage() {
               Resultado
             </p>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-6">
-              Gulfstream lleva más de 35 años con los mismos dueños — y dejó de licitar
+              Gulfstream lleva más de 40 años con los mismos dueños — y dejó de licitar
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Para su quinta expansión, Gulfstream no abrió proceso de selección. Asignó directamente
-              a Grupo Nelson. Después de más de 35 años con las mismas personas, el proceso dejó de ser necesario.
+              a Grupo Nelson. Después de más de 40 años con las mismas personas, el proceso dejó de ser necesario.
             </p>
           </div>
 

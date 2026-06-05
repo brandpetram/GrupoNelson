@@ -25,13 +25,13 @@ const engineeringStandards = [
   {
     name: 'FM Global: envolvente certificada',
     description:
-      'La nave Gulfstream de 550,000 ft² tiene certificación FM Global en muros, cubierta TPO, estructura metálica y sistema contraincendio — el estándar de protección de activos más exigente del mundo. Resultado: primas de seguro significativamente menores para el inquilino.',
+      'Contamos con certificación FM Global en muros, cubierta TPO, estructura metálica y sistema contraincendio — el estándar de protección de activos más exigente del mundo. Resultado: primas de seguro significativamente menores para el inquilino.',
     icon: ShieldCheckIcon,
   },
   {
     name: 'Ingeniería antisísmica BRB',
     description:
-      'Nuestra Constructora de Casa implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica 4 en la nave Gulfstream de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
+      'Nuestra Constructora de Casa implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica 4 en una nave de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
     icon: BoltIcon,
   },
   {

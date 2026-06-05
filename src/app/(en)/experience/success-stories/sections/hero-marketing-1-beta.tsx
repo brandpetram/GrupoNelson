@@ -99,7 +99,7 @@ export function HeroMarketing1Beta() {
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-light">
               These success stories are not edited testimonials — they are
               verifiable facts with names, numbers, and decades of history.
-              Gulfstream has been with us for 35 years. Honeywell for 30+.
+              Gulfstream has been with us for 40 years. Honeywell for 30+.
               Long-term relationships where clients expand and start new
               projects.
             </p>

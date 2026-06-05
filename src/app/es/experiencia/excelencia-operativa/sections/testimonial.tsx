@@ -16,12 +16,12 @@ export const TestimonialExcelencia = () => {
 
                     <div className="mt-6 lg:mt-12">
                         <p className="text-xl *:leading-relaxed md:text-2xl">
-                            Gulfstream no licitó su quinta nave en Mexicali. Después de 35 años, 5 proyectos y 1,092,745 horas hombre trabajadas con historial de seguridad intacto, la confianza ya estaba demostrada. Asignación directa — sin concurso.
+                            Gulfstream no licitó su quinta nave en Mexicali. Después de 40 años, 5 proyectos y 1,092,745 horas hombre trabajadas con historial de seguridad intacto, la confianza ya estaba demostrada. Asignación directa — sin concurso.
                         </p>
 
                         <div className="mt-12 flex items-center gap-3">
                             <div className="bg-primary/10 flex size-10 items-center justify-center rounded-lg">
-                                <span className="text-primary text-sm font-bold">35</span>
+                                <span className="text-primary text-sm font-bold">40</span>
                             </div>
 
                             <div className="space-y-px">

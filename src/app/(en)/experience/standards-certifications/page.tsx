@@ -25,13 +25,13 @@ const engineeringStandards = [
   {
     name: 'FM Global: certified building envelope',
     description:
-      'The 550,000 ft² Gulfstream facility holds FM Global certification on walls, TPO roofing, steel structure, and fire suppression system — the most demanding asset protection standard in the world. Result: significantly lower insurance premiums for the tenant.',
+      'We hold FM Global certification on walls, TPO roofing, steel structure, and fire suppression system — the most demanding asset protection standard in the world. Result: significantly lower insurance premiums for the tenant.',
     icon: ShieldCheckIcon,
   },
   {
     name: 'BRB seismic engineering',
     description:
-      'Our In-House Construction team implemented Buckling-Restrained Braces for the first time in industrial facilities in Mexicali — technology proven in Mexico City and Japan, applied in seismic zone 4 on the 550,000 ft² Gulfstream facility. It is not a certification: it is structural engineering that protects the continuity of your operation.',
+      'Our In-House Construction team implemented Buckling-Restrained Braces for the first time in industrial facilities in Mexicali — technology proven in Mexico City and Japan, applied in seismic zone 4 on a 550,000 ft² facility. It is not a certification: it is structural engineering that protects the continuity of your operation.',
     icon: BoltIcon,
   },
   {

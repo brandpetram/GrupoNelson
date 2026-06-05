@@ -275,7 +275,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               caption: 'Phase 7: Growth',
               title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">7</span><div>Growth and<br/>Expansion</div></div>,
-              description: 'When your operation grows, we grow with you. Clients that started in 5,000 square feet now operate in over 400,000 — without changing partners. Over six decades building relationships measured in decades, not contracts.',
+              description: 'When your operation grows, we grow with you. Clients that started in 5,000 square feet now operate in over 400,000. Our six decades of experience are reflected in the loyalty and longevity of our clients.',
               video: '/scroll-storytelling/crecimiento.mp4',
               mobileImage: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg',
               tag: {
@@ -331,7 +331,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
           circulo1Descripcion="The family that established Mexicali's first maquiladora in 1956 and opened the city's first industrial park in 1967 still operates personally. Nearshoring before the word existed. Three generations later, the owners handle your project."
           circulo2Letra="30+"
           circulo2Titulo="Corporations"
-          circulo2Descripcion="Gulfstream has been here for over 35 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
+          circulo2Descripcion="Gulfstream has been here for over 40 years. Honeywell for over 3 decades. Rheem, DHL, Baxter and Intuitive have already chosen to operate here. Long-term relationships measured in decades."
           circulo3Letra="75+"
           circulo3Titulo="Projects"
           circulo3Descripcion="Our in-house construction firm has 30 years of experience and more than 75 completed projects. A single contract from design to delivery. We build to ISN, LEED, FM Global and IBC standards — with over one million man-hours and no fatal accidents."
@@ -365,7 +365,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
             {
               id: 4,
               question: "What companies operate in your parks?",
-              answer: "International corporations, including Gulfstream (over 35 years), Honeywell (over 3 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
+              answer: "International corporations, including Gulfstream (over 40 years), Honeywell (over 3 decades), Rheem, DHL, Baxter, Vertiv, Intuitive and Celestica, among others. Long-term relationships measured in decades, not contracts.",
             },
             {
               id: 5,

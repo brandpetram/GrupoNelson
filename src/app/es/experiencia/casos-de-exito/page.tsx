@@ -8,7 +8,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/experiencia/casos-de-exito',
   title: 'Casos de Éxito',
-  description: 'Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson. Gulfstream 35 años, Honeywell 30+. Relaciones de largo plazo que se miden en décadas.',
+  description: 'Las empresas más exigentes que operan en Mexicali ya eligieron a Grupo Nelson. Gulfstream 40 años, Honeywell 30+. Relaciones de largo plazo que se miden en décadas.',
 })
 
 export default function CasosDeExitoPage() {

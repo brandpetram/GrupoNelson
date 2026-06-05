@@ -5,7 +5,7 @@
 
 const text = {
   es: {
-    heading: <>Nos hemos profesionalizado con{" "}<span className="font-bold text-blue-600 uppercase">estándares LEED</span>{" "}para construir naves que reducen consumo energético, recuperan el 90% del agua de condensación en torres de enfriamiento y generan hasta 10 MW de energía solar limpia desde la cubierta y las marquesinas del estacionamiento.</>,
+    heading: <>Diseñamos y construimos bajo{" "}<span className="font-bold text-blue-600 uppercase">Estándares LEED</span>, desarrollando naves de alta eficiencia que optimizan el consumo energético. Nuestros proyectos logran recuperar el 90% del agua de condensación en torres de enfriamiento y tienen la capacidad de generar hasta 10 MW de energía sustentable a través de paneles solares en cubiertas y en sombras de estacionamiento.</>,
     labelDesktop: 'Arquitectura Industrial',
     bigTextDesktop: 'Espacios Industriales donde Funcionalidad y Arquitectura se Encuentran.',
     labelMobile: 'Arquitectura Industrial',
@@ -13,7 +13,7 @@ const text = {
     imgAlt: 'Nave industrial',
   },
   en: {
-    heading: <>We have professionalized with{" "}<span className="font-bold text-blue-600 uppercase">LEED standards</span>{" "}to build facilities that reduce energy consumption, recover 90% of condensation water in cooling towers, and generate up to 10 MW of clean solar energy from rooftops and parking carports.</>,
+    heading: <>We design and build to{" "}<span className="font-bold text-blue-600 uppercase">LEED standards</span>, developing high-efficiency facilities that optimize energy consumption. Our projects recover 90% of condensation water in cooling towers and can generate up to 10 MW of sustainable energy through solar panels on rooftops and parking carports.</>,
     labelDesktop: 'Industrial Architecture',
     bigTextDesktop: 'Industrial Spaces Where Function Meets Design.',
     labelMobile: 'Industrial Architecture',

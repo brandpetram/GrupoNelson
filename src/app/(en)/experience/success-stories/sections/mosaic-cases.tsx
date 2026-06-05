@@ -34,7 +34,7 @@ const items: MosaicItem[] = [
   },
   {
     type: "card",
-    title: "35 years with Gulfstream Aerospace",
+    title: "40 years with Gulfstream Aerospace",
     description:
       "Fortune 500, aerospace manufacturing. 5 facilities built by our In-House Construction team. Direct assignment without bidding.",
     href: "/contact",
@@ -92,7 +92,7 @@ const items: MosaicItem[] = [
   },
   {
     type: "card",
-    title: "80% repeat business",
+    title: "High retention rate",
     description:
       "Most clients return, expand, or start new projects. Retention says more than any brochure.",
     href: "/contact",

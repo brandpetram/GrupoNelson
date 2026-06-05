@@ -48,8 +48,8 @@ export default function Rho({ lang = 'es' }: { lang?: 'en' | 'es' }) {
     >
       <section className="bg-linear-to-br from-blue-600 to-blue-700">
         {/* Testimonio / cita */}
-        <div className="container text-gray-100 max-w-2xl mx-auto px-20 md:px-0 pt-156">
-          <div className={'-translate-y-80'}><h1
+        <div className="container text-gray-100 max-w-2xl mx-auto px-20 md:px-0 pt-76">
+          <div><h1
               className=" text-xl 360:text-xl 393:text-[1.35rem] 430:text-[1.5rem] 768:text-3xl 834:text-[2rem] 1024:text-4xl 1200:text-[2rem] 1280:text-[2.2rem] 1366:text-[2.4rem] 1440:text-[2.6rem] 1536:text-[2.8rem] 1728:text-[3rem] 1920:text-[3.5rem] leading-relaxed tracking-wide font-light">
             {t.quote}
           </h1>
@@ -58,19 +58,10 @@ export default function Rho({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             </h2></div>
         </div>
 
-        {/* Texto decorativo de fondo */}
-        <h1 className="hidden md:block w-full text-[25vw] text-white font-extrabold tracking-tighter opacity-20 md:-mt-48 leading-none">
-          CONSTRUCTORA DE CASA
-        </h1>
-
-        <h1 className="md:hidden w-full text-[25vw] text-center text-white font-extrabold tracking-tighter opacity-20 -mt-10 leading-none">
-          CONSTRUCTORA DE CASA
-        </h1>
-
         {/* Grid de 6 celdas — flat grid: md=2 cols, 1024+=3 cols */}
         <div
           id="porque"
-          className="grid grid-cols-1 md:grid-cols-2 1200:grid-cols-3 md:w-full lg:w-10/12 2560:w-1/2 mx-auto pb-96 text-gray-50 text-center leading-relaxed tracking-wide"
+          className="grid grid-cols-1 md:grid-cols-2 1200:grid-cols-3 md:w-full lg:w-10/12 2560:w-1/2 mx-auto pt-24 pb-96 text-gray-50 text-center leading-relaxed tracking-wide"
         >
           {/* Item 1 */}
           <div className="py-16 px-20 font-extralight 1200:text-[1rem] 1440:text-[1.1rem] 1536:text-[1.5rem] text-balance border-b md:border-r border-blue-400">

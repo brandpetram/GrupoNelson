@@ -8,7 +8,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/experience/success-stories',
   title: 'Success Stories',
-  description: 'The most demanding companies operating in Mexicali already chose Grupo Nelson. Gulfstream 35 years, Honeywell 30+. Long-term relationships measured in decades.',
+  description: 'The most demanding companies operating in Mexicali already chose Grupo Nelson. Gulfstream 40 years, Honeywell 30+. Long-term relationships measured in decades.',
 })
 
 export default function SuccessStoriesPage() {

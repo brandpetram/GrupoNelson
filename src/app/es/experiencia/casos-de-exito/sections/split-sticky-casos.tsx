@@ -27,7 +27,7 @@ export function SplitStickyCasos() {
               Caso de Éxito 1
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
-              Gulfstream Aerospace: 35 Años Confiando en Nelson
+              Gulfstream Aerospace: 40 Años Confiando en Nelson
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               Gulfstream es Fortune 500. Manufactura aeroespacial. Una de las
@@ -71,7 +71,7 @@ export function SplitStickyCasos() {
                 </p>
                 <p className="text-muted-foreground">
                   Para su expansión más reciente, Gulfstream no abrió
-                  licitación. Cuando llevas 35 años con el mismo proveedor,
+                  licitación. Cuando llevas 40 años con el mismo proveedor,
                   el proceso de selección ya no es necesario.
                 </p>
               </div>
@@ -80,7 +80,7 @@ export function SplitStickyCasos() {
 
           {/* ── Transición Gulfstream → Honeywell ── */}
           <p className="text-lg leading-relaxed text-muted-foreground italic">
-            35 años con el mismo cliente es una prueba difícil de ignorar.
+            40 años con el mismo cliente es una prueba difícil de ignorar.
             Pero existe otra: los filtros que un constructor debe superar
             antes de siquiera pisar la obra.
           </p>
@@ -119,9 +119,10 @@ export function SplitStickyCasos() {
                   Calificación ISN &quot;Recomendado&quot;
                 </p>
                 <p className="text-muted-foreground">
-                  La calificación más alta que ISN permite. No es solo que
-                  Constructora de Casa cumpla los estándares de Honeywell —
-                  tiene la calificación máxima de la plataforma que los mide.
+                  Nuestra Constructora de Casa no solo cumple con las normas
+                  básicas, sino que ostenta la calificación máxima permitida
+                  por la plataforma. Este nivel de «Recomendado» avala nuestro
+                  compromiso absoluto con la excelencia operativa.
                 </p>
               </div>
               <div>
@@ -129,10 +130,11 @@ export function SplitStickyCasos() {
                   Colaboración técnica directa
                 </p>
                 <p className="text-muted-foreground">
-                  Cuando Honeywell necesitó un túnel de viento aeroespacial,
-                  el proyecto ejecutivo se elaboró conjuntamente entre
-                  ingenieros de Honeywell e ingenieros de Constructora de
-                  Casa. Eso solo pasa cuando el nivel de confianza es alto.
+                  El reflejo más puro de esta gran confianza fue el desarrollo
+                  del túnel de viento aeroespacial: un proyecto de alta
+                  ingeniería elaborado hombro a hombro entre los equipos de
+                  ingenieros de Honeywell y nuestra Constructora de Casa,
+                  demostrando una sinergia técnica extraordinaria.
                 </p>
               </div>
             </div>
@@ -141,30 +143,33 @@ export function SplitStickyCasos() {
           {/* ═══ DHL + Contexto subordinado ═══ */}
           <div className="border-t border-border pt-12">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              No es solo aeroespacial.{" "}
-              <strong className="text-foreground">DHL</strong> eligió Grupo
-              Nelson para su operación logística en Mexicali — y regresó
-              después del primer proyecto.{" "}
+              Hoy en día,{" "}
               <strong className="text-foreground">
-                30 corporaciones internacionales
+                más de 30 corporaciones internacionales
               </strong>{" "}
-              operan hoy en parques de Grupo Nelson. La mayoría regresa,
-              expande o inicia nuevos proyectos.
+              como DHL, Vertiv, Envista, Aqualung e Intuitive Surgical —por
+              nombrar algunas— operan con éxito en los parques industriales de
+              Grupo Nelson. Nuestro mayor orgullo es que la gran mayoría elige
+              expandirse o iniciar nuevos proyectos con nosotros, reflejando un
+              índice de fidelidad único en el mercado.
             </p>
           </div>
 
           {/* ═══ Cierre argumentativo ═══ */}
           <div className="space-y-3">
             <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-              Si Gulfstream no necesitó buscar alternativas en 35 años, y
+              Si Gulfstream no necesitó buscar alternativas en 40 años, y
               en las instalaciones de Honeywell la plataforma ISN le dio a
               Constructora de Casa la calificación más alta posible — el
               nivel ya está demostrado.
             </h3>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Lo que los estándares de estos clientes exigen dice más sobre
-              Grupo Nelson que cualquier cosa que Nelson pueda decir sobre
-              sí mismo.
+              Nuestra mejor carta de presentación no es lo que podamos decir de
+              nosotros mismos, sino la rigurosidad de los estándares que
+              nuestros clientes globales nos exigen. Que corporaciones de este
+              nivel confíen en nuestro sistema de calidad, seguridad y
+              cumplimiento es el testimonio más fiel de la excelencia de Grupo
+              Nelson.
             </p>
           </div>
         </div>

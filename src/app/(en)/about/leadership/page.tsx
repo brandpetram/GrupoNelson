@@ -45,7 +45,7 @@ const stats = [
 
 const results = [
   {
-    value: '35+',
+    value: '40+',
     label: 'years with Gulfstream',
     detail:
       'Fortune 500 aerospace company. Direct assignment — no bidding process — for the fifth expansion. Trust with the owners eliminated the formal process.',
@@ -107,7 +107,7 @@ const mosaicoContent: MosaicoItem[] = [
     type: "card",
     title: "Long-term relationships",
     description:
-      "Gulfstream has been here for over 35 years. Honeywell for over 3 decades. The direct relationship with the owners produces loyalty measured in decades.",
+      "Gulfstream has been here for over 40 years. Honeywell for over 3 decades. The direct relationship with the owners produces loyalty measured in decades.",
     href: "/about/leadership",
     bg: "bg-indigo-600",
   },
@@ -317,11 +317,11 @@ export default function LeadershipPage() {
               Results
             </p>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-6">
-              Gulfstream has been with the same owners for over 35 years — and stopped bidding
+              Gulfstream has been with the same owners for over 40 years — and stopped bidding
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
               For its fifth expansion, Gulfstream did not open a selection process. It assigned
-              directly to Grupo Nelson. After more than 35 years with the same people, the
+              directly to Grupo Nelson. After more than 40 years with the same people, the
               process was no longer necessary.
             </p>
           </div>

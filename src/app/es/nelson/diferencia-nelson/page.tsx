@@ -62,7 +62,7 @@ export default function DiferenciaNelsonPage() {
           </p>
           <p className={splitParagraphClass}>
             <strong>Gulfstream</strong> lleva{" "}
-            <strong>35 años</strong> trabajando con la familia.{" "}
+            <strong>40 años</strong> trabajando con la familia.{" "}
             <strong>Honeywell</strong>, 30. No van a desaparecer a la mitad de
             tu contrato de 15 años.
           </p>
