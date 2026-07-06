@@ -233,6 +233,11 @@ export default function NormasCertificacionesEstandaresPage() {
                 <p className="text-sm font-medium text-muted-foreground mb-3">
                   Capacitación laboral certificada
                 </p>
+                <p className="text-base leading-relaxed">
+                  Todo el personal de nuestra constructora cuenta con constancia DC-3 de
+                  habilidades laborales. No es una política de capacitación: es
+                  certificación verificable de cada trabajador en campo.
+                </p>
               </div>
 
               {/* OSHA */}

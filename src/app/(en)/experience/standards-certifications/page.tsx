@@ -221,6 +221,11 @@ export default function StandardsCertificationsPage() {
                 <p className="text-sm font-medium text-muted-foreground mb-3">
                   Certified labor training
                 </p>
+                <p className="text-base leading-relaxed">
+                  All personnel on our In-House Construction crews hold DC-3 labor skills certification.
+                  It is not a training policy: it is verifiable certification
+                  of every worker in the field.
+                </p>
               </div>
 
               {/* OSHA */}

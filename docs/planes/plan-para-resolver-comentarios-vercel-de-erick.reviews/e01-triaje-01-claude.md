@@ -33,3 +33,14 @@ fecha: 2026-07-06
 
 Post-fixes: `grep` de cadenas prohibidas = 0 en todo `src/`; `pnpm build` verde
 (177 páginas). 4 relevantes con fix, 1 tradeoff acknowledged, 0 pendientes de código.
+
+## Post-scriptum (2026-07-06, tras marcar resolved)
+
+El hallazgo 4 estaba **mal triado**: al marcar los threads como resolved, el API
+devolvió el campo `selection` (que el listado no incluía) y reveló que los dos
+"eliminar" de normas (rsCWhcaiZkmV y JJQY4eQgY8p5) seleccionaban **"de Casa"** — Erick
+pedía quitar "de Casa" del nombre, no borrar párrafos. El lote 3 sobre-eliminó el
+párrafo de la tarjeta DC-3; **Codex tenía razón** en que era una eliminación excesiva.
+Corrección aplicada: párrafo DC-3 restaurado (ES+EN) con el rename aplicado; ambos
+threads quedan resueltos por el rename global. Re-categorización: hallazgo 4 =
+**relevante, con fix**.

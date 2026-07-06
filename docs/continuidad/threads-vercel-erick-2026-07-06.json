@@ -930,7 +930,7 @@
       "commentText": [
         "eliminar"
       ],
-      "decision": "aplicado ES+EN (lote 3)",
+      "decision": "resuelto vía rename — la selección era «de Casa» (tarjeta DC-3); el párrafo sobre-eliminado por el lote 3 se restauró con rename aplicado",
       "anchorNotes": null
     },
     {
@@ -945,7 +945,7 @@
       "commentText": [
         "eliminar"
       ],
-      "decision": "pendiente — contradice 2 threads posteriores sobre la misma tarjeta OSHA; preguntar a Erick",
+      "decision": "resuelto vía rename — la selección era «de Casa» (tarjeta OSHA); ninguna eliminación de contenido era necesaria",
       "anchorNotes": null
     },
     {
@@ -1038,5 +1038,9 @@
       "decision": "ya vigente — foto nelson2-8 en uso",
       "anchorNotes": null
     }
-  ]
+  ],
+  "resolvedMarcadosEnVercel": {
+    "fecha": "2026-07-06",
+    "total": 45
+  }
 }

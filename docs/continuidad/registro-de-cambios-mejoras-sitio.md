@@ -120,7 +120,7 @@ Foto de arquitectura industrial (Pi):
 
 ## Ronda de comentarios de Vercel — 2026-07-06
 
-Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activos de `dev` + 15 viejos de marzo-abril), según `docs/planes/plan-para-resolver-comentarios-vercel-de-erick.md` (3 rondas de review de Codex). Resultado: **44 resueltos** (aplicados o verificados ya vigentes), **25 pendientes** (imágenes, layout/preguntas y viejos que requieren decisión). IDs de threads y decisión por comentario en `docs/continuidad/threads-vercel-erick-2026-07-06.json`.
+Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activos de `dev` + 15 viejos de marzo-abril), según `docs/planes/plan-para-resolver-comentarios-vercel-de-erick.md` (3 rondas de review de Codex). Resultado: **45 resueltos** (aplicados o verificados ya vigentes; marcados como resolved en Vercel el 2026-07-06), **24 pendientes** (imágenes, layout/preguntas y viejos que requieren decisión). IDs de threads y decisión por comentario en `docs/continuidad/threads-vercel-erick-2026-07-06.json`.
 
 ### Llave en Mano (ES + EN en todos)
 - "30 corporaciones internacionales" → **"+30"**; "El contraincendio central" → **"El sistema contraincendio"**; CTA → **"Consulta nuestro inventario"**.
@@ -136,9 +136,9 @@ Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activo
 - El texto en inglés que aparecía en el FAQ de la página ES se corrigió (faltaba `lang="es"`).
 - Eliminados: subtítulo del BigNumber ("La nave más grande…para Gulfstream"), link "Ver cómo se hizo" (llevaba a la página equivocada), y el **placeholder lorem "Database backups"** que Erick señaló con "Y esto ????" (el 3er bullet del split ahora es condicional).
 
-### Normas, Certificaciones y Estándares (ES + EN) — 11 de 12
-- "Tres tipos de exigencia" → **"Tres niveles de exigencia"** (+ metadata); "Cada una demostrada…" → **"Resultados comprobables en proyectos reales."**; copys nuevos de Erick en hero, IBC, NFPA, CAPA 2 y sección regulatoria (ortografía corregida); "comprador **americano**" → "**internacional**"; cierre → "criterios más estrictos y reconocidos a nivel global"; tarjeta DC-3 sin el párrafo de personal.
-- ⚠ **No aplicado**: el "eliminar" sobre la tarjeta OSHA (JJQY4eQgY8p5) — contradice 2 comentarios posteriores del propio Erick que editan esa misma tarjeta. Preguntarle qué quería eliminar.
+### Normas, Certificaciones y Estándares (ES + EN) — 12 de 12
+- "Tres tipos de exigencia" → **"Tres niveles de exigencia"** (+ metadata); "Cada una demostrada…" → **"Resultados comprobables en proyectos reales."**; copys nuevos de Erick en hero, IBC, NFPA, CAPA 2 y sección regulatoria (ortografía corregida); "comprador **americano**" → "**internacional**"; cierre → "criterios más estrictos y reconocidos a nivel global".
+- **Los dos "eliminar" (rsCWhcaiZkmV, JJQY4eQgY8p5) resultaron ser selecciones de "de Casa"** (el dato de selección apareció al marcarlos resolved vía API): Erick pedía quitar "de Casa" del nombre en las tarjetas DC-3 y OSHA — el rename global lo cumple. En el camino se detectó (gracias a la review de Codex) que el párrafo de la tarjeta DC-3 se había eliminado de más; **se restauró** con el rename aplicado ("Todo el personal de nuestra constructora cuenta con constancia DC-3…", ES+EN).
 
 ### Build-to-Suit (ES + EN)
 - Cifras del hero y beta → "550k ft²"; "Naves Industriales **Fabricadas**" → "**Construidas**" (EN ya era neutro); headline delta → **"Tu nave industrial a la medida de tu operación."**
@@ -154,5 +154,5 @@ Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activo
 ### Pendientes (no bloquean; decidir con Luis)
 - **Imágenes (6 comentarios, 5 archivos identificados):** cielo contaminado + logo CASTORES (misma foto: `fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG` — una edición resuelve ambos), persona caminando (`grupo-nelson-naves…-3.jpeg`), cambiar foto eta (`…-1.jpeg`), cambiar foto kappa (`parque-industrial…-436.jpg`), foto desenfocada en diseño (`…nave-industrial-1.jpg`, es efecto del crop 1:2 extremo). Preflight listo: token de Replicate presente; plan = nano-banana/flux-kontext, candidatas para aprobación visual.
 - **Layout/estructura (5):** mover "Soluciones Llave en Mano" al menú Parques (mecánica identificada en navigation.ts/navigation-en.ts), compactar espacios en blanco (padding 20-30rem del bloque oscuro de lamda), alineación del h2 de lamda, gap foto-texto (es diseño editorial intencional — responder a Erick o compactar), botón "Habla con un experto" (propuesta de ubicación y patrón lista).
-- **Preguntas para Erick (3):** video preview del footer (no hay `<video>`: es el ícono de YouTube — ¿quiere thumbnail del canal?), repetición editorial de proof points (¿es intencional, quiere variar?), tarjeta OSHA (¿qué eliminar?).
+- **Preguntas para Erick (2):** video preview del footer (no hay `<video>`: es el ícono de YouTube — ¿quiere thumbnail del canal?), repetición editorial de proof points (¿es intencional, quiere variar?).
 - **Viejos no realizados (11):** según criterio de Luis (solo triviales y claramente mejoras); incluye 1 obsoleto ("fatalidades→accidentes", contradicho por copy nuevo de Erick del 06-18).
