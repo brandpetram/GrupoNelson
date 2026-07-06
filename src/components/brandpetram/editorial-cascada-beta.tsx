@@ -115,7 +115,7 @@ export function EditorialCascadaBeta({
     stats: [
       { titulo: 'Pioneros desde 1967', descripcion: 'Instalaron la primera maquiladora de Mexicali' },
       { titulo: 'Dueños operando', descripcion: 'Negocian, deciden y responden personalmente' },
-      { titulo: 'Constructora propia', descripcion: 'Constructora de Casa: 30 años y 75 proyectos con equipo propio' },
+      { titulo: 'Constructora propia', descripcion: 'Nuestra Constructora: 30 años y 75 proyectos con equipo propio' },
     ],
     destacado: 'Relaciones de largo plazo — la mayoría de los clientes expande o inicia nuevos proyectos década tras década.',
     ctaPrimarioTexto: 'Solicita una consulta',

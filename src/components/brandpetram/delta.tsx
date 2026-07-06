@@ -13,8 +13,8 @@ import Image from "next/image"
 
 export function Delta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
   const title = lang === 'en'
-    ? <>Your Facility, Exactly<br/>As You Envisioned It</>
-    : <>Tu Nave Como<br/>Siempre la Quisiste</>
+    ? <>Your industrial building,<br/>tailored to your operation.</>
+    : <>Tu nave industrial<br/>a la medida de tu operación.</>
 
   return (
     <div data-component="Delta" data-component-file="src/components/brandpetram/delta.tsx" data-component-props="false" className="relative flex flex-col 768:flex-row items-center gap-0">

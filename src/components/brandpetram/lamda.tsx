@@ -4,18 +4,18 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       ? '5 industrial parks with available buildings in Mexicali'
       : '5 parques industriales con naves disponibles en Mexicali',
     subtitle: lang === 'en'
-      ? 'From cost-effective spaces in El Vigía to Fortune 500 infrastructure in Nelson II. 30 international corporations already operate here.'
-      : 'Desde espacios económicos en El Vigía hasta infraestructura Fortune 500 en Nelson II. 30 corporaciones internacionales ya operan aquí.',
+      ? 'Backed by +30 clients operating with us, we are ready to launch your next project. We offer turnkey inventory buildings, ready for occupancy, or built-to-suit developments on our available land reserves.'
+      : 'Con el respaldo de +30 clientes operando con nosotros, estamos listos para arrancar tu próximo proyecto. Te ofrecemos naves de inventario llave en mano, listas para habitar, o desarrollos a la medida en nuestras reservas de terreno disponibles.',
     cta: lang === 'en' ? 'Contact Us' : 'Contáctanos',
     ctaHref: lang === 'en' ? '/contact' : '/contacto',
     more: lang === 'en' ? 'See More' : 'Ver más',
     moreHref: lang === 'en' ? '/inventory/available-buildings' : '/inventario/naves-disponibles',
     blackTitle: lang === 'en'
-      ? 'Browse available inventory in Mexicali'
-      : 'Consulta el inventario disponible en Mexicali',
+      ? 'Browse our inventory'
+      : 'Consulta nuestro inventario',
     blackDesc: lang === 'en'
-      ? "5 industrial parks. Buildings from 5,000 ft² to Fortune 500 infrastructure. Move in, install your equipment, and start production. No waiting for design, permits, or construction. 80% of our tenants renew their lease."
-      : '5 parques industriales. Naves desde 5,000 ft² hasta infraestructura Fortune 500. Entra, instala tu equipo y arranca producción. Sin esperar diseño, permisos ni construcción. 80% de nuestros clientes renuevan contrato.',
+      ? "5 industrial parks. Move in, install your equipment, and start production. No waiting for design, permits, or construction. 80% of our tenants renew their lease."
+      : '5 parques industriales. Entra, instala tu equipo y arranca producción. Sin esperar diseño, permisos ni construcción. 80% de nuestros clientes renuevan contrato.',
   }
 
   return (

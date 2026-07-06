@@ -13,7 +13,7 @@ export default function ClimaExtremoPage() {
     <LeedPageLayout
       eyebrow="Ingeniería para +45°C"
       titulo="Construye tu nave industrial LEED en Mexicali a +45°C — 30 años de ingeniería en clima extremo"
-      intro="Mexicali supera los 48°C en verano con radiación solar de 2,400 kWh/m² anuales. Nuestra Constructora de Casa ha levantado 75+ naves industriales en estas condiciones en 30 años. La envolvente térmica de cada nave se calibra específicamente para el desierto sonorense con datos de desempeño recopilados en la misma zona climática."
+      intro="Mexicali supera los 48°C en verano con radiación solar de 2,400 kWh/m² anuales. Nuestra constructora ha levantado 75+ naves industriales en estas condiciones en 30 años. La envolvente térmica de cada nave se calibra específicamente para el desierto sonorense con datos de desempeño recopilados en la misma zona climática."
       imageSrc="/leed/leed1-mexicali-nave-industrial-clima-extremo-2.jpeg"
       imageAlt="Nave industrial LEED en clima extremo — Mexicali, Baja California"
       parrafos={[
@@ -37,7 +37,7 @@ export default function ClimaExtremoPage() {
       ]}
       subtituloSeccion="Certifica LEED tu nave industrial en Mexicali — donde el clima es el examen más difícil"
       parrafoCierre="Opera tu nave industrial en Mexicali con envolvente térmica que cumple créditos LEED y resiste los 48°C del desierto. 30 corporaciones internacionales ya operan en parques de Grupo Nelson con estas especificaciones. Solicita una consulta para tu proyecto."
-      fuentes="ASHRAE 90.1 (Energy Standard for Buildings) · LEED v4.1 Energy & Atmosphere Credits · Datos de proyecto: Gulfstream 550K, Constructora de Casa (2024-2026)"
+      fuentes="ASHRAE 90.1 (Energy Standard for Buildings) · LEED v4.1 Energy & Atmosphere Credits · Datos de proyecto: Gulfstream 550K, Nuestra Constructora (2024-2026)"
     />
   )
 }

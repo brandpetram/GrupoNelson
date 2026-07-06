@@ -12,14 +12,14 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/experiencia/normas-certificaciones-estandares',
   title: 'Normas, Certificaciones y Estándares',
-  description: 'La Constructora de Casa de Grupo Nelson responde a tres tipos de exigencia: corporativas (ISN Recomendado), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
+  description: 'La constructora de Grupo Nelson responde a tres niveles de exigencia: corporativas (ISN Recomendado), de ingeniería (IBC, FM Global, BRB, NFPA, LEED) y regulatorias (NOM-009, NOM-027, DC-3). Cada estándar demostrado en naves industriales reales en Mexicali.',
 })
 
 const engineeringStandards = [
   {
     name: 'International Building Code',
     description:
-      'Las naves de Grupo Nelson se diseñan bajo IBC — no bajo el reglamento de construcción de Baja California. Para un comprador americano: tu nave en Mexicali se diseña bajo las mismas normas de construcción que al otro lado de la frontera.',
+      'Diseñamos y construimos bajo los lineamientos del IBC, integrándolos estrictamente con el reglamento de construcción de Baja California. Esto garantiza a nuestros clientes internacionales que su infraestructura en Mexicali cumple con los más altos estándares globales de seguridad y calidad estructural.',
     icon: GlobeAltIcon,
   },
   {
@@ -31,13 +31,13 @@ const engineeringStandards = [
   {
     name: 'Ingeniería antisísmica BRB',
     description:
-      'Nuestra Constructora de Casa implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica 4 en una nave de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
+      'Nuestra constructora implementó Buckling-Restrained Braces por primera vez en naves industriales de Mexicali — tecnología probada en Ciudad de México y Japón, aplicada en zona sísmica en una nave de 550,000 ft². No es una certificación: es ingeniería estructural que protege la continuidad de tu operación.',
     icon: BoltIcon,
   },
   {
     name: 'NFPA: protección contra incendio',
     description:
-      'El Parque Industrial Nelson II opera con sistema centralizado bajo estándares NFPA y FM — tanque de 360,000 galones, rociadores, bombas y detección. La protección no depende solo de tu nave: es infraestructura del parque.',
+      'El Parque Industrial Nelson II opera con sistema centralizado bajo estándares NFPA y FM — tanque de 360,000 galones, rociadores, bombas y detección. Esta sólida infraestructura está integrada directamente al parque, garantizando el máximo respaldo y seguridad para tus operaciones.',
     icon: FireIcon,
   },
 ]
@@ -59,9 +59,9 @@ export default function NormasCertificacionesEstandaresPage() {
         <div className="pt-20 md:pt-30">
         <HeroMotionPlus
           badge="Normas · Certificaciones · Estándares"
-          headlineTop="Tres tipos de exigencia."
-          headlineAccent="Cada una demostrada en proyecto real."
-          subtitle="Tu proyecto llega con tres tipos de exigencia: las de tu corporativo, las de tu industria y aseguradora, y las de la regulación. Nuestra Constructora de Casa ha cumplido las tres — en naves industriales reales en Mexicali."
+          headlineTop="Tres niveles de exigencia."
+          headlineAccent="Resultados comprobables en proyectos reales."
+          subtitle="Todo proyecto industrial demanda el cumplimiento de tres frentes clave: estándares corporativos, requerimientos de aseguradoras y normatividad regulatoria. En Nuestra Constructora se garantiza el éxito de tu obra."
           primaryButtonText="Solicita una consulta"
           primaryButtonHref="/contacto"
           secondaryButtonText="Conoce los estándares"
@@ -98,7 +98,7 @@ export default function NormasCertificacionesEstandaresPage() {
             {/* ISN */}
             <div className="mb-12">
               <h3 className="text-xl md:text-2xl font-bold leading-snug mb-4">
-                Nuestra Constructora de Casa es contratista &quot;Recomendado&quot; en
+                Nuestra constructora es contratista &quot;Recomendado&quot; en
                 ISNetworld
               </h3>
               <p className="text-lg leading-relaxed mb-4">
@@ -121,8 +121,8 @@ export default function NormasCertificacionesEstandaresPage() {
                 Certificación LEED — Gulfstream 550,000 ft²
               </h3>
               <p className="text-lg leading-relaxed">
-                La nave Gulfstream de 550,000 ft² está en proceso de certificación
-                LEED — cumplimiento ambiental verificable que facilita la
+                La nave Gulfstream de 550,000 ft² está certificada con LEED
+                Gold — cumplimiento ambiental verificable que facilita la
                 aprobación ESG de tu corporativo. El proceso completo — energía
                 solar, eficiencia de climatización, recuperación de agua — se
                 detalla en{' '}
@@ -152,11 +152,8 @@ export default function NormasCertificacionesEstandaresPage() {
                 Lo que tu industria y tu aseguradora exigen para el edificio
               </p>
               <p className="mt-6 text-lg/8 text-gray-300">
-                Más allá del mínimo legal, los clientes más exigentes demandan
-                estándares de construcción, aseguramiento y protección que
-                garanticen la integridad del edificio y la continuidad de la
-                operación. Ninguno de estos es obligatorio por ley mexicana — son
-                estándares superiores que nuestra Constructora de Casa ya cumple.
+                En Nuestra Constructora alineamos cada obra bajo estándares
+                internacionales.
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -193,13 +190,13 @@ export default function NormasCertificacionesEstandaresPage() {
               Cumplimiento regulatorio
             </p>
             <h2 className="text-2xl md:text-3xl font-bold leading-snug mb-4">
-              Lo que la regulación exige — documentado con rigor verificable
+              Cumplimiento normativo con evidencia verificable
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              Toda constructora debería cumplir las normas mexicanas de seguridad.
-              La diferencia es cómo se documenta: permisos diarios, matrices de
-              riesgo cuantitativas y registros que resisten una auditoría
-              corporativa.
+              Nos aseguramos de que cada proyecto cumpla estrictamente con las
+              normas mexicanas de seguridad. Marcamos la diferencia a través de
+              una gestión transparente, sustentada en permisos diarios, matrices
+              de riesgos cuantitativas y registros totalmente auditables.
             </p>
 
             <div className="grid gap-8 md:grid-cols-2 mb-12">
@@ -236,11 +233,6 @@ export default function NormasCertificacionesEstandaresPage() {
                 <p className="text-sm font-medium text-muted-foreground mb-3">
                   Capacitación laboral certificada
                 </p>
-                <p className="text-base leading-relaxed">
-                  Todo el personal de nuestra Constructora de Casa cuenta con constancia DC-3 de
-                  habilidades laborales. No es una política de capacitación: es
-                  certificación verificable de cada trabajador en campo.
-                </p>
               </div>
 
               {/* OSHA */}
@@ -250,10 +242,10 @@ export default function NormasCertificacionesEstandaresPage() {
                   Seguridad comparable a EE.UU.
                 </p>
                 <p className="text-base leading-relaxed">
-                  Los manuales de seguridad de nuestra Constructora de Casa están basados en estándares
+                  Los manuales de seguridad de nuestra constructora están basados en estándares
                   OSHA además de las normas mexicanas. Para un comprador
-                  americano: la seguridad en obra cumple criterios comparables a
-                  los de tu país.
+                  internacional: la seguridad en obra cumple con los criterios
+                  más estrictos y reconocidos a nivel global.
                 </p>
               </div>
             </div>
@@ -264,7 +256,7 @@ export default function NormasCertificacionesEstandaresPage() {
                 Validación independiente: EPGC
               </h3>
               <p className="text-base leading-relaxed">
-                El control de calidad no depende solo de nuestra Constructora de Casa. Laboratorios
+                El control de calidad no depende solo de nuestra constructora. Laboratorios
                 externos como EPGC (Especialistas en Geotecnia y Concretos)
                 verifican compactación de terracerías y calidad de cimentaciones
                 en cada proyecto. Un tercero lo valida.

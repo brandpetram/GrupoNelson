@@ -19,7 +19,7 @@ const engineeringStandards = [
   {
     name: 'International Building Code',
     description:
-      'Grupo Nelson facilities are designed under IBC — not under the Baja California building code. For an American buyer: your facility in Mexicali is designed under the same construction standards as across the border.',
+      'We design and build under IBC guidelines, strictly integrating them with the Baja California building code. This guarantees our international clients that their infrastructure in Mexicali meets the highest global standards of safety and structural quality.',
     icon: GlobeAltIcon,
   },
   {
@@ -31,13 +31,13 @@ const engineeringStandards = [
   {
     name: 'BRB seismic engineering',
     description:
-      'Our In-House Construction team implemented Buckling-Restrained Braces for the first time in industrial facilities in Mexicali — technology proven in Mexico City and Japan, applied in seismic zone 4 on a 550,000 ft² facility. It is not a certification: it is structural engineering that protects the continuity of your operation.',
+      'Our In-House Construction team implemented Buckling-Restrained Braces for the first time in industrial facilities in Mexicali — technology proven in Mexico City and Japan, applied in a seismic zone on a 550,000 ft² facility. It is not a certification: it is structural engineering that protects the continuity of your operation.',
     icon: BoltIcon,
   },
   {
     name: 'NFPA: fire protection',
     description:
-      'Nelson Industrial Park II operates with a centralized system under NFPA and FM standards — 360,000-gallon tank, sprinklers, pumps, and detection. Protection does not depend solely on your facility: it is park-level infrastructure.',
+      'Nelson Industrial Park II operates with a centralized system under NFPA and FM standards — 360,000-gallon tank, sprinklers, pumps, and detection. This solid infrastructure is integrated directly into the park, ensuring maximum support and safety for your operations.',
     icon: FireIcon,
   },
 ]
@@ -53,9 +53,9 @@ export default function StandardsCertificationsPage() {
         <HeroMotionPlus
           lang="en"
           badge="Standards · Certifications · Compliance"
-          headlineTop="Three types of requirements."
-          headlineAccent="Each one demonstrated in a real project."
-          subtitle="Your project comes with three types of requirements: your corporate standards, your industry and insurer standards, and regulatory compliance. Our In-House Construction team has met all three — in real industrial facilities in Mexicali."
+          headlineTop="Three levels of requirements."
+          headlineAccent="Verifiable results in real projects."
+          subtitle="Every industrial project demands compliance on three key fronts: corporate standards, insurer requirements, and regulatory compliance. Our In-House Construction team guarantees the success of your project."
           primaryButtonText="Request a consultation"
           primaryButtonHref="/contact"
           secondaryButtonText="See the standards"
@@ -113,8 +113,8 @@ export default function StandardsCertificationsPage() {
                 LEED Certification — Gulfstream 550,000 ft²
               </h3>
               <p className="text-lg leading-relaxed">
-                The 550,000 ft² Gulfstream facility is in the LEED
-                certification process — verifiable environmental compliance
+                The 550,000 ft² Gulfstream facility is LEED Gold
+                certified — verifiable environmental compliance
                 that facilitates your corporate ESG approval. The complete
                 process — solar energy, HVAC efficiency, water recovery —
                 is detailed in{' '}
@@ -141,11 +141,8 @@ export default function StandardsCertificationsPage() {
                 What your industry and insurer require for the building
               </p>
               <p className="mt-6 text-lg/8 text-gray-300">
-                Beyond the legal minimum, the most demanding clients require
-                construction, asset protection, and engineering standards
-                that ensure building integrity and operational continuity.
-                None of these are mandatory under Mexican law — they are
-                superior standards our In-House Construction team already meets.
+                Our In-House Construction team aligns every project with
+                international standards.
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -180,13 +177,13 @@ export default function StandardsCertificationsPage() {
               Regulatory compliance
             </p>
             <h2 className="text-2xl md:text-3xl font-bold leading-snug mb-4">
-              What the regulations require — documented with verifiable rigor
+              Regulatory compliance with verifiable evidence
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              Every contractor should comply with Mexican safety regulations.
-              The difference is how it is documented: daily permits,
-              quantitative risk matrices, and records that withstand a
-              corporate audit.
+              We make sure every project strictly complies with Mexican safety
+              regulations. We set ourselves apart through transparent
+              management, supported by daily permits, quantitative risk
+              matrices, and fully auditable records.
             </p>
 
             <div className="grid gap-8 md:grid-cols-2 mb-12">
@@ -224,11 +221,6 @@ export default function StandardsCertificationsPage() {
                 <p className="text-sm font-medium text-muted-foreground mb-3">
                   Certified labor training
                 </p>
-                <p className="text-base leading-relaxed">
-                  All personnel on our In-House Construction crews hold DC-3 labor skills certification.
-                  It is not a training policy: it is verifiable certification
-                  of every worker in the field.
-                </p>
               </div>
 
               {/* OSHA */}
@@ -239,9 +231,9 @@ export default function StandardsCertificationsPage() {
                 </p>
                 <p className="text-base leading-relaxed">
                   Our In-House Construction team builds its safety manuals on OSHA standards in
-                  addition to Mexican regulations. For an American buyer:
-                  on-site safety meets standards comparable to those in your
-                  home country.
+                  addition to Mexican regulations. For an international buyer:
+                  on-site safety meets the strictest and most globally
+                  recognized criteria.
                 </p>
               </div>
             </div>

@@ -7,7 +7,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/leed',
   title: 'Certificación LEED en Mexicali',
-  description: 'Certifica LEED tu nave industrial en Mexicali con la Constructora de Casa de Grupo Nelson: 30 años de experiencia en clima extremo, datos de desempeño térmico reales y Gulfstream en proceso de LEED Gold.',
+  description: 'Certifica LEED tu nave industrial en Mexicali con la constructora de Grupo Nelson: 30 años de experiencia en clima extremo, datos de desempeño térmico reales y Gulfstream certificada con LEED Gold.',
 })
 
 export default function LeedPage() {

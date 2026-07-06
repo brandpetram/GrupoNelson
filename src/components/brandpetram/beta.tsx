@@ -13,11 +13,11 @@ import Image from "next/image"
 const betaText = {
   es: {
     heading: <>Nave a <span className="text-orange-600">la medida</span> vs. nave especulativa</>,
-    paragraph: <>Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. La construcción a la medida (build-to-suit) elimina ese compromiso: <strong>Gulfstream</strong> necesitó 52,200 m² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Nuestra Constructora de Casa los diseñó y construyó a la medida.</>,
+    paragraph: <>Una nave especulativa se construye sin cliente — dimensiones estándar, sistemas genéricos. La construcción a la medida (build-to-suit) elimina ese compromiso: <strong>Gulfstream</strong> necesitó 550k ft² con sistemas antisísmicos BRB y 20 MW de capacidad eléctrica. <strong>Skyworks</strong> necesitó un puente de 95 metros. Nuestra constructora los diseñó y construyó a la medida.</>,
   },
   en: {
     heading: <>Custom-built <span className="text-orange-600">facility</span> vs. speculative building</>,
-    paragraph: <>A speculative building is built without a client — standard dimensions, generic systems. Build-to-suit eliminates that compromise: <strong>Gulfstream</strong> needed 52,200 m² with BRB seismic systems and 20 MW of electrical capacity. <strong>Skyworks</strong> needed a 95-meter bridge. Our In-House Construction team designed and built them to spec.</>,
+    paragraph: <>A speculative building is built without a client — standard dimensions, generic systems. Build-to-suit eliminates that compromise: <strong>Gulfstream</strong> needed 550k ft² with BRB seismic systems and 20 MW of electrical capacity. <strong>Skyworks</strong> needed a 95-meter bridge. Our In-House Construction team designed and built them to spec.</>,
   },
 }
 
@@ -32,7 +32,7 @@ export function Beta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
           <h2 className="text-4xl 1024:text-[3.4rem] 1200:text-[3rem] 1280:text-[3rem] 1536:text-[3.5rem] 1728:text-[3.7rem] 1920:text-[3.5rem] font-bold text-foreground leading-none tracking-tight">
             {t.heading}
           </h2>
-          <p className="text-lg 834:text-xl 1024:text-2xl 1200:text-lg 1280:text-[.7rem] 1366:text-[.8rem] 1440:text-[1rem] 1536:text-[1.1rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed 1280:w-10/12 1536:w-full">
+          <p className="text-lg 834:text-xl 1024:text-2xl 1200:text-lg 1280:text-[.9rem] 1366:text-[1rem] 1440:text-[1.1rem] 1536:text-[1.2rem] 1728:text-[1.3rem] 1920:text-[1.5rem] text-muted-foreground leading-relaxed 1280:w-10/12 1536:w-full">
             {t.paragraph}
           </p>
         </div>

@@ -19,7 +19,7 @@ export default function EnergiaAtmosferaPage() {
       parrafos={[
         'Optimiza el perfil energético de tu nave industrial en Mexicali desde la fase conceptual. Nuestro equipo coordina tres estrategias con modelado energético específico para las condiciones climáticas del sitio: la envolvente térmica reduce la carga de enfriamiento (R-19 muros, R-30 cubierta), la iluminación LED de gran altura con controles de ocupación reduce la demanda eléctrica base, y el sistema fotovoltaico en cubierta genera la energía que el edificio ya no desperdicia.',
         'La nave Gulfstream 550K documenta los resultados: 10 MW de paneles solares distribuidos en 20,000 m² de cubierta y 30,000 m² de marquesinas del estacionamiento. 20 MW de capacidad eléctrica total instalada. 42 manejadoras de aire acondicionado de mínimo consumo con recuperación del 90% del agua de condensación reutilizada en torres de enfriamiento. Certificación FM Global en toda la envolvente.',
-        'Escala tu capacidad de generación solar en Mexicali. Con más de 5,000 m² de cubierta orientada al sur, el potencial fotovoltaico de una nave industrial en esta región es excepcional — cada kWh generado en sitio reduce la dependencia de la red de CFE y suma créditos en Energía Renovable de LEED. Grupo Nelson gestiona la integración completa con su Constructora de Casa: estructura preparada para carga de paneles, instalación eléctrica dimensionada y conexión a red.',
+        'Escala tu capacidad de generación solar en Mexicali. Con más de 5,000 m² de cubierta orientada al sur, el potencial fotovoltaico de una nave industrial en esta región es excepcional — cada kWh generado en sitio reduce la dependencia de la red de CFE y suma créditos en Energía Renovable de LEED. Grupo Nelson gestiona la integración completa con nuestra constructora: estructura preparada para carga de paneles, instalación eléctrica dimensionada y conexión a red.',
       ]}
       features={[
         {
@@ -36,8 +36,8 @@ export default function EnergiaAtmosferaPage() {
         },
       ]}
       subtituloSeccion="Energía y Atmósfera: la categoría de mayor peso en LEED para naves industriales en Mexicali"
-      parrafoCierre="Maximiza los créditos de Energía y Atmósfera en tu nave industrial de Mexicali. Con envolvente calibrada, iluminación eficiente y paneles solares en cubierta, la Constructora de Casa de Grupo Nelson ha demostrado ahorros del 35-50% en la nave más grande de la ciudad. Solicita una consulta para tu proyecto."
-      fuentes="ASHRAE 90.1 (Energy Baseline) · LEED v4.1 Energy & Atmosphere Credits · Datos de proyecto: Gulfstream 550K, Constructora de Casa (2024-2026)"
+      parrafoCierre="Maximiza los créditos de Energía y Atmósfera en tu nave industrial de Mexicali. Con envolvente calibrada, iluminación eficiente y paneles solares en cubierta, la constructora de Grupo Nelson ha demostrado ahorros del 35-50% en la nave más grande de la ciudad. Solicita una consulta para tu proyecto."
+      fuentes="ASHRAE 90.1 (Energy Baseline) · LEED v4.1 Energy & Atmosphere Credits · Datos de proyecto: Gulfstream 550K, Nuestra Constructora (2024-2026)"
     />
   )
 }

@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/experiencia/excelencia-operativa',
   title: 'Excelencia Operativa',
-  description: '75 proyectos completados en 30 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. La Constructora de Casa de Grupo Nelson.',
+  description: '75 proyectos completados en 30 años. 1,092,745 horas hombre con historial de seguridad documentado. Control de obra semanal con reportes documentados. La constructora de Grupo Nelson.',
 })
 
 export default function ExcelenciaOperativaPage() {
@@ -63,7 +63,7 @@ export default function ExcelenciaOperativaPage() {
                         <Link href="/contacto">Solicita una consulta</Link>
                       </Button>
                       <span className="text-muted-foreground mt-3 block text-center text-sm">
-                        Constructora de Casa · Grupo Nelson
+                        Nuestra Constructora · Grupo Nelson
                       </span>
                     </div>
                   </div>

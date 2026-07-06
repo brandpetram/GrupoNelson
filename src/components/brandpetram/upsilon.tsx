@@ -14,7 +14,7 @@ const text = {
     titleStart: '¿Necesitas una constructora con experiencia en:',
     titleEnd: <>No te preocupes.{" "}<span className="ml-3">Estás en buenas manos.</span></>,
     imgAlt: 'Nave industrial',
-    bottomText: <>Con{" "}<span className="font-black tracking-tight text-blue-600">la Constructora de Casa</span>{" "}ya no tienes que preocuparte por{" "}<span className="line-through"><br className="md:hidden" />coordinar múltiples contratistas</span>{" "}<br className="md:hidden" /><span className="text-foreground font-black">un solo responsable.</span></>,
+    bottomText: <>Con{" "}<span className="font-black tracking-tight text-blue-600">nuestra constructora</span>{" "}ya no tienes que preocuparte por{" "}<span className="line-through"><br className="md:hidden" />coordinar múltiples contratistas</span>{" "}<br className="md:hidden" /><span className="text-foreground font-black">un solo responsable.</span></>,
   },
   en: {
     pills: [

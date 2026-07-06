@@ -38,7 +38,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "40 años con Gulfstream Aerospace",
     description:
-      "Fortune 500, manufactura aeroespacial. 5 naves construidas por nuestra Constructora de Casa. Asignación directa sin licitación.",
+      "Fortune 500, manufactura aeroespacial. 5 naves construidas por nuestra constructora. Asignación directa sin licitación.",
     href: "/contacto",
     bg: "bg-blue-700",
   },

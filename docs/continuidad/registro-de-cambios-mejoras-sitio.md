@@ -117,3 +117,42 @@ Foto de arquitectura industrial (Pi):
 
 - Menús **EXPERIENCIA**, **NOSOTROS** y **PARQUES**: se pidió que el título de cada menú fuera clickeable a una página *y además* abriera su flyout, quitando un ítem del submenú. **No se hizo.** Es un cambio mayor de arquitectura de navegación y un patrón de UX problemático (ambigüedad entre "navegar" y "abrir menú", inconsistencia desktop/mobile, conflictos de accesibilidad ARIA). Se le explicó a Erick y se propuso la alternativa estándar: un link "Ver todo…" como primer ítem del flyout. **Pendiente de su decisión.**
 - Menú **RECURSOS**: en este lote Erick pidió lo mismo (al hacer click en RECURSOS dirigir a /recursos y quitarlo del submenú). **No se hizo**, por la misma razón que los otros menús. Se mantiene la propuesta del link "Ver todo…".
+
+## Ronda de comentarios de Vercel — 2026-07-06
+
+Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activos de `dev` + 15 viejos de marzo-abril), según `docs/planes/plan-para-resolver-comentarios-vercel-de-erick.md` (3 rondas de review de Codex). Resultado: **44 resueltos** (aplicados o verificados ya vigentes), **25 pendientes** (imágenes, layout/preguntas y viejos que requieren decisión). IDs de threads y decisión por comentario en `docs/continuidad/threads-vercel-erick-2026-07-06.json`.
+
+### Llave en Mano (ES + EN en todos)
+- "30 corporaciones internacionales" → **"+30"**; "El contraincendio central" → **"El sistema contraincendio"**; CTA → **"Consulta nuestro inventario"**.
+- **Copy nuevo de Erick** para los parques (El Vigía pionero/precios competitivos · Nelson II moderno/BTS) reemplazando el bloque anterior (que mencionaba Nelson I—1984, Honeywell y galones); ortografía corregida.
+- **Copy nuevo** "Con el respaldo de +30 clientes…" reemplazando el subtítulo anterior.
+- Eliminados: "El 80% de los clientes…son recurrentes" y "Naves desde 5,000 ft²…Fortune 500".
+
+### Diseño e Ingeniería (ES + EN)
+- Frases/párrafos nuevos de Erick: "Donde la ingeniería convencional se detiene, nosotros comenzamos.", "Creamos la ingeniería que Mexicali no tenía…", "Garantizamos el cumplimiento normativo desde el proyecto ejecutivo…", bloque de auditorías con **"+1M de horas-hombre sin fatalidades" y "+400 días sin accidentes"** (⚠ el bloque anterior decía "404 días consecutivos"; las descripciones largas de esos 2 bullets se retiraron con el reemplazo).
+- "52,200 m²" → **"550k ft²"** (aquí y en el hero/beta de Build-to-Suit). ⚠ Otras páginas (specialized-projects, portfolio, LEED) siguen diciendo "52,200 m²" — Erick solo ancló estas; decidir si se unifica globalmente.
+- "está certificando LEED Gold" → **"está certificada con LEED Gold"** (pedido por Erick), extendido por consistencia al FAQ de la misma página, a la sección LEED de Normas (ES+EN) y a la metadata de /leed. **⚠ IMPORTANTE — confirmar con Erick:** la página del proceso LEED (ES+EN) y el FAQ del sidebar dicen con detalle que Gulfstream 550K está "en proceso, 53-55 puntos (Silver), apuntando a Gold" — datos que contradicen "certificada". No se tocaron (convertirlos exigiría inventar puntaje/fecha). Si la certificación NO está emitida, hay que revertir los "certificada"; si SÍ, hay que actualizar el detalle del proceso.
+- **"zona sísmica 4" → "zona sísmica"** en los 2 puntos anclados por Erick y extendido a las 12 menciones restantes del sitio (ES+EN) por consistencia.
+- El texto en inglés que aparecía en el FAQ de la página ES se corrigió (faltaba `lang="es"`).
+- Eliminados: subtítulo del BigNumber ("La nave más grande…para Gulfstream"), link "Ver cómo se hizo" (llevaba a la página equivocada), y el **placeholder lorem "Database backups"** que Erick señaló con "Y esto ????" (el 3er bullet del split ahora es condicional).
+
+### Normas, Certificaciones y Estándares (ES + EN) — 11 de 12
+- "Tres tipos de exigencia" → **"Tres niveles de exigencia"** (+ metadata); "Cada una demostrada…" → **"Resultados comprobables en proyectos reales."**; copys nuevos de Erick en hero, IBC, NFPA, CAPA 2 y sección regulatoria (ortografía corregida); "comprador **americano**" → "**internacional**"; cierre → "criterios más estrictos y reconocidos a nivel global"; tarjeta DC-3 sin el párrafo de personal.
+- ⚠ **No aplicado**: el "eliminar" sobre la tarjeta OSHA (JJQY4eQgY8p5) — contradice 2 comentarios posteriores del propio Erick que editan esa misma tarjeta. Preguntarle qué quería eliminar.
+
+### Build-to-Suit (ES + EN)
+- Cifras del hero y beta → "550k ft²"; "Naves Industriales **Fabricadas**" → "**Construidas**" (EN ya era neutro); headline delta → **"Tu nave industrial a la medida de tu operación."**
+- **Tamaño de letra** del párrafo beta subido en desktop (1280px mostraba ~11px; ahora escala .9→1.2rem) — atiende "letra extremadamente chica".
+
+### Rename global: → "Nuestra Constructora" — decisión del consejo de administración
+- **"Constructora de Casa" desapareció del sitio ES** (~58 ocurrencias en 35 archivos): "Nuestra Constructora" en títulos/nav/badges/metadata, "nuestra constructora" en prosa (reescritura por ocurrencia, sin find/replace; en voz de clientes se usó "la constructora de Grupo Nelson").
+- **EN conserva "In-House Construction"** como etiqueta (mayor punch comercial; decisión Luis+Claude 2026-07-06). URLs (`/constructora/baumex`), rutas de imagen e identificadores internos intactos, igual que el rename anterior.
+
+### Verificados ya vigentes (solo confirmar en Vercel)
+- "40" años en excelencia-operativa; "en Todo Mexicali" (ES) / "Across Mexicali" (EN); foto nelson2-8 en nuestra-historia; foto Seleccionadas…-8 en llave-en-mano; el texto EN de build-to-suit ya estaba traducido.
+
+### Pendientes (no bloquean; decidir con Luis)
+- **Imágenes (6 comentarios, 5 archivos identificados):** cielo contaminado + logo CASTORES (misma foto: `fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG` — una edición resuelve ambos), persona caminando (`grupo-nelson-naves…-3.jpeg`), cambiar foto eta (`…-1.jpeg`), cambiar foto kappa (`parque-industrial…-436.jpg`), foto desenfocada en diseño (`…nave-industrial-1.jpg`, es efecto del crop 1:2 extremo). Preflight listo: token de Replicate presente; plan = nano-banana/flux-kontext, candidatas para aprobación visual.
+- **Layout/estructura (5):** mover "Soluciones Llave en Mano" al menú Parques (mecánica identificada en navigation.ts/navigation-en.ts), compactar espacios en blanco (padding 20-30rem del bloque oscuro de lamda), alineación del h2 de lamda, gap foto-texto (es diseño editorial intencional — responder a Erick o compactar), botón "Habla con un experto" (propuesta de ubicación y patrón lista).
+- **Preguntas para Erick (3):** video preview del footer (no hay `<video>`: es el ícono de YouTube — ¿quiere thumbnail del canal?), repetición editorial de proof points (¿es intencional, quiere variar?), tarjeta OSHA (¿qué eliminar?).
+- **Viejos no realizados (11):** según criterio de Luis (solo triviales y claramente mejoras); incluye 1 obsoleto ("fatalidades→accidentes", contradicho por copy nuevo de Erick del 06-18).

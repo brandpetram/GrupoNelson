@@ -131,7 +131,7 @@ export function StatsGridBPBeta() {
               </div>
 
               <div className="flex flex-col">
-                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">proyectos construidos<br />por la Constructora de Casa</dt>
+                <dt className="text-lg 768:text-xl 1200:text-2xl leading-none text-blue-100">proyectos construidos<br />por nuestra constructora</dt>
                 <dd className="order-first text-5xl font-bold tracking-tighter leading-none sm:text-6xl lg:text-7xl text-white">
                   75<span className="text-blue-200">+</span>
                 </dd>

@@ -88,12 +88,14 @@ export function Mosaico2ConProps({
             <p className="mt-2 md:mt-3 text-lg md:text-xl 1024:text-lg 1024:text-2xl 1200:text-lg 1280:text-lg 1920:text-2xl font-normal leading-tight 1024:leading-none 1200:leading-none 1280:leading-normal text-balance max-w-xs">
               {bloque1Descripcion}
             </p>
-            <Link
-              href={bloque1LinkHref}
-              className="mt-4 md:mt-5 text-sm md:text-base 1024:text-base 1920:text-base font-extrabold tracking-widest uppercase text-yellow-400 transition-opacity hover:opacity-80"
-            >
-              {bloque1LinkTexto}
-            </Link>
+            {bloque1LinkTexto && (
+              <Link
+                href={bloque1LinkHref}
+                className="mt-4 md:mt-5 text-sm md:text-base 1024:text-base 1920:text-base font-extrabold tracking-widest uppercase text-yellow-400 transition-opacity hover:opacity-80"
+              >
+                {bloque1LinkTexto}
+              </Link>
+            )}
           </motion.div>
 
           {/* Bloque 2: Imagen */}

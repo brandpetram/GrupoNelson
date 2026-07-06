@@ -156,7 +156,7 @@ export default function ProyectosEspecializadosPage() {
             El puente se coló <strong>en un solo día</strong>, con dos bombas de
             concreto, sin juntas de construcción — una sola pieza de 95 metros.
             La cimentación baja a <strong>18 metros</strong> de profundidad en
-            suelo arenoso colapsable, zona sísmica 4. Los permisos involucraron{" "}
+            suelo arenoso colapsable, zona sísmica. Los permisos involucraron{" "}
             <strong>tres niveles de gobierno</strong>: CNA (federal), gobierno
             del estado y municipio. La vialidad solo se cerró un domingo. El
             montaje de la estructura tomó dos domingos consecutivos, con dos

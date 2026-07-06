@@ -20,12 +20,12 @@ export function SidebarPortafolioBaumex({
         {/* Trayectoria */}
         <div>
           <h3 className="font-semibold text-foreground text-lg mb-4 leading-none">
-            Constructora de Casa
+            Nuestra Constructora
           </h3>
           <p className="text-sm leading-relaxed text-muted-foreground/80">
             {lang === 'en'
               ? 'Since 1997, our In-House Construction team has set the standard for industrial construction in northwestern Mexico, delivering turnkey solutions for global leaders.'
-              : 'Desde 1997, nuestra Constructora de Casa ha definido el estándar de construcción industrial en el noroeste de México, entregando soluciones llave en mano para líderes globales.'}
+              : 'Desde 1997, nuestra constructora ha definido el estándar de construcción industrial en el noroeste de México, entregando soluciones llave en mano para líderes globales.'}
           </p>
         </div>
 

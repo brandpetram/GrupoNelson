@@ -114,7 +114,7 @@ export default function Tau({ lang = 'es' }: { lang?: 'en' | 'es' }) {
                   className="w-full aspect-square object-cover"
                 />
                 <p className="text-right text-sm 768:text-base 1024:text-base 1200:text-[0.85rem] 1440:text-[1rem] 1920:text-[1.25rem] mt-1 leading-none">
-                  Constructora de Casa
+                  Nuestra Constructora
                 </p>
               </div>
             </div>

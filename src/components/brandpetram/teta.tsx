@@ -1,11 +1,11 @@
 const tetaText = {
   es: {
     heading: 'Arranca producción sin esperar 12-24 meses de construcción',
-    paragraph: 'Para empresas que llegan a México por relocalización industrial (nearshoring) y necesitan operar rápido, una nave llave en mano elimina el ciclo completo de una construcción a la medida (build-to-suit). Visitas la nave, verificas que cumple tus requerimientos técnicos, firmas contrato y comienzas a operar en semanas. Contratos de 10-15 años. El 80% de los clientes de Grupo Nelson son recurrentes.',
+    paragraph: 'Para empresas que llegan a México por relocalización industrial (nearshoring) y necesitan operar rápido, una nave llave en mano elimina el ciclo completo de una construcción a la medida (build-to-suit). Visitas la nave, verificas que cumple tus requerimientos técnicos, firmas contrato y comienzas a operar en semanas. Contratos de 10-15 años.',
   },
   en: {
     heading: 'Start production without waiting 12-24 months for construction',
-    paragraph: 'For companies arriving in Mexico through nearshoring that need to operate quickly, a turnkey building eliminates the full build-to-suit cycle. You visit the facility, verify it meets your technical requirements, sign the contract, and begin operating in weeks. 10-15 year leases. 80% of Grupo Nelson clients are repeat customers.',
+    paragraph: 'For companies arriving in Mexico through nearshoring that need to operate quickly, a turnkey building eliminates the full build-to-suit cycle. You visit the facility, verify it meets your technical requirements, sign the contract, and begin operating in weeks. 10-15 year leases.',
   },
 }
 

@@ -101,15 +101,15 @@ export default function DiferenciaNelsonPage() {
         {/* ── Diferenciador 3: Constructora interna ── */}
         <SplitSimpleBP
           tagline="Constructora interna"
-          title="Constructora de Casa: un contrato, un responsable, de terreno a llave en mano"
+          title="Nuestra Constructora: un contrato, un responsable, de terreno a llave en mano"
           imagePosition="left"
           imageSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-255.jpg"
-          imageAlt="Constructora de Casa — naves industriales en Mexicali"
+          imageAlt="Nuestra Constructora — naves industriales en Mexicali"
         >
           <p className={splitParagraphClass}>
             Si necesitas una nave que no existe en inventario,{" "}
-            <strong>Constructora de Casa</strong> la diseña y construye — la
-            constructora propia de Grupo Nelson, no un tercero subcontratado.
+            <strong>nuestra constructora</strong> la diseña y construye — es
+            propia de Grupo Nelson, no un tercero subcontratado.
             Un solo contrato cubre diseño, permisos, construcción y entrega.
           </p>
           <p className={splitParagraphClass}>

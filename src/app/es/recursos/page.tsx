@@ -6,7 +6,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/recursos',
   title: 'Recursos',
-  description: 'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y su Constructora de Casa implementan en sus desarrollos industriales.',
+  description: 'Documentación oficial de normas, certificaciones y estándares que Grupo Nelson y su constructora implementan en sus desarrollos industriales.',
 })
 
 const categories = [

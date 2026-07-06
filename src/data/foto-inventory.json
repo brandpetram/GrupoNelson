@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-17T08:31:08.082Z",
+  "generatedAt": "2026-07-06T21:30:09.377Z",
   "totalPhotos": 956,
-  "totalUsed": 256,
-  "totalUnused": 700,
+  "totalUsed": 255,
+  "totalUnused": 701,
   "folders": [
     {
       "folder": "(raíz)",
@@ -20,7 +20,6 @@
             "page: componentes",
             "page: proyecto/bitacora",
             "page: proyecto/documentacion",
-            "page: proyecto/fotografias",
             "page: proyecto",
             "page: about/difference",
             "page: about/leadership",
@@ -109,7 +108,6 @@
             "page: componentes",
             "page: proyecto/bitacora",
             "page: proyecto/documentacion",
-            "page: proyecto/fotografias",
             "page: proyecto",
             "page: about/difference",
             "page: about/leadership",
@@ -223,8 +221,12 @@
           "usedIn": [
             "page: construction/baumex",
             "page: construction/build-to-suit",
+            "page: experience/success-stories",
             "page: es/constructora/baumex",
             "page: es/constructora/build-to-suit",
+            "page: es/experiencia/casos-de-exito",
+            "componente: experience/success-stories/sections/mosaic-cases",
+            "componente: es/experiencia/casos-de-exito/sections/mosaico-casos",
             "componente: brandpetram/beta",
             "componente: brandpetram/tau"
           ]
@@ -323,13 +325,9 @@
             "page: about/leadership",
             "page: about/our-story",
             "page: construction/baumex",
-            "page: experience/success-stories",
             "page: es/constructora/baumex",
-            "page: es/experiencia/casos-de-exito",
             "page: es/nelson/liderazgo",
             "page: es/nelson/nuestra-historia",
-            "componente: experience/success-stories/sections/mosaic-cases",
-            "componente: es/experiencia/casos-de-exito/sections/mosaico-casos",
             "componente: brandpetram/cursor-trail-grupo-nelson",
             "componente: brandpetram/feature-section-3-bp",
             "componente: brandpetram/mosaico-liderazgo",
@@ -489,7 +487,6 @@
             "page: componentes",
             "page: proyecto/bitacora",
             "page: proyecto/documentacion",
-            "page: proyecto/fotografias",
             "page: proyecto",
             "page: about/difference",
             "page: about/leadership",
@@ -701,12 +698,16 @@
             "page: about/our-story",
             "page: construction/baumex",
             "page: construction/turnkey",
+            "page: experience/success-stories",
             "page: home",
             "page: es/constructora/baumex",
             "page: es/constructora/llave-en-mano",
+            "page: es/experiencia/casos-de-exito",
             "page: es/nelson/nuestra-historia",
             "page: es",
+            "componente: experience/success-stories/sections/mosaic-cases",
             "componente: home-client",
+            "componente: es/experiencia/casos-de-exito/sections/mosaico-casos",
             "componente: es/home-client",
             "componente: brandpetram/cursor-trail-grupo-nelson",
             "componente: brandpetram/ficha-tecnica-parque-detalle",
@@ -745,7 +746,6 @@
             "page: componentes",
             "page: proyecto/bitacora",
             "page: proyecto/documentacion",
-            "page: proyecto/fotografias",
             "page: proyecto",
             "page: about/difference",
             "page: about/leadership",
@@ -2572,11 +2572,7 @@
           "usedInCode": true,
           "usedIn": [
             "page: about/leadership",
-            "page: experience/success-stories",
-            "page: es/experiencia/casos-de-exito",
             "page: es/nelson/liderazgo",
-            "componente: experience/success-stories/sections/mosaic-cases",
-            "componente: es/experiencia/casos-de-exito/sections/mosaico-casos",
             "componente: brandpetram/mosaico-liderazgo"
           ]
         },
@@ -3334,16 +3330,14 @@
     {
       "folder": "parque-industrial-nelson-2-mexicali",
       "count": 3,
-      "usedCount": 1,
+      "usedCount": 0,
       "photos": [
         {
           "path": "/parque-industrial-nelson-2-mexicali/Specs-Nave-Industrial-1-Nelson-II-002.jpg",
           "folder": "parque-industrial-nelson-2-mexicali",
           "filename": "Specs-Nave-Industrial-1-Nelson-II-002.jpg",
-          "usedInCode": true,
-          "usedIn": [
-            "componente: es/contacto/contact-form"
-          ]
+          "usedInCode": false,
+          "usedIn": []
         },
         {
           "path": "/parque-industrial-nelson-2-mexicali/Specs-Nave-Industrial-2-Nelson-II-002.jpg",

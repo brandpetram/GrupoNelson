@@ -7,7 +7,7 @@ export const metadata = createMetadata({
   lang: 'en',
   path: '/construction/leed',
   title: 'LEED Certification in Mexicali',
-  description: 'LEED-certify your industrial building in Mexicali with our in-house construction team: 30 years of experience in extreme climate, real thermal performance data, and Gulfstream pursuing LEED Gold.',
+  description: 'LEED-certify your industrial building in Mexicali with our in-house construction team: 30 years of experience in extreme climate, real thermal performance data, and Gulfstream LEED Gold certified.',
 })
 
 export default function LeedPage() {

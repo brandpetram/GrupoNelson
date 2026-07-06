@@ -86,7 +86,7 @@ export const parksInventoryLinks = [
 export const solutionsServicesLinks = [
   {
     href: '/constructora/baumex',
-    name: 'Constructora de Casa',
+    name: 'Nuestra Constructora',
     description: 'Constructora interna con 30+ años',
     iconKey: 'award',
   },

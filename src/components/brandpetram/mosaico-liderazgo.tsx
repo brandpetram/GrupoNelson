@@ -112,7 +112,7 @@ const items: MosaicoItem[] = [
     type: "card",
     title: "30 años dirigiendo la construcción",
     description:
-      "Nuestra Constructora de Casa fue fundada en 1997 y lleva casi 30 años bajo la misma dirección. La continuidad no se limita a la familia.",
+      "Nuestra constructora fue fundada en 1997 y lleva casi 30 años bajo la misma dirección. La continuidad no se limita a la familia.",
     href: "/nelson/liderazgo",
     bg: "bg-blue-900",
   },

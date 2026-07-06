@@ -17,7 +17,7 @@ export const metadata = createMetadata({
   lang: 'es',
   path: '/es/constructora/estandares-internacionales',
   title: 'Estándares Internacionales de Construcción',
-  description: 'Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Nuestra Constructora de Casa: 75+ proyectos, auditorías de Gulfstream y Honeywell.',
+  description: 'Naves industriales en Mexicali construidas con estándares FM Global, NFPA, LEED, ISN, IBC y NOM. Nuestra constructora: 75+ proyectos, auditorías de Gulfstream y Honeywell.',
 })
 
 export default function EstandaresInternacionalesPage() {

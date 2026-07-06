@@ -77,7 +77,7 @@ export default function DisenoEIngenieriaPage() {
           <GunLikeConProps
             poligonoText="Ingeniería Industrial de Clase Mundial"
             titulo="Seis disciplinas de ingeniería"
-            parrafo="Civil, estructural, eléctrica, mecánica, arquitectura y costos. Desde cimentaciones en zona sísmica 4 hasta subestaciones de 20 MW y protección contra incendios FM Global."
+            parrafo="Civil, estructural, eléctrica, mecánica, arquitectura y costos. Desde cimentaciones en zona sísmica hasta subestaciones de 20 MW y protección contra incendios FM Global."
           />
         </div>
 
@@ -117,7 +117,7 @@ export default function DisenoEIngenieriaPage() {
             title="¿Qué necesita tu nave industrial? Eso define nuestra ingeniería"
             description="Tus requerimientos técnicos determinan qué disciplinas se activan y con qué profundidad. No aplicamos una fórmula — resolvemos tu problema específico."
             feature1Title="¿Suelo difícil? Lo resolvemos desde el estudio"
-            feature1Description="Mecánica de suelos, pilas de concreto a 18 m en suelo arenoso colapsable, sistemas antisísmicos BRB para zona sísmica 4. Tu cimentación se calcula para tu terreno exacto."
+            feature1Description="Mecánica de suelos, pilas de concreto a 18 m en suelo arenoso colapsable, sistemas antisísmicos BRB para zona sísmica. Tu cimentación se calcula para tu terreno exacto."
             feature1Icon={<Compass className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
             feature2Title="¿Alta demanda eléctrica? La dimensionamos desde proyecto"
@@ -138,15 +138,15 @@ export default function DisenoEIngenieriaPage() {
             imageAlt="Nave industrial más grande de Mexicali"
             number="550K"
             title={<>Pies cuadrados<br/>con ingeniería<br/>de primera</>}
-            subtitle={<>La nave industrial más grande<br className="hidden md:block"/>de Mexicali — para Gulfstream</>}
+            subtitle=""
           />
         </div>
 
         {/* Cuadro Circulo — Problemas de ingeniería resueltos */}
         <div>
           <CuadroCirculoConEscuadraConProps
-            titulo={<>Problemas que<br/>otros no han<br/>resuelto aquí</>}
-            parrafo="¿Necesitas sistemas antisísmicos que no existen en Mexicali? ¿Un puente sin columnas sobre un dren federal? ¿Un túnel de viento con presión de 3,000 HP? Ya lo diseñamos y construimos."
+            titulo="Donde la ingeniería convencional se detiene, nosotros comenzamos."
+            parrafo="Creamos la ingeniería que Mexicali no tenía: sistemas antisísmicos únicos, puentes sin columnas sobre drenes federales y túneles de viento con potencia de 3,000 HP. Nosotros ya lo diseñamos y lo construimos. Desafía los límites de la ingeniería con soluciones a tu medida."
             numeroCirculo="18"
             simboloNumero="m"
             itemsCirculo={["BRB antisísmico", "Puente 95 m", "Túnel de viento", "Pilas profundas", "20 MW eléctricos"]}
@@ -156,10 +156,9 @@ export default function DisenoEIngenieriaPage() {
         {/* Mosaico — Proyectos destacados */}
         <div className="w-11/12 mx-auto -mt-20 md:-mt-64 1024:-mt-40 relative">
           <Mosaico2ConProps
-            bloque1Titulo="52,200 m² para Gulfstream"
+            bloque1Titulo="550k ft² para Gulfstream"
             bloque1Descripcion="BRB antisísmico, 20 MW, LEED Gold — diseñado para una operación que no cabía en ningún catálogo"
-            bloque1LinkTexto="Ver cómo se hizo"
-            bloque1LinkHref="/constructora/build-to-suit"
+            bloque1LinkTexto=""
             bloque2ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-194.jpg"
             bloque2ImagenAlt="Proyecto Gulfstream"
             bloque3ImagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-275.jpg"
@@ -181,7 +180,7 @@ export default function DisenoEIngenieriaPage() {
         <div className="flex flex-col gap-4">
           <div className="container ml-10 md:mx-auto 1200:-translate-x-16 w-7/12 md:w-8/12 1200:w-8/12 1366:w-8/12 1536:w-9/12 lg:max-w-6xl my-10 md:mt-20">
             <ParrafoBigConProps>
-              Pilas de concreto armado a 18 metros de profundidad en suelo arenoso colapsable. Sistemas antisísmicos BRB para zona sísmica 4. Un puente vehicular de 95 metros sin una sola columna. Un túnel de viento que soporta 3,000 HP de presión. Eso es ingeniería.
+              Pilas de concreto armado a 18 metros de profundidad en suelo arenoso colapsable. Sistemas antisísmicos BRB para zona sísmica. Un puente vehicular de 95 metros sin una sola columna. Un túnel de viento que soporta 3,000 HP de presión. Eso es ingeniería.
             </ParrafoBigConProps>
           </div>
         </div>
@@ -197,7 +196,7 @@ export default function DisenoEIngenieriaPage() {
             feature1Icon={<Shield className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
             feature1Titulo="Ingeniería antisísmica"
-            feature1Descripcion="Sistemas BRB (Buckling-Restrained Braces) para zona sísmica 4. Primera implementación en Mexicali — tecnología de Japón y Ciudad de México."
+            feature1Descripcion="Sistemas BRB (Buckling-Restrained Braces) para zona sísmica. Primera implementación en Mexicali — tecnología de Japón y Ciudad de México."
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
             feature2Titulo="Alta tensión y energía solar"
@@ -218,13 +217,13 @@ export default function DisenoEIngenieriaPage() {
           <FeatureSection3BPConProps
             tagline="Tus Estándares, Desde el Primer Trazo"
             titulo="¿Tu corporativo exige FM Global, LEED o ISN? Lo integramos desde el diseño"
-            descripcion="No certificamos al final — diseñamos para cumplir desde el proyecto ejecutivo. Eso elimina retrabajo y reduce tu prima de seguro."
+            descripcion="Garantizamos el cumplimiento normativo desde el proyecto ejecutivo. Diseñar con las certificaciones en mente desde el primer día elimina retrabajos, optimiza la inversión y asegura la reducción de las primas de seguro."
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-278.jpg"
             imagenAlt="Certificaciones industriales"
             feature1Icon={<Settings className="h-5 w-5" />}
             feature1IconColor="text-orange-600"
             feature1Titulo="FM Global y LEED desde proyecto"
-            feature1Descripcion="Tu nave se diseña para pasar auditoría FM Global en muros, cubierta, estructura y contraincendio. Gulfstream 550K está certificando LEED Gold con 10 MW solares."
+            feature1Descripcion="Tu nave se diseña para pasar auditoría FM Global en muros, cubierta, estructura y sistema contraincendio. Gulfstream 550K está certificada con LEED Gold con 10 MW solares."
             feature2Icon={<Zap className="h-5 w-5" />}
             feature2IconColor="text-blue-600"
             feature2Titulo="ISN activo — acceso a cadenas Fortune 500"
@@ -236,19 +235,19 @@ export default function DisenoEIngenieriaPage() {
         <div>
           <SplitWithImageBPConProps
             imagenSrc="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-279.jpg"
-            imagenAlt="Ingeniería Constructora de Casa"
+            imagenAlt="Ingeniería de Nuestra Constructora"
             tagline="Tu Obra Segura"
             titulo="Tu personal y el nuestro protegidos por el mismo sistema que aprobó Gulfstream"
-            parrafo1="Si tu corporativo audita seguridad antes de autorizar un constructor, esta es la tabla de indicadores: 1,092,745 horas hombre trabajadas con cero muertes. 404 días consecutivos sin accidentes."
-            parrafo2="Manual SSMA de 18 capítulos. Permisos antes de cada turno. Control de presión arterial antes de subir a alturas. Certificación DC-3 para todo el personal. Jornada máxima de 12 horas."
+            parrafo1="Manual SSMA de 18 capítulos. Permisos antes de cada turno. Control de presión arterial antes de subir a alturas. Certificación DC-3 para todo el personal. Jornada máxima de 12 horas."
+            parrafo2="Si tu corporativo realiza auditorías de seguridad antes de autorizar a un constructor, te respaldamos con nuestros resultados:"
             feature1Icon={<CloudArrowUpIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature1IconColor="text-orange-600 dark:text-orange-500"
-            feature1Titulo="404 días consecutivos sin accidentes."
-            feature1Descripcion="Tabla de indicadores pública del proyecto Gulfstream. Registro transparente de cada incidente — incluyendo los menores."
+            feature1Titulo="+1M de horas-hombre sin fatalidades."
+            feature1Descripcion=""
             feature2Icon={<LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none"/>}
             feature2IconColor="text-blue-600 dark:text-blue-500"
-            feature2Titulo="Matriz de riesgo antes de cada turno."
-            feature2Descripcion="Impacto por probabilidad. Peligros identificados, equipo requerido, plan de emergencia. Vigía Vigilante de Incendios asignado en cada zona de soldadura."
+            feature2Titulo="+400 días sin accidentes."
+            feature2Descripcion=""
             parrafo3="Dinos qué necesita tu operación. Te entregamos el proyecto ejecutivo completo — diseño, ingeniería, presupuesto cerrado y cronograma."
             subtitulo="Consulta de ingeniería sin costo"
             parrafo4="para tu próximo proyecto industrial en Mexicali."
@@ -258,6 +257,7 @@ export default function DisenoEIngenieriaPage() {
         {/* FAQs */}
         <div>
           <FaqSectionsThreeColumnsBPConProps
+            lang="es"
             titulo="Preguntas Sobre Ingeniería Industrial"
             descripcion="¿Necesitas más información? Contáctanos por"
             linkTexto="correo electrónico"
@@ -271,11 +271,11 @@ export default function DisenoEIngenieriaPage() {
               {
                 id: 2,
                 question: "¿Puedo obtener certificación LEED Gold para mi nave industrial?",
-                answer: "Sí. El proyecto ejecutivo integra paneles solares, climatización de alta eficiencia con recuperación de agua al 90%, y materiales certificados. Gulfstream 550K está en proceso de LEED Gold con 10 MW solares.",
+                answer: "Sí. El proyecto ejecutivo integra paneles solares, climatización de alta eficiencia con recuperación de agua al 90%, y materiales certificados. Gulfstream 550K está certificada con LEED Gold con 10 MW solares.",
               },
               {
                 id: 3,
-                question: "¿Cómo protejo mi nave en zona sísmica 4?",
+                question: "¿Cómo protejo mi nave en zona sísmica?",
                 answer: "Con sistemas antisísmicos BRB (Buckling-Restrained Braces) — disipadores de energía sísmica en puntos estratégicos de la estructura. Tecnología usada en Japón y Ciudad de México, implementada por primera vez en Mexicali.",
               },
               {

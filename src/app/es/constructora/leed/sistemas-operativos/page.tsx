@@ -36,7 +36,7 @@ export default function SistemasOperativosPage() {
         },
       ]}
       subtituloSeccion="Controla el gasto operativo de tu nave industrial en Mexicali con datos en tiempo real"
-      parrafoCierre="Opera tu nave industrial en Mexicali con la visibilidad que exige una operación multinacional. Con Constructora de Casa integramos BMS y submedición desde la construcción para que cada sistema — climatización, solar, agua, iluminación — sea medible, auditable y optimizable. Solicita una consulta para tu proyecto."
+      parrafoCierre="Opera tu nave industrial en Mexicali con la visibilidad que exige una operación multinacional. Con nuestra constructora integramos BMS y submedición desde la construcción para que cada sistema — climatización, solar, agua, iluminación — sea medible, auditable y optimizable. Solicita una consulta para tu proyecto."
       fuentes="LEED v4.1 Energy & Atmosphere: Advanced Energy Metering Credit · ASHRAE Guideline 36 (High-Performance Sequences of Operation)"
     />
   )

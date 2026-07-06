@@ -37,7 +37,7 @@ export default function ProcesoCertificacionPage() {
       ]}
       subtituloSeccion="Certifica tu nave LEED en Mexicali con la constructora que ya está certificando la más grande de la ciudad"
       parrafoCierre="Acelera tu certificación LEED en Mexicali. La constructora interna de Grupo Nelson gestiona el proceso completo — del registro al certificado GBCI — con la experiencia de estar certificando la nave industrial más grande de la ciudad. Solicita una consulta para tu proyecto."
-      fuentes="USGBC LEED v4.1 BD+C (Building Design and Construction) · GBCI Certification Process · Datos de proyecto: Gulfstream 550K, Constructora de Casa (2024-2026)"
+      fuentes="USGBC LEED v4.1 BD+C (Building Design and Construction) · GBCI Certification Process · Datos de proyecto: Gulfstream 550K, Nuestra Constructora (2024-2026)"
     />
   )
 }

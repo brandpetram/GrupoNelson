@@ -63,8 +63,8 @@ export function SplitWithImageBPConProps({
   feature2Descripcion = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
   feature3Icon = <ServerIcon aria-hidden="true" className="mt-1 size-5 flex-none" />,
   feature3IconColor = "text-primary dark:text-primary",
-  feature3Titulo = "Database backups.",
-  feature3Descripcion = "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+  feature3Titulo,
+  feature3Descripcion,
   parrafo3 = "Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.",
   subtitulo = "No server? No problem.",
   parrafo4 = "Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
@@ -111,14 +111,16 @@ export function SplitWithImageBPConProps({
                     <strong className="font-semibold text-foreground dark:text-foreground">{feature2Titulo}</strong> {feature2Descripcion}
                   </span>
                 </li>
-                <li className="flex gap-x-3">
-                  <div className={feature3IconColor}>
-                    {feature3Icon}
-                  </div>
-                  <span className="text-xs 360:text-xs 393:text-sm 430:text-sm 768:text-base 834:text-base 1024:text-base 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-base 1920:text-base">
-                    <strong className="font-semibold text-foreground dark:text-foreground">{feature3Titulo}</strong> {feature3Descripcion}
-                  </span>
-                </li>
+                {feature3Titulo && (
+                  <li className="flex gap-x-3">
+                    <div className={feature3IconColor}>
+                      {feature3Icon}
+                    </div>
+                    <span className="text-xs 360:text-xs 393:text-sm 430:text-sm 768:text-base 834:text-base 1024:text-base 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-base 1920:text-base">
+                      <strong className="font-semibold text-foreground dark:text-foreground">{feature3Titulo}</strong> {feature3Descripcion}
+                    </span>
+                  </li>
+                )}
               </ul>
               <p className="mt-6 360:mt-6 393:mt-8 430:mt-8 768:mt-8 834:mt-8 1024:mt-8 1200:mt-8 1280:mt-8 1366:mt-8 1440:mt-8 1536:mt-8 1728:mt-8 1920:mt-8 text-xs 360:text-xs 393:text-sm 430:text-sm 768:text-base 834:text-base 1024:text-base 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-base 1920:text-base">
                 {parrafo3}

@@ -5,12 +5,12 @@
 
 const text = {
   es: {
-    quote: <>Cuando necesitamos expandir nuestra operación en Mexicali,{" "}<span className="font-bold">no tuvimos que buscar otra constructora</span>.{" "}El equipo de Constructora de Casa ya conocía nuestros estándares y nuestros tiempos.</>,
+    quote: <>Cuando necesitamos expandir nuestra operación en Mexicali,{" "}<span className="font-bold">no tuvimos que buscar otra constructora</span>.{" "}El equipo de la constructora de Grupo Nelson ya conocía nuestros estándares y nuestros tiempos.</>,
     quoteAuthor: 'Director de Planta — Empresa Fortune 500 en Mexicali',
     item1Title: 'Arquitectura Industrial',
     item1Text: 'Distribución de planta, oficinas corporativas, fachadas y disposición de espacios optimizada para tus procesos de manufactura y logística.',
     item2Title: 'Ingeniería Civil',
-    item2Text: 'Mecánica de suelos, terracerías y cimentaciones profundas hasta 18 metros con pilas de concreto armado en suelo colapsable y zona sísmica 4.',
+    item2Text: 'Mecánica de suelos, terracerías y cimentaciones profundas hasta 18 metros con pilas de concreto armado en suelo colapsable y zona sísmica.',
     item3Title: 'Ingeniería Estructural',
     item3Text: 'Estructura metálica, sistemas antisísmicos BRB, cálculo de cargas y diseño de claros libres para naves de manufactura y almacenamiento.',
     item4Title: 'Ingeniería Eléctrica',
@@ -26,7 +26,7 @@ const text = {
     item1Title: 'Industrial Architecture',
     item1Text: 'Plant layout, corporate offices, facades, and space distribution optimized for your manufacturing and logistics processes.',
     item2Title: 'Civil Engineering',
-    item2Text: 'Soil mechanics, earthworks, and deep foundations up to 18 meters with reinforced concrete piles in collapsible soil and seismic zone 4.',
+    item2Text: 'Soil mechanics, earthworks, and deep foundations up to 18 meters with reinforced concrete piles in collapsible soil and a seismic zone.',
     item3Title: 'Structural Engineering',
     item3Text: 'Steel structure, BRB anti-seismic systems, load calculations, and clear-span design for manufacturing and warehouse buildings.',
     item4Title: 'Electrical Engineering',

@@ -9,7 +9,7 @@ export function DimensionesControl() {
                 <div className="mx-auto w-full max-w-5xl px-6 xl:px-0">
                     <div className="mx-auto max-w-2xl space-y-6 text-center">
                         <h2 className="text-foreground text-balance text-4xl font-semibold lg:text-5xl">Tres dimensiones de control en cada proyecto</h2>
-                        <p className="text-muted-foreground text-balance text-lg">El sistema de control de nuestra Constructora de Casa opera simultáneamente en tiempo, calidad y seguridad. No es una sola práctica — es un sistema que cubre las tres áreas donde una obra puede fallar.</p>
+                        <p className="text-muted-foreground text-balance text-lg">El sistema de control de nuestra constructora opera simultáneamente en tiempo, calidad y seguridad. No es una sola práctica — es un sistema que cubre las tres áreas donde una obra puede fallar.</p>
                     </div>
                 </div>
             </Container>

@@ -21,7 +21,7 @@ import {PoligonoIcono1} from "@/components/ui/brandpetram/poligono-icono-1";
 const text = {
   es: {
     titulo: 'Certifica LEED tu nave industrial en Mexicali — donde el clima es el examen más difícil',
-    parrafo: 'Cada vez más corporativos globales exigen o prefieren LEED para aprobar nuevas instalaciones. Certificar a 48°C con un equipo que no conoce el desierto es una apuesta cara. Nuestra Constructora de Casa lleva 30 años construyendo en Mexicali, con datos de desempeño térmico reales — no teóricos. Gulfstream ya está certificando LEED Gold su nave de 52,200 m² aquí.',
+    parrafo: 'Cada vez más corporativos globales exigen o prefieren LEED para aprobar nuevas instalaciones. Certificar a 48°C con un equipo que no conoce el desierto es una apuesta cara. Nuestra constructora lleva 30 años construyendo en Mexicali, con datos de desempeño térmico reales — no teóricos. Gulfstream ya está certificando LEED Gold su nave de 52,200 m² aquí.',
   },
   en: {
     titulo: 'LEED-certify your industrial building in Mexicali — where extreme climate is the hardest test',

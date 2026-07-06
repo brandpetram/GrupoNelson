@@ -115,7 +115,7 @@ export function SplitStickyCasos() {
                   Nuestra alianza de más de 40 años se respalda con hechos:
                   múltiples expansiones exitosas, incluyendo los proyectos
                   clave —Mission 1, 2 y 3—, construidos de principio a fin por
-                  nuestra Constructora de Casa.
+                  nuestra constructora.
                 </p>
               </div>
               <div>
@@ -123,7 +123,7 @@ export function SplitStickyCasos() {
                   Calificación ISN &quot;Recomendado&quot;
                 </p>
                 <p className="text-muted-foreground">
-                  Nuestra Constructora de Casa no solo cumple con las normas
+                  Nuestra constructora no solo cumple con las normas
                   básicas, sino que ostenta la calificación máxima permitida
                   por la plataforma. Este nivel de «Recomendado» avala nuestro
                   compromiso absoluto con la excelencia operativa.
@@ -137,7 +137,7 @@ export function SplitStickyCasos() {
                   El reflejo más puro de esta gran confianza fue el desarrollo
                   del túnel de viento aeroespacial: un proyecto de alta
                   ingeniería elaborado hombro a hombro entre los equipos de
-                  ingenieros de Honeywell y nuestra Constructora de Casa,
+                  ingenieros de Honeywell y nuestra constructora,
                   demostrando una sinergia técnica extraordinaria.
                 </p>
               </div>
@@ -164,7 +164,7 @@ export function SplitStickyCasos() {
             <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
               Si Gulfstream no necesitó buscar alternativas en 40 años, y
               en las instalaciones de Honeywell la plataforma ISN le dio a
-              Constructora de Casa la calificación más alta posible — el
+              nuestra constructora la calificación más alta posible — el
               nivel ya está demostrado.
             </h3>
             <p className="text-lg leading-relaxed text-muted-foreground">

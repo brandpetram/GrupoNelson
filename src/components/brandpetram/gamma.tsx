@@ -15,7 +15,7 @@ export function Gamma({ lang = 'es' }: { lang?: 'en' | 'es' }) {
   const text = {
     title: lang === 'en'
       ? <>Custom-Built<br/>Industrial Facilities.</>
-      : <>Naves Industriales<br/>Fabricadas a la Medida.</>,
+      : <>Naves Industriales<br/>Construidas a la Medida.</>,
     megawattsTitle: lang === 'en'
       ? <>How Many<br/>Megawatts?<br/>As Many as You Need.</>
       : <>¿Cuántos<br/>Megawatts?<br/>Los que necesites.</>,

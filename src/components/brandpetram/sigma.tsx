@@ -8,11 +8,11 @@ import { ClipboardCheck, HardHat, Handshake, Users, RotateCcw } from "lucide-rea
 const text = {
   es: {
     mainTitle: 'De anteproyecto a entrega — cómo construimos',
-    mainSubtitle: 'Un solo contrato, un solo responsable. Así se ve un proyecto con Constructora de Casa de principio a fin.',
+    mainSubtitle: 'Un solo contrato, un solo responsable. Así se ve un proyecto con nuestra constructora de principio a fin.',
     section1Title: 'El proceso constructivo en 3 fases',
     section1Subtitle: 'Cada proyecto sigue una secuencia probada en más de 75 entregas. Sin improvisación, sin sorpresas.',
     section2Title: 'Por qué las Fortune 500 regresan',
-    section2Subtitle: 'El 80% de los clientes que construyen con Constructora de Casa regresan. La razón no es el precio — es la certeza de entrega.',
+    section2Subtitle: 'El 80% de los clientes que construyen con nuestra constructora regresan. La razón no es el precio — es la certeza de entrega.',
     transferFeatures: [
       { id: 1, name: 'Anteproyecto y proyecto ejecutivo', description: 'Defines tus requerimientos. 6 departamentos de ingeniería desarrollan el proyecto ejecutivo en paralelo.', icon: ClipboardCheck },
       { id: 2, name: 'Permisos y procura', description: 'Permisos municipales, estatales y federales. Insumos de entrega prolongada ordenados desde el día uno.', icon: HardHat },

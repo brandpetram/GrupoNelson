@@ -54,7 +54,7 @@ export default function BuildToSuitPage() {
             lang="en"
             badge="Custom-built facilities"
             titulo="Build the facility that doesn't exist in any catalog"
-            descripcion="Designed from scratch for your exact operation. 52,200 m² for Gulfstream. 95-meter bridge for Skyworks. 3,000 HP wind tunnel for Honeywell."
+            descripcion="Designed from scratch for your exact operation. 550k ft² for Gulfstream. 95-meter bridge for Skyworks. 3,000 HP wind tunnel for Honeywell."
           />
         </HeroVideoCover>
       </div>

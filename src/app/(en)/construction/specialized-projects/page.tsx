@@ -156,7 +156,7 @@ export default function SpecializedProjectsPage() {
             The bridge was poured <strong>in a single day</strong>, with two
             concrete pumps, with no construction joints — a single 95-meter
             piece. The foundation goes down to <strong>18 meters</strong> deep
-            in collapsible sandy soil, seismic zone 4. Permits involved{" "}
+            in collapsible sandy soil, in a seismic zone. Permits involved{" "}
             <strong>three levels of government</strong>: CNA (federal), state
             government, and municipality. The roadway was closed only on a
             Sunday. Structure assembly took two consecutive Sundays, with two

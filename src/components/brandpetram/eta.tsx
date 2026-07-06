@@ -6,13 +6,15 @@
 const etaText = {
   es: {
     heading: 'Selecciona el parque que se ajusta a tu operación y tu presupuesto.',
-    paragraph: 'El Vigía — rentas más económicas del portafolio, Interiores Aéreos creció de 5,000 ft² a 550,000 aquí. Nelson I — desde 1984. Vigía II — Honeywell Aerospace opera aquí desde hace más de 40 años. Nelson II — 27 hectáreas, contraincendio central de 360,000 galones, Gulfstream, DHL y Vertiv operan aquí.',
+    paragraph: 'Parque Industrial El Vigía es el parque pionero de nuestro portafolio. Destaca por ofrecer precios de renta más competitivos en el mercado, lo que lo convierte en una plataforma ideal para incubar, arrancar y consolidar proyectos industriales estratégicos.',
+    paragraph2: 'En contraparte, Parque Industrial Nelson II es nuestro desarrollo más moderno y avanzado. Está diseñado especialmente para albergar plantas industriales de gran escala, desarrolladas en su mayoría bajo el modelo BTS.',
     cta: 'Contáctanos',
     ctaHref: '/contacto',
   },
   en: {
     heading: 'Choose the park that fits your operation and your budget.',
-    paragraph: 'El Vigía — most affordable rents in the portfolio; Interiores Aereos grew from 5,000 ft² to 550,000 here. Nelson I — since 1984. Vigía II — Honeywell Aerospace has operated here for over 40 years. Nelson II — 27 hectares, centralized fire suppression with 360,000-gallon tank; Gulfstream, DHL, and Vertiv operate here.',
+    paragraph: 'Parque Industrial El Vigía is the pioneering park of our portfolio. It stands out for offering the most competitive rental rates in the market, which makes it an ideal platform for incubating, launching, and consolidating strategic industrial projects.',
+    paragraph2: 'In contrast, Parque Industrial Nelson II is our most modern and advanced development. It is designed specifically to house large-scale industrial plants, developed mostly under the BTS model.',
     cta: 'Contact Us',
     ctaHref: '/contact',
   },
@@ -47,6 +49,10 @@ export function Eta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
 
               <p className="text-[1rem] 360:text-[1rem] 393:text-[1.2rem] 430:text-[1.3rem] 768:text-[1.15rem] 834:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.2rem] 1280:text-[1.3rem] 1366:text-[1.4rem] 1440:text-[1.5rem] 1536:text-[1.7rem] 1728:text-[2rem] 1920:text-[2.3rem] leading-relaxed text-gray-600 dark:text-gray-400">
                 {t.paragraph}
+              </p>
+
+              <p className="text-[1rem] 360:text-[1rem] 393:text-[1.2rem] 430:text-[1.3rem] 768:text-[1.15rem] 834:text-[1.2rem] 1024:text-[1.3rem] 1200:text-[1.2rem] 1280:text-[1.3rem] 1366:text-[1.4rem] 1440:text-[1.5rem] 1536:text-[1.7rem] 1728:text-[2rem] 1920:text-[2.3rem] leading-relaxed text-gray-600 dark:text-gray-400">
+                {t.paragraph2}
               </p>
 
               <a href={t.ctaHref} className="w-fit px-4 1200:px-9 py-5 mt-5 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-gray-100 font-medium hover:border-gray-500 dark:hover:border-gray-400 transition-colors inline-block">

@@ -24,7 +24,7 @@ const subFeatures = [
     {
         icon: FlaskConical,
         title: 'Ensayos de laboratorio externo',
-        description: 'Verificación independiente por EPGC. El control de calidad no depende solo de nuestra Constructora de Casa — un tercero lo valida.',
+        description: 'Verificación independiente por EPGC. El control de calidad no depende solo de nuestra constructora — un tercero lo valida.',
     },
 ]
 

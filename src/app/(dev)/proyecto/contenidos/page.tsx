@@ -434,7 +434,7 @@ const sections: SectionDefinition[] = [
           {
             title: 'Puente Vehicular Industrial — Skyworks Semiconductores',
             description:
-              '95 metros de claro libre sin columnas intermedias, diseño europeo tipo arco. Conecta dos plantas de semiconductores cruzando un boulevard y un dren federal CONAGUA. Pilas de concreto a 18m de profundidad (terreno colapsable, zona sísmica 4). Colado monolítico en un solo día con 2 bombas. Permisos federales, estatales y municipales. Solo un día se cerró la vialidad.',
+              '95 metros de claro libre sin columnas intermedias, diseño europeo tipo arco. Conecta dos plantas de semiconductores cruzando un boulevard y un dren federal CONAGUA. Pilas de concreto a 18m de profundidad (terreno colapsable, zona sísmica). Colado monolítico en un solo día con 2 bombas. Permisos federales, estatales y municipales. Solo un día se cerró la vialidad.',
             estimatedWords: 400,
             estimatedPhotos: 3,
             notes:

@@ -4,8 +4,8 @@ export function Iota({ lang = 'es' }: { lang?: 'en' | 'es' }) {
       ? 'Reduce your upfront investment — the park infrastructure already exists.'
       : 'Reduce tu inversión inicial — la infraestructura del parque ya existe.',
     desc: lang === 'en'
-      ? 'Dedicated electrical substation, 360,000-gallon central fire suppression system with dedicated power line, 24/7 security, perimeter wall, and paved roads. The central fire system saves 60% vs. individual systems.'
-      : 'Subestación eléctrica dedicada, sistema contraincendio central de 360,000 galones con línea eléctrica dedicada, seguridad 24/7, barda perimetral y vialidades pavimentadas. El contraincendio central ahorra 60% vs. sistemas individuales.',
+      ? 'Dedicated electrical substation, 360,000-gallon central fire suppression system with dedicated power line, 24/7 security, perimeter wall, and paved roads. The fire suppression system saves 60% vs. individual systems.'
+      : 'Subestación eléctrica dedicada, sistema contraincendio central de 360,000 galones con línea eléctrica dedicada, seguridad 24/7, barda perimetral y vialidades pavimentadas. El sistema contraincendio ahorra 60% vs. sistemas individuales.',
     cta: lang === 'en' ? 'Contact Us' : 'Contáctanos',
     ctaHref: lang === 'en' ? '/contact' : '/contacto',
   }
