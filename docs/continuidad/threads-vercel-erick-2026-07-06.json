@@ -1,0 +1,1042 @@
+{
+  "generadoDe": "API Vercel list_toolbar_threads (unresolved), proyecto grupo-nelson",
+  "fechaSnapshot": "2026-07-06",
+  "totalThreads": 69,
+  "threads": [
+    {
+      "threadId": "DLT0vKnMxz6m",
+      "branch": "wt/index",
+      "pagePath": "/",
+      "createdAt": "2026-04-10T20:57:18Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.w-full > div.flex > div.w-full > div.grid > div.aspect-square > p.mt-2",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.mt-2.md:mt-3.text-lg>\n\n... [23 more] ...\n  <Home  ...>\n    <div>\n      <div className=\"w-full p-10 mx-auto mt-32 relative\">\n        <Mosaico2ConProps bloque1Titulo=\"Naves Disponibles\" ...>\n          <div data-component=\"Mosaico2ConProps\" ...>\n            <div className=\"w-full 1024:w-1/2\">\n              <div className=\"grid grid-cols-1 md:grid-cols-2 gap-0\">\n                <ForwardRef(motion.div)  ...>\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "decir lo mismo con menos palabras"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "omKULwAT3zqS",
+      "branch": "wt/index",
+      "pagePath": "/",
+      "createdAt": "2026-04-10T20:57:34Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.w-full > div.-mt-1 > div.flex > div.w-full:nth-of-type(2) > div.grid > div.aspect-square > h3.text-base",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h3.text-base.md:text-lg.1024:text-sm>\n\n... [24 more] ...\n  <div>\n    <div className=\"w-full p-10 mx-auto mt-32 relative\">\n      <div className=\"-mt-1\">\n        <MosaicoInvertidoConProps bloque1Titulo=\"Construcción a tu Medida\" ...>\n          <div data-component=\"MosaicoInvertidoConProps\" ...>\n            <div className=\"w-full 1024:w-1/2\">\n              <div className=\"grid grid-cols-1 md:grid-cols-2 gap-0\">\n                <ForwardRef(motion.div)  ...>\n                  <div  ...>\n                    <h3  ...>",
+      "commentText": [
+        "decir lo mismo con menos palabras"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "iqSSKKpzMg9m",
+      "branch": "wt/index",
+      "pagePath": "/",
+      "createdAt": "2026-04-10T20:58:09Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.px-4 > div.space-y-5 > div.flex > div.flex-1 > p.text-sm",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-sm.md:text-lg.1200:text-xl>\n\n... [22 more] ...\n  <SegmentViewNode type=\"page\" pagePath=\"/.worktrees/index/src/app/page.tsx\">\n    <Home  ...>\n      <div>\n        <div className=\"px-4 md:ml-10 1200:ml-32 mt-32 md:px-0\">\n          <CirculosConProps circulo1Letra=\"60\" circulo1Titulo=\"Años\" ...>\n            <div data-component=\"CirculosConProps\" ...>\n              <ForwardRef(motion.div) className=\"flex items-center gap-3 md:gap-12 1200:gap-24\" ...>\n                <div className=\"flex items-center gap-3 md:gap-12 1200:gap-24\" ...>\n                  <div className=\"flex-1 md:max-w-2xl\">\n                    <p className=\"text-sm md:text-lg 1200:text-xl 1728:text-2xl 1920:text-2xl text-muted-foreground\">",
+      "commentText": [
+        "agregar 8 palabras que tengan sentido a este texto"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "biozz_ZBlniY",
+      "branch": "wt/index",
+      "pagePath": "/",
+      "createdAt": "2026-04-10T20:58:31Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.px-4 > div.space-y-5 > div.flex:nth-of-type(3) > div.flex-1 > p.text-sm",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-sm.md:text-lg.1200:text-xl>\n\n... [22 more] ...\n  <SegmentViewNode type=\"page\" pagePath=\"/.worktrees/index/src/app/page.tsx\">\n    <Home  ...>\n      <div>\n        <div className=\"px-4 md:ml-10 1200:ml-32 mt-32 md:px-0\">\n          <CirculosConProps circulo1Letra=\"60\" circulo1Titulo=\"Años\" ...>\n            <div data-component=\"CirculosConProps\" ...>\n              <ForwardRef(motion.div) className=\"flex items-center gap-3 md:gap-12 1200:gap-24\" ...>\n                <div className=\"flex items-center gap-3 md:gap-12 1200:gap-24\" ...>\n                  <div className=\"flex-1 md:max-w-2xl\">\n                    <p className=\"text-sm md:text-lg 1200:text-xl 1728:text-2xl 1920:text-2xl text-muted-foreground\">",
+      "commentText": [
+        "agregar e ste texto 8 palabras que hagan sentido"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "3Klzwqf0vi9k",
+      "branch": "wt/index",
+      "pagePath": "/",
+      "createdAt": "2026-04-10T20:59:18Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.relative > section.relative > div.relative > div.container > div > div.max-w-md > h1.text-3xl",
+      "componentFile": "src/components/hero-video-cover.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h1.text-3xl.360:text-4xl.393:text-5xl>\n\n... [25 more] ...\n  <div className=\"relative\">\n    <HeroVideoCover videoSrc=\"/parques-industriales-mexicali-nelson-3-optimizado.mp4\" posterSrc=\"/hero-poster-0.jpg\" ...>\n      <section data-component=\"HeroVideoCover\" data-component-file=\"src/components/hero-video-cover.tsx\" ...>\n        <div className=\"relative z-10 flex h-full items-center\">\n          <div className=\"container mx-auto px-6 md:px-8 1280:px-16 1366:px-24 1728:px-32\">\n            <ForwardRef(motion.div) initial=\"hidden\" animate=\"visible\" ...>\n              <div  ...>\n                <TarjetaHeroOriginal badge1=\"4 Parques Industriales\" badge2=\"33 Corporaciones Internacionales\" ...>\n                  <div data-component=\"TarjetaHeroOriginal\" data-component-file=\"src/components/tarjeta-hero-original.tsx\" ...>\n                    <h1  ...>",
+      "commentText": [
+        "Que diga en Todo Mexicali en lugar de solo Mexicali"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "OPBUI49rAhKw",
+      "branch": "main",
+      "pagePath": "/construction/build-to-suit",
+      "createdAt": "2026-04-12T01:52:51Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(4) > div > h2",
+      "componentFile": "src/components/brandpetram/gamma.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.1200:-translate-y-10.-mt-24.translate-x-7>\n\n... [38 more] ...\n  <LoadingBoundary name=\"build-to-suit/\" ...>\n    <HTTPAccessFallbackBoundary  ...>\n      <RedirectBoundary>\n        <RedirectErrorBoundary  ...>\n          <SegmentViewNode type=\"page\" pagePath=\"(en)/construction/build-to-suit/page.tsx\">  // <anonymous>:1\n            <div className=\"[&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">  // %5Broot-of-the-server%5D__240e69c3._.js?30:409\n              <div className=\"container mx-auto px-4 py-16 mb-56\">  // %5Broot-of-the-server%5D__240e69c3._.js?25:516\n                <Gamma>  // %5Broot-of-the-server%5D__240e69c3._.js?24:518\n                  <div data-component=\"Gamma\" data-component-file=\"src/components/brandpetram/gamma.tsx\" ...>\n                    <h2  ...>",
+      "commentText": [
+        "este texto sigue en español en el sitio en ingles"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "q52JPnpW-m-h",
+      "branch": "main",
+      "pagePath": "/construction/build-to-suit",
+      "createdAt": "2026-04-14T15:08:52Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.\\[\\&_header\\:not\\(\\[data-scrolled\\]\\)_path\\[fill\\=\\'currentColor\\'\\]\\]\\:\\!fill-white > div.container:nth-of-type(6) > div.relative > div.relative > ul.space-y-12 > li.text-white",
+      "componentFile": "src/components/brandpetram/epsilon.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <li.text-white.text-2xl.1200:text-3xl>\n\n... [40 more] ...\n  <RedirectBoundary>\n    <RedirectErrorBoundary  ...>\n      <SegmentViewNode type=\"page\" pagePath=\"(en)/construction/build-to-suit/page.tsx\">  // <anonymous>:1\n        <div className=\"[&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">  // %5Broot-of-the-server%5D__240e69c3._.js?30:409\n          <div className=\"container mx-auto \">  // %5Broot-of-the-server%5D__240e69c3._.js?29:545\n            <Epsilon lang=\"en\">  // %5Broot-of-the-server%5D__240e69c3._.js?28:547\n              <div data-component=\"Epsilon\" data-component-file=\"src/components/brandpetram/epsilon.tsx\" ...>\n                <div  ...>\n                  <ul className=\"space-y-12\">\n                    <li  ...>",
+      "commentText": [
+        "todos los textos que están en este div en movil salen muy a la derecha. probablemente hay un translate o un mr o pr aplicado que solo debe funcionar en desktop"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "sRxQUw0Gt59R",
+      "branch": "main",
+      "pagePath": "/construction/build-to-suit",
+      "createdAt": "2026-04-14T15:09:59Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.\\[\\&_header\\:not\\(\\[data-scrolled\\]\\)_path\\[fill\\=\\'currentColor\\'\\]\\]\\:\\!fill-white > div.container:nth-of-type(5) > div.flex > div.flex-1 > h2.text-3xl",
+      "componentFile": "src/components/brandpetram/delta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.text-3xl.768:text-5xl.1200:text-6xl>\n\n... [39 more] ...\n  <HTTPAccessFallbackBoundary  ...>\n    <RedirectBoundary>\n      <RedirectErrorBoundary  ...>\n        <SegmentViewNode type=\"page\" pagePath=\"(en)/construction/build-to-suit/page.tsx\">  // <anonymous>:1\n          <div className=\"[&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">  // %5Broot-of-the-server%5D__240e69c3._.js?30:409\n            <div className=\"container mx-auto\">  // %5Broot-of-the-server%5D__240e69c3._.js?27:531\n              <Delta lang=\"en\">  // %5Broot-of-the-server%5D__240e69c3._.js?26:533\n                <div data-component=\"Delta\" data-component-file=\"src/components/brandpetram/delta.tsx\" ...>\n                  <div className=\"flex-1 flex items-center justify-center\">\n                    <h2  ...>",
+      "commentText": [
+        "En movil este texto es mejor que vaya con un translate y negativo y un translate x negativo"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "WTPkd2tUL40M",
+      "branch": "main",
+      "pagePath": "/construction/turnkey",
+      "createdAt": "2026-04-17T05:50:57Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(6) > div.w-full",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <div.w-full.bg-black.mt-0>\n\n... [36 more] ...\n  <SegmentStateProvider>\n    <ErrorBoundary  ...>\n      <LoadingBoundary name=\"turnkey/\" ...>\n        <HTTPAccessFallbackBoundary  ...>\n          <RedirectBoundary>\n            <RedirectErrorBoundary  ...>\n              <SegmentViewNode type=\"page\" pagePath=\"(en)/construction/turnkey/page.tsx\">  // <anonymous>:1\n                <div>  // %5Broot-of-the-server%5D__adfd6c7e._.js?121:919\n                  <div className=\"container mx-auto -mt-32 mb-32\">  // %5Broot-of-the-server%5D__adfd6c7e._.js?120:998\n                    <div className=\"w-full bg-black mt-0 pt-[20rem] 1200:pt-[24rem] 1366:pt-[30rem] pb-[20rem]\">  // %5Broot-of-the-server%5D__adfd6c7e._.js?112:662",
+      "commentText": [
+        "el fondo de este div n odebe ser black debe ser opuesto al dark/light mode por ejemplo si el sitio es light mode entonces este div tiene fondo de dark mode y viceversa."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "EOwKQOB6Mczt",
+      "branch": "main",
+      "pagePath": "/construction/turnkey",
+      "createdAt": "2026-04-17T05:51:27Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(5) > section.mx-auto > div.w-full > div.w-full > img.w-full",
+      "componentFile": "src/components/brandpetram/kappa.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-full.h-full.object-cover>\n\n... [39 more] ...\n  <HTTPAccessFallbackBoundary  ...>\n    <RedirectBoundary>\n      <RedirectErrorBoundary  ...>\n        <SegmentViewNode type=\"page\" pagePath=\"(en)/construction/turnkey/page.tsx\">  // <anonymous>:1\n          <div>  // %5Broot-of-the-server%5D__adfd6c7e._.js?121:919\n            <div className=\"container mx-auto  mb-32 -mt-16\">  // %5Broot-of-the-server%5D__adfd6c7e._.js?119:984\n              <section data-component=\"Kappa\" data-component-file=\"src/components/brandpetram/kappa.tsx\" ...>  // %5Broot-of-the-server%5D__adfd6c7e._.js?96:422\n                <div  ...>  // %5Broot-of-the-server%5D__adfd6c7e._.js?95:514\n                  <div className=\"w-full aspect-video overflow-hidden\">  // %5Broot-of-the-server%5D__adfd6c7e._.js?124:516\n                    <img src=\"/grupo-nelson-naves-en-parques-industriales-en-mexicali-8.jpeg\" alt=\"Imagen secundaria\" ...>  // %5Broot-of-the-server%5D__adfd6c7e._.js?123:518",
+      "commentText": [
+        "esta foto se repite hay que cambiarla"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "0fxt4hlPs2iR",
+      "branch": "main",
+      "pagePath": "/constructora/llave-en-mano",
+      "createdAt": "2026-04-08T22:47:11Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div > div > div > div > div > div > img",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.object-cover.rounded-xs.object-center>\n\n... [38 more] ...\n  <div className=\"relative mt-0 md:mt-0 max-w-[1920px] mx-auto\">\n    <div className=\"grid grid-cols-1 md:grid-cols-[3fr_0.9fr] gap-8 md:gap-16 md:items-end\">\n      <div  ...>\n        <ForwardRef(motion.div) initial=\"hidden\" animate=\"visible\" className=\"w-full h-full\" ...>\n          <div className=\"w-full h-full\" ...>\n            <PoligonoImagen1 src=\"/parque-industrial-nelson-1-en-mexicali.jpeg\" alt=\"Placeholder de tempus\">\n              <div className=\"group relative block overflow-hidden w-full h-full\">\n                <ForwardRef([anonymous]) src=\"/parque-industrial-nelson-1-en-mexicali.jpeg\" alt=\"Placeholder de tempus\" fill ...>\n                  <ForwardRef([anonymous]) alt=\"Placeholder de tempus\" loading=\"lazy\" decoding=\"async\" ...>\n                    <img alt=\"Placeholder de tempus\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" ...>",
+      "commentText": [
+        "cambiar por public/Seleccionadas/grupo-nelson-naves-en-parques-industriales-en-mexicali-8.jpeg"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "twqOZDFiJ7mQ",
+      "branch": "dev",
+      "pagePath": "/es",
+      "createdAt": "2026-06-09T23:55:46Z",
+      "status": "unresolved",
+      "selector": "var\\(--color-background\\)\\)\\] > div.fixed > div.mx-auto > div.relative > div.hidden > div.flex:nth-of-type(2) > nav.group\\/navigation-menu > div > ul.group > li.relative:nth-of-type(3) > #radix-_R_a2luiv7b_-trigger-radix-_R_ra2luiv7b_",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <button#radix-_R_a2luiv7b_-trigger-radix-_R_ra2luiv7b_.group.inline-flex.h-8>\n\n... [85 more] ...\n  <ForwardRef([anonymous]) data-radix-collection-item=\"\">\n    <ForwardRef([anonymous]) asChild data-radix-collection-item=\"\">\n      <ForwardRef([anonymous])  ...>\n        <ForwardRef([anonymous]) data-radix-collection-item=\"\">\n          <ForwardRef([anonymous]) data-radix-collection-item=\"\">\n            <ForwardRef([anonymous]) asChild data-radix-collection-item=\"\" ...>\n              <ForwardRef([anonymous]) data-radix-collection-item=\"\" ...>\n                <ForwardRef([anonymous]) data-radix-collection-item=\"\" ...>\n                  <ForwardRef([anonymous]) id=\"radix-_R_a2luiv7b_-trigger-radix-_R_ra2luiv7b_\" data-state=\"closed\" aria-expanded={false} ...>\n                    <button id=\"radix-_R_a2luiv7b_-trigger-radix-_R_ra2luiv7b_\" data-state=\"closed\" aria-expanded={false} ...>",
+      "commentText": [
+        "Corregir El titulo en Constructora de Casa por \nNuestra Constructora"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "OzWJmDqBkzqg",
+      "branch": "dev",
+      "pagePath": "/es/constructora/build-to-suit",
+      "createdAt": "2026-06-18T23:36:05Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-hidden > div.mt-0 > section.relative > div.relative > div.container > div > div.max-w-xl > p.text-lg",
+      "componentFile": "src/components/hero-video-cover.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-lg.text-white/70.text-pretty>\n\n... [60 more] ...\n  <div className=\"mt-0\">\n    <[minified] videoSrc=\"/video-2-720p.mp4\" posterSrc=\"/hero-poster-0.jpg\" alt=\"Built to Suit | Grupo Nelson\" ...>\n      <section data-component=\"HeroVideoCover\" data-component-file=\"src/components/hero-video-cover.tsx\" ...>\n        <div className=\"relative z-10 flex h-full items-center\">\n          <div className=\"container mx-auto px-6 md:px-8 1280:px-16 1366:px-24 1728:px-32\">\n            <ForwardRef(motion.div) initial=\"hidden\" animate=\"visible\" ...>\n              <div  ...>\n                <[minified] badge=\"Construcción a la medida\" titulo=\"Construye la nave que no existe en ningún catálogo\" ...>\n                  <div data-component=\"TarjetaHeroOriginalBeta\" ...>\n                    <p  ...>",
+      "commentText": [
+        "550k ft2"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "pKhiOx_to4-Q",
+      "branch": "dev",
+      "pagePath": "/es/constructora/build-to-suit",
+      "createdAt": "2026-06-18T23:37:15Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-hidden > div.container:nth-of-type(3) > div.relative > div.flex > div.space-y-4 > p.text-lg",
+      "componentFile": "src/components/brandpetram/beta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-lg.834:text-xl.1024:text-2xl>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/constructora/build-to-suit\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"overflow-x-hidden [&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">\n          <div className=\"container mx-auto px-4 py-0 mt-56 mb-56\">\n            <[minified]>\n              <div data-component=\"Beta\" data-component-file=\"src/components/brandpetram/beta.tsx\" ...>\n                <div className=\"flex flex-col gap-8 md:w-5/12\">\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "Revisar tamaño de letra extremadamente chica"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "k6N2_Uh2nbFq",
+      "branch": "dev",
+      "pagePath": "/es/constructora/build-to-suit",
+      "createdAt": "2026-06-18T23:37:47Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-hidden > div.container:nth-of-type(3) > div.relative > div.flex > div.space-y-4 > p.text-lg",
+      "componentFile": "src/components/brandpetram/beta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-lg.834:text-xl.1024:text-2xl>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/constructora/build-to-suit\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"overflow-x-hidden [&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">\n          <div className=\"container mx-auto px-4 py-0 mt-56 mb-56\">\n            <[minified]>\n              <div data-component=\"Beta\" data-component-file=\"src/components/brandpetram/beta.tsx\" ...>\n                <div className=\"flex flex-col gap-8 md:w-5/12\">\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "550k ft2"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "bC0yFc72MYJ2",
+      "branch": "dev",
+      "pagePath": "/es/constructora/build-to-suit",
+      "createdAt": "2026-06-18T23:38:19Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(4) > div > h2",
+      "componentFile": "src/components/brandpetram/gamma.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.1200:-translate-y-10.-mt-24.translate-x-7>\n\n... [54 more] ...\n  <[minified] name=\"build-to-suit/\" ...>\n    <[minified]  ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/constructora/build-to-suit\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n            <div className=\"overflow-x-hidden [&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">\n              <div className=\"container mx-auto px-4 py-16 mb-56\">\n                <[minified]>\n                  <div data-component=\"Gamma\" data-component-file=\"src/components/brandpetram/gamma.tsx\" ...>\n                    <h2  ...>",
+      "commentText": [
+        "Construidas"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "B-TOeN8ydaqv",
+      "branch": "dev",
+      "pagePath": "/es/constructora/build-to-suit",
+      "createdAt": "2026-06-18T23:45:01Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-hidden > div.container:nth-of-type(5) > div.relative",
+      "componentFile": "src/components/brandpetram/delta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <div.relative.flex.flex-col>\n\n... [53 more] ...\n  <[minified]  ...>\n    <[minified] name=\"build-to-suit/\" ...>\n      <[minified]  ...>\n        <[minified]>\n          <[minified]  ...>\n            <[minified] url=\"/es/constructora/build-to-suit\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n              <div className=\"overflow-x-hidden [&_header:not([data-scrolled])_path[fill='currentColor']]:!fill-white\">\n                <div className=\"container mx-auto\">\n                  <[minified]>\n                    <div data-component=\"Delta\" data-component-file=\"src/components/brandpetram/delta.tsx\" ...>",
+      "commentText": [
+        "Tu Nave Industrial a la medida de tu operacion."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "N0LitTJix6mw",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:31:01Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div > div.relative > div.-translate-y-18 > div.w-fit > div.flex > div.flex > div.relative > div.absolute",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <div.absolute.inset-0>\n\n... [63 more] ...\n  <[minified] gridSize={200} fadeRadius=\"32rem\" height=\"h-screen\" ...>\n    <div className=\"relative isolate overflow-hidden\">\n      <div  ...>\n        <div  ...>\n          <ForwardRef(motion.div) className=\"flex gap-1\" initial=\"hidden\" animate=\"visible\" ...>\n            <div className=\"flex gap-1\" ...>\n              <ForwardRef(motion.div) className=\"flex flex-col place-content-end\" ...>\n                <div className=\"flex flex-col place-content-end\" ...>\n                  <div  ...>\n                    <div className=\"absolute inset-0\" ...>",
+      "commentText": [
+        "cambiar foto desenfocada..."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "XB4pV6h1Up1E",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:31:51Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(2) > div.container > div.flex > div.mt-20 > p.text-lg",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-lg.md:text-xl.lg:text-2xl>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n        <main>\n          <div>\n            <[minified] poligonoText=\"Ingeniería Industrial de Clase Mundial\" titulo=\"Seis disciplinas de ingeniería\" ...>\n              <div data-component=\"GunLikeConProps\" ...>\n                <div  ...>\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "eliminar 4"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "m9ayfF7_v1u8",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:33:17Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.w-11\\/12:nth-of-type(5) > section.bg-background > div.container > div.flex > div.grid > div.flex > div.flex:nth-of-type(2) > p.text-xs",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-xs.360:text-xs.393:text-xs>\n\n... [61 more] ...\n  <div className=\"w-11/12 mx-auto 1200:-translate-y-16 1366:-translate-y-16 1728:-translate-y-24\">\n    <[minified] badge=\"Tu Proyecto Ejecutivo\" ...>\n      <section data-component=\"FeatureSection6BPConProps\" ...>\n        <ForwardRef(motion.div) className=\"container mx-auto flex flex-col items-center gap-12 px-6 lg:flex-row lg:gap-16\" ...>\n          <div className=\"container mx-auto flex flex-col items-center gap-12 px-6 lg:flex-row lg:gap-16\" ...>\n            <div className=\"flex flex-1 flex-col gap-8\">\n              <div className=\"grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8\">\n                <div className=\"flex flex-col gap-5\">\n                  <div className=\"flex flex-col gap-2\">\n                    <p  ...>",
+      "commentText": [
+        "eliminar 4"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "uKOq4MZEoeec",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:35:47Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(6) > div.w-full > div.relative > div.absolute > div.flex > p.text-right",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-right.mt-1.md:mt-5>\n\n... [59 more] ...\n  <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n    <main>\n      <div>\n        <[minified]  ...>\n          <div data-component=\"BigNumberConProps\" ...>\n            <div className=\"relative\">\n              <div className=\"absolute inset-0 flex place-items-end md:items-center justify-end\">\n                <ForwardRef(motion.div) className=\"flex flex-col bg-white/70 md:bg-white/90 px-8 py-12 md:rounded-lg max-w-3xl\" ...>\n                  <div className=\"flex flex-col bg-white/70 md:bg-white/90 px-8 py-12 md:rounded-lg max-w-3xl\" ...>\n                    <p  ...>",
+      "commentText": [
+        "eliminar"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "lhEF5NNOmIiq",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:45:35Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(7) > div.flex > div.relative > div.max-w-2xl > h2.text-5xl",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.text-5xl.md:text-5xl.lg:text-7xl>\n\n... [58 more] ...\n  <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n    <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n      <main>\n        <div>\n          <[minified] titulo=\"[Array(5)]\" ...>\n            <div data-component=\"CuadroCirculoConEscuadraConProps\" ...>\n              <ForwardRef(motion.div)  ...>\n                <div  ...>\n                  <div className=\"max-w-2xl\">\n                    <h2  ...>",
+      "commentText": [
+        "Donde la ingenieria convencional se detiene, nosotros comenzamos."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "49zm_eqvliiL",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:47:00Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(7) > div.flex > div.relative > div.max-w-2xl > p.text-lg",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-lg.md:text-xl.text-gray-600>\n\n... [58 more] ...\n  <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n    <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n      <main>\n        <div>\n          <[minified] titulo=\"[Array(5)]\" ...>\n            <div data-component=\"CuadroCirculoConEscuadraConProps\" ...>\n              <ForwardRef(motion.div)  ...>\n                <div  ...>\n                  <div className=\"max-w-2xl\">\n                    <p className=\"text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed\">",
+      "commentText": [
+        "Creamos la ingenieria que MExicali no tenia: sistemas antisismicos unicos, puentes sin columnas sobre drenes federales y tunes de viento con potencia de 3000HP. \n\nNosotros ya lo diseñamos y lo construimos. Desafia los limites de la ingenieria con soluciones a tu medida."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "boJlvMq8zbIU",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:47:54Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.w-11\\/12:nth-of-type(8) > div.flex > div.w-full > div.grid > div.aspect-square > h3.text-base",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h3.text-base.md:text-lg.1024:text-sm>\n\n... [59 more] ...\n  <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n    <main>\n      <div className=\"w-11/12 mx-auto -mt-20 md:-mt-64 1024:-mt-40 relative\">\n        <[minified] bloque1Titulo=\"52,200 m² para Gulfstream\" ...>\n          <div data-component=\"Mosaico2ConProps\" ...>\n            <div className=\"w-full 1024:w-1/2\">\n              <div className=\"grid grid-cols-1 md:grid-cols-2 gap-0\">\n                <ForwardRef(motion.div)  ...>\n                  <div  ...>\n                    <h3  ...>",
+      "commentText": [
+        "550k ft2"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "G2h-YLiYfXtI",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:50:20Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.w-11\\/12:nth-of-type(8) > div.flex > div.w-full > div.grid > div.aspect-square > a.mt-4",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <a.mt-4.md:mt-5.text-sm>\n\n... [60 more] ...\n  <main>\n    <div className=\"w-11/12 mx-auto -mt-20 md:-mt-64 1024:-mt-40 relative\">\n      <[minified] bloque1Titulo=\"52,200 m² para Gulfstream\" ...>\n        <div data-component=\"Mosaico2ConProps\" ...>\n          <div className=\"w-full 1024:w-1/2\">\n            <div className=\"grid grid-cols-1 md:grid-cols-2 gap-0\">\n              <ForwardRef(motion.div)  ...>\n                <div  ...>\n                  <[minified] href=\"/constructora/build-to-suit\" ...>\n                    <a  ...>",
+      "commentText": [
+        "eliminar esta texto ya que no tiene el contexto de lo que menciona. Lleva a otra pagina de construccion NO como se realizo Gulfstream."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "GybYwpb-8Mf5",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T22:53:23Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.flex > div.container > p.text-base",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-base.text-3xl.768:text-3xl>\n\n... [54 more] ...\n  <[minified] name=\"diseno-e-ingenieria/\" ...>\n    <[minified]  ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n            <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n              <main>\n                <div className=\"flex flex-col gap-4\">\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "Eliminar texto de relleno, repetido mas de 3 veces.... \n\no es intencional para fines del sitio??"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "PUPSXjLyfRM1",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T23:01:51Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.container:nth-of-type(11) > section.bg-background > div.container-padding-x > div.flex > div.section-title-gap-lg > p.text-xs",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-xs.360:text-xs.393:text-sm>\n\n... [58 more] ...\n  <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n    <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n      <main>\n        <div className=\"container mx-auto w-10/12 lg:mt-20\">\n          <[minified] tagline=\"Tus Estándares, Desde el Primer Trazo\" ...>\n            <section data-component=\"FeatureSection3BPConProps\" ...>\n              <div  ...>\n                <div className=\"flex flex-1 flex-col gap-8 md:gap-12\">\n                  <div className=\"section-title-gap-lg flex flex-col\">\n                    <p  ...>",
+      "commentText": [
+        "Garantizamos el cumplimiento normativo desde el proyecto ejecutivo. Diseñar con las certificaciones en mente desde el primer dia, elimina retrabajos, optimiza la inversion y asegura la reduccion de las primas de seguro."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "1R3mTME4Nr4i",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T23:03:26Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.container:nth-of-type(11) > section.bg-background > div.container-padding-x > div.flex > div.flex:nth-of-type(2) > div.flex > div.flex:nth-of-type(2) > p.text-xs",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-xs.360:text-xs.393:text-sm>\n\n... [60 more] ...\n  <main>\n    <div className=\"container mx-auto w-10/12 lg:mt-20\">\n      <[minified] tagline=\"Tus Estándares, Desde el Primer Trazo\" ...>\n        <section data-component=\"FeatureSection3BPConProps\" ...>\n          <div  ...>\n            <div className=\"flex flex-1 flex-col gap-8 md:gap-12\">\n              <div className=\"flex flex-col gap-6\">\n                <div className=\"flex flex-col gap-4 sm:flex-row sm:gap-5\">\n                  <div className=\"flex flex-col gap-2\">\n                    <p  ...>",
+      "commentText": [
+        "y sistema contraincendio."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "IYQ6dCXfxYnm",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-17T23:04:04Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div.container:nth-of-type(11) > section.bg-background > div.container-padding-x > div.flex > div.flex:nth-of-type(2) > div.flex > div.flex:nth-of-type(2) > p.text-xs",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-xs.360:text-xs.393:text-sm>\n\n... [60 more] ...\n  <main>\n    <div className=\"container mx-auto w-10/12 lg:mt-20\">\n      <[minified] tagline=\"Tus Estándares, Desde el Primer Trazo\" ...>\n        <section data-component=\"FeatureSection3BPConProps\" ...>\n          <div  ...>\n            <div className=\"flex flex-1 flex-col gap-8 md:gap-12\">\n              <div className=\"flex flex-col gap-6\">\n                <div className=\"flex flex-col gap-4 sm:flex-row sm:gap-5\">\n                  <div className=\"flex flex-col gap-2\">\n                    <p  ...>",
+      "commentText": [
+        "certificada con"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "8W67Ew7WDWQO",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-18T23:26:52Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(12) > div.relative > div.mx-auto > div.px-4 > div.mx-auto > p.mt-4",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.mt-4.360:mt-4.393:mt-5>\n\n... [58 more] ...\n  <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n    <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n      <main>\n        <div>\n          <[minified]  ...>\n            <div data-component=\"SplitWithImageBPConProps\" ...>\n              <div  ...>\n                <div  ...>\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "Si tu corporativo realiza auditorias de sguridad antes de autorizar a un constructor, te respaldamos con nuestros resultados: \n\n- +1M horas - hombre sin fatalidades.\n- +400 dias sin accidentes."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "2CrTyrWtiX7T",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-18T23:28:29Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(12) > div.relative > div.mx-auto > div.px-4 > div.mx-auto > div.mt-8 > ul.mt-6 > li.flex > span.text-xs > strong.font-semibold",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <strong.font-semibold.text-foreground.dark:text-foreground>\n\n... [62 more] ...\n  <[minified]  ...>\n    <div data-component=\"SplitWithImageBPConProps\" ...>\n      <div  ...>\n        <div  ...>\n          <div  ...>\n            <div  ...>\n              <ul role=\"list\" ...>\n                <li className=\"flex gap-x-3\">\n                  <span  ...>\n                    <strong className=\"font-semibold text-foreground dark:text-foreground\">",
+      "commentText": [
+        "+400"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "jZdiNQpdeiiB",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-18T23:29:41Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(12) > div.relative > div.mx-auto > div.px-4 > div.mx-auto > div.mt-8 > ul.mt-6 > li.flex:nth-of-type(3) > span.text-xs",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <span.text-xs.360:text-xs.393:text-sm>\n\n... [61 more] ...\n  <div>\n    <[minified]  ...>\n      <div data-component=\"SplitWithImageBPConProps\" ...>\n        <div  ...>\n          <div  ...>\n            <div  ...>\n              <div  ...>\n                <ul role=\"list\" ...>\n                  <li className=\"flex gap-x-3\">\n                    <span  ...>",
+      "commentText": [
+        "Y esto ????"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "PmZ3jBaCBFcB",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-18T23:31:33Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(12) > div.relative > div.mx-auto > div.px-4 > div.mx-auto",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <div.mx-auto.max-w-full.360:max-w-full>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n        <main>\n          <div>\n            <[minified]  ...>\n              <div data-component=\"SplitWithImageBPConProps\" ...>\n                <div  ...>\n                  <div  ...>\n                    <div  ...>",
+      "commentText": [
+        "Deberia de haber un boton  dirijido al formulario:\n\nHabla con un experto."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "trTRL9gGNspr",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-18T23:32:05Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > main > div:nth-of-type(13) > div.bg-gray-900 > div.mx-auto > div.mx-auto > p.mt-6",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.mt-6.text-xs.360:text-xs>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"flex flex-col min-h-screen overflow-hidden mt-32\">\n          <main>\n            <div>\n              <div data-component=\"FaqSectionsThreeColumnsBPConProps\" ...>\n                <div  ...>\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "español"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "GKE6_bY7gR7o",
+      "branch": "dev",
+      "pagePath": "/es/constructora/diseno-e-ingenieria",
+      "createdAt": "2026-06-18T23:35:13Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > footer.bg-gray-900 > div.mx-auto > div.mt-16 > div.flex",
+      "componentFile": "src/components/brandpetram/footer-1/index.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <div.flex.flex-col.gap-8>\n\n... [24 more] ...\n  <[minified] notFound=\"[Array(2)]\" ...>\n    <[minified] pathname=\"/es/constructora/diseno-e-ingenieria\" notFound=\"[Array(2)]\" ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/constructora/diseno-e-ingenieria\" tree=\"[Array(5)]\" segmentPath=\"[Array(1)]\" ...>\n            <[minified]>\n              <footer data-component=\"Footer1\" data-component-file=\"src/components/brandpetram/footer-1/index.tsx\" ...>\n                <div className=\"mx-auto max-w-7xl px-6 py-16 lg:px-8\">\n                  <div className=\"mt-16 border-t border-white/10 pt-8\">\n                    <div className=\"flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between\">",
+      "commentText": [
+        "Deberia ver un preview del video.."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "xtsKBg2GYOmB",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-19T23:54:36Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container > div.container > div.flex > p.text-xl",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-xl.768:text-2xl.834:text-2xl>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div>\n        <div className=\"container mx-auto mb-32 mt-30\">\n          <[minified]>\n            <ForwardRef(motion.div)  ...>\n              <div  ...>\n                <div className=\"flex flex-col gap-4 px-9\">\n                  <[minified]  ...>\n                    <p  ...>",
+      "commentText": [
+        "+30"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "cadwjnX2_vFf",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:02:26Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(2) > div.w-11\\/12 > div.flex > div.w-\\[80\\%\\] > div.aspect-square > img.w-full",
+      "componentFile": "src/components/brandpetram/eta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-full.h-full.object-cover>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div>\n          <div className=\"container mx-auto mt-10 mb-32\">\n            <div data-component=\"Eta\" data-component-file=\"src/components/brandpetram/eta.tsx\" ...>\n              <div className=\"flex flex-col md:flex-row gap-12 items-center\">\n                <div className=\"w-[80%] md:w-[45%] mt-10 md:mt-0\">\n                  <div className=\"aspect-square md:aspect-[1/2] 1200:aspect-[1/1.1]\">\n                    <img src=\"/grupo-nelson-naves-en-parques-industriales-en-mexicali-1.jpeg\" ...>",
+      "commentText": [
+        "Cambiar fotografia por alguna nave industrial."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "vuD8ME1DmUkl",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:04:43Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div > div > img",
+      "componentFile": "src/components/brandpetram/teta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-[13rem].md:w-full.ml-10>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div>\n          <div className=\"container mx-auto -mt-20 md:mt-60 1200:mt-80 mb-0\">\n            <div data-component=\"Teta\" data-component-file=\"src/components/brandpetram/teta.tsx\" ...>\n              <div  ...>\n                <div  ...>\n                  <div className=\"relative translate-y-[4rem] 360:translate-y-[4rem]  393:translate-y-[4rem] z-30 md:z-0\">\n                    <img src=\"/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg\" alt=\"Imagen principal\" ...>",
+      "commentText": [
+        "Limpiar foto (persona caminando)"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "ITBXfPTEi1ue",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:05:47Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(4) > div.flex > div.w-1\\/2 > div.flex > p.text-\\[1rem\\]",
+      "componentFile": "src/components/brandpetram/iota.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-[1rem].360:text-[1rem].393:text-[1.2rem]>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div>\n            <div className=\"container mx-auto mt-10 \">\n              <div data-component=\"Iota\" data-component-file=\"src/components/brandpetram/iota.tsx\" ...>\n                <div className=\"w-1/2 p-6 md:p-20 1200:p-40\">\n                  <div className=\"flex flex-col gap-10\">\n                    <p  ...>",
+      "commentText": [
+        "El sistema contraincendio"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "_0qQIiwk6x81",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:07:28Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(5) > section.mx-auto > div.w-full > div.w-full > img.w-full",
+      "componentFile": "src/components/brandpetram/kappa.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-full.h-full.object-cover>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div>\n            <div className=\"container mx-auto  mb-32 -mt-16\">\n              <section data-component=\"Kappa\" data-component-file=\"src/components/brandpetram/kappa.tsx\" ...>\n                <div  ...>\n                  <div className=\"w-full aspect-video overflow-hidden\">\n                    <img  ...>",
+      "commentText": [
+        "cambiar de foto"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "v-FV1OGEDTnQ",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:09:21Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(6) > section.w-11\\/12 > div.flex > div.flex-1 > img.w-full",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-full.aspect-square.object-cover>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div>\n            <div className=\"container mx-auto -mt-32 mb-32\">\n              <section className=\"w-11/12 1200:w-10/12 mx-auto\">\n                <div className=\"flex gap-[5rem] 1200:gap-[15rem] md:translate-y-[7rem] 1200:translate-y-[10rem]\">\n                  <div className=\"flex-1 flex flex-col gap-16\">\n                    <img src=\"/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG\" ...>",
+      "commentText": [
+        "Se podra limpiar esta foto, eliminando o difulminando la empresa de CASTORES que aparece al fondo."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "Bte6b9EGlKrT",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:18:42Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(2) > div.w-11\\/12 > div.flex > div.w-\\[55\\%\\] > div.px-1 > div.flex > p.text-\\[1rem\\]",
+      "componentFile": "src/components/brandpetram/eta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-[1rem].360:text-[1rem].393:text-[1.2rem]>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div>\n        <div className=\"container mx-auto mt-10 mb-32\">\n          <div data-component=\"Eta\" data-component-file=\"src/components/brandpetram/eta.tsx\" ...>\n            <div className=\"flex flex-col md:flex-row gap-12 items-center\">\n              <div className=\"w-[55%] flex items-center justify-center\">\n                <div  ...>\n                  <div className=\"flex flex-col gap-5\">\n                    <p  ...>",
+      "commentText": [
+        "Parque Industrial El Vigia es el parque pionero de nuestro portafolio. Destaca por ofrecer precios de renta mas competitivos en el mercado, lo que lo convierte en una plataforma ideal para encubar, arrancar y consolidar proyectos industriales estrategicos. \n\nEn contra parte Parque Industrial Nelson II, es nuestro desarrollo mas moderno y avanzado. Esta diseñado especialmente para albergar plantas industriales de gran escala, desarrolladas en su mayoria bajo el modelos BTS."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "iKVFO4oP_qXh",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:20:11Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(3) > div > div > div:nth-of-type(2) > div > p",
+      "componentFile": "src/components/brandpetram/teta.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-pretty.360:w-full.393:w-full>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div>\n          <div className=\"container mx-auto -mt-20 md:mt-60 1200:mt-80 mb-0\">\n            <div data-component=\"Teta\" data-component-file=\"src/components/brandpetram/teta.tsx\" ...>\n              <div  ...>\n                <div  ...>\n                  <div  ...>\n                    <p  ...>",
+      "commentText": [
+        "Eliminar esta parte."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "PjQ9NHjuIQxC",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:21:33Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(5) > section.mx-auto > div.bg-background > div.translate-y-\\[10rem\\] > div.relative > div.mb-12 > p.w-9\\/12",
+      "componentFile": "src/components/brandpetram/kappa.tsx",
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.w-9/12.text-[0.7rem].360:text-[0.7rem]>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div>\n        <div className=\"container mx-auto  mb-32 -mt-16\">\n          <section data-component=\"Kappa\" data-component-file=\"src/components/brandpetram/kappa.tsx\" ...>\n            <div className=\"bg-background max-h-[70rem]\">\n              <div className=\"translate-y-[10rem]\">\n                <div  ...>\n                  <div className=\"mb-12 \">\n                    <p  ...>",
+      "commentText": [
+        "Nuestra Constructora en"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "2otVyDvzinDi",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:22:54Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(6) > section.w-11\\/12",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <section.w-11/12.1200:w-10/12.mx-auto>\n\n... [52 more] ...\n  <[minified] segmentPath=\"[Array(7)]\" ...>\n    <[minified]  ...>\n      <[minified] name=\"llave-en-mano/\" ...>\n        <[minified]  ...>\n          <[minified]>\n            <[minified]  ...>\n              <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n                <div>\n                  <div className=\"container mx-auto -mt-32 mb-32\">\n                    <section className=\"w-11/12 1200:w-10/12 mx-auto\">",
+      "commentText": [
+        "Es intencional el espacio que existe entre fotografia y texto?"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "A_RzAux3sKII",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:29:06Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(6) > section > div > div > h2",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.360:text-[2rem].393:text-[2.1rem].430:text-[2.2rem]>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div>\n            <div className=\"container mx-auto -mt-32 mb-32\">\n              <section className=\"w-11/12 1200:w-10/12 mx-auto\">\n                <div className=\"flex gap-[5rem] 1200:gap-[15rem] md:translate-y-[7rem] 1200:translate-y-[10rem]\">\n                  <div className=\"flex-1 flex flex-col gap-16\">\n                    <h2  ...>",
+      "commentText": [
+        "Modificar la alineacion del texto.,  probablemente centrado o que se extienda hasta el inicio del texto del parrafo a la derecha."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "dsIz5Nh5F9Qd",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:32:03Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(6) > section > div > div:nth-of-type(2) > p",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.360:text-[0.95rem].393:text-[1rem].430:text-[1.1rem]>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div>\n            <div className=\"container mx-auto -mt-32 mb-32\">\n              <section className=\"w-11/12 1200:w-10/12 mx-auto\">\n                <div className=\"flex gap-[5rem] 1200:gap-[15rem] md:translate-y-[7rem] 1200:translate-y-[10rem]\">\n                  <div className=\"flex-1 flex flex-col gap-6 translate-y-[10rem]\">\n                    <p  ...>",
+      "commentText": [
+        "Con el respaldo de +30 clientes operando con nosotros estamos listos para arrancar tu proximo proyecto. Te ofrecemos naves de inventario Llave en mano, listas para habitar o desarrollos A la medida en nuestras reserva de terrenos disponibles."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "hjv0ZKlV3TR4",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:32:38Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(6) > section.w-11\\/12 > div.flex > div.flex-1 > img.w-full",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-full.aspect-square.object-cover>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div>\n            <div className=\"container mx-auto -mt-32 mb-32\">\n              <section className=\"w-11/12 1200:w-10/12 mx-auto\">\n                <div className=\"flex gap-[5rem] 1200:gap-[15rem] md:translate-y-[7rem] 1200:translate-y-[10rem]\">\n                  <div className=\"flex-1 flex flex-col gap-16\">\n                    <img src=\"/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG\" ...>",
+      "commentText": [
+        "Visualmente el cielo se ve contaminado..."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "ek1qw8ORq8q7",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:35:00Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(6) > div > div > h2",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.360:text-[2.3rem].393:text-[2.4rem].430:text-[2.5rem]>\n\n... [54 more] ...\n  <[minified] name=\"llave-en-mano/\" ...>\n    <[minified]  ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n            <div>\n              <div className=\"container mx-auto -mt-32 mb-32\">\n                <div  ...>\n                  <div className=\" w-10/12 1366:w-8/12 mx-auto flex flex-col gap-6\">\n                    <h2  ...>",
+      "commentText": [
+        "Consulta nuestro inventario....."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "lRHBxZctNZaR",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:35:43Z",
+      "status": "unresolved",
+      "selector": "body > div:nth-of-type(2) > div:nth-of-type(6) > div > div > p",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.360:text-[1.1rem].393:text-[1.15rem].430:text-[1.2rem]>\n\n... [54 more] ...\n  <[minified] name=\"llave-en-mano/\" ...>\n    <[minified]  ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n            <div>\n              <div className=\"container mx-auto -mt-32 mb-32\">\n                <div  ...>\n                  <div className=\" w-10/12 1366:w-8/12 mx-auto flex flex-col gap-6\">\n                    <p  ...>",
+      "commentText": [
+        "eliminar"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "DNggMxSapbBR",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:36:20Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div:nth-of-type(2) > div.container:nth-of-type(6)",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <div.container.mx-auto.-mt-32>\n\n... [51 more] ...\n  <[minified] segmentPath=\"[Array(7)]\">\n    <[minified] segmentPath=\"[Array(7)]\" ...>\n      <[minified]  ...>\n        <[minified] name=\"llave-en-mano/\" ...>\n          <[minified]  ...>\n            <[minified]>\n              <[minified]  ...>\n                <[minified] url=\"/es/constructora/llave-en-mano\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n                  <div>\n                    <div className=\"container mx-auto -mt-32 mb-32\">",
+      "commentText": [
+        "Pregunta tecnica: \n\nSentimos que queda mucho espacio en blanco, lo cual nos obliga hacer de mas el scroll, se puede hacer mas compacto haciendo y viendo el diseño mas limpio y continuo.  \n\nAsi hemos detectado algunas secciones con similares situaciones."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "yHLo0G3JphQS",
+      "branch": "dev",
+      "pagePath": "/es/constructora/llave-en-mano",
+      "createdAt": "2026-06-26T18:37:58Z",
+      "status": "unresolved",
+      "selector": "var\\(--color-background\\)\\)\\] > div.fixed > div.mx-auto > div.relative > div.hidden > div.flex:nth-of-type(2) > nav.group\\/navigation-menu > div > ul.group > li.relative:nth-of-type(3) > #radix-_r_o_-trigger-radix-_r_r_",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <button#radix-_r_o_-trigger-radix-_r_r_.group.inline-flex.h-8>\n\n... [104 more] ...\n  <ForwardRef([anonymous]) data-radix-collection-item=\"\">\n    <ForwardRef([anonymous]) asChild data-radix-collection-item=\"\">\n      <ForwardRef([anonymous])  ...>\n        <ForwardRef([anonymous]) data-radix-collection-item=\"\">\n          <ForwardRef([anonymous]) data-radix-collection-item=\"\">\n            <ForwardRef([anonymous]) asChild data-radix-collection-item=\"\" ...>\n              <ForwardRef([anonymous]) data-radix-collection-item=\"\" ...>\n                <ForwardRef([anonymous]) data-radix-collection-item=\"\" ...>\n                  <ForwardRef([anonymous]) id=\"radix-_r_o_-trigger-radix-_r_r_\" data-state=\"closed\" aria-expanded={false} ...>\n                    <button id=\"radix-_r_o_-trigger-radix-_r_r_\" data-state=\"closed\" aria-expanded={false} ...>",
+      "commentText": [
+        "La seccion Soluciones Llave en Mano, moverla dentro de la seccion de Parques y antes de la seccion Naves Disponibles."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "MO5GYXKQiNYn",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/excelencia-operativa",
+      "createdAt": "2026-05-08T17:50:35Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-clip > main.bg-blue-950\\/10 > div.\\@container:nth-of-type(5) > div.max-w-276 > div.h-full > div.\\@4xl\\:grid-cols-10 > div.\\@4xl\\:pl-12 > div.mt-6 > div.mt-12 > div.bg-primary\\/10 > span.text-primary",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <span.text-primary.text-sm.font-bold>\n\n... [60 more] ...\n  <main className=\"bg-blue-950/10 dark:bg-blue-500/20\">\n    <div className=\"@container grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto_1fr]\">\n      <div className=\"max-w-276 xl:min-w-276 mx-auto w-full p-[0.5px]\">\n        <div data-slot=\"content\" className=\"h-full rounded bg-background border-dashed\">\n          <div className=\"@4xl:grid-cols-10 grid\">\n            <div className=\"@4xl:pl-12 @4xl:col-span-8 @4xl:col-start-2 max-w-2xl p-6 md:py-12 lg:py-20\">\n              <div className=\"mt-6 lg:mt-12\">\n                <div className=\"mt-12 flex items-center gap-3\">\n                  <div className=\"bg-primary/10 flex size-10 items-center justify-center rounded-lg\">\n                    <span className=\"text-primary text-sm font-bold\">",
+      "commentText": [
+        "40"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "7ToQgPEsKNvp",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:09:22Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.pt-20 > div.hero-mp-wrapper > div.hero-mp-container > h1.hero-mp-headline",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h1.hero-mp-headline>\n\n... [58 more] ...\n  <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n    <div className=\"min-h-[200vh]\">\n      <main>\n        <div className=\"pt-20 md:pt-30\">\n          <[minified] badge=\"Normas · Certificaciones · Estándares\" headlineTop=\"Tres tipos de exigencia.\" ...>\n            <div data-component=\"HeroMotionPlus\" ...>\n              <ForwardRef(motion.div) className=\"hero-mp-container\" initial=\"hidden\" animate=\"visible\" ...>\n                <div className=\"hero-mp-container\" ...>\n                  <ForwardRef(motion.h1) className=\"hero-mp-headline\" ...>\n                    <h1 className=\"hero-mp-headline\" ...>",
+      "commentText": [
+        "Cambiar texto.\n\nniveles"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "x9JPwMyTv80X",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:09:52Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.pt-20 > div.hero-mp-wrapper > div.hero-mp-container > h1.hero-mp-headline > span.hero-mp-headline-accent",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <span.hero-mp-headline-accent>\n\n... [59 more] ...\n  <div className=\"min-h-[200vh]\">\n    <main>\n      <div className=\"pt-20 md:pt-30\">\n        <[minified] badge=\"Normas · Certificaciones · Estándares\" headlineTop=\"Tres tipos de exigencia.\" ...>\n          <div data-component=\"HeroMotionPlus\" ...>\n            <ForwardRef(motion.div) className=\"hero-mp-container\" initial=\"hidden\" animate=\"visible\" ...>\n              <div className=\"hero-mp-container\" ...>\n                <ForwardRef(motion.h1) className=\"hero-mp-headline\" ...>\n                  <h1 className=\"hero-mp-headline\" ...>\n                    <span className=\"hero-mp-headline-accent\">",
+      "commentText": [
+        "Resultados comprobables en proyectos reales."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "8F-zvJUAMcrH",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:12:37Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.pt-20 > div.hero-mp-wrapper > div.hero-mp-container > p.hero-mp-subtitle",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.hero-mp-subtitle>\n\n... [58 more] ...\n  <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n    <div className=\"min-h-[200vh]\">\n      <main>\n        <div className=\"pt-20 md:pt-30\">\n          <[minified] badge=\"Normas · Certificaciones · Estándares\" headlineTop=\"Tres tipos de exigencia.\" ...>\n            <div data-component=\"HeroMotionPlus\" ...>\n              <ForwardRef(motion.div) className=\"hero-mp-container\" initial=\"hidden\" animate=\"visible\" ...>\n                <div className=\"hero-mp-container\" ...>\n                  <ForwardRef(motion.p) className=\"hero-mp-subtitle\" ...>\n                    <p className=\"hero-mp-subtitle\" ...>",
+      "commentText": [
+        "Todo proyecto insdustrial demanda el cumplimiento de tres frentes claves: Estandares corporativos, requerimientos de aseguradoras y normatividad regulatoria. \nEn Nuestra Constructora se garantiza el exito de tu obra."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "RqrZlDHPM4y3",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:18:05Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > #estandares-ingenieria > div.mx-auto > div.mx-auto > p.mt-6",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.mt-6.text-lg/8.text-gray-300>\n\n... [55 more] ...\n  <[minified]  ...>\n    <[minified]>\n      <[minified]  ...>\n        <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n          <div className=\"min-h-[200vh]\">\n            <main>\n              <div id=\"estandares-ingenieria\" className=\"bg-gray-900 py-24 sm:py-32\" ...>\n                <div className=\"mx-auto max-w-7xl px-6 lg:px-8\">\n                  <div className=\"mx-auto max-w-2xl lg:text-center\">\n                    <p className=\"mt-6 text-lg/8 text-gray-300\">",
+      "commentText": [
+        "En Nuestra Constructora alineamos cada obra bajo estandares internacionales."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "iGqyDaFOpN1Z",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:24:56Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > #estandares-ingenieria > div.mx-auto > div.mx-auto:nth-of-type(2) > dl.grid > div.relative > dd.mt-2",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <dd.mt-2.text-base/7.text-gray-400>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div className=\"min-h-[200vh]\">\n        <main>\n          <div id=\"estandares-ingenieria\" className=\"bg-gray-900 py-24 sm:py-32\" ...>\n            <div className=\"mx-auto max-w-7xl px-6 lg:px-8\">\n              <div className=\"mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl\">\n                <dl className=\"grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16\">\n                  <div className=\"relative pl-16\">\n                    <dd className=\"mt-2 text-base/7 text-gray-400\">",
+      "commentText": [
+        "Diseñamos y construimos bajo los lineamientos del IBC, integrandolso extrictamente con el reglamento de construccion de Baja California. Esto garantiza a nuestros clientes internacionales que su infraestructura en Mexicali cumple con los mas altos estandares globales de seguridad y calidad estructural."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "b71xAoaASHgD",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:33:15Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > #estandares-ingenieria > div.mx-auto > div.mx-auto:nth-of-type(2) > dl.grid > div.relative:nth-of-type(4) > dd.mt-2",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <dd.mt-2.text-base/7.text-gray-400>\n\n... [57 more] ...\n  <[minified]  ...>\n    <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n      <div className=\"min-h-[200vh]\">\n        <main>\n          <div id=\"estandares-ingenieria\" className=\"bg-gray-900 py-24 sm:py-32\" ...>\n            <div className=\"mx-auto max-w-7xl px-6 lg:px-8\">\n              <div className=\"mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl\">\n                <dl className=\"grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16\">\n                  <div className=\"relative pl-16\">\n                    <dd className=\"mt-2 text-base/7 text-gray-400\">",
+      "commentText": [
+        "Esta solida infraestructura esta integrada directamente al parque garantizando el maximo respaldo y seguridad para tus operaciones."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "xPEPmTOnOZUg",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:37:23Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.mx-auto:nth-of-type(4) > div.mb-24 > h2.text-2xl",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <h2.text-2xl.md:text-3xl.font-bold>\n\n... [54 more] ...\n  <[minified] name=\"normas-certificaciones-estandares/\" ...>\n    <[minified]  ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n            <div className=\"min-h-[200vh]\">\n              <main>\n                <div className=\"mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl\">\n                  <div className=\"mb-24\">\n                    <h2 className=\"text-2xl md:text-3xl font-bold leading-snug mb-4\">",
+      "commentText": [
+        "Cumplimiento normativo con evidencia verificable"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "ClVNh9md5ZMc",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:40:00Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.mx-auto:nth-of-type(4) > div.mb-24 > p.text-lg",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-lg.text-muted-foreground.leading-relaxed>\n\n... [54 more] ...\n  <[minified] name=\"normas-certificaciones-estandares/\" ...>\n    <[minified]  ...>\n      <[minified]>\n        <[minified]  ...>\n          <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n            <div className=\"min-h-[200vh]\">\n              <main>\n                <div className=\"mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl\">\n                  <div className=\"mb-24\">\n                    <p className=\"text-lg text-muted-foreground leading-relaxed mb-12\">",
+      "commentText": [
+        "Nos aseguramos de que cada proyecto cumpla estrictamente con las normas mexicanas de seguridad. Marcamos la diferencia a traves de una gestion transparente, sustentada en permisos diarios, matrices de riesgos cuantitativas y registros totalmente auditables."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "rsCWhcaiZkmV",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:41:55Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.mx-auto:nth-of-type(4) > div.mb-24 > div.grid > div:nth-of-type(3) > p.text-base",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-base.leading-relaxed>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"min-h-[200vh]\">\n          <main>\n            <div className=\"mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl\">\n              <div className=\"mb-24\">\n                <div className=\"grid gap-8 md:grid-cols-2 mb-12\">\n                  <div>\n                    <p className=\"text-base leading-relaxed\">",
+      "commentText": [
+        "eliminar"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "JJQY4eQgY8p5",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:42:12Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.mx-auto:nth-of-type(4) > div.mb-24 > div.grid > div:nth-of-type(4)",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-base.leading-relaxed>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"min-h-[200vh]\">\n          <main>\n            <div className=\"mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl\">\n              <div className=\"mb-24\">\n                <div className=\"grid gap-8 md:grid-cols-2 mb-12\">\n                  <div>\n                    <p className=\"text-base leading-relaxed\">",
+      "commentText": [
+        "eliminar"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "K_kQHb73gL52",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:44:52Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.mx-auto:nth-of-type(4) > div.mb-24 > div.grid > div:nth-of-type(4) > p.text-base",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-base.leading-relaxed>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"min-h-[200vh]\">\n          <main>\n            <div className=\"mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl\">\n              <div className=\"mb-24\">\n                <div className=\"grid gap-8 md:grid-cols-2 mb-12\">\n                  <div>\n                    <p className=\"text-base leading-relaxed\">",
+      "commentText": [
+        "internacional"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "FmSy_ZKLJYrw",
+      "branch": "dev",
+      "pagePath": "/es/experiencia/normas-certificaciones-estandares",
+      "createdAt": "2026-06-10T00:45:41Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.mx-auto:nth-of-type(4) > div.mb-24 > div.grid > div:nth-of-type(4) > p.text-base",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-base.leading-relaxed>\n\n... [56 more] ...\n  <[minified]>\n    <[minified]  ...>\n      <[minified] url=\"/es/experiencia/normas-certificaciones-estandares\" tree=\"[Array(5)]\" segmentPath=\"[Array(7)]\" ...>\n        <div className=\"min-h-[200vh]\">\n          <main>\n            <div className=\"mx-auto px-8 md:px-12 pt-16 pb-32 max-w-4xl\">\n              <div className=\"mb-24\">\n                <div className=\"grid gap-8 md:grid-cols-2 mb-12\">\n                  <div>\n                    <p className=\"text-base leading-relaxed\">",
+      "commentText": [
+        "la seguridad en obra cumple con los criterios mas estrictos y reconocidos a nivel global."
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "f8VmlLmadCP-",
+      "branch": "main",
+      "pagePath": "/experience/operational-excellence",
+      "createdAt": "2026-04-14T05:24:52Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-clip > main.bg-blue-950\\/10 > div.\\@container:nth-of-type(5) > div.max-w-276 > div.h-full > div.\\@4xl\\:grid-cols-10 > div.\\@4xl\\:pl-12 > img.h-7",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.h-7.w-auto.dark:invert>\n\n... [43 more] ...\n  <div className=\"overflow-x-clip \">  // %5Broot-of-the-server%5D__28edc172._.js?320:2567\n    <main className=\"bg-blue-950/10 dark:bg-blue-500/20\">  // %5Broot-of-the-server%5D__28edc172._.js?319:2584\n      <div className=\"@container grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto_1fr]\">  // %5Broot-of-the-server%5D__28edc172._.js?37:112\n        <div className=\"max-w-276 xl:min-w-276 mx-auto w-full p-[0.5px]\">  // %5Broot-of-the-server%5D__28edc172._.js?36:121\n          <div data-slot=\"content\" className=\"h-full rounded bg-background border-dashed\">  // %5Broot-of-the-server%5D__28edc172._.js?35:130\n            <div className=\"@4xl:grid-cols-10 grid\">  // %5Broot-of-the-server%5D__28edc172._.js?180:1371\n              <div className=\"@4xl:pl-12 @4xl:col-span-8 @4xl:col-start-2 max-w-2xl p-6 md:py-12 lg:py-20\">  // %5Broot-of-the-server%5D__28edc172._.js?179:1373\n                <ForwardRef([anonymous]) src=\"/gulfstream/gulfstream-logo.svg\" alt=\"Gulfstream Aerospace\" width={160} height={40} ...>  // %5Broot-of-the-server%5D__28edc172._.js?178:1376\n                  <ForwardRef([anonymous]) alt=\"Gulfstream Aerospace\" loading=\"lazy\" width={160} height={40} decoding=\"async\" ...>\n                    <img alt=\"Gulfstream Aerospace\" loading=\"lazy\" width={160} height={40} decoding=\"async\" data-nimg=\"1\" ...>",
+      "commentText": [
+        "En localhost tambien esta broken"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "jK0MKP4zjgiK",
+      "branch": "section/excelencia-operativa",
+      "pagePath": "/experiencia/excelencia-operativa",
+      "createdAt": "2026-04-06T18:44:35Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.overflow-x-clip > main.bg-blue-950\\/10 > section:nth-of-type(4) > div.\\@container:nth-of-type(4) > div.max-w-276 > div.\\*\\*\\:data-grid-content\\:bg-card\\/75 > div.\\@4xl\\:col-span-9:nth-of-type(4) > div.grid > div.flex > div.border-foreground\\/10 > div.relative > div.text-base > span.text-foreground",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <span.text-foreground.font-medium>\n\n... [38 more] ...\n  <div className=\"@container grid grid-cols-[auto_1fr_auto] xl:grid-cols-[1fr_auto_1fr]\">  // %5Broot-of-the-server%5D__b88a34f9._.js?72:136\n    <div className=\"max-w-276 xl:min-w-276 mx-auto w-full\">  // %5Broot-of-the-server%5D__b88a34f9._.js?71:145\n      <div  ...>  // %5Broot-of-the-server%5D__b88a34f9._.js?89:147\n        <div className=\"@4xl:col-span-9\">  // %5Broot-of-the-server%5D__b88a34f9._.js?342:2271\n          <div data-slot=\"feature-card\" className=\"grid h-full gap-px grid-rows-[1fr_auto]\">  // %5Broot-of-the-server%5D__b88a34f9._.js?171:634\n            <div data-grid-content data-slot=\"feature-card-illustration\" ...>  // %5Broot-of-the-server%5D__b88a34f9._.js?170:657\n              <div className=\"border-foreground/10 @3xl:px-12 relative grid w-full grid-cols-[1fr_auto] p-6\">  // %5Broot-of-the-server%5D__b88a34f9._.js?333:2303\n                <div className=\"relative grid grid-cols-[auto_1fr] items-center gap-3 pl-px\">  // %5Broot-of-the-server%5D__b88a34f9._.js?332:2305\n                  <div className=\"text-base *:block\">  // %5Broot-of-the-server%5D__b88a34f9._.js?338:2323\n                    <span className=\"text-foreground font-medium\">  // %5Broot-of-the-server%5D__b88a34f9._.js?336:2326",
+      "commentText": [
+        "cambiar fatalidades por accidentes"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "Qc8Kf5atgNJG",
+      "branch": "main",
+      "pagePath": "/nelson/diferencia-nelson",
+      "createdAt": "2026-03-31T00:30:18Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.min-h-\\[200vh\\] > main > div.pt-20 > section.bg-background > div.px-\\[1\\.5rem\\] > div.flex > div.flex > p.text-\\[0\\.875rem\\]",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <p.text-[0.875rem].360:text-[0.875rem].393:text-[0.875rem]>\n\n... [34 more] ...\n  <SegmentViewNode type=\"page\" pagePath=\"/GrupoNelson/src/app/nelson/diferencia-nelson/page.tsx\">  // <anonymous>:1\n    <div className=\"min-h-[200vh]\">  // %5Broot-of-the-server%5D__1b400572._.js?19:316\n      <main>  // %5Broot-of-the-server%5D__1b400572._.js?18:324\n        <div className=\"pt-20\">  // %5Broot-of-the-server%5D__1b400572._.js?7:326\n          <FeatureSection8BP>  // %5Broot-of-the-server%5D__1b400572._.js?6:328\n            <section  ...>\n              <div  ...>\n                <div className=\"flex flex-1 flex-col gap-[2rem] 768:gap-[2.5rem] 1200:gap-[2rem] 1920:gap-[2.5rem]\">\n                  <div className=\"flex flex-col gap-[1rem] 768:gap-[1.25rem] 1200:gap-[1.25rem] 1920:gap-[1.5rem]\">\n                    <p  ...>",
+      "commentText": [
+        "borrar este texto"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    },
+    {
+      "threadId": "DnZyX1IkFzI0",
+      "branch": "wt/nuestra-historia",
+      "pagePath": "/nelson/nuestra-historia",
+      "createdAt": "2026-04-10T22:06:57Z",
+      "status": "unresolved",
+      "selector": "body.geist_a71539c9-module__T19VSG__variable > div.flex > div.grid > div.border-x > div.px-6 > figure.w-3\\/3 > div.aspect-video > img.w-full",
+      "componentFile": null,
+      "componentTree": "React Component Tree (root to selected element):\n\nSelected: <img.w-full.h-auto.object-cover>\n\n... [32 more] ...\n  <RedirectBoundary>\n    <RedirectErrorBoundary  ...>\n      <SegmentViewNode type=\"page\" pagePath=\"/.worktrees/nuestra-historia/src/app/nelson/nuestra-historia/page.tsx\">  // <anonymous>:1\n        <div className=\"flex flex-col min-h-[200vh] my-32 1200:px-10 \">  // %5Broot-of-the-server%5D__3eae9a06._.js?25:202\n          <div className=\"grid grid-cols-1 md:grid-cols-3 flex-1\">  // %5Broot-of-the-server%5D__3eae9a06._.js?24:210\n            <div className=\"border-x border-border dark:border-white/20\">  // %5Broot-of-the-server%5D__3eae9a06._.js?23:302\n              <div className=\"px-6 1200:px-10\">  // %5Broot-of-the-server%5D__3eae9a06._.js?22:305\n                <figure className=\"w-3/3 mx-auto mt-8\">  // %5Broot-of-the-server%5D__3eae9a06._.js?21:307\n                  <div className=\"aspect-video\">  // %5Broot-of-the-server%5D__3eae9a06._.js?19:310\n                    <img src=\"/placeholder.svg\" alt=\"Evolución de los parques industriales de Grupo Nelson en Mexicali\" ...>  // %5Broot-of-the-server%5D__3eae9a06._.js?18:312",
+      "commentText": [
+        "usar la foto nave-industrial-en-parque-industrial-nelson2-8"
+      ],
+      "decision": null,
+      "anchorNotes": null
+    }
+  ]
+}
