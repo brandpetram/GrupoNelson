@@ -40,7 +40,7 @@ export default function EngineeringDesignPage() {
         {/* Hero — Image grid */}
         <div>
           <CuadriculaSectionConProps
-            imagen1="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-1.jpg"
+            imagen1="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-54.jpg"
             imagen2="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-11.jpg"
             imagen3="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-21.jpg"
             imagen4="/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-31.jpg"

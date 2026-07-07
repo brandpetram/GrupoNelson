@@ -168,3 +168,10 @@ Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activo
 - **Envista sin persona caminando** (comentario de Erick en teta/llave-en-mano): la foto `grupo-nelson-naves-…-mexicali-3` se usaba en **10 lugares** (home ES/EN, casos de éxito ES/EN, liderazgo ES/EN, cascadas, xi, teta) — se reemplazó en todos por la versión editada `…-3-v2.jpeg` (persona eliminada, banqueta rellenada natural; aprobada por Luis).
 - **Naves 1-4 El Vigía con cielo azul** (pedido directo de Luis por URL, sin thread de Vercel): `naves-1-4-…-1-1-v2.JPG` en el slot de lamda y 2 entradas del inventario de naves (cielo café → azul con nubes; suelo intacto; aprobada por Luis).
 - Ambas con sufijo `-v2` anti-caché; originales conservadas en el repo.
+
+## Cambios de foto por inventario (3 comentarios) — 2026-07-07
+
+- **Llave en Mano / eta** ("Cambiar fotografía por alguna nave industrial"): el edificio histórico de noche → **nave Gulfstream en Nelson II** (coincide con el copy nuevo que menciona Gulfstream). Se corrigió de paso el alt placeholder ("Ventana con vista al bosque").
+- **Llave en Mano / kappa** ("cambiar de foto"): nave genérica tipo stock → **entrada del Parque Nelson II con banderas** (16:9 natural, branding GN). Alt actualizado.
+- **Diseño e Ingeniería / cuadrícula** ("cambiar foto desenfocada"): la foto no estaba desenfocada — el slot la recorta a una tira vertical extrema. Se cambió por la **nave Gulfstream** (más nítida en el recorte). Si sigue viéndose apretada, queda pendiente ajustar el crop de esa celda (opción documentada).
+- Las 3 son fotos existentes del inventario (`/Seleccionadas/`), elegidas por Luis sobre recomendación de Claude; sin `-v2` porque son archivos distintos (no hay caché que reventar). Aplican a ES y EN (componentes compartidos / mismas props en ambas páginas).

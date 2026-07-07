@@ -270,7 +270,7 @@
       "commentText": [
         "cambiar foto desenfocada..."
       ],
-      "decision": "pendiente imagen — …nave-industrial-1.jpg (crop 1:2 extremo)",
+      "decision": "resuelto — foto de cuadrícula cambiada a nave Gulfstream; el desenfoque era el crop 1:2 extremo (ajuste de crop documentado como opción)",
       "anchorNotes": null
     },
     {
@@ -555,7 +555,7 @@
       "commentText": [
         "Cambiar fotografia por alguna nave industrial."
       ],
-      "decision": "pendiente imagen — eta: grupo-nelson-naves…-1.jpeg",
+      "decision": "resuelto — foto de eta cambiada a nave Gulfstream (Seleccionadas), alt corregido",
       "anchorNotes": null
     },
     {
@@ -600,7 +600,7 @@
       "commentText": [
         "cambiar de foto"
       ],
-      "decision": "pendiente imagen — kappa: parque-industrial…-436.jpg",
+      "decision": "resuelto — foto de kappa cambiada a entrada Nelson II con banderas (Seleccionadas)",
       "anchorNotes": null
     },
     {
@@ -1041,6 +1041,6 @@
   ],
   "resolvedMarcadosEnVercel": {
     "fecha": "2026-07-06",
-    "total": 48
+    "total": 51
   }
 }

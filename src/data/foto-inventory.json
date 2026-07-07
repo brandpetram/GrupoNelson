@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-07T17:56:58.343Z",
+  "generatedAt": "2026-07-07T18:05:01.381Z",
   "totalPhotos": 959,
-  "totalUsed": 255,
-  "totalUnused": 704,
+  "totalUsed": 254,
+  "totalUnused": 705,
   "folders": [
     {
       "folder": "(raíz)",
@@ -179,16 +179,13 @@
           "usedIn": [
             "page: about/leadership",
             "page: about/our-story",
-            "page: construction/turnkey",
             "page: experience/success-stories",
-            "page: es/constructora/llave-en-mano",
             "page: es/experiencia/casos-de-exito",
             "page: es/nelson/liderazgo",
             "page: es/nelson/nuestra-historia",
             "componente: experience/success-stories/sections/mosaic-cases",
             "componente: es/experiencia/casos-de-exito/sections/mosaico-casos",
             "componente: brandpetram/cursor-trail-grupo-nelson",
-            "componente: brandpetram/eta",
             "componente: brandpetram/mosaico-liderazgo"
           ]
         },
@@ -720,6 +717,7 @@
             "componente: brandpetram/ficha-tecnica-parque-detalle",
             "componente: brandpetram/ficha-tecnica-parque-horizontal",
             "componente: brandpetram/ficha-tecnica-parque-vertical",
+            "componente: brandpetram/kappa",
             "componente: brandpetram/tau",
             "componente: brandpetram/zeta",
             "data: parks-data"
@@ -3379,17 +3377,14 @@
     {
       "folder": "parques-industriales-mexicali",
       "count": 502,
-      "usedCount": 103,
+      "usedCount": 102,
       "photos": [
         {
           "path": "/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-1.jpg",
           "folder": "parques-industriales-mexicali",
           "filename": "parque-industrial-mexicali-renta-y-construccion-nave-industrial-1.jpg",
-          "usedInCode": true,
-          "usedIn": [
-            "page: construction/engineering-design",
-            "page: es/constructora/diseno-e-ingenieria"
-          ]
+          "usedInCode": false,
+          "usedIn": []
         },
         {
           "path": "/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-10.jpg",
@@ -6406,10 +6401,7 @@
           "usedInCode": true,
           "usedIn": [
             "page: componentes-dos",
-            "page: construction/turnkey",
-            "page: es/constructora/llave-en-mano",
-            "componente: brandpetram/cuadricula-section-1",
-            "componente: brandpetram/kappa"
+            "componente: brandpetram/cuadricula-section-1"
           ]
         },
         {
@@ -8158,12 +8150,17 @@
           "usedInCode": true,
           "usedIn": [
             "page: about/our-story",
+            "page: construction/engineering-design",
+            "page: construction/turnkey",
             "page: home",
+            "page: es/constructora/diseno-e-ingenieria",
+            "page: es/constructora/llave-en-mano",
             "page: es/nelson/nuestra-historia",
             "page: es",
             "componente: home-client",
             "componente: es/home-client",
-            "componente: brandpetram/cursor-trail-grupo-nelson"
+            "componente: brandpetram/cursor-trail-grupo-nelson",
+            "componente: brandpetram/eta"
           ]
         },
         {
@@ -8253,8 +8250,11 @@
           "usedInCode": true,
           "usedIn": [
             "page: about/our-story",
+            "page: construction/turnkey",
+            "page: es/constructora/llave-en-mano",
             "page: es/nelson/nuestra-historia",
-            "componente: brandpetram/cursor-trail-grupo-nelson"
+            "componente: brandpetram/cursor-trail-grupo-nelson",
+            "componente: brandpetram/kappa"
           ]
         },
         {

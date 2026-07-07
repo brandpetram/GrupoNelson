@@ -32,8 +32,8 @@ export function Eta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
         <div className="w-[80%] md:w-[45%] mt-10 md:mt-0">
           <div className="aspect-square md:aspect-[1/2] 1200:aspect-[1/1.1]">
             <img
-              src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-1.jpeg"
-              alt="Ventana con vista al bosque"
+              src="/Seleccionadas/nave-gulfstream-en-parque-nelson-2-54.jpg"
+              alt="Nave industrial de Gulfstream en Parque Industrial Nelson II, Mexicali"
               className="w-full h-full object-cover"
             />
           </div>
