@@ -570,7 +570,7 @@
       "commentText": [
         "Limpiar foto (persona caminando)"
       ],
-      "decision": "pendiente imagen — teta: …-3.jpeg (persona caminando)",
+      "decision": "resuelto — persona eliminada con Replicate; foto -3-v2 aplicada en las 10 referencias del sitio",
       "anchorNotes": null
     },
     {
@@ -1041,6 +1041,6 @@
   ],
   "resolvedMarcadosEnVercel": {
     "fecha": "2026-07-06",
-    "total": 47
+    "total": 48
   }
 }

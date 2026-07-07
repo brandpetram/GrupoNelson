@@ -281,7 +281,7 @@ export const navesIndustriales: NaveIndustrial[] = [
     sprinklers: false,
     estatus: 'Disponible',
     images: [
-      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1-v2.JPG',
       '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-2.JPG',
       '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-3.JPG',
     ],
@@ -317,7 +317,7 @@ export const navesIndustriales: NaveIndustrial[] = [
     sprinklers: false,
     estatus: 'Disponible',
     images: [
-      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG',
+      '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1-v2.JPG',
       '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-2.JPG',
       '/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-3.JPG',
     ],

@@ -162,3 +162,9 @@ Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activo
 - La foto de las naves 17-23 de El Vigía (slot de Llave en Mano + 2 entradas del inventario de naves) se reemplazó por una versión editada con Replicate (`google/nano-banana`): **cielo azul despejado** (Erick: "se ve contaminado") y **sin la marca CASTORES** al fondo (Erick: "eliminar o difuminar"). Un solo archivo resolvió los 2 comentarios.
 - Luis eligió entre 2 candidatas la versión "sin CASTORES", **consciente de que el modelo reconstruyó el fondo** (horizonte limpio tipo desierto en lugar de la mancha urbana original). La candidata "solo cielo" (fondo 100% real) quedó en `candidatas-replicate/` por si se quiere revertir.
 - Naming anti-caché pedido por Luis: mismo nombre + sufijo `-v2` (`naves-17-23-en-parque-el-vigia-1-5-v2.JPG`, 169 KB, 1344×768). **La original NO se borró** del repo.
+
+## Segunda tanda de imágenes editadas con AI — 2026-07-07
+
+- **Envista sin persona caminando** (comentario de Erick en teta/llave-en-mano): la foto `grupo-nelson-naves-…-mexicali-3` se usaba en **10 lugares** (home ES/EN, casos de éxito ES/EN, liderazgo ES/EN, cascadas, xi, teta) — se reemplazó en todos por la versión editada `…-3-v2.jpeg` (persona eliminada, banqueta rellenada natural; aprobada por Luis).
+- **Naves 1-4 El Vigía con cielo azul** (pedido directo de Luis por URL, sin thread de Vercel): `naves-1-4-…-1-1-v2.JPG` en el slot de lamda y 2 entradas del inventario de naves (cielo café → azul con nubes; suelo intacto; aprobada por Luis).
+- Ambas con sufijo `-v2` anti-caché; originales conservadas en el repo.

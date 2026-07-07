@@ -25,7 +25,7 @@ export function Teta({ lang = 'es' }: { lang?: 'en' | 'es' }) {
 
               {/* Imagen principal: aspect 3:2 */}
               <img
-                  src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
+                  src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg"
                   alt="Imagen principal"
                   className="w-[13rem] md:w-full ml-10 360:ml-18 393:ml-22 430:ml-28 md:ml-0 360:aspect-square 393:aspect-square 430:aspect-square 768:aspect-[2/3] 834:aspect-[2/3] 1024:aspect-[2/3] 1200:aspect-square 1280:aspect-[3/2] object-cover relative z-10 "
               />

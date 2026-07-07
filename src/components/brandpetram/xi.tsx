@@ -44,7 +44,7 @@ export default function Xi({ lang = 'es' }: { lang?: 'en' | 'es' }) {
         <div className="md:absolute md:inset-y-0 md:left-0 md:w-1/2">
           <img
             className="h-96 w-full object-cover md:absolute md:h-full"
-            src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
+            src="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg"
             alt={t.imgAlt}
           />
         </div>

@@ -52,7 +52,7 @@ export function Lamda({ lang = 'es' }: { lang?: 'en' | 'es' }) {
             </div>
 
             <img
-              src="/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG"
+              src="/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1-v2.JPG"
               alt="Naves 1-4 en parque industrial El Vigía I, Mexicali"
               className="w-full aspect-square object-cover"
             />

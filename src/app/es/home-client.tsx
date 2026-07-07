@@ -113,7 +113,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                   bloque1LinkHref="/parques-industriales-mexicali"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
                   bloque2ImagenAlt="Nave industrial disponible en parque industrial de Mexicali"
-                  bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
+                  bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg"
                   bloque3ImagenAlt="Interior de nave industrial en Mexicali"
                   bloque4Titulo="¿Buscas espacio industrial?"
                   bloque4Descripcion="Consulta disponibilidad en nuestros 5 parques"

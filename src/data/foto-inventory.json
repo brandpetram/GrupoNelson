@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-07T14:48:33.617Z",
-  "totalPhotos": 957,
+  "generatedAt": "2026-07-07T17:56:58.343Z",
+  "totalPhotos": 959,
   "totalUsed": 255,
-  "totalUnused": 702,
+  "totalUnused": 704,
   "folders": [
     {
       "folder": "(raíz)",
-      "count": 39,
+      "count": 40,
       "usedCount": 27,
       "photos": [
         {
@@ -285,9 +285,9 @@
           ]
         },
         {
-          "path": "/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg",
+          "path": "/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg",
           "folder": "(raíz)",
-          "filename": "grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg",
+          "filename": "grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg",
           "usedInCode": true,
           "usedIn": [
             "page: about/difference",
@@ -314,6 +314,13 @@
             "componente: brandpetram/teta",
             "componente: brandpetram/xi"
           ]
+        },
+        {
+          "path": "/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg",
+          "folder": "(raíz)",
+          "filename": "grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg",
+          "usedInCode": false,
+          "usedIn": []
         },
         {
           "path": "/grupo-nelson-naves-en-parques-industriales-en-mexicali-4.jpeg",
@@ -2051,13 +2058,13 @@
     },
     {
       "folder": "fotos-dron/VIGIA I/NAVES 1-4",
-      "count": 3,
+      "count": 4,
       "usedCount": 3,
       "photos": [
         {
-          "path": "/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG",
+          "path": "/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1-v2.JPG",
           "folder": "fotos-dron/VIGIA I/NAVES 1-4",
-          "filename": "naves-1-4-en-parque-el-vigia-1-1.JPG",
+          "filename": "naves-1-4-en-parque-el-vigia-1-1-v2.JPG",
           "usedInCode": true,
           "usedIn": [
             "page: construction/turnkey",
@@ -2065,6 +2072,13 @@
             "componente: brandpetram/lamda",
             "data: naves-industriales"
           ]
+        },
+        {
+          "path": "/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-1.JPG",
+          "folder": "fotos-dron/VIGIA I/NAVES 1-4",
+          "filename": "naves-1-4-en-parque-el-vigia-1-1.JPG",
+          "usedInCode": false,
+          "usedIn": []
         },
         {
           "path": "/fotos-dron/VIGIA I/NAVES 1-4/naves-1-4-en-parque-el-vigia-1-2.JPG",

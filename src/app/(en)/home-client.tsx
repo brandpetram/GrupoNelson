@@ -128,7 +128,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
                   bloque1LinkHref="/industrial-parks"
                   bloque2ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-12.jpeg"
                   bloque2ImagenAlt="Available industrial building in Mexicali industrial park"
-                  bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg"
+                  bloque3ImagenSrc="/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg"
                   bloque3ImagenAlt="Interior of industrial building in Mexicali"
                   bloque4Titulo="Looking for industrial space?"
                   bloque4Descripcion="Check availability across our 5 parks"

@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 const images = [
   '/fotos-dron/NELSON II/nave-dhl-en-parque-nelson-2-1.JPG',
   '/fotos-dron/CONSTRUCTORA BAUMEX/HONEYWELL/nave-industrial-honeywell-1.JPG',
-  '/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg',
+  '/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg',
   '/grupo-nelson-naves-en-parques-industriales-en-mexicali-5.jpeg',
 ]
 

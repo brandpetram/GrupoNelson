@@ -72,7 +72,7 @@ const items: MosaicoItem[] = [
   },
   {
     type: "image",
-    src: "/grupo-nelson-naves-en-parques-industriales-en-mexicali-3.jpeg",
+    src: "/grupo-nelson-naves-en-parques-industriales-en-mexicali-3-v2.jpeg",
     alt: "Construcción nave industrial Mexicali",
     aspect: "square",
   },
