@@ -615,7 +615,7 @@
       "commentText": [
         "Se podra limpiar esta foto, eliminando o difulminando la empresa de CASTORES que aparece al fondo."
       ],
-      "decision": "pendiente imagen — naves-17-23…1-5.JPG (CASTORES; misma foto que cielo)",
+      "decision": "resuelto — misma edición que hjv0ZKlV3TR4 (una foto resolvía ambos comentarios); CASTORES eliminado del fondo",
       "anchorNotes": null
     },
     {
@@ -720,7 +720,7 @@
       "commentText": [
         "Visualmente el cielo se ve contaminado..."
       ],
-      "decision": "pendiente imagen — naves-17-23…1-5.JPG (cielo; misma foto que CASTORES)",
+      "decision": "resuelto — foto reemplazada por versión editada con Replicate (cielo azul, sin CASTORES): naves-17-23-en-parque-el-vigia-1-5-v2.JPG, elegida por Luis entre 2 candidatas",
       "anchorNotes": null
     },
     {
@@ -1041,6 +1041,6 @@
   ],
   "resolvedMarcadosEnVercel": {
     "fecha": "2026-07-06",
-    "total": 45
+    "total": 47
   }
 }

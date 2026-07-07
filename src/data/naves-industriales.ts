@@ -209,7 +209,7 @@ export const navesIndustriales: NaveIndustrial[] = [
       '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-2.JPG',
       '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-3.JPG',
       '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-4.JPG',
-      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5-v2.JPG',
     ],
     shortDescription: '525 m² con marco rígido metálico, subestación 300 KVA y 1 andén.',
     features: [
@@ -389,7 +389,7 @@ export const navesIndustriales: NaveIndustrial[] = [
       '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-2.JPG',
       '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-3.JPG',
       '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-4.JPG',
-      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG',
+      '/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5-v2.JPG',
     ],
     shortDescription: '2,019 m² con subestación 500 KVA y tragaluces en techo.',
     features: [

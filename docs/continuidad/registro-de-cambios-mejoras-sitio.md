@@ -120,7 +120,7 @@ Foto de arquitectura industrial (Pi):
 
 ## Ronda de comentarios de Vercel — 2026-07-06
 
-Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activos de `dev` + 15 viejos de marzo-abril), según `docs/planes/plan-para-resolver-comentarios-vercel-de-erick.md` (3 rondas de review de Codex). Resultado: **45 resueltos** (aplicados o verificados ya vigentes; marcados como resolved en Vercel el 2026-07-06), **24 pendientes** (imágenes, layout/preguntas y viejos que requieren decisión). IDs de threads y decisión por comentario en `docs/continuidad/threads-vercel-erick-2026-07-06.json`.
+Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activos de `dev` + 15 viejos de marzo-abril), según `docs/planes/plan-para-resolver-comentarios-vercel-de-erick.md` (3 rondas de review de Codex). Resultado: **47 resueltos** (45 el 2026-07-06 + 2 de imagen el 2026-07-07; marcados como resolved en Vercel), **22 pendientes** (imágenes, layout/preguntas y viejos que requieren decisión). IDs de threads y decisión por comentario en `docs/continuidad/threads-vercel-erick-2026-07-06.json`.
 
 ### Llave en Mano (ES + EN en todos)
 - "30 corporaciones internacionales" → **"+30"**; "El contraincendio central" → **"El sistema contraincendio"**; CTA → **"Consulta nuestro inventario"**.
@@ -156,3 +156,9 @@ Se procesaron los **69 comentarios unresolved** del toolbar de Vercel (54 activo
 - **Layout/estructura (5):** mover "Soluciones Llave en Mano" al menú Parques (mecánica identificada en navigation.ts/navigation-en.ts), compactar espacios en blanco (padding 20-30rem del bloque oscuro de lamda), alineación del h2 de lamda, gap foto-texto (es diseño editorial intencional — responder a Erick o compactar), botón "Habla con un experto" (propuesta de ubicación y patrón lista).
 - **Preguntas para Erick (2):** video preview del footer (no hay `<video>`: es el ícono de YouTube — ¿quiere thumbnail del canal?), repetición editorial de proof points (¿es intencional, quiere variar?).
 - **Viejos no realizados (11):** según criterio de Luis (solo triviales y claramente mejoras); incluye 1 obsoleto ("fatalidades→accidentes", contradicho por copy nuevo de Erick del 06-18).
+
+## Primera imagen editada con AI (cielo + CASTORES) — 2026-07-07
+
+- La foto de las naves 17-23 de El Vigía (slot de Llave en Mano + 2 entradas del inventario de naves) se reemplazó por una versión editada con Replicate (`google/nano-banana`): **cielo azul despejado** (Erick: "se ve contaminado") y **sin la marca CASTORES** al fondo (Erick: "eliminar o difuminar"). Un solo archivo resolvió los 2 comentarios.
+- Luis eligió entre 2 candidatas la versión "sin CASTORES", **consciente de que el modelo reconstruyó el fondo** (horizonte limpio tipo desierto en lugar de la mancha urbana original). La candidata "solo cielo" (fondo 100% real) quedó en `candidatas-replicate/` por si se quiere revertir.
+- Naming anti-caché pedido por Luis: mismo nombre + sufijo `-v2` (`naves-17-23-en-parque-el-vigia-1-5-v2.JPG`, 169 KB, 1344×768). **La original NO se borró** del repo.

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-06T21:41:02.748Z",
-  "totalPhotos": 956,
+  "generatedAt": "2026-07-07T14:48:33.617Z",
+  "totalPhotos": 957,
   "totalUsed": 255,
-  "totalUnused": 701,
+  "totalUnused": 702,
   "folders": [
     {
       "folder": "(raíz)",
@@ -2088,7 +2088,7 @@
     },
     {
       "folder": "fotos-dron/VIGIA I/NAVES 17-23",
-      "count": 5,
+      "count": 6,
       "usedCount": 5,
       "photos": [
         {
@@ -2128,9 +2128,9 @@
           ]
         },
         {
-          "path": "/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG",
+          "path": "/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5-v2.JPG",
           "folder": "fotos-dron/VIGIA I/NAVES 17-23",
-          "filename": "naves-17-23-en-parque-el-vigia-1-5.JPG",
+          "filename": "naves-17-23-en-parque-el-vigia-1-5-v2.JPG",
           "usedInCode": true,
           "usedIn": [
             "page: construction/turnkey",
@@ -2138,6 +2138,13 @@
             "componente: brandpetram/lamda",
             "data: naves-industriales"
           ]
+        },
+        {
+          "path": "/fotos-dron/VIGIA I/NAVES 17-23/naves-17-23-en-parque-el-vigia-1-5.JPG",
+          "folder": "fotos-dron/VIGIA I/NAVES 17-23",
+          "filename": "naves-17-23-en-parque-el-vigia-1-5.JPG",
+          "usedInCode": false,
+          "usedIn": []
         }
       ]
     },
