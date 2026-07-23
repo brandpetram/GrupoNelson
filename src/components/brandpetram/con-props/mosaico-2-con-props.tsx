@@ -82,10 +82,10 @@ export function Mosaico2ConProps({
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             className="aspect-square bg-slate-900 text-white p-6 md:p-8 1024:p-10 flex flex-col justify-center items-start text-left will-change-transform"
           >
-            <h3 className="text-base md:text-lg 1024:text-sm 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg font-bold tracking-wide uppercase 1200:leading-none">
+            <h3 className="text-base md:text-lg 1024:text-sm 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg font-bold tracking-wide uppercase leading-none">
               {bloque1Titulo}
             </h3>
-            <p className="mt-2 md:mt-3 text-lg md:text-xl 1024:text-lg 1024:text-2xl 1200:text-lg 1280:text-lg 1920:text-2xl font-normal leading-tight 1024:leading-none 1200:leading-none 1280:leading-normal text-balance max-w-xs">
+            <p className="mt-2 md:mt-3 text-lg md:text-[16px] 1200:text-lg 1280:text-lg 1920:text-2xl font-normal leading-tight 1024:leading-none 1200:leading-none 1280:leading-normal text-balance max-w-xs">
               {bloque1Descripcion}
             </p>
             {bloque1LinkTexto && (
@@ -102,14 +102,14 @@ export function Mosaico2ConProps({
           <ImagenRectangulo
             src={bloque2ImagenSrc}
             alt={bloque2ImagenAlt}
-            className="aspect-square"
+            className="aspect-square 1024:aspect-auto 1024:h-full"
           />
 
           {/* Bloque 3: Imagen */}
           <ImagenRectangulo
             src={bloque3ImagenSrc}
             alt={bloque3ImagenAlt}
-            className="aspect-square"
+            className="aspect-square 1024:aspect-auto 1024:h-full"
           />
 
           {/* Bloque 4: Azul con CTA */}
@@ -119,10 +119,10 @@ export function Mosaico2ConProps({
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             className="aspect-square bg-blue-600 text-white p-6 md:p-8 1024:p-10 flex flex-col justify-center items-center text-center will-change-transform"
           >
-            <h3 className="text-base md:text-lg 1024:text-sm 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg font-bold tracking-wide uppercase 1200:leading-none">
+            <h3 className="text-base md:text-lg 1024:text-sm 1200:text-base 1280:text-base 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg font-bold tracking-wide uppercase leading-none">
               {bloque4Titulo}
             </h3>
-            <p className="mt-2 md:mt-3 text-lg md:text-xl 1024:text-lg 1024:text-2xl 1200:text-lg 1280:text-lg 1920:text-2xl font-normal leading-tight 1024:leading-none 1200:leading-none 1280:leading-normal text-balance max-w-xs">
+            <p className="mt-2 md:mt-3 text-lg md:text-[16px] 1200:text-lg 1280:text-lg 1920:text-2xl font-normal leading-tight 1024:leading-none 1200:leading-none 1280:leading-normal text-balance max-w-xs">
               {bloque4Descripcion}
             </p>
             <Link

@@ -151,7 +151,7 @@ function VideoPlayer({
 const defaultItems: ContentItem[] = [
   {
     caption: 'Fase 1: Planificación',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">1</span><div>Elección de Sitio en <br/>Mexicali y Consultoría</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">1</span><div>Elección de Sitio en <br/>Mexicali y Consultoría</div></div>,
     description:
       'Analizamos sus requerimientos operativos — capacidad eléctrica, altura de nave, superficie, especificaciones técnicas — y les desarrollamos una propuesta integral acorde a sus necesidades.',
     image: '/parques-industriales-mexicali/parque-industrial-mexicali-renta-y-construccion-nave-industrial-3.jpg',
@@ -169,7 +169,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 2: Desarrollo',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">2</span><div>Diseño y Desarrollo <br/>de la Ingeniería</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">2</span><div>Diseño y Desarrollo <br/>de la Ingeniería</div></div>,
     description:
       'Nuestro equipo de arquitectos e ingenieros traduce sus especificaciones en un proyecto ejecutivo completo: estructural, eléctrico, mecánico y civil. Cada metro cuadrado se diseña alrededor de su proceso productivo.',
     image: '/tunel-honeywell.jpg',
@@ -187,7 +187,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 3: Ejecución',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">3</span><div>Construcción<br/>a la medida</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">3</span><div>Construcción<br/>a la medida</div></div>,
     description:
       'Nuestra constructora interna ejecuta su proyecto de principio a fin — desde movimiento de tierras y cimentación hasta instalaciones electromecánicas — con los estándares de calidad que exigen las empresas más demandantes.',
     video: '/scroll-storytelling/entrega-llave-en-mano.mp4',
@@ -206,7 +206,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 4: Apertura',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">4</span><div>Entrega <br/> Llave en Mano</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">4</span><div>Entrega <br/> Llave en Mano</div></div>,
     description:
       'Usted recibe una instalación lista para operar. Entra, conecta sus equipos y arranca producción. Sin intermediarios, sin retrasos.',
     video: '/parques-industriales-mexicali-nelson-3-optimizado.mp4',
@@ -225,7 +225,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 5: Seguridad',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">5</span><div> Infraestructura y <br/> Seguridad del Parque</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">5</span><div> Infraestructura y <br/> Seguridad del Parque</div></div>,
     description:
       'Perímetro controlado, caseta de acceso, calles amplias, infraestructura compartida y vigilancia permanente. Su operación funciona dentro de un entorno industrial profesional las 24 horas del día, los 365 días del año.',
     video: '/scroll-storytelling/seguridad-del-parque.mp4',
@@ -244,7 +244,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 6: Mantenimiento',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">6</span><div>Mantenimiento y<br/>Servicios Primarios</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">6</span><div>Mantenimiento y<br/>Servicios Primarios</div></div>,
     description:
       'Nuestro equipo de servicios atiende mejoras, reparaciones y actualizaciones de forma permanente. Proyectos menores con personal interno; proyectos de ingeniería avanzada con nuestra constructora. Usted se enfoca en producir.',
     video: '/scroll-storytelling/mantenimiento.mp4',
@@ -263,7 +263,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 7: Crecimiento',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">7</span><div>Crecimiento y<br/>Expansión</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">7</span><div>Crecimiento y<br/>Expansión</div></div>,
     description:
       'Cuando tu operación crece, nosotros crecemos contigo. Clientes que iniciaron con 5,000 pies cuadrados hoy operan en más de 400,000. Nuestra experiencia de 6 décadas se refleja en la fidelidad y permanencia de nuestros clientes.',
     video: '/scroll-storytelling/crecimiento.mp4',
@@ -282,7 +282,7 @@ const defaultItems: ContentItem[] = [
   },
   {
     caption: 'Fase 8: Proyectos Especiales',
-    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white font-black text-3xl flex-shrink-0">8</span><div>Construcciones Industriales<br/>Especiales en Mexicali</div></div>,
+    title: <div className="flex items-center gap-3"><span className="inline-flex items-center justify-center w-16 h-16 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:w-20 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:h-20 rounded-full bg-blue-600 text-white font-black text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl flex-shrink-0">8</span><div>Construcciones Industriales<br/>Especiales en Mexicali</div></div>,
     description:
       'Logramos lo que parecía imposible: 95 metros de claro sin columnas. Diseñamos y montamos un puente de estructura metálica con diseño europeo de arco y cimentación profunda para garantizar estabilidad en zona sísmica. Cuando Skyworks necesitó conectar dos plantas de semiconductores atravesando un bulevar y un dren federal, nos eligieron.',
     image: '/contructora-mexicali/puente-skyworks-2.jpg',
@@ -399,15 +399,15 @@ export function ScrollStorytelling({
               ref={(el) => {
                 blocksRef.current[index] = el
               }}
-              className="min-h-fit py-12 1200:py-0 1200:h-[70vh] flex flex-col justify-center max-w-xl"
+              className="min-h-fit py-12 1200:py-0 1200:h-[70vh] flex flex-col justify-center max-w-xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:max-w-3xl"
             >
-              <p className="text-sm font-semibold uppercase tracking-wider mb-3 text-primary">
+              <p className="text-sm [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-base font-semibold uppercase tracking-wider mb-3 text-primary">
                 {item.caption}
               </p>
-              <h3 className="text-2xl md:text-2xl 1024:text-3xl 1200:text-2xl xl:text-3xl 2xl:text-4xl font-extrabold leading-none tracking-tight mb-4 text-foreground">
+              <h3 className="text-2xl md:text-2xl 1024:text-3xl [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-4xl 1200:text-2xl xl:text-3xl 2xl:text-4xl font-extrabold leading-none tracking-tight mb-4 text-foreground">
                 {item.title}
               </h3>
-              <p className="text-1200 2xl:text-xl leading-relaxed mb-6 text-muted-foreground">
+              <p className="text-lg [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-xl 2xl:text-xl leading-relaxed mb-6 text-muted-foreground">
                 {item.description}
               </p>
               {/* Imagen para móvil — antes de los botones, sin video (ver malas-practicas-frontend.mdx) */}
@@ -432,10 +432,10 @@ export function ScrollStorytelling({
                       key={buttonIndex}
                       href={button.href}
                       className={cn(
-                        'px-6 py-3 rounded-1200 font-medium text-center transition-all duration-200',
+                        'px-6 py-3 [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:px-8! [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:py-4! [@media(min-width:1024px)_and_(max-width:1199px)_and_(orientation:portrait)]:text-lg! rounded-lg font-medium text-center transition-all duration-200',
                         button.primary
                           ? 'bg-blue-600 text-white hover:brightness-110 hover:saturate-110 hover:scale-[1.02] active:scale-[0.98] shadow-md border-[0.5px] border-white/25 shadow-black/20'
-                          : 'border border-border text-foreground hover:bg-muted hover:ring-1 hover:ring-foreground/20 hover:scale-[1.02] active:scale-[0.98] shadow-sm shadow-black/15'
+                          : 'border border-border dark:border-white/30 text-foreground hover:bg-muted hover:ring-1 hover:ring-foreground/20 hover:scale-[1.02] active:scale-[0.98] shadow-sm shadow-black/15'
                       )}
                     >
                       {button.text}

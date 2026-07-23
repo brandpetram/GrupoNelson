@@ -350,8 +350,8 @@ export function HeroVideoCover({
         />
       </div>
 
-      <div className="relative z-10 flex h-full items-center">
-        <div className="container mx-auto px-6 md:px-8 1280:px-16 1366:px-24 1728:px-32">
+      <div className="relative z-10 flex h-full items-center [@media(min-width:768px)_and_(max-width:1180px)_and_(orientation:portrait)]:items-start">
+        <div className="container mx-auto px-6 md:px-8 1280:px-16 1366:px-24 1728:px-32 [@media(min-width:768px)_and_(max-width:1180px)_and_(orientation:portrait)]:pt-28">
           {enableAnimations ? (
             <motion.div
               initial="hidden"

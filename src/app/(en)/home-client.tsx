@@ -21,7 +21,7 @@ import { Compass, Ruler, Hammer, CheckCircle, Shield, Wrench, TrendingUp, Star }
 
 export default function HomeClient({ heroContent }: { heroContent: React.ReactNode }) {
   return (
-    <div>
+    <div className="mx-auto max-w-[2048px]">
       {/* Header with main navigation */}
       <Header variant="dark" lang="en" />
 
@@ -324,7 +324,7 @@ export default function HomeClient({ heroContent }: { heroContent: React.ReactNo
       </div>
 
       {/* Circles — 3 compressed pillars */}
-      <div className="px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
+      <div className="relative z-10 px-4 md:ml-10 1200:ml-32 mt-32 md:px-0">
         <CirculosConProps
           circulo1Letra="60+"
           circulo1Titulo="Years"

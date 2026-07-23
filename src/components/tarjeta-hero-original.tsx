@@ -21,40 +21,40 @@ export function TarjetaHeroOriginal({
   ctaSecondaryHref = "/contacto",
 }: TarjetaHeroOriginalProps) {
   return (
-    <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-sm 1024:max-w-xl 1200:max-w-xl mt-32 md:mt-0 1024:-mt-72 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 md:border border-white/20 shadow-lg">
+    <div data-component="TarjetaHeroOriginal" data-component-file="src/components/tarjeta-hero-original.tsx" data-component-props="true" className="max-w-sm 1024:max-w-xl 1200:max-w-xl [@media(min-width:768px)_and_(max-width:1180px)_and_(orientation:portrait)]:max-w-2xl [@media(min-width:1024px)_and_(max-width:1400px)_and_(orientation:landscape)_and_(max-aspect-ratio:3/2)]:max-w-lg mt-32 md:mt-0 1024:-mt-72 1200:mt-6 1280:mt-6 1366:mt-6 1440:mt-6 1536:mt-10 1728:mt-6 1920:mt-6 [@media(min-width:768px)_and_(max-width:1180px)_and_(orientation:portrait)]:mt-0 [@media(min-width:2048px)]:max-w-[749px] [@media(min-width:2048px)]:-translate-y-[12vh] md:bg-blue-600/60 md:backdrop-blur-sm rounded-sm p-0 md:p-8 1024:p-12 [@media(min-width:2048px)]:p-16 md:border border-white/20 shadow-lg">
       {/* Badge */}
       {badge && (
         <div className="hidden md:flex items-center gap-3 mb-3">
           <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
-            <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg font-medium text-white">{badge}</span>
+            <span className="text-sm md:text-base 1024:text-lg 1200:text-sm 1280:text-sm 1366:text-sm 1440:text-base 1536:text-base 1728:text-base 1920:text-lg [@media(min-width:2048px)]:text-[19.8px] font-medium text-white">{badge}</span>
           </div>
         </div>
       )}
 
       {/* Título principal */}
-      <h1 className="text-3xl 360:text-4xl 393:text-5xl leading-none font-bold tracking-tight text-white text-balance md:text-5xl 1024:text-6xl 1200:text-4xl 1280:text-4xl 1366:text-4xl 1440:text-5xl 1536:text-5xl 1728:text-5xl 1920:text-6xl mb-6">
+      <h1 className="text-3xl 360:text-4xl 393:text-5xl leading-none font-bold tracking-tight text-white text-balance md:text-5xl 1024:text-6xl 1200:text-4xl 1280:text-4xl 1366:text-4xl 1440:text-5xl 1536:text-5xl 1728:text-5xl 1920:text-6xl [@media(min-width:2048px)]:text-[66px] mb-6">
         {titulo}
       </h1>
 
       {/* Descripción */}
-      <p className="text-lg text-white/70 text-pretty md:text-xl 1024:text-2xl 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl max-w-3xl mb-10 leading-relaxed">
+      <p className="text-lg text-white/70 text-pretty md:text-xl 1024:text-2xl 1200:text-lg 1280:text-lg 1366:text-lg 1440:text-xl 1536:text-xl 1728:text-xl 1920:text-2xl [@media(min-width:2048px)]:text-[26.4px] max-w-3xl mb-10 leading-relaxed">
         {descripcion}
       </p>
 
       {/* Botones CTA */}
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button asChild size="lg" className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto">
+        <Button asChild size="lg" className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl [@media(min-width:2048px)]:text-[22px] px-8 py-6 h-auto">
           <a href={ctaPrimaryHref}>{ctaPrimaryText}</a>
         </Button>
         <Button
           asChild
           size="lg"
           variant="ghost"
-          className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl px-8 py-6 h-auto text-white border border-white/20 hover:bg-white/10 hover:text-white"
+          className="text-base md:text-lg 1024:text-xl 1200:text-base 1280:text-base 1366:text-base 1440:text-lg 1536:text-lg 1728:text-lg 1920:text-xl [@media(min-width:2048px)]:text-[22px] px-8 py-6 h-auto text-white border border-white/20 hover:bg-white/10 hover:text-white"
         >
           <a href={ctaSecondaryHref}>
             <span>{ctaSecondaryText}</span>
-            <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 1024:h-6 1024:w-6 1200:h-5 1200:w-5 1280:h-5 1280:w-5 1366:h-5 1366:w-5 1440:h-6 1440:w-6 1536:h-6 1536:w-6 1728:h-6 1728:w-6 1920:h-7 1920:w-7" />
+            <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 1024:h-6 1024:w-6 1200:h-5 1200:w-5 1280:h-5 1280:w-5 1366:h-5 1366:w-5 1440:h-6 1440:w-6 1536:h-6 1536:w-6 1728:h-6 1728:w-6 1920:h-7 1920:w-7 [@media(min-width:2048px)]:h-[30.8px] [@media(min-width:2048px)]:w-[30.8px]" />
           </a>
         </Button>
       </div>
