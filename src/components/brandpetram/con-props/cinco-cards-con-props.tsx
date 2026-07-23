@@ -94,12 +94,12 @@ export function CincoCardsConProps({
       >
 
         {/* Card 1 - Video */}
-        <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
+        <div className="flex-1 md:flex-none md:w-[240px] 1024:w-[280px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
           <div className="bg-blue-500 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card1Titulo}
             </h3>
-            <a href={card1BotonHref} className="flex items-center gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
+            <a href={card1BotonHref} className="flex items-end gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
               <span>{card1BotonTexto}</span>
               <ArrowRight className="w-5 h-5 md:w-4 md:h-4 1200:w-5 1200:h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
             </a>
@@ -116,12 +116,12 @@ export function CincoCardsConProps({
         </div>
 
         {/* Card 2 - Imagen */}
-        <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
+        <div className="flex-1 md:flex-none md:w-[240px] 1024:w-[280px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
           <div className="bg-blue-600 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card2Titulo}
             </h3>
-            <a href={card2BotonHref} className="flex items-center gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
+            <a href={card2BotonHref} className="flex items-end gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
               <span>{card2BotonTexto}</span>
               <ArrowRight className="w-5 h-5 md:w-4 md:h-4 1200:w-5 1200:h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
             </a>
@@ -132,12 +132,12 @@ export function CincoCardsConProps({
         </div>
 
         {/* Card 3 - Imagen */}
-        <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
+        <div className="flex-1 md:flex-none md:w-[240px] 1024:w-[280px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
           <div className="bg-gradient-to-br from-slate-700 to-slate-800 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card3Titulo}
             </h3>
-            <a href={card3BotonHref} className="flex items-center gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
+            <a href={card3BotonHref} className="flex items-end gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
               <span>{card3BotonTexto}</span>
               <ArrowRight className="w-5 h-5 md:w-4 md:h-4 1200:w-5 1200:h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
             </a>
@@ -148,12 +148,12 @@ export function CincoCardsConProps({
         </div>
 
         {/* Card 4 - Imagen */}
-        <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
+        <div className="flex-1 md:flex-none md:w-[240px] 1024:w-[280px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
           <div className="bg-blue-700 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card4Titulo}
             </h3>
-            <a href={card4BotonHref} className="flex items-center gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
+            <a href={card4BotonHref} className="flex items-end gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
               <span>{card4BotonTexto}</span>
               <ArrowRight className="w-5 h-5 md:w-4 md:h-4 1200:w-5 1200:h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
             </a>
@@ -164,12 +164,12 @@ export function CincoCardsConProps({
         </div>
 
         {/* Card 5 - Imagen */}
-        {mostrarCard5 && <div className="flex-1 md:flex-none md:w-[180px] 1024:w-[200px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
+        {mostrarCard5 && <div className="flex-1 md:flex-none md:w-[240px] 1024:w-[280px] 1200:flex-1 1200:w-auto flex flex-col shrink-0">
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-4 md:p-6 lg:p-8 flex flex-col justify-end h-[180px] 1280:h-[220px] rounded-t-sm">
             <h3 className="text-2xl md:text-base 1024:text-base 1200:text-lg 1280:text-lg 1366:text-xl 1440:text-xl 1536:text-2xl 1728:text-2xl 1920:text-3xl font-normal text-white leading-none mb-4">
               {card5Titulo}
             </h3>
-            <a href={card5BotonHref} className="flex items-center gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
+            <a href={card5BotonHref} className="flex items-end gap-2 text-white font-bold text-base md:text-sm 1024:text-sm 1200:text-sm 1280:text-sm 1366:text-base 1440:text-base 1536:text-base 1728:text-lg 1920:text-lg group">
               <span>{card5BotonTexto}</span>
               <ArrowRight className="w-5 h-5 md:w-4 md:h-4 1200:w-5 1200:h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
             </a>
